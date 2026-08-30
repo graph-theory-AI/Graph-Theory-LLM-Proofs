@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The maximum-degree-1 case is polynomial-time solvable\u2014more generally, maximum-degree-d FAS is FPT in d\u2014while the path case reduces to excluding undirected cycles from a maximum-degree-2 backedge graph and is not resolved here.",
+  "would_publish": false,
+  "caveats": "The dynamic program safely merges histories for degree constraints but not for the connectivity information needed to recognize linear forests.",
+  "id": "2402.10782__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.817964,
+  "eur": 0.706394,
+  "elapsed_s": 1249.9,
+  "status": "completed",
+  "response_id": "resp_03f6809234b1f446006a94a9253dd087d28de3e53d3eac84c0",
+  "when": "2026-08-30T22:26:13Z"
+}

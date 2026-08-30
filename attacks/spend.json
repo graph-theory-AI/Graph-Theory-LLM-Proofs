@@ -5,10 +5,10 @@
   "fx_as_of": "2026-08-30",
   "safety_margin_eur": 5.0,
   "conservative_max_usd_per_call": 15.0,
-  "spent_usd": 0.046268,
-  "spent_eur": 0.039957,
-  "n_calls": 1,
-  "n_attacks": 1,
+  "spent_usd": 0.864232,
+  "spent_eur": 0.746351,
+  "n_calls": 2,
+  "n_attacks": 2,
   "stopped": false,
   "stop_reason": null
 }

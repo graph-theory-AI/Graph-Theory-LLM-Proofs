@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 680,
+    "score": 1.5,
+    "tier": 1,
+    "lean": "prove",
+    "status": "open",
+    "id": "2402.10782__01",
+    "title_md": "[Problem 4.4](https://arxiv.org/abs/2402.10782)",
+    "paper": "Finding forest-orderings of tournaments is NP-complete",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2402.10782__01/"
+  },
+  "dossier_meta": {
+    "id": "2402.10782__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2402.10782__01/",
+    "arxiv_id": "2402.10782",
+    "tier": 1,
+    "score": 1.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Finding forest-orderings of tournaments is NP-complete"
+  },
+  "started": "2026-08-30T22:05:23Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
