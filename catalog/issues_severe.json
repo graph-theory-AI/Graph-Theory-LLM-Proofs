@@ -1,0 +1,303 @@
+[
+  {
+    "id": "2604.09449__00",
+    "arxiv_id": "2604.09449",
+    "title": "Conjecture 6.1",
+    "kind": "Conjecture",
+    "paper": "Colour-balanced subgraphs",
+    "confidence": "medium",
+    "source": "html",
+    "abs_url": "https://arxiv.org/abs/2604.09449",
+    "reasons": [
+      "extractor_says_incomplete"
+    ],
+    "statement": "Let $h\\colon E(K_{n,n})\\to\\mathbb{R}^{k}$ such that $\\|h(e)\\|_{1}\\leq 1$ for all $e\\in E(K_{n,n})$. Then there is a perfect matching $M$ of $K_{n,n}$ satisfying [a bound of order $O(\\sqrt{k})$ on $\\|\\sum_{e\\in M}h(e)\\|_1$].",
+    "notes": "The conclusion of the conjecture is truncated in the source text; the full right-hand side bound is not reproduced. Based on the surrounding context the conjectured bound is $O(\\sqrt{k})$, matching the lower bound of Theorem 5.1.",
+    "context": "There is a gap between the $O(k^2)$ upper bound for representative matchings in bipartite complete graphs (Section 1.1) and the worst-case lower bound of $\\sqrt{k/2}$ constructed in Theorem 5.1. The authors conjecture that the lower bound gives the correct order, so that the true bound is $\\Theta(\\sqrt{k})$."
+  },
+  {
+    "id": "2603.02786__02",
+    "arxiv_id": "2603.02786",
+    "title": "Conjecture 5",
+    "kind": "Conjecture",
+    "paper": "Packing arithmetic progressions",
+    "confidence": "low",
+    "source": "html",
+    "abs_url": "https://arxiv.org/abs/2603.02786",
+    "reasons": [
+      "extractor_says_incomplete",
+      "inline_truncation_marker"
+    ],
+    "statement": "For every $k$ satisfying $\\Omega(\\sqrt{n})=k<\\sqrt{n}$, we have [asymptotic formula for $m_k(n)$ \u2014 mathematical conclusion truncated in source].",
+    "notes": "The mathematical conclusion after 'we have' is truncated in the extracted source; only the quantifier range is visible.",
+    "context": "If Conjecture 1 holds, it also resolves $m_k(n)$ asymptotically for $k\\geqslant\\sqrt{n}$ via Theorem 4. The only remaining open case is $k<\\sqrt{n}$ with $k\\not=o(\\sqrt{n})$, which this conjecture addresses."
+  },
+  {
+    "id": "2603.02786__03",
+    "arxiv_id": "2603.02786",
+    "title": "Conjecture 6",
+    "kind": "Conjecture",
+    "paper": "Packing arithmetic progressions",
+    "confidence": "low",
+    "source": "html",
+    "abs_url": "https://arxiv.org/abs/2603.02786",
+    "reasons": [
+      "inline_truncation_marker"
+    ],
+    "statement": "If $k\\ll n$, then [formula for $M_k(n)$], while otherwise, [formula for $M_k(n)$] \u2014 mathematical conclusions truncated in source.",
+    "notes": "The mathematical formulas in both cases are truncated in the extracted source; only the conditional structure is visible.",
+    "context": "Conjectured asymptotic behaviour of $M_k(n)$ for $k<n$ in view of Theorem 5, splitting into two regimes according to whether $k\\ll n$ or not."
+  },
+  {
+    "id": "2603.02786__04",
+    "arxiv_id": "2603.02786",
+    "title": "Conjecture 7",
+    "kind": "Conjecture",
+    "paper": "Packing arithmetic progressions",
+    "confidence": "low",
+    "source": "html",
+    "abs_url": "https://arxiv.org/abs/2603.02786",
+    "reasons": [
+      "extractor_says_incomplete",
+      "inline_truncation_marker"
+    ],
+    "statement": "For every fixed $n$ and $k$ tending to infinity, we have [asymptotic formula \u2014 mathematical conclusion truncated in source].",
+    "notes": "The mathematical conclusion after 'we have' is truncated in the extracted source; context strongly suggests the conjecture is $M_k(n)\\sim nk$ as $k\\to\\infty$ for fixed $n$.",
+    "context": "Concerns packing of $k$ arithmetic progressions of the form $B_d=\\{d,2d,\\ldots,nd\\}$ for $d=1,2,\\ldots,k$ with $n$ fixed. The authors suspect the trivial lower bound of $nk$ is asymptotically correct as $k\\to\\infty$."
+  },
+  {
+    "id": "2602.16333__03",
+    "arxiv_id": "2602.16333",
+    "title": "Question 4.4",
+    "kind": "Question",
+    "paper": "Long cycles in vertex transitive digraphs",
+    "confidence": "low",
+    "source": "html",
+    "abs_url": "https://arxiv.org/abs/2602.16333",
+    "reasons": [
+      "empty_statement",
+      "extractor_says_incomplete"
+    ],
+    "statement": "",
+    "notes": "Statement not available in the provided input; only the label [qn] was given with no accompanying text.",
+    "context": "Appears as a labelled question environment in the concluding remarks section alongside Question 4.3, but its full statement was not included in the provided paper content."
+  },
+  {
+    "id": "2601.15245__02",
+    "arxiv_id": "2601.15245",
+    "title": "Problem 6.2",
+    "kind": "Problem",
+    "paper": "Coloring small locally sparse degenerate graphs and related problems",
+    "confidence": "medium",
+    "source": "html",
+    "abs_url": "https://arxiv.org/abs/2601.15245",
+    "reasons": [
+      "extractor_says_incomplete",
+      "inline_truncation_marker"
+    ],
+    "statement": "Is the following statement true for all $\\varepsilon>0$? If $G$ is a $d$-degenerate triangle-free graph with maximum degree $\\Delta(G)\\leq e^{d^{1-\\varepsilon}}$, then we have [statement truncated in source]",
+    "notes": "The conclusion of the problem statement is truncated in the provided source; only the hypothesis is visible.",
+    "context": "Resolving this problem would likely require localizing the random coloring process used in the paper so that the union bound can be replaced by an application of the Lov\u00e1sz Local Lemma. An affirmative answer would imply results on immersion analogues of Hadwiger's conjecture, as conjectured by Lescure and Meyniel in 1988."
+  },
+  {
+    "id": "2211.14218__01",
+    "arxiv_id": "2211.14218",
+    "title": "Question",
+    "kind": "Question",
+    "paper": "Shotgun assembly of random graphs",
+    "confidence": "low",
+    "source": "html",
+    "abs_url": "https://arxiv.org/abs/2211.14218",
+    "reasons": [
+      "extractor_says_incomplete",
+      "placeholder_statement"
+    ],
+    "statement": "[Full statement text was not included in the supplied input; the environment is labelled \\texttt{[qu]\\ Question} and, from context, concerns the exact threshold for $r$-reconstructibility of $\\mathcal{G}(n,p)$ for $r\\in\\{1,2\\}$, the two radii for which the paper provides only upper and lower bounds rather than a sharp threshold.]",
+    "notes": "The labelled [qu] environment confirms an explicit open question is posed; its verbatim statement was not provided in the supplied paper content, so the statement_text above is inferred from context.",
+    "context": "The paper determines the sharp threshold for $r$-reconstructibility for every $r\\geq 3$. For $r=2$ it improves bounds of Gaudio and Mossel by polynomial factors, and for $r=1$ it sharpens a result of Huang and Tikhomirov, but in neither case is the exact threshold pinned down."
+  },
+  {
+    "id": "2505.05339__00",
+    "arxiv_id": "2505.05339",
+    "title": "Question 4.1",
+    "kind": "Question",
+    "paper": "A Counterexample to a Conjecture of Lov\u00e1sz",
+    "confidence": "low",
+    "source": "html",
+    "abs_url": "https://arxiv.org/abs/2505.05339",
+    "reasons": [
+      "extractor_says_incomplete"
+    ],
+    "statement": "Do there exist infinitely many $3$-edge colourable cubic graphs $G$ such that for all edges $(u,v),(x,y)\\in E(G)$, [remainder of condition not captured in source]",
+    "notes": "Statement truncated in source data \u2014 the condition following 'for all edges $(u,v),(x,y)\\in E(G)$' was not captured; likely a PDF extraction issue.",
+    "context": "The authors verified computationally that the Biggs-Smith graph is the unique cubic edge-transitive graph on at most 166 vertices satisfying the key lemma's conclusion, and that F168D is the only other such graph on at most 300 vertices. This question asks whether infinitely many such graphs exist."
+  },
+  {
+    "id": "2505.05339__01",
+    "arxiv_id": "2505.05339",
+    "title": "Question 4.2",
+    "kind": "Question",
+    "paper": "A Counterexample to a Conjecture of Lov\u00e1sz",
+    "confidence": "low",
+    "source": "html",
+    "abs_url": "https://arxiv.org/abs/2505.05339",
+    "reasons": [
+      "extractor_says_incomplete"
+    ],
+    "statement": "Does there exist a $d$-regular $d$-edge colourable graph $G$ where $d\\geq 4$ such that for all edges $(u_{1},v_{1}),\\dots,(u_{d-1},v_{d-1})\\in E(G)$, [remainder of condition not captured in source]",
+    "notes": "Statement truncated in source data \u2014 the condition following the list of edges was not captured; likely a PDF extraction issue.",
+    "context": "After finding only two counterexamples to Lov\u00e1sz's conjecture among line hypergraphs of cubic graphs, the authors ask whether counterexamples exist for higher regularity $d\\geq 4$, generalising the $r=3$ construction."
+  },
+  {
+    "id": "2309.04460__00",
+    "arxiv_id": "2309.04460",
+    "title": "Question 10.1",
+    "kind": "Question",
+    "paper": "Essentially tight bounds for rainbow cycles in proper edge-colourings",
+    "confidence": "low",
+    "source": "html",
+    "abs_url": "https://arxiv.org/abs/2309.04460",
+    "reasons": [
+      "extractor_says_incomplete",
+      "placeholder_statement"
+    ],
+    "statement": "[Full statement not available in the provided paper content excerpt.]",
+    "notes": "The [qn] environment label is visible in the theorem list but the full statement text was not included in the supplied paper content excerpt.",
+    "context": "Appears in Section 10 of the paper, which collects open questions remaining after the main results on rainbow cycles and the connections to additive number theory for non-abelian groups."
+  },
+  {
+    "id": "2308.15387__01",
+    "arxiv_id": "2308.15387",
+    "title": "Question 4.3",
+    "kind": "Question",
+    "paper": "The power of many colours",
+    "confidence": "low",
+    "source": "html",
+    "abs_url": "https://arxiv.org/abs/2308.15387",
+    "reasons": [
+      "extractor_says_incomplete"
+    ],
+    "statement": "[Verbatim statement not available in the provided input excerpt.]",
+    "notes": "Statement not provided in input excerpt; existence inferred from the theorem-environment list and the surrounding context of Conjecture 4.2.",
+    "context": "After establishing that the functions $f$ and $g$ behave differently for $s\\ll\\frac{\\sqrt{r}}{\\log r}$ and similarly when $s\\geq\\sqrt{r\\log r}$, the authors find it interesting to determine precisely when the two functions start to exhibit different behaviour; Question 4.3 is described as an explicit question in this direction."
+  },
+  {
+    "id": "2401.00359__00",
+    "arxiv_id": "2401.00359",
+    "title": "Conjecture 6.1",
+    "kind": "Conjecture",
+    "paper": "Ramsey and Tur\u00e1n numbers of sparse hypergraphs",
+    "confidence": "high",
+    "source": "html",
+    "abs_url": "https://arxiv.org/abs/2401.00359",
+    "reasons": [
+      "extractor_says_incomplete",
+      "inline_truncation_marker"
+    ],
+    "statement": "For a 3-uniform $n$-vertex hypergraph $H$ with $d_{1}(H)=d$, [statement truncated in source]",
+    "notes": "Statement body truncated in the provided source after the hypothesis clause; exact bound conjectured is not fully reproduced.",
+    "context": "Theorem 1.5 gives $r(H;q)\\leq\\exp^{(k-1)}(O_{k,q}(d))n$ for $k\\geq 4$-uniform hypergraphs with first skeletal degeneracy $d$. For $k=3$ the analogous bound from the proof is $\\exp^{(2)}(O_{3,q}(d))n$; Conjecture 6.1 posits a stronger bound for 3-uniform hypergraphs, stronger than a result of Brada\u010d\u2013Fox\u2013Sudakov [3] in which skeletal degeneracy is replaced by $\\sqrt{e(H)}$. The inequality $d_{1}(H)\\leq O(\\sqrt{e(H)})$ shows that 6.1 would imply that result."
+  },
+  {
+    "id": "2401.00359__01",
+    "arxiv_id": "2401.00359",
+    "title": "Conjecture 6.2",
+    "kind": "Conjecture",
+    "paper": "Ramsey and Tur\u00e1n numbers of sparse hypergraphs",
+    "confidence": "high",
+    "source": "html",
+    "abs_url": "https://arxiv.org/abs/2401.00359",
+    "reasons": [
+      "extractor_says_incomplete",
+      "inline_truncation_marker"
+    ],
+    "statement": "There is a constant $c_{k}>0$ such that for every $k$-uniform $k$-partite hypergraph $H$, [statement truncated in source]",
+    "notes": "Statement body truncated in the provided source after the setup clause; the precise bound in terms of $d_{\\mathsf{max}}(H)$ is not fully reproduced.",
+    "context": "Theorem 1.4 gives $\\Omega_{k}(n^{k-C_{k}/d_{1}(H)})\\leq\\operatorname{ex}(n,H)\\leq O_{H}(n^{k-c_{k}/d_{1}(H)^{k-1}})$. The complete $k$-partite hypergraph $K^{(k)}_{d,\\ldots,d}$ shows the upper bound is tight in $d_{1}$, while the bipartite hedgehog $H_{d}^{(k)}$ shows the lower bound is tight in $d_{1}$. This gap motivates replacing $d_{1}(H)$ by the finer quantity $d_{\\mathsf{max}}(H)=\\max_{1\\leq i<k}d_{i}(H)$, and Conjecture 6.2 asserts that the Tur\u00e1n exponent is controlled by $d_{\\mathsf{max}"
+  },
+  {
+    "id": "2310.04265__03",
+    "arxiv_id": "2310.04265",
+    "title": "Conjecture 3.13",
+    "kind": "Conjecture",
+    "paper": "Clique number of tournaments",
+    "confidence": "high",
+    "source": "html",
+    "abs_url": "https://arxiv.org/abs/2310.04265",
+    "reasons": [
+      "ends_mid_sentence",
+      "extractor_says_incomplete"
+    ],
+    "statement": "There exists a function $f$, such that for every tournament $T$, there exists an ordering $\\prec^{*}$ of $V(T)$ such that:",
+    "notes": "Statement appears truncated in the source; conditions following 'such that:' are not captured in the extracted text.",
+    "context": "This conjecture is introduced as a strengthening implying Conjecture 3.12 on $\\operatorname{\\overrightarrow{\\chi}}$-boundedness of bounded-twin-width tournaments. It concerns the existence of a single ordering simultaneously witnessing relevant structural and coloring properties."
+  },
+  {
+    "id": "2310.04265__04",
+    "arxiv_id": "2310.04265",
+    "title": "Conjecture 3.16",
+    "kind": "Conjecture",
+    "paper": "Clique number of tournaments",
+    "confidence": "high",
+    "source": "html",
+    "abs_url": "https://arxiv.org/abs/2310.04265",
+    "reasons": [
+      "ends_mid_sentence",
+      "extractor_says_incomplete"
+    ],
+    "statement": "There exists a function $f$ such that, for every tournament $T$, there exists a $BST$-ordering $\\prec$ of $T$ such:",
+    "notes": "Statement appears truncated in the source; conditions following 'such:' are not captured in the extracted text.",
+    "context": "$BST$-orderings are identified as natural candidates for the ordering of Conjecture 3.13. This conjecture specialises Conjecture 3.13 to $BST$-orderings, which arise from the theory of binary search trees on tournaments."
+  },
+  {
+    "id": "2208.10074__01",
+    "arxiv_id": "2208.10074",
+    "title": "Open Problem 6",
+    "kind": "Problem",
+    "paper": "Product structure of graph classes with strongly sublinear separators",
+    "confidence": "low",
+    "source": "html",
+    "abs_url": "https://arxiv.org/abs/2208.10074",
+    "reasons": [
+      "extractor_says_incomplete",
+      "placeholder_statement"
+    ],
+    "statement": "[Statement not available: only the theorem-environment label was provided in the input, not the body text of the environment.]",
+    "notes": "Exact statement text was not included in the provided input; only the environment label '[open] Open Problem 6' appeared in the theorem-environment list. Confidence is low because the statement could not be verified.",
+    "context": "Open Problem 6 is the only explicitly labeled open-problem environment in the paper (LaTeX environment type [open]). It appears between Theorem 5 and Theorem 7, in the context of product structure theory for graph classes with strongly sublinear separators."
+  },
+  {
+    "id": "2304.04690__00",
+    "arxiv_id": "2304.04690",
+    "title": "Conjecture (Section 9, characterization of 2-extremal digraphs)",
+    "kind": "Conjecture",
+    "paper": "Digraph Colouring and Arc-Connectivity",
+    "confidence": "low",
+    "source": "pdf",
+    "abs_url": "https://arxiv.org/abs/2304.04690",
+    "reasons": [
+      "extractor_says_incomplete",
+      "placeholder_statement"
+    ],
+    "statement": "[Statement unavailable \u2014 Section 9 content absent from PDF extraction]",
+    "notes": "PDF extraction truncated after Section 2; Sections 3\u20139 are absent or garbled (only arXiv ID strings appear). The introduction announces a conjecture in Section 9 for 2-extremal digraphs, but the verbatim statement is unavailable.",
+    "context": "The paper's main theorem (Theorem 1.8) characterizes $k$-extremal digraphs for $k = 1$ and $k \\geq 3$, but the authors were unable to handle the case $k = 2$ (i.e., digraphs $D$ with $\\vec{\\chi}(D) = \\lambda(D)+1 = 3$). The introduction explicitly states: 'in the last section, we discuss the case of 2-extremal digraphs and propose a conjecture for their characterization.'"
+  },
+  {
+    "id": "2003.01846__00",
+    "arxiv_id": "2003.01846",
+    "title": "Informal Conjecture (outerplanar strongly perfect graphs)",
+    "kind": "Informal",
+    "paper": "New Examples of Minimal Non-Strongly-Perfect Graphs",
+    "confidence": "low",
+    "source": "pdf",
+    "abs_url": "https://arxiv.org/abs/2003.01846",
+    "reasons": [
+      "extractor_says_incomplete",
+      "inline_truncation_marker"
+    ],
+    "statement": "While obtaining a complete list of minimal non-strongly-perfect graphs appears to be out of reach, one might conjecture that the characterization of outerplanar strongly perfect graphs can be obtained [statement truncated in PDF source].",
+    "notes": "PDF extraction truncates the sentence at 'can be obtai'; the complete statement of the conjecture is not recoverable from the source. Confidence set to low due to truncation.",
+    "context": "At the end of the paper the authors remark that a full characterisation of minimal non-strongly-perfect graphs is currently intractable, but suggest that restricting to the outerplanar setting may be a more approachable subproblem."
+  }
+]

@@ -22,6 +22,7 @@ SPEND_PATH = ATTACKS / "spend.json"
 LEDGER_PATH = ATTACKS / "ledger.jsonl"
 QUEUE_PATH = CATALOG / "queue.json"
 RANKING_PATH = CATALOG / "ARXIV_OPEN_DIFFICULTY_RANKING.md"
+ISSUES_JSONL = CATALOG / "issues.jsonl"
 
 MODEL = "gpt-5.6-sol"
 SITE_ARXIV = "https://mlelarge.github.io/graph-conjectures/arxiv/{id}/"
@@ -262,7 +263,9 @@ def attacked_ids() -> set[str]:
     if not ATTACKS.exists():
         return done
     for p in ATTACKS.iterdir():
-        if p.is_dir() and (p / "verdict.json").exists():
+        if p.is_dir() and (
+            (p / "verdict.json").exists() or (p / "skipped.json").exists()
+        ):
             done.add(p.name)
     return done
 
@@ -448,6 +451,27 @@ def cmd_spend(_: argparse.Namespace) -> None:
     print(json.dumps(rem, indent=2))
 
 
+def cmd_catalog_issues(_: argparse.Namespace) -> None:
+    report = ROOT / "CATALOG_ISSUES.md"
+    severe = CATALOG / "issues_severe.json"
+    n_live = 0
+    if ISSUES_JSONL.exists():
+        n_live = sum(
+            1
+            for line in ISSUES_JSONL.read_text().splitlines()
+            if line.strip() and not line.startswith("#")
+        )
+    n_severe = 0
+    if severe.exists():
+        n_severe = len(json.loads(severe.read_text()))
+    print(f"shareable report: {report}")
+    print(f"severe scan:      {n_severe} records in {severe}")
+    print(f"live attack log:  {n_live} rows in {ISSUES_JSONL}")
+    if report.exists():
+        print()
+        print(report.read_text())
+
+
 def select_records(args: argparse.Namespace) -> list[dict]:
     rows = parse_ranking()
     by_id = {r["id"]: r for r in rows}
@@ -478,6 +502,27 @@ def select_records(args: argparse.Namespace) -> list[dict]:
     return pending[:limit]
 
 
+INCOMPLETE_MARKERS = (
+    "full statement not available",
+    "statement unavailable",
+    "[full statement not available",
+)
+
+
+def looks_incomplete(text: str) -> bool:
+    low = (text or "").lower()
+    return any(m in low for m in INCOMPLETE_MARKERS)
+
+
+def log_catalog_issue(issue: dict) -> None:
+    """Append one catalog defect for sharing with Marc Lelarge."""
+    ISSUES_JSONL.parent.mkdir(parents=True, exist_ok=True)
+    issue = {"when": utc_now(), **issue}
+    with ISSUES_JSONL.open("a") as fh:
+        fh.write(json.dumps(issue, ensure_ascii=False) + "\n")
+    print(f"CATALOG ISSUE  {issue.get('id')}  {issue.get('severity')}", file=sys.stderr)
+
+
 def cmd_run(args: argparse.Namespace) -> None:
     load_dotenv()
     if not os.environ.get("OPENAI_API_KEY"):
@@ -500,10 +545,28 @@ def cmd_run(args: argparse.Namespace) -> None:
             f"attacking {rec['id']}  reserve ${reserve:.2f}  "
             f"model={MODEL} effort=max mode=pro"
         )
-        dossier = fetch_dossier(rec)
-        prompt = build_prompt(dossier)
         out_dir = ATTACKS / rec["id"]
         out_dir.mkdir(parents=True, exist_ok=True)
+        dossier = fetch_dossier(rec)
+        if not args.id and looks_incomplete(dossier["page_text"]):
+            note = {
+                "id": rec["id"],
+                "reason": "catalog statement incomplete",
+                "when": utc_now(),
+            }
+            (out_dir / "skipped.json").write_text(json.dumps(note, indent=2) + "\n")
+            log_catalog_issue(
+                {
+                    "id": rec["id"],
+                    "severity": "incomplete_statement",
+                    "url": rec.get("url"),
+                    "how_found": "preflight skip (no API call)",
+                    "reason": "catalog statement incomplete",
+                }
+            )
+            print(f"skip {rec['id']}: catalog statement incomplete (no API call)")
+            continue
+        prompt = build_prompt(dossier)
         (out_dir / "prompt.md").write_text(prompt)
         (out_dir / "meta.json").write_text(
             json.dumps({"record": rec, "dossier_meta": {k: dossier[k] for k in dossier if k not in {"page_text", "abstract"}}, "started": utc_now(), "model": MODEL, "reasoning": {"effort": "max", "mode": "pro"}}, indent=2)
@@ -565,6 +628,22 @@ def cmd_run(args: argparse.Namespace) -> None:
             f"(reasoning={usage['reasoning_tokens']})  "
             f"spent €{rem['spent_eur']:.4f} / €{rem['budget_eur']:.2f}"
         )
+        if verdict.get("verdict") == "ill_posed" and looks_incomplete(
+            dossier.get("page_text", "")
+        ):
+            log_catalog_issue(
+                {
+                    "id": rec["id"],
+                    "severity": "ill_posed_incomplete_statement",
+                    "url": rec.get("url"),
+                    "how_found": "Sol attack",
+                    "verdict": verdict.get("verdict"),
+                    "one_line": verdict.get("one_line"),
+                    "usd": round(usd, 6),
+                    "eur": call_rec["eur"],
+                    "response_id": getattr(resp, "id", None),
+                }
+            )
 
 
 def main() -> None:
@@ -585,6 +664,12 @@ def main() -> None:
     p_run.add_argument("--max-output-tokens", type=int, default=128_000)
     p_run.add_argument("--timeout", type=int, default=10_800, help="seconds")
     p_run.set_defaults(func=cmd_run)
+
+    p_iss = sub.add_parser(
+        "catalog-issues",
+        help="print catalog defects to share with Marc Lelarge",
+    )
+    p_iss.set_defaults(func=cmd_catalog_issues)
 
     args = ap.parse_args()
     args.func(args)
