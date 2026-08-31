@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The exact constant remains open, but the restricted problem in which every quasi-branch set has at most two components has asymptotic constant exactly 2/3, and the standard paired random construction has Hadwiger number 2t/3+O(log t).",
+  "would_publish": false,
+  "caveats": "The global bounds 1/2 <= c <= 2/3 are unchanged, and these refinements may already be implicit in the source construction.",
+  "id": "2103.10684__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.35048,
+  "eur": 1.166275,
+  "elapsed_s": 1600.8,
+  "status": "completed",
+  "response_id": "resp_02fb9e6de5c3c2dd006a95713ea21087d2bbb013e2060526ae",
+  "when": "2026-08-31T12:45:51Z"
+}

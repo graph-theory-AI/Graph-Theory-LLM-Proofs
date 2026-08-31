@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A star construction strengthens the general lower bound to f(k) at least k+1, while a common-neighborhood reduction gives exponent k+O(s^2) when the forest vertices occupy extension types of span s.",
+  "would_publish": false,
+  "caveats": "The unrestricted case can have span s=k, so the linear-versus-quadratic gap remains; the catalog and abstract also use inconsistent numerical normalizations.",
+  "id": "2410.23566__06",
+  "model": "gpt-5.6-sol",
+  "usd": 1.045708,
+  "eur": 0.903073,
+  "elapsed_s": 1401.0,
+  "status": "completed",
+  "response_id": "resp_05d8e3a653c2ef85006a957097c9dc87d2981b5b45be6baaf3",
+  "when": "2026-08-31T12:39:44Z"
+}

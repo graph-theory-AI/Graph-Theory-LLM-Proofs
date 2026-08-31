@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but one has the sharper bound R_2(2,n) <= r_4^(3)(2n) <= 2^(2^(O(n))), while the subclass invariant across one family of fibers has Ramsey number 2^(Theta(n^2)).",
+  "would_publish": false,
+  "caveats": "The three-uniform reduction is elementary and may already be known; it still leaves an exponential gap after taking one logarithm.",
+  "id": "2210.09227__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.047188,
+  "eur": 0.904352,
+  "elapsed_s": 1358.6,
+  "status": "completed",
+  "response_id": "resp_08e05366e3fcc5ca006a95710a6c6487d28f18bfe37f5c5f96",
+  "when": "2026-08-31T12:40:56Z"
+}

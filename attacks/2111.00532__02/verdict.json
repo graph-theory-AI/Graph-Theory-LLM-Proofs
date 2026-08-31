@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A sparse-incidence construction gives a new necessary multicoloring condition and shows that a nine-vertex subdivided double star does not have the strong transversal property.",
+  "would_publish": false,
+  "caveats": "This is only a necessary condition; sufficiency and exact overlap with the full source paper remain unchecked.",
+  "id": "2111.00532__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.157164,
+  "eur": 0.999327,
+  "elapsed_s": 1702.1,
+  "status": "completed",
+  "response_id": "resp_0a62a92ab748dc20006a956fb8857c87d2867af3a740f6f2ea",
+  "when": "2026-08-31T12:41:02Z"
+}

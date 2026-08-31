@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is proved for several substantial special cases, including all instances with at most three tournament vertices and all instances without asymmetric arcs from the stable part to the tournament part.",
+  "would_publish": false,
+  "caveats": "The mixed case with asymmetric S-to-T arcs and at least four tournament vertices remains unresolved.",
+  "id": "2409.05039__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.35698,
+  "eur": 1.171888,
+  "elapsed_s": 1696.3,
+  "status": "completed",
+  "response_id": "resp_047d9fad845b6f5c006a956fbf37b887d2bf5e6d72a5148200",
+  "when": "2026-08-31T12:41:03Z"
+}

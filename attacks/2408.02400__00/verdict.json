@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A 13-vertex circulant-complement seed has (omega,zeta,chi)=(4,4,7), and iterated Mycielski constructions raise zeta and chi together by one while preserving clique number.",
+  "would_publish": true,
+  "caveats": "The proof is self-contained; only literature priority has not been independently checked.",
+  "id": "2408.02400__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.861708,
+  "eur": 0.744171,
+  "elapsed_s": 1643.7,
+  "status": "completed",
+  "response_id": "resp_005451b62827ae4d006a956fbed91087d2b6475f156f981c05",
+  "when": "2026-08-31T12:40:10Z"
+}

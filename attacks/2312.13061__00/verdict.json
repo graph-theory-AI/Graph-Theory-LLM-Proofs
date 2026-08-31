@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is not settled, but an alternating-terminal condition reduces extension to one bipartite perfect-matching computation and resolves all six-boundary instances except a precise four-terminal complement-linkage case.",
+  "would_publish": false,
+  "caveats": "The residual prescribed-pairing perfect-matching problem remains unsolved, and parts of the dual formulation may overlap the source paper.",
+  "id": "2312.13061__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.411688,
+  "eur": 1.219134,
+  "elapsed_s": 1879.2,
+  "status": "completed",
+  "response_id": "resp_0a46500cd5b2cd7c006a956fb817c487d296a55d9fabaa8d69",
+  "when": "2026-08-31T12:43:59Z"
+}
