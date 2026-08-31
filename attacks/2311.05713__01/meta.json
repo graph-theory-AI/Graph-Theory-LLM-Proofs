@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 452,
+    "score": 2.65,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2311.05713__01",
+    "title_md": "[Full dichotomy for $k$-Coloring on $H$-free graphs ($k\\geq 3$)](https://arxiv.org/abs/2311.05713)",
+    "paper": "List-$k$-Coloring $H$-free graphs for all $k>4$",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2311.05713__01/"
+  },
+  "dossier_meta": {
+    "id": "2311.05713__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2311.05713__01/",
+    "arxiv_id": "2311.05713",
+    "tier": 3,
+    "score": 2.65,
+    "lean": "prove",
+    "status": "open",
+    "paper": "List-$k$-Coloring $H$-free graphs for all $k>4$"
+  },
+  "started": "2026-08-31T12:01:45Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

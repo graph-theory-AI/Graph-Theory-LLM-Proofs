@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the universal nonlinear bound d_{K_4}(n) <= 5/12 for n >= 7, together with vanishing for unate codes and structural lower bounds on the influence and Fourier complexity of any putative dense code.",
+  "would_publish": false,
+  "caveats": "The bound is constant and does not imply d_{K_4}(n)=o(1); novelty relative to all follow-up literature was not verified.",
+  "id": "2301.13305__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.630428,
+  "eur": 1.408038,
+  "elapsed_s": 2052.4,
+  "status": "completed",
+  "response_id": "resp_07bc17168af66806006a956526adf087d2bd9117d5f84159eb",
+  "when": "2026-08-31T12:01:44Z"
+}
