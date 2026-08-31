@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The problem is exactly a Max-Cut problem on a circle conflict graph; an elementary coloring argument strictly refines the Edwards bound, is sharp for several infinite families, and determines the exact worst-case value for every k at most 49.",
+  "would_publish": false,
+  "caveats": "The first value not settled here is k=50, and I have not checked whether the elementary Max-Cut refinement already appears in the literature.",
+  "id": "1608.07680__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.398952,
+  "eur": 1.208135,
+  "elapsed_s": 2107.8,
+  "status": "completed",
+  "response_id": "resp_0d45e2dbae3c8b86006a957559c4e887d2834c60cfb00f2a52",
+  "when": "2026-08-31T13:11:49Z"
+}
