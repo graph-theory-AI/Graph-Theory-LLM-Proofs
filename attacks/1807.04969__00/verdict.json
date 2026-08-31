@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The optimal coefficient is at least linear in |V(H)| for every H, and it is \u0398(|V(H)|) for every tree H\u2014indeed exactly determined for linear forests\u2014but the general planar case remains open.",
+  "would_publish": false,
+  "caveats": "The upper bounds cover trees, linear forests, and bounded packing number for connected planar H; they do not give a polynomial coefficient for arbitrary planar H and unbounded k.",
+  "id": "1807.04969__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.836028,
+  "eur": 0.721994,
+  "elapsed_s": 1214.2,
+  "status": "completed",
+  "response_id": "resp_0994bec7bfc89f93006a956c32e53087d2b4825800b518bddc",
+  "when": "2026-08-31T12:17:51Z"
+}

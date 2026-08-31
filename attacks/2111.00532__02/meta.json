@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 448,
+    "score": 2.65,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2111.00532__02",
+    "title_md": "[Informal: characterization of graphs with the strong transversal proper\u2026](https://arxiv.org/abs/2111.00532)",
+    "paper": "Pure pairs. IX. Transversal trees",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2111.00532__02/"
+  },
+  "dossier_meta": {
+    "id": "2111.00532__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2111.00532__02/",
+    "arxiv_id": "2111.00532",
+    "tier": 3,
+    "score": 2.65,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Pure pairs. IX. Transversal trees"
+  },
+  "started": "2026-08-31T12:12:40Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

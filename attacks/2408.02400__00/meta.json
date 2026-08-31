@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 445,
+    "score": 2.65,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2408.02400__00",
+    "title_md": "[Problem 1.5](https://arxiv.org/abs/2408.02400)",
+    "paper": "On the difference between the chromatic and cochromatic number",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2408.02400__00/"
+  },
+  "dossier_meta": {
+    "id": "2408.02400__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2408.02400__00/",
+    "arxiv_id": "2408.02400",
+    "tier": 3,
+    "score": 2.65,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On the difference between the chromatic and cochromatic number"
+  },
+  "started": "2026-08-31T12:12:46Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

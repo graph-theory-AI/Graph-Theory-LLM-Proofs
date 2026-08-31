@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For every fixed k at least 5, k-Coloring is NP-complete on P10-free graphs and, more generally, whenever H contains P10, 3P4, 2P5, or 2P4+P2 as an induced subgraph.",
+  "would_publish": false,
+  "caveats": "This is an elementary consequence of the source paper's list-hardness theorem; it leaves k=3,4 and many linear forests untreated, and novelty has not been literature-checked.",
+  "id": "2311.05713__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.769092,
+  "eur": 0.664188,
+  "elapsed_s": 999.2,
+  "status": "completed",
+  "response_id": "resp_0db48a363d3ab038006a956d29317087d29b0987e09a96e2cc",
+  "when": "2026-08-31T12:18:24Z"
+}

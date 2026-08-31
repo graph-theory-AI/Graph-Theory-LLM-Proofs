@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full conjecture remains open, but deficient clique bags have Ramsey-bounded completion cells in every no-instance, and the ell=4 case is FPT with an additional parameter measuring induced P(1,t,t,t) obstructions.",
+  "would_publish": false,
+  "caveats": "The bounds are local or bi-parameterized; they do not give FPT in k alone and do not address the P7-free case.",
+  "id": "1909.08426__03",
+  "model": "gpt-5.6-sol",
+  "usd": 0.902764,
+  "eur": 0.779627,
+  "elapsed_s": 1055.8,
+  "status": "completed",
+  "response_id": "resp_022477cbed7e0de4006a956c32d82c87d28a893d6af0e3d631",
+  "when": "2026-08-31T12:15:13Z"
+}

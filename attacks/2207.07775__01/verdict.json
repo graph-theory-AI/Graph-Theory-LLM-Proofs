@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but the maximum mixed order is always either r(k)-2 or r(k)-1, it is r(k)-2 for k=3,4, and endpoint failure forces strong unique-extension and saturation properties.",
+  "would_publish": false,
+  "caveats": "No value k\u22655 is settled, and the extension equivalence substantially overlaps the source paper's Lemma 5.2.",
+  "id": "2207.07775__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.971216,
+  "eur": 0.838742,
+  "elapsed_s": 1125.7,
+  "status": "completed",
+  "response_id": "resp_060b934a9f7eb0f2006a956c32e23487d28298cecb68f53803",
+  "when": "2026-08-31T12:16:23Z"
+}

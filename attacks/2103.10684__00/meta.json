@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 436,
+    "score": 2.7,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "2103.10684__00",
+    "title_md": "[Question 1.6](https://arxiv.org/abs/2103.10684)",
+    "paper": "On a recolouring version of Hadwiger's conjecture",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2103.10684__00/"
+  },
+  "dossier_meta": {
+    "id": "2103.10684__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2103.10684__00/",
+    "arxiv_id": "2103.10684",
+    "tier": 3,
+    "score": 2.7,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "On a recolouring version of Hadwiger's conjecture"
+  },
+  "started": "2026-08-31T12:19:10Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

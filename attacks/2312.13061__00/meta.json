@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 451,
+    "score": 2.65,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2312.13061__00",
+    "title_md": "[Conjecture 3](https://arxiv.org/abs/2312.13061)",
+    "paper": "Precoloring extension in planar near-Eulerian-triangulations",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2312.13061__00/"
+  },
+  "dossier_meta": {
+    "id": "2312.13061__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2312.13061__00/",
+    "arxiv_id": "2312.13061",
+    "tier": 3,
+    "score": 2.65,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Precoloring extension in planar near-Eulerian-triangulations"
+  },
+  "started": "2026-08-31T12:12:39Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

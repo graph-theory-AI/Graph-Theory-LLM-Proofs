@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 442,
+    "score": 2.65,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2308.15721__00",
+    "title_md": "[Conjecture 2](https://arxiv.org/abs/2308.15721)",
+    "paper": "Clustered Colouring of Odd-$H$-Minor-Free Graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.15721__00/"
+  },
+  "dossier_meta": {
+    "id": "2308.15721__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.15721__00/",
+    "arxiv_id": "2308.15721",
+    "tier": 3,
+    "score": 2.65,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Clustered Colouring of Odd-$H$-Minor-Free Graphs"
+  },
+  "started": "2026-08-31T12:15:13Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

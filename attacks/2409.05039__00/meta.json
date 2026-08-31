@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 444,
+    "score": 2.65,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2409.05039__00",
+    "title_md": "[Open question on strong 2-kernels in split digraphs](https://arxiv.org/abs/2409.05039)",
+    "paper": "Distant digraph domination",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2409.05039__00/"
+  },
+  "dossier_meta": {
+    "id": "2409.05039__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2409.05039__00/",
+    "arxiv_id": "2409.05039",
+    "tier": 3,
+    "score": 2.65,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Distant digraph domination"
+  },
+  "started": "2026-08-31T12:12:47Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

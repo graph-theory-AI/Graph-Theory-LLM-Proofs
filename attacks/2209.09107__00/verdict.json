@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "Every Eulerian graph with an odd number of edges, in particular the triangle, is a counterexample.",
+  "would_publish": false,
+  "caveats": "This concerns the displayed inequality without an outer floor and uses the standard definition of an Alon-Tarsi orientation.",
+  "id": "2209.09107__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.209592,
+  "eur": 0.181004,
+  "elapsed_s": 242.3,
+  "status": "completed",
+  "response_id": "resp_00c80eb34c6fb18e006a956fba531087d2bb1f6957171ae47b",
+  "when": "2026-08-31T12:16:44Z"
+}

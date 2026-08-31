@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The base-3 conjecture remains open, but alteration strengthens the displayed random lower bound and the conjectured factor 3 is proved for a recursively Fourier-uniform special case.",
+  "would_publish": false,
+  "caveats": "No general upper bound with exponential base 3 is obtained, and no novelty is claimed for the elementary auxiliary results.",
+  "id": "1708.08486__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.816924,
+  "eur": 0.705496,
+  "elapsed_s": 991.1,
+  "status": "completed",
+  "response_id": "resp_06230beb0f5316c0006a956c32f50087d2b8b856cfcd6f1427",
+  "when": "2026-08-31T12:14:08Z"
+}

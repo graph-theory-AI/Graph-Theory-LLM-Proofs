@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I do not resolve the conjecture, but give exact algorithms controlled by neighborhood components, external component types, or an associated CSP's treewidth, together with a sharp radius-two hardness barrier.",
+  "would_publish": false,
+  "caveats": "No universal polylogarithmic bound is proved for these parameters, so the general diameter-2 case remains open.",
+  "id": "2601.13072__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.052488,
+  "eur": 0.908929,
+  "elapsed_s": 1292.7,
+  "status": "completed",
+  "response_id": "resp_035fd4e83ea35ba5006a956c32fee887d28be209eec1964e1e",
+  "when": "2026-08-31T12:19:10Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The intended finite-girth conjecture holds for girth 4 and, for girth at least 5, reduces to targets of minimum degree at least 2, while the literal formulation fails for acyclic F.",
+  "would_publish": false,
+  "caveats": "The core cases F=C_g for g>=5 remain unresolved; forests must be excluded from the statement.",
+  "id": "2203.03612__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.767136,
+  "eur": 0.662499,
+  "elapsed_s": 1240.4,
+  "status": "completed",
+  "response_id": "resp_00040cf4ba37dd9e006a956c32d48087d28e6bbfb730ce2728",
+  "when": "2026-08-31T12:18:17Z"
+}
