@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured range holds for graphs with fractional chromatic number \u03c7_f(G) satisfying \u03c7_f(G)d\\log n=o(n), in particular for every bipartite regular graph, while for arbitrary regular graphs one obtains optimal one-bin variance and concentration of a natural spacing predictor.",
+  "would_publish": false,
+  "caveats": "The simultaneous result for arbitrary high-chromatic regular graphs remains open; novelty relative to the literature has not been checked.",
+  "id": "2207.13651__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.944624,
+  "eur": 0.815777,
+  "elapsed_s": 1197.5,
+  "status": "completed",
+  "response_id": "resp_0304ef7221a3285c006a9560fe804887d28db0025a4b455895",
+  "when": "2026-08-31T11:29:47Z"
+}

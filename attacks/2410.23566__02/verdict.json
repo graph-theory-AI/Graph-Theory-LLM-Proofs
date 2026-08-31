@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general base remains open, but it is at least 2, and base 2 is sharp for blown-up out-/in-stars and for almost all host tournaments.",
+  "would_publish": false,
+  "caveats": "No worst-case upper bound improving the source paper's exponential base is proved.",
+  "id": "2410.23566__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.89274,
+  "eur": 0.77097,
+  "elapsed_s": 1088.6,
+  "status": "completed",
+  "response_id": "resp_021978a60cf01718006a956361f5ec87d28134245922a12443",
+  "when": "2026-08-31T11:38:10Z"
+}

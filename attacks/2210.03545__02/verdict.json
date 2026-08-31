@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but for red two-graphs the restricted Ramsey number is exactly 2n+1 when 3 divides n and 2n otherwise.",
+  "would_publish": false,
+  "caveats": "Only the even-on-every-four-set subclass is settled; the random-greedy estimate needed for the full lower bound remains unproved.",
+  "id": "2210.03545__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.1164,
+  "eur": 0.964123,
+  "elapsed_s": 1604.2,
+  "status": "completed",
+  "response_id": "resp_03d308a89f9f9cd1006a956164340c87d2840d37cd010ca92f",
+  "when": "2026-08-31T11:38:16Z"
+}

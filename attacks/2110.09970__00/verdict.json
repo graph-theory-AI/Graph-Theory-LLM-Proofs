@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full characterization is not obtained, but there are exact decomposition, high-attachment, sparse-case, and polynomial-recognition results for the three exceptional lengths.",
+  "would_publish": false,
+  "caveats": "Components attaching to a hole through zero, one, or two consecutive rim vertices remain unclassified, and the prime 4-holed case is still broad.",
+  "id": "2110.09970__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.996828,
+  "eur": 0.860861,
+  "elapsed_s": 1145.5,
+  "status": "completed",
+  "response_id": "resp_0e41904abad0490c006a956285a16887d2811c85752d11ba6a",
+  "when": "2026-08-31T11:35:25Z"
+}

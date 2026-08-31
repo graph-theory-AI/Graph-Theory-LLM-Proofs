@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove necessary tournament and forest obstructions, completely classify singleton and acyclicity-forcing families, and give explicit bounds for several transitive-tournament/forest pairs.",
+  "would_publish": false,
+  "caveats": "Assumes induced subdigraphs in finite loopless oriented graphs; the general interaction between tournament obstructions and oriented forests remains open.",
+  "id": "2306.04710__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.850244,
+  "eur": 0.734271,
+  "elapsed_s": 944.3,
+  "status": "completed",
+  "response_id": "resp_07fd639c27609f18006a95620a730087d2990756cf4c27d30f",
+  "when": "2026-08-31T11:30:02Z"
+}

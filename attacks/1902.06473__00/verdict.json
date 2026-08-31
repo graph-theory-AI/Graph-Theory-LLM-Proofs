@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "medium",
+  "one_line": "Under normalized Lebesgue averaging on the chain polytope, QLB(P) lies between ln e(P) and (ln 2)^{-1}ln e(P), and hence between LB(P)/2 and LB(P)/ln 2.",
+  "would_publish": false,
+  "caveats": "The catalog omits the law used in QH(P), and the source conjecture is corrupted; the proof applies to uniform chain-polytope averaging, equivalently to the extension-gap formula derived below.",
+  "id": "1902.06473__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.58712,
+  "eur": 1.370637,
+  "elapsed_s": 2281.9,
+  "status": "completed",
+  "response_id": "resp_04da292578235f9c006a955e3fc1d087d2a2b7d75320a8de01",
+  "when": "2026-08-31T11:36:09Z"
+}

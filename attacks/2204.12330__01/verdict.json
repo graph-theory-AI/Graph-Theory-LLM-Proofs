@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A lexicographic exact-search construction yields a connected computable cubic graph with infinite twin-width, but it gives neither a natural family nor an explicit finitely generated group.",
+  "would_publish": false,
+  "caveats": "Termination still uses the known probabilistic existence theorem, and no concrete high-twin-width adjacency list or effective Osajda labeling is produced.",
+  "id": "2204.12330__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.283616,
+  "eur": 1.108531,
+  "elapsed_s": 1597.3,
+  "status": "completed",
+  "response_id": "resp_05c48c72041b6942006a9560bd410487d2829eeb3c5a0442f8",
+  "when": "2026-08-31T11:35:22Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "With prime meaning module-prime, and apart from convention-dependent graphs of order at most two, the product is prime exactly when d is at least two, every n_i is at least two, and at most one n_i equals two.",
+  "would_publish": false,
+  "caveats": "The only ambiguity concerns whether graphs on one or two vertices are called prime.",
+  "id": "2401.06062__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.324472,
+  "eur": 0.280214,
+  "elapsed_s": 699.1,
+  "status": "completed",
+  "response_id": "resp_0641d1aa15b1030c006a9562d6777087d2a05d4d9985aedcda",
+  "when": "2026-08-31T11:29:21Z"
+}

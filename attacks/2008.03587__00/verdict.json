@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Pendant extensions satisfy a useful sandwich, preserve the zombie number whenever z(G)\u22642 or z(G)=c(G), and any counterexample must exploit a genuinely mixed active/delayed initial configuration.",
+  "would_publish": false,
+  "caveats": "The central mixed-delay case remains unresolved; the argument assumes finite connected graphs and the standard rule that the survivor may stay put.",
+  "id": "2008.03587__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.342656,
+  "eur": 1.159518,
+  "elapsed_s": 1883.2,
+  "status": "completed",
+  "response_id": "resp_01e3ccc81f219b26006a955f197b0487d2972e92aa42c238ee",
+  "when": "2026-08-31T11:33:08Z"
+}

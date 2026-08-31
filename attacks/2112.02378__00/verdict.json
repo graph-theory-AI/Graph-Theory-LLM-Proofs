@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but it holds under a summable hereditary separator condition, notably for K_{t,t}-free or bounded-direction segment graphs, and any counterexample sequence must have balanced biclique size tending to infinity but remaining sublinear.",
+  "would_publish": false,
+  "caveats": "The unrestricted argument only recovers the known n/log^2 n bound, and the unbounded sublinear-biclique regime remains untreated.",
+  "id": "2112.02378__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.069304,
+  "eur": 0.923451,
+  "elapsed_s": 1470.6,
+  "status": "completed",
+  "response_id": "resp_0149da9016947c32006a95616f498487d2ad09d74db66e9e83",
+  "when": "2026-08-31T11:36:13Z"
+}

@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 469,
+    "score": 2.6,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1811.08750__00",
+    "title_md": "[Conjecture 1.8](https://arxiv.org/abs/1811.08750)",
+    "paper": "Additive Approximation of Generalized Tur\u00e1n Questions",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1811.08750__00/"
+  },
+  "dossier_meta": {
+    "id": "1811.08750__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1811.08750__00/",
+    "arxiv_id": "1811.08750",
+    "tier": 3,
+    "score": 2.6,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Additive Approximation of Generalized Tur\u00e1n Questions"
+  },
+  "started": "2026-08-31T11:29:21Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

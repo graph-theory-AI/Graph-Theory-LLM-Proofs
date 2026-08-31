@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The exact maximum remains open, but it admits a precise reduction to a cube-distance graph, an exact solution for linear families, and the explicit lower bound 2^n/(n+1)^{0.145142}.",
+  "would_publish": false,
+  "caveats": "There is no matching quantitative upper bound, and the 7-adic exponent is not claimed optimal or novel.",
+  "id": "2301.13305__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.080384,
+  "eur": 0.93302,
+  "elapsed_s": 1303.6,
+  "status": "completed",
+  "response_id": "resp_0cbbb3f8cb372656006a9561cad8d087d280b98eba34a09f30",
+  "when": "2026-08-31T11:34:58Z"
+}
