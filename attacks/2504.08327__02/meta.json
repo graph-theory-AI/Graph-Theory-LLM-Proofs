@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 480,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2504.08327__02",
+    "title_md": "[Conjecture 5](https://arxiv.org/abs/2504.08327)",
+    "paper": "On a conjecture concerning 4-coloring of graphs with one crossing",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2504.08327__02/"
+  },
+  "dossier_meta": {
+    "id": "2504.08327__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2504.08327__02/",
+    "arxiv_id": "2504.08327",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "On a conjecture concerning 4-coloring of graphs with one crossing"
+  },
+  "started": "2026-08-31T11:22:05Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

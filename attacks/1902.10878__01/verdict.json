@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "An explicit family gives \u03c8(2/7,5/7) \u2264 23/28 < 6/7 = \u03c8(5/7,2/7).",
+  "would_publish": true,
+  "caveats": "The exact value of \u03c8(2/7,5/7) is not determined, and the separate exact-degree symmetry question remains open.",
+  "id": "1902.10878__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.318204,
+  "eur": 1.138401,
+  "elapsed_s": 1385.1,
+  "status": "completed",
+  "response_id": "resp_04632d3200d19469006a955e7448c887d2b69a49ce7f7f94bc",
+  "when": "2026-08-31T11:22:05Z"
+}

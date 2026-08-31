@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains unresolved, but arbitrarily complicated graphs can be hidden in uniformly tame ball representations after sufficiently long subdivisions while retaining the sharp bound col_r <= 2r+1.",
+  "would_publish": false,
+  "caveats": "The catalog's singular-graph wording must be read uniformly over a graph class; the result below rules out a broad counterexample strategy but gives no universal representation theorem.",
+  "id": "2001.01552__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.017344,
+  "eur": 0.878578,
+  "elapsed_s": 1313.7,
+  "status": "completed",
+  "response_id": "resp_09d9531af471db04006a955e3fea7087d2ad5964239d42c0ad",
+  "when": "2026-08-31T11:20:01Z"
+}

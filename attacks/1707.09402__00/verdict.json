@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For every fixed linear forest H, IFVS on H-free graphs has a bounded-rank hitting-set formulation, an explicit FPT algorithm and polynomial compression, but neither a polynomial algorithm nor P_h-free hardness is obtained.",
+  "would_publish": false,
+  "caveats": "The unrestricted P6-free and general linear-forest classifications remain open; the hardness construction below has arbitrarily long induced paths.",
+  "id": "1707.09402__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.265196,
+  "eur": 1.092623,
+  "elapsed_s": 1575.6,
+  "status": "completed",
+  "response_id": "resp_0c62f4aff1127207006a955e3f2b9887d28837929fc2107965",
+  "when": "2026-08-31T11:24:22Z"
+}

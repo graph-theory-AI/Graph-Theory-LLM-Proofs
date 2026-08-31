@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 471,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2301.13305__01",
+    "title_md": "[Informal question: is $d_{K_4}(n) = o(1)$?](https://arxiv.org/abs/2301.13305)",
+    "paper": "Graph-codes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2301.13305__01/"
+  },
+  "dossier_meta": {
+    "id": "2301.13305__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2301.13305__01/",
+    "arxiv_id": "2301.13305",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Graph-codes"
+  },
+  "started": "2026-08-31T11:27:32Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

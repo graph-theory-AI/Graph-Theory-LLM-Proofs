@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A complete-crossing block construction improves the general large-k lower-bound constant to 1/(2\u221a2), leaving only a factor-two gap, and the k=1 case is settled exactly.",
+  "would_publish": false,
+  "caveats": "The general leading constant remains undetermined, and the literature novelty of the elementary improved bound has not been independently verified.",
+  "id": "2112.08456__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.140232,
+  "eur": 0.984704,
+  "elapsed_s": 1235.7,
+  "status": "completed",
+  "response_id": "resp_0b73a4a19e6723a7006a955fdd93b887d289867c2e49c60416",
+  "when": "2026-08-31T11:25:37Z"
+}

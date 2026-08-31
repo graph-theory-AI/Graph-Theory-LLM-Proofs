@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full metatheorem remains open, but weighted vertex cover has a PTAS on every efficiently fractionally treewidth-fragile class via a half-integral LP core.",
+  "would_publish": false,
+  "caveats": "Only weighted vertex cover and a bounded-rank syntactic fragment are covered; the general monotone FO claims remain open.",
+  "id": "2103.08698__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.864756,
+  "eur": 0.746803,
+  "elapsed_s": 1117.5,
+  "status": "completed",
+  "response_id": "resp_0407efab4f0ee865006a955fdb405887d2873cef93ceddec22",
+  "when": "2026-08-31T11:23:36Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the source's zero-diagonal hypothesis, reduction modulo 3 of the Hadamard square proves that the minimum rank is sqrt(2n)+O(1), and a two-subset distance matrix shows this is asymptotically sharp.",
+  "would_publish": false,
+  "caveats": "This asymptotically settles only the integer-powers-of-2 case; the exact extremal value and the general small-rank-group problem remain open, and without zero diagonal no rank bound is possible.",
+  "id": "2109.00618__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.751676,
+  "eur": 0.649147,
+  "elapsed_s": 1058.9,
+  "status": "completed",
+  "response_id": "resp_088d70fb53cb1677006a955f444b5487d28b441dba16173cfc",
+  "when": "2026-08-31T11:20:06Z"
+}

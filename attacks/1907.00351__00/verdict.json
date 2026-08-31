@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The exact class remains open, but a 12-vertex K3,3-minor-free graph is an explicit excluded minor and treewidth 3 is the sharp threshold guaranteeing membership.",
+  "would_publish": false,
+  "caveats": "The remaining excluded minors and the planar case are unresolved; no novelty claim is made relative to the source paper's construction.",
+  "id": "1907.00351__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.5361,
+  "eur": 1.326576,
+  "elapsed_s": 1762.4,
+  "status": "completed",
+  "response_id": "resp_026fc1888701c7f6006a955e41c3fc87d2ab5ccb0b754adf2d",
+  "when": "2026-08-31T11:27:32Z"
+}

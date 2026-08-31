@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Weighted Vertex Cover has a PTAS on every effectively fractionally treewidth-fragile class via a half-integral LP core and thin bounded-treewidth deletions, but the PTAS extension to all hereditary sublinear-separator classes remains open.",
+  "would_publish": false,
+  "caveats": "The algorithm requires efficiently obtainable fragility distributions; the argument is specific to Vertex Cover and transfers only a QPTAS in the broader separator setting.",
+  "id": "2105.01780__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.64696,
+  "eur": 0.558715,
+  "elapsed_s": 1106.6,
+  "status": "completed",
+  "response_id": "resp_061b6bfcb6f9491a006a955edcb97487d2a5c24c4a38e301e2",
+  "when": "2026-08-31T11:19:11Z"
+}

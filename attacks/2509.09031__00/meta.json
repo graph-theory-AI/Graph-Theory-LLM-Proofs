@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 477,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "2509.09031__00",
+    "title_md": "[Conjecture 1.2](https://arxiv.org/abs/2509.09031)",
+    "paper": "Asymptotic structure. II. Path-width and additive quasi-isometry",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2509.09031__00/"
+  },
+  "dossier_meta": {
+    "id": "2509.09031__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2509.09031__00/",
+    "arxiv_id": "2509.09031",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Asymptotic structure. II. Path-width and additive quasi-isometry"
+  },
+  "started": "2026-08-31T11:23:36Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

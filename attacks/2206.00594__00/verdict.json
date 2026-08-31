@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full conjecture remains open, but polynomiality extends through modular and clique-cutset decompositions, and an explicit dense prime imperfect O2-free family is solved exactly.",
+  "would_publish": false,
+  "caveats": "General prime, clique-cutset-free, imperfect atoms with unrestricted large bicliques remain untreated.",
+  "id": "2206.00594__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.265656,
+  "eur": 1.093021,
+  "elapsed_s": 1747.1,
+  "status": "completed",
+  "response_id": "resp_001449f45b8a8403006a955e41552887d28d69b68ae0397027",
+  "when": "2026-08-31T11:27:16Z"
+}
