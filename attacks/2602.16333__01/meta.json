@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 431,
+    "score": 2.7,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2602.16333__01",
+    "title_md": "[Conjecture 4.2](https://arxiv.org/abs/2602.16333)",
+    "paper": "Long cycles in vertex transitive digraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2602.16333__01/"
+  },
+  "dossier_meta": {
+    "id": "2602.16333__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2602.16333__01/",
+    "arxiv_id": "2602.16333",
+    "tier": 3,
+    "score": 2.7,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Long cycles in vertex transitive digraphs"
+  },
+  "started": "2026-08-31T12:29:06Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The equality remains unsettled, but bad assignments are structurally constrained, and the case r=4 reduces exactly to a finite 16-colour \u2203\u2200 Boolean instance.",
+  "would_publish": false,
+  "caveats": "No QBF computation was run, and some of the general lemmas may already be standard.",
+  "id": "1902.07018__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.258816,
+  "eur": 1.087113,
+  "elapsed_s": 1503.2,
+  "status": "completed",
+  "response_id": "resp_0eba7051cba46774006a956c32d2b887d2a5a0f4e5ae77e80f",
+  "when": "2026-08-31T12:22:40Z"
+}

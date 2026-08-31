@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 433,
+    "score": 2.7,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2206.12335__01",
+    "title_md": "[Problem 6.4](https://arxiv.org/abs/2206.12335)",
+    "paper": "Improved bounds for 1-independent percolation on $\\mathbb{Z}^n$",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2206.12335__01/"
+  },
+  "dossier_meta": {
+    "id": "2206.12335__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2206.12335__01/",
+    "arxiv_id": "2206.12335",
+    "tier": 3,
+    "score": 2.7,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Improved bounds for 1-independent percolation on $\\mathbb{Z}^n$"
+  },
+  "started": "2026-08-31T12:22:40Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

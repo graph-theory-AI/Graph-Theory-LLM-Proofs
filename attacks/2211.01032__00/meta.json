@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 435,
+    "score": 2.7,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2211.01032__00",
+    "title_md": "[Conjecture 1.13](https://arxiv.org/abs/2211.01032)",
+    "paper": "Random Embeddings of Graphs: The Expected Number of Faces in Most Graph\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2211.01032__00/"
+  },
+  "dossier_meta": {
+    "id": "2211.01032__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2211.01032__00/",
+    "arxiv_id": "2211.01032",
+    "tier": 3,
+    "score": 2.7,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Random Embeddings of Graphs: The Expected Number of Faces in Most Graph\u2026"
+  },
+  "started": "2026-08-31T12:20:24Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

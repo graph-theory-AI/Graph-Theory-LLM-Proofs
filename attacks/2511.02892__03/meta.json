@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 432,
+    "score": 2.7,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2511.02892__03",
+    "title_md": "[Problem 4.1](https://arxiv.org/abs/2511.02892)",
+    "paper": "Open problems of the 33rd Workshop on Cycles and Colourings",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2511.02892__03/"
+  },
+  "dossier_meta": {
+    "id": "2511.02892__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2511.02892__03/",
+    "arxiv_id": "2511.02892",
+    "tier": 3,
+    "score": 2.7,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Open problems of the 33rd Workshop on Cycles and Colourings"
+  },
+  "started": "2026-08-31T12:28:11Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

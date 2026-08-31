@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "On the inherited range n >= 4, K_4 has square energy 3 < 16/5, so the stated 4n/5 bound is false.",
+  "would_publish": false,
+  "caveats": "This only refutes the literal n >= 4 formulation; the natural repair n >= 5, or an asymptotic interpretation, remains unresolved.",
+  "id": "2409.18220__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.77212,
+  "eur": 0.666803,
+  "elapsed_s": 897.7,
+  "status": "completed",
+  "response_id": "resp_0eee3a5cdbcc2db1006a9570110e5c87d2b81bd80143e7b112",
+  "when": "2026-08-31T12:29:06Z"
+}

@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 434,
+    "score": 2.7,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2505.05997__00",
+    "title_md": "[Open Problem: polytime $f(\\mathrm{OPT})$-approximation for largest comp\u2026](https://arxiv.org/abs/2505.05997)",
+    "paper": "A Polynomial-Time Approximation Algorithm for Complete Interval Minors",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2505.05997__00/"
+  },
+  "dossier_meta": {
+    "id": "2505.05997__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2505.05997__00/",
+    "arxiv_id": "2505.05997",
+    "tier": 3,
+    "score": 2.7,
+    "lean": "prove",
+    "status": "open",
+    "paper": "A Polynomial-Time Approximation Algorithm for Complete Interval Minors"
+  },
+  "started": "2026-08-31T12:21:53Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

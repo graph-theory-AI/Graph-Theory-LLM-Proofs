@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "For H=K_{1,3}, the odd-H-minor-free graphs have maximum degree at most 2, so their defective chromatic number is 1 but their clustered chromatic number is 2, whereas overline{td}(H)-1=1.",
+  "would_publish": false,
+  "caveats": "This refutes the catalog's reconstructed clustered equality; an intended conjecture concerning only defective chromatic number is not refuted.",
+  "id": "2308.15721__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.217532,
+  "eur": 0.187861,
+  "elapsed_s": 310.1,
+  "status": "completed",
+  "response_id": "resp_0612ff2138ddfe04006a957051e9a887d28a3ccd1c86a86528",
+  "when": "2026-08-31T12:20:23Z"
+}
