@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "For every fixed long-hole threshold at least seven, a four-vertex C-major set admits no bounded catching path, although C is the unique long odd hole.",
+  "would_publish": false,
+  "caveats": "This uses the standard definition of C-major and interprets bounded as depending only on the long-hole threshold; omitted source-paper hypotheses could alter the conclusion.",
+  "id": "1904.12273__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.73612,
+  "eur": 0.635713,
+  "elapsed_s": 1165.0,
+  "status": "completed",
+  "response_id": "resp_04941766a753736f006a955e400df487d2af7fe00373ec3181",
+  "when": "2026-08-31T11:17:32Z"
+}

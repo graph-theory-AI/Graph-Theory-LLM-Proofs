@@ -1,0 +1,15 @@
+{
+  "verdict": "ill_posed",
+  "confidence": "high",
+  "one_line": "The quoted conjecture has no determinate truth value, and the most direct uniform finite-group formulation is false.",
+  "would_publish": false,
+  "caveats": "The counterexamples exploit precisely the unspecified infinite-complexity and torsion/trivial-solution exclusions, so a suitably repaired formulation may remain open.",
+  "id": "1911.03427__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.625744,
+  "eur": 0.540393,
+  "elapsed_s": 700.1,
+  "status": "completed",
+  "response_id": "resp_00de9af90f251591006a955e41c86087d2a3a28006a60462ab",
+  "when": "2026-08-31T11:09:49Z"
+}

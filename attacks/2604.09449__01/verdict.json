@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is exactly equivalent to uniformly bounded rainbow-matching deficiency in equitable n-colourings of K_{2n}; I prove this reduction and the k=2 case, but not the required absolute bound.",
+  "would_publish": false,
+  "caveats": "I use f_c as the minimum number of matching edges recoloured; an L1 normalization changes bounds only by a factor of two.",
+  "id": "2604.09449__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.091684,
+  "eur": 0.942778,
+  "elapsed_s": 1580.7,
+  "status": "completed",
+  "response_id": "resp_0c608ee9b119a265006a955b4241e887d28048448fcb6e8c35",
+  "when": "2026-08-31T11:11:42Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "unknown",
+  "confidence": "low",
+  "one_line": "",
+  "would_publish": false,
+  "caveats": "no JSON block parsed",
+  "id": "1505.01616__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.0,
+  "eur": 0.0,
+  "elapsed_s": 1203.3,
+  "status": "failed",
+  "response_id": "resp_05f726fb0d20ed3e006a955d3aa1c487d2ba5aec57ea57f6fd",
+  "when": "2026-08-31T11:13:49Z"
+}

@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 496,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2207.13651__00",
+    "title_md": "[Informal Conjecture on Property (*) for d = o(n/log n)](https://arxiv.org/abs/2207.13651)",
+    "paper": "On random irregular subgraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2207.13651__00/"
+  },
+  "dossier_meta": {
+    "id": "2207.13651__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2207.13651__00/",
+    "arxiv_id": "2207.13651",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On random irregular subgraphs"
+  },
+  "started": "2026-08-31T11:09:50Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

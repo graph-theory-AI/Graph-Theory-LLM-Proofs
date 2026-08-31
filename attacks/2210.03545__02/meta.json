@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 494,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2210.03545__02",
+    "title_md": "[Informal Conjecture: r(K^(3)_{4-e}, S^(3)_n) = Theta(n^2 / log n)](https://arxiv.org/abs/2210.03545)",
+    "paper": "Hypergraph Ramsey numbers of cliques versus stars",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.03545__02/"
+  },
+  "dossier_meta": {
+    "id": "2210.03545__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.03545__02/",
+    "arxiv_id": "2210.03545",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Hypergraph Ramsey numbers of cliques versus stars"
+  },
+  "started": "2026-08-31T11:11:32Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

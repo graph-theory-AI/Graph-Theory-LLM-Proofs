@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 493,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2112.02378__00",
+    "title_md": "[Problem 1.2](https://arxiv.org/abs/2112.02378)",
+    "paper": "Quasiplanar Graphs, String Graphs, and the Erdos-Gallai Problem",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2112.02378__00/"
+  },
+  "dossier_meta": {
+    "id": "2112.02378__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2112.02378__00/",
+    "arxiv_id": "2112.02378",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Quasiplanar Graphs, String Graphs, and the Erdos-Gallai Problem"
+  },
+  "started": "2026-08-31T11:11:43Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

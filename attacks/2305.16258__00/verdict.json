@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but an atomwise bounded clique-cover transversal of the induced pyramids gives an explicit constant bound, and a natural unbounded family containing many pyramids has tree-\u03b1 exactly 2.",
+  "would_publish": false,
+  "caveats": "The argument uses the source theorem as a black box and does not bound the transversal parameter for arbitrary atoms.",
+  "id": "2305.16258__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.996352,
+  "eur": 0.86045,
+  "elapsed_s": 1585.4,
+  "status": "completed",
+  "response_id": "resp_06e1198cc81cc0e9006a955cedd65887d2915bcd397da8126a",
+  "when": "2026-08-31T11:18:55Z"
+}

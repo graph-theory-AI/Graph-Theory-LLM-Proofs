@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 485,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2403.02298__01",
+    "title_md": "[Conjecture 4](https://arxiv.org/abs/2403.02298)",
+    "paper": "Minimum acyclic number and maximum dichromatic number of oriented trian\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2403.02298__01/"
+  },
+  "dossier_meta": {
+    "id": "2403.02298__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2403.02298__01/",
+    "arxiv_id": "2403.02298",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Minimum acyclic number and maximum dichromatic number of oriented trian\u2026"
+  },
+  "started": "2026-08-31T11:18:13Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

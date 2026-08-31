@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 495,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2202.07293__00",
+    "title_md": "[Optimal bound question](https://arxiv.org/abs/2202.07293)",
+    "paper": "Asymptotic dimension of intersection graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.07293__00/"
+  },
+  "dossier_meta": {
+    "id": "2202.07293__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.07293__00/",
+    "arxiv_id": "2202.07293",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Asymptotic dimension of intersection graphs"
+  },
+  "started": "2026-08-31T11:11:25Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

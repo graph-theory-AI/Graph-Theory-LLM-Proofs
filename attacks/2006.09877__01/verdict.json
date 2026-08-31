@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general question remains open, but local graphs in uniformly doubling metrics\u2014including every subgraph of a fixed-dimensional grid\u2014have bounded twin-width, while every polynomial-expansion class has an explicit sublinear twin-width bound.",
+  "would_publish": false,
+  "caveats": "The doubling hierarchy is not implied by polynomial expansion, and the general estimate is only o(n); the separator step uses the established Plotkin\u2013Rao\u2013Smith theorem.",
+  "id": "2006.09877__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.040036,
+  "eur": 0.898175,
+  "elapsed_s": 1170.8,
+  "status": "completed",
+  "response_id": "resp_0e68c139c4f0f6db006a955e435acc87d2a83941661868c9e4",
+  "when": "2026-08-31T11:17:41Z"
+}

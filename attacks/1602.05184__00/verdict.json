@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for every 2-connected graph with a universal vertex, with the stronger bound \u03b7(G) \u2265 3n\u221210, and also for every co-bipartite graph admitting a clique part of size two.",
+  "would_publish": false,
+  "caveats": "The argument does not cover arbitrary 2-connected graphs without a universal vertex or the stated co-bipartite structure.",
+  "id": "1602.05184__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.135048,
+  "eur": 0.980227,
+  "elapsed_s": 1520.1,
+  "status": "completed",
+  "response_id": "resp_06b4b3ba3bbc8463006a955d05306087d2ab3e0fd67e8111c5",
+  "when": "2026-08-31T11:18:13Z"
+}

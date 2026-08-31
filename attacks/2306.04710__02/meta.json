@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 491,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2306.04710__02",
+    "title_md": "[Open problem: hero status of $\\Delta(1,2,2)$](https://arxiv.org/abs/2306.04710)",
+    "paper": "On heroes in digraphs with forbidden induced forests",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2306.04710__02/"
+  },
+  "dossier_meta": {
+    "id": "2306.04710__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2306.04710__02/",
+    "arxiv_id": "2306.04710",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "On heroes in digraphs with forbidden induced forests"
+  },
+  "started": "2026-08-31T11:13:50Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

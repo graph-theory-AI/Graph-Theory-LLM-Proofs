@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 484,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2407.08927__01",
+    "title_md": "[Open Problem: Polynomial-time Coloring on even-hole-free graphs](https://arxiv.org/abs/2407.08927)",
+    "paper": "Tree Independence Number IV. Even-hole-free Graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2407.08927__01/"
+  },
+  "dossier_meta": {
+    "id": "2407.08927__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2407.08927__01/",
+    "arxiv_id": "2407.08927",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Tree Independence Number IV. Even-hole-free Graphs"
+  },
+  "started": "2026-08-31T11:18:55Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

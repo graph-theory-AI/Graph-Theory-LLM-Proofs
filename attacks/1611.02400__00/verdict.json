@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "In the standard layered-path model, capacity is weakly nonincreasing under adding a layer, while strict pointwise worsening is false already for 2-regular networks.",
+  "would_publish": false,
+  "caveats": "The source sentence does not specify weak versus strict monotonicity or the intended asymptotic regime; the large-d strict version remains open.",
+  "id": "1611.02400__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.680384,
+  "eur": 0.58758,
+  "elapsed_s": 866.3,
+  "status": "completed",
+  "response_id": "resp_04d2071acf20e04d006a955e01a37c87d294c71dd0d31a3d42",
+  "when": "2026-08-31T11:11:31Z"
+}

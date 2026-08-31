@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 489,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2202.13977__01",
+    "title_md": "[Informal question: can the D5-freeness hypothesis in Theorem 1.6 be dro\u2026](https://arxiv.org/abs/2202.13977)",
+    "paper": "Pure pairs. X. Tournaments and the strong Erdos-Hajnal property",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.13977__01/"
+  },
+  "dossier_meta": {
+    "id": "2202.13977__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.13977__01/",
+    "arxiv_id": "2202.13977",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Pure pairs. X. Tournaments and the strong Erdos-Hajnal property"
+  },
+  "started": "2026-08-31T11:16:15Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

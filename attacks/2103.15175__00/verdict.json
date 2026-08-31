@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A greedy assignment of an s-label to every vertex\u2013color pair separates each edge in one of its k listed colors whenever n is at most s^k.",
+  "would_publish": true,
+  "caveats": "This assumes the standard edge-list definition of list Ramsey number with k distinct colors in each list.",
+  "id": "2103.15175__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.253484,
+  "eur": 0.218909,
+  "elapsed_s": 376.2,
+  "status": "completed",
+  "response_id": "resp_05a029ffb8f487d7006a955fe50a8887d28d7f594e7a4af93d",
+  "when": "2026-08-31T11:11:25Z"
+}

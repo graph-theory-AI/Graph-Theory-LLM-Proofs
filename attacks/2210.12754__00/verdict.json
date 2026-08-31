@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The property-independent range is exactly that both p and 1-p are n^{-o(1)}, and sharp wider ranges are obtained for s-colourable and 2-balanced F-free properties, while the arbitrary fixed hereditary property remains unresolved.",
+  "would_publish": false,
+  "caveats": "The universal quantifier is fully handled; the property-by-property problem remains open, and one special-case upper bound uses the established sparse random Turan theorem.",
+  "id": "2210.12754__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.717672,
+  "eur": 0.619782,
+  "elapsed_s": 905.4,
+  "status": "completed",
+  "response_id": "resp_00d31c9bbd21b28a006a955e40fb3087d2a5c8fe5ea0f86d12",
+  "when": "2026-08-31T11:13:14Z"
+}

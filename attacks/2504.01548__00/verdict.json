@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An explicit 35-vertex graph at d=2 has chromatic number 18 and defective blowup chromatic number 17, improving the quoted universal lower bound to 18/17.",
+  "would_publish": false,
+  "caveats": "The upper bound 2 is unchanged, and novelty has not been checked beyond the literature review supplied in the prompt.",
+  "id": "2504.01548__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.957172,
+  "eur": 1.690214,
+  "elapsed_s": 2063.1,
+  "status": "completed",
+  "response_id": "resp_07b10c2794fac110006a955a72055c87d2bd21462169f6f5d1",
+  "when": "2026-08-31T11:16:15Z"
+}

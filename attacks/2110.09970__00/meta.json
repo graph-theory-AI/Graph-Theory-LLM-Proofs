@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 488,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2110.09970__00",
+    "title_md": "[Open Problem: characterisation of \u2113-holed graphs for \u2113 \u2208 {4, 5, 6}](https://arxiv.org/abs/2110.09970)",
+    "paper": "Graphs with all holes the same length",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2110.09970__00/"
+  },
+  "dossier_meta": {
+    "id": "2110.09970__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2110.09970__00/",
+    "arxiv_id": "2110.09970",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Graphs with all holes the same length"
+  },
+  "started": "2026-08-31T11:16:20Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
