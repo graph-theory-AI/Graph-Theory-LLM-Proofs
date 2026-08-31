@@ -9,4 +9,6 @@ __pycache__/
 .DS_Store
 attacks/**/raw.json
 attacks/**/encrypted_reasoning.json
+attacks/**/claimed.json
+attacks/spend.lock
 *.log

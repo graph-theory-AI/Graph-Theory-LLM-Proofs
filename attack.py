@@ -4,13 +4,16 @@
 from __future__ import annotations
 
 import argparse
+import fcntl
 import json
 import os
 import re
 import sys
+import threading
 import time
 import urllib.error
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
@@ -20,9 +23,14 @@ CATALOG = ROOT / "catalog"
 ATTACKS = ROOT / "attacks"
 SPEND_PATH = ATTACKS / "spend.json"
 LEDGER_PATH = ATTACKS / "ledger.jsonl"
+LOCK_PATH = ATTACKS / "spend.lock"
 QUEUE_PATH = CATALOG / "queue.json"
 RANKING_PATH = CATALOG / "ARXIV_OPEN_DIFFICULTY_RANKING.md"
 ISSUES_JSONL = CATALOG / "issues.jsonl"
+SEVERE_PATH = CATALOG / "issues_severe.json"
+
+_THREAD_LOCK = threading.Lock()
+_PRINT_LOCK = threading.Lock()
 
 MODEL = "gpt-5.6-sol"
 SITE_ARXIV = "https://mlelarge.github.io/graph-conjectures/arxiv/{id}/"
@@ -124,15 +132,41 @@ def http_get(url: str, timeout: int = 60) -> str:
         return resp.read().decode("utf-8", errors="replace")
 
 
+class SpendLock:
+    """Process + thread exclusive lock around spend.json and claim files."""
+
+    def __enter__(self):
+        _THREAD_LOCK.acquire()
+        LOCK_PATH.parent.mkdir(parents=True, exist_ok=True)
+        self.fh = open(LOCK_PATH, "a+")
+        fcntl.flock(self.fh.fileno(), fcntl.LOCK_EX)
+        return self
+
+    def __exit__(self, exc_type, exc, tb):
+        try:
+            fcntl.flock(self.fh.fileno(), fcntl.LOCK_UN)
+            self.fh.close()
+        finally:
+            _THREAD_LOCK.release()
+        return False
+
+
+def log(msg: str) -> None:
+    with _PRINT_LOCK:
+        print(msg, flush=True)
+
+
 def load_spend() -> dict:
     data = json.loads(SPEND_PATH.read_text())
     data.setdefault("budget_eur", 150.0)
     data.setdefault("usd_per_eur", 1.158)
     data.setdefault("eur_per_usd", 1.0 / data["usd_per_eur"])
     data.setdefault("safety_margin_eur", 5.0)
-    data.setdefault("conservative_max_usd_per_call", 15.0)
+    data.setdefault("conservative_max_usd_per_call", 3.5)
     data.setdefault("spent_usd", 0.0)
     data.setdefault("spent_eur", 0.0)
+    data.setdefault("reserved_usd", 0.0)
+    data.setdefault("in_flight", 0)
     data.setdefault("n_calls", 0)
     data.setdefault("n_attacks", 0)
     data.setdefault("stopped", False)
@@ -150,15 +184,21 @@ def usd_to_eur(usd: float, spend: dict) -> float:
 
 def remaining(spend: dict) -> dict:
     spent_eur = spend["spent_usd"] * spend["eur_per_usd"]
+    reserved_usd = spend.get("reserved_usd", 0.0)
+    reserved_eur = reserved_usd * spend["eur_per_usd"]
     usable = spend["budget_eur"] - spend["safety_margin_eur"]
+    committed_eur = spent_eur + reserved_eur
     return {
         "budget_eur": spend["budget_eur"],
         "spent_usd": round(spend["spent_usd"], 6),
         "spent_eur": round(spent_eur, 6),
+        "reserved_usd": round(reserved_usd, 6),
+        "reserved_eur": round(reserved_eur, 6),
+        "in_flight": spend.get("in_flight", 0),
         "safety_margin_eur": spend["safety_margin_eur"],
         "usable_eur": usable,
         "remaining_eur": round(spend["budget_eur"] - spent_eur, 6),
-        "remaining_usable_eur": round(usable - spent_eur, 6),
+        "remaining_usable_eur": round(usable - committed_eur, 6),
         "stopped": bool(spend.get("stopped")),
         "stop_reason": spend.get("stop_reason"),
         "n_calls": spend.get("n_calls", 0),
@@ -188,43 +228,67 @@ def hard_ceiling_usd(max_output_tokens: int, assumed_input: int = 30_000) -> flo
     return price_usd(assumed_input, max_output_tokens)
 
 
-def preflight_or_die(spend: dict, max_output_tokens: int) -> float:
-    """Return conservative USD reserve required. Abort if it would breach budget."""
-    if spend.get("stopped"):
-        raise SystemExit(f"budget stopped: {spend.get('stop_reason')}")
-    rem = remaining(spend)
-    reserve = max(
-        spend["conservative_max_usd_per_call"],
-        hard_ceiling_usd(max_output_tokens) * 1.25,
+def reserve_amount(max_output_tokens: int, spend: dict) -> float:
+    return max(
+        spend.get("conservative_max_usd_per_call", 3.5),
+        hard_ceiling_usd(max_output_tokens) * 1.15,
     )
-    reserve_eur = usd_to_eur(reserve, spend)
-    if rem["remaining_usable_eur"] < reserve_eur:
-        spend["stopped"] = True
-        spend["stop_reason"] = (
-            f"preflight refused: remaining usable €{rem['remaining_usable_eur']:.2f} "
-            f"< reserve €{reserve_eur:.2f} (${reserve:.2f})"
-        )
+
+
+def try_reserve(max_output_tokens: int) -> tuple[bool, float, dict]:
+    """Atomically reserve worst-case USD for one in-flight call."""
+    with SpendLock():
+        spend = load_spend()
+        amount = reserve_amount(max_output_tokens, spend)
+        rem = remaining(spend)
+        if spend.get("stopped"):
+            return False, amount, rem
+        need_eur = usd_to_eur(amount, spend)
+        if rem["remaining_usable_eur"] < need_eur:
+            spend["stopped"] = True
+            spend["stop_reason"] = (
+                f"preflight refused: remaining usable €{rem['remaining_usable_eur']:.2f} "
+                f"< reserve €{need_eur:.2f} (${amount:.2f})"
+            )
+            save_spend(spend)
+            return False, amount, remaining(spend)
+        spend["reserved_usd"] = round(spend.get("reserved_usd", 0.0) + amount, 6)
+        spend["in_flight"] = int(spend.get("in_flight", 0)) + 1
         save_spend(spend)
-        raise SystemExit(spend["stop_reason"])
-    return reserve
+        return True, amount, remaining(spend)
 
 
-def record_call(spend: dict, record: dict) -> dict:
-    spend["spent_usd"] = round(spend["spent_usd"] + record["usd"], 6)
-    spend["spent_eur"] = round(spend["spent_usd"] * spend["eur_per_usd"], 6)
-    spend["n_calls"] = spend.get("n_calls", 0) + 1
-    rem = remaining(spend)
-    if rem["remaining_usable_eur"] <= 0:
-        spend["stopped"] = True
-        spend["stop_reason"] = (
-            f"usable budget exhausted: spent €{rem['spent_eur']:.4f} "
-            f"/ €{spend['budget_eur']:.2f} (margin €{spend['safety_margin_eur']:.2f})"
-        )
-    save_spend(spend)
-    LEDGER_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with LEDGER_PATH.open("a") as fh:
-        fh.write(json.dumps(record, ensure_ascii=False) + "\n")
-    return rem
+def release_reserve(amount: float) -> dict:
+    with SpendLock():
+        spend = load_spend()
+        spend["reserved_usd"] = round(max(spend.get("reserved_usd", 0.0) - amount, 0.0), 6)
+        spend["in_flight"] = max(int(spend.get("in_flight", 0)) - 1, 0)
+        save_spend(spend)
+        return remaining(spend)
+
+
+def record_call(record: dict, reserved: float) -> dict:
+    with SpendLock():
+        spend = load_spend()
+        spend["spent_usd"] = round(spend["spent_usd"] + record["usd"], 6)
+        spend["spent_eur"] = round(spend["spent_usd"] * spend["eur_per_usd"], 6)
+        spend["reserved_usd"] = round(max(spend.get("reserved_usd", 0.0) - reserved, 0.0), 6)
+        spend["in_flight"] = max(int(spend.get("in_flight", 0)) - 1, 0)
+        spend["n_calls"] = spend.get("n_calls", 0) + 1
+        spend["n_attacks"] = spend.get("n_attacks", 0) + 1
+        rem = remaining(spend)
+        if rem["remaining_usable_eur"] <= 0:
+            spend["stopped"] = True
+            spend["stop_reason"] = (
+                f"usable budget exhausted: spent €{rem['spent_eur']:.4f} "
+                f"/ €{spend['budget_eur']:.2f} (margin €{spend['safety_margin_eur']:.2f})"
+            )
+            rem = remaining(spend)
+        save_spend(spend)
+        LEDGER_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with LEDGER_PATH.open("a") as fh:
+            fh.write(json.dumps(record, ensure_ascii=False) + "\n")
+        return rem
 
 
 def parse_ranking() -> list[dict]:
@@ -268,6 +332,67 @@ def attacked_ids() -> set[str]:
         ):
             done.add(p.name)
     return done
+
+
+def severe_ids() -> set[str]:
+    if not SEVERE_PATH.exists():
+        return set()
+    return {x["id"] for x in json.loads(SEVERE_PATH.read_text()) if x.get("id")}
+
+
+def pid_alive(pid: int) -> bool:
+    if not pid:
+        return False
+    try:
+        os.kill(pid, 0)
+        return True
+    except OSError:
+        return False
+
+
+def is_busy(path: Path) -> bool:
+    if (path / "verdict.json").exists() or (path / "skipped.json").exists():
+        return True
+    claimed = path / "claimed.json"
+    if not claimed.exists():
+        return False
+    try:
+        data = json.loads(claimed.read_text())
+    except Exception:
+        return False
+    return pid_alive(int(data.get("pid") or 0))
+
+
+def claim_next() -> dict | None:
+    """Pick the next easiest complete record and mark it claimed."""
+    skip = severe_ids()
+    with SpendLock():
+        for rec in parse_ranking():
+            dest = ATTACKS / rec["id"]
+            if rec["id"] in skip:
+                dest.mkdir(parents=True, exist_ok=True)
+                if not (dest / "skipped.json").exists() and not (dest / "verdict.json").exists():
+                    (dest / "skipped.json").write_text(
+                        json.dumps(
+                            {
+                                "id": rec["id"],
+                                "reason": "severe catalog extraction failure",
+                                "when": utc_now(),
+                            },
+                            indent=2,
+                        )
+                        + "\n"
+                    )
+                continue
+            if dest.exists() and is_busy(dest):
+                continue
+            dest.mkdir(parents=True, exist_ok=True)
+            (dest / "claimed.json").write_text(
+                json.dumps({"id": rec["id"], "pid": os.getpid(), "when": utc_now()}, indent=2)
+                + "\n"
+            )
+            return rec
+        return None
 
 
 def cmd_queue(args: argparse.Namespace) -> None:
@@ -411,23 +536,39 @@ def call_sol(prompt: str, max_output_tokens: int, timeout_s: int):
         reasoning={"effort": "max", "mode": "pro", "summary": "auto"},
         store=True,
     )
-    try:
-        resp = client.responses.create(background=True, **kwargs)
-        background = True
-    except Exception as exc:  # noqa: BLE001
-        print(f"background create failed ({exc}); retrying synchronously", file=sys.stderr)
-        resp = client.responses.create(**kwargs)
-        background = False
-    if background:
-        rid = resp.id
-        t0 = time.time()
-        while resp.status in {"queued", "in_progress"}:
-            if time.time() - t0 > timeout_s:
-                raise TimeoutError(f"Sol call {rid} exceeded {timeout_s}s (status={resp.status})")
-            time.sleep(8)
-            resp = client.responses.retrieve(rid)
-            print(f"  … {rid} status={resp.status}  {int(time.time()-t0)}s", file=sys.stderr)
-    return resp
+    last_exc: Exception | None = None
+    for attempt in range(8):
+        try:
+            try:
+                resp = client.responses.create(background=True, **kwargs)
+                background = True
+            except Exception as exc:  # noqa: BLE001
+                log(f"background create failed ({exc}); retrying synchronously")
+                resp = client.responses.create(**kwargs)
+                background = False
+            if background:
+                rid = resp.id
+                t0 = time.time()
+                while resp.status in {"queued", "in_progress"}:
+                    if time.time() - t0 > timeout_s:
+                        raise TimeoutError(
+                            f"Sol call {rid} exceeded {timeout_s}s (status={resp.status})"
+                        )
+                    time.sleep(8)
+                    resp = client.responses.retrieve(rid)
+                    log(f"  … {rid} status={resp.status}  {int(time.time()-t0)}s")
+            return resp
+        except Exception as exc:  # noqa: BLE001
+            last_exc = exc
+            msg = str(exc).lower()
+            status = getattr(exc, "status_code", None)
+            if status == 429 or "rate" in msg or "overloaded" in msg:
+                delay = min(120, 15 * (2 ** attempt))
+                log(f"rate limit ({exc}); sleep {delay}s then retry {attempt+1}/8")
+                time.sleep(delay)
+                continue
+            raise
+    raise last_exc or RuntimeError("Sol call failed")
 
 
 def dump_response(resp) -> dict:
@@ -506,6 +647,11 @@ INCOMPLETE_MARKERS = (
     "full statement not available",
     "statement unavailable",
     "[full statement not available",
+    "verbatim statement not available",
+    "statement not available:",
+    "statement truncated in source",
+    "mathematical conclusion truncated",
+    "remainder of condition not captured",
 )
 
 
@@ -523,38 +669,33 @@ def log_catalog_issue(issue: dict) -> None:
     print(f"CATALOG ISSUE  {issue.get('id')}  {issue.get('severity')}", file=sys.stderr)
 
 
-def cmd_run(args: argparse.Namespace) -> None:
-    load_dotenv()
-    if not os.environ.get("OPENAI_API_KEY"):
-        raise SystemExit("OPENAI_API_KEY missing in environment / .env")
-    spend = load_spend()
-    recs = select_records(args)
-    if not recs:
-        print("nothing to attack")
-        return
-    max_out = args.max_output_tokens
-    for rec in recs:
-        spend = load_spend()
-        rem = remaining(spend)
-        print(
-            f"budget €{rem['spent_eur']:.4f} spent / €{rem['budget_eur']:.2f} "
-            f"(usable remaining €{rem['remaining_usable_eur']:.2f})"
-        )
-        reserve = preflight_or_die(spend, max_out)
-        print(
-            f"attacking {rec['id']}  reserve ${reserve:.2f}  "
-            f"model={MODEL} effort=max mode=pro"
-        )
-        out_dir = ATTACKS / rec["id"]
-        out_dir.mkdir(parents=True, exist_ok=True)
+def attack_one(rec: dict, max_out: int, timeout_s: int, force: bool = False) -> str:
+    """Attack one record. Returns a short status tag."""
+    out_dir = ATTACKS / rec["id"]
+    out_dir.mkdir(parents=True, exist_ok=True)
+    ok, reserved, rem = try_reserve(max_out)
+    if not ok:
+        log(f"STOP {rec['id']}: {rem.get('stop_reason')}")
+        return "budget"
+    log(
+        f"attacking {rec['id']}  reserve ${reserved:.2f}  "
+        f"spent €{rem['spent_eur']:.2f}  reserved €{rem['reserved_eur']:.2f}  "
+        f"usable left €{rem['remaining_usable_eur']:.2f}"
+    )
+    try:
         dossier = fetch_dossier(rec)
-        if not args.id and looks_incomplete(dossier["page_text"]):
-            note = {
-                "id": rec["id"],
-                "reason": "catalog statement incomplete",
-                "when": utc_now(),
-            }
-            (out_dir / "skipped.json").write_text(json.dumps(note, indent=2) + "\n")
+        if (not force) and looks_incomplete(dossier["page_text"]):
+            (out_dir / "skipped.json").write_text(
+                json.dumps(
+                    {
+                        "id": rec["id"],
+                        "reason": "catalog statement incomplete",
+                        "when": utc_now(),
+                    },
+                    indent=2,
+                )
+                + "\n"
+            )
             log_catalog_issue(
                 {
                     "id": rec["id"],
@@ -564,24 +705,34 @@ def cmd_run(args: argparse.Namespace) -> None:
                     "reason": "catalog statement incomplete",
                 }
             )
-            print(f"skip {rec['id']}: catalog statement incomplete (no API call)")
-            continue
+            release_reserve(reserved)
+            log(f"skip {rec['id']}: catalog statement incomplete (no API call)")
+            return "skip"
         prompt = build_prompt(dossier)
         (out_dir / "prompt.md").write_text(prompt)
         (out_dir / "meta.json").write_text(
-            json.dumps({"record": rec, "dossier_meta": {k: dossier[k] for k in dossier if k not in {"page_text", "abstract"}}, "started": utc_now(), "model": MODEL, "reasoning": {"effort": "max", "mode": "pro"}}, indent=2)
+            json.dumps(
+                {
+                    "record": rec,
+                    "dossier_meta": {
+                        k: dossier[k]
+                        for k in dossier
+                        if k not in {"page_text", "abstract"}
+                    },
+                    "started": utc_now(),
+                    "model": MODEL,
+                    "reasoning": {"effort": "max", "mode": "pro"},
+                },
+                indent=2,
+            )
             + "\n"
         )
         t0 = time.time()
-        try:
-            resp = call_sol(prompt, max_output_tokens=max_out, timeout_s=args.timeout)
-        except Exception as exc:  # noqa: BLE001
-            (out_dir / "error.txt").write_text(f"{utc_now()} {type(exc).__name__}: {exc}\n")
-            print(f"ERROR {rec['id']}: {exc}", file=sys.stderr)
-            continue
+        resp = call_sol(prompt, max_output_tokens=max_out, timeout_s=timeout_s)
         elapsed = time.time() - t0
         usage = usage_from_response(resp)
         usd = price_usd(usage["input_tokens"], usage["output_tokens"], usage["cached_tokens"])
+        spend = load_spend()
         text = getattr(resp, "output_text", None) or ""
         verdict = parse_verdict(text)
         (out_dir / "output.md").write_text(text or "")
@@ -619,14 +770,14 @@ def cmd_run(args: argparse.Namespace) -> None:
             "verdict": verdict.get("verdict"),
             "elapsed_s": round(elapsed, 1),
         }
-        spend["n_attacks"] = spend.get("n_attacks", 0) + 1
-        rem = record_call(spend, call_rec)
-        print(
-            f"  verdict={verdict.get('verdict')}  "
+        rem = record_call(call_rec, reserved)
+        log(
+            f"  DONE {rec['id']}  verdict={verdict.get('verdict')}  "
             f"${usd:.4f} (€{call_rec['eur']:.4f})  "
             f"in={usage['input_tokens']} out={usage['output_tokens']} "
             f"(reasoning={usage['reasoning_tokens']})  "
-            f"spent €{rem['spent_eur']:.4f} / €{rem['budget_eur']:.2f}"
+            f"spent €{rem['spent_eur']:.4f} / €{rem['budget_eur']:.2f}  "
+            f"in_flight={rem['in_flight']}"
         )
         if verdict.get("verdict") == "ill_posed" and looks_incomplete(
             dossier.get("page_text", "")
@@ -644,6 +795,78 @@ def cmd_run(args: argparse.Namespace) -> None:
                     "response_id": getattr(resp, "id", None),
                 }
             )
+        return verdict.get("verdict") or "unknown"
+    except Exception as exc:  # noqa: BLE001
+        release_reserve(reserved)
+        (out_dir / "error.txt").write_text(f"{utc_now()} {type(exc).__name__}: {exc}\n")
+        log(f"ERROR {rec['id']}: {exc}")
+        return "error"
+
+
+def cmd_run(args: argparse.Namespace) -> None:
+    load_dotenv()
+    if not os.environ.get("OPENAI_API_KEY"):
+        raise SystemExit("OPENAI_API_KEY missing in environment / .env")
+    recs = select_records(args)
+    if not recs:
+        print("nothing to attack")
+        return
+    for rec in recs:
+        tag = attack_one(
+            rec,
+            max_out=args.max_output_tokens,
+            timeout_s=args.timeout,
+            force=bool(args.id),
+        )
+        if tag == "budget":
+            break
+
+
+def _sweep_worker(deadline: float, max_out: int, timeout_s: int) -> None:
+    while time.time() < deadline:
+        spend = load_spend()
+        if spend.get("stopped"):
+            return
+        rec = claim_next()
+        if rec is None:
+            return
+        tag = attack_one(rec, max_out=max_out, timeout_s=timeout_s, force=False)
+        if tag == "budget":
+            return
+
+
+def cmd_sweep(args: argparse.Namespace) -> None:
+    load_dotenv()
+    if not os.environ.get("OPENAI_API_KEY"):
+        raise SystemExit("OPENAI_API_KEY missing in environment / .env")
+    jobs = args.jobs
+    hours = args.hours
+    deadline = time.time() + hours * 3600
+    rem = remaining(load_spend())
+    log(
+        f"SWEEP start jobs={jobs} hours={hours}  "
+        f"spent €{rem['spent_eur']:.4f} / €{rem['budget_eur']:.2f}  "
+        f"usable left €{rem['remaining_usable_eur']:.2f}"
+    )
+    with ThreadPoolExecutor(max_workers=jobs) as pool:
+        futs = [
+            pool.submit(_sweep_worker, deadline, args.max_output_tokens, args.timeout)
+            for _ in range(jobs)
+        ]
+        for fut in as_completed(futs):
+            exc = fut.exception()
+            if exc:
+                log(f"worker crashed: {exc}")
+    rem = remaining(load_spend())
+    log(
+        f"SWEEP done  spent €{rem['spent_eur']:.4f} / €{rem['budget_eur']:.2f}  "
+        f"calls={rem['n_calls']} attacks={rem['n_attacks']}  "
+        f"stop={rem.get('stop_reason')}"
+    )
+    if rem["spent_eur"] >= rem["budget_eur"] - rem["safety_margin_eur"]:
+        print("DONE")
+    else:
+        print("DONE")
 
 
 def main() -> None:
@@ -670,6 +893,13 @@ def main() -> None:
         help="print catalog defects to share with Marc Lelarge",
     )
     p_iss.set_defaults(func=cmd_catalog_issues)
+
+    p_sw = sub.add_parser("sweep", help="parallel attacks until budget or time is gone")
+    p_sw.add_argument("--jobs", type=int, default=24, help="concurrent Sol calls")
+    p_sw.add_argument("--hours", type=float, default=5.0, help="wall-clock cap")
+    p_sw.add_argument("--max-output-tokens", type=int, default=128_000)
+    p_sw.add_argument("--timeout", type=int, default=10_800, help="seconds per call")
+    p_sw.set_defaults(func=cmd_sweep)
 
     args = ap.parse_args()
     args.func(args)

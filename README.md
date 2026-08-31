@@ -23,6 +23,7 @@ python attack.py run --next       # next unattacked conjecture (budget-checked)
 python attack.py run --id ID      # one specific record, e.g. 2402.10782__01
 python attack.py run --limit N    # up to N new attacks, stopping on budget
 python attack.py catalog-issues   # catalog defects to share with Marc Lelarge
+python attack.py sweep --jobs 24 --hours 5   # spend the remaining budget in parallel
 ```
 
 Each attack writes `attacks/<id>/` (prompt, model output, verdict, usage) and
