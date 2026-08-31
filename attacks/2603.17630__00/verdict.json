@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The optimal exponent is proved for graphs with vertex-cover number o(log n), including all joins H \u2228 overline(K)_{n-d}, and for a further minimum-degree-d matching-join family.",
+  "would_publish": false,
+  "caveats": "General graphs need not contain a large false-twin class, and the uniformity intended by the supplied o_n(1) is not formally specified.",
+  "id": "2603.17630__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.981864,
+  "eur": 0.847938,
+  "elapsed_s": 1176.6,
+  "status": "completed",
+  "response_id": "resp_0079fc4f53192456006a9574e1f67c87d2ba90d3fe07da6241",
+  "when": "2026-08-31T12:54:18Z"
+}

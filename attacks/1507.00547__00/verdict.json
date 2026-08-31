@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The problem remains open for every k\u22653; I give an exact oriented-hypergraph reformulation, prove the root lower and logarithmic-factor upper bounds, and show that independent random one-valued maps necessarily have the logarithmic scale.",
+  "would_publish": false,
+  "caveats": "The factor (log m)^{1/k} is not removed, and no novelty over possible folklore is claimed.",
+  "id": "1507.00547__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.13452,
+  "eur": 0.979771,
+  "elapsed_s": 2032.0,
+  "status": "completed",
+  "response_id": "resp_06d3437fd0ea255c006a957110c53c87d29231d558a0fd9bef",
+  "when": "2026-08-31T12:52:16Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but the required lower comparison holds with constant 1/2 for digraphs admitting a regular abelian automorphism group, and d(p)=c(p)=p for every prime p.",
+  "would_publish": false,
+  "caveats": "This is a restricted, elementary case and does not improve the stated universal Omega(n^{1/3}) bound or handle general non-Cayley vertex-transitive digraphs.",
+  "id": "2602.16333__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.027848,
+  "eur": 0.88765,
+  "elapsed_s": 1337.4,
+  "status": "completed",
+  "response_id": "resp_0cc4268d95e1c6ae006a95739321fc87d29615fea1f74011db",
+  "when": "2026-08-31T12:51:24Z"
+}
