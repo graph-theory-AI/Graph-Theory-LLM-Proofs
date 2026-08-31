@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 526,
+    "score": 2.5,
+    "tier": 2,
+    "lean": "disprove",
+    "status": "open",
+    "id": "1602.05184__00",
+    "title_md": "[Conjecture 5](https://arxiv.org/abs/1602.05184)",
+    "paper": "On the difference between the Szeged and Wiener index",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1602.05184__00/"
+  },
+  "dossier_meta": {
+    "id": "1602.05184__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1602.05184__00/",
+    "arxiv_id": "1602.05184",
+    "tier": 2,
+    "score": 2.5,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "On the difference between the Szeged and Wiener index"
+  },
+  "started": "2026-08-31T10:52:53Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

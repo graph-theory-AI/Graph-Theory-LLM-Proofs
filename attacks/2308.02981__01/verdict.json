@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The main FPT and constant-approximation questions remain open, but separable index is exactly max-compatible with substitution, reduces to simple permutations, lies in para-NP, and is FPT for bounded substitution-node arity.",
+  "would_publish": false,
+  "caveats": "No FPT algorithm in sep, fixed-k hardness result, or constant-factor approximation is obtained; overlap with observations in the full source paper was not checked.",
+  "id": "2308.02981__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.124652,
+  "eur": 0.971249,
+  "elapsed_s": 1189.6,
+  "status": "completed",
+  "response_id": "resp_044a2eab8736d79c006a953bd3eabc87d292829bf747cbd86c",
+  "when": "2026-08-31T08:51:05Z"
+}

@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 561,
+    "score": 2.3,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2301.08707__01",
+    "title_md": "[Problem 4](https://arxiv.org/abs/2301.08707)",
+    "paper": "Separating the edges of a graph by a linear number of paths",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2301.08707__01/"
+  },
+  "dossier_meta": {
+    "id": "2301.08707__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2301.08707__01/",
+    "arxiv_id": "2301.08707",
+    "tier": 2,
+    "score": 2.3,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Separating the edges of a graph by a linear number of paths"
+  },
+  "started": "2026-08-31T10:30:26Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

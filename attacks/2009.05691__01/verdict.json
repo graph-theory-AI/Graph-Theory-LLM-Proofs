@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains unresolved, but there is an O(n^5) algorithm for shortest-path-decomposable target holes, an exact bounded-treewidth algorithm, and explicit triangle-free obstructions to extending the shortest-path method directly.",
+  "would_publish": false,
+  "caveats": "No unrestricted polynomial-time algorithm or hardness proof is obtained; the main O(n^5) routine is one-sided outside its stated class.",
+  "id": "2009.05691__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.2847,
+  "eur": 1.109467,
+  "elapsed_s": 1553.8,
+  "status": "completed",
+  "response_id": "resp_08c2876eaf0c2293006a95537c64f087d29fa800daa6993705",
+  "when": "2026-08-31T10:38:05Z"
+}

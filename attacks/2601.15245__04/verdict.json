@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open; it holds under bounded-degree, short-peeling, and almost-dominating-clique hypotheses, while any linear counterexample must recur at every degeneracy scale and have a long high-degree and dual-weight hierarchy.",
+  "would_publish": false,
+  "caveats": "The argument does not control unbounded peeling depth or arbitrarily many LP weight scales; one ingredient is the standard bounded-maximum-degree coloring theorem for fixed clique number.",
+  "id": "2601.15245__04",
+  "model": "gpt-5.6-sol",
+  "usd": 1.560492,
+  "eur": 1.347641,
+  "elapsed_s": 1607.2,
+  "status": "completed",
+  "response_id": "resp_01b543f105b25fc1006a9546ea78f087d2a25d7181d8dab8b3",
+  "when": "2026-08-31T09:45:21Z"
+}

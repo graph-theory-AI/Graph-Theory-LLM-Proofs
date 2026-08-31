@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 575,
+    "score": 2.3,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2106.03261__01",
+    "title_md": "[Open Problem 2.17](https://arxiv.org/abs/2106.03261)",
+    "paper": "Which graphs can be counted in $C_4$-free graphs?",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2106.03261__01/"
+  },
+  "dossier_meta": {
+    "id": "2106.03261__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2106.03261__01/",
+    "arxiv_id": "2106.03261",
+    "tier": 2,
+    "score": 2.3,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Which graphs can be counted in $C_4$-free graphs?"
+  },
+  "started": "2026-08-31T10:12:10Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

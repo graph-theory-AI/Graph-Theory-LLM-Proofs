@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "For G = K\u2082, every augmented subdivision G\u2032\u2096 has zombie number at most 2 = z(G) + 1, so the displayed strict inequality never holds.",
+  "would_publish": false,
+  "caveats": "This addresses the literal inequality > z(G)+1; the likely intended one-unit increase is a different question.",
+  "id": "2008.03587__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.536288,
+  "eur": 0.463138,
+  "elapsed_s": 658.6,
+  "status": "completed",
+  "response_id": "resp_0ca663dd4be904db006a953b74f24087d2847a7375ab9b2e14",
+  "when": "2026-08-31T08:40:39Z"
+}

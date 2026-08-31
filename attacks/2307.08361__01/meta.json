@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 516,
+    "score": 2.5,
+    "tier": 2,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2307.08361__01",
+    "title_md": "[Polynomial bound in k for C4-free subgraphs](https://arxiv.org/abs/2307.08361)",
+    "paper": "Induced $C_4$-free subgraphs with large average degree",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2307.08361__01/"
+  },
+  "dossier_meta": {
+    "id": "2307.08361__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2307.08361__01/",
+    "arxiv_id": "2307.08361",
+    "tier": 2,
+    "score": 2.5,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Induced $C_4$-free subgraphs with large average degree"
+  },
+  "started": "2026-08-31T10:58:08Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

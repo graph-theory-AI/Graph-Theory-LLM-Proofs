@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove exact characterizations for edge-monotone classes, a bounded-adhesion closure theorem, and explicit shift-graph obstructions using interval, co-interval, complete multipartite, and line-graph factors, but not the general characterization.",
+  "would_publish": false,
+  "caveats": "Assumes finite simple graphs and the standard induced-subgraph meaning of \u03c7-boundedness; overlap with the full source paper was not checked.",
+  "id": "2504.00153__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.091728,
+  "eur": 0.942816,
+  "elapsed_s": 1267.2,
+  "status": "completed",
+  "response_id": "resp_080623f2cbddc614006a953cbffae487d28358514d72602a98",
+  "when": "2026-08-31T08:56:18Z"
+}

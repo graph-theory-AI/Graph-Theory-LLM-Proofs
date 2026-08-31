@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 515,
+    "score": 2.5,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2206.00594__00",
+    "title_md": "[Conjecture 1.3](https://arxiv.org/abs/2206.00594)",
+    "paper": "Sparse graphs with bounded induced cycle packing number have logarithmi\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2206.00594__00/"
+  },
+  "dossier_meta": {
+    "id": "2206.00594__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2206.00594__00/",
+    "arxiv_id": "2206.00594",
+    "tier": 2,
+    "score": 2.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Sparse graphs with bounded induced cycle packing number have logarithmi\u2026"
+  },
+  "started": "2026-08-31T10:58:09Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

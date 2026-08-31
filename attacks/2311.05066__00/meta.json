@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 640,
+    "score": 2.05,
+    "tier": 2,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2311.05066__00",
+    "title_md": "[Question 8.3](https://arxiv.org/abs/2311.05066)",
+    "paper": "Induced subgraphs and tree decompositions XIII. Basic obstructions in $\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2311.05066__00/"
+  },
+  "dossier_meta": {
+    "id": "2311.05066__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2311.05066__00/",
+    "arxiv_id": "2311.05066",
+    "tier": 2,
+    "score": 2.05,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Induced subgraphs and tree decompositions XIII. Basic obstructions in $\u2026"
+  },
+  "started": "2026-08-31T08:32:31Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

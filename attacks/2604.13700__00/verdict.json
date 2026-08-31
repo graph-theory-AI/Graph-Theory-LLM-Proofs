@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The exact value remains undetermined; the quoted upper construction gives 3/22 <= L <= 7/8, and every vertex-transitive r-regular digraph satisfies c(D)=r.",
+  "would_publish": false,
+  "caveats": "No new general bound beyond the source abstract is proved, and the special-class results have not been checked for novelty.",
+  "id": "2604.13700__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.071248,
+  "eur": 0.92513,
+  "elapsed_s": 1340.6,
+  "status": "completed",
+  "response_id": "resp_0245cd6c155e7fd2006a95405bb9c887d29656f56a5d1edb27",
+  "when": "2026-08-31T09:12:56Z"
+}

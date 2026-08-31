@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The limit is not settled, but two refined upper bounds force the conjectured constant 1/2 under checkable overlap or inertia conditions.",
+  "would_publish": false,
+  "caveats": "The remaining case permits both quadratically many two-orientation coordinate overlaps and linearly many positive eigenvalues; novelty relative to the cited preprints was not verified.",
+  "id": "2212.05133__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.930264,
+  "eur": 1.666976,
+  "elapsed_s": 2173.9,
+  "status": "completed",
+  "response_id": "resp_0040e032124b4924006a95417a988c87d2b5adfe991a3f8d80",
+  "when": "2026-08-31T09:31:36Z"
+}

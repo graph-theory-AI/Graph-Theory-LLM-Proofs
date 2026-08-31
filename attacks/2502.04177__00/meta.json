@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 542,
+    "score": 2.45,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2502.04177__00",
+    "title_md": "[Question 2](https://arxiv.org/abs/2502.04177)",
+    "paper": "Shallow brambles",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2502.04177__00/"
+  },
+  "dossier_meta": {
+    "id": "2502.04177__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2502.04177__00/",
+    "arxiv_id": "2502.04177",
+    "tier": 2,
+    "score": 2.45,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Shallow brambles"
+  },
+  "started": "2026-08-31T10:41:52Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

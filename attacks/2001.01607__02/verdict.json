@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The unresolved part can be confined to graphs containing an induced C5: every connected non-bipartite C5-free example is a complete independent-set expansion of an odd cycle and has clique-width at most 4.",
+  "would_publish": false,
+  "caveats": "The C5-containing case remains open; the full C5-free corollary uses the known classification of S_{1,2,3}-free bipartite graphs.",
+  "id": "2001.01607__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.734232,
+  "eur": 0.634083,
+  "elapsed_s": 1189.7,
+  "status": "completed",
+  "response_id": "resp_0c18f627b337779b006a9541d7304487d2867cb0c46cb2f59f",
+  "when": "2026-08-31T09:16:44Z"
+}

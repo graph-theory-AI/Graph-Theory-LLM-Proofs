@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "Under the standard transversal-line definition of zig-zag, ceil(n/2) <= z(n) <= n^2/6 + O(n), convex configurations have exact value ceil(n/2), and z(4)=2.",
+  "would_publish": false,
+  "caveats": "The excerpt omits the formal definition; the quadratic upper bound uses non-spanning zig-zag paths and does not apply if every covering path is required to be Hamiltonian.",
+  "id": "2507.10840__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.0,
+  "eur": 0.0,
+  "elapsed_s": 1617.6,
+  "status": "failed",
+  "response_id": "resp_047fda2abaacb659006a953b28ced887d2b512be427dc893c3",
+  "when": "2026-08-31T08:55:21Z"
+}

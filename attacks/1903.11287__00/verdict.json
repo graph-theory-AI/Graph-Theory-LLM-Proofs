@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The graphs G_1 and G_2 have explicit convex unit-distance realizations, while for k>=3 any realization must avoid the natural translation construction and must realize almost every elementary 6-cycle non-centrally.",
+  "would_publish": false,
+  "caveats": "Assumes strict convex position and the standard convention that graph edges, but not necessarily only graph edges, must have unit length; the general case k>=3 remains open.",
+  "id": "1903.11287__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.785556,
+  "eur": 1.542006,
+  "elapsed_s": 1859.6,
+  "status": "completed",
+  "response_id": "resp_0d0b44ea01f30e63006a953728cea487d2b0b01c608bfa823e",
+  "when": "2026-08-31T08:42:19Z"
+}

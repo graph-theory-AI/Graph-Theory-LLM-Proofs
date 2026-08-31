@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 512,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1911.03427__01",
+    "title_md": "[Informal Conjecture (Induced Arithmetic Removal for Arbitrary Abelian G\u2026](https://arxiv.org/abs/1911.03427)",
+    "paper": "Induced arithmetic removal: complexity 1 patterns over finite fields",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1911.03427__01/"
+  },
+  "dossier_meta": {
+    "id": "1911.03427__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1911.03427__01/",
+    "arxiv_id": "1911.03427",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Induced arithmetic removal: complexity 1 patterns over finite fields"
+  },
+  "started": "2026-08-31T10:58:09Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

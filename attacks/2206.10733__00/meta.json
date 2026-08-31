@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 564,
+    "score": 2.3,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2206.10733__00",
+    "title_md": "[Open problem on happy triples for $l < k/2$](https://arxiv.org/abs/2206.10733)",
+    "paper": "Improved bounds for the triangle case of Aharoni's rainbow generalizati\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2206.10733__00/"
+  },
+  "dossier_meta": {
+    "id": "2206.10733__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2206.10733__00/",
+    "arxiv_id": "2206.10733",
+    "tier": 2,
+    "score": 2.3,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Improved bounds for the triangle case of Aharoni's rainbow generalizati\u2026"
+  },
+  "started": "2026-08-31T10:15:16Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

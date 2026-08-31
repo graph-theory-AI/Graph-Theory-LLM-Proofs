@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 535,
+    "score": 2.45,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2511.02892__07",
+    "title_md": "[Problem 7.1](https://arxiv.org/abs/2511.02892)",
+    "paper": "Open problems of the 33rd Workshop on Cycles and Colourings",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2511.02892__07/"
+  },
+  "dossier_meta": {
+    "id": "2511.02892__07",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2511.02892__07/",
+    "arxiv_id": "2511.02892",
+    "tier": 2,
+    "score": 2.45,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Open problems of the 33rd Workshop on Cycles and Colourings"
+  },
+  "started": "2026-08-31T10:41:52Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "Line graphs of cubic hypohamiltonian graphs give examples on exactly 3(t-1) vertices for all sufficiently large t, while the finitely many remaining values are absorbed into the constant term of a linear polynomial.",
+  "would_publish": true,
+  "caveats": "The proof uses the established spectrum theorem that simple cubic hypohamiltonian graphs exist at every even order at least 26, and Theorem 1.6 of the source paper for t\u226413.",
+  "id": "2505.24100__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.89186,
+  "eur": 0.77021,
+  "elapsed_s": 1619.1,
+  "status": "completed",
+  "response_id": "resp_03ed421de50f3e5c006a953de48e3087d2a87f888ccaa2eede",
+  "when": "2026-08-31T09:07:03Z"
+}

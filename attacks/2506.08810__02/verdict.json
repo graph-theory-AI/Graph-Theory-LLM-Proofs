@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A safe-amalgamation construction works for every tournament that remains strongly connected after deleting any two vertices, hence for asymptotically almost every labeled tournament, while explicit Paley tournaments give finite hosts for the transitive tournaments T4, T5, and T6.",
+  "would_publish": false,
+  "caveats": "This is not a full characterization; low-connectivity targets and transitive T_h for h at least 7 remain unresolved here.",
+  "id": "2506.08810__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.181228,
+  "eur": 1.020109,
+  "elapsed_s": 1990.4,
+  "status": "completed",
+  "response_id": "resp_048933df2f65a66f006a9545dd1e1c87d2ac1ccc873f0dd090",
+  "when": "2026-08-31T09:47:15Z"
+}

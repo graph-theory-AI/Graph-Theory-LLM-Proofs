@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 659,
+    "score": 1.95,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "1903.11287__00",
+    "title_md": "[Open Question on Convex Unit Distance Realization of Graphs $G_k$](https://arxiv.org/abs/1903.11287)",
+    "paper": "Convexly independent subsets of Minkowski sums of convex polygons",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1903.11287__00/"
+  },
+  "dossier_meta": {
+    "id": "1903.11287__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1903.11287__00/",
+    "arxiv_id": "1903.11287",
+    "tier": 2,
+    "score": 1.95,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Convexly independent subsets of Minkowski sums of convex polygons"
+  },
+  "started": "2026-08-31T08:11:20Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

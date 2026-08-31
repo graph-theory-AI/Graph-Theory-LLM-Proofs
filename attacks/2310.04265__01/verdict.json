@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Polynomial boundedness is preserved for substitution expressions with bounded active ramification, including arbitrarily deep expressions having at most one nontransitive child at each nontransitive node.",
+  "would_publish": false,
+  "caveats": "There is no bound here on active ramification in terms of directed clique number; balanced cyclic substitutions remain unresolved.",
+  "id": "2310.04265__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.3336,
+  "eur": 1.151697,
+  "elapsed_s": 1616.8,
+  "status": "completed",
+  "response_id": "resp_09fb621975b7ebb4006a95569c9f3c87d28b87034ddeaf1a03",
+  "when": "2026-08-31T10:52:29Z"
+}

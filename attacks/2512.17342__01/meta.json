@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 676,
+    "score": 1.6,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2512.17342__01",
+    "title_md": "[Problem 2.6](https://arxiv.org/abs/2512.17342)",
+    "paper": "Nowhere-zero flow reconfiguration",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2512.17342__01/"
+  },
+  "dossier_meta": {
+    "id": "2512.17342__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2512.17342__01/",
+    "arxiv_id": "2512.17342",
+    "tier": 2,
+    "score": 1.6,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Nowhere-zero flow reconfiguration"
+  },
+  "started": "2026-08-31T08:04:29Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A spacing-at-least-five critical prism-canvas must contain an interior vertex of degree at least six and at least ten non-ring triangular faces.",
+  "would_publish": false,
+  "caveats": "The remaining case may have vertices of degree at least six and many triangular faces; the full conjecture is not proved.",
+  "id": "2407.18800__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.225008,
+  "eur": 1.057917,
+  "elapsed_s": 1353.8,
+  "status": "completed",
+  "response_id": "resp_0e51bd7f476631f8006a95397abb3087d2b82b74a23ccc5146",
+  "when": "2026-08-31T08:43:48Z"
+}

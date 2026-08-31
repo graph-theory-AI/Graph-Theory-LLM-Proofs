@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 648,
+    "score": 2.0,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "1904.02595__00",
+    "title_md": "[Conjecture 1.2](https://arxiv.org/abs/1904.02595)",
+    "paper": "Isoperimetry, Stability, and Irredundance in Direct Products",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1904.02595__00/"
+  },
+  "dossier_meta": {
+    "id": "1904.02595__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1904.02595__00/",
+    "arxiv_id": "1904.02595",
+    "tier": 2,
+    "score": 2.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Isoperimetry, Stability, and Irredundance in Direct Products"
+  },
+  "started": "2026-08-31T08:29:02Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

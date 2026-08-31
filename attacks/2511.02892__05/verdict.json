@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The finiteness conjecture remains unresolved, but there is an explicit 10-vertex connected bridgeless cubic exception, an exact component-selection characterization, and two broad sufficient conditions for colorability.",
+  "would_publish": false,
+  "caveats": "No finite bound or infinite counterfamily is obtained; the standard proper-neighborhood definition is assumed, and the literature novelty of the 10-vertex exception was not checked.",
+  "id": "2511.02892__05",
+  "model": "gpt-5.6-sol",
+  "usd": 1.3461,
+  "eur": 1.162492,
+  "elapsed_s": 1977.3,
+  "status": "completed",
+  "response_id": "resp_06207805e501ac27006a9546937a5487d28b4358a09f8ade1d",
+  "when": "2026-08-31T09:50:04Z"
+}

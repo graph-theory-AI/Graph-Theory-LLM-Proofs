@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but vertex-simple faces contribute exactly one quarter of a logarithm and all faces of length at most any fixed multiple of n contribute at most one half of a logarithm.",
+  "would_publish": false,
+  "caveats": "Faces of length greater than a fixed fraction of n remain uncontrolled.",
+  "id": "2211.01032__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.830584,
+  "eur": 1.580892,
+  "elapsed_s": 2145.3,
+  "status": "completed",
+  "response_id": "resp_0dfe32659a4417f2006a95358f8ad087d2b15bfde2835cf143",
+  "when": "2026-08-31T08:40:14Z"
+}

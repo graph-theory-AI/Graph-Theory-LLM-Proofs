@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "There is a linear-time output algorithm for the precoloring-extension problem at girth at least six, and more generally when the protected 3-core has only boundedly many vertices of degree at least four.",
+  "would_publish": false,
+  "caveats": "The argument does not handle 4- or 5-cycles, including the large quadrangulations central to the open problem.",
+  "id": "1601.01197__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.118088,
+  "eur": 0.965581,
+  "elapsed_s": 1752.3,
+  "status": "completed",
+  "response_id": "resp_00eba5a44b23ac03006a95537c665487d284dc133c1b976593",
+  "when": "2026-08-31T10:41:23Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "Every subsequential limit is finite-support maximal, and any distinct limit at the standard 3-orientation level must carry a directed bi-infinite disagreement interface.",
+  "would_publish": false,
+  "caveats": "The argument does not exclude such an interface, and the disagreement lemma assumes the usual 3-orientation encoding of Schnyder woods.",
+  "id": "2511.07601__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.548172,
+  "eur": 0.473401,
+  "elapsed_s": 1089.3,
+  "status": "completed",
+  "response_id": "resp_002a1ee10de2348d006a95358f89b487d2be8bbc1521ea7771",
+  "when": "2026-08-31T08:22:38Z"
+}

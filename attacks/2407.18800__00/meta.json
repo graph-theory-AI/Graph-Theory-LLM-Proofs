@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 654,
+    "score": 1.95,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2407.18800__00",
+    "title_md": "[Conjecture 2](https://arxiv.org/abs/2407.18800)",
+    "paper": "Towards Characterization of 5-List-Colorability of Toroidal Graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2407.18800__00/"
+  },
+  "dossier_meta": {
+    "id": "2407.18800__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2407.18800__00/",
+    "arxiv_id": "2407.18800",
+    "tier": 2,
+    "score": 1.95,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Towards Characterization of 5-List-Colorability of Toroidal Graphs"
+  },
+  "started": "2026-08-31T08:22:39Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Finite languages admit an exact linear-time return-path criterion, and two-word languages have a closed-form classification, but arbitrary unbounded languages are not classified.",
+  "would_publish": false,
+  "caveats": "Assumes the standard binary definition of c-padding: at least c zeroes at each end and at least one 1; novelty has not been independently literature-checked.",
+  "id": "2311.05066__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.938392,
+  "eur": 0.810395,
+  "elapsed_s": 1046.6,
+  "status": "completed",
+  "response_id": "resp_087d88bb7cf3f716006a953c201ef487d28ea8def0396dce8d",
+  "when": "2026-08-31T08:49:58Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Consensus-type forbidden families are induced-removable for arbitrary finite abelian groups and for higher-complexity progressions in Z, while arbitrary-complexity finite-field families are removable when a safe color is available.",
+  "would_publish": false,
+  "caveats": "The general all-colors finite-complexity case remains open; the cyclic obstruction below uses proportional forms of infinite CS complexity.",
+  "id": "1911.03427__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.970852,
+  "eur": 0.838428,
+  "elapsed_s": 1077.7,
+  "status": "completed",
+  "response_id": "resp_00957d2fb5c0df78006a9541b384d487d2a262409f5ef0a719",
+  "when": "2026-08-31T09:14:17Z"
+}

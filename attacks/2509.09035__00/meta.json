@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 666,
+    "score": 1.85,
+    "tier": 2,
+    "lean": "disprove",
+    "status": "open",
+    "id": "2509.09035__00",
+    "title_md": "[Informal question: validity of Conjecture 1.2 for trees and planar grap\u2026](https://arxiv.org/abs/2509.09035)",
+    "paper": "Asymptotic structure. III. Excluding a fat tree",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2509.09035__00/"
+  },
+  "dossier_meta": {
+    "id": "2509.09035__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2509.09035__00/",
+    "arxiv_id": "2509.09035",
+    "tier": 2,
+    "score": 1.85,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Asymptotic structure. III. Excluding a fat tree"
+  },
+  "started": "2026-08-31T08:04:29Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

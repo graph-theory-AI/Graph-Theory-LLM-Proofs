@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A regularity-free lifting of the book theorem gives exact p-goodness for every connected bounded-vertex-cover target and an additive-constant bound for targets with a fixed separator and bounded components, but it does not recover the full Nikiforov\u2013Rousseau theorem.",
+  "would_publish": false,
+  "caveats": "The argument uses the Fox\u2013He\u2013Wigderson book theorem as an input and leaves the zero-slack structural step and the remaining cases of Nikiforov\u2013Rousseau Theorem 2.1 unresolved.",
+  "id": "2109.09205__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.029232,
+  "eur": 0.888845,
+  "elapsed_s": 952.9,
+  "status": "completed",
+  "response_id": "resp_011734aef735bcb8006a953bce7b4087d29df5c4ac1169e988",
+  "when": "2026-08-31T08:47:03Z"
+}

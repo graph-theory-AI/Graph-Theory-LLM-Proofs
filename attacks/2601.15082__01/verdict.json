@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An exact Ramsey-theoretic characterization is proved for a natural family of monotone 3-degenerate classes, including a nonlinear example, but the general sparse monotone case remains open.",
+  "would_publish": false,
+  "caveats": "The missing step is whether exclusion of the canonical obstruction below is sufficient for arbitrary bounded-degeneracy classes; the construction may overlap examples in the source.",
+  "id": "2601.15082__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.841736,
+  "eur": 0.726923,
+  "elapsed_s": 1137.1,
+  "status": "completed",
+  "response_id": "resp_0784c563fe9fab39006a953fa635c487d280f21f3ce0ba1289",
+  "when": "2026-08-31T09:06:00Z"
+}

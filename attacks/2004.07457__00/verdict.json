@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For the slice k_A=\u0394_A=r fixed, I obtain constant-factor optimal bounds k_B=\u0398_r(\u0394_B^{1/r}), an asymptotically exact threshold when the B-lists are pairwise disjoint, and the exact (2,2) boundary.",
+  "would_publish": false,
+  "caveats": "Only a special slice is treated, a factor (r!)^{1/r} remains in the unrestricted case, and overlap with bounds implicit in the source paper has not been checked.",
+  "id": "2004.07457__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.44928,
+  "eur": 1.251598,
+  "elapsed_s": 1589.0,
+  "status": "completed",
+  "response_id": "resp_00ae3678b5469e0a006a95537c615087d28209c3054f95c08d",
+  "when": "2026-08-31T10:38:40Z"
+}

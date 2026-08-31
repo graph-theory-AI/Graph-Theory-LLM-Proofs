@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is not resolved, but an FPT dense-module special case is proved and Ramsey, separator, and half-graph restrictions on any counterexample are isolated.",
+  "would_publish": false,
+  "caveats": "Neither the relevant modular defect nor the distance to the known special case is bounded by k.",
+  "id": "1909.08426__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.244276,
+  "eur": 1.074557,
+  "elapsed_s": 1534.1,
+  "status": "completed",
+  "response_id": "resp_08dd700df56c0198006a95492861e887d2bf2265a6283f3a10",
+  "when": "2026-08-31T09:53:42Z"
+}

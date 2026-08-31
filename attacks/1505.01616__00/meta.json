@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 525,
+    "score": 2.5,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "1505.01616__00",
+    "title_md": "[Question 1.7](https://arxiv.org/abs/1505.01616)",
+    "paper": "Colouring graphs with constraints on connectivity",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1505.01616__00/"
+  },
+  "dossier_meta": {
+    "id": "1505.01616__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1505.01616__00/",
+    "arxiv_id": "1505.01616",
+    "tier": 2,
+    "score": 2.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Colouring graphs with constraints on connectivity"
+  },
+  "started": "2026-08-31T10:53:46Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

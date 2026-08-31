@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "A block-tribes construction gives balanced monotone strategies with success probability arbitrarily close to 1/2 for every number of players, so in fact p_monotone(t)=1/2.",
+  "would_publish": true,
+  "caveats": "The construction uses an enormous but finite number of hats and applies to the standard supremum-over-n, fiber-containment definition; it does not apply to the intersecting variant.",
+  "id": "2208.06858__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.027648,
+  "eur": 0.887477,
+  "elapsed_s": 1400.3,
+  "status": "completed",
+  "response_id": "resp_05f3fb5fbd38017d006a95537c610087d28aada28e79e33266",
+  "when": "2026-08-31T10:35:31Z"
+}

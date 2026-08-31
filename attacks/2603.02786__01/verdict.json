@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A complement-matching ordering gives the explicit bound M_{P(n)}(n) <= (1/4+o(1))n^3/ln n, and the conjectured constant is attained for primes at most alpha n when alpha <= 1/2.",
+  "would_publish": false,
+  "caveats": "Endpoint conventions are asymptotically irrelevant; I have not checked whether the 1/4 upper bound is already implicit in the full source paper.",
+  "id": "2603.02786__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.41046,
+  "eur": 1.218073,
+  "elapsed_s": 1457.7,
+  "status": "completed",
+  "response_id": "resp_0baf14c95320af24006a954032b02c87d2925d88cb1c2c7b0b",
+  "when": "2026-08-31T09:14:12Z"
+}

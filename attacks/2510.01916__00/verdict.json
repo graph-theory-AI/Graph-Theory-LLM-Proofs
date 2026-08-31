@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Unrestricted circuit distance is NP-hard for irredundant rational polygons when the target may lie in the relative interior of an edge, but the reduction does not make the target a vertex.",
+  "would_publish": false,
+  "caveats": "The usual formulation of Conjecture 21 appears to require both terminals to be vertices; if arbitrary rational boundary terminals are allowed, the argument proves the stated conjecture.",
+  "id": "2510.01916__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.244344,
+  "eur": 1.074615,
+  "elapsed_s": 1600.6,
+  "status": "completed",
+  "response_id": "resp_01d1dc1a81fb561b006a95358fc87887d2998cca30a32fdf3e",
+  "when": "2026-08-31T08:31:09Z"
+}

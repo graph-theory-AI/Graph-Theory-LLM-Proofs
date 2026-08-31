@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the standard quotient-lattice models the decision problem is in NP with quadratic-length certificates, and the distances between the extremal diagonal and generic rectangulations are exactly linear, but neither a polynomial-time algorithm nor NP-hardness is established.",
+  "would_publish": false,
+  "caveats": "This uses the standard combinatorial Baxter/diagonal and 2-clumped/generic flip graphs with fixed boundary and canonical labels; other notions of rectangulation or flip require separate treatment.",
+  "id": "2311.00779__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.092512,
+  "eur": 0.943493,
+  "elapsed_s": 1572.2,
+  "status": "completed",
+  "response_id": "resp_0a35ae2f962640f8006a95395fe23087d2b3a1168e32cc9105",
+  "when": "2026-08-31T08:46:59Z"
+}

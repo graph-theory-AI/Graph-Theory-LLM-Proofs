@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general characterization remains open, but the hereditary class defined by one forbidden induced graph is completely classified, and the maximum n-vertex ratio is shown to have order sqrt(n log n).",
+  "would_publish": false,
+  "caveats": "Arbitrary hereditary classes with several or infinitely many forbidden induced graphs are not characterized, and the literature novelty of the auxiliary results has not been verified.",
+  "id": "2601.15082__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.07772,
+  "eur": 0.930719,
+  "elapsed_s": 1059.0,
+  "status": "completed",
+  "response_id": "resp_05843671b93b4e82006a953fbbdf9887d2bc74b19219b6b371",
+  "when": "2026-08-31T09:05:34Z"
+}

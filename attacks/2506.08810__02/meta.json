@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 597,
+    "score": 2.2,
+    "tier": 2,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2506.08810__02",
+    "title_md": "[Problem 23](https://arxiv.org/abs/2506.08810)",
+    "paper": "Infinite induced-saturated graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2506.08810__02/"
+  },
+  "dossier_meta": {
+    "id": "2506.08810__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2506.08810__02/",
+    "arxiv_id": "2506.08810",
+    "tier": 2,
+    "score": 2.2,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Infinite induced-saturated graphs"
+  },
+  "started": "2026-08-31T09:14:04Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

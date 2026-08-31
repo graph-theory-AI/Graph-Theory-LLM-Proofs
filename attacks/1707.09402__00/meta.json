@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 522,
+    "score": 2.5,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "1707.09402__00",
+    "title_md": "[Complexity of Independent Feedback Vertex Set for H-free graphs (linear\u2026](https://arxiv.org/abs/1707.09402)",
+    "paper": "Independent Feedback Vertex Set for $P_5$-free Graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1707.09402__00/"
+  },
+  "dossier_meta": {
+    "id": "1707.09402__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1707.09402__00/",
+    "arxiv_id": "1707.09402",
+    "tier": 2,
+    "score": 2.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Independent Feedback Vertex Set for $P_5$-free Graphs"
+  },
+  "started": "2026-08-31T10:58:07Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

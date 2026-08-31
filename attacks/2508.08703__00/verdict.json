@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Any 6-regular (4,1)-graph has at least 15 vertices, but existence from order 15 onward remains unresolved.",
+  "would_publish": false,
+  "caveats": "The lower bound is self-contained, but its novelty relative to details or computations in the full source paper has not been checked.",
+  "id": "2508.08703__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.506,
+  "eur": 1.300582,
+  "elapsed_s": 1474.8,
+  "status": "completed",
+  "response_id": "resp_0104fd7b03f82c1b006a953a6f9c2887d298d33e26728abc98",
+  "when": "2026-08-31T08:49:54Z"
+}

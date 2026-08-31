@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "A selector blow-up of the known k=3 construction gives D(n,4) at least n^(7/3)/exp(O(sqrt(log n))), establishing a superquadratic diameter but not the conjectured near-cubic bound.",
+  "would_publish": false,
+  "caveats": "This uses the standard token-jumping/component-diameter convention, and the novelty of the amplification has not been independently literature-checked.",
+  "id": "2301.02020__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.129452,
+  "eur": 0.975395,
+  "elapsed_s": 1434.7,
+  "status": "completed",
+  "response_id": "resp_0f327a89c01b0b31006a95358f86d087d2a23fef8538d26fd1",
+  "when": "2026-08-31T08:28:24Z"
+}

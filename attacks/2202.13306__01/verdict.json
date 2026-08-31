@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture reduces to a bounded-antineighborhood/bounded-cyclic-neighborhood coloring problem, and it holds under bounded complement chromatic number or bounded maximal-clique size, but the required global bound remains open.",
+  "would_publish": false,
+  "caveats": "Assumes the source convention that + is disjoint union and that all digraphs are finite nonempty oriented graphs.",
+  "id": "2202.13306__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.237996,
+  "eur": 1.069133,
+  "elapsed_s": 1557.4,
+  "status": "completed",
+  "response_id": "resp_0f7765404cf87556006a95585e8efc87d2899ad27efab5f6d2",
+  "when": "2026-08-31T10:58:59Z"
+}

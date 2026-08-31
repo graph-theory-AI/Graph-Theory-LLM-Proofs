@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 508,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1902.10878__01",
+    "title_md": "[Open Question \u2014 symmetry of $\\psi$ (biconstrained case)](https://arxiv.org/abs/1902.10878)",
+    "paper": "Concatenating bipartite graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1902.10878__01/"
+  },
+  "dossier_meta": {
+    "id": "1902.10878__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1902.10878__01/",
+    "arxiv_id": "1902.10878",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Concatenating bipartite graphs"
+  },
+  "started": "2026-08-31T10:59:00Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

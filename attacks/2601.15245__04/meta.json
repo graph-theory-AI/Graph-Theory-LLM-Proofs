@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 590,
+    "score": 2.2,
+    "tier": 2,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2601.15245__04",
+    "title_md": "[Problem 6.4](https://arxiv.org/abs/2601.15245)",
+    "paper": "Coloring small locally sparse degenerate graphs and related problems",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2601.15245__04/"
+  },
+  "dossier_meta": {
+    "id": "2601.15245__04",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2601.15245__04/",
+    "arxiv_id": "2601.15245",
+    "tier": 2,
+    "score": 2.2,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Coloring small locally sparse degenerate graphs and related problems"
+  },
+  "started": "2026-08-31T09:18:34Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the standard \u2113\u221e colour-count error, the exact worst case is determined for a spanning star plus k\u22121 isolates, forcing every universal leading coefficient to be at least (k\u22121)/(2k).",
+  "would_publish": false,
+  "caveats": "The excerpt omits the definition of f_h and the current numerical coefficient; no general upper bound for all spanning forests is improved.",
+  "id": "2604.09449__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.844808,
+  "eur": 0.729576,
+  "elapsed_s": 927.4,
+  "status": "completed",
+  "response_id": "resp_0679034044b0ae28006a954037396487d2b727e8ae47372a4f",
+  "when": "2026-08-31T09:05:26Z"
+}

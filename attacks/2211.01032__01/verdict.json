@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "For p(n)=1/n, a graph in G(n,p) has linearly many isolated K_2 components a.a.s., each of which forces one face in every componentwise random embedding.",
+  "would_publish": false,
+  "caveats": "This refutes the catalog statement under the canonical componentwise definition; a version conditioned on connectedness or concerning one distinguished component is different.",
+  "id": "2211.01032__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.5758,
+  "eur": 0.497261,
+  "elapsed_s": 660.0,
+  "status": "completed",
+  "response_id": "resp_052848533d19c24f006a955a7207bc87d2a995a299ed6ea6cd",
+  "when": "2026-08-31T10:52:52Z"
+}

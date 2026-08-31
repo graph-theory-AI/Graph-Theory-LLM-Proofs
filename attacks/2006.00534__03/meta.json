@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 549,
+    "score": 2.45,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2006.00534__03",
+    "title_md": "[Question 10](https://arxiv.org/abs/2006.00534)",
+    "paper": "Inverse problems for minimal complements and maximal supplements",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2006.00534__03/"
+  },
+  "dossier_meta": {
+    "id": "2006.00534__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2006.00534__03/",
+    "arxiv_id": "2006.00534",
+    "tier": 2,
+    "score": 2.45,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Inverse problems for minimal complements and maximal supplements"
+  },
+  "started": "2026-08-31T10:41:52Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

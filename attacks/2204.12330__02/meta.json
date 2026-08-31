@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 606,
+    "score": 2.2,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2204.12330__02",
+    "title_md": "[Open Problem (separating twin-width and queue number on sparse graphs)](https://arxiv.org/abs/2204.12330)",
+    "paper": "Twin-width VII: groups",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.12330__02/"
+  },
+  "dossier_meta": {
+    "id": "2204.12330__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.12330__02/",
+    "arxiv_id": "2204.12330",
+    "tier": 2,
+    "score": 2.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Twin-width VII: groups"
+  },
+  "started": "2026-08-31T09:06:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

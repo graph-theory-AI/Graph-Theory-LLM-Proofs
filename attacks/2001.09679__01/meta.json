@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 620,
+    "score": 2.15,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2001.09679__01",
+    "title_md": "[Informal conjecture $b'_\\varepsilon = b_\\varepsilon$ for $0<\\varepsilon\u2026](https://arxiv.org/abs/2001.09679)",
+    "paper": "A note on sublinear separators and expansion",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2001.09679__01/"
+  },
+  "dossier_meta": {
+    "id": "2001.09679__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2001.09679__01/",
+    "arxiv_id": "2001.09679",
+    "tier": 2,
+    "score": 2.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "A note on sublinear separators and expansion"
+  },
+  "started": "2026-08-31T08:51:05Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

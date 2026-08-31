@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general odd-order conjecture remains open, but I prove an exact sparse-overlap criterion, a universal near-stacking bound of (n-3)/2 conflicts, and the conjecture for affine midpoint colorings of every odd prime-power order.",
+  "would_publish": false,
+  "caveats": "No argument eliminates the remaining conflicts for arbitrary dense proper colorings, and the proposed exhaustive SAT search was not run.",
+  "id": "2405.14795__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.142056,
+  "eur": 0.98628,
+  "elapsed_s": 1293.4,
+  "status": "completed",
+  "response_id": "resp_07dc264d16ace083006a9558f3d49487d282e4888558bb638d",
+  "when": "2026-08-31T10:57:05Z"
+}

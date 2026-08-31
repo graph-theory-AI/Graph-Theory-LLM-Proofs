@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 591,
+    "score": 2.2,
+    "tier": 2,
+    "lean": "disprove",
+    "status": "open",
+    "id": "2405.10854__01",
+    "title_md": "[Conjecture 11](https://arxiv.org/abs/2405.10854)",
+    "paper": "Strong log-convexity of genus sequences",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2405.10854__01/"
+  },
+  "dossier_meta": {
+    "id": "2405.10854__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2405.10854__01/",
+    "arxiv_id": "2405.10854",
+    "tier": 2,
+    "score": 2.2,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Strong log-convexity of genus sequences"
+  },
+  "started": "2026-08-31T09:17:53Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

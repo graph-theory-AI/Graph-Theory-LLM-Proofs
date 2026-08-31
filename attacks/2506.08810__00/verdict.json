@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "No infinite exceptional family is obtained, but I prove a prime-core reduction, exhibit a broad infinite class with finite saturators, and show that any saturator for P4 plus r isolated vertices has at least |H|+2 vertices.",
+  "would_publish": false,
+  "caveats": "No graph other than P4 is proved to lack a finite induced-saturated graph, so the main problem remains open.",
+  "id": "2506.08810__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.549976,
+  "eur": 1.338559,
+  "elapsed_s": 2135.0,
+  "status": "completed",
+  "response_id": "resp_0aeda3927bbc2d0e006a95358f882887d294d3b5a21a77b657",
+  "when": "2026-08-31T08:40:04Z"
+}

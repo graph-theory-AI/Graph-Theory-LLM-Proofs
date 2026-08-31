@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 527,
+    "score": 2.45,
+    "tier": 2,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2305.16258__00",
+    "title_md": "[Conjecture 1.6](https://arxiv.org/abs/2305.16258)",
+    "paper": "Tree independence number I. (Even hole, diamond, pyramid)-free graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2305.16258__00/"
+  },
+  "dossier_meta": {
+    "id": "2305.16258__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2305.16258__00/",
+    "arxiv_id": "2305.16258",
+    "tier": 2,
+    "score": 2.45,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Tree independence number I. (Even hole, diamond, pyramid)-free graphs"
+  },
+  "started": "2026-08-31T10:52:29Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

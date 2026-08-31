@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 539,
+    "score": 2.45,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2510.11311__03",
+    "title_md": "[Eulerian-avoidability characterization](https://arxiv.org/abs/2510.11311)",
+    "paper": "Extending Thomassen's conjecture to directed graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2510.11311__03/"
+  },
+  "dossier_meta": {
+    "id": "2510.11311__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2510.11311__03/",
+    "arxiv_id": "2510.11311",
+    "tier": 2,
+    "score": 2.45,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Extending Thomassen's conjecture to directed graphs"
+  },
+  "started": "2026-08-31T10:41:52Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

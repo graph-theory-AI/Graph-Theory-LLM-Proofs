@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 555,
+    "score": 2.4,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2001.09679__00",
+    "title_md": "[Informal open question on the exact value of $b_\\varepsilon$](https://arxiv.org/abs/2001.09679)",
+    "paper": "A note on sublinear separators and expansion",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2001.09679__00/"
+  },
+  "dossier_meta": {
+    "id": "2001.09679__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2001.09679__00/",
+    "arxiv_id": "2001.09679",
+    "tier": 2,
+    "score": 2.4,
+    "lean": "prove",
+    "status": "open",
+    "paper": "A note on sublinear separators and expansion"
+  },
+  "started": "2026-08-31T10:38:25Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I do not resolve the conjecture, but prove an exact averaging obstruction, settle all abelian Cayley digraphs, and prove Hamiltonicity for several periodic vertex-transitive classes.",
+  "would_publish": false,
+  "caveats": "The general aperiodic non-Cayley case and the range sqrt(n)<c<=n/2 remain open; standard finite loopless simple-digraph conventions are assumed.",
+  "id": "2602.16333__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.261788,
+  "eur": 1.08968,
+  "elapsed_s": 1370.7,
+  "status": "completed",
+  "response_id": "resp_02b962b6dfce3ba0006a95483e595487d28c280545f29c5735",
+  "when": "2026-08-31T09:47:04Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The partition theorem stated in the source paper immediately gives the requested union cover, because every partition is a cover.",
+  "would_publish": false,
+  "caveats": "This assumes the catalog uses the same induced-H-free and \u03b5-restricted definitions and the same dependence N=N(H,\u03b5) as the quoted source.",
+  "id": "2105.07370__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.106608,
+  "eur": 0.092067,
+  "elapsed_s": 184.6,
+  "status": "completed",
+  "response_id": "resp_0b34736ec58891bf006a95537c5f8487d29a2e57a874b963c2",
+  "when": "2026-08-31T10:15:15Z"
+}

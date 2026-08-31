@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 572,
+    "score": 2.3,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2204.10119__03",
+    "title_md": "[Informal Conjecture: average degree $\\geq 5$ and max degree $\\leq 6$ fo\u2026](https://arxiv.org/abs/2204.10119)",
+    "paper": "Bipartite graphs with no $K_6$ minor",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.10119__03/"
+  },
+  "dossier_meta": {
+    "id": "2204.10119__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.10119__03/",
+    "arxiv_id": "2204.10119",
+    "tier": 2,
+    "score": 2.3,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Bipartite graphs with no $K_6$ minor"
+  },
+  "started": "2026-08-31T10:12:10Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

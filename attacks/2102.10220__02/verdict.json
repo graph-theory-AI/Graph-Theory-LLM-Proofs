@@ -1,0 +1,15 @@
+{
+  "verdict": "ill_posed",
+  "confidence": "high",
+  "one_line": "With the displayed minimum over all n-vertex graphs, m(n,k)=0 identically, while replacing the minimum by a maximum gives a meaningful problem for which only partial results are established below.",
+  "would_publish": false,
+  "caveats": "This assumes open neighborhoods and induced edges on their union; the catalog may have transcribed max as min.",
+  "id": "2102.10220__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.727056,
+  "eur": 0.627886,
+  "elapsed_s": 866.8,
+  "status": "completed",
+  "response_id": "resp_02fcaf61a598d8e1006a954279cfe087d2850bbd605963656a",
+  "when": "2026-08-31T09:14:04Z"
+}

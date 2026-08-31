@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for every k at least 4 and for all 3-uniform H outside a sharply characterized null-pair/full-pair class, whose unique four-vertex member is also settled explicitly.",
+  "would_publish": false,
+  "caveats": "The remaining case is k=3 on at least five vertices with a disjoint null pair and full pair; perturbations are assumed nonempty and vertex-locally finite.",
+  "id": "2506.08810__04",
+  "model": "gpt-5.6-sol",
+  "usd": 1.445328,
+  "eur": 1.248185,
+  "elapsed_s": 1561.4,
+  "status": "completed",
+  "response_id": "resp_0338cac9e7d9c838006a953a843e5887d299e2137970d76eec",
+  "when": "2026-08-31T08:51:41Z"
+}

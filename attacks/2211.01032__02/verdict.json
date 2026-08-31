@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "For simple graphs, deferred exposure of the random rotations gives an O(log n) upper bound, while weighted simple facial cycles give a matching Omega(log n) lower bound.",
+  "would_publish": true,
+  "caveats": "The proof assumes finite loopless simple graphs; the corresponding multigraph statement is false.",
+  "id": "2211.01032__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.214312,
+  "eur": 1.04868,
+  "elapsed_s": 1629.9,
+  "status": "completed",
+  "response_id": "resp_01b55faa487ed3df006a953ce1265087d2a5793707e1f7cb9c",
+  "when": "2026-08-31T09:02:54Z"
+}

@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 562,
+    "score": 2.3,
+    "tier": 2,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2310.04265__01",
+    "title_md": "[Question 3.10](https://arxiv.org/abs/2310.04265)",
+    "paper": "Clique number of tournaments",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2310.04265__01/"
+  },
+  "dossier_meta": {
+    "id": "2310.04265__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2310.04265__01/",
+    "arxiv_id": "2310.04265",
+    "tier": 2,
+    "score": 2.3,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Clique number of tournaments"
+  },
+  "started": "2026-08-31T10:25:32Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

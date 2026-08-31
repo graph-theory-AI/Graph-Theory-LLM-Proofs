@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for torus embeddings with at most 13 contractible triangles, while any counterexample contains a choice-critical subgraph on at least 12 vertices with at least 14 contractible facial triangles.",
+  "would_publish": false,
+  "caveats": "The dense triangulated regime, notably 6-regular toroidal triangulations, remains untreated; criticality is interpreted globally.",
+  "id": "2407.18800__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.14486,
+  "eur": 0.988701,
+  "elapsed_s": 1676.2,
+  "status": "completed",
+  "response_id": "resp_018ea52130f1352d006a9539cf2b9c87d2841590b6eee76f9c",
+  "when": "2026-08-31T08:50:35Z"
+}

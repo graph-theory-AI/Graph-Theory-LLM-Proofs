@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds uniformly for paths and cycles, and qualitatively for the claw on connected locally finite graphs, but the general tree and planar cases remain open.",
+  "would_publish": false,
+  "caveats": "No general tree or planar proof or counterexample is obtained; the one-ended claw argument is non-uniform, and novelty of these elementary special cases was not literature-checked.",
+  "id": "2509.09035__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.064668,
+  "eur": 0.919447,
+  "elapsed_s": 1249.7,
+  "status": "completed",
+  "response_id": "resp_07a29cc3cbe7f039006a95358fb50887d29a72da22d5958dbb",
+  "when": "2026-08-31T08:25:19Z"
+}

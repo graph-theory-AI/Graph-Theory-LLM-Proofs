@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 577,
+    "score": 2.3,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2009.05691__01",
+    "title_md": "[Open Question: Detecting Holes of Length Divisible by Three](https://arxiv.org/abs/2009.05691)",
+    "paper": "Detecting a long even hole",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2009.05691__01/"
+  },
+  "dossier_meta": {
+    "id": "2009.05691__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2009.05691__01/",
+    "arxiv_id": "2009.05691",
+    "tier": 2,
+    "score": 2.3,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Detecting a long even hole"
+  },
+  "started": "2026-08-31T10:12:11Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

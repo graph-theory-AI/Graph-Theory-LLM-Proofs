@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is not resolved, but exact formulas prove log-concavity for bouquets, dipoles, and several infinite bridge-closed classes, while a bridge-power criterion gives a concrete route to a counterexample.",
+  "would_publish": false,
+  "caveats": "No graph satisfying the counterexample criterion is identified; formulas use the standard fixed-graph rotation-system convention.",
+  "id": "2405.10854__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.278008,
+  "eur": 1.103688,
+  "elapsed_s": 1354.7,
+  "status": "completed",
+  "response_id": "resp_02a2d3b0b915e839006a95358f8e0487d2a89f68112f0b4ec9",
+  "when": "2026-08-31T08:27:03Z"
+}

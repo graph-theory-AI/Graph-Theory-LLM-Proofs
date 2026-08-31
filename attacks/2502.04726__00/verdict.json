@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The universal upper bound remains open, but the proposed order is necessary and holds for Hamiltonian graphs whose chords mix short cyclic intervals, including a natural planted-random model.",
+  "would_publish": false,
+  "caveats": "No universal improvement over the source paper's O(ell^2) upper bound is obtained.",
+  "id": "2502.04726__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.28986,
+  "eur": 1.113923,
+  "elapsed_s": 1282.6,
+  "status": "completed",
+  "response_id": "resp_004ba4307dcfa294006a953ad8771887d2a69abaf6d6b46b9f",
+  "when": "2026-08-31T08:48:26Z"
+}

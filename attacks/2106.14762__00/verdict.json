@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A direct size-biased run-profile calculation gives interior density e^(y-1) in every block of runs sorted by its first entry, hence no dependence on x.",
+  "would_publish": false,
+  "caveats": "The proof is probabilistic-combinatorial rather than bijective; novelty and the intended scope of \u201cdirect\u201d have not been independently verified.",
+  "id": "2106.14762__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.544568,
+  "eur": 0.470289,
+  "elapsed_s": 841.7,
+  "status": "completed",
+  "response_id": "resp_0f826cd0079c005f006a9543495b6087d29b6e0489840b03d4",
+  "when": "2026-08-31T09:17:06Z"
+}

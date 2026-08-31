@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The intended sparse adjacency-list question remains open, but quadratic time is unavoidable in the adjacency-matrix model even for minimally strong digraphs and for dense general digraphs in an outgoing-adjacency-array model.",
+  "would_publish": false,
+  "caveats": "These are model-sensitive lower bounds and do not improve the source algorithm on sparse adjacency-list inputs.",
+  "id": "2304.03567__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.82208,
+  "eur": 0.709948,
+  "elapsed_s": 925.5,
+  "status": "completed",
+  "response_id": "resp_0b4513d7c7dc941d006a953c1e040c87d2a90d5971a39f30c2",
+  "when": "2026-08-31T08:47:55Z"
+}

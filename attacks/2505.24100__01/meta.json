@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 634,
+    "score": 2.1,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2505.24100__01",
+    "title_md": "[Question 1.8](https://arxiv.org/abs/2505.24100)",
+    "paper": "Halfway to induced saturation for even cycles",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2505.24100__01/"
+  },
+  "dossier_meta": {
+    "id": "2505.24100__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2505.24100__01/",
+    "arxiv_id": "2505.24100",
+    "tier": 2,
+    "score": 2.1,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Halfway to induced saturation for even cycles"
+  },
+  "started": "2026-08-31T08:40:04Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

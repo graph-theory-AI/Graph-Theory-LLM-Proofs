@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 551,
+    "score": 2.45,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "1812.09752__01",
+    "title_md": "[Open question: exact value of $HG(K_{n,n})$](https://arxiv.org/abs/1812.09752)",
+    "paper": "The hat guessing number of graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.09752__01/"
+  },
+  "dossier_meta": {
+    "id": "1812.09752__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.09752__01/",
+    "arxiv_id": "1812.09752",
+    "tier": 2,
+    "score": 2.45,
+    "lean": "prove",
+    "status": "open",
+    "paper": "The hat guessing number of graphs"
+  },
+  "started": "2026-08-31T10:41:52Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

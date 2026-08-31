@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Relative to the fixed Hamilton cycle, activity has an exact reverse-search algorithm running in O(n^2 2^d), where d is the number of chords of the queried path, and every path with at most one chord is active.",
+  "would_publish": false,
+  "caveats": "This is an algorithmic/FPT criterion, not a closed-form characterization or a polynomial-time classification.",
+  "id": "2502.04726__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.344024,
+  "eur": 1.160699,
+  "elapsed_s": 1496.7,
+  "status": "completed",
+  "response_id": "resp_0eb466816efdc4b7006a9545e9960887d2942ea90d4e12121e",
+  "when": "2026-08-31T09:39:14Z"
+}

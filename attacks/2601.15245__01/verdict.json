@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but girth growing faster than d/log d suffices for a super-exponential vertex threshold via an explicit chromatic Moore-type bound.",
+  "would_publish": false,
+  "caveats": "The argument gives no improvement for any fixed constant girth and does not settle the triangle-free case.",
+  "id": "2601.15245__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.853404,
+  "eur": 0.737,
+  "elapsed_s": 1268.2,
+  "status": "completed",
+  "response_id": "resp_049fdf79c68cd8f3006a95474f90e887d28ff1027617e2c3f1",
+  "when": "2026-08-31T09:41:23Z"
+}

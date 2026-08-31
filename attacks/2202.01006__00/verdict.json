@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The qualitative upper-bound gap remains open, but the high-girth auxiliary bound n^(4r) can be sharpened to (O(n log n))^r, n^(Theta(r)) is unavoidable for that template, and every q-dichromatic member of C3 has at least floor(q^2/2) vertices.",
+  "would_publish": false,
+  "caveats": "No smaller-scale C3 construction is produced, and application of the auxiliary estimate is conditional on Lemma 3 having the high-girth/high-chromatic role indicated by the catalog.",
+  "id": "2202.01006__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.036264,
+  "eur": 0.894918,
+  "elapsed_s": 1250.9,
+  "status": "completed",
+  "response_id": "resp_0f749debf5dfe450006a95537d07d087d298430c834a5acc28",
+  "when": "2026-08-31T10:33:02Z"
+}

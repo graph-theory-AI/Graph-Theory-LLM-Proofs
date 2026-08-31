@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is proved for several structural classes, notably when the K4-interaction graph is a forest, or a cactus whose cyclic interactions are matchings apart from at most one light exception per cycle.",
+  "would_publish": false,
+  "caveats": "The unrestricted cyclic interaction case remains open, and novelty relative to the cited 2024 reduction has not been checked.",
+  "id": "2511.02892__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.056552,
+  "eur": 0.912438,
+  "elapsed_s": 1351.8,
+  "status": "completed",
+  "response_id": "resp_0191cd0d99c4aac7006a953ec59d7c87d2adeba374ac2ab49c",
+  "when": "2026-08-31T09:06:20Z"
+}

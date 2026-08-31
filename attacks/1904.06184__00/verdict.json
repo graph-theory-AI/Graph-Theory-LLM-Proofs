@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general recognition problem remains unresolved, but Switchable graphs admit exact polynomial-time recognition on split, co-bipartite, bipartite, chordal, and C4-free inputs.",
+  "would_publish": false,
+  "caveats": "The general case and its hardness remain open, and some subclass results may be implicit in known strong-chordality theory.",
+  "id": "1904.06184__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.016476,
+  "eur": 0.877829,
+  "elapsed_s": 1681.0,
+  "status": "completed",
+  "response_id": "resp_0bb503bededa1ecf006a9541acff6087d288284e0ef0fa19ab",
+  "when": "2026-08-31T09:24:13Z"
+}

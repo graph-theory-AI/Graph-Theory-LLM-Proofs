@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A high-girth core construction gives a quantified star-transposition upper bound of 2n+O_t(n^{1-1/(2t)} log n), and networks with t=n-c are within O_c(1) of full permutation networks.",
+  "would_publish": false,
+  "caveats": "The leading constant 2 construction likely overlaps the source paper; no matching fixed-t lower bound is proved.",
+  "id": "2208.06630__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.479608,
+  "eur": 1.277789,
+  "elapsed_s": 2173.6,
+  "status": "completed",
+  "response_id": "resp_02c80b5b89fd22d8006a953e6c73dc87d28f9c8ce48f03d2b2",
+  "when": "2026-08-31T09:18:33Z"
+}

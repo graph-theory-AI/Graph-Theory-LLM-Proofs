@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "The conjecture holds for every connected graph of cycle rank at most two, with the explicit bicyclic bound s^+(G) >= n+5-2sqrt(5)>n.",
+  "would_publish": false,
+  "caveats": "Graphs with m>=n+2 remain unresolved, and the phase argument has not been independently refereed or checked against later literature.",
+  "id": "2506.07264__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.400768,
+  "eur": 1.209703,
+  "elapsed_s": 1477.3,
+  "status": "completed",
+  "response_id": "resp_0c0e04dde95e21bb006a9535b48b7487d2961f5cb4efa206b1",
+  "when": "2026-08-31T08:29:05Z"
+}

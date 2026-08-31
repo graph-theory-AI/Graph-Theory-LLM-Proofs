@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 576,
+    "score": 2.3,
+    "tier": 2,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1601.01197__00",
+    "title_md": "[Open Problem (linear-time 3-coloring output)](https://arxiv.org/abs/1601.01197)",
+    "paper": "Three-coloring triangle-free graphs on surfaces VII. A linear-time algo\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1601.01197__00/"
+  },
+  "dossier_meta": {
+    "id": "1601.01197__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1601.01197__00/",
+    "arxiv_id": "1601.01197",
+    "tier": 2,
+    "score": 2.3,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Three-coloring triangle-free graphs on surfaces VII. A linear-time algo\u2026"
+  },
+  "started": "2026-08-31T10:12:11Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

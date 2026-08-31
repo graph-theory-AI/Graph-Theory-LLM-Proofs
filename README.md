@@ -3,8 +3,10 @@
 Systematic Sol attacks on the open graph-theory conjectures catalogued at
 [mlelarge.github.io/graph-conjectures](https://mlelarge.github.io/graph-conjectures).
 
-Hard budget: **€150** of OpenAI API credit. Every call is priced, logged, and
-refused if it would breach the remaining budget plus a €5 safety margin.
+Hard budget: **€250** of OpenAI API credit (started at €150, +€100 on
+2026-08-31). Every call is priced, logged, and refused if it would breach
+the remaining budget plus a €5 safety margin. The sweep wall-clock is a
+soft cap; raise `--hours` rather than stopping while usable credit remains.
 
 ## Setup
 

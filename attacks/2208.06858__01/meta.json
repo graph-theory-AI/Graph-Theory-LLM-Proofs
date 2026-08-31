@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 566,
+    "score": 2.3,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2208.06858__01",
+    "title_md": "[Conjecture 2.2](https://arxiv.org/abs/2208.06858)",
+    "paper": "The success probability in Levine's hat problem, and independent sets i\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2208.06858__01/"
+  },
+  "dossier_meta": {
+    "id": "2208.06858__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2208.06858__01/",
+    "arxiv_id": "2208.06858",
+    "tier": 2,
+    "score": 2.3,
+    "lean": "prove",
+    "status": "open",
+    "paper": "The success probability in Levine's hat problem, and independent sets i\u2026"
+  },
+  "started": "2026-08-31T10:12:10Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

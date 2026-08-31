@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 558,
+    "score": 2.3,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2401.00299__04",
+    "title_md": "[Problem 1.10](https://arxiv.org/abs/2401.00299)",
+    "paper": "Partitioning the hypercube into smaller hypercubes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2401.00299__04/"
+  },
+  "dossier_meta": {
+    "id": "2401.00299__04",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2401.00299__04/",
+    "arxiv_id": "2401.00299",
+    "tier": 2,
+    "score": 2.3,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Partitioning the hypercube into smaller hypercubes"
+  },
+  "started": "2026-08-31T10:36:15Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

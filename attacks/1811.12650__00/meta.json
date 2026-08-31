@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 579,
+    "score": 2.3,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "1811.12650__00",
+    "title_md": "[Informal: \u0394 = o(n) condition not necessary for Corollary 2](https://arxiv.org/abs/1811.12650)",
+    "paper": "Frozen $(\u0394+1)$-colourings of bounded degree graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1811.12650__00/"
+  },
+  "dossier_meta": {
+    "id": "1811.12650__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1811.12650__00/",
+    "arxiv_id": "1811.12650",
+    "tier": 2,
+    "score": 2.3,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Frozen $(\u0394+1)$-colourings of bounded degree graphs"
+  },
+  "started": "2026-08-31T09:31:36Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

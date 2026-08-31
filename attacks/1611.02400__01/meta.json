@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 524,
+    "score": 2.5,
+    "tier": 2,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1611.02400__01",
+    "title_md": "[Open Problem (multitasker at average degree $\\Theta(\\log n)$)](https://arxiv.org/abs/1611.02400)",
+    "paper": "A Graph-Theoretic Approach to Multitasking",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1611.02400__01/"
+  },
+  "dossier_meta": {
+    "id": "1611.02400__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1611.02400__01/",
+    "arxiv_id": "1611.02400",
+    "tier": 2,
+    "score": 2.5,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "A Graph-Theoretic Approach to Multitasking"
+  },
+  "started": "2026-08-31T10:55:31Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

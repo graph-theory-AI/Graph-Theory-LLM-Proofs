@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general question remains open, but radius-1 merge-width k forces hereditary 2(k-1)-near-twins, yielding explicit \u03c7-bounds for induced-K_{2,t}-free graphs and a complete answer for k=1.",
+  "would_publish": false,
+  "caveats": "The argument uses the source convention that the centre's own part is counted in radius-1 width; under an open-ball normalization replace 2(k-1) by 2k.",
+  "id": "2504.08266__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.31346,
+  "eur": 1.134304,
+  "elapsed_s": 1865.5,
+  "status": "completed",
+  "response_id": "resp_0500fdc474e54938006a9545c194c887d28470705ceda8afea",
+  "when": "2026-08-31T09:44:42Z"
+}

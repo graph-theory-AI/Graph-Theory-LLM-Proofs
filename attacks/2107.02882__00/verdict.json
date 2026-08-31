@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The standard neighborhood-split transfer yields both kernel lower bounds at twin-width 6, and an explicit twin-width-4 graph shows that this transfer can require width exactly 6, so it cannot settle the requested bound 4.",
+  "would_publish": false,
+  "caveats": "The exact twin-width-4 lower bounds remain open, and the width-6 consequence may overlap the source paper's bounded-width constructions.",
+  "id": "2107.02882__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.173428,
+  "eur": 1.013372,
+  "elapsed_s": 1350.4,
+  "status": "completed",
+  "response_id": "resp_0dafeaae6833e9ba006a9543d6d8d087d2af2a9b431c6f5351",
+  "when": "2026-08-31T09:27:57Z"
+}

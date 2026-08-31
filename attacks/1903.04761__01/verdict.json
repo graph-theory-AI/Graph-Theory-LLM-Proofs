@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The FPT question remains unresolved, but there are long-hole-free k-prism-free graphs with n^{Omega(k)} minimal separators and potential maximal cliques, ruling out any FPT upgrade that explicitly enumerates all of them.",
+  "would_publish": false,
+  "caveats": "No FPT algorithm or parameterized hardness proof is obtained; the lower bound only obstructs explicit separator/PMC enumeration, and the precise theorem cited as [1] was not supplied.",
+  "id": "1903.04761__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.063884,
+  "eur": 0.91877,
+  "elapsed_s": 1113.2,
+  "status": "completed",
+  "response_id": "resp_07804039e1c2ba8d006a9549c36a1487d2817bc34266796728",
+  "when": "2026-08-31T09:49:16Z"
+}

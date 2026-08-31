@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 608,
+    "score": 2.2,
+    "tier": 2,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1812.09215__00",
+    "title_md": "[Informal Question (Section 2)](https://arxiv.org/abs/1812.09215)",
+    "paper": "Lipschitz bijections between boolean functions",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.09215__00/"
+  },
+  "dossier_meta": {
+    "id": "1812.09215__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.09215__00/",
+    "arxiv_id": "1812.09215",
+    "tier": 2,
+    "score": 2.2,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Lipschitz bijections between boolean functions"
+  },
+  "started": "2026-08-31T09:05:35Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

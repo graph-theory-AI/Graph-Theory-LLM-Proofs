@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "For every connected noncomplete n-vertex graph, the frozen proportion among its (\u0394+1)-colourings is at most 4/(n+4), so \u0394=o(n) is unnecessary in the intended asymptotic conclusion.",
+  "would_publish": false,
+  "caveats": "The complete graphs K_n defeat a literal all-graphs formulation; connectedness is essential, and the argument gives no quantitative mixing-time bound.",
+  "id": "1811.12650__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.625432,
+  "eur": 0.540123,
+  "elapsed_s": 1020.8,
+  "status": "completed",
+  "response_id": "resp_0fd53d59af41d3b0006a9549f8dcf487d28ddbadfb5b913439",
+  "when": "2026-08-31T09:48:37Z"
+}

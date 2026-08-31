@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 518,
+    "score": 2.5,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "1904.12273__01",
+    "title_md": "[Informal Conjecture (heavy path extension)](https://arxiv.org/abs/1904.12273)",
+    "paper": "Detecting a long odd hole",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1904.12273__01/"
+  },
+  "dossier_meta": {
+    "id": "1904.12273__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1904.12273__01/",
+    "arxiv_id": "1904.12273",
+    "tier": 2,
+    "score": 2.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Detecting a long odd hole"
+  },
+  "started": "2026-08-31T10:58:07Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

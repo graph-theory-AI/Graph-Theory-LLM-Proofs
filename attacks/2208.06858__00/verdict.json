@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains unresolved, but the standard construction gives a logarithmic lower bound, and the conjecture holds with matching order for canonical star-partition strategies and exactly for two other natural restricted classes.",
+  "would_publish": false,
+  "caveats": "No upper bound tending to zero is obtained for arbitrary intersecting fibers, and the convention excluding the empty set is essential.",
+  "id": "2208.06858__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.44458,
+  "eur": 1.247539,
+  "elapsed_s": 1882.7,
+  "status": "completed",
+  "response_id": "resp_02fc32f64a7033dd006a9553e737cc87d2a93b936fbaa9cbb2",
+  "when": "2026-08-31T10:45:21Z"
+}

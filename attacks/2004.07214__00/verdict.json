@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A linear extension of an S_t-free poset gives its incomparability graph linear mim-width at most t-1, and bounded linear mim-width admits a polynomial-time minimal-dominating-set extension oracle, hence polynomial-delay enumeration.",
+  "would_publish": false,
+  "caveats": "This assumes S_t is the standard example poset; the argument is self-contained, but novelty and overlap with existing mim-width metatheorems were not externally checked.",
+  "id": "2004.07214__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.868704,
+  "eur": 0.750213,
+  "elapsed_s": 1323.6,
+  "status": "completed",
+  "response_id": "resp_05906b8236c88c41006a953c9813ac87d28cbf6e1352ac29ce",
+  "when": "2026-08-31T08:56:35Z"
+}

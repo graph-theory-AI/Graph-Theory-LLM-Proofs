@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 613,
+    "score": 2.2,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2001.01607__02",
+    "title_md": "[Open Question: (triangle, S1,2,3)-free graphs cliquewidth](https://arxiv.org/abs/2001.01607)",
+    "paper": "(Theta, triangle)-free and (even hole, $K_4$)-free graphs. Part 2 : bou\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2001.01607__02/"
+  },
+  "dossier_meta": {
+    "id": "2001.01607__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2001.01607__02/",
+    "arxiv_id": "2001.01607",
+    "tier": 2,
+    "score": 2.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "(Theta, triangle)-free and (even hole, $K_4$)-free graphs. Part 2 : bou\u2026"
+  },
+  "started": "2026-08-31T08:56:55Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

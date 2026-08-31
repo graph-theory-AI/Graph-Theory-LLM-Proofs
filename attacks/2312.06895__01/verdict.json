@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general identity remains open, but edge-minimality gives a finite critical-core reduction, quantitative lower bounds for every q and t, and a complete proof for (q,t)=(2,3).",
+  "would_publish": false,
+  "caveats": "No exhaustive computation was run; the unresolved small-parameter cases, particularly q>=3, remain, and the (2,3) case may already be known.",
+  "id": "2312.06895__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.147728,
+  "eur": 0.991178,
+  "elapsed_s": 1222.5,
+  "status": "completed",
+  "response_id": "resp_0cddd4c58fef19d9006a9545e4bdf087d2b8c0893805b2181c",
+  "when": "2026-08-31T09:34:35Z"
+}

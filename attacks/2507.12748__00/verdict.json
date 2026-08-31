@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured bound with c=0 holds when at most four clusters are active, and in particular diam PP(K,K,K,K)=ceil(4K/3), but the unrestricted case remains open.",
+  "would_publish": false,
+  "caveats": "The argument does not handle pairs involving five or more active clusters, including the general kappa_1=3 case.",
+  "id": "2507.12748__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.033444,
+  "eur": 0.892482,
+  "elapsed_s": 1680.4,
+  "status": "completed",
+  "response_id": "resp_03e23e92bfb86dc5006a95358f870c87d2ba29c674baf51669",
+  "when": "2026-08-31T08:32:29Z"
+}

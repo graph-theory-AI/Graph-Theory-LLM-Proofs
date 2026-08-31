@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "At the natural q^n|S|^n scale the question remains open, but the verbatim q^{2n}-scale analogue is false and an explicit q^{(1+2 eta)n}-scale removal bound follows from slice rank.",
+  "would_publish": false,
+  "caveats": "The catalog question does not specify the normalization, treatment of zero difference, or whether three colored sets are intended.",
+  "id": "2605.13628__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.88652,
+  "eur": 0.765599,
+  "elapsed_s": 1004.8,
+  "status": "completed",
+  "response_id": "resp_04a9a9d7899e8bd1006a95358f72fc87d28c44716e46e57b86",
+  "when": "2026-08-31T08:21:14Z"
+}

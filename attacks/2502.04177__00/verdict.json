@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but it is equivalent to polynomial-in-r strong coloring numbers; I prove it for bounded-apex bounded-layered-treewidth classes and give polynomial-expansion stress tests with bn_r=2 and scol_r at least r^q.",
+  "would_publish": false,
+  "caveats": "No argument covers arbitrary polynomial-expansion classes, and the lower-bound families are not counterexamples.",
+  "id": "2502.04177__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.831692,
+  "eur": 0.718249,
+  "elapsed_s": 1192.3,
+  "status": "completed",
+  "response_id": "resp_0f9a9151e0694d40006a955a720ac087d2a5c78261ae04e13f",
+  "when": "2026-08-31T11:01:44Z"
+}

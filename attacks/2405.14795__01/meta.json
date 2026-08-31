@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 559,
+    "score": 2.3,
+    "tier": 2,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2405.14795__01",
+    "title_md": "[Question 3.3](https://arxiv.org/abs/2405.14795)",
+    "paper": "Rainbow Stackings of Random Edge-Colorings",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2405.14795__01/"
+  },
+  "dossier_meta": {
+    "id": "2405.14795__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2405.14795__01/",
+    "arxiv_id": "2405.14795",
+    "tier": 2,
+    "score": 2.3,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Rainbow Stackings of Random Edge-Colorings"
+  },
+  "started": "2026-08-31T10:35:31Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

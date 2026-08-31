@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 681,
+    "score": 1.5,
+    "tier": 1,
+    "lean": "prove",
+    "status": "open",
+    "id": "2208.06630__01",
+    "title_md": "[Conjecture 1](https://arxiv.org/abs/2208.06630)",
+    "paper": "Short reachability networks",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2208.06630__01/"
+  },
+  "dossier_meta": {
+    "id": "2208.06630__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2208.06630__01/",
+    "arxiv_id": "2208.06630",
+    "tier": 1,
+    "score": 1.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Short reachability networks"
+  },
+  "started": "2026-08-31T08:04:29Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

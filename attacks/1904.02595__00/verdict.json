@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for all products of at most three factors, for every product having a bipartite factor, and under a general weight-gap condition, but the higher-dimensional small-gap unbalanced cases remain open.",
+  "would_publish": false,
+  "caveats": "The case n >= 4 with every factor at least tripartite and with small quotient-weight gap is not settled; overlap with cases already implicit in the source paper has not been checked.",
+  "id": "1904.02595__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.77442,
+  "eur": 1.532389,
+  "elapsed_s": 1672.3,
+  "status": "completed",
+  "response_id": "resp_0ebc7d1bc1a9b0ec006a953b4f18dc87d2ac5b35495ba5f8a4",
+  "when": "2026-08-31T08:56:54Z"
+}

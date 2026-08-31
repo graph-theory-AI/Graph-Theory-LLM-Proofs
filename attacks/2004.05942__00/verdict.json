@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The local-update conjecture remains unresolved, but each fixed instance reduces to cycle detection on exponentially many five-color forests, yielding an exact exhaustive substitute and a PSPACE upper bound for termination testing.",
+  "would_publish": false,
+  "caveats": "No monotone potential or actual cycling triangulation is found; the reductions assume the paper's update is memoryless and its coefficients are given exactly.",
+  "id": "2004.05942__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.58458,
+  "eur": 0.504843,
+  "elapsed_s": 719.0,
+  "status": "completed",
+  "response_id": "resp_02a89094f121659a006a95358fb29887d2a2fa7f85917eafd6",
+  "when": "2026-08-31T08:16:28Z"
+}

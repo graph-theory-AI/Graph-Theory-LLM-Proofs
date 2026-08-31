@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The directed-cycle and two-length-2-path orientations are Eulerian-avoidable with explicit polynomial bounds, and all four orientations are avoidable in Eulerian hosts of bounded degree spread, but the unrestricted anti-directed and one-reversal orientations remain unresolved.",
+  "would_publish": false,
+  "caveats": "The argument does not control arbitrarily irregular Eulerian hosts for two of the four orientation types.",
+  "id": "2510.11311__04",
+  "model": "gpt-5.6-sol",
+  "usd": 1.423772,
+  "eur": 1.229569,
+  "elapsed_s": 2343.0,
+  "status": "completed",
+  "response_id": "resp_01df55dae1bdb7f7006a954657c7b087d2af7438063580e72d",
+  "when": "2026-08-31T09:55:10Z"
+}

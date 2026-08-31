@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 583,
+    "score": 2.25,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "1909.08426__02",
+    "title_md": "[Conjecture 1](https://arxiv.org/abs/1909.08426)",
+    "paper": "When Maximum Stable Set can be solved in FPT time",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1909.08426__02/"
+  },
+  "dossier_meta": {
+    "id": "1909.08426__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1909.08426__02/",
+    "arxiv_id": "1909.08426",
+    "tier": 2,
+    "score": 2.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "When Maximum Stable Set can be solved in FPT time"
+  },
+  "started": "2026-08-31T09:28:08Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

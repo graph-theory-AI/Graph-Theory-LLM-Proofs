@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for s=1 and for s=2 in every uniformity, while for s>=3 there is a universal stretched-exponential lower bound and an exp(Omega(n^{s-1})) bound for a structural subclass.",
+  "would_publish": false,
+  "caveats": "The required tower height remains open for s>=3, and I have not checked whether the s=2 construction already appears elsewhere.",
+  "id": "2411.13812__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.232036,
+  "eur": 1.063986,
+  "elapsed_s": 1320.4,
+  "status": "completed",
+  "response_id": "resp_057fea555648d89c006a95467d3adc87d2a3eb9b2b39a9a6da",
+  "when": "2026-08-31T09:38:45Z"
+}

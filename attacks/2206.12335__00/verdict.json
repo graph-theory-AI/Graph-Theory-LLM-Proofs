@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for two broad classes of independent vertex-colour models, and every general 1-independent model satisfies an explicit asymptotically sharp lower bound, but the unrestricted conjecture remains open.",
+  "would_publish": false,
+  "caveats": "The vertex-colour arguments do not represent all 1-independent edge laws, and the universal lower bound is strictly below the signs value.",
+  "id": "2206.12335__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.362752,
+  "eur": 1.176873,
+  "elapsed_s": 1682.6,
+  "status": "completed",
+  "response_id": "resp_042844461d643c71006a95358f872c87d28124826fb694c3f2",
+  "when": "2026-08-31T08:32:31Z"
+}

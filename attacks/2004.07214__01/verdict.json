@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For induced H-freeness, the conjecture is equivalent under output-sensitive reductions to minimal-transversal enumeration for hypergraphs of fixed bounded VC dimension.",
+  "would_publish": false,
+  "caveats": "No output-polynomial algorithm for bounded-VC transversal enumeration is proved here; the argument assumes that H-free means induced-H-free.",
+  "id": "2004.07214__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.846872,
+  "eur": 0.731359,
+  "elapsed_s": 1232.8,
+  "status": "completed",
+  "response_id": "resp_0e45b40f7ea41717006a953c319ba887d2a124b9957c0dacb7",
+  "when": "2026-08-31T08:53:22Z"
+}

@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 569,
+    "score": 2.3,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2209.12023__00",
+    "title_md": "[Open question on twin-width over infinite fields](https://arxiv.org/abs/2209.12023)",
+    "paper": "Twin-width V: linear minors, modular counting, and matrix multiplication",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2209.12023__00/"
+  },
+  "dossier_meta": {
+    "id": "2209.12023__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2209.12023__00/",
+    "arxiv_id": "2209.12023",
+    "tier": 2,
+    "score": 2.3,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Twin-width V: linear minors, modular counting, and matrix multiplication"
+  },
+  "started": "2026-08-31T10:12:10Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full characterization remains open, but the exponent is invariant under adjoining isolated vertices to H, and induced-K_{s,t}-free graphs admit an O(OPT^{1-1/min(s,t)}) approximation, giving the exact value \u03b5=1 for stars.",
+  "would_publish": false,
+  "caveats": "Optimality beyond stars is not shown; the quantitative extensions may be implicit in the source, and the upper bounds quoted below are conditional.",
+  "id": "2004.12166__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.816716,
+  "eur": 0.705316,
+  "elapsed_s": 818.2,
+  "status": "completed",
+  "response_id": "resp_0b4052c7a5d64cd2006a955a72041887d2be2ce7a7da889f96",
+  "when": "2026-08-31T10:55:30Z"
+}

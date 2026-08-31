@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 553,
+    "score": 2.4,
+    "tier": 2,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2102.07705__00",
+    "title_md": "[Open Complexity Problem (2-F-PFC for oriented trees of maximum degree \u2265\u2026](https://arxiv.org/abs/2102.07705)",
+    "paper": "Colorings of oriented planar graphs avoiding a monochromatic subgraph",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2102.07705__00/"
+  },
+  "dossier_meta": {
+    "id": "2102.07705__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2102.07705__00/",
+    "arxiv_id": "2102.07705",
+    "tier": 2,
+    "score": 2.4,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Colorings of oriented planar graphs avoiding a monochromatic subgraph"
+  },
+  "started": "2026-08-31T10:38:50Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

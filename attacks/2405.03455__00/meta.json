@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 548,
+    "score": 2.45,
+    "tier": 2,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2405.03455__00",
+    "title_md": "[Open Problem (Introduction)](https://arxiv.org/abs/2405.03455)",
+    "paper": "Big line or big convex polygon",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2405.03455__00/"
+  },
+  "dossier_meta": {
+    "id": "2405.03455__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2405.03455__00/",
+    "arxiv_id": "2405.03455",
+    "tier": 2,
+    "score": 2.45,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Big line or big convex polygon"
+  },
+  "started": "2026-08-31T10:41:52Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

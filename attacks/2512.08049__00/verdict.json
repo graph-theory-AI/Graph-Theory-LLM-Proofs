@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "There is an explicit spectrally symmetric orientation of density 90/121, and a stability-plus-graphon argument shows that the upper bound 10/11 is not asymptotically attainable.",
+  "would_publish": false,
+  "caveats": "The exact value remains open and the improved upper bound is non-effective: it proves only that some absolute epsilon>0 exists.",
+  "id": "2512.08049__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.319836,
+  "eur": 1.13981,
+  "elapsed_s": 1472.6,
+  "status": "completed",
+  "response_id": "resp_0ae03009f77b5552006a95358f853487d2810e9feed5623a0b",
+  "when": "2026-08-31T08:29:01Z"
+}

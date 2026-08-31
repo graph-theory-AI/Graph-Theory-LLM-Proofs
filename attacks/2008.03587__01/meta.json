@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 645,
+    "score": 2.05,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2008.03587__01",
+    "title_md": "[Question 4.2](https://arxiv.org/abs/2008.03587)",
+    "paper": "A note on deterministic zombies",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2008.03587__01/"
+  },
+  "dossier_meta": {
+    "id": "2008.03587__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2008.03587__01/",
+    "arxiv_id": "2008.03587",
+    "tier": 2,
+    "score": 2.05,
+    "lean": "prove",
+    "status": "open",
+    "paper": "A note on deterministic zombies"
+  },
+  "started": "2026-08-31T08:29:40Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

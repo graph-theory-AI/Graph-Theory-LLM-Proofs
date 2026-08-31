@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The universal threshold remains open, but exponential decay follows whenever S is more than half dense in an additive subgroup, resolving many boundary cases and sets of size as small as 3 in extension fields.",
+  "would_publish": false,
+  "caveats": "Balanced boundary sets and arbitrary nonlinear sets in the prime-field two-point case remain untreated.",
+  "id": "2605.13628__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.294876,
+  "eur": 1.118255,
+  "elapsed_s": 1481.1,
+  "status": "completed",
+  "response_id": "resp_0a3fcbd94c15b9d2006a95358f890087d2ae2fb95f56111e4e",
+  "when": "2026-08-31T08:29:10Z"
+}

@@ -158,7 +158,7 @@ def log(msg: str) -> None:
 
 def load_spend() -> dict:
     data = json.loads(SPEND_PATH.read_text())
-    data.setdefault("budget_eur", 150.0)
+    data.setdefault("budget_eur", 250.0)
     data.setdefault("usd_per_eur", 1.158)
     data.setdefault("eur_per_usd", 1.0 / data["usd_per_eur"])
     data.setdefault("safety_margin_eur", 5.0)

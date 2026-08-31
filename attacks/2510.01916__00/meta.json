@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 682,
+    "score": 1.5,
+    "tier": 1,
+    "lean": "prove",
+    "status": "open",
+    "id": "2510.01916__00",
+    "title_md": "[Conjecture 21](https://arxiv.org/abs/2510.01916)",
+    "paper": "Short circuit walks in fixed dimension",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2510.01916__00/"
+  },
+  "dossier_meta": {
+    "id": "2510.01916__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2510.01916__00/",
+    "arxiv_id": "2510.01916",
+    "tier": 1,
+    "score": 1.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Short circuit walks in fixed dimension"
+  },
+  "started": "2026-08-31T08:04:29Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

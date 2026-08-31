@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 641,
+    "score": 2.05,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2304.03567__02",
+    "title_md": "[Problem 3](https://arxiv.org/abs/2304.03567)",
+    "paper": "Temporalizing digraphs via linear-size balanced bi-trees",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2304.03567__02/"
+  },
+  "dossier_meta": {
+    "id": "2304.03567__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2304.03567__02/",
+    "arxiv_id": "2304.03567",
+    "tier": 2,
+    "score": 2.05,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Temporalizing digraphs via linear-size balanced bi-trees"
+  },
+  "started": "2026-08-31T08:32:29Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

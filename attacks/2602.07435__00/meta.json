@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 533,
+    "score": 2.45,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2602.07435__00",
+    "title_md": "[Problem 9](https://arxiv.org/abs/2602.07435)",
+    "paper": "Cops and robber in graphs with bounded vertex cover number",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2602.07435__00/"
+  },
+  "dossier_meta": {
+    "id": "2602.07435__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2602.07435__00/",
+    "arxiv_id": "2602.07435",
+    "tier": 2,
+    "score": 2.45,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Cops and robber in graphs with bounded vertex cover number"
+  },
+  "started": "2026-08-31T10:41:52Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

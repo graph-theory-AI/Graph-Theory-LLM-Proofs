@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured value is proved for all colorings that are constant on sufficiently wide consecutive intervals, with arbitrary block order and scales, but not for general interlaced colorings.",
+  "would_publish": false,
+  "caveats": "The source denominator is 2r b_0-r, not 2^r b_0-r; the unrestricted reduction to interval-block colorings remains open.",
+  "id": "2105.15195__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.124764,
+  "eur": 0.971346,
+  "elapsed_s": 1444.3,
+  "status": "completed",
+  "response_id": "resp_0ea3903503023d4b006a95537c68b087d296469a673d00436f",
+  "when": "2026-08-31T10:36:15Z"
+}

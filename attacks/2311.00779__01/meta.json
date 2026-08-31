@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 656,
+    "score": 1.95,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2311.00779__01",
+    "title_md": "[Complexity of Flip Distance Between Rectangulations](https://arxiv.org/abs/2311.00779)",
+    "paper": "Shortest paths on polymatroids and hypergraphic polytopes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2311.00779__01/"
+  },
+  "dossier_meta": {
+    "id": "2311.00779__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2311.00779__01/",
+    "arxiv_id": "2311.00779",
+    "tier": 2,
+    "score": 1.95,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Shortest paths on polymatroids and hypergraphic polytopes"
+  },
+  "started": "2026-08-31T08:20:47Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

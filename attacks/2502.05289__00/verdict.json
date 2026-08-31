@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full dichotomy remains unresolved, but polynomial algorithms are given for all connected targets with at most one degree-3 vertex and for three of the five possible two-degree-3 branch topologies.",
+  "would_publish": false,
+  "caveats": "The two private-cycle topologies and the minimal nonplanar case K_{3,3} remain untreated; strict nonmembership in P is conditional on P != NP.",
+  "id": "2502.05289__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.25044,
+  "eur": 1.07988,
+  "elapsed_s": 1496.2,
+  "status": "completed",
+  "response_id": "resp_07ca08127739b67d006a953ca1382887d2a1562dc915ae1c15",
+  "when": "2026-08-31T08:59:37Z"
+}

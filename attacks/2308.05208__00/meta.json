@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 657,
+    "score": 1.95,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2308.05208__00",
+    "title_md": "[Gap in $r$-dependence of sign-pattern bound](https://arxiv.org/abs/2308.05208)",
+    "paper": "Ordering Candidates via Vantage Points",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.05208__00/"
+  },
+  "dossier_meta": {
+    "id": "2308.05208__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.05208__00/",
+    "arxiv_id": "2308.05208",
+    "tier": 2,
+    "score": 1.95,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Ordering Candidates via Vantage Points"
+  },
+  "started": "2026-08-31T08:16:28Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

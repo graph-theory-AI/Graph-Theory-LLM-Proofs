@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 523,
+    "score": 2.5,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "1611.02400__00",
+    "title_md": "[Open Problem (interference worsens with depth)](https://arxiv.org/abs/1611.02400)",
+    "paper": "A Graph-Theoretic Approach to Multitasking",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1611.02400__00/"
+  },
+  "dossier_meta": {
+    "id": "1611.02400__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1611.02400__00/",
+    "arxiv_id": "1611.02400",
+    "tier": 2,
+    "score": 2.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "A Graph-Theoretic Approach to Multitasking"
+  },
+  "started": "2026-08-31T10:57:05Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

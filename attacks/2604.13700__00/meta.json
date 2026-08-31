@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 621,
+    "score": 2.1,
+    "tier": 2,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2604.13700__00",
+    "title_md": "[Problem 2](https://arxiv.org/abs/2604.13700)",
+    "paper": "Openly disjoint cycles and directed tree-width of regular digraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2604.13700__00/"
+  },
+  "dossier_meta": {
+    "id": "2604.13700__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2604.13700__00/",
+    "arxiv_id": "2604.13700",
+    "tier": 2,
+    "score": 2.1,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Openly disjoint cycles and directed tree-width of regular digraphs"
+  },
+  "started": "2026-08-31T08:50:35Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

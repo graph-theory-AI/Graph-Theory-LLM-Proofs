@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 618,
+    "score": 2.15,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2103.08698__02",
+    "title_md": "[Problem 7](https://arxiv.org/abs/2103.08698)",
+    "paper": "Approximation metatheorems for classes with bounded expansion",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2103.08698__02/"
+  },
+  "dossier_meta": {
+    "id": "2103.08698__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2103.08698__02/",
+    "arxiv_id": "2103.08698",
+    "tier": 2,
+    "score": 2.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Approximation metatheorems for classes with bounded expansion"
+  },
+  "started": "2026-08-31T08:53:22Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

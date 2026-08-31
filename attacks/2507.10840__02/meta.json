@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 650,
+    "score": 1.95,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2507.10840__02",
+    "title_md": "[Problem 5.2](https://arxiv.org/abs/2507.10840)",
+    "paper": "Covering Complete Geometric Graphs by Monotone Paths",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2507.10840__02/"
+  },
+  "dossier_meta": {
+    "id": "2507.10840__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2507.10840__02/",
+    "arxiv_id": "2507.10840",
+    "tier": 2,
+    "score": 1.95,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Covering Complete Geometric Graphs by Monotone Paths"
+  },
+  "started": "2026-08-31T08:28:24Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

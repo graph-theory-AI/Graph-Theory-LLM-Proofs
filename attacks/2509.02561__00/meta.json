@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 667,
+    "score": 1.85,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2509.02561__00",
+    "title_md": "[Conjecture 15](https://arxiv.org/abs/2509.02561)",
+    "paper": "Random Cayley graphs and random sumsets",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2509.02561__00/"
+  },
+  "dossier_meta": {
+    "id": "2509.02561__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2509.02561__00/",
+    "arxiv_id": "2509.02561",
+    "tier": 2,
+    "score": 1.85,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Random Cayley graphs and random sumsets"
+  },
+  "started": "2026-08-31T08:04:29Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

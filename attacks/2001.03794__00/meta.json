@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 511,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2001.03794__00",
+    "title_md": "[FPT on $H_{t,t}$-free graphs for Grundy Coloring and b-Chromatic Core](https://arxiv.org/abs/2001.03794)",
+    "paper": "Grundy Coloring & friends, Half-Graphs, Bicliques",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2001.03794__00/"
+  },
+  "dossier_meta": {
+    "id": "2001.03794__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2001.03794__00/",
+    "arxiv_id": "2001.03794",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Grundy Coloring & friends, Half-Graphs, Bicliques"
+  },
+  "started": "2026-08-31T10:58:10Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

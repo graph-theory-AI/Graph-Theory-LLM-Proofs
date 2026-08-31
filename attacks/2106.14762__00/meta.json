@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 610,
+    "score": 2.2,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2106.14762__00",
+    "title_md": "[Direct Proof of Horizontal Uniformity](https://arxiv.org/abs/2106.14762)",
+    "paper": "The runsort permuton",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2106.14762__00/"
+  },
+  "dossier_meta": {
+    "id": "2106.14762__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2106.14762__00/",
+    "arxiv_id": "2106.14762",
+    "tier": 2,
+    "score": 2.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "The runsort permuton"
+  },
+  "started": "2026-08-31T09:03:05Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

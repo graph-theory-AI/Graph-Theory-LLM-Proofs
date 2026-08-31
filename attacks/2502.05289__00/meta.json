@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 637,
+    "score": 2.1,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2502.05289__00",
+    "title_md": "[Conjecture 1.5](https://arxiv.org/abs/2502.05289)",
+    "paper": "Induced Disjoint Paths Without an Induced Minor",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2502.05289__00/"
+  },
+  "dossier_meta": {
+    "id": "2502.05289__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2502.05289__00/",
+    "arxiv_id": "2502.05289",
+    "tier": 2,
+    "score": 2.1,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Induced Disjoint Paths Without an Induced Minor"
+  },
+  "started": "2026-08-31T08:34:41Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

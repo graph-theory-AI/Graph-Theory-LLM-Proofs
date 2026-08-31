@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 557,
+    "score": 2.3,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2401.00299__03",
+    "title_md": "[Informal conjecture on $f_2(d)$](https://arxiv.org/abs/2401.00299)",
+    "paper": "Partitioning the hypercube into smaller hypercubes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2401.00299__03/"
+  },
+  "dossier_meta": {
+    "id": "2401.00299__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2401.00299__03/",
+    "arxiv_id": "2401.00299",
+    "tier": 2,
+    "score": 2.3,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Partitioning the hypercube into smaller hypercubes"
+  },
+  "started": "2026-08-31T10:38:05Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

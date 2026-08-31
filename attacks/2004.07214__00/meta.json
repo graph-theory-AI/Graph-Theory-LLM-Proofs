@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 638,
+    "score": 2.05,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2004.07214__00",
+    "title_md": "[Conjecture 7.1](https://arxiv.org/abs/2004.07214)",
+    "paper": "Enumerating minimal dominating sets in the (in)comparability graphs of \u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2004.07214__00/"
+  },
+  "dossier_meta": {
+    "id": "2004.07214__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2004.07214__00/",
+    "arxiv_id": "2004.07214",
+    "tier": 2,
+    "score": 2.05,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Enumerating minimal dominating sets in the (in)comparability graphs of \u2026"
+  },
+  "started": "2026-08-31T08:34:31Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 506,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2105.01780__00",
+    "title_md": "[Open Problem: PTAS for weighted minimization problems in fractionally t\u2026](https://arxiv.org/abs/2105.01780)",
+    "paper": "Approximation schemes for bounded distance problems on fractionally tre\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2105.01780__00/"
+  },
+  "dossier_meta": {
+    "id": "2105.01780__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2105.01780__00/",
+    "arxiv_id": "2105.01780",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Approximation schemes for bounded distance problems on fractionally tre\u2026"
+  },
+  "started": "2026-08-31T11:00:44Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 664,
+    "score": 1.85,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2511.07601__01",
+    "title_md": "[Open question on Schnyder woods for general half-plane triangulations](https://arxiv.org/abs/2511.07601)",
+    "paper": "Infinite Schnyder Woods",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2511.07601__01/"
+  },
+  "dossier_meta": {
+    "id": "2511.07601__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2511.07601__01/",
+    "arxiv_id": "2511.07601",
+    "tier": 2,
+    "score": 1.85,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Infinite Schnyder Woods"
+  },
+  "started": "2026-08-31T08:04:29Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

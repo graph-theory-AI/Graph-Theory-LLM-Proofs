@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The implication holds for every graph when 2\u2264k\u22645, and for every k when all cycles have length at most three, but the general case remains open.",
+  "would_publish": false,
+  "caveats": "This uses the standard adjacency notion that consecutive flows may differ by an arbitrary nonzero flow supported on one cycle; for k\u22656 a modular edge need not lift directly.",
+  "id": "2512.17342__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.053812,
+  "eur": 0.910072,
+  "elapsed_s": 1699.6,
+  "status": "completed",
+  "response_id": "resp_025b53a5be667895006a95358f75c887d2b9c49c36947f2ae5",
+  "when": "2026-08-31T08:32:48Z"
+}

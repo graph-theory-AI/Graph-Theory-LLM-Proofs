@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 607,
+    "score": 2.2,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2204.01938__01",
+    "title_md": "[Suspected directed surplus of a random B-free orientation (Remark 1.6)](https://arxiv.org/abs/2204.01938)",
+    "paper": "Extremal results on feedback arc sets in digraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.01938__01/"
+  },
+  "dossier_meta": {
+    "id": "2204.01938__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.01938__01/",
+    "arxiv_id": "2204.01938",
+    "tier": 2,
+    "score": 2.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Extremal results on feedback arc sets in digraphs"
+  },
+  "started": "2026-08-31T09:05:44Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

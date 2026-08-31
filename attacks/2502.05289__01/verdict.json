@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For k=2 the unresolved information is exactly a prescribed 'third pairing', which remains NP-complete even when the other two pairings have explicit solutions, while no separation is possible on chordal graph classes.",
+  "would_publish": false,
+  "caveats": "No hereditary separating class is constructed; the hardness mask is not hereditary and deleting it exposes the original instance.",
+  "id": "2502.05289__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.32764,
+  "eur": 1.14655,
+  "elapsed_s": 1577.5,
+  "status": "completed",
+  "response_id": "resp_07fe013b1f59b8e7006a95358fbdf087d2a3cd0efb9947cc20",
+  "when": "2026-08-31T08:30:46Z"
+}

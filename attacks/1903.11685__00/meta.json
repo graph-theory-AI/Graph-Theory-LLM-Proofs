@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 614,
+    "score": 2.2,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "1903.11685__00",
+    "title_md": "[Optimal n for $L^d_n$-list-colorability](https://arxiv.org/abs/1903.11685)",
+    "paper": "Mixing properties of colorings of the $\\mathbb{Z}^d$ lattice",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1903.11685__00/"
+  },
+  "dossier_meta": {
+    "id": "1903.11685__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1903.11685__00/",
+    "arxiv_id": "1903.11685",
+    "tier": 2,
+    "score": 2.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Mixing properties of colorings of the $\\mathbb{Z}^d$ lattice"
+  },
+  "started": "2026-08-31T08:56:35Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

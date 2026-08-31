@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the standard spanning-rooted-path definition of activity, testing even one cycle vertex is NP-complete when an optimal lollipop and its cycle are supplied, while a Held\u2013Karp subset dynamic program computes all active vertices exponentially.",
+  "would_publish": false,
+  "caveats": "\u201cSimple\u201d is not formal; this rules out a general polynomial-time algorithm unless P=NP but does not preclude a structural characterization or algorithms for restricted graph classes.",
+  "id": "2502.04726__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.859568,
+  "eur": 0.742323,
+  "elapsed_s": 1046.1,
+  "status": "completed",
+  "response_id": "resp_0a915b18411c849d006a955a72120887d296155d8e8f5438bb",
+  "when": "2026-08-31T10:59:18Z"
+}

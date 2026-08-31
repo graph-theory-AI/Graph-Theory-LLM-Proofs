@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The unrestricted wording has a bounded-extremal counterexample, but the conjectured high-probability bound holds for every finite forbidden family with unbounded Tur\u00e1n number, and for arbitrary families of connected forbidden graphs.",
+  "would_publish": false,
+  "caveats": "The catalog omits finiteness and nondegeneracy assumptions and may not reproduce the exact quantifiers of Remark 1.6.",
+  "id": "2204.01938__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.747036,
+  "eur": 0.64514,
+  "elapsed_s": 991.7,
+  "status": "completed",
+  "response_id": "resp_07d3b9ca50999b6c006a9543e8dfd887d2a58caa03fb49f126",
+  "when": "2026-08-31T09:22:16Z"
+}

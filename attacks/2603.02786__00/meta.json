@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 679,
+    "score": 1.5,
+    "tier": 1,
+    "lean": "prove",
+    "status": "open",
+    "id": "2603.02786__00",
+    "title_md": "[Conjecture 1](https://arxiv.org/abs/2603.02786)",
+    "paper": "Packing arithmetic progressions",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2603.02786__00/"
+  },
+  "dossier_meta": {
+    "id": "2603.02786__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2603.02786__00/",
+    "arxiv_id": "2603.02786",
+    "tier": 1,
+    "score": 1.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Packing arithmetic progressions"
+  },
+  "started": "2026-08-31T08:04:29Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 517,
+    "score": 2.5,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2210.12754__00",
+    "title_md": "[Open Problem (characterizing edge probabilities for Theorem 1.1)](https://arxiv.org/abs/2210.12754)",
+    "paper": "Largest subgraph from a hereditary property in a random graph",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.12754__00/"
+  },
+  "dossier_meta": {
+    "id": "2210.12754__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.12754__00/",
+    "arxiv_id": "2210.12754",
+    "tier": 2,
+    "score": 2.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Largest subgraph from a hereditary property in a random graph"
+  },
+  "started": "2026-08-31T10:58:08Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

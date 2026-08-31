@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 615,
+    "score": 2.2,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "1911.03427__00",
+    "title_md": "[Open Problem (Extending Induced Arithmetic Removal to Higher Complexity\u2026](https://arxiv.org/abs/1911.03427)",
+    "paper": "Induced arithmetic removal: complexity 1 patterns over finite fields",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1911.03427__00/"
+  },
+  "dossier_meta": {
+    "id": "1911.03427__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1911.03427__00/",
+    "arxiv_id": "1911.03427",
+    "tier": 2,
+    "score": 2.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Induced arithmetic removal: complexity 1 patterns over finite fields"
+  },
+  "started": "2026-08-31T08:56:19Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

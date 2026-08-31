@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 519,
+    "score": 2.5,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "1907.06019__01",
+    "title_md": "[Question on extremal mutually annihilating pairs (Theorem 2.4)](https://arxiv.org/abs/1907.06019)",
+    "paper": "Combinatorics in the exterior algebra and the Bollob\u00e1s Two Families The\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1907.06019__01/"
+  },
+  "dossier_meta": {
+    "id": "1907.06019__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1907.06019__01/",
+    "arxiv_id": "1907.06019",
+    "tier": 2,
+    "score": 2.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Combinatorics in the exterior algebra and the Bollob\u00e1s Two Families The\u2026"
+  },
+  "started": "2026-08-31T10:58:07Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

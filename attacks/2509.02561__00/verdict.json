@@ -1,0 +1,15 @@
+{
+  "verdict": "ill_posed",
+  "confidence": "high",
+  "one_line": "As quoted, the conjecture omits essential bounds and quantifiers and hence has no truth value, although natural level-zero and structured special cases admit rigorous coverings.",
+  "would_publish": false,
+  "caveats": "The exact Conjecture 15 is absent; the conditional results below do not close the global quadratic-in-doubling complexity gap.",
+  "id": "2509.02561__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.60646,
+  "eur": 0.523739,
+  "elapsed_s": 639.5,
+  "status": "completed",
+  "response_id": "resp_0acd4983b96a939b006a95358f89f087d29a05ade8b878e9eb",
+  "when": "2026-08-31T08:15:08Z"
+}

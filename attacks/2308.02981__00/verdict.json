@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full polynomial bound remains open, but the separable indices of both monotone-avoidance classes Av(12...k) and Av(k...21) are Theta(log k).",
+  "would_publish": false,
+  "caveats": "This treats only monotone forbidden patterns and gives no worst-case upper bound over all patterns of size k.",
+  "id": "2308.02981__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.785772,
+  "eur": 0.678593,
+  "elapsed_s": 1095.4,
+  "status": "completed",
+  "response_id": "resp_082e8df6da95db9f006a95537c6bfc87d29f73ed7733edeef1",
+  "when": "2026-08-31T10:30:26Z"
+}

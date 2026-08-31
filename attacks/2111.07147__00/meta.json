@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 644,
+    "score": 2.05,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2111.07147__00",
+    "title_md": "[Question 6](https://arxiv.org/abs/2111.07147)",
+    "paper": "Weak diameter coloring of graphs on surfaces",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2111.07147__00/"
+  },
+  "dossier_meta": {
+    "id": "2111.07147__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2111.07147__00/",
+    "arxiv_id": "2111.07147",
+    "tier": 2,
+    "score": 2.05,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Weak diameter coloring of graphs on surfaces"
+  },
+  "started": "2026-08-31T08:30:46Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

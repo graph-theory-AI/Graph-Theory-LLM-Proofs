@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 531,
+    "score": 2.45,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2506.10227__00",
+    "title_md": "[Informal conjecture on sun-free $\\chi$-boundedness without net exclusion](https://arxiv.org/abs/2506.10227)",
+    "paper": "Suns in triangle-free graphs of large chromatic number",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2506.10227__00/"
+  },
+  "dossier_meta": {
+    "id": "2506.10227__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2506.10227__00/",
+    "arxiv_id": "2506.10227",
+    "tier": 2,
+    "score": 2.45,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Suns in triangle-free graphs of large chromatic number"
+  },
+  "started": "2026-08-31T10:41:52Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

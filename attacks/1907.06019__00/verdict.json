@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "For n > 2r, the equality case of EKR makes the initial monomials a star, and a rigidity lemma forces the resulting graph map to be exterior multiplication by one vector.",
+  "would_publish": true,
+  "caveats": "This proves the strict range over the stated real field; the characterization is false at n = 2r, and publication priority has not been independently checked.",
+  "id": "1907.06019__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.555832,
+  "eur": 0.480017,
+  "elapsed_s": 683.5,
+  "status": "completed",
+  "response_id": "resp_05eeb3341c576c51006a953b52cda887d293cc65aea22d5dcf",
+  "when": "2026-08-31T08:40:30Z"
+}

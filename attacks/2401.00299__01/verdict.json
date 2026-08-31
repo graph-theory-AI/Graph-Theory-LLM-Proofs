@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "Part (ii) is exponential in n: there are constants c,C>0 such that exp(cn) <= f_{<=2}(d)/m'(d) <= exp(Cn), while part (iii) remains unresolved.",
+  "would_publish": false,
+  "caveats": "The new result resolves only part (ii); part (iii) and the exact order in part (i) remain open.",
+  "id": "2401.00299__01",
+  "model": "gpt-5.6-sol",
+  "usd": 2.463344,
+  "eur": 2.127344,
+  "elapsed_s": 2566.8,
+  "status": "completed",
+  "response_id": "resp_0f5beb72a653e681006a9549e0170887d2a4b76cef29305f23",
+  "when": "2026-08-31T10:13:58Z"
+}

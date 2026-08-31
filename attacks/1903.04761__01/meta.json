@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 581,
+    "score": 2.25,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "1903.04761__01",
+    "title_md": "[FPT Algorithm for MWIS in (Long-Hole, k-Prism)-Free Graphs](https://arxiv.org/abs/1903.04761)",
+    "paper": "On the Maximum Weight Independent Set Problem in graphs without induced\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1903.04761__01/"
+  },
+  "dossier_meta": {
+    "id": "1903.04761__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1903.04761__01/",
+    "arxiv_id": "1903.04761",
+    "tier": 2,
+    "score": 2.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On the Maximum Weight Independent Set Problem in graphs without induced\u2026"
+  },
+  "started": "2026-08-31T09:30:43Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

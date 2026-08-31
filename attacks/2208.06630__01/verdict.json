@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The conjecture is true: a support-plus-rank potential gives the lower bound 2n-3, matching the stated construction, and the current source note already reports a resolution.",
+  "would_publish": false,
+  "caveats": "The proof below is self-contained; I have not independently verified the bibliographic attribution of the post-v1 proof.",
+  "id": "2208.06630__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.529928,
+  "eur": 0.457646,
+  "elapsed_s": 1270.2,
+  "status": "completed",
+  "response_id": "resp_064052bcda409723006a95358fb05487d2a0a32b7aa06e4600",
+  "when": "2026-08-31T08:25:39Z"
+}

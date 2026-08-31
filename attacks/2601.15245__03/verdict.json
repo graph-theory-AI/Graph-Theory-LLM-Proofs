@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but one obtains n >= d^{(r-1)/(r-2)} log d exp(\u03a9_r(log d/log log d)), and the desired exponential bound holds whenever the vertices are covered by O_r(1) triangle-free induced subgraphs.",
+  "would_publish": false,
+  "caveats": "The exponential bound is not proved in general; the quantitative partial result uses the standard fixed-clique maximum-degree coloring theorem and is not claimed to be new.",
+  "id": "2601.15245__03",
+  "model": "gpt-5.6-sol",
+  "usd": 0.0,
+  "eur": 0.0,
+  "elapsed_s": 1649.1,
+  "status": "failed",
+  "response_id": "resp_0956570e51afe5ad006a953b3b896087d2a9c033a49cb58afa",
+  "when": "2026-08-31T08:56:12Z"
+}

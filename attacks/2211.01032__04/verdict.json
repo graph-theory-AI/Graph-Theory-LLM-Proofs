@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for every connected graph of cyclomatic number at most 3, as well as several broader sufficient classes, but the general rotation average remains unresolved.",
+  "would_publish": false,
+  "caveats": "This uses the standard uniformly weighted signed-rotation-system model; cyclomatic number at least 4 is not settled.",
+  "id": "2211.01032__04",
+  "model": "gpt-5.6-sol",
+  "usd": 1.319892,
+  "eur": 1.139859,
+  "elapsed_s": 1606.1,
+  "status": "completed",
+  "response_id": "resp_0b94fc1e32ebb1fa006a95358fce7087d2928830d75e4e55d5",
+  "when": "2026-08-31T08:31:15Z"
+}

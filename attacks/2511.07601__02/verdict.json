@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "For the standard size-conditioned model, the noncrossing-Dyck-path encoding and each distinguished Schnyder tree have an explicit local limit given by a type-C2 Doob transform, but the required transfer to the full triangulation remains unproved.",
+  "would_publish": false,
+  "caveats": "The supplied statement omits the precise size/Boltzmann law and rooting, and the non-tree-edge closure has not been shown to be finitary.",
+  "id": "2511.07601__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.812088,
+  "eur": 0.701319,
+  "elapsed_s": 977.9,
+  "status": "completed",
+  "response_id": "resp_08aebd49dc172b03006a9535b342ac87d2978900cf2343cf0f",
+  "when": "2026-08-31T08:20:47Z"
+}

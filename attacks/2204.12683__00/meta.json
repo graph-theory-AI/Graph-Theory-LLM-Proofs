@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 601,
+    "score": 2.2,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2204.12683__00",
+    "title_md": "[Conjecture 1.6](https://arxiv.org/abs/2204.12683)",
+    "paper": "11/4-colorability of subcubic triangle-free graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.12683__00/"
+  },
+  "dossier_meta": {
+    "id": "2204.12683__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.12683__00/",
+    "arxiv_id": "2204.12683",
+    "tier": 2,
+    "score": 2.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "11/4-colorability of subcubic triangle-free graphs"
+  },
+  "started": "2026-08-31T09:09:39Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

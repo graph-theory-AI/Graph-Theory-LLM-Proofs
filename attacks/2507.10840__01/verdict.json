@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains unresolved, but near-threshold covers are shown to be approximate plane Hamilton-path decompositions, and precise weighted and matching-based sufficient criteria are derived.",
+  "would_publish": false,
+  "caveats": "No point-set family satisfying a strict linear lower bound above n/2 is constructed; the reductions are mainly structural.",
+  "id": "2507.10840__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.475464,
+  "eur": 1.274211,
+  "elapsed_s": 1853.2,
+  "status": "completed",
+  "response_id": "resp_043f29dd84c801ac006a953f84640087d2acb32dd227b8c084",
+  "when": "2026-08-31T09:17:53Z"
+}

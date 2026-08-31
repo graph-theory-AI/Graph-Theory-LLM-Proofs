@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 602,
+    "score": 2.2,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2206.00594__02",
+    "title_md": "[Informal conjecture: MIS tractable in bounded-iocp graphs](https://arxiv.org/abs/2206.00594)",
+    "paper": "Sparse graphs with bounded induced cycle packing number have logarithmi\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2206.00594__02/"
+  },
+  "dossier_meta": {
+    "id": "2206.00594__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2206.00594__02/",
+    "arxiv_id": "2206.00594",
+    "tier": 2,
+    "score": 2.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Sparse graphs with bounded induced cycle packing number have logarithmi\u2026"
+  },
+  "started": "2026-08-31T09:08:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

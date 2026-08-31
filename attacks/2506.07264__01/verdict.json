@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "An exact phase-integral formula derived from the matching-polynomial decomposition of the characteristic polynomial determines the sign of s+(G)-s-(G).",
+  "would_publish": true,
+  "caveats": "This uses the standard convention that a unicyclic graph is connected; publication priority was not independently checked.",
+  "id": "2506.07264__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.229896,
+  "eur": 0.198538,
+  "elapsed_s": 410.7,
+  "status": "completed",
+  "response_id": "resp_05cd1b53dd50ab86006a95358f82a887d2acf0343a4bf4e9e3",
+  "when": "2026-08-31T08:11:19Z"
+}

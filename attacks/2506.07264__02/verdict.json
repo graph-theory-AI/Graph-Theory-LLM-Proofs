@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for graphs with at most one odd cycle and for graphs with at most one positive adjacency eigenvalue, but the general multicyclic case remains open.",
+  "would_publish": false,
+  "caveats": "Graphs with at least two odd cycles and at least two positive eigenvalues are not resolved.",
+  "id": "2506.07264__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.706184,
+  "eur": 1.473461,
+  "elapsed_s": 1842.7,
+  "status": "completed",
+  "response_id": "resp_0d372fbb11beff36006a95358f92ec87d2a6305f003fcb3395",
+  "when": "2026-08-31T08:35:11Z"
+}

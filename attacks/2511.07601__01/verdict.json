@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "Every locally finite simple half-plane triangulation admits an acyclic interior Schnyder prewood and a finite-flip-extremal (3,2)-orientation, but the boundary coloring and at-infinity maximality of a genuine half-plane Schnyder wood remain unresolved.",
+  "would_publish": false,
+  "caveats": "The catalog excerpt omits the formal half-plane definitions; the results below concern standard finitary relaxations and exclude non-simple or non-locally-finite triangulations.",
+  "id": "2511.07601__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.018528,
+  "eur": 0.879601,
+  "elapsed_s": 1453.7,
+  "status": "completed",
+  "response_id": "resp_08f2215024cde429006a95358fc10c87d2b5af9e1dae3af491",
+  "when": "2026-08-31T08:28:43Z"
+}

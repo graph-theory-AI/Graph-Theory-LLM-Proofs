@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 605,
+    "score": 2.2,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2301.02177__00",
+    "title_md": "[Grassmannian Subvariety Construction Problem](https://arxiv.org/abs/2301.02177)",
+    "paper": "The Kromatic Symmetric Function: A $K$-theoretic Analogue of $X_G$",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2301.02177__00/"
+  },
+  "dossier_meta": {
+    "id": "2301.02177__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2301.02177__00/",
+    "arxiv_id": "2301.02177",
+    "tier": 2,
+    "score": 2.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "The Kromatic Symmetric Function: A $K$-theoretic Analogue of $X_G$"
+  },
+  "started": "2026-08-31T09:06:05Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

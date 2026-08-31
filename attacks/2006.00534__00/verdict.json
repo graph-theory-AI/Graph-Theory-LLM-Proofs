@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I give an exact witness certificate, prove the conjectured square-root lower scale for sets of bounded difference multiplicity, and obtain the conjectured-order upper bound for balanced direct products.",
+  "would_publish": false,
+  "caveats": "The argument does not handle high difference multiplicity or indecomposable groups such as cyclic groups of prime order, and some observations may overlap the source paper.",
+  "id": "2006.00534__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.140444,
+  "eur": 0.984887,
+  "elapsed_s": 1268.3,
+  "status": "completed",
+  "response_id": "resp_0f1d80f098f2c7ef006a95409dedb487d2a7e27a0c2c822a96",
+  "when": "2026-08-31T09:12:50Z"
+}

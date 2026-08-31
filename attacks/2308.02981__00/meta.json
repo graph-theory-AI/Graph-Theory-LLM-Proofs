@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 567,
+    "score": 2.3,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2308.02981__00",
+    "title_md": "[Question 1.2](https://arxiv.org/abs/2308.02981)",
+    "paper": "Factoring Pattern-Free Permutations into Separable ones",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.02981__00/"
+  },
+  "dossier_meta": {
+    "id": "2308.02981__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.02981__00/",
+    "arxiv_id": "2308.02981",
+    "tier": 2,
+    "score": 2.3,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Factoring Pattern-Free Permutations into Separable ones"
+  },
+  "started": "2026-08-31T10:12:11Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

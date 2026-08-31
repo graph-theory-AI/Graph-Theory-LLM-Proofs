@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 684,
+    "score": 1.5,
+    "tier": 1,
+    "lean": "prove",
+    "status": "open",
+    "id": "2506.07264__02",
+    "title_md": "[Conjecture 9.2](https://arxiv.org/abs/2506.07264)",
+    "paper": "Refinement of a conjecture on positive square energy of graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2506.07264__02/"
+  },
+  "dossier_meta": {
+    "id": "2506.07264__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2506.07264__02/",
+    "arxiv_id": "2506.07264",
+    "tier": 1,
+    "score": 1.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Refinement of a conjecture on positive square energy of graphs"
+  },
+  "started": "2026-08-31T08:04:28Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "No separation is obtained, but bounded queue number follows for sparse graphs with bounded-front contraction sequences, for sparse bounded-rank-width classes, and for virtually left-orderable groups.",
+  "would_publish": false,
+  "caveats": "These are special-case reductions, likely overlapping standard facts; ordinary twin-width and the uniform group variants remain unresolved.",
+  "id": "2204.12330__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.831208,
+  "eur": 0.717831,
+  "elapsed_s": 1510.4,
+  "status": "completed",
+  "response_id": "resp_06e19d3af8699e5f006a9543f9560887d28f02127297f0b430",
+  "when": "2026-08-31T09:31:11Z"
+}

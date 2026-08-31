@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 534,
+    "score": 2.45,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2507.10840__00",
+    "title_md": "[Conjecture 1.4](https://arxiv.org/abs/2507.10840)",
+    "paper": "Covering Complete Geometric Graphs by Monotone Paths",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2507.10840__00/"
+  },
+  "dossier_meta": {
+    "id": "2507.10840__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2507.10840__00/",
+    "arxiv_id": "2507.10840",
+    "tier": 2,
+    "score": 2.45,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Covering Complete Geometric Graphs by Monotone Paths"
+  },
+  "started": "2026-08-31T10:41:52Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

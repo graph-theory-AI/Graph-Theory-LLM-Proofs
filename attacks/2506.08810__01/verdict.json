@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove upward persistence of disconnectedness, completely classify graphs H with at most four vertices, and give induced-saturated constructions for all induced stars and a multipartite family.",
+  "would_publish": false,
+  "caveats": "The characterization for arbitrary H remains open; H-free is interpreted as induced-H-free, and the one-vertex H is convention-dependent.",
+  "id": "2506.08810__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.203448,
+  "eur": 1.039298,
+  "elapsed_s": 1345.1,
+  "status": "completed",
+  "response_id": "resp_0a2dbca9166d9f81006a953e07eb7887d2800e5a51115a1c79",
+  "when": "2026-08-31T09:03:04Z"
+}

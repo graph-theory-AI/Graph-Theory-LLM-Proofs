@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 646,
+    "score": 2.05,
+    "tier": 2,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1908.03694__00",
+    "title_md": "[Open problem on quantum ergodicity over small spectral windows (Remark \u2026](https://arxiv.org/abs/1908.03694)",
+    "paper": "High-girth near-Ramanujan graphs with localized eigenvectors",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1908.03694__00/"
+  },
+  "dossier_meta": {
+    "id": "1908.03694__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1908.03694__00/",
+    "arxiv_id": "1908.03694",
+    "tier": 2,
+    "score": 2.05,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "High-girth near-Ramanujan graphs with localized eigenvectors"
+  },
+  "started": "2026-08-31T08:29:10Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

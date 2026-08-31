@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 529,
+    "score": 2.45,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2604.09449__03",
+    "title_md": "[Problem 6.4](https://arxiv.org/abs/2604.09449)",
+    "paper": "Colour-balanced subgraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2604.09449__03/"
+  },
+  "dossier_meta": {
+    "id": "2604.09449__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2604.09449__03/",
+    "arxiv_id": "2604.09449",
+    "tier": 2,
+    "score": 2.45,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Colour-balanced subgraphs"
+  },
+  "started": "2026-08-31T10:45:08Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

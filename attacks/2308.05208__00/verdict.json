@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A Wronskian argument replaces the exponential dependence on r by O(r^4) when N=1 and gives polynomial bounds in further special cases, but the general multivariate problem remains open.",
+  "would_publish": false,
+  "caveats": "The general case N>=2 and the sharp r-exponent even for N=1 are not resolved.",
+  "id": "2308.05208__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.058664,
+  "eur": 0.914262,
+  "elapsed_s": 1092.0,
+  "status": "completed",
+  "response_id": "resp_003424a6bdfab841006a95385cdce487d296028c49d11d5105",
+  "when": "2026-08-31T08:34:40Z"
+}

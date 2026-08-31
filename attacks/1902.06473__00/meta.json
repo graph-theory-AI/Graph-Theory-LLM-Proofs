@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 521,
+    "score": 2.5,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "1902.06473__00",
+    "title_md": "[Conjecture on LB and QLB equivalence](https://arxiv.org/abs/1902.06473)",
+    "paper": "Information-theoretic lower bounds for quantum sorting",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1902.06473__00/"
+  },
+  "dossier_meta": {
+    "id": "1902.06473__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1902.06473__00/",
+    "arxiv_id": "1902.06473",
+    "tier": 2,
+    "score": 2.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Information-theoretic lower bounds for quantum sorting"
+  },
+  "started": "2026-08-31T10:58:07Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

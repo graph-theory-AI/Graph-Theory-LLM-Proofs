@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 571,
+    "score": 2.3,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2105.07370__00",
+    "title_md": "[Union cover variant (open problem)](https://arxiv.org/abs/2105.07370)",
+    "paper": "Strengthening Rodl's theorem",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2105.07370__00/"
+  },
+  "dossier_meta": {
+    "id": "2105.07370__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2105.07370__00/",
+    "arxiv_id": "2105.07370",
+    "tier": 2,
+    "score": 2.3,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Strengthening Rodl's theorem"
+  },
+  "started": "2026-08-31T10:12:11Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

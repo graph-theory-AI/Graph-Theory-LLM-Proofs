@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but an exact FKG coloring lemma yields a uniform 3/8 bound, proves decay for several structured classes, and gives useful fixed-n and diagonal estimates.",
+  "would_publish": false,
+  "caveats": "No upper bound obtained here tends to zero with t for unrestricted independent sets; some elementary bounds may already be implicit in the source.",
+  "id": "2208.06858__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.444464,
+  "eur": 1.247439,
+  "elapsed_s": 1604.3,
+  "status": "completed",
+  "response_id": "resp_0960ceb2331fde65006a954438189087d28c66bfc17f207442",
+  "when": "2026-08-31T09:33:48Z"
+}

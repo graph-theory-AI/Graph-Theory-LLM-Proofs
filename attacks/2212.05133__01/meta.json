@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 617,
+    "score": 2.15,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2212.05133__01",
+    "title_md": "[Open question on existence of lim n(2,d)/d^2](https://arxiv.org/abs/2212.05133)",
+    "paper": "New bounds on the maximum number of neighborly boxes in R^d",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2212.05133__01/"
+  },
+  "dossier_meta": {
+    "id": "2212.05133__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2212.05133__01/",
+    "arxiv_id": "2212.05133",
+    "tier": 2,
+    "score": 2.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "New bounds on the maximum number of neighborly boxes in R^d"
+  },
+  "started": "2026-08-31T08:55:22Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

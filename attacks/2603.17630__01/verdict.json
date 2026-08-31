@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The sharp exponent is proved for graphs with a linear deletable common-neighborhood class, including bounded-vertex-cover and complete multipartite graphs, and for bounded-block bouquets.",
+  "would_publish": false,
+  "caveats": "Constants depend on d and auxiliary structural bounds; arbitrary large 2-connected graphs remain untreated.",
+  "id": "2603.17630__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.919704,
+  "eur": 0.794256,
+  "elapsed_s": 1131.8,
+  "status": "completed",
+  "response_id": "resp_0329175bb775648e006a955a720c6487d2aa522f28e73efd08",
+  "when": "2026-08-31T11:00:44Z"
+}

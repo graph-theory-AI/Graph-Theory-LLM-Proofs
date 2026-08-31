@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "For every m at least 3, a strongly connected 2-outregular Cayley digraph on A4 x Z_m has order 12m and circumference at most 11m, so epsilon = 1/12 works.",
+  "would_publish": true,
+  "caveats": "The proof is self-contained, but priority beyond the supplied literature review has not been independently checked.",
+  "id": "2602.16333__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.66638,
+  "eur": 0.575486,
+  "elapsed_s": 1271.9,
+  "status": "completed",
+  "response_id": "resp_0ad4dc9b071c8fba006a953fdb930087d2a1fd717caeff705c",
+  "when": "2026-08-31T09:09:39Z"
+}

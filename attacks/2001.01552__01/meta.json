@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 520,
+    "score": 2.5,
+    "tier": 2,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2001.01552__01",
+    "title_md": "[Informal conjecture: negative answer to Question 6](https://arxiv.org/abs/2001.01552)",
+    "paper": "Sublinear separators in intersection graphs of convex shapes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2001.01552__01/"
+  },
+  "dossier_meta": {
+    "id": "2001.01552__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2001.01552__01/",
+    "arxiv_id": "2001.01552",
+    "tier": 2,
+    "score": 2.5,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Sublinear separators in intersection graphs of convex shapes"
+  },
+  "started": "2026-08-31T10:58:07Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
