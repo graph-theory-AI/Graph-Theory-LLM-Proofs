@@ -26,8 +26,6 @@ LEDGER_PATH = ATTACKS / "ledger.jsonl"
 LOCK_PATH = ATTACKS / "spend.lock"
 QUEUE_PATH = CATALOG / "queue.json"
 RANKING_PATH = CATALOG / "ARXIV_OPEN_DIFFICULTY_RANKING.md"
-ISSUES_JSONL = CATALOG / "issues.jsonl"
-SEVERE_PATH = CATALOG / "issues_severe.json"
 
 _THREAD_LOCK = threading.Lock()
 _PRINT_LOCK = threading.Lock()
@@ -334,12 +332,6 @@ def attacked_ids() -> set[str]:
     return done
 
 
-def severe_ids() -> set[str]:
-    if not SEVERE_PATH.exists():
-        return set()
-    return {x["id"] for x in json.loads(SEVERE_PATH.read_text()) if x.get("id")}
-
-
 def pid_alive(pid: int) -> bool:
     if not pid:
         return False
@@ -365,25 +357,9 @@ def is_busy(path: Path) -> bool:
 
 def claim_next() -> dict | None:
     """Pick the next easiest complete record and mark it claimed."""
-    skip = severe_ids()
     with SpendLock():
         for rec in parse_ranking():
             dest = ATTACKS / rec["id"]
-            if rec["id"] in skip:
-                dest.mkdir(parents=True, exist_ok=True)
-                if not (dest / "skipped.json").exists() and not (dest / "verdict.json").exists():
-                    (dest / "skipped.json").write_text(
-                        json.dumps(
-                            {
-                                "id": rec["id"],
-                                "reason": "severe catalog extraction failure",
-                                "when": utc_now(),
-                            },
-                            indent=2,
-                        )
-                        + "\n"
-                    )
-                continue
             if dest.exists() and is_busy(dest):
                 continue
             dest.mkdir(parents=True, exist_ok=True)
@@ -592,27 +568,6 @@ def cmd_spend(_: argparse.Namespace) -> None:
     print(json.dumps(rem, indent=2))
 
 
-def cmd_catalog_issues(_: argparse.Namespace) -> None:
-    report = ROOT / "CATALOG_ISSUES.md"
-    severe = CATALOG / "issues_severe.json"
-    n_live = 0
-    if ISSUES_JSONL.exists():
-        n_live = sum(
-            1
-            for line in ISSUES_JSONL.read_text().splitlines()
-            if line.strip() and not line.startswith("#")
-        )
-    n_severe = 0
-    if severe.exists():
-        n_severe = len(json.loads(severe.read_text()))
-    print(f"shareable report: {report}")
-    print(f"severe scan:      {n_severe} records in {severe}")
-    print(f"live attack log:  {n_live} rows in {ISSUES_JSONL}")
-    if report.exists():
-        print()
-        print(report.read_text())
-
-
 def select_records(args: argparse.Namespace) -> list[dict]:
     rows = parse_ranking()
     by_id = {r["id"]: r for r in rows}
@@ -660,15 +615,6 @@ def looks_incomplete(text: str) -> bool:
     return any(m in low for m in INCOMPLETE_MARKERS)
 
 
-def log_catalog_issue(issue: dict) -> None:
-    """Append one catalog defect for sharing with Marc Lelarge."""
-    ISSUES_JSONL.parent.mkdir(parents=True, exist_ok=True)
-    issue = {"when": utc_now(), **issue}
-    with ISSUES_JSONL.open("a") as fh:
-        fh.write(json.dumps(issue, ensure_ascii=False) + "\n")
-    print(f"CATALOG ISSUE  {issue.get('id')}  {issue.get('severity')}", file=sys.stderr)
-
-
 def attack_one(rec: dict, max_out: int, timeout_s: int, force: bool = False) -> str:
     """Attack one record. Returns a short status tag."""
     out_dir = ATTACKS / rec["id"]
@@ -695,15 +641,6 @@ def attack_one(rec: dict, max_out: int, timeout_s: int, force: bool = False) -> 
                     indent=2,
                 )
                 + "\n"
-            )
-            log_catalog_issue(
-                {
-                    "id": rec["id"],
-                    "severity": "incomplete_statement",
-                    "url": rec.get("url"),
-                    "how_found": "preflight skip (no API call)",
-                    "reason": "catalog statement incomplete",
-                }
             )
             release_reserve(reserved)
             log(f"skip {rec['id']}: catalog statement incomplete (no API call)")
@@ -779,22 +716,6 @@ def attack_one(rec: dict, max_out: int, timeout_s: int, force: bool = False) -> 
             f"spent €{rem['spent_eur']:.4f} / €{rem['budget_eur']:.2f}  "
             f"in_flight={rem['in_flight']}"
         )
-        if verdict.get("verdict") == "ill_posed" and looks_incomplete(
-            dossier.get("page_text", "")
-        ):
-            log_catalog_issue(
-                {
-                    "id": rec["id"],
-                    "severity": "ill_posed_incomplete_statement",
-                    "url": rec.get("url"),
-                    "how_found": "Sol attack",
-                    "verdict": verdict.get("verdict"),
-                    "one_line": verdict.get("one_line"),
-                    "usd": round(usd, 6),
-                    "eur": call_rec["eur"],
-                    "response_id": getattr(resp, "id", None),
-                }
-            )
         return verdict.get("verdict") or "unknown"
     except Exception as exc:  # noqa: BLE001
         release_reserve(reserved)
@@ -887,12 +808,6 @@ def main() -> None:
     p_run.add_argument("--max-output-tokens", type=int, default=128_000)
     p_run.add_argument("--timeout", type=int, default=10_800, help="seconds")
     p_run.set_defaults(func=cmd_run)
-
-    p_iss = sub.add_parser(
-        "catalog-issues",
-        help="print catalog defects to share with Marc Lelarge",
-    )
-    p_iss.set_defaults(func=cmd_catalog_issues)
 
     p_sw = sub.add_parser("sweep", help="parallel attacks until budget or time is gone")
     p_sw.add_argument("--jobs", type=int, default=24, help="concurrent Sol calls")

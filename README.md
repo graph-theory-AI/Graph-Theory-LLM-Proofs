@@ -19,7 +19,6 @@ python attack.py queue            # easiest-first attack queue
 python attack.py run --next       # next unattacked conjecture (budget-checked)
 python attack.py run --id ID      # one specific record, e.g. 2402.10782__01
 python attack.py run --limit N    # up to N new attacks, stopping on budget
-python attack.py catalog-issues   # catalog defects to share with Marc Lelarge
 python attack.py sweep --jobs 24 --hours 5   # spend the remaining budget in parallel
 ```
 
@@ -41,14 +40,3 @@ which is why the pre-flight reserve is a conservative **$15** per call.
 
 Do **not** enable Ultra / 64-subagent runs: that is a different cost scale
 (OpenAI's Cycle Double Cover experiment was ~$200/breakthrough).
-
-## Catalog defects
-
-Incomplete statements (empty official block, placeholder, truncated formula)
-are logged rather than silently skipped:
-
-- `CATALOG_ISSUES.md` — shareable list for Marc Lelarge
-- `catalog/issues_severe.json` — machine-readable scan of all 762 arXiv records
-- `catalog/issues.jsonl` — defects actually hit during an attack
-
-`run --next` will not spend API credit on a placeholder statement.

@@ -5,7 +5,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
-git add -A -- attacks README.md attack.py CATALOG_ISSUES.md catalog scripts
+git add -A -- attacks README.md attack.py catalog scripts
 
 if git diff --cached --name-only | grep -E '(^|/)(\.env|raw\.json|claimed\.json|spend\.lock)$' >/dev/null; then
   echo "refusing to commit secrets or in-flight lock files" >&2
