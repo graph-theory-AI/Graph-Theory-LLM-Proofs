@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "As written, T=K1 and F={K2} satisfy the blow-up hypothesis, but ex(G,K1,{K2})=n is exactly computable.",
+  "would_publish": false,
+  "caveats": "The counterexample uses an edgeless target; if e(T)>0 is a standing assumption omitted by the catalog, the full claim remains open, though the consecutive-clique case is proved below.",
+  "id": "1811.08750__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.9435,
+  "eur": 0.814807,
+  "elapsed_s": 1018.6,
+  "status": "completed",
+  "response_id": "resp_0ac0ea14cb144b05006a956592022487d2bc36bdd70440988f",
+  "when": "2026-08-31T11:46:20Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The unrestricted conjecture remains open, but the entire exceptional family is forced in sparse high-girth backedge models, and D5-free tournaments satisfy a useful nesting lemma relative to every transitive spine.",
+  "would_publish": false,
+  "caveats": "The host-order sparsity and girth hypotheses are not known to follow from H-freeness, so even the case H=D5 is not settled.",
+  "id": "2202.13977__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.409224,
+  "eur": 1.217006,
+  "elapsed_s": 1786.9,
+  "status": "completed",
+  "response_id": "resp_09ef81e8fe818ec3006a956280161887d2a05b2e5d237e9e03",
+  "when": "2026-08-31T11:46:02Z"
+}

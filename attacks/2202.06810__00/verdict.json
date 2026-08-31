@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I determine M_{F_{2c}}(5)=5 and attain the upper bound M_{F_{2c}}(p+2)=2^p for every prime p congruent to 1 modulo 4 with p at least 13.",
+  "would_publish": false,
+  "caveats": "Other odd orders remain unresolved, and I have not externally checked the novelty of the prime-order construction.",
+  "id": "2202.06810__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.782256,
+  "eur": 1.539156,
+  "elapsed_s": 1985.6,
+  "status": "completed",
+  "response_id": "resp_0d564210eed33d94006a9560516d1887d29507fbe5e1c7d390",
+  "when": "2026-08-31T11:40:02Z"
+}

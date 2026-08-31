@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "RFCPP is APX-complete already on bidirected stars, admits a deterministic constant approximation when requested directed distances are bounded, and has an O(log |R|)-approximation on symmetric digraphs.",
+  "would_publish": false,
+  "caveats": "These results neither give a constant approximation nor prove constant-factor hardness for unrestricted directed RFCPP.",
+  "id": "2304.03567__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.13922,
+  "eur": 0.98383,
+  "elapsed_s": 1572.2,
+  "status": "completed",
+  "response_id": "resp_0a5a614026315d89006a9562cd606087d28c940787f921d6a8",
+  "when": "2026-08-31T11:43:45Z"
+}

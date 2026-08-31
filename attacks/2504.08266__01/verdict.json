@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The converse holds for every uniformly K_{t,t}-free class, without any subgraph-closure assumption.",
+  "would_publish": false,
+  "caveats": "The dense case remains open; novelty was not literature-checked, and the standard monadic FO-transduction convention is assumed.",
+  "id": "2504.08266__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.74918,
+  "eur": 0.646992,
+  "elapsed_s": 1282.3,
+  "status": "completed",
+  "response_id": "resp_0f1299d3947e5384006a9563f6b3c087d2afbf58edf5312796",
+  "when": "2026-08-31T11:43:52Z"
+}

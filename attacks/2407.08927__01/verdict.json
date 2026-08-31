@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full polynomial-time question remains open; I prove a sharp separator-parity lemma for even-hole-free graphs and show that exact Coloring is NP-hard even when tree-independence number is at most three.",
+  "would_publish": false,
+  "caveats": "The hardness family is not contained in the even-hole-free class, and parity does not bound the number of coloring states on a large separator.",
+  "id": "2407.08927__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.960644,
+  "eur": 0.829612,
+  "elapsed_s": 1435.6,
+  "status": "completed",
+  "response_id": "resp_0290ffa94d31ad2b006a95631f9eec87d292545c6b9a682e9f",
+  "when": "2026-08-31T11:42:51Z"
+}

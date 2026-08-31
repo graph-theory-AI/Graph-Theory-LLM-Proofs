@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The unrestricted extremal function remains undetermined, but finite-order and bounded-dual-scale upper bounds follow, and the quoted logarithmic lower bound is inconsistent with its claimed consequence under standard notation.",
+  "would_publish": false,
+  "caveats": "No matching upper bound for fixed r>=4; one argument uses the maximum-degree estimate quoted in the prompt, and the source's logarithmic notation needs verification.",
+  "id": "2601.15245__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.29554,
+  "eur": 1.118828,
+  "elapsed_s": 1395.9,
+  "status": "completed",
+  "response_id": "resp_0db5bec2cadfd17c006a9564b19ae887d29b99b7aa3d1b7cb5",
+  "when": "2026-08-31T11:48:53Z"
+}

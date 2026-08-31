@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A block-compressed Lovasz-local-lemma construction improves the quoted lower bound to (1/(3sqrt(6))-o(1))sqrt(n)/ln(n), but does not close the sqrt(ln n) gap.",
+  "would_publish": false,
+  "caveats": "All logarithms are natural; only the numerical constant in the known lower-order bound is improved, and the conjecture remains open.",
+  "id": "2403.02298__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.606524,
+  "eur": 1.387394,
+  "elapsed_s": 1850.1,
+  "status": "completed",
+  "response_id": "resp_0a69ea514c3e3a86006a9562f5adc087d28245048e63e97e17",
+  "when": "2026-08-31T11:49:03Z"
+}

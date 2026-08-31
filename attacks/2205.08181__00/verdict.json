@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "For every old vertex away from the crowned pentagon, criticality is equivalent to a precise (2,2,1) terminal-coloring condition on an associated cubic five-pole, and the 40-vertex dodecahedral corona is exhaustively verified to be vertex-critical.",
+  "would_publish": false,
+  "caveats": "The universal five-pole extension property remains unproved, and the catalog alternates between an existential and a universal formulation.",
+  "id": "2205.08181__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.644972,
+  "eur": 1.420598,
+  "elapsed_s": 1977.5,
+  "status": "completed",
+  "response_id": "resp_09a16b85d42f301b006a95607d37b487d28613dc6ab409b0e2",
+  "when": "2026-08-31T11:40:38Z"
+}

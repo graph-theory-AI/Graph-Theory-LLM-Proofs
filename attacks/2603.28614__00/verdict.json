@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A constructive pivot Gray code exists for every graph whose blocks are generalized theta graphs, and pivot codes lift through proper odd subdivisions of any base graph already admitting one.",
+  "would_publish": false,
+  "caveats": "Arbitrary 2-connected graphs, including general subdivisions of K4, remain unresolved, and the literature novelty of these partial results was not checked.",
+  "id": "2603.28614__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.844892,
+  "eur": 0.729649,
+  "elapsed_s": 1094.1,
+  "status": "completed",
+  "response_id": "resp_0a836b6b7cc04809006a956514b6b887d2be5833d76db4400e",
+  "when": "2026-08-31T11:45:30Z"
+}

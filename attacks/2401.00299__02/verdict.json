@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A four-layer product construction converts the published lower bound for singleton-and-square partitions of Q_{d-2} into the conjectured number of all-square partitions of Q_d.",
+  "would_publish": true,
+  "caveats": "This establishes the conjectured logarithmic asymptotic, not a second-order exponential constant, and uses Proposition 1.10 of the source paper.",
+  "id": "2401.00299__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.396872,
+  "eur": 0.342739,
+  "elapsed_s": 1538.5,
+  "status": "completed",
+  "response_id": "resp_0056ef5dd64f7135006a95636785b087d287a8cd7ec4c882ef",
+  "when": "2026-08-31T11:45:45Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A counterexample is reduced to a rainbow-precoloring obstruction on a triangulated quadrilateral, and any vertex-minimal counterexample must have at least five internal degree-five vertices, at least two internal vertices anticomplete to the boundary, and a strong Kempe-locking property.",
+  "would_publish": false,
+  "caveats": "The decisive step that Kempe locking forces an internal degree-four vertex remains open; the reported computation through 28 vertices was not independently rerun.",
+  "id": "2504.08327__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.217228,
+  "eur": 1.051198,
+  "elapsed_s": 1454.4,
+  "status": "completed",
+  "response_id": "resp_0f2a7e37924e6872006a9563ddcb4887d28660425f0901bed6",
+  "when": "2026-08-31T11:46:20Z"
+}
