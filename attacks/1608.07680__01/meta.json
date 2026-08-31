@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 429,
+    "score": 2.75,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1608.07680__01",
+    "title_md": "[Problem 4](https://arxiv.org/abs/1608.07680)",
+    "paper": "The crossing number of the cone of a graph",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1608.07680__01/"
+  },
+  "dossier_meta": {
+    "id": "1608.07680__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1608.07680__01/",
+    "arxiv_id": "1608.07680",
+    "tier": 3,
+    "score": 2.75,
+    "lean": "prove",
+    "status": "open",
+    "paper": "The crossing number of the cone of a graph"
+  },
+  "started": "2026-08-31T12:36:41Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

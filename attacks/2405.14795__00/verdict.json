@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "For every fixed m, the first-moment quantity (n!)^(m-1)((r)_m/r^m)^(n choose 2) also gives the sufficient condition, yielding the required single integer threshold.",
+  "would_publish": true,
+  "caveats": "The argument assumes fixed m and independent uniform edge colors; it does not classify the permitted exceptional case r=r0 or growing m.",
+  "id": "2405.14795__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.117068,
+  "eur": 0.9647,
+  "elapsed_s": 1439.8,
+  "status": "completed",
+  "response_id": "resp_046f80364d12c5db006a956fb99b6887d2be8255137c373fea",
+  "when": "2026-08-31T12:36:41Z"
+}

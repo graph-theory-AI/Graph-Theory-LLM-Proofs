@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 430,
+    "score": 2.7,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2603.17630__00",
+    "title_md": "[Conjecture 4.1](https://arxiv.org/abs/2603.17630)",
+    "paper": "Anticoncentration of random spanning trees in graphs with large minimum\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2603.17630__00/"
+  },
+  "dossier_meta": {
+    "id": "2603.17630__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2603.17630__00/",
+    "arxiv_id": "2603.17630",
+    "tier": 3,
+    "score": 2.7,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Anticoncentration of random spanning trees in graphs with large minimum\u2026"
+  },
+  "started": "2026-08-31T12:34:41Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

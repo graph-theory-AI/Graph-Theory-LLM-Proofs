@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "For the unconditioned model as stated, taking p=(log n)/(3n) makes isolated K2 components alone contribute asymptotically n^(1/3)log(n)/6 faces, far more than log(pn^2).",
+  "would_publish": false,
+  "caveats": "This refutes the unrestricted catalog wording, not a version conditioned on connectivity or restricted to the connected regime.",
+  "id": "2211.01032__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.791888,
+  "eur": 0.683874,
+  "elapsed_s": 1027.2,
+  "status": "completed",
+  "response_id": "resp_08dd22fdd0e861e4006a95718839d087d2ad68080d774ab80d",
+  "when": "2026-08-31T12:37:31Z"
+}

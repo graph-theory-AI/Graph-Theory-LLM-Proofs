@@ -1,0 +1,15 @@
+{
+  "verdict": "ill_posed",
+  "confidence": "high",
+  "one_line": "As written, the claim is vacuous via the K_1 solution, and uniform FPT testing in fact yields a polynomial-time approximation with ratio o(OPT) by a timeout construction.",
+  "would_publish": false,
+  "caveats": "The catalog omits the required restriction on f; no claim is made about a prescribed elementary, power-type, or certifying guarantee.",
+  "id": "2505.05997__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.668024,
+  "eur": 0.576906,
+  "elapsed_s": 1018.0,
+  "status": "completed",
+  "response_id": "resp_0abc4b031aec37e5006a9571e13a5887d2b189bd168453ee35",
+  "when": "2026-08-31T12:38:51Z"
+}

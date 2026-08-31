@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the source's apparent n^2-density normalization, a bidirected depth-two ternary tree gives r_t <= 2/9, and 2/9 is the exact asymptotic value for symmetric strongly connected digraphs.",
+  "would_publish": false,
+  "caveats": "The global lower bound remains 1/9; the catalog is ambiguous about normalization, and the full paper may already contain the 2/9 upper bound.",
+  "id": "2304.03567__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.980972,
+  "eur": 0.847167,
+  "elapsed_s": 1321.3,
+  "status": "completed",
+  "response_id": "resp_01b8c3202c9f5585006a956fb84c0087d2a9e020113daa54ce",
+  "when": "2026-08-31T12:34:41Z"
+}

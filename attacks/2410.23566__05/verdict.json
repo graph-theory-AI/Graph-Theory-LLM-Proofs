@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A rooted supersaturation argument proves the conjecture whenever every base component split across the extension-vertex slots has uniformly bounded order, with a bounded-modulator generalization.",
+  "would_publish": false,
+  "caveats": "The argument does not handle an unbounded weak component spanning several slots; novelty of this elementary partial case has not been checked.",
+  "id": "2410.23566__05",
+  "model": "gpt-5.6-sol",
+  "usd": 0.870076,
+  "eur": 0.751398,
+  "elapsed_s": 1321.6,
+  "status": "completed",
+  "response_id": "resp_0699a0bfb900a7c7006a9570acf94887d28dd2435f784f83e8",
+  "when": "2026-08-31T12:38:46Z"
+}
