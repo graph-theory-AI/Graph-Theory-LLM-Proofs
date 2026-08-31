@@ -93,26 +93,7 @@
         "display": "Raphael Mario Steiner"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2512.17342",
-        "abs_url": "https://arxiv.org/abs/2512.17342",
-        "published": "2026-05-04",
-        "title": "Nowhere-zero flow reconfiguration"
-      },
-      {
-        "arxiv_id": "2512.17342",
-        "abs_url": "https://arxiv.org/abs/2512.17342",
-        "published": "2026-05-04",
-        "title": "Nowhere-zero flow reconfiguration"
-      },
-      {
-        "arxiv_id": "2512.17342",
-        "abs_url": "https://arxiv.org/abs/2512.17342",
-        "published": "2026-05-04",
-        "title": "Nowhere-zero flow reconfiguration"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -245,14 +226,14 @@
     "role": "states",
     "kind": "Conjecture",
     "title": "Conjecture 6.1",
-    "statement_text": "Let $h\\colon E(K_{n,n})\\to\\mathbb{R}^{k}$ such that $\\|h(e)\\|_{1}\\leq 1$ for all $e\\in E(K_{n,n})$. Then there is a perfect matching $M$ of $K_{n,n}$ satisfying [a bound of order $O(\\sqrt{k})$ on $\\|\\sum_{e\\in M}h(e)\\|_1$].",
+    "statement_text": "Let $h\\colon E(K_{n,n})\\to\\mathbb{R}^{k}$ such that $\\|h(e)\\|_{1}\\leq 1$ for all $e\\in E(K_{n,n})$. Then there is a perfect matching $M$ of $K_{n,n}$ satisfying $f_{h}(M)=O(\\sqrt{k})$.",
     "context_text": "There is a gap between the $O(k^2)$ upper bound for representative matchings in bipartite complete graphs (Section 1.1) and the worst-case lower bound of $\\sqrt{k/2}$ constructed in Theorem 5.1. The authors conjecture that the lower bound gives the correct order, so that the true bound is $\\Theta(\\sqrt{k})$.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
-    "confidence": "medium",
-    "notes": "The conclusion of the conjecture is truncated in the source text; the full right-hand side bound is not reproduced. Based on the surrounding context the conjectured bound is $O(\\sqrt{k})$, matching the lower bound of Theorem 5.1.",
+    "confidence": "high",
+    "notes": "",
     "arxiv_id": "2604.09449",
     "paper_title": "Colour-balanced subgraphs",
     "paper_authors": [
@@ -550,20 +531,7 @@
         "display": "Noga Alon"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2603.02786",
-        "abs_url": "https://arxiv.org/abs/2603.02786",
-        "published": "2026-03-03",
-        "title": "Packing arithmetic progressions"
-      },
-      {
-        "arxiv_id": "2603.02786",
-        "abs_url": "https://arxiv.org/abs/2603.02786",
-        "published": "2026-03-03",
-        "title": "Packing arithmetic progressions"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -601,14 +569,14 @@
     "role": "states",
     "kind": "Conjecture",
     "title": "Conjecture 5",
-    "statement_text": "For every $k$ satisfying $\\Omega(\\sqrt{n})=k<\\sqrt{n}$, we have [asymptotic formula for $m_k(n)$ — mathematical conclusion truncated in source].",
+    "statement_text": "For every $k$ satisfying $\\Omega(\\sqrt{n})=k<\\sqrt{n}$, we have $m_{k}(n)\\sim\\left(1-\\frac{k^{2}}{3n}\\right)\\frac{k}{\\ln k}\\cdot n$.",
     "context_text": "If Conjecture 1 holds, it also resolves $m_k(n)$ asymptotically for $k\\geqslant\\sqrt{n}$ via Theorem 4. The only remaining open case is $k<\\sqrt{n}$ with $k\\not=o(\\sqrt{n})$, which this conjecture addresses.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
-    "confidence": "low",
-    "notes": "The mathematical conclusion after 'we have' is truncated in the extracted source; only the quantifier range is visible.",
+    "confidence": "high",
+    "notes": "",
     "arxiv_id": "2603.02786",
     "paper_title": "Packing arithmetic progressions",
     "paper_authors": [
@@ -633,14 +601,14 @@
     "role": "states",
     "kind": "Conjecture",
     "title": "Conjecture 6",
-    "statement_text": "If $k\\ll n$, then [formula for $M_k(n)$], while otherwise, [formula for $M_k(n)$] — mathematical conclusions truncated in source.",
+    "statement_text": "If $k\\ll n$, then $M_{k}(n)\\sim\\frac{k^{2}}{2\\ln k}\\cdot n$, while otherwise, $M_{k}(n)\\sim\\frac{k^{2}}{2\\ln k}\\cdot n-\\frac{k^{3}}{3\\ln k}$.",
     "context_text": "Conjectured asymptotic behaviour of $M_k(n)$ for $k<n$ in view of Theorem 5, splitting into two regimes according to whether $k\\ll n$ or not.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
-    "confidence": "low",
-    "notes": "The mathematical formulas in both cases are truncated in the extracted source; only the conditional structure is visible.",
+    "confidence": "high",
+    "notes": "",
     "arxiv_id": "2603.02786",
     "paper_title": "Packing arithmetic progressions",
     "paper_authors": [
@@ -665,14 +633,14 @@
     "role": "states",
     "kind": "Conjecture",
     "title": "Conjecture 7",
-    "statement_text": "For every fixed $n$ and $k$ tending to infinity, we have [asymptotic formula — mathematical conclusion truncated in source].",
+    "statement_text": "For every fixed $n$ and $k$ tending to infinity, we have $M_{k}(n)=(1+o(1))nk$.",
     "context_text": "Concerns packing of $k$ arithmetic progressions of the form $B_d=\\{d,2d,\\ldots,nd\\}$ for $d=1,2,\\ldots,k$ with $n$ fixed. The authors suspect the trivial lower bound of $nk$ is asymptotically correct as $k\\to\\infty$.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
-    "confidence": "low",
-    "notes": "The mathematical conclusion after 'we have' is truncated in the extracted source; context strongly suggests the conjecture is $M_k(n)\\sim nk$ as $k\\to\\infty$ for fixed $n$.",
+    "confidence": "high",
+    "notes": "",
     "arxiv_id": "2603.02786",
     "paper_title": "Packing arithmetic progressions",
     "paper_authors": [
@@ -832,14 +800,14 @@
     "role": "states",
     "kind": "Question",
     "title": "Question 4.3",
-    "statement_text": "Does vertex transitivity guarantee that every two longest directed cycles in a connected vertex transitive digraph share a common vertex?",
+    "statement_text": "Is it true that in any connected vertex transitive digraph, any two longest directed cycles intersect?",
     "context_text": "A major obstacle to translating results from graphs to digraphs is that, unlike 2-connected undirected graphs, strongly 2-connected digraphs may contain vertex-disjoint longest cycles. The authors ask whether vertex transitivity could be a condition guaranteeing intersection of all pairs of longest cycles.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
-    "confidence": "low",
-    "notes": "Exact statement not provided in the input; reconstructed from the surrounding prose ('We wonder if vertex transitivity could be such a condition') immediately following Conjecture 4.2.",
+    "confidence": "high",
+    "notes": "",
     "arxiv_id": "2602.16333",
     "paper_title": "Long cycles in vertex transitive digraphs",
     "paper_authors": [
@@ -869,14 +837,14 @@
     "role": "states",
     "kind": "Question",
     "title": "Question 4.4",
-    "statement_text": "",
-    "context_text": "Appears as a labelled question environment in the concluding remarks section alongside Question 4.3, but its full statement was not included in the provided paper content.",
+    "statement_text": "Does there exist $C>0$ such that in any vertex transitive digraph, the length of a longest path is by at most a factor of $C$ larger than the length of a longest directed cycle?",
+    "context_text": "The paper asks whether the classical constant-factor relation between longest paths and longest cycles in undirected vertex-transitive graphs has a directed analogue.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
-    "confidence": "low",
-    "notes": "Statement not available in the provided input; only the label [qn] was given with no accompanying text.",
+    "confidence": "high",
+    "notes": "",
     "arxiv_id": "2602.16333",
     "paper_title": "Long cycles in vertex transitive digraphs",
     "paper_authors": [
@@ -899,7 +867,8 @@
         "slug": "steiner_raphael_mario",
         "display": "Raphael Mario Steiner"
       }
-    ]
+    ],
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -1178,14 +1147,14 @@
     "role": "states",
     "kind": "Problem",
     "title": "Problem 6.2",
-    "statement_text": "Is the following statement true for all $\\varepsilon>0$? If $G$ is a $d$-degenerate triangle-free graph with maximum degree $\\Delta(G)\\leq e^{d^{1-\\varepsilon}}$, then we have [statement truncated in source]",
+    "statement_text": "Is the following statement true for all $\\varepsilon>0$? If $G$ is a $d$-degenerate triangle-free graph with maximum degree $\\Delta(G)\\leq e^{d^{1-\\varepsilon}}$, then we have $\\chi(G)=O\\left(\\frac{d}{\\log d}\\right)$.",
     "context_text": "Resolving this problem would likely require localizing the random coloring process used in the paper so that the union bound can be replaced by an application of the Lovász Local Lemma. An affirmative answer would imply results on immersion analogues of Hadwiger's conjecture, as conjectured by Lescure and Meyniel in 1988.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
-    "confidence": "medium",
-    "notes": "The conclusion of the problem statement is truncated in the provided source; only the hypothesis is visible.",
+    "confidence": "high",
+    "notes": "",
     "arxiv_id": "2601.15245",
     "paper_title": "Coloring small locally sparse degenerate graphs and related problems",
     "paper_authors": [
@@ -1631,14 +1600,7 @@
         "display": "Marthe Bonamy"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2507.04254",
-        "abs_url": "https://arxiv.org/abs/2507.04254",
-        "published": "2025-12-05",
-        "title": "On Modular Edge Colourings of Graphs"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -1670,14 +1632,7 @@
         "display": "Marthe Bonamy"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2004.07214",
-        "abs_url": "https://arxiv.org/abs/2004.07214",
-        "published": "2025-11-26",
-        "title": "Enumerating minimal dominating sets in the (in)comparability graphs of bounded dimension posets"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -1866,14 +1821,7 @@
         "display": "Noga Alon"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2511.03864",
-        "abs_url": "https://arxiv.org/abs/2511.03864",
-        "published": "2025-11-05",
-        "title": "Induced matching treewidth and tree-independence number, revisited"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -2272,14 +2220,7 @@
         "display": "Jacob Fox"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2411.13812",
-        "abs_url": "https://arxiv.org/abs/2411.13812",
-        "published": "2025-10-29",
-        "title": "When are off-diagonal hypergraph Ramsey numbers polynomial?"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -2647,14 +2588,7 @@
         "display": "Stéphan Thomassé"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2502.04726",
-        "abs_url": "https://arxiv.org/abs/2502.04726",
-        "published": "2025-10-10",
-        "title": "Lollipops, dense cycles and chords"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -2885,14 +2819,7 @@
         "display": "Gwenaël Joret"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2502.04177",
-        "abs_url": "https://arxiv.org/abs/2502.04177",
-        "published": "2025-09-15",
-        "title": "Shallow brambles"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -3513,14 +3440,14 @@
     "role": "states",
     "kind": "Question",
     "title": "Question",
-    "statement_text": "[Full statement text was not included in the supplied input; the environment is labelled \\texttt{[qu]\\ Question} and, from context, concerns the exact threshold for $r$-reconstructibility of $\\mathcal{G}(n,p)$ for $r\\in\\{1,2\\}$, the two radii for which the paper provides only upper and lower bounds rather than a sharp threshold.]",
-    "context_text": "The paper determines the sharp threshold for $r$-reconstructibility for every $r\\geq 3$. For $r=2$ it improves bounds of Gaudio and Mossel by polynomial factors, and for $r=1$ it sharpens a result of Huang and Tikhomirov, but in neither case is the exact threshold pinned down.",
+    "statement_text": "Determine when $\\mathcal{G}(n,p)$ is 2-reconstructible. Is there a threshold around $n^{-3/4}$ (up to a polylogarithmic factor)?",
+    "context_text": "The paper determines the sharp threshold for $r$-reconstructibility for every $r\\geq 3$. For $r=2$ it improves the bounds of Gaudio and Mossel by polynomial factors but does not pin down the exact threshold.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
-    "confidence": "low",
-    "notes": "The labelled [qu] environment confirms an explicit open question is posed; its verbatim statement was not provided in the supplied paper content, so the statement_text above is inferred from context.",
+    "confidence": "high",
+    "notes": "",
     "arxiv_id": "2211.14218",
     "paper_title": "Shotgun assembly of random graphs",
     "paper_authors": [
@@ -3571,14 +3498,7 @@
         "display": "Alex Scott"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2206.12335",
-        "abs_url": "https://arxiv.org/abs/2206.12335",
-        "published": "2025-06-23",
-        "title": "Improved bounds for 1-independent percolation on $\\mathbb{Z}^n$"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -3708,14 +3628,14 @@
     "role": "states",
     "kind": "Question",
     "title": "Question 4.1",
-    "statement_text": "Do there exist infinitely many $3$-edge colourable cubic graphs $G$ such that for all edges $(u,v),(x,y)\\in E(G)$, [remainder of condition not captured in source]",
+    "statement_text": "Do there exist infinitely many $3$-edge colourable cubic graphs $G$ such that for all edges $(u,v),(x,y)\\in E(G)$, $\\alpha(G)=\\alpha(G-\\{u,v,x,y\\})$?",
     "context_text": "The authors verified computationally that the Biggs-Smith graph is the unique cubic edge-transitive graph on at most 166 vertices satisfying the key lemma's conclusion, and that F168D is the only other such graph on at most 300 vertices. This question asks whether infinitely many such graphs exist.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
-    "confidence": "low",
-    "notes": "Statement truncated in source data — the condition following 'for all edges $(u,v),(x,y)\\in E(G)$' was not captured; likely a PDF extraction issue.",
+    "confidence": "high",
+    "notes": "",
     "arxiv_id": "2505.05339",
     "paper_title": "A Counterexample to a Conjecture of Lovász",
     "paper_authors": [
@@ -3739,14 +3659,14 @@
     "role": "states",
     "kind": "Question",
     "title": "Question 4.2",
-    "statement_text": "Does there exist a $d$-regular $d$-edge colourable graph $G$ where $d\\geq 4$ such that for all edges $(u_{1},v_{1}),\\dots,(u_{d-1},v_{d-1})\\in E(G)$, [remainder of condition not captured in source]",
+    "statement_text": "Does there exist a $d$-regular $d$-edge colourable graph $G$ where $d\\geq 4$ such that for all edges $(u_{1},v_{1}),\\dots,(u_{d-1},v_{d-1})\\in E(G)$, $\\alpha(G)=\\alpha(G-\\{u_{1},\\dots,u_{d-1},v_{1},\\dots,v_{d-1}\\})$?",
     "context_text": "After finding only two counterexamples to Lovász's conjecture among line hypergraphs of cubic graphs, the authors ask whether counterexamples exist for higher regularity $d\\geq 4$, generalising the $r=3$ construction.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
-    "confidence": "low",
-    "notes": "Statement truncated in source data — the condition following the list of edges was not captured; likely a PDF extraction issue.",
+    "confidence": "high",
+    "notes": "",
     "arxiv_id": "2505.05339",
     "paper_title": "A Counterexample to a Conjecture of Lovász",
     "paper_authors": [
@@ -4323,14 +4243,7 @@
         "display": "Bojan Mohar"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2211.01032",
-        "abs_url": "https://arxiv.org/abs/2211.01032",
-        "published": "2025-04-09",
-        "title": "Random Embeddings of Graphs: The Expected Number of Faces in Most Graphs is Logarithmic"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -4845,14 +4758,14 @@
     "role": "states",
     "kind": "Question",
     "title": "Question 10.1",
-    "statement_text": "[Full statement not available in the provided paper content excerpt.]",
+    "statement_text": "Is the $\\log\\log n$ factor in the bound for the average degree in Theorem 1.1 necessary in order to guarantee a rainbow cycle?",
     "context_text": "Appears in Section 10 of the paper, which collects open questions remaining after the main results on rainbow cycles and the connections to additive number theory for non-abelian groups.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
-    "confidence": "low",
-    "notes": "The [qn] environment label is visible in the theorem list but the full statement text was not included in the supplied paper content excerpt.",
+    "confidence": "high",
+    "notes": "",
     "arxiv_id": "2309.04460",
     "paper_title": "Essentially tight bounds for rainbow cycles in proper edge-colourings",
     "paper_authors": [
@@ -4872,26 +4785,106 @@
         "display": "Noga Alon"
       }
     ],
-    "also_stated_in": [
+    "also_stated_in": []
+  },
+  {
+    "role": "states",
+    "kind": "Question",
+    "title": "Question 10.2",
+    "statement_text": "Does there exist a constant $C>0$ such that the edges of any $n$-vertex properly edge-coloured robust sublinear expander $G$ with average degree at least $C\\log n$ can be decomposed into two spanning connected subgraphs in such a way that every colour appears on only one of them?",
+    "context_text": "Appears in Section 10 of the paper, which collects open questions remaining after the main results on rainbow cycles and the connections to additive number theory for non-abelian groups.",
+    "attributed_to": "paper authors",
+    "attributed_year": null,
+    "paper_contribution": "",
+    "opg_lookup": false,
+    "confidence": "high",
+    "notes": "",
+    "arxiv_id": "2309.04460",
+    "paper_title": "Essentially tight bounds for rainbow cycles in proper edge-colourings",
+    "paper_authors": [
+      "Noga Alon",
+      "Matija Bucić",
+      "Lisa Sauermann",
+      "Dmitrii Zakharov",
+      "Or Zamir"
+    ],
+    "published": "2025-02-26",
+    "abs_url": "https://arxiv.org/abs/2309.04460",
+    "source": "html",
+    "safe_id": "2309.04460",
+    "matched_authors": [
       {
-        "arxiv_id": "2309.04460",
-        "abs_url": "https://arxiv.org/abs/2309.04460",
-        "published": "2025-02-26",
-        "title": "Essentially tight bounds for rainbow cycles in proper edge-colourings"
-      },
-      {
-        "arxiv_id": "2309.04460",
-        "abs_url": "https://arxiv.org/abs/2309.04460",
-        "published": "2025-02-26",
-        "title": "Essentially tight bounds for rainbow cycles in proper edge-colourings"
-      },
-      {
-        "arxiv_id": "2309.04460",
-        "abs_url": "https://arxiv.org/abs/2309.04460",
-        "published": "2025-02-26",
-        "title": "Essentially tight bounds for rainbow cycles in proper edge-colourings"
+        "slug": "alon_noga",
+        "display": "Noga Alon"
       }
-    ]
+    ],
+    "also_stated_in": []
+  },
+  {
+    "role": "states",
+    "kind": "Question",
+    "title": "Question 10.3",
+    "statement_text": "Given a positive integer $n$, what is the smallest number $d=d(n)$ so that in any group $G$ of size $|G|=n$, given any subset $S\\subseteq G$ of size $|S|\\geq d$, we can always find a solution to $g_{1}^{\\varepsilon_{1}}\\cdot\\ldots\\cdot g_{m}^{\\varepsilon_{m}}=e$ with distinct $g_{1},\\ldots,g_{m}\\in S$ as well as $\\varepsilon_{1},\\ldots,\\varepsilon_{m}\\in\\{-1,1\\}$ and $m\\geq 1$.",
+    "context_text": "Appears in Section 10 of the paper, which collects open questions remaining after the main results on rainbow cycles and the connections to additive number theory for non-abelian groups.",
+    "attributed_to": "paper authors",
+    "attributed_year": null,
+    "paper_contribution": "",
+    "opg_lookup": false,
+    "confidence": "high",
+    "notes": "",
+    "arxiv_id": "2309.04460",
+    "paper_title": "Essentially tight bounds for rainbow cycles in proper edge-colourings",
+    "paper_authors": [
+      "Noga Alon",
+      "Matija Bucić",
+      "Lisa Sauermann",
+      "Dmitrii Zakharov",
+      "Or Zamir"
+    ],
+    "published": "2025-02-26",
+    "abs_url": "https://arxiv.org/abs/2309.04460",
+    "source": "html",
+    "safe_id": "2309.04460",
+    "matched_authors": [
+      {
+        "slug": "alon_noga",
+        "display": "Noga Alon"
+      }
+    ],
+    "also_stated_in": []
+  },
+  {
+    "role": "states",
+    "kind": "Question",
+    "title": "Question 10.4",
+    "statement_text": "Given $k\\geq 2$, determine the minimum number $t=t(k)$ such that any set of $t$ transpositions in $\\mathcal{S}_{k}$ contains a non-empty subset whose elements can be multiplied in some order to give the identity.",
+    "context_text": "Appears in Section 10 of the paper, which collects open questions remaining after the main results on rainbow cycles and the connections to additive number theory for non-abelian groups.",
+    "attributed_to": "paper authors",
+    "attributed_year": null,
+    "paper_contribution": "",
+    "opg_lookup": false,
+    "confidence": "high",
+    "notes": "",
+    "arxiv_id": "2309.04460",
+    "paper_title": "Essentially tight bounds for rainbow cycles in proper edge-colourings",
+    "paper_authors": [
+      "Noga Alon",
+      "Matija Bucić",
+      "Lisa Sauermann",
+      "Dmitrii Zakharov",
+      "Or Zamir"
+    ],
+    "published": "2025-02-26",
+    "abs_url": "https://arxiv.org/abs/2309.04460",
+    "source": "html",
+    "safe_id": "2309.04460",
+    "matched_authors": [
+      {
+        "slug": "alon_noga",
+        "display": "Noga Alon"
+      }
+    ],
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -5169,14 +5162,7 @@
         "display": "Sophie Spirkl"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2311.05066",
-        "abs_url": "https://arxiv.org/abs/2311.05066",
-        "published": "2024-11-26",
-        "title": "Induced subgraphs and tree decompositions XIII. Basic obstructions in $\\mathcal{H}$-free graphs for finite $\\mathcal{H}$"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -5862,14 +5848,7 @@
         "display": "Bojan Mohar"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2407.21360",
-        "abs_url": "https://arxiv.org/abs/2407.21360",
-        "published": "2024-07-31",
-        "title": "Clustered Colouring of Graph Products"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -6192,14 +6171,14 @@
     "role": "states",
     "kind": "Question",
     "title": "Question 4.3",
-    "statement_text": "[Verbatim statement not available in the provided input excerpt.]",
+    "statement_text": "Given $n$ and $r$, what is the smallest value of $s$ for which $f(n,r,s)=g(n,r,s)$?",
     "context_text": "After establishing that the functions $f$ and $g$ behave differently for $s\\ll\\frac{\\sqrt{r}}{\\log r}$ and similarly when $s\\geq\\sqrt{r\\log r}$, the authors find it interesting to determine precisely when the two functions start to exhibit different behaviour; Question 4.3 is described as an explicit question in this direction.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
-    "confidence": "low",
-    "notes": "Statement not provided in input excerpt; existence inferred from the theorem-environment list and the surrounding context of Conjecture 4.2.",
+    "confidence": "high",
+    "notes": "",
     "arxiv_id": "2308.15387",
     "paper_title": "The power of many colours",
     "paper_authors": [
@@ -6218,26 +6197,103 @@
         "display": "Noga Alon"
       }
     ],
-    "also_stated_in": [
+    "also_stated_in": []
+  },
+  {
+    "role": "states",
+    "kind": "Question",
+    "title": "Question 4.4",
+    "statement_text": "Let $r\\geq 2s-1\\geq 3$ be integers. What is the minimum number of edges in an $r$-vertex $s$-uniform intersecting hypergraph with cover number equal to $s$?",
+    "context_text": "One of several open questions posed by the authors in Section 4, concerned with the behaviour of $f(n,r,s)$ and/or $g(n,r,s)$.",
+    "attributed_to": "paper authors",
+    "attributed_year": null,
+    "paper_contribution": "",
+    "opg_lookup": false,
+    "confidence": "high",
+    "notes": "",
+    "arxiv_id": "2308.15387",
+    "paper_title": "The power of many colours",
+    "paper_authors": [
+      "Noga Alon",
+      "Matija Bucić",
+      "Micha Christoph",
+      "Michael Krivelevich"
+    ],
+    "published": "2024-06-10",
+    "abs_url": "https://arxiv.org/abs/2308.15387",
+    "source": "html",
+    "safe_id": "2308.15387",
+    "matched_authors": [
       {
-        "arxiv_id": "2308.15387",
-        "abs_url": "https://arxiv.org/abs/2308.15387",
-        "published": "2024-06-10",
-        "title": "The power of many colours"
-      },
-      {
-        "arxiv_id": "2308.15387",
-        "abs_url": "https://arxiv.org/abs/2308.15387",
-        "published": "2024-06-10",
-        "title": "The power of many colours"
-      },
-      {
-        "arxiv_id": "2308.15387",
-        "abs_url": "https://arxiv.org/abs/2308.15387",
-        "published": "2024-06-10",
-        "title": "The power of many colours"
+        "slug": "alon_noga",
+        "display": "Noga Alon"
       }
-    ]
+    ],
+    "also_stated_in": []
+  },
+  {
+    "role": "states",
+    "kind": "Question",
+    "title": "Question 4.5",
+    "statement_text": "What is the minimum number of edges in an $r$-vertex intersecting hypergraph if any subset of $m$ vertices needs to contain at least $t$ edges?",
+    "context_text": "One of several open questions posed by the authors in Section 4, concerned with the behaviour of $f(n,r,s)$ and/or $g(n,r,s)$.",
+    "attributed_to": "paper authors",
+    "attributed_year": null,
+    "paper_contribution": "",
+    "opg_lookup": false,
+    "confidence": "high",
+    "notes": "",
+    "arxiv_id": "2308.15387",
+    "paper_title": "The power of many colours",
+    "paper_authors": [
+      "Noga Alon",
+      "Matija Bucić",
+      "Micha Christoph",
+      "Michael Krivelevich"
+    ],
+    "published": "2024-06-10",
+    "abs_url": "https://arxiv.org/abs/2308.15387",
+    "source": "html",
+    "safe_id": "2308.15387",
+    "matched_authors": [
+      {
+        "slug": "alon_noga",
+        "display": "Noga Alon"
+      }
+    ],
+    "also_stated_in": []
+  },
+  {
+    "role": "states",
+    "kind": "Question",
+    "title": "Question 4.6",
+    "statement_text": "For which values of $r,s$ does there exist an $r$-vertex, $(s+1)$-uniform intersecting hypergraph in which all sets of size $r-s$ contain the same positive number of edges?",
+    "context_text": "One of several open questions posed by the authors in Section 4, concerned with the behaviour of $f(n,r,s)$ and/or $g(n,r,s)$.",
+    "attributed_to": "paper authors",
+    "attributed_year": null,
+    "paper_contribution": "",
+    "opg_lookup": false,
+    "confidence": "high",
+    "notes": "",
+    "arxiv_id": "2308.15387",
+    "paper_title": "The power of many colours",
+    "paper_authors": [
+      "Noga Alon",
+      "Matija Bucić",
+      "Micha Christoph",
+      "Michael Krivelevich"
+    ],
+    "published": "2024-06-10",
+    "abs_url": "https://arxiv.org/abs/2308.15387",
+    "source": "html",
+    "safe_id": "2308.15387",
+    "matched_authors": [
+      {
+        "slug": "alon_noga",
+        "display": "Noga Alon"
+      }
+    ],
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -6299,14 +6355,7 @@
         "display": "Jacob Fox"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2405.05902",
-        "abs_url": "https://arxiv.org/abs/2405.05902",
-        "published": "2024-06-08",
-        "title": "The largest subgraph without a forbidden induced subgraph"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -7409,14 +7458,7 @@
         "display": "Sophie Spirkl"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2302.04986",
-        "abs_url": "https://arxiv.org/abs/2302.04986",
-        "published": "2024-01-16",
-        "title": "Hitting all maximum stable sets in $P_5$-free graphs"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -7574,14 +7616,7 @@
         "display": "Noga Alon"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2311.05500",
-        "abs_url": "https://arxiv.org/abs/2311.05500",
-        "published": "2024-01-11",
-        "title": "Universality for graphs with bounded density"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -7847,14 +7882,14 @@
     "role": "states",
     "kind": "Conjecture",
     "title": "Conjecture 6.1",
-    "statement_text": "For a 3-uniform $n$-vertex hypergraph $H$ with $d_{1}(H)=d$, [statement truncated in source]",
-    "context_text": "Theorem 1.5 gives $r(H;q)\\leq\\exp^{(k-1)}(O_{k,q}(d))n$ for $k\\geq 4$-uniform hypergraphs with first skeletal degeneracy $d$. For $k=3$ the analogous bound from the proof is $\\exp^{(2)}(O_{3,q}(d))n$; Conjecture 6.1 posits a stronger bound for 3-uniform hypergraphs, stronger than a result of Bradač–Fox–Sudakov [3] in which skeletal degeneracy is replaced by $\\sqrt{e(H)}$. The inequality $d_{1}(H)\\leq O(\\sqrt{e(H)})$ shows that 6.1 would imply that result.",
+    "statement_text": "For a 3-uniform $n$-vertex hypergraph $H$ with $d_{1}(H)=d$, $r(H;q)\\leq\\exp^{(2)}(O_{q}(d))n$.",
+    "context_text": "For 3-uniform hypergraphs the paper's argument gives $r(H;q)\\leq\\exp^{(2)}(O_q(d\\log d))n$ in general, and removes the $\\log d$ factor when the 1-skeleton has bounded chromatic number. Conjecture 6.1 asks to remove that factor for every 3-uniform hypergraph of first skeletal degeneracy $d$.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
     "confidence": "high",
-    "notes": "Statement body truncated in the provided source after the hypothesis clause; exact bound conjectured is not fully reproduced.",
+    "notes": "",
     "arxiv_id": "2401.00359",
     "paper_title": "Ramsey and Turán numbers of sparse hypergraphs",
     "paper_authors": [
@@ -7880,14 +7915,14 @@
     "role": "states",
     "kind": "Conjecture",
     "title": "Conjecture 6.2",
-    "statement_text": "There is a constant $c_{k}>0$ such that for every $k$-uniform $k$-partite hypergraph $H$, [statement truncated in source]",
+    "statement_text": "There is a constant $c_{k}>0$ such that for every $k$-uniform $k$-partite hypergraph $H$, $\\mathrm{ex}(n,H)\\leq O_{H}\\left(n^{k-\\frac{c_{k}}{d_{\\mathsf{max}}(H)}}\\right).$",
     "context_text": "Theorem 1.4 gives $\\Omega_{k}(n^{k-C_{k}/d_{1}(H)})\\leq\\operatorname{ex}(n,H)\\leq O_{H}(n^{k-c_{k}/d_{1}(H)^{k-1}})$. The complete $k$-partite hypergraph $K^{(k)}_{d,\\ldots,d}$ shows the upper bound is tight in $d_{1}$, while the bipartite hedgehog $H_{d}^{(k)}$ shows the lower bound is tight in $d_{1}$. This gap motivates replacing $d_{1}(H)$ by the finer quantity $d_{\\mathsf{max}}(H)=\\max_{1\\leq i<k}d_{i}(H)$, and Conjecture 6.2 asserts that the Turán exponent is controlled by $d_{\\mathsf{max}}(H)$.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
     "confidence": "high",
-    "notes": "Statement body truncated in the provided source after the setup clause; the precise bound in terms of $d_{\\mathsf{max}}(H)$ is not fully reproduced.",
+    "notes": "",
     "arxiv_id": "2401.00359",
     "paper_title": "Ramsey and Turán numbers of sparse hypergraphs",
     "paper_authors": [
@@ -9051,14 +9086,14 @@
     "role": "states",
     "kind": "Conjecture",
     "title": "Conjecture 3.13",
-    "statement_text": "There exists a function $f$, such that for every tournament $T$, there exists an ordering $\\prec^{*}$ of $V(T)$ such that:",
+    "statement_text": "There exists a function $f$ such that for every tournament $T$, there exists an ordering $\\prec^{*}$ of $V(T)$ such that $\\omega(T^{\\prec^{*}})\\leq f(\\operatorname{\\overrightarrow{\\omega}}(T))$ and $\\operatorname{tww}(T,\\prec^{*})\\leq f(\\operatorname{tww}(T))$.",
     "context_text": "This conjecture is introduced as a strengthening implying Conjecture 3.12 on $\\operatorname{\\overrightarrow{\\chi}}$-boundedness of bounded-twin-width tournaments. It concerns the existence of a single ordering simultaneously witnessing relevant structural and coloring properties.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
     "confidence": "high",
-    "notes": "Statement appears truncated in the source; conditions following 'such that:' are not captured in the extracted text.",
+    "notes": "",
     "arxiv_id": "2310.04265",
     "paper_title": "Clique number of tournaments",
     "paper_authors": [
@@ -9083,14 +9118,14 @@
     "role": "states",
     "kind": "Conjecture",
     "title": "Conjecture 3.16",
-    "statement_text": "There exists a function $f$ such that, for every tournament $T$, there exists a $BST$-ordering $\\prec$ of $T$ such:",
+    "statement_text": "There exists a function $f$ such that, for every tournament $T$, there exists a $BST$-ordering $\\prec$ of $T$ such that $\\omega(T^{\\prec})\\leq f(\\operatorname{\\overrightarrow{\\omega}}(T))$.",
     "context_text": "$BST$-orderings are identified as natural candidates for the ordering of Conjecture 3.13. This conjecture specialises Conjecture 3.13 to $BST$-orderings, which arise from the theory of binary search trees on tournaments.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
     "confidence": "high",
-    "notes": "Statement appears truncated in the source; conditions following 'such:' are not captured in the extracted text.",
+    "notes": "The source's grammatical typo 'such:' is normalized to 'such that'.",
     "arxiv_id": "2310.04265",
     "paper_title": "Clique number of tournaments",
     "paper_authors": [
@@ -9205,14 +9240,7 @@
         "display": "Pierre Aboulker"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2310.04265",
-        "abs_url": "https://arxiv.org/abs/2310.04265",
-        "published": "2023-10-06",
-        "title": "Clique number of tournaments"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -9376,14 +9404,14 @@
     "role": "states",
     "kind": "Problem",
     "title": "Open Problem 6",
-    "statement_text": "[Statement not available: only the theorem-environment label was provided in the input, not the body text of the environment.]",
+    "statement_text": "For any hereditary graph class $\\mathcal{G}$ with separation-number $\\operatorname{sep}(\\mathcal{G})\\in O(n^{1-\\epsilon})$, does there exist a constant $c=c(\\mathcal{G})$ such that every $n$-vertex graph $G\\in\\mathcal{G}$ is contained in $H\\boxtimes K_m$, where $\\operatorname{tw}(H)\\leqslant c$ and $m\\in O(n^{1-\\epsilon})$.",
     "context_text": "Open Problem 6 is the only explicitly labeled open-problem environment in the paper (LaTeX environment type [open]). It appears between Theorem 5 and Theorem 7, in the context of product structure theory for graph classes with strongly sublinear separators.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
-    "confidence": "low",
-    "notes": "Exact statement text was not included in the provided input; only the environment label '[open] Open Problem 6' appeared in the theorem-environment list. Confidence is low because the statement could not be verified.",
+    "confidence": "high",
+    "notes": "",
     "arxiv_id": "2208.10074",
     "paper_title": "Product structure of graph classes with strongly sublinear separators",
     "paper_authors": [
@@ -9472,15 +9500,15 @@
   {
     "role": "states",
     "kind": "Conjecture",
-    "title": "Conjecture (Section 9, characterization of 2-extremal digraphs)",
-    "statement_text": "[Statement unavailable — Section 9 content absent from PDF extraction]",
-    "context_text": "The paper's main theorem (Theorem 1.8) characterizes $k$-extremal digraphs for $k = 1$ and $k \\geq 3$, but the authors were unable to handle the case $k = 2$ (i.e., digraphs $D$ with $\\vec{\\chi}(D) = \\lambda(D)+1 = 3$). The introduction explicitly states: 'in the last section, we discuss the case of 2-extremal digraphs and propose a conjecture for their characterization.'",
+    "title": "Conjecture 9.2",
+    "statement_text": "A digraph is 2-extremal if and only if it is in $\\mathcal{H}_2$.",
+    "context_text": "The paper defines $\\mathcal{H}_2$ as the smallest class containing symmetric odd cycles and closed under directed Hajós joins and 2-Hajós tree joins. Its main theorem characterizes $k$-extremal digraphs for $k=1$ and $k\\geq 3$; Conjecture 9.2 proposes the missing characterization for $k=2$.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
-    "confidence": "low",
-    "notes": "PDF extraction truncated after Section 2; Sections 3–9 are absent or garbled (only arXiv ID strings appear). The introduction announces a conjecture in Section 9 for 2-extremal digraphs, but the verbatim statement is unavailable.",
+    "confidence": "high",
+    "notes": "Statement restored from Conjecture 9.2 in the complete cached PDF.",
     "arxiv_id": "2304.04690",
     "paper_title": "Digraph Colouring and Arc-Connectivity",
     "paper_authors": [
@@ -10287,14 +10315,7 @@
         "display": "Gwenaël Joret"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2307.02816",
-        "abs_url": "https://arxiv.org/abs/2307.02816",
-        "published": "2023-07-06",
-        "title": "The grid-minor theorem revisited"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -10384,14 +10405,7 @@
         "display": "Jacob Fox"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2207.07775",
-        "abs_url": "https://arxiv.org/abs/2207.07775",
-        "published": "2023-06-27",
-        "title": "Ramsey multiplicity and the Turán coloring"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -11558,14 +11572,7 @@
         "display": "Bojan Mohar"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2210.13720",
-        "abs_url": "https://arxiv.org/abs/2210.13720",
-        "published": "2022-10-25",
-        "title": "Graphs of Linear Growth have Bounded Treewidth"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -12017,20 +12024,7 @@
         "display": "Sophie Spirkl"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2201.08204",
-        "abs_url": "https://arxiv.org/abs/2201.08204",
-        "published": "2022-09-15",
-        "title": "A counterexample to a conjecture about triangle-free induced subgraphs of graphs with large chromatic number"
-      },
-      {
-        "arxiv_id": "2201.08204",
-        "abs_url": "https://arxiv.org/abs/2201.08204",
-        "published": "2022-09-15",
-        "title": "A counterexample to a conjecture about triangle-free induced subgraphs of graphs with large chromatic number"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -12219,14 +12213,7 @@
         "display": "Jacob Fox"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2108.00991",
-        "abs_url": "https://arxiv.org/abs/2108.00991",
-        "published": "2022-08-07",
-        "title": "Threshold Ramsey multiplicity for paths and even cycles"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -12755,14 +12742,7 @@
         "display": "Sophie Spirkl"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2204.10119",
-        "abs_url": "https://arxiv.org/abs/2204.10119",
-        "published": "2022-04-21",
-        "title": "Bipartite graphs with no $K_6$ minor"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -13116,14 +13096,7 @@
         "display": "Sophie Spirkl"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2202.09118",
-        "abs_url": "https://arxiv.org/abs/2202.09118",
-        "published": "2022-02-18",
-        "title": "Polynomial bounds for chromatic number VII. Disjoint holes"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -13889,14 +13862,7 @@
         "display": "Zdeněk Dvořák"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "1907.04066",
-        "abs_url": "https://arxiv.org/abs/1907.04066",
-        "published": "2021-10-25",
-        "title": "Coloring count cones of planar graphs"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -14109,14 +14075,7 @@
         "display": "Bojan Mohar"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2103.05036",
-        "abs_url": "https://arxiv.org/abs/2103.05036",
-        "published": "2021-10-06",
-        "title": "Random 2-cell embeddings of multistars"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -15918,20 +15877,7 @@
         "display": "Sophie Spirkl"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "1810.00058",
-        "abs_url": "https://arxiv.org/abs/1810.00058",
-        "published": "2020-12-07",
-        "title": "Sparse graphs with no polynomial-sized anticomplete pairs"
-      },
-      {
-        "arxiv_id": "1810.00058",
-        "abs_url": "https://arxiv.org/abs/1810.00058",
-        "published": "2020-12-07",
-        "title": "Sparse graphs with no polynomial-sized anticomplete pairs"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -16013,14 +15959,7 @@
         "display": "Sophie Spirkl"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "1902.10878",
-        "abs_url": "https://arxiv.org/abs/1902.10878",
-        "published": "2020-12-07",
-        "title": "Concatenating bipartite graphs"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -16553,20 +16492,7 @@
         "display": "Marthe Bonamy"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "2009.12189",
-        "abs_url": "https://arxiv.org/abs/2009.12189",
-        "published": "2020-09-25",
-        "title": "Fractional vertex-arboricity of planar graphs"
-      },
-      {
-        "arxiv_id": "2009.12189",
-        "abs_url": "https://arxiv.org/abs/2009.12189",
-        "published": "2020-09-25",
-        "title": "Fractional vertex-arboricity of planar graphs"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -17693,14 +17619,7 @@
         "display": "Zdeněk Dvořák"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "0911.0885",
-        "abs_url": "https://arxiv.org/abs/0911.0885",
-        "published": "2020-04-15",
-        "title": "Three-coloring triangle-free graphs on surfaces V. Coloring planar graphs with distant anomalies"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -18001,14 +17920,14 @@
     "role": "states",
     "kind": "Informal",
     "title": "Informal Conjecture (outerplanar strongly perfect graphs)",
-    "statement_text": "While obtaining a complete list of minimal non-strongly-perfect graphs appears to be out of reach, one might conjecture that the characterization of outerplanar strongly perfect graphs can be obtained [statement truncated in PDF source].",
+    "statement_text": "While obtaining a complete list of minimal non-strongly-perfect graphs appears to be out of reach, one might conjecture that the characterization of outerplanar strongly perfect graphs can be obtained through the minimal examples given in this paper.",
     "context_text": "At the end of the paper the authors remark that a full characterisation of minimal non-strongly-perfect graphs is currently intractable, but suggest that restricting to the outerplanar setting may be a more approachable subproblem.",
     "attributed_to": "paper authors",
     "attributed_year": null,
     "paper_contribution": "",
     "opg_lookup": false,
-    "confidence": "low",
-    "notes": "PDF extraction truncates the sentence at 'can be obtai'; the complete statement of the conjecture is not recoverable from the source. Confidence set to low due to truncation.",
+    "confidence": "medium",
+    "notes": "PDF source; the complete final-page sentence was verified in the cached paper.",
     "arxiv_id": "2003.01846",
     "paper_title": "New Examples of Minimal Non-Strongly-Perfect Graphs",
     "paper_authors": [
@@ -20904,38 +20823,7 @@
         "display": "Zdeněk Dvořák"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "1612.08698",
-        "abs_url": "https://arxiv.org/abs/1612.08698",
-        "published": "2018-11-17",
-        "title": "List coloring with requests"
-      },
-      {
-        "arxiv_id": "1612.08698",
-        "abs_url": "https://arxiv.org/abs/1612.08698",
-        "published": "2018-11-17",
-        "title": "List coloring with requests"
-      },
-      {
-        "arxiv_id": "1612.08698",
-        "abs_url": "https://arxiv.org/abs/1612.08698",
-        "published": "2018-11-17",
-        "title": "List coloring with requests"
-      },
-      {
-        "arxiv_id": "1612.08698",
-        "abs_url": "https://arxiv.org/abs/1612.08698",
-        "published": "2018-11-17",
-        "title": "List coloring with requests"
-      },
-      {
-        "arxiv_id": "1612.08698",
-        "abs_url": "https://arxiv.org/abs/1612.08698",
-        "published": "2018-11-17",
-        "title": "List coloring with requests"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -21162,14 +21050,7 @@
         "display": "Sophie Spirkl"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "1810.00811",
-        "abs_url": "https://arxiv.org/abs/1810.00811",
-        "published": "2018-10-01",
-        "title": "Caterpillars in Erdős-Hajnal"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -21390,14 +21271,7 @@
         "display": "Bojan Mohar"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "1808.01605",
-        "abs_url": "https://arxiv.org/abs/1808.01605",
-        "published": "2018-08-05",
-        "title": "Triangle-free subgraphs with large fractional chromatic number"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -22289,14 +22163,7 @@
         "display": "Paul Seymour"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "1509.06563",
-        "abs_url": "https://arxiv.org/abs/1509.06563",
-        "published": "2018-02-12",
-        "title": "Induced subgraphs of graphs with large chromatic number. IV. Consecutive holes"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -22391,14 +22258,7 @@
         "display": "Stéphan Thomassé"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "1701.03366",
-        "abs_url": "https://arxiv.org/abs/1701.03366",
-        "published": "2018-02-07",
-        "title": "Additive bases and flows in graphs"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -23104,14 +22964,7 @@
         "display": "Zdeněk Dvořák"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "1706.00337",
-        "abs_url": "https://arxiv.org/abs/1706.00337",
-        "published": "2017-06-09",
-        "title": "Triangle-free graphs of tree-width t are ceil((t + 3)/2)-colorable"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -23761,14 +23614,7 @@
         "display": "Pierre Aboulker"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "1505.01616",
-        "abs_url": "https://arxiv.org/abs/1505.01616",
-        "published": "2016-10-14",
-        "title": "Colouring graphs with constraints on connectivity"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -24378,14 +24224,7 @@
         "display": "Paul Seymour"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "1608.03040",
-        "abs_url": "https://arxiv.org/abs/1608.03040",
-        "published": "2016-08-10",
-        "title": "Majority Colourings of Digraphs"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -24484,14 +24323,7 @@
         "display": "Paul Seymour"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "1608.03040",
-        "abs_url": "https://arxiv.org/abs/1608.03040",
-        "published": "2016-08-10",
-        "title": "Majority Colourings of Digraphs"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",
@@ -24686,14 +24518,7 @@
         "display": "Pierre Aboulker"
       }
     ],
-    "also_stated_in": [
-      {
-        "arxiv_id": "1606.06011",
-        "abs_url": "https://arxiv.org/abs/1606.06011",
-        "published": "2016-06-20",
-        "title": "A new class of graphs that satisfies the Chen-Chvátal Conjecture"
-      }
-    ]
+    "also_stated_in": []
   },
   {
     "role": "states",

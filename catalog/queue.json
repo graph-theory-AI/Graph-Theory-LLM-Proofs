@@ -1,5 +1,77 @@
 [
   {
+    "rank_hardest": 0,
+    "score": 1.0,
+    "tier": 1,
+    "lean": "prove",
+    "status": "open",
+    "id": "2308.15387__02",
+    "title_md": "Question 4.4",
+    "paper": "The power of many colours",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.15387__02/"
+  },
+  {
+    "rank_hardest": 0,
+    "score": 1.0,
+    "tier": 1,
+    "lean": "prove",
+    "status": "open",
+    "id": "2308.15387__03",
+    "title_md": "Question 4.5",
+    "paper": "The power of many colours",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.15387__03/"
+  },
+  {
+    "rank_hardest": 0,
+    "score": 1.0,
+    "tier": 1,
+    "lean": "prove",
+    "status": "open",
+    "id": "2308.15387__04",
+    "title_md": "Question 4.6",
+    "paper": "The power of many colours",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.15387__04/"
+  },
+  {
+    "rank_hardest": 0,
+    "score": 1.0,
+    "tier": 1,
+    "lean": "prove",
+    "status": "open",
+    "id": "2309.04460__01",
+    "title_md": "Question 10.2",
+    "paper": "Essentially tight bounds for rainbow cycles in proper edge-colourings",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2309.04460__01/"
+  },
+  {
+    "rank_hardest": 0,
+    "score": 1.0,
+    "tier": 1,
+    "lean": "prove",
+    "status": "open",
+    "id": "2309.04460__02",
+    "title_md": "Question 10.3",
+    "paper": "Essentially tight bounds for rainbow cycles in proper edge-colourings",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2309.04460__02/"
+  },
+  {
+    "rank_hardest": 0,
+    "score": 1.0,
+    "tier": 1,
+    "lean": "prove",
+    "status": "open",
+    "id": "2309.04460__03",
+    "title_md": "Question 10.4",
+    "paper": "Essentially tight bounds for rainbow cycles in proper edge-colourings",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2309.04460__03/"
+  },
+  {
     "rank_hardest": 686,
     "score": 1.45,
     "tier": 1,
@@ -1482,7 +1554,7 @@
     "lean": "prove",
     "status": "open",
     "id": "2304.04690__00",
-    "title_md": "[Conjecture (Section 9, characterization of 2-extremal digraphs)](https://arxiv.org/abs/2304.04690)",
+    "title_md": "[Conjecture 9.2](https://arxiv.org/abs/2304.04690)",
     "paper": "Digraph Colouring and Arc-Connectivity",
     "source": "arxiv",
     "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2304.04690__00/"

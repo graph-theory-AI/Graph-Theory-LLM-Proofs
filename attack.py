@@ -27,8 +27,19 @@ LOCK_PATH = ATTACKS / "spend.lock"
 QUEUE_PATH = CATALOG / "queue.json"
 RANKING_PATH = CATALOG / "ARXIV_OPEN_DIFFICULTY_RANKING.md"
 
+# Restored by mlelarge/graph-conjectures#3; not yet in the difficulty ranking.
+RECOVERED_UNRANKED_IDS = (
+    "2308.15387__02",
+    "2308.15387__03",
+    "2308.15387__04",
+    "2309.04460__01",
+    "2309.04460__02",
+    "2309.04460__03",
+)
+
 _THREAD_LOCK = threading.Lock()
 _PRINT_LOCK = threading.Lock()
+_CATALOG_INDEX: dict[str, dict] | None = None
 
 MODEL = "gpt-5.6-sol"
 SITE_ARXIV = "https://mlelarge.github.io/graph-conjectures/arxiv/{id}/"
@@ -243,13 +254,17 @@ def try_reserve(max_output_tokens: int) -> tuple[bool, float, dict]:
             return False, amount, rem
         need_eur = usd_to_eur(amount, spend)
         if rem["remaining_usable_eur"] < need_eur:
-            spend["stopped"] = True
-            spend["stop_reason"] = (
-                f"preflight refused: remaining usable €{rem['remaining_usable_eur']:.2f} "
-                f"< reserve €{need_eur:.2f} (${amount:.2f})"
-            )
-            save_spend(spend)
-            return False, amount, remaining(spend)
+            # Only latch stopped when nothing in flight can free reserve.
+            # Otherwise leftover after cheap actuals would be stranded.
+            if int(spend.get("in_flight", 0)) == 0:
+                spend["stopped"] = True
+                spend["stop_reason"] = (
+                    f"preflight refused: remaining usable €{rem['remaining_usable_eur']:.2f} "
+                    f"< reserve €{need_eur:.2f} (${amount:.2f})"
+                )
+                save_spend(spend)
+                rem = remaining(spend)
+            return False, amount, rem
         spend["reserved_usd"] = round(spend.get("reserved_usd", 0.0) + amount, 6)
         spend["in_flight"] = int(spend.get("in_flight", 0)) + 1
         save_spend(spend)
@@ -317,7 +332,49 @@ def parse_ranking() -> list[dict]:
         )
     # Attack easiest first (lowest score / highest rank_hardest).
     rows.sort(key=lambda r: (r["tier"], r["score"], -r["rank_hardest"]))
-    return [r for r in rows if r["status"] in {"open", "partial"}]
+    rows = [r for r in rows if r["status"] in {"open", "partial"}]
+    extras: list[dict] = []
+    idx = catalog_index()
+    ranked_ids = {r["id"] for r in rows}
+    for rec_id in RECOVERED_UNRANKED_IDS:
+        if rec_id in ranked_ids:
+            continue
+        rec = idx.get(rec_id)
+        if not rec:
+            continue
+        extras.append(
+            {
+                "rank_hardest": 0,
+                "score": 1.0,
+                "tier": 1,
+                "lean": "prove",
+                "status": "open",
+                "id": rec_id,
+                "title_md": rec.get("title") or rec_id,
+                "paper": rec.get("paper_title") or "",
+                "source": "arxiv",
+                "url": SITE_ARXIV.format(id=rec_id),
+            }
+        )
+    return extras + rows
+
+
+def catalog_index() -> dict[str, dict]:
+    """Map catalog ids (`arxiv_id__NN`) to records from arxiv_conjectures.json."""
+    global _CATALOG_INDEX
+    if _CATALOG_INDEX is not None:
+        return _CATALOG_INDEX
+    path = CATALOG / "arxiv_conjectures.json"
+    data = json.loads(path.read_text())
+    by_arxiv: dict[str, list[dict]] = {}
+    for rec in data:
+        by_arxiv.setdefault(rec["arxiv_id"], []).append(rec)
+    out: dict[str, dict] = {}
+    for arxiv_id, recs in by_arxiv.items():
+        for i, rec in enumerate(recs):
+            out[f"{arxiv_id}__{i:02d}"] = rec
+    _CATALOG_INDEX = out
+    return out
 
 
 def attacked_ids() -> set[str]:
@@ -405,6 +462,7 @@ def fetch_dossier(rec: dict) -> dict:
             abstract = abstract[:6000]
         except Exception as exc:  # noqa: BLE001
             abstract = f"(failed to fetch arXiv abs: {exc})"
+    cat = catalog_index().get(rec["id"]) or {}
     return {
         "id": rec["id"],
         "url": page_url,
@@ -416,17 +474,31 @@ def fetch_dossier(rec: dict) -> dict:
         "lean": rec.get("lean"),
         "status": rec.get("status"),
         "paper": rec.get("paper"),
+        "catalog_title": cat.get("title") or "",
+        "statement_text": (cat.get("statement_text") or "")[:8000],
+        "context_text": (cat.get("context_text") or "")[:4000],
     }
 
 
 def build_prompt(dossier: dict) -> str:
+    extracted = ""
+    stmt = (dossier.get("statement_text") or "").strip()
+    if stmt:
+        ctx = (dossier.get("context_text") or "").strip()
+        extracted = (
+            "\n=== Extracted statement (catalog JSON) ===\n"
+            f"Title: {dossier.get('catalog_title') or ''}\n"
+            f"{stmt}\n"
+        )
+        if ctx:
+            extracted += f"\nContext:\n{ctx}\n"
     return f"""Attack the following open graph-theory problem.
 
 Catalog id: {dossier['id']}
 Catalog status: {dossier.get('status')} (triage tier {dossier.get('tier')}, lean {dossier.get('lean')})
 Catalog page: {dossier['url']}
 Source paper: {dossier.get('paper')} (arXiv:{dossier.get('arxiv_id')})
-
+{extracted}
 === Catalog page (statement + literature review) ===
 {dossier['page_text']}
 
@@ -630,7 +702,10 @@ def attack_one(rec: dict, max_out: int, timeout_s: int, force: bool = False) -> 
     )
     try:
         dossier = fetch_dossier(rec)
-        if (not force) and looks_incomplete(dossier["page_text"]):
+        local_stmt = dossier.get("statement_text") or ""
+        page_incomplete = looks_incomplete(dossier["page_text"])
+        local_ok = bool(local_stmt.strip()) and not looks_incomplete(local_stmt)
+        if (not force) and page_incomplete and not local_ok:
             (out_dir / "skipped.json").write_text(
                 json.dumps(
                     {
@@ -743,17 +818,45 @@ def cmd_run(args: argparse.Namespace) -> None:
             break
 
 
+def _unclaim(rec_id: str) -> None:
+    claimed = ATTACKS / rec_id / "claimed.json"
+    try:
+        claimed.unlink()
+    except FileNotFoundError:
+        pass
+
+
 def _sweep_worker(deadline: float, max_out: int, timeout_s: int) -> None:
     while time.time() < deadline:
         spend = load_spend()
+        rem = remaining(spend)
+        need_eur = usd_to_eur(spend.get("conservative_max_usd_per_call", 3.5), spend)
+        if rem["remaining_usable_eur"] < need_eur:
+            if rem["in_flight"] == 0:
+                return
+            time.sleep(20)
+            continue
         if spend.get("stopped"):
-            return
+            with SpendLock():
+                s = load_spend()
+                r = remaining(s)
+                if r["remaining_usable_eur"] >= need_eur:
+                    s["stopped"] = False
+                    s["stop_reason"] = None
+                    save_spend(s)
+                elif r["in_flight"] == 0:
+                    return
+                else:
+                    time.sleep(20)
+                    continue
         rec = claim_next()
         if rec is None:
             return
         tag = attack_one(rec, max_out=max_out, timeout_s=timeout_s, force=False)
         if tag == "budget":
-            return
+            _unclaim(rec["id"])
+            time.sleep(10)
+            continue
 
 
 def cmd_sweep(args: argparse.Namespace) -> None:
