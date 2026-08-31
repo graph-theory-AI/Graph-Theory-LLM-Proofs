@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 458,
+    "score": 2.65,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1703.05380__00",
+    "title_md": "[Conjecture 1.1](https://arxiv.org/abs/1703.05380)",
+    "paper": "The Interactive Sum Choice Number of Graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1703.05380__00/"
+  },
+  "dossier_meta": {
+    "id": "1703.05380__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1703.05380__00/",
+    "arxiv_id": "1703.05380",
+    "tier": 3,
+    "score": 2.65,
+    "lean": "prove",
+    "status": "open",
+    "paper": "The Interactive Sum Choice Number of Graphs"
+  },
+  "started": "2026-08-31T11:57:37Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

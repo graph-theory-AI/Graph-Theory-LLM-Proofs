@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for inversion-number-one tournaments, the cyclic C5, and a broad class controlled by a 3-vertex-strong module-free strong component.",
+  "would_publish": false,
+  "caveats": "The general low-connectivity and decomposable cases remain open; perturbations are assumed nonempty.",
+  "id": "2506.08810__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.290388,
+  "eur": 1.114379,
+  "elapsed_s": 1679.8,
+  "status": "completed",
+  "response_id": "resp_0f013637804deb42006a9564154cb887d298f962a9ba732e48",
+  "when": "2026-08-31T11:51:00Z"
+}

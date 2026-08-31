@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 459,
+    "score": 2.65,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "1807.04969__00",
+    "title_md": "[Open Problem (constant c vs. \\\\",
+    "paper": "H\\\\",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1807.04969__00/"
+  },
+  "dossier_meta": {
+    "id": "1807.04969__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1807.04969__00/",
+    "arxiv_id": "1807.04969",
+    "tier": 3,
+    "score": 2.65,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "H\\\\"
+  },
+  "started": "2026-08-31T11:57:37Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

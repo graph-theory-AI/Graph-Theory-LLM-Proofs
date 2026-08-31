@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds with an explicit polynomial in t for every fixed \u03bc on every fixed-chromatic-number class, in particular for all bipartite graphs.",
+  "would_publish": false,
+  "caveats": "The passage from bounded chromatic number to arbitrary graphs remains open; the argument deliberately bounds treewidth, which is too crude for dense graphs.",
+  "id": "2511.03864__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.597552,
+  "eur": 1.379646,
+  "elapsed_s": 1775.7,
+  "status": "completed",
+  "response_id": "resp_06594b233469d82f006a95647a583c87d2bff45612c1a1f368",
+  "when": "2026-08-31T11:54:17Z"
+}

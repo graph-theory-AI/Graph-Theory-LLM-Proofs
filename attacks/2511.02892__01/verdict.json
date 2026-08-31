@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The a.a.s. question remains unresolved, but the coefficient is exactly a signed count of proper 3-colourings, yielding cancellation criteria, an infinite family of 3-colourable zero examples, and an exact configuration-model second moment.",
+  "would_publish": false,
+  "caveats": "No anti-concentration estimate is obtained for the uniform simple 4-regular model, and the explicit zero family is highly non-random.",
+  "id": "2511.02892__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.987228,
+  "eur": 0.85257,
+  "elapsed_s": 1798.0,
+  "status": "completed",
+  "response_id": "resp_04dc29d743105ba4006a956468823887d280f33e2b3d58a2a9",
+  "when": "2026-08-31T11:54:20Z"
+}

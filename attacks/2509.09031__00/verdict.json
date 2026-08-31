@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For finite graphs the conjecture remains unresolved here, but fixed-map straightening requires additive error linear in girth, while the literal infinite-graph version has a growth-entropy counterexample.",
+  "would_publish": false,
+  "caveats": "The entropy counterexample is out of scope if the source assumes finite graphs, and the finite construction does not exclude a different map or a different target in the class.",
+  "id": "2509.09031__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.49046,
+  "eur": 1.287161,
+  "elapsed_s": 1882.5,
+  "status": "completed",
+  "response_id": "resp_07532644f2ea1893006a95643a7d8c87d28396f45ecb0c77f2",
+  "when": "2026-08-31T11:54:59Z"
+}

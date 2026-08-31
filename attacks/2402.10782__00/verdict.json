@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general conjecture remains open, but it holds for witnesses with bounded one-sided error, bounded score imbalance, and a learnable bounded multipartite-plus-one-sided-error structure.",
+  "would_publish": false,
+  "caveats": "The additional structural parameters need not be bounded in terms of k, and failure of the partial algorithms does not certify the original lower bound.",
+  "id": "2402.10782__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.557268,
+  "eur": 1.344857,
+  "elapsed_s": 1843.4,
+  "status": "completed",
+  "response_id": "resp_06e0435f9ea99f94006a9564c769f887d28edb3fb930538067",
+  "when": "2026-08-31T11:56:42Z"
+}

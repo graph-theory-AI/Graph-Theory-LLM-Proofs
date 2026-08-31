@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "For the natural formulation that every convex drawing should admit a pseudocircular extension, I prove a one-page special case, an NP certificate theorem, and a universal four-intersection completion, but not the required two-intersection result.",
+  "would_publish": false,
+  "caveats": "The catalog gives a characterization request rather than a formal conjecture, and exact conventions for carrier curves at common graph vertices must be fixed.",
+  "id": "2005.12568__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.010232,
+  "eur": 0.872436,
+  "elapsed_s": 2089.9,
+  "status": "completed",
+  "response_id": "resp_076f1076d5c04eec006a95632fa96487d2a37efec130e5ff56",
+  "when": "2026-08-31T11:54:01Z"
+}

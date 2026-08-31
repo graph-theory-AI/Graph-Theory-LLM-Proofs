@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 464,
+    "score": 2.6,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2601.13072__00",
+    "title_md": "[Problem 1](https://arxiv.org/abs/2601.13072)",
+    "paper": "Faster 3-colouring algorithm for graphs of diameter 3",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2601.13072__00/"
+  },
+  "dossier_meta": {
+    "id": "2601.13072__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2601.13072__00/",
+    "arxiv_id": "2601.13072",
+    "tier": 3,
+    "score": 2.6,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Faster 3-colouring algorithm for graphs of diameter 3"
+  },
+  "started": "2026-08-31T11:57:37Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

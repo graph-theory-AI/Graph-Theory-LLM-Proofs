@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 465,
+    "score": 2.6,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2201.08204__00",
+    "title_md": "[Question 3.1](https://arxiv.org/abs/2201.08204)",
+    "paper": "A counterexample to a conjecture about triangle-free induced subgraphs \u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2201.08204__00/"
+  },
+  "dossier_meta": {
+    "id": "2201.08204__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2201.08204__00/",
+    "arxiv_id": "2201.08204",
+    "tier": 3,
+    "score": 2.6,
+    "lean": "prove",
+    "status": "open",
+    "paper": "A counterexample to a conjecture about triangle-free induced subgraphs \u2026"
+  },
+  "started": "2026-08-31T11:57:37Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

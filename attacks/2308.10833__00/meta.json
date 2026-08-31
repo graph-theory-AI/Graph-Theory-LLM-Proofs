@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 454,
+    "score": 2.65,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "2308.10833__00",
+    "title_md": "[Informal Problem: extending the $\\sqrt{m}$ Ramsey bound to more than tw\u2026](https://arxiv.org/abs/2308.10833)",
+    "paper": "Ramsey numbers of hypergraphs of a given size",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.10833__00/"
+  },
+  "dossier_meta": {
+    "id": "2308.10833__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.10833__00/",
+    "arxiv_id": "2308.10833",
+    "tier": 3,
+    "score": 2.65,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Ramsey numbers of hypergraphs of a given size"
+  },
+  "started": "2026-08-31T11:57:37Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

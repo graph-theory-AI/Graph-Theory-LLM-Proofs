@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 455,
+    "score": 2.65,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2207.07775__01",
+    "title_md": "[Conjecture 5.3](https://arxiv.org/abs/2207.07775)",
+    "paper": "Ramsey multiplicity and the Tur\u00e1n coloring",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2207.07775__01/"
+  },
+  "dossier_meta": {
+    "id": "2207.07775__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2207.07775__01/",
+    "arxiv_id": "2207.07775",
+    "tier": 3,
+    "score": 2.65,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Ramsey multiplicity and the Tur\u00e1n coloring"
+  },
+  "started": "2026-08-31T11:57:37Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

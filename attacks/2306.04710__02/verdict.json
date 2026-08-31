@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the intended oriented-graph convention, I obtain an exact multipartite/link reformulation, an O(sqrt(n)) upper bound, several bounded special cases, and examples of dichromatic number four, but neither a constant bound nor an unbounded counterexample family.",
+  "would_publish": false,
+  "caveats": "The quantitative bound uses the established fact that Delta(1,2,2) is a hero in tournaments; novelty of these elementary partial results has not been checked.",
+  "id": "2306.04710__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.88702,
+  "eur": 1.62963,
+  "elapsed_s": 2266.7,
+  "status": "completed",
+  "response_id": "resp_0f7981d9ff8627dd006a9561ee636087d290b2ec5847497d3c",
+  "when": "2026-08-31T11:51:36Z"
+}

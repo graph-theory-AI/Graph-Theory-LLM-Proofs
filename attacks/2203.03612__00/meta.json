@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 453,
+    "score": 2.65,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2203.03612__00",
+    "title_md": "[Girth Conjecture (strengthening of Theorem 3)](https://arxiv.org/abs/2203.03612)",
+    "paper": "Induced subgraphs of induced subgraphs of large chromatic number",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2203.03612__00/"
+  },
+  "dossier_meta": {
+    "id": "2203.03612__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2203.03612__00/",
+    "arxiv_id": "2203.03612",
+    "tier": 3,
+    "score": 2.65,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Induced subgraphs of induced subgraphs of large chromatic number"
+  },
+  "started": "2026-08-31T11:57:37Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

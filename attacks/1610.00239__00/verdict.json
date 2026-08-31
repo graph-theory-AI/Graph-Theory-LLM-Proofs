@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A Gaussian quotient map, together with a localized Gaussian-width estimate for an absolute convex hull, gives the target dimension and uniformly bounded output norms.",
+  "would_publish": true,
+  "caveats": "Absolute constants absorb the floor; the proof uses the standard Gordon Gaussian min-max lemma, stated explicitly below.",
+  "id": "1610.00239__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.492212,
+  "eur": 1.288674,
+  "elapsed_s": 1702.0,
+  "status": "completed",
+  "response_id": "resp_0cf654811a7acb0b006a95656d546487d2b8907a8a95256c05",
+  "when": "2026-08-31T11:57:07Z"
+}

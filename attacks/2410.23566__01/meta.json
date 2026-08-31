@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 463,
+    "score": 2.6,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "partial",
+    "id": "2410.23566__01",
+    "title_md": "[Conjecture 7](https://arxiv.org/abs/2410.23566)",
+    "paper": "Blow-ups and extensions of trees in tournaments",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2410.23566__01/"
+  },
+  "dossier_meta": {
+    "id": "2410.23566__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2410.23566__01/",
+    "arxiv_id": "2410.23566",
+    "tier": 3,
+    "score": 2.6,
+    "lean": "balanced",
+    "status": "partial",
+    "paper": "Blow-ups and extensions of trees in tournaments"
+  },
+  "started": "2026-08-31T11:57:37Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
