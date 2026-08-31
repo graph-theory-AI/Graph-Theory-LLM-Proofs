@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 497,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2204.12330__01",
+    "title_md": "[Question (explicit group with infinite twin-width)](https://arxiv.org/abs/2204.12330)",
+    "paper": "Twin-width VII: groups",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.12330__01/"
+  },
+  "dossier_meta": {
+    "id": "2204.12330__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.12330__01/",
+    "arxiv_id": "2204.12330",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Twin-width VII: groups"
+  },
+  "started": "2026-08-31T11:08:45Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

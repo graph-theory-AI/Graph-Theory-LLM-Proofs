@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The unrestricted value remains open, but affine-linear strategies over every field satisfy q\u2264n for n\u22653, so attaining the upper bound n+1 would necessarily require a genuinely nonlinear strategy.",
+  "would_publish": false,
+  "caveats": "The nonlinear problem is untouched; no SAT computation was run, and overlap with the cited 2021 linear work was not checked.",
+  "id": "1812.09752__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.149068,
+  "eur": 0.992335,
+  "elapsed_s": 1388.2,
+  "status": "completed",
+  "response_id": "resp_073143f7ec26a984006a955a72069487d2a9de3b513cf14784",
+  "when": "2026-08-31T11:05:00Z"
+}

@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 498,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2205.08181__00",
+    "title_md": "[Belief on 4-vertex-critical arrangement graphs](https://arxiv.org/abs/2205.08181)",
+    "paper": "Coloring circle arrangements: New $4$-chromatic planar graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2205.08181__00/"
+  },
+  "dossier_meta": {
+    "id": "2205.08181__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2205.08181__00/",
+    "arxiv_id": "2205.08181",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Coloring circle arrangements: New $4$-chromatic planar graphs"
+  },
+  "started": "2026-08-31T11:07:41Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "Although the full problem remains open, on the projective plane a digraph is 5-dicolourable exactly when it contains no bidirected K6, and both values admit a sparse-digon kernel on every fixed surface.",
+  "would_publish": false,
+  "caveats": "The unrestricted k=4 case and k=5 on other nonspherical surfaces remain unresolved; the projective-plane argument uses the standard theorem that K6 is the only 6-critical projective-planar graph.",
+  "id": "2102.01034__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.218568,
+  "eur": 1.052355,
+  "elapsed_s": 1486.1,
+  "status": "completed",
+  "response_id": "resp_0dbe7cb3c7b46f61006a9559b0900487d2b0918fa73beb42f1",
+  "when": "2026-08-31T11:03:26Z"
+}

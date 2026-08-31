@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "For every orientation of the star K_{1,n} with n at least 3, I give a planarity-preserving reduction from signed Planar NAE-4-SAT to 2-F-PFC, but I do not extend it to all nontrivial leaf-extensions of the star.",
+  "would_publish": false,
+  "caveats": "The exact-star reduction is rigorous, but the precise NP-complete source variant should be checked against a primary citation; the gadgets are not necessarily acyclic.",
+  "id": "2102.07705__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.942444,
+  "eur": 0.813895,
+  "elapsed_s": 1568.4,
+  "status": "completed",
+  "response_id": "resp_0413ebd6f6d0d39a006a9559ba88fc87d2b6bdac2c25608d05",
+  "when": "2026-08-31T11:04:58Z"
+}

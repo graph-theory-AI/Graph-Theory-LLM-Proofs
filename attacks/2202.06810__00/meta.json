@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 499,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2202.06810__00",
+    "title_md": "[Open case of Theorem 3 for odd $n$](https://arxiv.org/abs/2202.06810)",
+    "paper": "Structured Codes of Graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.06810__00/"
+  },
+  "dossier_meta": {
+    "id": "2202.06810__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.06810__00/",
+    "arxiv_id": "2202.06810",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Structured Codes of Graphs"
+  },
+  "started": "2026-08-31T11:06:57Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

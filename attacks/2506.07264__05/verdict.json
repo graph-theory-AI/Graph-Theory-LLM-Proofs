@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A fourth-moment sum-of-squares certificate proves the outerplanar bound for several explicit degree regimes and the planar bound for a bounded-degree regime, while the natural high-degree extremal families are verified separately.",
+  "would_publish": false,
+  "caveats": "Neither conjecture is proved in full; no exhaustive computation of the remaining cases was performed.",
+  "id": "2506.07264__05",
+  "model": "gpt-5.6-sol",
+  "usd": 1.519044,
+  "eur": 1.311846,
+  "elapsed_s": 1612.0,
+  "status": "completed",
+  "response_id": "resp_0b43bcd7ce82caa0006a955a72093487d293057ef29743dc02",
+  "when": "2026-08-31T11:08:44Z"
+}

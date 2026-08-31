@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 500,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2103.15175__00",
+    "title_md": "[Conjecture on $R_\\ell(\\mathcal{H}_s, k)$](https://arxiv.org/abs/2103.15175)",
+    "paper": "Multicolor list Ramsey numbers grow exponentially",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2103.15175__00/"
+  },
+  "dossier_meta": {
+    "id": "2103.15175__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2103.15175__00/",
+    "arxiv_id": "2103.15175",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Multicolor list Ramsey numbers grow exponentially"
+  },
+  "started": "2026-08-31T11:05:08Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

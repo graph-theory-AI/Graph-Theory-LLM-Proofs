@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "I do not resolve the recursive exhaustion, but give exact quotient and dual formulations and, under the natural candidate hypotheses, prove that every non-diamond bichromatic-forbidding candidate has at least 13 vertices.",
+  "would_publish": false,
+  "caveats": "The prompt omits the formal definition of a 4-candidate and the three operations; the small-order theorem assumes the standard near-triangulation, degree, and no-separating-triangle hypotheses.",
+  "id": "2504.08327__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.14932,
+  "eur": 0.992553,
+  "elapsed_s": 1548.0,
+  "status": "completed",
+  "response_id": "resp_0d53e3e9c56db954006a955a722f3c87d2a42cf84a7b545164",
+  "when": "2026-08-31T11:07:40Z"
+}

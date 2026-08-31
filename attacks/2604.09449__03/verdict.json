@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the recolouring interpretation stated in the catalog, a midpoint-splicing and approximate-convexity argument improves the Hamilton-cycle upper bound from O(k^2) to O(k log k) in both complete and complete bipartite graphs.",
+  "would_publish": false,
+  "caveats": "The exact formal definition of f_h was not supplied, and optimality or literature novelty has not been checked.",
+  "id": "2604.09449__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.147028,
+  "eur": 0.990573,
+  "elapsed_s": 1200.0,
+  "status": "completed",
+  "response_id": "resp_0b911a1ed6e42284006a955b349c7087d2bc8ddc34d3b77328",
+  "when": "2026-08-31T11:05:08Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "An alteration argument gives ES_l(n) <= ceil(l(4 ES_n(n))^((n-1)/(n-2))), so the source bound yields a uniform linear-in-l upper bound matching the lower bound in its l-dependence.",
+  "would_publish": true,
+  "caveats": "The subexponential gap in n remains, and I have not independently checked whether this transfer argument already appears elsewhere.",
+  "id": "2405.03455__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.369392,
+  "eur": 0.319007,
+  "elapsed_s": 1235.0,
+  "status": "completed",
+  "response_id": "resp_009e05316ad4c8f9006a955a71ff5c87d2b697bf425d6c985a",
+  "when": "2026-08-31T11:02:27Z"
+}

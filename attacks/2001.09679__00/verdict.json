@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "medium",
+  "one_line": "A two-dimensional grid thickening of bounded-degree expanders attains expansion exponent 1/(2\u03b5)-1 while retaining separator exponent 1-\u03b5, closing Dvo\u0159\u00e1k's gap.",
+  "would_publish": true,
+  "caveats": "The construction and proof are new and unrefereed; literature priority has not been independently checked.",
+  "id": "2001.09679__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.28738,
+  "eur": 1.111781,
+  "elapsed_s": 1710.9,
+  "status": "completed",
+  "response_id": "resp_0e9dfe494b8f65c2006a9559a226a887d2a20fc821e2a8a1cd",
+  "when": "2026-08-31T11:06:56Z"
+}

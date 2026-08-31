@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 503,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2004.10180__01",
+    "title_md": "[Improvement of the bound in Theorem 1.12](https://arxiv.org/abs/2004.10180)",
+    "paper": "The regularity method for graphs with few 4-cycles",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2004.10180__01/"
+  },
+  "dossier_meta": {
+    "id": "2004.10180__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2004.10180__01/",
+    "arxiv_id": "2004.10180",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "The regularity method for graphs with few 4-cycles"
+  },
+  "started": "2026-08-31T11:03:26Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

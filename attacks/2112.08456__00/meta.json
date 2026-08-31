@@ -1,0 +1,30 @@
+{
+  "record": {
+    "rank_hardest": 501,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2112.08456__00",
+    "title_md": "[Question 9](https://arxiv.org/abs/2112.08456)",
+    "paper": "Edge Partitions of Complete Geometric Graphs (Part 2)",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2112.08456__00/"
+  },
+  "dossier_meta": {
+    "id": "2112.08456__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2112.08456__00/",
+    "arxiv_id": "2112.08456",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Edge Partitions of Complete Geometric Graphs (Part 2)"
+  },
+  "started": "2026-08-31T11:05:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
