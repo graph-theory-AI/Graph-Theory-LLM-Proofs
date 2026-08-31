@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "As written, the triangular prism is a diamond-free claw-free cubic graph with strong chromatic index 9, not 6.",
+  "would_publish": false,
+  "caveats": "If T(G) is restricted to simple cubic base graphs, that narrower conjecture is not refuted; the two stated formulations are then not equivalent.",
+  "id": "2511.02892__03",
+  "model": "gpt-5.6-sol",
+  "usd": 0.588148,
+  "eur": 0.507925,
+  "elapsed_s": 1905.9,
+  "status": "completed",
+  "response_id": "resp_0dd62f7823b3867a006a95735c188087d29058f1a488d7ca1f",
+  "when": "2026-08-31T12:59:57Z"
+}
