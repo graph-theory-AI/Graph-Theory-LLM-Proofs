@@ -1,0 +1,15 @@
+{
+  "verdict": "ill_posed",
+  "confidence": "high",
+  "one_line": "As written, the claim is elementary for every m at least 2 with n=1, while including m=1 makes it false.",
+  "would_publish": false,
+  "caveats": "The catalog statement almost certainly reverses an arrow or misplaces a quantifier.",
+  "id": "1705.02166__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.210144,
+  "eur": 0.217666,
+  "elapsed_s": 376.5,
+  "status": "completed",
+  "response_id": "resp_001aeb7f8cfa3990006a966297a8dc87d2a1e8af27cf7a4e8f",
+  "when": "2026-09-01T05:35:12Z"
+}

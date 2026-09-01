@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general 5/6 bound remains unresolved here, but it holds for all sparse cases and for every plane quadrangulation having a bipartition class of maximum degree at most three.",
+  "would_publish": false,
+  "caveats": "Dense quadrangulations with degree at least four occurring in both bipartition classes are not covered, and no counterexample is produced.",
+  "id": "1709.04036__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.296876,
+  "eur": 1.343297,
+  "elapsed_s": 1801.6,
+  "status": "completed",
+  "response_id": "resp_03d81dcd1274c662006a965c59665887d2bf47bea761357b30",
+  "when": "2026-09-01T05:32:18Z"
+}

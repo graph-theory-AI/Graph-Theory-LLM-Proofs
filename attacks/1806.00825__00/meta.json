@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 114,
+    "score": 3.6,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1806.00825__00",
+    "title_md": "[Conjecture 4](https://arxiv.org/abs/1806.00825)",
+    "paper": "Short rainbow cycles in graphs and matroids",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1806.00825__00/"
+  },
+  "dossier_meta": {
+    "id": "1806.00825__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1806.00825__00/",
+    "arxiv_id": "1806.00825",
+    "tier": 4,
+    "score": 3.6,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Short rainbow cycles in graphs and matroids",
+    "catalog_title": "Conjecture 4",
+    "statement_text": "Let $G$ be a simple $n$-vertex graph and $c$ be a colouring of $E(G)$ with $n$ colours, where each colour class has size at least $r$. Then $(G, c)$ contains a cycle $C$ of length at most $\\lceil n/r \\rceil$ such that no two incident edges of $C$ are the same colour.",
+    "context_text": "Introduced by the authors as a weakening of Aharoni's Conjecture 3 (the rainbow condition on the whole cycle is replaced by a proper-edge-colouring condition on incident pairs). The authors prove that Conjecture 4 implies the Caccetta-H\u00e4ggkvist conjecture via a direct colouring construction on the underlying undirected graph of a digraph."
+  },
+  "started": "2026-09-01T05:38:04Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

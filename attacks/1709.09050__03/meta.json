@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 115,
+    "score": 3.6,
+    "tier": 4,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1709.09050__03",
+    "title_md": "[Capture time bounds for higher genus graphs](https://arxiv.org/abs/1709.09050)",
+    "paper": "Topological directions in Cops and Robbers",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1709.09050__03/"
+  },
+  "dossier_meta": {
+    "id": "1709.09050__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1709.09050__03/",
+    "arxiv_id": "1709.09050",
+    "tier": 4,
+    "score": 3.6,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Topological directions in Cops and Robbers",
+    "catalog_title": "Capture time bounds for higher genus graphs",
+    "statement_text": "What are the bounds on the capture time for graphs of higher genus? If Schroeder's conjecture holds and $\\gamma(G) = g$, is it true that $\\mathrm{capt}_k(G) = O(n^{g+4})$ for every $k \\geq g+3$?",
+    "context_text": "The paper identifies bounding the capture time of graphs embedded on surfaces as an interesting open question. If Schroeder's conjecture holds, giving $c(G) \\leq g+3$ for genus-$g$ graphs, then a natural bound on $\\mathrm{capt}_k(G)$ would follow for $k \\geq g+3$."
+  },
+  "started": "2026-09-01T05:36:46Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

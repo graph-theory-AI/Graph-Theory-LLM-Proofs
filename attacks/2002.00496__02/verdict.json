@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but bounded deletion preserves dimension bounds, which yields planar packing closure and proves that the edge-sum of two copies of K4 is an unavoidable Kelly minor.",
+  "would_publish": false,
+  "caveats": "The horizontally subdivided K4 gadget and arbitrary connected Kelly chains remain unresolved here; standard established Erd\u0151s\u2013P\u00f3sa, treewidth-two dimension, and block-pasting theorems are used.",
+  "id": "2002.00496__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.466364,
+  "eur": 1.518852,
+  "elapsed_s": 1729.6,
+  "status": "completed",
+  "response_id": "resp_05d1724a30f1ba2f006a965dac463087d29180e543f724a95d",
+  "when": "2026-09-01T05:36:45Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 119,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2501.09839__00",
+    "title_md": "[Open question on Theorem 1.2 with $L=1$](https://arxiv.org/abs/2501.09839)",
+    "paper": "Asymptotic structure. I. Coarse tree-width",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2501.09839__00/"
+  },
+  "dossier_meta": {
+    "id": "2501.09839__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2501.09839__00/",
+    "arxiv_id": "2501.09839",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Asymptotic structure. I. Coarse tree-width",
+    "catalog_title": "Open question on Theorem 1.2 with $L=1$",
+    "statement_text": "We do not know whether 1.2 holds with $L=1$.",
+    "context_text": "Theorem 1.2 extends the result of Berger and Seymour (Theorem 1.1) from trees to graphs of bounded tree-width, establishing that a graph admitting a tree-decomposition whose bags are each contained in the union of a bounded number of balls of bounded radius admits an $(L,C)$-quasi-isometry to a graph of bounded tree-width. The authors note that unlike the tree case (where $L=1$ is achievable), it is unknown whether $L=1$ suffices in the general bounded-tree-width setting."
+  },
+  "started": "2026-09-01T05:32:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

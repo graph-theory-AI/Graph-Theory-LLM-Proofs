@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 116,
+    "score": 3.6,
+    "tier": 4,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1708.07369__00",
+    "title_md": "[Question 1.1](https://arxiv.org/abs/1708.07369)",
+    "paper": "Ramsey-nice families of graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1708.07369__00/"
+  },
+  "dossier_meta": {
+    "id": "1708.07369__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1708.07369__00/",
+    "arxiv_id": "1708.07369",
+    "tier": 4,
+    "score": 3.6,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Ramsey-nice families of graphs",
+    "catalog_title": "Question 1.1",
+    "statement_text": "Is it true that for any finite family of graphs $\\mathcal{F}$ that contains at least one forest, there exists a constant $k_0 = k_0(\\mathcal{F})$ such that $\\mathcal{F}$ is $k$-nice for all $k \\geq k_0$?",
+    "context_text": "It is easy to see that if $\\mathcal{F}$ contains no forest then it is not $k$-nice for any $k$. The question asks whether a converse holds: every family containing at least one forest is eventually $k$-nice. The paper proves this for all families containing a graph with at most 2 edges and for several two-graph families of 3-edge connected graphs."
+  },
+  "started": "2026-09-01T05:35:12Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "For every m,m' and every orientation F of K_{1,4}, the pair is not dichromatically finite: suitable locally transitive orientations of L(K_{n,n}) are claw-free, directed-triangle-free, and have dichromatic number \u03a9(\u221an).",
+  "would_publish": false,
+  "caveats": "This uses the standard induced-subdigraph meaning of F-free and the cyclic-composition definition of Delta; the supplied 2026 preprint title may overlap, so novelty is not asserted.",
+  "id": "2306.04710__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.544716,
+  "eur": 0.564214,
+  "elapsed_s": 1256.9,
+  "status": "completed",
+  "response_id": "resp_04dd3c1d3a591f90006a965e657ad887d2a4eb8251fc3594f8",
+  "when": "2026-09-01T05:31:58Z"
+}

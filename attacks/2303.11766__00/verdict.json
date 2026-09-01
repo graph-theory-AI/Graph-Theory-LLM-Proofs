@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but every forest has a linear chromatic bound under the stronger exclusion of K_{2,t}, with explicit polynomial bounds for stars in the original setting.",
+  "would_publish": false,
+  "caveats": "K_{2,t}-free is strictly stronger than K_{t,t}-free for t>=3, so the balanced multipartite case is not resolved.",
+  "id": "2303.11766__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.929,
+  "eur": 0.962253,
+  "elapsed_s": 1145.8,
+  "status": "completed",
+  "response_id": "resp_001273c45de0f34e006a9660fabb0487d2affbad008f9d9243",
+  "when": "2026-09-01T05:41:08Z"
+}

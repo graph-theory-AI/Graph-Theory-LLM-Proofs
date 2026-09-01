@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 120,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "balanced",
+    "status": "partial",
+    "id": "2508.14332__00",
+    "title_md": "[Open case: Coarse Menger Conjecture for c=2](https://arxiv.org/abs/2508.14332)",
+    "paper": "Asymptotic structure. IV. A counterexample to the weak coarse Menger co\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2508.14332__00/"
+  },
+  "dossier_meta": {
+    "id": "2508.14332__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2508.14332__00/",
+    "arxiv_id": "2508.14332",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "balanced",
+    "status": "partial",
+    "paper": "Asymptotic structure. IV. A counterexample to the weak coarse Menger co\u2026",
+    "catalog_title": "Open case: Coarse Menger Conjecture for c=2",
+    "statement_text": "It is unknown whether Conjecture 1.1 holds when $c = 2$: for all integers $k \\geq 1$ there exists $\\ell > 0$ such that for every graph $G$ and $S, T \\subseteq V(G)$, either there are $k$ paths between $S, T$ pairwise at distance at least $2$, or there is a set $X \\subseteq V(G)$ with $|X| \\leq k-1$ such that every $S$-$T$ path contains a vertex within distance $\\ell$ of some member of $X$.",
+    "context_text": "The authors note that the case $c = 3$ is of special interest because a positive result for $c = 3$ would imply one for all $c \\geq 3$ (via taking the $c$-th power of $G$). They explicitly remark that 'the conjecture remains open when $c = 2$, and we have nothing to say about that case in this paper.'"
+  },
+  "started": "2026-09-01T05:31:58Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

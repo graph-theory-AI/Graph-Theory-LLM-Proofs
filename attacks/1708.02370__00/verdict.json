@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "As literally stated, the conjecture fails for H = 2K_1, since td(H) = 1 but \u03c7*(M_H) = 1 > 0.",
+  "would_publish": false,
+  "caveats": "This exploits a disconnected edgeless excluded minor; the likely intended connected or td(H) at least 2 version remains open.",
+  "id": "1708.02370__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.231004,
+  "eur": 0.239273,
+  "elapsed_s": 525.5,
+  "status": "completed",
+  "response_id": "resp_08454cee38955efd006a9662aefa2087d29a2a91fb806df4f6",
+  "when": "2026-09-01T05:38:04Z"
+}

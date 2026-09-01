@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains unresolved, but it holds with polynomial bounds for graph expansions and loose forests, while component and pendant-edge reductions isolate the genuinely hard leafless cores.",
+  "would_publish": false,
+  "caveats": "No uniform exponent is obtained for linear cores of unbounded size or degree.",
+  "id": "2404.02021__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.234404,
+  "eur": 1.278589,
+  "elapsed_s": 1841.6,
+  "status": "completed",
+  "response_id": "resp_0617b7b0df65922a006a965c1f4f0887d2a2a8a76aa809913e",
+  "when": "2026-09-01T05:32:00Z"
+}

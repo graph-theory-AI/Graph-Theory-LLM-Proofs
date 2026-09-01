@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 118,
+    "score": 3.6,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1702.01607__01",
+    "title_md": "[Problem 4](https://arxiv.org/abs/1702.01607)",
+    "paper": "Coloring tournaments: from local to global",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1702.01607__01/"
+  },
+  "dossier_meta": {
+    "id": "1702.01607__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1702.01607__01/",
+    "arxiv_id": "1702.01607",
+    "tier": 4,
+    "score": 3.6,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Coloring tournaments: from local to global",
+    "catalog_title": "Problem 4",
+    "statement_text": "For every integer $k \\geq 1$, there exist integers $K$ and $\\ell$ such that every tournament $T$ with dominating number at least $K$ contains a subtournament with $\\ell$ vertices and dominating number at least $k$.",
+    "context_text": "Theorem 2 shows that sufficiently large dominating number forces a bounded-size subtournament of large chromatic number. The analogous statement with dominating number in place of chromatic number in the conclusion remains open; the note observes that replacing dominating-number hypothesis by large chromatic number alone fails for any $k \\geq 3$."
+  },
+  "started": "2026-09-01T05:32:19Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

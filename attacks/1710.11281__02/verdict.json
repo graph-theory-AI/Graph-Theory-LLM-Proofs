@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "medium",
+  "one_line": "Under the literal equal-speed continuous-time interpretation, a sufficiently small round sphere is caught trivially within radius 1/2, while an antipodal delayed-shadowing strategy keeps the robber a fixed positive distance from one cop forever.",
+  "would_publish": false,
+  "caveats": "This addresses the same-team, unnormalized continuous-time formulation; a normalized or turn-based version may remain open.",
+  "id": "1710.11281__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.551024,
+  "eur": 0.570748,
+  "elapsed_s": 1022.1,
+  "status": "completed",
+  "response_id": "resp_01434e9bf26b6a05006a965feb807887d2a151bfe0c3c65b2a",
+  "when": "2026-09-01T05:34:33Z"
+}

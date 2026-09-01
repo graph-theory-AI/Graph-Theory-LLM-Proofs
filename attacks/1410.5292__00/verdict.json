@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The worst-case exponent remains open, but the consecutive matching has exact Ramsey number 3n/2, while the crossing and nested matchings have linear Ramsey number with explicit bounds.",
+  "would_publish": false,
+  "caveats": "The general maximum is not improved, and novelty of the structured-case results was not checked exhaustively.",
+  "id": "1410.5292__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.841292,
+  "eur": 0.871406,
+  "elapsed_s": 921.1,
+  "status": "completed",
+  "response_id": "resp_01a49646435731c8006a96611055b087d2b8b8dc5c66e924ff",
+  "when": "2026-09-01T05:37:45Z"
+}

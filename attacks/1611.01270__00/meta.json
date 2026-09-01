@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 117,
+    "score": 3.6,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1611.01270__00",
+    "title_md": "[Open Problem (better query complexity bounds for property testing)](https://arxiv.org/abs/1611.01270)",
+    "paper": "Fast property testing and metrics for permutations",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1611.01270__00/"
+  },
+  "dossier_meta": {
+    "id": "1611.01270__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1611.01270__00/",
+    "arxiv_id": "1611.01270",
+    "tier": 4,
+    "score": 3.6,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Fast property testing and metrics for permutations",
+    "catalog_title": "Open Problem (better query complexity bounds for property testing)",
+    "statement_text": "It remains a major open problem if better bounds hold for the various property testing results.",
+    "context_text": "General results in combinatorial property testing show that natural properties can be tested with constant query complexity depending only on $\\varepsilon$ and the property, but the upper bounds arising from proofs are often enormous: wowzer-type or Ackermann-type in $1/\\varepsilon$, or established only via compactness with no explicit bound at all. The paper makes progress on this problem for permutations by establishing a universal polynomial-in-$1/\\varepsilon$ query complexity bound for two-sided testing of hereditary properties with respect to the rectangular distance."
+  },
+  "started": "2026-09-01T05:34:33Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
