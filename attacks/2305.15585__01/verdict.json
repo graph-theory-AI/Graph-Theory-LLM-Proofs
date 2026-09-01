@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every admissible pair satisfies \u03c7_f(G)\u22645 and \u03c7(G)\u2264(4+o(1))log n/log log n, while quasirandom or doubly regular tournaments force \u03c7(G)\u22645.",
+  "would_publish": false,
+  "caveats": "No absolute chromatic bound is obtained for arbitrary tournaments, and these elementary partial results may be implicit in existing work.",
+  "id": "2305.15585__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.733896,
+  "eur": 1.79596,
+  "elapsed_s": 2455.2,
+  "status": "completed",
+  "response_id": "resp_0bd13adeb40aec99006a965e9fa01487d2a53f05337f4c680f",
+  "when": "2026-09-01T05:52:54Z"
+}

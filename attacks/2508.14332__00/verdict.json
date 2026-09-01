@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The c=2 assertion holds with ell=1 for chordal graphs, more generally for bounded-radius tree decompositions, and with ell=2 whenever S union T equals V(G).",
+  "would_publish": false,
+  "caveats": "Finite graphs are assumed; the unrestricted case remains open, and the literature novelty of these special cases has not been checked.",
+  "id": "2508.14332__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.94456,
+  "eur": 0.97837,
+  "elapsed_s": 1514.3,
+  "status": "completed",
+  "response_id": "resp_02d2b08902862dd7006a96634ecaec87d2830bffed2d498502",
+  "when": "2026-09-01T05:57:12Z"
+}

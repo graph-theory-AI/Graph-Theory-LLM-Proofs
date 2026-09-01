@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "NP-completeness follows when the bipartite symmetric part is connected, and more generally under explicit component-side, triangle-free-side, or circular-core orbit hypotheses.",
+  "would_publish": false,
+  "caveats": "The remaining case has disconnected symmetric part with cyclic obstructions distributed across several components; no claim of literature novelty is made.",
+  "id": "1812.02420__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.32714,
+  "eur": 1.374645,
+  "elapsed_s": 1725.8,
+  "status": "completed",
+  "response_id": "resp_0fb4a7c56566e03b006a9662c62f3487d2ae6a89e87b419ebd",
+  "when": "2026-09-01T05:58:27Z"
+}

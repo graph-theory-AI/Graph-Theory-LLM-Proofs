@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 100,
+    "score": 3.7,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1909.08426__04",
+    "title_md": "[Informal belief on FPT candidates](https://arxiv.org/abs/1909.08426)",
+    "paper": "When Maximum Stable Set can be solved in FPT time",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1909.08426__04/"
+  },
+  "dossier_meta": {
+    "id": "1909.08426__04",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1909.08426__04/",
+    "arxiv_id": "1909.08426",
+    "tier": 4,
+    "score": 3.7,
+    "lean": "prove",
+    "status": "open",
+    "paper": "When Maximum Stable Set can be solved in FPT time",
+    "catalog_title": "Informal belief on FPT candidates",
+    "statement_text": "There will be very few connected candidates $H$ (as described by the structural characterisation of FPT candidate graphs) which will not end up in (randomized) FPT.",
+    "context_text": "After settling all four remaining five-vertex graph cases as (randomized) FPT, the authors express a broader belief that almost all graphs $H$ satisfying the structural conditions identified in Figure 1 will yield FPT algorithms for MIS in $H$-free graphs."
+  },
+  "started": "2026-09-01T05:58:28Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

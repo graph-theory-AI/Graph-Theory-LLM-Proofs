@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The Woodall bound holds when min{s,t}\u22642; for general fixed s, any counterexample has a list-critical core on at least 2(s+t) vertices, while a construction shows that degeneracy alone cannot prove the conjecture for s\u226510.",
+  "would_publish": false,
+  "caveats": "The cases of fixed s\u22653 remain unresolved; the reductions use established theorems of Kostochka, Ohba, and Chudnovsky\u2013Reed\u2013Seymour.",
+  "id": "2201.09115__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.434432,
+  "eur": 1.485777,
+  "elapsed_s": 2761.8,
+  "status": "completed",
+  "response_id": "resp_0f465306cbbb6241006a965dc26e0487d2bb2e75372ec8a0a7",
+  "when": "2026-09-01T05:54:20Z"
+}

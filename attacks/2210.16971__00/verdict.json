@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for forests, complete bipartite graphs, a two-terminal doubled-tree family, and in particular every admissible oriented graph with at most six arcs.",
+  "would_publish": false,
+  "caveats": "The general asymmetric Sidorenko inequality remains open, and no novelty is claimed for these special classes.",
+  "id": "2210.16971__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.914396,
+  "eur": 0.947127,
+  "elapsed_s": 1062.8,
+  "status": "completed",
+  "response_id": "resp_0e67e166a2d55eaf006a966574dfec87d2bfe2d127c1f6ae47",
+  "when": "2026-09-01T05:58:51Z"
+}

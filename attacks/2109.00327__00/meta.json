@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 99,
+    "score": 3.7,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2109.00327__00",
+    "title_md": "[Open Problem (Section 1): Balanced Separator for $U_t$](https://arxiv.org/abs/2109.00327)",
+    "paper": "Universality in minor-closed graph classes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2109.00327__00/"
+  },
+  "dossier_meta": {
+    "id": "2109.00327__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2109.00327__00/",
+    "arxiv_id": "2109.00327",
+    "tier": 4,
+    "score": 3.7,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Universality in minor-closed graph classes",
+    "catalog_title": "Open Problem (Section 1): Balanced Separator for $U_t$",
+    "statement_text": "It is open whether $U_t$ satisfies (K2), that is, whether every finite $n$-vertex subgraph of $U_t$ has a balanced separator of order $O(\\sqrt{n})$.",
+    "context_text": "Theorem 1.3 constructs, for each $t \\in \\mathbb{N}$, a countable graph $U_t$ that contains every $K_t$-minor-free graph as an induced subgraph and satisfies properties (K1), (K3), and (K4). Whether $U_t$ also satisfies (K2) (the $O(\\sqrt{n})$ balanced separator property shared by planar graphs via the Lipton\u2013Tarjan theorem) remains open. A weaker bound of $O(n^{3/4} \\log n)$ on balanced separator size follows from a result of Plotkin, Rao, and Smith."
+  },
+  "started": "2026-09-01T05:58:51Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

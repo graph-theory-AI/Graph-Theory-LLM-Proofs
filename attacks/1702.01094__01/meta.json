@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 102,
+    "score": 3.7,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1702.01094__01",
+    "title_md": "[Question (uniquely-covered vertices in an induced path)](https://arxiv.org/abs/1702.01094)",
+    "paper": "Induced subgraphs of graphs with large chromatic number. IX. Rainbow pa\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1702.01094__01/"
+  },
+  "dossier_meta": {
+    "id": "1702.01094__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1702.01094__01/",
+    "arxiv_id": "1702.01094",
+    "tier": 4,
+    "score": 3.7,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Induced subgraphs of graphs with large chromatic number. IX. Rainbow pa\u2026",
+    "catalog_title": "Question (uniquely-covered vertices in an induced path)",
+    "statement_text": "Let $G$ be a triangle-free graph with very large chromatic number, and let $\\mathcal{A}$ be a set of stable subsets (not necessarily pairwise disjoint) of $V(G)$ with union $V(G)$. Does there necessarily exist an $s$-vertex induced path $P$ of $G$ such that for each $v\\in V(P)$, some $X\\in\\mathcal{A}$ satisfies $X\\cap V(P)=\\{v\\}$?",
+    "context_text": "The authors pose this as an additional open question in the Conclusion, asking whether a large chromatic number forces an induced path whose vertices are each 'uniquely covered' by some member of an arbitrary stable-set cover."
+  },
+  "started": "2026-09-01T05:56:05Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

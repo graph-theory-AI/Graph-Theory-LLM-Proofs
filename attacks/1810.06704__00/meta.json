@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 103,
+    "score": 3.65,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1810.06704__00",
+    "title_md": "[Question 1.3](https://arxiv.org/abs/1810.06704)",
+    "paper": "Colouring Graphs with Sparse Neighbourhoods: Bounds and Applications",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1810.06704__00/"
+  },
+  "dossier_meta": {
+    "id": "1810.06704__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1810.06704__00/",
+    "arxiv_id": "1810.06704",
+    "tier": 4,
+    "score": 3.65,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Colouring Graphs with Sparse Neighbourhoods: Bounds and Applications",
+    "catalog_title": "Question 1.3",
+    "statement_text": "Let $G$ be a $\\lfloor (1-\\varepsilon)(\\Delta(G)+1) \\rfloor + 1$-critical graph with $\\omega(G) \\leq (1-\\alpha)(\\Delta(G)+1)$. What is the largest $\\delta = \\delta(\\varepsilon,\\alpha)$, such that $G$ is $\\delta$-sparse?",
+    "context_text": "This question isolates the first of two steps in the King\u2013Reed proof strategy for Reed's conjecture: showing that a graph which is critical with respect to a list assignment and has bounded clique number must have sparse neighbourhoods. Improving $\\delta$ directly strengthens the $\\varepsilon$ achievable in Theorem 1.2."
+  },
+  "started": "2026-09-01T05:54:20Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

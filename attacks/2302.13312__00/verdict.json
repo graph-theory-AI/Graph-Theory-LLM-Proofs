@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The remaining \u0394=7 assertion holds for every planar graph of girth at least 5, and more generally for every graph of maximum degree at most 7 admitting repeated deletion of an edge whose endpoint degrees sum to at most 8.",
+  "would_publish": false,
+  "caveats": "The argument does not handle triangles or general 4-cycle-rich planar graphs; no proof or counterexample for unrestricted \u0394=7 is obtained.",
+  "id": "2302.13312__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.216304,
+  "eur": 1.259841,
+  "elapsed_s": 1587.5,
+  "status": "completed",
+  "response_id": "resp_0d4a60e7a12bd79a006a96630d6a9887d2810efefb15caee6b",
+  "when": "2026-09-01T05:57:20Z"
+}

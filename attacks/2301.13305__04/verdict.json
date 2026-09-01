@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The problem remains open in general, but even stars are solved exactly, even matchings are determined within an additive constant, and general lower and upper bounds are proved.",
+  "would_publish": false,
+  "caveats": "No general asymptotic is obtained, and overlap with the cited 2023 follow-up has not been checked.",
+  "id": "2301.13305__04",
+  "model": "gpt-5.6-sol",
+  "usd": 0.973456,
+  "eur": 1.008301,
+  "elapsed_s": 1389.7,
+  "status": "completed",
+  "response_id": "resp_0f057f76774a593b006a9662ee81c487d2a3d490d1306f828e",
+  "when": "2026-09-01T05:53:32Z"
+}

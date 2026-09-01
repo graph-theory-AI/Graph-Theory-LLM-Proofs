@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the conjecture when 5r >= 2n-3 and when every color class contains an r-edge matching, together with a quantitative reduction showing that long-target counterexamples must be dominated by monochromatic stars.",
+  "would_publish": false,
+  "caveats": "The bijectively centered all-star case is precisely the Caccetta-Haggkvist obstruction, so the full conjecture remains unresolved.",
+  "id": "1806.00825__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.173176,
+  "eur": 1.21517,
+  "elapsed_s": 1305.4,
+  "status": "completed",
+  "response_id": "resp_0294220a100b9242006a9664bce86487d29aed0b644082050c",
+  "when": "2026-09-01T05:59:50Z"
+}

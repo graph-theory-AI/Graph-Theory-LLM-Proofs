@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 104,
+    "score": 3.65,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2404.03472__00",
+    "title_md": "[Problem 5.1 (cover-free families)](https://arxiv.org/abs/2404.03472)",
+    "paper": "Lower bounds for graph reconstruction with maximal independent set quer\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2404.03472__00/"
+  },
+  "dossier_meta": {
+    "id": "2404.03472__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2404.03472__00/",
+    "arxiv_id": "2404.03472",
+    "tier": 4,
+    "score": 3.65,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Lower bounds for graph reconstruction with maximal independent set quer\u2026",
+    "catalog_title": "Problem 5.1 (cover-free families)",
+    "statement_text": "Are there $(1,r)$-cover-free families $\\mathcal{F}\\subseteq\\mathcal{P}(t)$ with $t\\in\\mathcal{O}(r^{2}\\log\\lvert\\mathcal{F}\\rvert/\\log r)$?",
+    "context_text": "The paper's lower bound for deterministic non-adaptive reconstruction ($\\Omega(\\Delta^{3}\\log n/\\log\\Delta)$) is tied to a longstanding gap for cover-free families: $\\Omega(r^{w+1}\\log n/\\log r)\\leq t(n,w,r)\\leq\\mathcal{O}(r^{w+1}\\log n)$. Closing this gap for $(1,r)$-cover-free families would directly improve the graph-reconstruction bounds."
+  },
+  "started": "2026-09-01T05:53:32Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

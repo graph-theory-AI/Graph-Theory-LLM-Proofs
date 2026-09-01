@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A finite clique-covering hypergraph gives a computable density below which almost all Km copies survive, and a filtered Turan reduction isolates but does not solve the remaining threshold.",
+  "would_publish": false,
+  "caveats": "The exact hard-regime transition and critical scales remain open; the covering reduction likely overlaps arXiv:1806.06609.",
+  "id": "1612.09143__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.287752,
+  "eur": 1.333847,
+  "elapsed_s": 1648.4,
+  "status": "completed",
+  "response_id": "resp_0a0417230e3b4368006a966284b56887d28b22d05ae39185a5",
+  "when": "2026-09-01T05:56:04Z"
+}
