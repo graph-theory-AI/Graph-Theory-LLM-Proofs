@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "Under the standard additive-gap definition, the case L=2 has maxcode_2(\u03b5)=1/(4\u03b5)+O(1), whereas the displayed formula gives c_2=1.",
+  "would_publish": false,
+  "caveats": "This almost certainly identifies a transcription error in the catalog constant; the correspondingly corrected conjecture for even L\u22654 remains open.",
+  "id": "1710.10663__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.817472,
+  "eur": 0.846733,
+  "elapsed_s": 1462.5,
+  "status": "completed",
+  "response_id": "resp_08592971174fc1e9006a9658aea62487d2b54117f2be143bb9",
+  "when": "2026-09-01T05:11:01Z"
+}

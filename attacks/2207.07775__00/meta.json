@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 143,
+    "score": 3.5,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2207.07775__00",
+    "title_md": "[Conjecture 1.5](https://arxiv.org/abs/2207.07775)",
+    "paper": "Ramsey multiplicity and the Tur\u00e1n coloring",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2207.07775__00/"
+  },
+  "dossier_meta": {
+    "id": "2207.07775__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2207.07775__00/",
+    "arxiv_id": "2207.07775",
+    "tier": 4,
+    "score": 3.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Ramsey multiplicity and the Tur\u00e1n coloring",
+    "catalog_title": "Conjecture 1.5",
+    "statement_text": "Every sufficiently large integer is polite.",
+    "context_text": "Conjecture 1.5 appears early in the paper with no surrounding context recovered. The term 'polite' is likely a graph-theoretic notion defined in the paper (possibly related to Ramsey multiplicity or the Tur\u00e1n coloring extremality), but the context was not captured in extraction."
+  },
+  "started": "2026-09-01T05:11:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

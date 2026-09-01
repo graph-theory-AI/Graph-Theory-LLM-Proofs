@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The displayed bound is never attained at finite length, and admits an exponentially large additive improvement, but the argument does not give a uniform multiplicative or exponential-rate improvement on lengths divisible by r-1.",
+  "would_publish": false,
+  "caveats": "The phrase \u201cnot tight\u201d is ambiguous; this settles exact nonattainment, not the likely intended asymptotic binary conjecture.",
+  "id": "2010.05992__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.312112,
+  "eur": 1.359079,
+  "elapsed_s": 1428.2,
+  "status": "completed",
+  "response_id": "resp_0d6fc1e0d3246129006a9657f69d1c87d2a421314a71d6264a",
+  "when": "2026-09-01T05:07:22Z"
+}

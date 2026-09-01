@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 147,
+    "score": 3.5,
+    "tier": 4,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2201.09115__02",
+    "title_md": "[Open problem: Woodall's conjecture for fixed s](https://arxiv.org/abs/2201.09115)",
+    "paper": "Disproof of a Conjecture by Woodall",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2201.09115__02/"
+  },
+  "dossier_meta": {
+    "id": "2201.09115__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2201.09115__02/",
+    "arxiv_id": "2201.09115",
+    "tier": 4,
+    "score": 3.5,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Disproof of a Conjecture by Woodall",
+    "catalog_title": "Open problem: Woodall's conjecture for fixed s",
+    "statement_text": "It remains an interesting open problem whether Conjecture 3 (that every graph without a $K_{s,t}$-minor is $(s+t-1)$-choosable) remains true if $s$ is fixed and $t$ is sufficiently large in terms of $s$.",
+    "context_text": "The disproof via Theorem 1 requires $s$ and $t$ to be of comparable size ($s \\leq t \\leq Cs$); the regime of fixed $s$ with $t \\to \\infty$ is not covered and, unlike the chromatic number case (settled by Kostochka), no analogous result is known for the list chromatic number."
+  },
+  "started": "2026-09-01T05:08:18Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

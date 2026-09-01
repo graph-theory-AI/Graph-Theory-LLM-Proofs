@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An exact criterion is proved for a fixed cubic 2-factor with two odd circuits, yielding the conjecture for cyclically 4-edge-connected cubic graphs of oddness at most two, as well as for all supereulerian and nowhere-zero-4-flow graphs.",
+  "would_publish": false,
+  "caveats": "The argument does not handle general cubic graphs with four or more odd factor circuits, or all graphs with obstructing cyclic 3-edge-cuts; novelty relative to the very recent companion literature has not been checked.",
+  "id": "2511.02892__06",
+  "model": "gpt-5.6-sol",
+  "usd": 0.88794,
+  "eur": 0.919724,
+  "elapsed_s": 1321.1,
+  "status": "completed",
+  "response_id": "resp_07a3d8f78142e0df006a96572fdf1c87d29d5ae2033bb4db53",
+  "when": "2026-09-01T05:02:16Z"
+}

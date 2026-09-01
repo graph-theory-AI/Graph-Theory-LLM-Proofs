@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 151,
+    "score": 3.5,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1803.01051__01",
+    "title_md": "[List-chromatic analogue of Reed's Conjecture](https://arxiv.org/abs/1803.01051)",
+    "paper": "Bounding $\u03c7$ by a fraction of $\u0394$ for graphs without large cliques",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1803.01051__01/"
+  },
+  "dossier_meta": {
+    "id": "1803.01051__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1803.01051__01/",
+    "arxiv_id": "1803.01051",
+    "tier": 4,
+    "score": 3.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Bounding $\u03c7$ by a fraction of $\u0394$ for graphs without large cliques",
+    "catalog_title": "List-chromatic analogue of Reed's Conjecture",
+    "statement_text": "It is possible that Conjecture 1.3 is also true for the list-chromatic number, i.e., $\\chi_\\ell(G) \\leq \\left\\lceil \\frac{1}{2}(\\Delta + 1 + \\omega) \\right\\rceil$ for every graph $G$ of maximum degree at most $\\Delta$ with no clique of size greater than $\\omega$.",
+    "context_text": "After stating Reed's Conjecture 1.3 for the ordinary chromatic number and noting Reed's partial result as evidence, the authors remark that the same bound may extend to the list-chromatic number. The correspondence chromatic number is always at least as large as the list-chromatic number, so such an extension would be nontrivial."
+  },
+  "started": "2026-09-01T05:02:34Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

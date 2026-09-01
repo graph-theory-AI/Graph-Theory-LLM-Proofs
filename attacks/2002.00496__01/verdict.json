@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Unavoidability is proved to be componentwise, yielding additional connected unavoidable graphs such as a K4 joined by a bridge or at a vertex to any cycle, while arbitrary connected Kelly minors remain unresolved.",
+  "would_publish": false,
+  "caveats": "The argument uses the excluded-grid theorem and the known unavoidability of ladders and K4; literature novelty was not checked.",
+  "id": "2002.00496__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.10068,
+  "eur": 1.140079,
+  "elapsed_s": 1274.7,
+  "status": "completed",
+  "response_id": "resp_0b28d6d08a85869e006a96595fbb9c87d29f4190f76bc5afbb",
+  "when": "2026-09-01T05:10:50Z"
+}

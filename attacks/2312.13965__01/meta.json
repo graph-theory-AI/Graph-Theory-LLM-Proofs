@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 154,
+    "score": 3.5,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2312.13965__01",
+    "title_md": "[Problem 4.1](https://arxiv.org/abs/2312.13965)",
+    "paper": "The growth rate of multicolor Ramsey numbers of $3$-graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2312.13965__01/"
+  },
+  "dossier_meta": {
+    "id": "2312.13965__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2312.13965__01/",
+    "arxiv_id": "2312.13965",
+    "tier": 3,
+    "score": 3.5,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "The growth rate of multicolor Ramsey numbers of $3$-graphs",
+    "catalog_title": "Problem 4.1",
+    "statement_text": "Does there exist, for every $\\ell\\geq 1,$ a $3$-uniform hypergraph $G_{\\ell}$ with $r(G_{\\ell};q)=2^{q^{\\ell+o(1)}}$?",
+    "context_text": "For 3-uniform hypergraphs in the exponential-growth class $\\mathcal{U}$, the upper and lower bounds often have different powers of $q$ in the exponent. Known cases include $r(\\mathrm{Star}^{(3)}(4);q)=2^{q^{1+o(1)}}$ (exponent $\\ell=1$) and a construction from Proposition 3.3 achieving exponent $\\ell=2$, but for $\\ell\\geq 3$ the best upper bound is only of the form $2^{q^{\\ell+1}\\mathrm{polylog}(q)}$."
+  },
+  "started": "2026-09-01T05:01:21Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but independent vertex-exchangeable query schemes require \u03a9(\u0394\u00b2 log \u0394) queries, so any optimal construction must use substantial correlation between its queries.",
+  "would_publish": false,
+  "caveats": "Assumes the standard adversarial oracle returning an arbitrary MIS of each queried induced subgraph.",
+  "id": "2404.03472__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.423788,
+  "eur": 1.474752,
+  "elapsed_s": 1704.8,
+  "status": "completed",
+  "response_id": "resp_07e86e02398e3564006a965703142c87d2a169109054e716dd",
+  "when": "2026-09-01T05:07:55Z"
+}

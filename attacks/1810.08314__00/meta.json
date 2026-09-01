@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 149,
+    "score": 3.5,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1810.08314__00",
+    "title_md": "[Open problem on queue-number of bounded layered treewidth graphs](https://arxiv.org/abs/1810.08314)",
+    "paper": "Minor-closed graph classes with bounded layered pathwidth",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1810.08314__00/"
+  },
+  "dossier_meta": {
+    "id": "1810.08314__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1810.08314__00/",
+    "arxiv_id": "1810.08314",
+    "tier": 4,
+    "score": 3.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Minor-closed graph classes with bounded layered pathwidth",
+    "catalog_title": "Open problem on queue-number of bounded layered treewidth graphs",
+    "statement_text": "It is open whether graphs of bounded layered treewidth have bounded queue-number.",
+    "context_text": "Dujmovi\u0107 et al. proved that every $n$-vertex graph with layered treewidth $k$ has queue-number $O(k \\log n)$. Subsequent to the submission of this paper, improved bounds on queue-number were obtained, but the question of whether a constant bound holds for graphs of bounded layered treewidth remains open."
+  },
+  "started": "2026-09-01T05:07:23Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

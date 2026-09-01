@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 144,
+    "score": 3.5,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2306.04710__01",
+    "title_md": "[Open problem: hero status of $\\Delta(1,m,m')$ for degree-4 oriented sta\u2026](https://arxiv.org/abs/2306.04710)",
+    "paper": "On heroes in digraphs with forbidden induced forests",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2306.04710__01/"
+  },
+  "dossier_meta": {
+    "id": "2306.04710__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2306.04710__01/",
+    "arxiv_id": "2306.04710",
+    "tier": 4,
+    "score": 3.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On heroes in digraphs with forbidden induced forests",
+    "catalog_title": "Open problem: hero status of $\\Delta(1,m,m')$ for degree-4 oriented stars",
+    "statement_text": "Determine for which integers $m, m' \\geq 1$ the set $\\{\\Delta(1, m, m'), F\\}$ is $\\vec{\\chi}$-finite when $F$ is an oriented star of degree $4$.",
+    "context_text": "Theorem 1.6 shows that if $F$ is an oriented star of degree 4 and $\\{H, F\\}$ is $\\vec{\\chi}$-finite, then either $H$ is a transitive tournament or $H = \\Delta(1, m, m')$ for some $m, m' \\geq 1$. The transitive tournament case is fully settled by Theorem 1.4 (Chudnovsky\u2013Scott\u2013Seymour), but the authors explicitly state that the case $H = \\Delta(1, m, m')$ remains open."
+  },
+  "started": "2026-09-01T05:11:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

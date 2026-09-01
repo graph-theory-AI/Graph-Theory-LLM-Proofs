@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 148,
+    "score": 3.5,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2002.00496__02",
+    "title_md": "[Conjecture 6](https://arxiv.org/abs/2002.00496)",
+    "paper": "Excluding a ladder",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2002.00496__02/"
+  },
+  "dossier_meta": {
+    "id": "2002.00496__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2002.00496__02/",
+    "arxiv_id": "2002.00496",
+    "tier": 4,
+    "score": 3.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Excluding a ladder",
+    "catalog_title": "Conjecture 6",
+    "statement_text": "A graph $H$ is unavoidable if and only if $H$ is a minor of some graph from Kelly's construction.",
+    "context_text": "Kelly's construction gives posets with unbounded dimension whose cover graphs are planar and have pathwidth 3, implying every unavoidable graph must be a minor of some graph in this family. The authors conjecture this necessary condition is also sufficient, and note an equivalent reformulation: $H$ is unavoidable if and only if $H$ is a minor of some graph obtained by gluing copies of $K_4$ along edges in a path-like way and subdividing all horizontal edges once."
+  },
+  "started": "2026-09-01T05:07:56Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

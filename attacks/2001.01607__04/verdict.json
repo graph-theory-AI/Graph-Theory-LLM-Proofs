@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every boundary class has an exact 2^(epsilon n) n^O(1) algorithm for each fixed epsilon>0, and S_{1,1,k}-free graphs admit an explicit 2^{O_k(n^{1-1/k} log n)} algorithm, but the polynomial-versus-NP-hard dichotomy remains open.",
+  "would_publish": false,
+  "caveats": "The qualitative all-H bound uses the bounded-degree algorithm quoted in the prompt; no polynomial algorithm or NP-hardness proof is obtained.",
+  "id": "2001.01607__04",
+  "model": "gpt-5.6-sol",
+  "usd": 1.081996,
+  "eur": 1.120726,
+  "elapsed_s": 1189.6,
+  "status": "completed",
+  "response_id": "resp_05de4269c3e6e010006a96581e31a087d2b22e56bcab6efad3",
+  "when": "2026-09-01T05:04:03Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "For every k >= 1, an explicit tree has pathwidth k and minimum part-counting path-partition height 2k, so the factor 2 is sharp.",
+  "would_publish": false,
+  "caveats": "This uses the usual quotient-tree definition; if height counts quotient edges, the exact sharp value is 2k-1 rather than 2k.",
+  "id": "1601.01886__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.16104,
+  "eur": 1.202599,
+  "elapsed_s": 1299.6,
+  "status": "completed",
+  "response_id": "resp_0a91bdaa09c76a2a006a9658afc57887d2b4e8c18ca88493f3",
+  "when": "2026-09-01T05:08:17Z"
+}

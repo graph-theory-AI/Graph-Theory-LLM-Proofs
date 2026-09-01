@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For loopless multigraphs, uniform thickening of K5 gives an exact cone-crossing formula and the explicit bound f(k) <= k + 2 sqrt(k) + O(k^(1/4)); I also determine f(0) and f(1).",
+  "would_publish": false,
+  "caveats": "The main construction uses parallel edges, gives no matching lower bound, and the quoted phi_s values cannot be total cone crossing numbers.",
+  "id": "1608.07680__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.525072,
+  "eur": 1.579662,
+  "elapsed_s": 2170.0,
+  "status": "completed",
+  "response_id": "resp_0c9469e4fd111f0b006a9653ca2b7c87d2a12c82513f4c1a80",
+  "when": "2026-09-01T05:01:56Z"
+}

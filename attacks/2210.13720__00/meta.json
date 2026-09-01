@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 145,
+    "score": 3.5,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2210.13720__00",
+    "title_md": "[Conjecture 14](https://arxiv.org/abs/2210.13720)",
+    "paper": "Graphs of Linear Growth have Bounded Treewidth",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.13720__00/"
+  },
+  "dossier_meta": {
+    "id": "2210.13720__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.13720__00/",
+    "arxiv_id": "2210.13720",
+    "tier": 4,
+    "score": 3.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Graphs of Linear Growth have Bounded Treewidth",
+    "catalog_title": "Conjecture 14",
+    "statement_text": "There exist functions $g : \\mathbb{R} \\to \\mathbb{N}$ and $h : \\mathbb{R} \\to \\mathbb{R}$ such that for any $c > 1$, every graph $G$ with growth $f_G(r) \\leq cr$ is isomorphic to a subgraph of $T \\boxtimes K_{g(c)}$ for some tree $T$ with growth $f_T(r) \\leq h(c)r$.",
+    "context_text": "Theorem 13 shows that every graph $G$ with growth $f_G(r) \\leq cr$ is a subgraph of $T \\boxtimes K_{\\lfloor 882c^3 \\rfloor}$ for some tree $T$, but the tree $T$ itself may have exponential growth. Conjecture 14 proposes a rough characterisation of graphs of linear growth: if true, every subgraph $H$ of $T \\boxtimes K_{g(c)}$ has growth $f_H(r) \\leq g(c)h(c)r \\in O(r)$, making the characterisation tight."
+  },
+  "started": "2026-09-01T05:10:50Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

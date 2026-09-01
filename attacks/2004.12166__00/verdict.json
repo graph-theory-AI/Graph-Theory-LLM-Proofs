@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A deterministic p-exchange local search gives an O(OPT^{1-1/p}) approximation on induced K_{p,q}-free graphs for p\u2264q, yielding the conjectured property with every \u03b5<1/p, but it does not extend to arbitrary H.",
+  "would_publish": false,
+  "caveats": "Complete bipartite H are already covered abstractly by substitution, and this asymmetric quantitative extension may be implicit in the source; general prime forbidden graphs remain untouched.",
+  "id": "2004.12166__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.733184,
+  "eur": 0.759428,
+  "elapsed_s": 1157.2,
+  "status": "completed",
+  "response_id": "resp_09660608b11f86ed006a96593f6eb087d2abc01e0893126aa5",
+  "when": "2026-09-01T05:08:20Z"
+}
