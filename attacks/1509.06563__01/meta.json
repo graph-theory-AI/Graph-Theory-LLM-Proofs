@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 193,
+    "score": 3.35,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1509.06563__01",
+    "title_md": "[Conjecture 1.5](https://arxiv.org/abs/1509.06563)",
+    "paper": "Induced subgraphs of graphs with large chromatic number. IV. Consecutiv\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1509.06563__01/"
+  },
+  "dossier_meta": {
+    "id": "1509.06563__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1509.06563__01/",
+    "arxiv_id": "1509.06563",
+    "tier": 3,
+    "score": 3.35,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Induced subgraphs of graphs with large chromatic number. IV. Consecutiv\u2026",
+    "catalog_title": "Conjecture 1.5",
+    "statement_text": "Let $F$ be an infinite set of positive integers with bounded gaps. Then $F$ is constricting.",
+    "context_text": "A set $F$ of integers is $k$-constricting if there exists $n$ such that every graph with chromatic number at least $n$ contains either a clique with $k$ vertices or a hole with length in $F$; $F$ is constricting if it is $k$-constricting for every $k$. The authors prove (1.4) that every infinite set with bounded gaps is 3-constricting, and conjecture 1.5 as the natural generalization to all $k$."
+  },
+  "started": "2026-09-01T04:26:58Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

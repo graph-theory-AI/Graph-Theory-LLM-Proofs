@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 194,
+    "score": 3.3,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1806.11196__00",
+    "title_md": "[Question 1.1](https://arxiv.org/abs/1806.11196)",
+    "paper": "List-three-coloring graphs with no induced $P_6+rP_3$",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1806.11196__00/"
+  },
+  "dossier_meta": {
+    "id": "1806.11196__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1806.11196__00/",
+    "arxiv_id": "1806.11196",
+    "tier": 3,
+    "score": 3.3,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "List-three-coloring graphs with no induced $P_6+rP_3$",
+    "catalog_title": "Question 1.1",
+    "statement_text": "Is it true that for every (fixed) integer $t > 0$, the 3-coloring problem can be solved in polynomial time when restricted to the class of $P_t$-free graphs?",
+    "context_text": "Theorem 1.1 (from the literature) states that if the $k$-coloring problem is polynomial on $H$-free graphs then every connected component of $H$ must be a path. For $k=3$ the converse may hold \u2014 it is known to fail for $k>4$ \u2014 so the question of whether $P_t$-free graphs always admit a polynomial-time 3-coloring algorithm remains open. The present paper contributes a positive result for the subclass of $(P_6+rP_3)$-free graphs."
+  },
+  "started": "2026-09-01T04:26:26Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

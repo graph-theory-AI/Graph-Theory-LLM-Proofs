@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 196,
+    "score": 3.3,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2508.08870__00",
+    "title_md": "[Conjecture 1.5](https://arxiv.org/abs/2508.08870)",
+    "paper": "Distinct Directions and Distinct Distances in $\\mathbb{R}^d$",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2508.08870__00/"
+  },
+  "dossier_meta": {
+    "id": "2508.08870__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2508.08870__00/",
+    "arxiv_id": "2508.08870",
+    "tier": 3,
+    "score": 3.3,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Distinct Directions and Distinct Distances in $\\mathbb{R}^d$",
+    "catalog_title": "Conjecture 1.5",
+    "statement_text": "For every fixed $d$ the following holds for all $d$-norms $\\|\\cdot\\|$ but a meagre set. For all $n>n_{0}(d)$, any set of $n$ points in $\\mathbb{R}^{d}$ that do not all lie in an affine hyperplane determine at least $(d-o(1))n$ distinct distances with respect to $\\|\\cdot\\|$, where the $o(1)$-term tends to $0$ as $n$ tends to infinity.",
+    "context_text": "The conjecture concerns distinct distances in typical $d$-dimensional norms; the space of $d$-norms is a Baire space under the Hausdorff metric on unit balls, so 'all but a meagre set' is a strong genericity condition. The paper notes this is open already for $d=2$, as the result in [1] only ensures $(1-o(1))n$ distinct distances; the paper proves a weaker version (Theorem 1.6) by combining Theorem 1.2 with the arguments of [1]."
+  },
+  "started": "2026-09-01T04:24:13Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

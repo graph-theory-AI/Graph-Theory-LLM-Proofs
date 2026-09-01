@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture reduces to balanced complete-bipartite targets, holds in the stronger pervasive sense for bounded-biclique host classes, and natural diffuse Kneser and shift-graph families are not counterexamples.",
+  "would_publish": false,
+  "caveats": "No unrestricted control radius is obtained; the biclique-rich case, including the reduced complete-bipartite targets, remains untouched.",
+  "id": "1701.05597__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.046824,
+  "eur": 1.084295,
+  "elapsed_s": 1503.7,
+  "status": "completed",
+  "response_id": "resp_092c1176c6c4dd8f006a964e8c9b6487d2be2ca0957df3d8ee",
+  "when": "2026-09-01T04:28:28Z"
+}

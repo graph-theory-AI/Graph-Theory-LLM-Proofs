@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 199,
+    "score": 3.3,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2001.01552__00",
+    "title_md": "[Question 6](https://arxiv.org/abs/2001.01552)",
+    "paper": "Sublinear separators in intersection graphs of convex shapes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2001.01552__00/"
+  },
+  "dossier_meta": {
+    "id": "2001.01552__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2001.01552__00/",
+    "arxiv_id": "2001.01552",
+    "tier": 3,
+    "score": 3.3,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Sublinear separators in intersection graphs of convex shapes",
+    "catalog_title": "Question 6",
+    "statement_text": "Given a polynomial $p$, do there necessarily exist real numbers $c, s \\geq 1$ and a positive integer $d$, such that the following holds: every graph $G$ satisfying $\\mathrm{col}_r(G) \\leq p(r)$ for every non-negative integer $r$ admits a $(c, \\sqsubseteq_s)$-tame representation in $\\mathbb{R}^d$?",
+    "context_text": "Theorem 4 shows that graphs with $(c,\\sqsubseteq_s)$-tame representations in $\\mathbb{R}^d$ have strong coloring numbers bounded by $\\delta r^d$, paralleling Krauthgamer\u2013Lee's characterization (Theorem 5) of polynomial-growth graph classes via grid embeddings. Answering Question 6 would determine whether Theorem 4 yields an analogous geometric characterization of graphs with polynomially bounded strong coloring numbers."
+  },
+  "started": "2026-09-01T04:21:28Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

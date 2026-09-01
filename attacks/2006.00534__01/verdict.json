@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The prime-order asymptotics remain open, but the threshold genuinely depends on group structure: for example, T((Z/2Z)^3)=2 whereas T(Z/8Z)>=3.",
+  "would_publish": false,
+  "caveats": "This uses the usual convention that T(G) is the largest size up to which every subset is realizable; no global improvement for T(p) is obtained.",
+  "id": "2006.00534__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.031816,
+  "eur": 1.06875,
+  "elapsed_s": 1188.5,
+  "status": "completed",
+  "response_id": "resp_014b0bcbdc6f3f35006a964f9dc19087d2814777f55bf98dea",
+  "when": "2026-09-01T04:27:46Z"
+}

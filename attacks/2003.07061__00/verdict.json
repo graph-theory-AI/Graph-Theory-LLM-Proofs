@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Exact minimization is NP-complete even for every fixed t on VC-dimension-2, (t+1)-uniform instances, while the worst-case size is a Tur\u00e1n-system number that is explicit for t=1,2 and admits tight fixed-t order bounds.",
+  "would_publish": false,
+  "caveats": "The bounded-VC and geometric asymptotics in the source regime remain open; the elementary reductions may already be known.",
+  "id": "2003.07061__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.03828,
+  "eur": 1.075445,
+  "elapsed_s": 1215.0,
+  "status": "completed",
+  "response_id": "resp_0b3a713122f6759d006a964f53b22887d28621a65438bf5b07",
+  "when": "2026-09-01T04:26:58Z"
+}

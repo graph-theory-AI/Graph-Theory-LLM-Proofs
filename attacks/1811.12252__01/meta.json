@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 188,
+    "score": 3.4,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1811.12252__01",
+    "title_md": "[Open Question: FPT Algorithm for Graph Isomorphism Parameterized by Cli\u2026](https://arxiv.org/abs/1811.12252)",
+    "paper": "Graph Isomorphism for $(H_1,H_2)$-free Graphs: An Almost Complete Dicho\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1811.12252__01/"
+  },
+  "dossier_meta": {
+    "id": "1811.12252__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1811.12252__01/",
+    "arxiv_id": "1811.12252",
+    "tier": 3,
+    "score": 3.4,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Graph Isomorphism for $(H_1,H_2)$-free Graphs: An Almost Complete Dicho\u2026",
+    "catalog_title": "Open Question: FPT Algorithm for Graph Isomorphism Parameterized by Clique-Width",
+    "statement_text": "Whether an FPT algorithm exists for Graph Isomorphism when parameterized by clique-width is still open.",
+    "context_text": "Lokshtanov et al. [23] gave an FPT algorithm parameterized by treewidth, and Grohe and Schweitzer [20] proved XP membership parameterized by clique-width (i.e., polynomial-time solvability for each fixed clique-width). The question of whether the parameter clique-width admits an FPT algorithm remains unresolved."
+  },
+  "started": "2026-09-01T04:30:18Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

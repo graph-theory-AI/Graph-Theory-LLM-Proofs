@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A power bound follows under a polynomial cross-defect hypothesis, and for edge maximization in the complete host one unconditionally obtains an explicit O_H(n^2/(log^* n)^{c_H}) bound.",
+  "would_publish": false,
+  "caveats": "The original dense-host problem remains open because no polynomial bound is obtained for vertices incident with linearly many omitted cross-edges.",
+  "id": "1706.05642__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.957332,
+  "eur": 0.9916,
+  "elapsed_s": 1174.2,
+  "status": "completed",
+  "response_id": "resp_0771b6f2080dc484006a964e42201487d29896cf5d827f6309",
+  "when": "2026-09-01T04:21:44Z"
+}

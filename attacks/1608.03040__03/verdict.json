@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every tournament of minimum out-degree at least 47 has a majority 3-colouring, and every tournament has a 3-colouring with at most four violating vertices.",
+  "would_publish": false,
+  "caveats": "Tournaments with minimum out-degree at most 46 remain, and there is no general way to repair the four exceptional vertices.",
+  "id": "1608.03040__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.25318,
+  "eur": 1.298037,
+  "elapsed_s": 1530.4,
+  "status": "completed",
+  "response_id": "resp_00bd6a0ecde6619b006a964df8322c87d2bbc0e81542cb4c60",
+  "when": "2026-09-01T04:26:26Z"
+}

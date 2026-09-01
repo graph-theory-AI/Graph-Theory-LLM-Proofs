@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "A theorem of Alecu, Bonnet, Bureo Villafana, and Trotignon implies that every proper hereditary candidate obstruction family fails, so the only universal hereditary core is the tautological class of all graphs.",
+  "would_publish": false,
+  "caveats": "Question 1.1 is open-ended; the negative resolution concerns the universal hereditary-core formulation, while restricted-class structure theory remains open.",
+  "id": "2410.16495__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.29752,
+  "eur": 0.30817,
+  "elapsed_s": 500.3,
+  "status": "completed",
+  "response_id": "resp_03aabc5844983e70006a9651d57d5c87d2bcad81f6bba4b93c",
+  "when": "2026-09-01T04:25:45Z"
+}

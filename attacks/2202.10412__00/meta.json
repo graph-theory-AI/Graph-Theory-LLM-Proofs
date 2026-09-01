@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 190,
+    "score": 3.35,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2202.10412__00",
+    "title_md": "[Informal Conjecture (every forest is good)](https://arxiv.org/abs/2202.10412)",
+    "paper": "Polynomial bounds for chromatic number VI. Adding a four-vertex path",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.10412__00/"
+  },
+  "dossier_meta": {
+    "id": "2202.10412__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.10412__00/",
+    "arxiv_id": "2202.10412",
+    "tier": 3,
+    "score": 3.35,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Polynomial bounds for chromatic number VI. Adding a four-vertex path",
+    "catalog_title": "Informal Conjecture (every forest is good)",
+    "statement_text": "Perhaps every forest is good (i.e., for every forest $H$, the class of $H$-free graphs is polynomially $\\chi$-bounded).",
+    "context_text": "After recalling that Esperet's conjecture that every $\\chi$-bounded hereditary class is polynomially $\\chi$-bounded was disproved, the authors ask which hereditary classes are polynomially $\\chi$-bounded and raise in particular whether the Gy\u00e1rf\u00e1s-Sumner conjecture can be strengthened to polynomial $\\chi$-boundedness. They note that among trees, only those not containing $P_5$ are currently known to be good, and that it is not even known whether $P_5$ is good."
+  },
+  "started": "2026-09-01T04:28:28Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

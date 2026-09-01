@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 189,
+    "score": 3.4,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1609.05458__00",
+    "title_md": "[Informal Problem (projective plane structure in near-extremal construct\u2026](https://arxiv.org/abs/1609.05458)",
+    "paper": "A note on intersecting hypergraphs with large cover number",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1609.05458__00/"
+  },
+  "dossier_meta": {
+    "id": "1609.05458__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1609.05458__00/",
+    "arxiv_id": "1609.05458",
+    "tier": 3,
+    "score": 3.4,
+    "lean": "prove",
+    "status": "open",
+    "paper": "A note on intersecting hypergraphs with large cover number",
+    "catalog_title": "Informal Problem (projective plane structure in near-extremal constructions)",
+    "statement_text": "It would be interesting either to find a different type of construction of near-extremal intersecting $r$-partite hypergraphs $H$ with $\\tau(H)$ close to $r$, or to show that near-extremal constructions must contain large pieces from a projective plane.",
+    "context_text": "The authors observe that except for a few sporadic small examples, all known constructions of intersecting $r$-partite hypergraphs $H$ with $\\tau(H)$ close to $r$ are based in some way on finite projective planes."
+  },
+  "started": "2026-09-01T04:29:44Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

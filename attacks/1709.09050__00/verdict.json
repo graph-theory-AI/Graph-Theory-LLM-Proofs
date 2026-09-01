@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full structural partition is not obtained, but there is an exact O(n^3) certifying algorithm, complete classifications for several planar subclasses, and a robust retract-based sufficient condition for cop number 3.",
+  "would_publish": false,
+  "caveats": "The algorithm is the generic finite reachability-game solver, and the structural lemmas are likely standard; arbitrary planar two-cop versus three-cop cores remain unresolved.",
+  "id": "1709.09050__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.06252,
+  "eur": 1.100553,
+  "elapsed_s": 1255.6,
+  "status": "completed",
+  "response_id": "resp_09da0f07fb50b3e6006a964e85b32087d2ac3a7f3690958339",
+  "when": "2026-09-01T04:24:13Z"
+}

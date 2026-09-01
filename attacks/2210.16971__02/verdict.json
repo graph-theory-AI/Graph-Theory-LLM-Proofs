@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Classical Sidorenko is equivalent to an exact transpose-product inequality, which proves the conjectured equivalence for color-class-reversible bipartite graphs and gives a weaker one-sided bound in general.",
+  "would_publish": false,
+  "caveats": "The smaller of the two oriented homomorphism densities remains uncontrolled; novelty of the elementary tensor argument is not asserted.",
+  "id": "2210.16971__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.916996,
+  "eur": 0.94982,
+  "elapsed_s": 1139.4,
+  "status": "completed",
+  "response_id": "resp_0742dc3969eabba6006a965044bc0c87d2b2805cca855a60c1",
+  "when": "2026-09-01T04:29:43Z"
+}

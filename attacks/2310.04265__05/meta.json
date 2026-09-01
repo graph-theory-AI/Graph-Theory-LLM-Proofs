@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 198,
+    "score": 3.3,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2310.04265__05",
+    "title_md": "[Conjecture 4.3 (Gy\u00e1rf\u00e1s-Sumner for Tournaments)](https://arxiv.org/abs/2310.04265)",
+    "paper": "Clique number of tournaments",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2310.04265__05/"
+  },
+  "dossier_meta": {
+    "id": "2310.04265__05",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2310.04265__05/",
+    "arxiv_id": "2310.04265",
+    "tier": 3,
+    "score": 3.3,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Clique number of tournaments",
+    "catalog_title": "Conjecture 4.3 (Gy\u00e1rf\u00e1s-Sumner for Tournaments)",
+    "statement_text": "A tournament $H$ is $\\operatorname{\\overrightarrow{\\chi}}$-binding if and only if $H$ has a backedge graph which is a forest.",
+    "context_text": "The authors propose this as the directed analogue of the celebrated Gy\u00e1rf\u00e1s-Sumner Conjecture, where a tournament $H$ is $\\operatorname{\\overrightarrow{\\chi}}$-binding if the class of tournaments not containing $H$ as a subtournament is $\\operatorname{\\overrightarrow{\\chi}}$-bounded. The 'only if' direction is proved as Theorem 4.4, and it is shown that it suffices to prove the 'if' direction for trees."
+  },
+  "started": "2026-09-01T04:21:43Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

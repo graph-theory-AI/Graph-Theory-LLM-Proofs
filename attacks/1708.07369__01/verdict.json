@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for the nontrivial family {K_3,P_5} when k is a positive power of two, and for a broad class of path-containing families on an infinite arithmetic progression of k.",
+  "would_publish": false,
+  "caveats": "The full conjecture remains open; the general path result uses the standard asymptotic existence theorem for resolvable block designs.",
+  "id": "1708.07369__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.054052,
+  "eur": 1.091782,
+  "elapsed_s": 1128.7,
+  "status": "completed",
+  "response_id": "resp_0880cd8a282dddcc006a964e6e473887d2ab9314ac2b2b3ab2",
+  "when": "2026-09-01T04:21:42Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 187,
+    "score": 3.4,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1708.08486__01",
+    "title_md": "[Conjecture (Theorem 2 extends to primes p < 19)](https://arxiv.org/abs/1708.08486)",
+    "paper": "Popular progression differences in vector spaces II",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1708.08486__01/"
+  },
+  "dossier_meta": {
+    "id": "1708.08486__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1708.08486__01/",
+    "arxiv_id": "1708.08486",
+    "tier": 3,
+    "score": 3.4,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Popular progression differences in vector spaces II",
+    "catalog_title": "Conjecture (Theorem 2 extends to primes p < 19)",
+    "statement_text": "The bounds on the tower height of $n_p(\\alpha,\\beta)$ given in Theorem 2 should also hold for all primes $p < 19$.",
+    "context_text": "Theorem 2 is proved only for primes $p \\geq 19$. The authors note that the upper bounds in Theorem 2 hold for all primes, and the lower bound holds when $\\varepsilon = \\alpha^3 - \\beta$ is small. The obstacle for $p < 19$ in the large-$\\varepsilon$ regime is that the best known bounds on the largest subset of $\\mathbb{F}_p^n$ without a three-term arithmetic progression are not strong enough to imply the required lower bound estimate in that case."
+  },
+  "started": "2026-09-01T04:31:09Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

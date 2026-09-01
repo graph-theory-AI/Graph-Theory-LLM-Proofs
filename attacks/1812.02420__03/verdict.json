@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "For positive integers, such a digraph exists exactly when b is at most 2 or k is at most b+1; in particular, (k,b)=(5,3) is impossible.",
+  "would_publish": true,
+  "caveats": "Assumes loopless digraphs may contain digons; literature priority has not been independently checked.",
+  "id": "1812.02420__03",
+  "model": "gpt-5.6-sol",
+  "usd": 0.832136,
+  "eur": 0.861922,
+  "elapsed_s": 889.4,
+  "status": "completed",
+  "response_id": "resp_0891a28bd957f48b006a964f4eaf5087d2a0547e65e054be7c",
+  "when": "2026-09-01T04:21:27Z"
+}

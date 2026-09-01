@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 197,
+    "score": 3.3,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2505.24100__00",
+    "title_md": "[Question 1.7](https://arxiv.org/abs/2505.24100)",
+    "paper": "Halfway to induced saturation for even cycles",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2505.24100__00/"
+  },
+  "dossier_meta": {
+    "id": "2505.24100__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2505.24100__00/",
+    "arxiv_id": "2505.24100",
+    "tier": 3,
+    "score": 3.3,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Halfway to induced saturation for even cycles",
+    "catalog_title": "Question 1.7",
+    "statement_text": "Let $t\\geq 6$ be an integer. Does there exist a graph $G$ with $E(\\overline{G})\\neq\\varnothing$ such that $G$ is $H$-free but $G+e$ has an induced subgraph isomorphic to $C_{2t-2}$ for every $e\\in E(\\overline{G})$?",
+    "context_text": "The authors prove Theorem 1.6 constructing graphs that are $C_{2t}$-free but where removing any edge creates an induced copy of $C_{2t}$ (half of the induced saturation condition). Question 1.7 asks about the other half: whether the edge-addition condition can also be satisfied, which would be a key step toward solving the induced saturation problem for all even cycles."
+  },
+  "started": "2026-09-01T04:21:44Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

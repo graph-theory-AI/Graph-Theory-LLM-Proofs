@@ -1,0 +1,15 @@
+{
+  "verdict": "ill_posed",
+  "confidence": "high",
+  "one_line": "Literally every graph H works by taking H'=H; under the natural requirement H' not isomorphic to H, I prove that every complete graph K_r has the larger witness 2K_r on the class of nonempty graphs.",
+  "would_publish": false,
+  "caveats": "The intended extra condition on H' is absent; the witness 2K_r is disconnected and fails if the null input graph is allowed.",
+  "id": "2402.04237__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.786192,
+  "eur": 0.814334,
+  "elapsed_s": 983.4,
+  "status": "completed",
+  "response_id": "resp_0f9a74536e4ef15f006a965090657c87d29c4596845bea9a1b",
+  "when": "2026-09-01T04:28:23Z"
+}

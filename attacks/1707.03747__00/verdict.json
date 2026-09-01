@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "There is an explicit bipartite, hence perfect, n-vertex graph with n^2/64 - O(n) distinct tight skew partitions.",
+  "would_publish": false,
+  "caveats": "This improves only the lower bound; the O(n^3 log n) upper bound and the true order remain open, and novelty has not been independently literature-checked.",
+  "id": "1707.03747__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.0685,
+  "eur": 1.106747,
+  "elapsed_s": 1698.4,
+  "status": "completed",
+  "response_id": "resp_0de05cfa0f2efe5c006a964e6ba05487d2a0f60694ad28827a",
+  "when": "2026-09-01T04:31:09Z"
+}
