@@ -11,9 +11,9 @@ runs were not used.
 
 ## Counts
 
-Finished attacks with a verdict: **631**.
-Spend (promo ledger × prepaid FX): **€390.28** billed USD
-**$376.79** / budget €400
+Finished attacks with a verdict: **632**.
+Spend (promo ledger × prepaid FX): **€390.70** billed USD
+**$377.20** / budget €400
 (safety margin €5).
 
 | verdict | n | would_publish |
@@ -22,7 +22,7 @@ Spend (promo ledger × prepaid FX): **€390.28** billed USD
 | disproved | 46 | 7 |
 | already_resolved | 25 | 0 |
 | partial | 470 | 0 |
-| ill_posed | 22 | 0 |
+| ill_posed | 23 | 0 |
 | unknown | 37 | 0 |
 
 ## Claimed proofs (31)
@@ -142,13 +142,14 @@ Spend (promo ledger × prepaid FX): **€390.28** billed USD
 | [`2410.13008__01`](https://mlelarge.github.io/graph-conjectures/arxiv/2410.13008__01/) · [artifact](attacks/2410.13008__01/) | medium | no | Assuming the catalog's stated 2026 result is accurate, polynomial-time recognition puts weightability in P and hence in NP, while independently weightability is equivalent to admitting a 0–1 edge set meeting every directed cycle exactly once. |
 | [`2410.16495__00`](https://mlelarge.github.io/graph-conjectures/arxiv/2410.16495__00/) · [artifact](attacks/2410.16495__00/) | high | no | A theorem of Alecu, Bonnet, Bureo Villafana, and Trotignon implies that every proper hereditary candidate obstruction family fails, so the only universal hereditary core is the tautological class of all graphs. |
 
-## Ill-posed / no determinate statement as supplied (22)
+## Ill-posed / no determinate statement as supplied (23)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
 | [`1609.05458__00`](https://mlelarge.github.io/graph-conjectures/arxiv/1609.05458__00/) · [artifact](attacks/1609.05458__00/) | high | no | The catalog item is a research direction rather than a proposition, since “near-extremal,” “large piece,” and “based on a projective plane” have no specified quantitative meanings. |
 | [`1611.01270__00`](https://mlelarge.github.io/graph-conjectures/arxiv/1611.01270__00/) · [artifact](attacks/1611.01270__00/) | high | no | The catalog item is a research programme rather than a quantified conjecture; moreover, one natural universal Kendall-tau formulation is false in the canonical sampling model. |
 | [`1705.02166__01`](https://mlelarge.github.io/graph-conjectures/arxiv/1705.02166__01/) · [artifact](attacks/1705.02166__01/) | high | no | As written, the claim is elementary for every m at least 2 with n=1, while including m=1 makes it false. |
+| [`1804.06104__01`](https://mlelarge.github.io/graph-conjectures/arxiv/1804.06104__01/) · [artifact](attacks/1804.06104__01/) | high | no | Without a formal definition of “probabilistic methods” and “on their own,” the stated methodological forecast has no determinate mathematical truth value. |
 | [`1908.03788__01`](https://mlelarge.github.io/graph-conjectures/arxiv/1908.03788__01/) · [artifact](attacks/1908.03788__01/) | high | no | As extracted, the question has no determinate truth value because avoidability is defined only for induced path occurrences and no corresponding predicate is specified for non-path graphs. |
 | [`1909.08426__04`](https://mlelarge.github.io/graph-conjectures/arxiv/1909.08426__04/) · [artifact](attacks/1909.08426__04/) | high | no | The catalog item is an informal research expectation rather than a proposition, because neither “very few” nor “will end up” specifies a mathematical quantifier or asymptotic notion. |
 | [`1911.03427__01`](https://mlelarge.github.io/graph-conjectures/arxiv/1911.03427__01/) · [artifact](attacks/1911.03427__01/) | high | no | The quoted conjecture has no determinate truth value, and the most direct uniform finite-group formulation is false. |
@@ -175,11 +176,10 @@ The sweep queue is the easiest-first open/partial arXiv ranking (692
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **60** (plus 1 skipped without a model call).
+Queue records not yet attacked: **59** (plus 1 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
-| [`1804.06104__01`](https://mlelarge.github.io/graph-conjectures/arxiv/1804.06104__01/) | 4 | 4.0 | Progress on the adjacent vertex distinguishing edge colouring conjecture |
 | [`1909.05988__01`](https://mlelarge.github.io/graph-conjectures/arxiv/1909.05988__01/) | 4 | 4.0 | Independent sets in hypergraphs with a forbidden link |
 | [`2201.04062__00`](https://mlelarge.github.io/graph-conjectures/arxiv/2201.04062__00/) | 4 | 4.0 | Pure pairs. VIII. Excluding a sparse graph |
 | [`2312.01028__00`](https://mlelarge.github.io/graph-conjectures/arxiv/2312.01028__00/) | 4 | 4.0 | A structure theorem for pseudo-segments and its applications |
@@ -242,4 +242,4 @@ Queue records not yet attacked: **60** (plus 1 skipped without a model call).
 
 Skipped without a call: `2004.14789__01`
 
-Generated 2026-09-01T09:12:05Z.
+Generated 2026-09-01T09:22:07Z.

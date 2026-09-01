@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 59,
+    "score": 4.0,
+    "tier": 4,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1909.05988__01",
+    "title_md": "[Determine the order of f_k(N; s, t) in general](https://arxiv.org/abs/1909.05988)",
+    "paper": "Independent sets in hypergraphs with a forbidden link",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1909.05988__01/"
+  },
+  "dossier_meta": {
+    "id": "1909.05988__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1909.05988__01/",
+    "arxiv_id": "1909.05988",
+    "tier": 4,
+    "score": 4.0,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Independent sets in hypergraphs with a forbidden link",
+    "catalog_title": "Determine the order of f_k(N; s, t) in general",
+    "statement_text": "Determine the order of $f_k(N; s, t)$ for all valid parameters $k \\ge 3$, $s \\ge k+1$, and $1 \\le t \\le \\binom{s}{k}$.",
+    "context_text": "Despite substantial progress on the qualitative phase-transition structure of $f_k(N;s,t)$ as $t$ varies (the Erd\u0151s\u2013Hajnal threshold conjectures, now resolved), the exact order of $f_k(N;s,t)$ has remained wide open. Theorem 1.6 determines the order $f_3(N;s,t) = \\Theta(\\log N/\\log\\log N)$ for a constant fraction of $t$-values in the range $(e(s), E(s)]$ for each fixed $s \\ge 4$."
+  },
+  "started": "2026-09-01T09:17:10Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
