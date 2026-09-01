@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 179,
+    "score": 3.4,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2511.02892__06",
+    "title_md": "[Conjecture 6.1](https://arxiv.org/abs/2511.02892)",
+    "paper": "Open problems of the 33rd Workshop on Cycles and Colourings",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2511.02892__06/"
+  },
+  "dossier_meta": {
+    "id": "2511.02892__06",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2511.02892__06/",
+    "arxiv_id": "2511.02892",
+    "tier": 3,
+    "score": 3.4,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Open problems of the 33rd Workshop on Cycles and Colourings",
+    "catalog_title": "Conjecture 6.1",
+    "statement_text": "Each bridgeless graph admits a $2$-flow $\\varphi_{2}$ and a $4$-flow $\\varphi_{4}$ such that for any edge $e$, if $\\varphi_{2}(e)=0$, then $|\\varphi_{4}(e)|\\geq 2$.",
+    "context_text": "The conjecture implies the 5-flow conjecture since $(5\\varphi_{2}+\\varphi_{4})/2$ is a circular 5-flow, and generalises Seymour's approach in the proof of the 6-flow theorem. The resulting pair is called a $1/2$-flow-pair, and the conjecture has been verified computationally for all cyclically 4-edge-connected snarks up to 34 vertices."
+  },
+  "started": "2026-09-01T04:40:15Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

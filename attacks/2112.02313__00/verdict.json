@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general polynomial bound remains unresolved, but bipartite graphs have Kempe diameter at most 2n, and a refined lifting argument gives polynomial bounds for several structured degeneracy orders.",
+  "would_publish": false,
+  "caveats": "The unrestricted bounds obtained below are still exponential, and the novelty of these auxiliary estimates has not been literature-checked.",
+  "id": "2112.02313__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.005172,
+  "eur": 1.041152,
+  "elapsed_s": 1447.8,
+  "status": "completed",
+  "response_id": "resp_038644ce1ec1272f006a964fd4d88487d2b33985fec32fd385",
+  "when": "2026-09-01T04:33:00Z"
+}

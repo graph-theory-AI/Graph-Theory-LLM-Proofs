@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "After replacing the literal minimum by an infimum, I determine the threshold for a broad class including all bidirected graphs, give general bounds, and prove that every oriented forest has threshold zero.",
+  "would_publish": false,
+  "caveats": "The general oriented cyclic case remains open; the literal minimum can fail to exist, and antiparallel arcs are assumed allowed.",
+  "id": "2503.20045__03",
+  "model": "gpt-5.6-sol",
+  "usd": 0.8608,
+  "eur": 0.891612,
+  "elapsed_s": 1026.2,
+  "status": "completed",
+  "response_id": "resp_07d103fc18e8f785006a9651207c0487d2bac9af63f2388b82",
+  "when": "2026-09-01T04:31:30Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains unresolved, but it holds whenever the number of vertices is at most three times the minimum edge size minus one, and for a substantial class with a spanning tree of 2-edges.",
+  "would_publish": false,
+  "caveats": "The remaining cases include large 3-uniform hypergraphs and hypergraphs with a disconnected or empty 2-edge skeleton.",
+  "id": "2206.13635__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.539244,
+  "eur": 1.594341,
+  "elapsed_s": 1688.5,
+  "status": "completed",
+  "response_id": "resp_00bc6ea3d9284869006a965096ee5087d281388e095d98d934",
+  "when": "2026-09-01T04:40:15Z"
+}

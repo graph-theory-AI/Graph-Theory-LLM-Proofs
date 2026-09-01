@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 185,
+    "score": 3.4,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2008.01616__00",
+    "title_md": "[Conjecture 1.2](https://arxiv.org/abs/2008.01616)",
+    "paper": "Automorphism groups of maps in linear time",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2008.01616__00/"
+  },
+  "dossier_meta": {
+    "id": "2008.01616__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2008.01616__00/",
+    "arxiv_id": "2008.01616",
+    "tier": 3,
+    "score": 3.4,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Automorphism groups of maps in linear time",
+    "catalog_title": "Conjecture 1.2",
+    "statement_text": "There is no $\\varepsilon > 0$ for which there is an algorithm for testing isomorphism of maps of unrestricted genus in time $O(n^{2-\\varepsilon})$.",
+    "context_text": "The best known algorithm for the simultaneous conjugation problem runs in time $O(n^2 \\log d / \\log n + dn \\log n)$, yielding an $O(n^2/\\log n)$ algorithm for map isomorphism and automorphism problems of unrestricted genus. In complexity theory this is not considered 'truly subquadratic', which motivates the conjecture."
+  },
+  "started": "2026-09-01T04:32:45Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

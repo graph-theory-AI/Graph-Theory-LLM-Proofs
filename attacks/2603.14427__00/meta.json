@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 178,
+    "score": 3.4,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2603.14427__00",
+    "title_md": "[Question 5](https://arxiv.org/abs/2603.14427)",
+    "paper": "On Borodin-Kostochka conjecture for correspondence coloring",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2603.14427__00/"
+  },
+  "dossier_meta": {
+    "id": "2603.14427__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2603.14427__00/",
+    "arxiv_id": "2603.14427",
+    "tier": 3,
+    "score": 3.4,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On Borodin-Kostochka conjecture for correspondence coloring",
+    "catalog_title": "Question 5",
+    "statement_text": "What is the smallest number $\\Delta_{0}$ such that every graph $G$ with $\\Delta(G)\\geq\\Delta_{0}$ and $\\omega(G)=\\Delta(G)-1$ satisfies $\\chi(G)=\\chi_{\\ell}(G)=\\chi_{DP}(G)$?",
+    "context_text": "Theorem 4 of this paper gives an upper bound $\\Delta_0 \\leq 3\\cdot 10^9$ for the correspondence coloring analogue. The equality $\\chi(G)=\\chi_\\ell(G)=\\chi_{DP}(G)$ clearly holds for all graphs $G$ with $\\omega(G)=\\Delta(G)+1$, and the parameters also coincide for graphs with $\\omega(G)=\\Delta(G)$; the smallest threshold $\\Delta_0$ for the case $\\omega(G)=\\Delta(G)-1$ remains unknown."
+  },
+  "started": "2026-09-01T04:40:30Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

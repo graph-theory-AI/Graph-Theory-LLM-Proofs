@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Iterated-edge embeddability has an exact linear-algebraic recognition criterion, and the conjecture extends from the known two-tight-component case to arbitrary one-vertex amalgams of such hypergraphs.",
+  "would_publish": false,
+  "caveats": "The Ramsey argument uses the source paper's proved case; cyclic cores with at least three tight components remain unresolved.",
+  "id": "2411.13812__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.885772,
+  "eur": 0.917478,
+  "elapsed_s": 1425.6,
+  "status": "completed",
+  "response_id": "resp_08f0d6849723d458006a9651ad25f887d2bce355cef46e3939",
+  "when": "2026-09-01T04:40:30Z"
+}

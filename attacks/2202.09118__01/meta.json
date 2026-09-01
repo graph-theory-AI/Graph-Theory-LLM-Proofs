@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 184,
+    "score": 3.4,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2202.09118__01",
+    "title_md": "[Open problem (poly-\u03c7-bounded for k-multihole with only odd cycles)](https://arxiv.org/abs/2202.09118)",
+    "paper": "Polynomial bounds for chromatic number VII. Disjoint holes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.09118__01/"
+  },
+  "dossier_meta": {
+    "id": "2202.09118__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.09118__01/",
+    "arxiv_id": "2202.09118",
+    "tier": 3,
+    "score": 3.4,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Polynomial bounds for chromatic number VII. Disjoint holes",
+    "catalog_title": "Open problem (poly-\u03c7-bounded for k-multihole with only odd cycles)",
+    "statement_text": "For any integer $k \\geq 1$, is the class of graphs with no $k$-multihole in which all the cycles have odd length polynomially $\\chi$-bounded?",
+    "context_text": "This class is $\\chi$-bounded [9], but it contains the class of $\\{P_5, C_5\\}$-free graphs. The authors state they cannot yet prove it is poly-$\\chi$-bounded, referring to [15] for the best current bounds."
+  },
+  "started": "2026-09-01T04:33:00Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

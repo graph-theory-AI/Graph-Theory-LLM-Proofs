@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 181,
+    "score": 3.4,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2404.03472__01",
+    "title_md": "[Problem 5.2 (randomised non-adaptive optimality)](https://arxiv.org/abs/2404.03472)",
+    "paper": "Lower bounds for graph reconstruction with maximal independent set quer\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2404.03472__01/"
+  },
+  "dossier_meta": {
+    "id": "2404.03472__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2404.03472__01/",
+    "arxiv_id": "2404.03472",
+    "tier": 3,
+    "score": 3.4,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Lower bounds for graph reconstruction with maximal independent set quer\u2026",
+    "catalog_title": "Problem 5.2 (randomised non-adaptive optimality)",
+    "statement_text": "Is there a randomised non-adaptive algorithm which uses $\\mathcal{O}(\\Delta^{2}\\log(n/\\Delta))$ queries to reconstruct any graph of maximum degree $\\Delta$ with high probability?",
+    "context_text": "The paper proves an $\\Omega(\\Delta^{2}\\log(n/\\Delta))$ lower bound for randomised non-adaptive algorithms, while the existing upper bound of Konrad, O'Sullivan, and Traistaru is $\\mathcal{O}(\\Delta^{2}\\log n)$. The question asks whether the new lower bound is tight, i.e., whether the $\\log\\Delta$ gap in the $n$-dependence can be closed."
+  },
+  "started": "2026-09-01T04:39:30Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

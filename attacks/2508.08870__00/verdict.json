@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "Two parallel arithmetic progressions already give noncollinear planar sets of n points with at most (3/2+o(1))n distinct distances in every norm.",
+  "would_publish": false,
+  "caveats": "This treats d-dimensional as meaning only affine span d, exactly as in the quoted statement; an omitted general-position hypothesis would change the problem.",
+  "id": "2508.08870__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.283944,
+  "eur": 0.294108,
+  "elapsed_s": 917.1,
+  "status": "completed",
+  "response_id": "resp_0cb1bd86269e3ad4006a96536d9e7087d2b6dab4d581583795",
+  "when": "2026-09-01T04:39:30Z"
+}

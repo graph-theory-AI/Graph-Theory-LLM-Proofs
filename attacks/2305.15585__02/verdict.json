@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is proved for k=2, while for general k there are universal fractional-chromatic and improved logarithmic bounds, but not the required constant bound.",
+  "would_publish": false,
+  "caveats": "The main unresolved issue is that G may be chosen after seeing T; the fixed-graph probability estimates are only exponentially small in N and cannot be union-bounded over all graphs.",
+  "id": "2305.15585__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.455264,
+  "eur": 1.507355,
+  "elapsed_s": 1586.0,
+  "status": "completed",
+  "response_id": "resp_01f9ef6b31db392d006a965084b76c87d28ba008f44cb10d0d",
+  "when": "2026-09-01T04:38:14Z"
+}

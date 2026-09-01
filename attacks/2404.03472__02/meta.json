@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 182,
+    "score": 3.4,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2404.03472__02",
+    "title_md": "[Problem 5.3 (adaptive vs non-adaptive gap)](https://arxiv.org/abs/2404.03472)",
+    "paper": "Lower bounds for graph reconstruction with maximal independent set quer\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2404.03472__02/"
+  },
+  "dossier_meta": {
+    "id": "2404.03472__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2404.03472__02/",
+    "arxiv_id": "2404.03472",
+    "tier": 3,
+    "score": 3.4,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Lower bounds for graph reconstruction with maximal independent set quer\u2026",
+    "catalog_title": "Problem 5.3 (adaptive vs non-adaptive gap)",
+    "statement_text": "Is there a deterministic adaptive algorithm that uses $o(\\Delta^{3}\\log(n/\\Delta))$ queries to reconstruct any graph of maximum degree $\\Delta$?",
+    "context_text": "For adaptive algorithms the best lower bound drops to $\\Omega(\\Delta^{2}\\log(n/\\Delta)/\\log\\Delta)$ in both the deterministic and randomised settings, while the upper bounds match the non-adaptive case. This gap suggests adaptive algorithms might outperform non-adaptive ones, motivating the question of whether adaptivity yields a provable saving."
+  },
+  "started": "2026-09-01T04:38:14Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

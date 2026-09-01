@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The auxiliary path can be removed at the cost of an explicit exponential chi-bound, and the conjectured polynomial bound follows under a local-neighborhood or one-exceptional-branch condition.",
+  "would_publish": false,
+  "caveats": "The general exponential factor remains; no proof or counterexample for branched brooms is obtained.",
+  "id": "2202.10412__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.003088,
+  "eur": 1.038993,
+  "elapsed_s": 1289.1,
+  "status": "completed",
+  "response_id": "resp_001cd121ac777046006a965064421887d28f4a757ffdfa02c6",
+  "when": "2026-09-01T04:32:45Z"
+}

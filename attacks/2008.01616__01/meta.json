@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 186,
+    "score": 3.4,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2008.01616__01",
+    "title_md": "[Open subproblem: conditional superlinear lower bound](https://arxiv.org/abs/2008.01616)",
+    "paper": "Automorphism groups of maps in linear time",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2008.01616__01/"
+  },
+  "dossier_meta": {
+    "id": "2008.01616__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2008.01616__01/",
+    "arxiv_id": "2008.01616",
+    "tier": 3,
+    "score": 3.4,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Automorphism groups of maps in linear time",
+    "catalog_title": "Open subproblem: conditional superlinear lower bound",
+    "statement_text": "An interesting open subproblem is to prove a conditional ``truly superlinear'' lower bound for any of the mentioned problems (map isomorphism, simultaneous conjugation).",
+    "context_text": "Some progress has been made: the communication complexity of the simultaneous conjugation problem is $\\Omega(dn\\log n)$ for $d>1$, and under the decision tree model the search version has lower bound $\\Omega(n\\log n)$. A conditional lower bound ruling out, e.g., $O(n\\,\\mathrm{polylog}\\,n)$ algorithms remains open."
+  },
+  "started": "2026-09-01T04:31:30Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but it is equivalent to the case of forbidden square grids and holds in polynomial time on every fixed-surface input class, with an additional lifting rule for isolated components.",
+  "would_publish": false,
+  "caveats": "The argument gives no quasipolynomial algorithm for unrestricted graphs of unbounded minor edge-excess, including the general grid-forbidden case.",
+  "id": "2302.08182__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.209608,
+  "eur": 1.252906,
+  "elapsed_s": 1369.0,
+  "status": "completed",
+  "response_id": "resp_0e9aa10224db0bdd006a9651cf7d9487d2b0a19d80acd33d1f",
+  "when": "2026-09-01T04:40:08Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 183,
+    "score": 3.4,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2201.04062__01",
+    "title_md": "[Open question on Theorem 3.3 with stronger coherence](https://arxiv.org/abs/2201.04062)",
+    "paper": "Pure pairs. VIII. Excluding a sparse graph",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2201.04062__01/"
+  },
+  "dossier_meta": {
+    "id": "2201.04062__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2201.04062__01/",
+    "arxiv_id": "2201.04062",
+    "tier": 3,
+    "score": 3.4,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Pure pairs. VIII. Excluding a sparse graph",
+    "catalog_title": "Open question on Theorem 3.3 with stronger coherence",
+    "statement_text": "Is Theorem 3.3 true with the hypothesis that $G$ is $(\\varepsilon|G|^{1-c},\\, \\varepsilon|G|^{1-c})$-coherent replaced by the stronger hypothesis that $G$ is $(\\varepsilon|G|^{1-c},\\, \\varepsilon|G|)$-coherent?",
+    "context_text": "In Section 4, the authors note that the stronger coherence condition $(\\varepsilon|G|^{1-c}, \\varepsilon|G|)$-coherent would suffice for almost all of the proof of Theorem 3.3, and they write the proof using only this weaker form wherever possible. Resolving this question in the affirmative would be a step toward proving Possibility 1.6."
+  },
+  "started": "2026-09-01T04:36:52Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
