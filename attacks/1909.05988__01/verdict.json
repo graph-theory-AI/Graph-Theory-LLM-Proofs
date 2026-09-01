@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the standard definition, the entire linear regime is determined, with exact formulas near s=kt and general exponent bounds outside it, but the nonlinear cases and Ramsey endpoint remain open.",
+  "would_publish": false,
+  "caveats": "Assumes fixed k,s,t and fewer than t edges on every s-set; no claim of novelty or of resolving the nonlinear regime.",
+  "id": "1909.05988__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.089468,
+  "eur": 1.128465,
+  "elapsed_s": 1334.3,
+  "status": "completed",
+  "response_id": "resp_01d418575b645840006a969818153487d2a418c369e765381a",
+  "when": "2026-09-01T09:39:24Z"
+}

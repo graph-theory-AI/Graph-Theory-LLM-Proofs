@@ -11,9 +11,9 @@ runs were not used.
 
 ## Counts
 
-Finished attacks with a verdict: **632**.
-Spend (promo ledger × prepaid FX): **€390.70** billed USD
-**$377.20** / budget €400
+Finished attacks with a verdict: **633**.
+Spend (promo ledger × prepaid FX): **€391.83** billed USD
+**$378.29** / budget €400
 (safety margin €5).
 
 | verdict | n | would_publish |
@@ -21,7 +21,7 @@ Spend (promo ledger × prepaid FX): **€390.70** billed USD
 | proved | 31 | 19 |
 | disproved | 46 | 7 |
 | already_resolved | 25 | 0 |
-| partial | 470 | 0 |
+| partial | 471 | 0 |
 | ill_posed | 23 | 0 |
 | unknown | 37 | 0 |
 
@@ -176,11 +176,10 @@ The sweep queue is the easiest-first open/partial arXiv ranking (692
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **59** (plus 1 skipped without a model call).
+Queue records not yet attacked: **58** (plus 1 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
-| [`1909.05988__01`](https://mlelarge.github.io/graph-conjectures/arxiv/1909.05988__01/) | 4 | 4.0 | Independent sets in hypergraphs with a forbidden link |
 | [`2201.04062__00`](https://mlelarge.github.io/graph-conjectures/arxiv/2201.04062__00/) | 4 | 4.0 | Pure pairs. VIII. Excluding a sparse graph |
 | [`2312.01028__00`](https://mlelarge.github.io/graph-conjectures/arxiv/2312.01028__00/) | 4 | 4.0 | A structure theorem for pseudo-segments and its applications |
 | [`2301.13305__00`](https://mlelarge.github.io/graph-conjectures/arxiv/2301.13305__00/) | 4 | 4.0 | Graph-codes |
@@ -242,4 +241,4 @@ Queue records not yet attacked: **59** (plus 1 skipped without a model call).
 
 Skipped without a call: `2004.14789__01`
 
-Generated 2026-09-01T09:32:09Z.
+Generated 2026-09-01T09:42:11Z.
