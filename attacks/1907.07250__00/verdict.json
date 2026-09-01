@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An entropy-refined deck count shows that for every fixed c<0.3698, a random q~cn colouring is a.a.s. not 1-ball reconstructible, while the n^(2+\u03b5) upper bound remains untouched.",
+  "would_publish": false,
+  "caveats": "This only sharpens the lower bound, assumes the standard rooted colour-preserving card convention and q>=2, and may be implicit in the source's unextracted counting discussion.",
+  "id": "1907.07250__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.352612,
+  "eur": 1.401028,
+  "elapsed_s": 1595.2,
+  "status": "completed",
+  "response_id": "resp_0129774dca4f8004006a966aef3bec87d28d6f4ccfe83a21b4",
+  "when": "2026-09-01T06:31:06Z"
+}

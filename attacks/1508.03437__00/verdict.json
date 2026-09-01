@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove DP-3-colorability when every block has at most seven triangles in the C4\u2013C7-free case, or at most five triangles in the C4\u2013C6-free case.",
+  "would_publish": false,
+  "caveats": "The unrestricted high-triangle blocks remain untreated, and I have not checked whether this bounded-triangle result is already in the literature.",
+  "id": "1508.03437__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.45084,
+  "eur": 1.502773,
+  "elapsed_s": 1588.8,
+  "status": "completed",
+  "response_id": "resp_061a8a5a90c86a54006a966ab5f4dc87d29f369b7bda403fd4",
+  "when": "2026-09-01T06:30:02Z"
+}

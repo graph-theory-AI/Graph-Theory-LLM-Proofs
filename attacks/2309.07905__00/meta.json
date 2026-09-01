@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 85,
+    "score": 3.8,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2309.07905__00",
+    "title_md": "[Conjecture 1.4](https://arxiv.org/abs/2309.07905)",
+    "paper": "On an induced version of Menger's theorem",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2309.07905__00/"
+  },
+  "dossier_meta": {
+    "id": "2309.07905__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2309.07905__00/",
+    "arxiv_id": "2309.07905",
+    "tier": 4,
+    "score": 3.8,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On an induced version of Menger's theorem",
+    "catalog_title": "Conjecture 1.4",
+    "statement_text": "For every $d, \\Delta \\in \\mathbb{N}$ there exists a constant $C = C(d, \\Delta) > 0$ such that the following holds. If $k \\in \\mathbb{N}$, $G$ is a graph with $\\Delta(G) \\leq \\Delta$ and $X, Y \\subseteq V(G)$, then there exists either (1) $k$ $X$-$Y$-paths pairwise at distance at least $d$ in $G$, or (2) a set of less than $Ck$ vertices in $G$ which separates $X$ and $Y$.",
+    "context_text": "This conjecture is derived as a consequence of the stronger (c independent of k) form of Conjecture 1.2 for graphs of bounded maximum degree $\\Delta$: the ball $B_G(Z, cd)$ can be bounded in size by $\\Delta^{cd+1}k$, yielding a linear separator of size $Ck$. The paper proves this conjecture in the first non-trivial case $d = 2$ as its first main result (Theorem 1.5)."
+  },
+  "started": "2026-09-01T06:25:45Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 87,
+    "score": 3.75,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2201.09115__03",
+    "title_md": "[Open problem: smallest counterexample to Woodall's conjecture](https://arxiv.org/abs/2201.09115)",
+    "paper": "Disproof of a Conjecture by Woodall",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2201.09115__03/"
+  },
+  "dossier_meta": {
+    "id": "2201.09115__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2201.09115__03/",
+    "arxiv_id": "2201.09115",
+    "tier": 4,
+    "score": 3.75,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Disproof of a Conjecture by Woodall",
+    "catalog_title": "Open problem: smallest counterexample to Woodall's conjecture",
+    "statement_text": "It would also be interesting to determine the smallest values of $s$ and $t$ (or of $s + t$) for which Conjecture 3 (that every graph without a $K_{s,t}$-minor is $(s+t-1)$-choosable) fails.",
+    "context_text": "The probabilistic construction in the proof of Theorem 1 yields counterexamples only for astronomically large $s$ and $t$; the smallest explicit failing parameter pair is left as an open problem, motivating the study of small cases such as Question 1."
+  },
+  "started": "2026-09-01T06:21:58Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

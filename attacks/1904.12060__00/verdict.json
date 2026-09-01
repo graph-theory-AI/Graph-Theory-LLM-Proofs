@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full conjecture remains open, but it holds for every bipartite or 2-degenerate graph and for every graph with \u0394=D\u22655 and maximum average degree at most 6D/(D+3).",
+  "would_publish": false,
+  "caveats": "These are rigorous special cases, not a full resolution, and I have not checked whether all of the elementary refinements below are already in the literature.",
+  "id": "1904.12060__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.863408,
+  "eur": 0.894314,
+  "elapsed_s": 1177.1,
+  "status": "completed",
+  "response_id": "resp_0209dd1a729e9ea6006a966a6d358c87d295b2b999d50c7b57",
+  "when": "2026-09-01T06:21:58Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 86,
+    "score": 3.8,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2302.08922__00",
+    "title_md": "[Polynomial bounds for path-induced copy theorem (1.2)](https://arxiv.org/abs/2302.08922)",
+    "paper": "A note on the Gy\u00e1rf\u00e1s-Sumner conjecture",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.08922__00/"
+  },
+  "dossier_meta": {
+    "id": "2302.08922__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.08922__00/",
+    "arxiv_id": "2302.08922",
+    "tier": 4,
+    "score": 3.8,
+    "lean": "prove",
+    "status": "open",
+    "paper": "A note on the Gy\u00e1rf\u00e1s-Sumner conjecture",
+    "catalog_title": "Polynomial bounds for path-induced copy theorem (1.2)",
+    "statement_text": "Is there any hope for a comparable strengthening of 1.2, giving a polynomial bound on the chromatic number of graphs with no path-induced copy of a rooted tree $(T,r)$ and with clique number at most $t$?",
+    "context_text": "Scott, Seymour and Spirkl proved (Theorem 3.2) that excluding an induced tree and $K_{t,t}$ as a subgraph yields a polynomial bound $f(t)$ on average degree. The authors ask whether an analogous polynomial bound on chromatic number can be obtained for 1.2, which imposes the weaker hypothesis of bounded clique number at the cost of weakening the conclusion to a path-induced copy."
+  },
+  "started": "2026-09-01T06:24:14Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

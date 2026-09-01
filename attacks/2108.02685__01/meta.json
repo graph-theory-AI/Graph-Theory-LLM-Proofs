@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 83,
+    "score": 3.8,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2108.02685__01",
+    "title_md": "[Conjecture 1.2](https://arxiv.org/abs/2108.02685)",
+    "paper": "Irregular Subgraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2108.02685__01/"
+  },
+  "dossier_meta": {
+    "id": "2108.02685__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2108.02685__01/",
+    "arxiv_id": "2108.02685",
+    "tier": 4,
+    "score": 3.8,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Irregular Subgraphs",
+    "catalog_title": "Conjecture 1.2",
+    "statement_text": "Every graph $G$ with $n$ vertices and minimum degree $\\delta$ contains a spanning subgraph $H$ satisfying $m(H) \\leq \\frac{n}{\\delta+1} + 2$.",
+    "context_text": "This is the second of the two central conjectures introduced by the authors, generalising Conjecture 1.1 from regular graphs to arbitrary graphs with minimum degree $\\delta$. Both conjectures remain open; the paper proves asymptotic relaxations showing the bound $(1+o(1))\\frac{n}{\\delta+1}+2$ is achievable when $n$ is large."
+  },
+  "started": "2026-09-01T06:30:02Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

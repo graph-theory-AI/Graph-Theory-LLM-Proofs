@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the first nontrivial exact value f(3)=4, obtain f(4)\u22656, and identify a parameter inversion error in the catalogued lower bound.",
+  "would_publish": false,
+  "caveats": "No asymptotic upper-bound improvement is obtained; the small case may be folklore, and its novelty has not been literature-checked.",
+  "id": "1912.07722__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.960368,
+  "eur": 0.994744,
+  "elapsed_s": 1114.9,
+  "status": "completed",
+  "response_id": "resp_0e82cc75d60b051e006a966c771ee087d293f4003c0a93f83b",
+  "when": "2026-09-01T06:29:37Z"
+}

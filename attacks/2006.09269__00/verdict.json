@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The published follow-up arXiv:2112.00631 proves that the 6-recolouring graph of every n-vertex planar graph of girth at least five has diameter O(n), exactly resolving Conjecture 5.",
+  "would_publish": false,
+  "caveats": "This is a literature resolution; the follow-up's discharging proof is not reproduced or independently audited here.",
+  "id": "2006.09269__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.201864,
+  "eur": 0.20909,
+  "elapsed_s": 418.5,
+  "status": "completed",
+  "response_id": "resp_01c9546ce8b57f37006a966e46ffd887d2b14ab3e8ce4c2b48",
+  "when": "2026-09-01T06:25:45Z"
+}

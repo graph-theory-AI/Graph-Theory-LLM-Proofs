@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The specific graph U_t remains unresolved, but an alternative induced-universal graph has O(sqrt(n)) separators, while the generic bound for U_t improves to O_t(n^(3/4)(log n)^(3/4)).",
+  "would_publish": false,
+  "caveats": "The alternative graph need not retain U_t's no-infinite-subdivision feature, and no counterexample or bounded-fibre description is obtained for U_t itself.",
+  "id": "2109.00327__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.244896,
+  "eur": 1.289457,
+  "elapsed_s": 1522.0,
+  "status": "completed",
+  "response_id": "resp_0d3460140c705432006a96699c0a5087d2b0b7ee603d17adc9",
+  "when": "2026-09-01T06:24:13Z"
+}

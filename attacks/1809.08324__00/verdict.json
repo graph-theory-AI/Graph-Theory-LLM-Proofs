@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full generalized inequality holds for abelian bi-Cayley digraphs and the original conjecture holds for a coalescent-neighborhood class, while any k=5 counterexample must satisfy strong two-step and giant-core constraints.",
+  "would_publish": false,
+  "caveats": "These special cases and necessary conditions do not settle k=5 or any other currently open value, and novelty has not been checked.",
+  "id": "1809.08324__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.27082,
+  "eur": 1.316309,
+  "elapsed_s": 1357.6,
+  "status": "completed",
+  "response_id": "resp_0989680c831a09b5006a966a9d7d5c87d29a664fed674da51f",
+  "when": "2026-09-01T06:25:46Z"
+}

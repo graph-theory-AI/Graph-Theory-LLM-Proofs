@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 84,
+    "score": 3.8,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1806.06770__00",
+    "title_md": "[Closing Question](https://arxiv.org/abs/1806.06770)",
+    "paper": "The Algebraic Connectivity of a Graph and its Complement",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1806.06770__00/"
+  },
+  "dossier_meta": {
+    "id": "1806.06770__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1806.06770__00/",
+    "arxiv_id": "1806.06770",
+    "tier": 4,
+    "score": 3.8,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "The Algebraic Connectivity of a Graph and its Complement",
+    "catalog_title": "Closing Question",
+    "statement_text": "What is the supremum of all real numbers $c$ such that for any graph $G$ of order at least $2$, $$\\max\\{\\lambda_2(G), \\lambda_2(\\bar{G})\\} \\geq c\\,?$$",
+    "context_text": "The paper proves the supremum is at least $\\tfrac{2}{5}$. The self-complementary path $P_4$ satisfies $\\lambda_2(P_4) = 2 - \\sqrt{2} < 0.5858$, giving an upper bound on the supremum. The exact value is left open."
+  },
+  "started": "2026-09-01T06:29:37Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but its exponential growth constant is exactly the optimal growth constant for two-terminal simple paths, and bounded-degree configuration-model graphs have annealed base at most 5/7^(2/3) < kappa_1.",
+  "would_publish": false,
+  "caveats": "The probabilistic bound is only annealed/typical, and determining the growth constant alone does not establish the exact O(kappa_1^m) bound.",
+  "id": "1907.12091__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.320536,
+  "eur": 1.367804,
+  "elapsed_s": 1903.8,
+  "status": "completed",
+  "response_id": "resp_0bf8f6084eb02923006a9667cba15c87d295eac5a2b75d130b",
+  "when": "2026-09-01T06:22:51Z"
+}
