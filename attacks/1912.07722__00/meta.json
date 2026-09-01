@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 92,
+    "score": 3.75,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1912.07722__00",
+    "title_md": "[Problem 1.1](https://arxiv.org/abs/1912.07722)",
+    "paper": "Acyclic subgraphs of tournaments with high chromatic number",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1912.07722__00/"
+  },
+  "dossier_meta": {
+    "id": "1912.07722__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1912.07722__00/",
+    "arxiv_id": "1912.07722",
+    "tier": 4,
+    "score": 3.75,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Acyclic subgraphs of tournaments with high chromatic number",
+    "catalog_title": "Problem 1.1",
+    "statement_text": "What is the minimum integer $f\\mathopen{}\\mathclose{{}\\left(k}\\right)$ such that every $f\\mathopen{}\\mathclose{{}\\left(k}\\right)$-chromatic oriented graph has an acyclic $k$-chromatic subgraph?",
+    "context_text": "Addario-Berry, Havet, Sales, Reed, and Thomass\u00e9 observed that if a $k$-chromatic oriented graph has no directed cycle it contains every oriented tree of order $k$, and suggested that proving acyclic subgraphs of high chromatic number exist in $k$-chromatic oriented graphs could yield improved bounds towards Burr's conjecture. The trivial two-part partition gives $f(k)\\leq k^{2}$, subsequently refined to $f(k)\\leq k^{2}-2k+2$, but substantially improving this bound seems to require new ideas."
+  },
+  "started": "2026-09-01T06:11:02Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

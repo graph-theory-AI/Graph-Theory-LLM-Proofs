@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 97,
+    "score": 3.7,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1809.08324__00",
+    "title_md": "[Conjecture 1.2](https://arxiv.org/abs/1809.08324)",
+    "paper": "Short directed cycles in bipartite digraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1809.08324__00/"
+  },
+  "dossier_meta": {
+    "id": "1809.08324__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1809.08324__00/",
+    "arxiv_id": "1809.08324",
+    "tier": 4,
+    "score": 3.7,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Short directed cycles in bipartite digraphs",
+    "catalog_title": "Conjecture 1.2",
+    "statement_text": "For every integer $k \\geq 1$, if $G$ is a bipartite digraph, with $n > 0$ vertices in each part, and every vertex has out-degree more than $n/(k+1)$, then $G$ has girth at most $2k$.",
+    "context_text": "The central bipartite analogue of the Caccetta-H\u00e4ggkvist conjecture, motivated by an extremal construction with bipartition into parts of cardinality $(k+1)t$ in which every vertex has out-degree exactly $n/(k+1)$ and no directed cycle of length at most $2k$ exists. The conjecture is implied by the Caccetta-H\u00e4ggkvist conjecture."
+  },
+  "started": "2026-09-01T06:03:09Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

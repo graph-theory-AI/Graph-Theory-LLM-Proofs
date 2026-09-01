@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 93,
+    "score": 3.75,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1909.11578__00",
+    "title_md": "[Size of symmetric intersecting families in $[k]^n$](https://arxiv.org/abs/1909.11578)",
+    "paper": "On symmetric intersecting families of vectors",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1909.11578__00/"
+  },
+  "dossier_meta": {
+    "id": "1909.11578__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1909.11578__00/",
+    "arxiv_id": "1909.11578",
+    "tier": 4,
+    "score": 3.75,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On symmetric intersecting families of vectors",
+    "catalog_title": "Size of symmetric intersecting families in $[k]^n$",
+    "statement_text": "How large can a symmetric, intersecting subfamily of $[k]^n$ really be (for fixed $k \\geq 3$)?",
+    "context_text": "Theorem 1.1 establishes that any symmetric intersecting $A \\subset [k]^n$ has size $o(k^n)$, but the precise asymptotics remain open. The best constructions known to the authors are set-intersecting families, e.g., those based on lines of a projective plane $PG(2,q)$, yielding size roughly $k^{n-\\sqrt{n}}$."
+  },
+  "started": "2026-09-01T06:07:40Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

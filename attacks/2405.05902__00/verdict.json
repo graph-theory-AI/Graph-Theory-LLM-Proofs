@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A weak-regularity argument gives a uniform o(n^2) upper bound when t=o(n), with an explicit logarithmic rate, and the induced-P3-free case has order Theta_c(nt).",
+  "would_publish": false,
+  "caveats": "The logarithmic rate is very weak and non-sharp, gives no matching lower bound, and does not determine ex(Gamma,P) for an individual host.",
+  "id": "2405.05902__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.720524,
+  "eur": 0.746315,
+  "elapsed_s": 1217.0,
+  "status": "completed",
+  "response_id": "resp_0dea4985876f66f0006a96662dbd5887d2b569a63808f2df50",
+  "when": "2026-09-01T06:04:30Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The intended unrestricted problem is not solved here, but K_{r+1}-free perfect graphs admit an elementary r(k-1)+1-vertex FPT kernel, while a literal ellipsoid-free reading is already handled by theta SDP with interior-point optimization.",
+  "would_publish": false,
+  "caveats": "The kernel assumes a clique-number bound, and interior-point SDP is not combinatorial in the customary sense.",
+  "id": "1907.01083__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.584788,
+  "eur": 0.60572,
+  "elapsed_s": 977.2,
+  "status": "completed",
+  "response_id": "resp_027893913da808e0006a9667dad51487d296b39d45ae3c48a1",
+  "when": "2026-09-01T06:07:39Z"
+}

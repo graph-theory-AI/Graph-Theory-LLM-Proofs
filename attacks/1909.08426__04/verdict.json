@@ -1,0 +1,15 @@
+{
+  "verdict": "ill_posed",
+  "confidence": "high",
+  "one_line": "The catalog item is an informal research expectation rather than a proposition, because neither \u201cvery few\u201d nor \u201cwill end up\u201d specifies a mathematical quantifier or asymptotic notion.",
+  "would_publish": false,
+  "caveats": "Universal, finite-exception, and density-one reformulations are distinct genuine conjectures and remain unresolved.",
+  "id": "1909.08426__04",
+  "model": "gpt-5.6-sol",
+  "usd": 0.198068,
+  "eur": 0.205158,
+  "elapsed_s": 305.3,
+  "status": "completed",
+  "response_id": "resp_013dc0d73f8119bf006a9669845a9087d2ac4b5f2e0ce6ade5",
+  "when": "2026-09-01T06:03:33Z"
+}

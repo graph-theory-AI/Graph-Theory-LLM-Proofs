@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full conjecture remains open, but a maximum-clique decomposition shows that goodness is preserved when an isolated vertex or isolated edge is adjoined, yielding explicit polynomial bounds for matchings and for a star together with any number of isolated vertices and edges.",
+  "would_publish": false,
+  "caveats": "This is an elementary special-case reduction; it does not address P5 or the general problem of combining nontrivial tree components, and novelty was not checked.",
+  "id": "2202.09118__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.575876,
+  "eur": 0.596489,
+  "elapsed_s": 963.5,
+  "status": "completed",
+  "response_id": "resp_014204b661885c5a006a9666a9413c87d2a7e7edc5d5fb3970",
+  "when": "2026-09-01T06:02:20Z"
+}

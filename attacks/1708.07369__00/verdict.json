@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full conjecture remains unresolved, but it holds for every singleton star in every number of colors, for a broad cyclic extension of K_{1,3}, and for explicit infinite color sequences for path and bounded-monochromatic-component families.",
+  "would_publish": false,
+  "caveats": "These are special cases and exact reformulations; arbitrary forests and arbitrary additional family members are not covered, and novelty was not independently checked.",
+  "id": "1708.07369__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.49322,
+  "eur": 1.54667,
+  "elapsed_s": 1879.6,
+  "status": "completed",
+  "response_id": "resp_0098c47d9c581013006a966410986487d2b4fe984e4788ad96",
+  "when": "2026-09-01T06:06:31Z"
+}

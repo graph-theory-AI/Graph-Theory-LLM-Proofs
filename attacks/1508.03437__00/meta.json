@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 96,
+    "score": 3.75,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1508.03437__00",
+    "title_md": "[Open Question on 3-Choosability for Forbidden Cycles 4\u20137 and 4\u20136](https://arxiv.org/abs/1508.03437)",
+    "paper": "Correspondence coloring and its application to list-coloring planar gra\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1508.03437__00/"
+  },
+  "dossier_meta": {
+    "id": "1508.03437__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1508.03437__00/",
+    "arxiv_id": "1508.03437",
+    "tier": 4,
+    "score": 3.75,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Correspondence coloring and its application to list-coloring planar gra\u2026",
+    "catalog_title": "Open Question on 3-Choosability for Forbidden Cycles 4\u20137 and 4\u20136",
+    "statement_text": "It is not known whether excluding cycles of lengths 4 to 7, or even 4 to 6, forces a planar graph to be 3-choosable. The latter question is wide open even for ordinary coloring.",
+    "context_text": "After establishing 3-choosability for planar graphs without cycles of lengths 4 to 8, the authors remark that the analogous questions for shorter forbidden cycle ranges remain open. They note that the case of forbidden lengths 4 to 7 might be approachable with the methods of the paper, whereas the case 4 to 6 is wide open even for ordinary 3-colorability."
+  },
+  "started": "2026-09-01T06:03:33Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A polynomial-evaluation construction attains the target when the family size is at most r^A for fixed A, while typical equal-density Bernoulli matrices fail at the conjectured scale.",
+  "would_publish": false,
+  "caveats": "No uniform bound is obtained for superpolynomial family size; the random obstruction is distributional, not a deterministic lower bound.",
+  "id": "2404.03472__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.873416,
+  "eur": 0.90468,
+  "elapsed_s": 1049.7,
+  "status": "completed",
+  "response_id": "resp_0b4f6a4a10902be2006a96685c8e9087d29f7c00594a052863",
+  "when": "2026-09-01T06:11:02Z"
+}

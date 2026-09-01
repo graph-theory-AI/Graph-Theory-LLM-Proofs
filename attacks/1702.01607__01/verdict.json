@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for k at most 2 and, more generally, for every class with log |T| = O(gamma(T)); a quantitative local-to-global bound is proved, but the unrestricted case k at least 3 remains open.",
+  "would_publish": false,
+  "caveats": "The general bound still depends logarithmically on the order of the tournament, and no unrestricted proof or counterexample is obtained.",
+  "id": "1702.01607__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.345764,
+  "eur": 1.393935,
+  "elapsed_s": 1849.7,
+  "status": "completed",
+  "response_id": "resp_01f6af4e4242d4cb006a9663636a7887d293d36b131912cb90",
+  "when": "2026-09-01T06:03:08Z"
+}

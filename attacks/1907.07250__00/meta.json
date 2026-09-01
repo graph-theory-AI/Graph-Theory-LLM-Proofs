@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 95,
+    "score": 3.75,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1907.07250__00",
+    "title_md": "[Gap problem for 1-ball reconstruction threshold](https://arxiv.org/abs/1907.07250)",
+    "paper": "Shotgun reconstruction in the hypercube",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1907.07250__00/"
+  },
+  "dossier_meta": {
+    "id": "1907.07250__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1907.07250__00/",
+    "arxiv_id": "1907.07250",
+    "tier": 4,
+    "score": 3.75,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Shotgun reconstruction in the hypercube",
+    "catalog_title": "Gap problem for 1-ball reconstruction threshold",
+    "statement_text": "Determine the correct threshold $q^*(n)$ such that almost every $q$-colouring of the hypercube $Q_n$ is reconstructible from the multiset of its coloured 1-balls, narrowing the gap between the lower bound $q = \\Omega(n)$ and the upper bound $q \\geq n^{2+\\varepsilon}$.",
+    "context_text": "Theorem 1.2 shows that for $q \\geq n^{2+\\varepsilon}$ almost every $q$-colouring of $Q_n$ is 1-distinguishable, while a counting argument shows that $\\Omega(n)$ colours are necessary for reconstruction from 1-balls. The authors note explicitly that 'it would be interesting to narrow the gap', with further discussion deferred to Section 6 (open questions)."
+  },
+  "started": "2026-09-01T06:04:31Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 94,
+    "score": 3.75,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1804.06104__00",
+    "title_md": "[Open Problem: $\\Delta + O(1)$ bound for neighbour sum distinguishing co\u2026](https://arxiv.org/abs/1804.06104)",
+    "paper": "Progress on the adjacent vertex distinguishing edge colouring conjecture",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1804.06104__00/"
+  },
+  "dossier_meta": {
+    "id": "1804.06104__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1804.06104__00/",
+    "arxiv_id": "1804.06104",
+    "tier": 4,
+    "score": 3.75,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Progress on the adjacent vertex distinguishing edge colouring conjecture",
+    "catalog_title": "Open Problem: $\\Delta + O(1)$ bound for neighbour sum distinguishing colourings",
+    "statement_text": "It is an intriguing open problem whether a $\\Delta + O(1)$ bound holds on the number of colours required for a neighbour sum distinguishing edge colouring.",
+    "context_text": "A neighbour sum distinguishing colouring is a proper edge colouring $c$ with colours in $[\\Delta+2]$ such that for every edge $uv$, the sum of colours incident to $u$ and that of $v$ are distinct \u2014 a strengthening of AVD-colourings conjectured by Flandrin et al. The best known asymptotic bound is $\\Delta + O(\\Delta^{1/2})$ due to Przyby\u0142o. The authors note that neither Hatami's proof for AVD-colourings nor their own entropy compression argument seems adaptable to this setting."
+  },
+  "started": "2026-09-01T06:06:32Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

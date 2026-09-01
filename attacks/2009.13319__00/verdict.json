@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Ordered orientations of rook graphs yield claw- and directed-triangle-free examples with dichromatic number \u03a9(\u221an), disproving forest-plus-hero sufficiency and giving an additional necessary obstruction class.",
+  "would_publish": false,
+  "caveats": "No full characterization; the host convention matters, and the core counterexample overlaps the unverified 2026 claim reported in the prompt.",
+  "id": "2009.13319__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.793184,
+  "eur": 0.821576,
+  "elapsed_s": 1170.5,
+  "status": "completed",
+  "response_id": "resp_0d3c0e9d44ed02fa006a966668992087d28b2412280a4acbe3",
+  "when": "2026-09-01T06:04:42Z"
+}
