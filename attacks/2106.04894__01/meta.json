@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 332,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2106.04894__01",
+    "title_md": "[Conjecture 1.2](https://arxiv.org/abs/2106.04894)",
+    "paper": "Geometric and o-minimal Littlewood-Offord problems",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2106.04894__01/"
+  },
+  "dossier_meta": {
+    "id": "2106.04894__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2106.04894__01/",
+    "arxiv_id": "2106.04894",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Geometric and o-minimal Littlewood-Offord problems",
+    "catalog_title": "Conjecture 1.2",
+    "statement_text": "In Theorem 1.1 we have $\\Pr(X \\in S) \\leq C_S/\\sqrt{n}$, for some $C_S$ depending only on $S$.",
+    "context_text": "Theorem 1.1 establishes $\\Pr(X \\in S) \\leq n^{-1/2+\\alpha}$ for any $\\alpha > 0$ when $S \\subseteq \\mathbb{R}^d$ is definable with respect to an o-minimal structure and contains no line segment; the conjecture posits that the optimal $O(1/\\sqrt{n})$ bound from the classical Erd\\H{o}s\u2013Littlewood\u2013Offord theorem also holds in this geometric setting. The authors prove it when $S$ satisfies the generic intersection property, which covers convex or irreducible algebraic plane curves in $\\mathbb{R}^2$, irreducible complex algebraic curves, and the boundary of a 3-dimensional ball. They also remark that a full resolution of the Gotsman\u2013Linial conjecture would imply Conjecture 1.2 for all semi-algebraic sets not containing a line segment."
+  },
+  "started": "2026-09-01T02:31:19Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

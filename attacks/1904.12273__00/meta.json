@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 327,
+    "score": 2.95,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1904.12273__00",
+    "title_md": "[Open Problem (induced st-path of excess length three)](https://arxiv.org/abs/1904.12273)",
+    "paper": "Detecting a long odd hole",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1904.12273__00/"
+  },
+  "dossier_meta": {
+    "id": "1904.12273__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1904.12273__00/",
+    "arxiv_id": "1904.12273",
+    "tier": 3,
+    "score": 2.95,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Detecting a long odd hole",
+    "catalog_title": "Open Problem (induced st-path of excess length three)",
+    "statement_text": "Is there a polynomial-time algorithm to test whether a graph contains an induced path between specified vertices $s, t$ of length at least three more than the shortest $st$-path?",
+    "context_text": "Berger, Spirkl, and Seymour (including a co-author of the present paper) have a poly-time algorithm to detect an induced $st$-path longer than the shortest $st$-path. Whether a poly-time algorithm exists to detect one that is at least three longer remains open, as noted in the introduction."
+  },
+  "started": "2026-09-01T02:33:43Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

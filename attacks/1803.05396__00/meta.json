@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 324,
+    "score": 2.95,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1803.05396__00",
+    "title_md": "[Open Problem: Complexity of 3-colourability of $P_t$-free graphs](https://arxiv.org/abs/1803.05396)",
+    "paper": "$H$-colouring $P_t$-free graphs in subexponential time",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1803.05396__00/"
+  },
+  "dossier_meta": {
+    "id": "1803.05396__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1803.05396__00/",
+    "arxiv_id": "1803.05396",
+    "tier": 3,
+    "score": 2.95,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "$H$-colouring $P_t$-free graphs in subexponential time",
+    "catalog_title": "Open Problem: Complexity of 3-colourability of $P_t$-free graphs",
+    "statement_text": "Determine the complexity of $3$-colourability of $P_t$-free graphs for $t \\geq 8$.",
+    "context_text": "Polynomial-time algorithms for 3-colourability of $P_t$-free graphs are known for $t \\leq 7$ (combining results for $t \\leq 5$, $(k,t)=(3,7)$, and hardness for $P_7$-free graphs). The paper notes this problem remains open for $t \\geq 8$, and provides a subexponential-time algorithm as partial progress."
+  },
+  "started": "2026-09-01T02:39:50Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

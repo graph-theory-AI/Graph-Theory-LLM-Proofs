@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 323,
+    "score": 2.95,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2211.14218__00",
+    "title_md": "[Informal Conjecture (second phase transition for all radii)](https://arxiv.org/abs/2211.14218)",
+    "paper": "Shotgun assembly of random graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2211.14218__00/"
+  },
+  "dossier_meta": {
+    "id": "2211.14218__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2211.14218__00/",
+    "arxiv_id": "2211.14218",
+    "tier": 3,
+    "score": 2.95,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Shotgun assembly of random graphs",
+    "catalog_title": "Informal Conjecture (second phase transition for all radii)",
+    "statement_text": "It seems likely that for every radius $r$ there should be a second phase transition around some threshold $t=t(n)$. By which we mean that, if $p=\\omega(t(n))$, then $G$ is with high probability reconstructible from its $r$-neighbourhoods, while if $p=o(t(n))$ and $p=\\omega(n^{-\\frac{2r+1}{2r}})$, then with high probability $G$ is not reconstructible from its $r$-neighbourhoods.",
+    "context_text": "The paper establishes the existence of this second phase transition for all $r\\geq 3$, but the question remains open for $r=1$ and $r=2$, for which only improved (but not matching) bounds are given."
+  },
+  "started": "2026-09-01T02:39:54Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

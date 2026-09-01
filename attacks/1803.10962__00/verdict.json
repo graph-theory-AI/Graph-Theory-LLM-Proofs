@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds when the high-minimum-degree core has maximum degree O(sqrt(g)), and the canonical bipartite obstruction is ruled out below density 1/2 when one bipartition class is sufficiently small.",
+  "would_publish": false,
+  "caveats": "The uncontrolled case is a nonempty core with maximum degree much larger than k and no sufficiently small bipartition side.",
+  "id": "1803.10962__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.11862,
+  "eur": 1.158661,
+  "elapsed_s": 1827.8,
+  "status": "completed",
+  "response_id": "resp_068e6fa74e59712a006a96321fcd0087d291ffd23e128deb42",
+  "when": "2026-09-01T02:32:35Z"
+}

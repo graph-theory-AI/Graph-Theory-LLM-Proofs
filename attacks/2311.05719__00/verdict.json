@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A t-clock-free graph can fail to be clock-free only by containing an induced diamond or a hole of length at most t+1, which proves cleanness when these local obstructions have bounded packing number.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture remains open; this uses the source-series definition of clean, which accounts for complete bipartite basic obstructions.",
+  "id": "2311.05719__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.164772,
+  "eur": 1.206465,
+  "elapsed_s": 1401.2,
+  "status": "completed",
+  "response_id": "resp_08fc5645aa0521c1006a96358179d487d28c96eacb36dc8ec8",
+  "when": "2026-09-01T02:39:54Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "A binary vector-space difference colouring gives f(n,r,s) at most 2^s n/(r+1) when r=2^d-1, contradicting the proposed logarithmic factor already for s=1 and even for some s tending to infinity.",
+  "would_publish": false,
+  "caveats": "This refutes the statement exactly as supplied; a version with a lower restriction on s or a missing min{2^s,...} term is not resolved here.",
+  "id": "2308.15387__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.51186,
+  "eur": 0.530182,
+  "elapsed_s": 611.8,
+  "status": "completed",
+  "response_id": "resp_0a05b0e5a2b4210d006a96371f3b0887d2876354f2353b7d85",
+  "when": "2026-09-01T02:33:38Z"
+}

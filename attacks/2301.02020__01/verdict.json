@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A self-contained maximal-independent-set argument gives max_k D(n,k) at most 3^{n/3+o(n)}, while the five-vertex lift gives 2^{n/5-O(1)}, leaving a substantial gap in the exponential base.",
+  "would_publish": false,
+  "caveats": "The exact exponential rate, and even existence of a limiting rate, remain open.",
+  "id": "2301.02020__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.104312,
+  "eur": 1.143841,
+  "elapsed_s": 1355.9,
+  "status": "completed",
+  "response_id": "resp_0470d48fabe7e596006a9633ab50d487d282283bc9b4dbdd03",
+  "when": "2026-09-01T02:31:19Z"
+}

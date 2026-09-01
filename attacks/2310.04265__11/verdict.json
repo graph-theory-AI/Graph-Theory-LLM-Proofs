@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "A hereditary class whose members all satisfy directed clique number and dichromatic number at most two has a substitution closure containing digraphs of directed clique number two and arbitrarily large dichromatic number.",
+  "would_publish": false,
+  "caveats": "This uses the standard definitions for finite loopless digraphs and iterated substitution; the construction is oriented and the base class is hereditary.",
+  "id": "2310.04265__11",
+  "model": "gpt-5.6-sol",
+  "usd": 1.055556,
+  "eur": 1.093339,
+  "elapsed_s": 1198.2,
+  "status": "completed",
+  "response_id": "resp_05a9a47418db4203006a9634d8eeac87d2b94cf4ac75b26f00",
+  "when": "2026-09-01T02:33:42Z"
+}

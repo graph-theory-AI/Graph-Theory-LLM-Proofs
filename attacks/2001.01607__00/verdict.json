@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "Yes: a later theorem states that every even-hole-free graph of sufficiently large treewidth contains an induced diamond or a K4.",
+  "would_publish": false,
+  "caveats": "The deep later structure theorem is used as a black box, and no explicit numerical treewidth bound is extracted.",
+  "id": "2001.01607__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.266436,
+  "eur": 0.275973,
+  "elapsed_s": 394.3,
+  "status": "completed",
+  "response_id": "resp_037a276a1d8d863a006a9638a27e1087d28fe2ed1b38b1a1aa",
+  "when": "2026-09-01T02:36:28Z"
+}

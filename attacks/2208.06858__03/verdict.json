@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "Under two-sided positive association there is a uniform gap for \u03b1>3/7 and, for every \u03b1, on perfect or bounded-average-degree graphs, while disjoint triangles refute any merely pairwise or one-sided interpretation of positive correlation.",
+  "would_publish": false,
+  "caveats": "The omitted partition definition must imply the two orthant inequalities below; arbitrary graphs with \u03b1\u22643/7 remain unresolved.",
+  "id": "2208.06858__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.25088,
+  "eur": 1.295655,
+  "elapsed_s": 1613.4,
+  "status": "completed",
+  "response_id": "resp_09dc5e91546e5a71006a9634a975a087d2ae58b53a9de3fe98",
+  "when": "2026-09-01T02:39:50Z"
+}

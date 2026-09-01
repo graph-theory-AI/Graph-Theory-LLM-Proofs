@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 326,
+    "score": 2.95,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2202.05557__02",
+    "title_md": "[Question: Polynomial bound analogue of Esperet's conjecture for $\\tau_d$](https://arxiv.org/abs/2202.05557)",
+    "paper": "Polynomial bounds for chromatic number. V. Excluding a tree of radius t\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.05557__02/"
+  },
+  "dossier_meta": {
+    "id": "2202.05557__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.05557__02/",
+    "arxiv_id": "2202.05557",
+    "tier": 3,
+    "score": 2.95,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Polynomial bounds for chromatic number. V. Excluding a tree of radius t\u2026",
+    "catalog_title": "Question: Polynomial bound analogue of Esperet's conjecture for $\\tau_d$",
+    "statement_text": "Let $\\mathcal{C}$ be a hereditary class of graphs, and $d \\geq 1$. Suppose that there is a function $f$ such that $\\chi(G) \\leq f(\\tau_d(G))$ for each $G \\in \\mathcal{C}$. Can we always choose $f$ to be a polynomial? What if $d = 2$?",
+    "context_text": "This question, suggested by a referee and included by the authors, asks for an analogue of Esperet's conjecture in the setting of $\\tau_d(G)$ in place of $\\omega(G)$. It is motivated by the polynomial bounds proved in Theorem 1.6 and asks whether being $\\tau_d$-bounded always implies being polynomially $\\tau_d$-bounded."
+  },
+  "started": "2026-09-01T02:36:29Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

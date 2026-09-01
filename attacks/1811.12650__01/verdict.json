@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured logarithmic improvement is proved for broad structural classes via new spanning-tree and Kempe-orbit bounds, but the universal regime with many true twins and large block escape degrees remains open.",
+  "would_publish": false,
+  "caveats": "The catalog statement is informal and omits at least the complete-graph exception; novelty relative to unindexed literature has not been checked.",
+  "id": "1811.12650__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.613996,
+  "eur": 1.671769,
+  "elapsed_s": 2024.2,
+  "status": "completed",
+  "response_id": "resp_07eae96d22248249006a96316150cc87d2a1ca5e80ed57b5a1",
+  "when": "2026-09-01T02:32:41Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 328,
+    "score": 2.95,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2005.09767__00",
+    "title_md": "[Conjecture 1.10](https://arxiv.org/abs/2005.09767)",
+    "paper": "Many flows in the group connectivity setting",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2005.09767__00/"
+  },
+  "dossier_meta": {
+    "id": "2005.09767__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2005.09767__00/",
+    "arxiv_id": "2005.09767",
+    "tier": 3,
+    "score": 2.95,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Many flows in the group connectivity setting",
+    "catalog_title": "Conjecture 1.10",
+    "statement_text": "There exists a fixed constant $c > 1$ so that the following holds. For every 3-edge-connected oriented graph $G = (V, E)$ of order $n$, every abelian group $\\Gamma$ with $|\\Gamma| \\geq 6$, and every $f : E \\to \\Gamma$, there exist at least $c^n$ flows $\\phi : E \\to \\Gamma$ with $\\phi(e) \\neq f(e)$ for every $e \\in E$.",
+    "context_text": "Theorem 1.9 establishes an explicit exponential lower bound on the number of $\\Gamma$-connected flows for groups of size $k \\geq 8$, but yields only the existence of a single flow for $k = 6, 7$. The authors attribute this gap to a shortcoming of their techniques and conjecture the exponential bound holds for all abelian groups of size at least 6. Theorem 1.9 confirms the conjecture for all groups except $\\mathbb{Z}_6$ and $\\mathbb{Z}_7$; Theorem 1.11 gives a superpolynomial (but not exponential) lower bound for $\\mathbb{Z}_6$."
+  },
+  "started": "2026-09-01T02:33:39Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 325,
+    "score": 2.95,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "partial",
+    "id": "1803.05396__01",
+    "title_md": "[Open Problem: Polynomial-time maximum independent set on $P_t$-free gra\u2026](https://arxiv.org/abs/1803.05396)",
+    "paper": "$H$-colouring $P_t$-free graphs in subexponential time",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1803.05396__01/"
+  },
+  "dossier_meta": {
+    "id": "1803.05396__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1803.05396__01/",
+    "arxiv_id": "1803.05396",
+    "tier": 3,
+    "score": 2.95,
+    "lean": "balanced",
+    "status": "partial",
+    "paper": "$H$-colouring $P_t$-free graphs in subexponential time",
+    "catalog_title": "Open Problem: Polynomial-time maximum independent set on $P_t$-free graphs",
+    "statement_text": "Determine whether maximum independent set is decidable in polynomial time for $P_t$-free graphs for $t \\geq 7$.",
+    "context_text": "Subexponential-time algorithms for maximum independent set on $P_t$-free graphs were given by Brause and independently by Basc\u00f3, Marx and Tuza; the present paper extends the subexponential approach to a broader class of problems including maximum independent set, but polynomial-time decidability for $t \\geq 7$ remains open."
+  },
+  "started": "2026-09-01T02:38:58Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is verified for block expansions of arbitrary bipartite graphs and is shown to be stable under cone and private-leaf extensions.",
+  "would_publish": false,
+  "caveats": "The general common-neighborhood problem for vertices shared by an intermediate family of edges remains unresolved.",
+  "id": "2401.00359__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.08714,
+  "eur": 1.126054,
+  "elapsed_s": 1273.8,
+  "status": "completed",
+  "response_id": "resp_0fdee25dfb61838f006a9635c84d1087d28574be4524cf3b6d",
+  "when": "2026-09-01T02:38:57Z"
+}

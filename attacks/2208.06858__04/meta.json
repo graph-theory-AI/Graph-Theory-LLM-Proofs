@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 329,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2208.06858__04",
+    "title_md": "[Conjecture 2.9](https://arxiv.org/abs/2208.06858)",
+    "paper": "The success probability in Levine's hat problem, and independent sets i\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2208.06858__04/"
+  },
+  "dossier_meta": {
+    "id": "2208.06858__04",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2208.06858__04/",
+    "arxiv_id": "2208.06858",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "The success probability in Levine's hat problem, and independent sets i\u2026",
+    "catalog_title": "Conjecture 2.9",
+    "statement_text": "$\\varepsilon^{**}(\\alpha) > 0$ for all $\\alpha \\in (0, 1/2)$. In other words, there exists a monotone non-decreasing function $\\varepsilon^{**} : (0,1/2) \\to (0,1/2)$ such that the following holds: if $G$ is a graph on $n$ vertices with maximum independent set of size $\\alpha n$, $W$ is a binomial random subset of $V(G)$, and $I_W$ is the maximal independent set contained in $W$, then $$\\alpha^{**}(G) = E_W\\!\\left[|I_W|/n\\right] \\leq \\alpha - \\varepsilon^{**}(\\alpha).$$",
+    "context_text": "This is the special case of Conjecture 2.8 where the random-subset distribution is simply binomial (each vertex included independently with probability $1/2$), which the authors describe as 'a fundamental problem in the study of independent sets in graphs'. The paper proves this for $\\alpha > 1/4$ (Theorem 2.10) and for regular graphs with $\\alpha > 1/8$ (Theorem 2.11)."
+  },
+  "started": "2026-09-01T02:32:41Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

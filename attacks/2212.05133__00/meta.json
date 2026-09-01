@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 330,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2212.05133__00",
+    "title_md": "[Conjecture on the asymptotic of n(2,d)](https://arxiv.org/abs/2212.05133)",
+    "paper": "New bounds on the maximum number of neighborly boxes in R^d",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2212.05133__00/"
+  },
+  "dossier_meta": {
+    "id": "2212.05133__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2212.05133__00/",
+    "arxiv_id": "2212.05133",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "New bounds on the maximum number of neighborly boxes in R^d",
+    "catalog_title": "Conjecture on the asymptotic of n(2,d)",
+    "statement_text": "A general conjecture is posed in the final section which, together with the lower bound $n(2,d) > (1-o(1))\\frac{d^2}{2}$, would imply that $\\lim_{d\\to\\infty} \\frac{n(2,d)}{d^2} = \\frac{1}{2}$.",
+    "context_text": "The authors establish the lower bound $n(2,d) > (1-o(1))\\frac{d^2}{2}$, improving the previous bound $n(2,d) > \\frac{d^2}{4}$. They remark that determining the precise asymptotic order of $n(2,d)$ seems to be a hard task (as noted earlier by Alon and by Huang\u2013Sudakov), and refer to a formal conjecture in the final section concerning lamination-based constructions."
+  },
+  "started": "2026-09-01T02:32:35Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
