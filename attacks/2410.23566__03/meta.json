@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 63,
+    "score": 3.95,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2410.23566__03",
+    "title_md": "[Conjecture 9](https://arxiv.org/abs/2410.23566)",
+    "paper": "Blow-ups and extensions of trees in tournaments",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2410.23566__03/"
+  },
+  "dossier_meta": {
+    "id": "2410.23566__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2410.23566__03/",
+    "arxiv_id": "2410.23566",
+    "tier": 4,
+    "score": 3.95,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Blow-ups and extensions of trees in tournaments",
+    "catalog_title": "Conjecture 9",
+    "statement_text": "There exists a constant $C$ such that $\\operatorname{unvd}(D)\\leqslant C\\cdot\\operatorname{unvd}(D-v)$ for every acyclic digraph $D$ and for every vertex $v$ of $D$.",
+    "context_text": "This conjecture generalizes Proposition 1, which gives $\\operatorname{unvd}(D)\\leqslant 2\\operatorname{unvd}(D-x)$ only when $x$ is a source or sink of $D$, to arbitrary vertices. Together with Sumner's Conjecture 4, it implies Conjecture 10 about $k$-extensions of oriented trees."
+  },
+  "started": "2026-09-01T08:18:33Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
