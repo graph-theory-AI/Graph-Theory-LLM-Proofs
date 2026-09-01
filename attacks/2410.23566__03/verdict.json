@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but C=4 suffices when no weak component of D-v contains both an in-neighbor and an out-neighbor of v, and an explicit constant exists when the underlying graph of D-v has bounded feedback-vertex number.",
+  "would_publish": false,
+  "caveats": "The arguments do not control a mixed component of D-v with unbounded feedback complexity.",
+  "id": "2410.23566__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.156532,
+  "eur": 1.19793,
+  "elapsed_s": 1573.7,
+  "status": "completed",
+  "response_id": "resp_034d9c77c2897d11006a968a594c2c87d2923cf00b30a062ef",
+  "when": "2026-09-01T08:44:46Z"
+}

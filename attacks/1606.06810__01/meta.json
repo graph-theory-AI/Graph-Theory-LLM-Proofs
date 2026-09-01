@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 61,
+    "score": 4.0,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1606.06810__01",
+    "title_md": "[Conjecture on optimal exponential constant for $K_t$-subdivision clique\u2026](https://arxiv.org/abs/1606.06810)",
+    "paper": "On the number of cliques in graphs with a forbidden subdivision or imme\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1606.06810__01/"
+  },
+  "dossier_meta": {
+    "id": "1606.06810__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1606.06810__01/",
+    "arxiv_id": "1606.06810",
+    "tier": 4,
+    "score": 4.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On the number of cliques in graphs with a forbidden subdivision or imme\u2026",
+    "catalog_title": "Conjecture on optimal exponential constant for $K_t$-subdivision clique count",
+    "statement_text": "The maximum number of cliques in an $n$-vertex graph with no $K_t$-subdivision is $3^{2t/3+o(t)}n$, i.e., the optimal exponential constant in the exponent is $\\frac{2}{3}\\log_2 3 \\approx 1.06$.",
+    "context_text": "Theorem 1.2 establishes an upper bound of $2^{1.817t+o(t)}n$, improving on Lee and Oum. Wood's lower bound construction (which also forbids clique subdivisions) shows the constant cannot be reduced below $\\frac{2}{3}\\log_2 3 \\approx 1.06$. The authors proved $c(t) = 3^{2t/3+o(t)}$ for $K_t$-minors in earlier work [10] and conjecture the same bound holds for $K_t$-subdivisions."
+  },
+  "started": "2026-09-01T08:48:24Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

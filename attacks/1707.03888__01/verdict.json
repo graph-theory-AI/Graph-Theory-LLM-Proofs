@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "After correcting a parameter mismatch, the unrestricted problem remains open for q at least 2, but the q=1 case has optimal additive error 1 and a natural near-K5-minor-free subclass admits additive error t-4.",
+  "would_publish": false,
+  "caveats": "Hardness assumes P != NP; the catalog mixes two parameters, and the subclass result does not cover all K_t-minor-free graphs.",
+  "id": "1707.03888__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.841284,
+  "eur": 0.871398,
+  "elapsed_s": 1225.7,
+  "status": "completed",
+  "response_id": "resp_0126c23a0b6b59af006a968c8ef80c87d2aca434fa17c09d8a",
+  "when": "2026-09-01T08:48:24Z"
+}

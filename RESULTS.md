@@ -11,9 +11,9 @@ runs were not used.
 
 ## Counts
 
-Finished attacks with a verdict: **628**.
-Spend (promo ledger × prepaid FX): **€387.16** billed USD
-**$373.78** / budget €400
+Finished attacks with a verdict: **630**.
+Spend (promo ledger × prepaid FX): **€389.23** billed USD
+**$375.78** / budget €400
 (safety margin €5).
 
 | verdict | n | would_publish |
@@ -21,7 +21,7 @@ Spend (promo ledger × prepaid FX): **€387.16** billed USD
 | proved | 31 | 19 |
 | disproved | 46 | 7 |
 | already_resolved | 25 | 0 |
-| partial | 467 | 0 |
+| partial | 469 | 0 |
 | ill_posed | 22 | 0 |
 | unknown | 37 | 0 |
 
@@ -175,12 +175,10 @@ The sweep queue is the easiest-first open/partial arXiv ranking (692
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **63** (plus 1 skipped without a model call).
+Queue records not yet attacked: **61** (plus 1 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
-| [`2410.23566__03`](https://mlelarge.github.io/graph-conjectures/arxiv/2410.23566__03/) | 4 | 3.95 | Blow-ups and extensions of trees in tournaments |
-| [`1707.03888__01`](https://mlelarge.github.io/graph-conjectures/arxiv/1707.03888__01/) | 4 | 4.0 | Additive non-approximability of chromatic number in proper minor-closed… |
 | [`1606.06810__01`](https://mlelarge.github.io/graph-conjectures/arxiv/1606.06810__01/) | 4 | 4.0 | On the number of cliques in graphs with a forbidden subdivision or imme… |
 | [`1804.06104__01`](https://mlelarge.github.io/graph-conjectures/arxiv/1804.06104__01/) | 4 | 4.0 | Progress on the adjacent vertex distinguishing edge colouring conjecture |
 | [`1909.05988__01`](https://mlelarge.github.io/graph-conjectures/arxiv/1909.05988__01/) | 4 | 4.0 | Independent sets in hypergraphs with a forbidden link |
@@ -245,4 +243,4 @@ Queue records not yet attacked: **63** (plus 1 skipped without a model call).
 
 Skipped without a call: `2004.14789__01`
 
-Generated 2026-09-01T08:41:59Z.
+Generated 2026-09-01T08:52:01Z.
