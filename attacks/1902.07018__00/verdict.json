@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The problem is exactly the even-clique list-edge-colouring problem; odd prime k give k+2, and I prove additional colourability criteria covering near-uniform and low-overlap list assignments.",
+  "would_publish": false,
+  "caveats": "No argument here handles arbitrary lists on K_10 for k=9; the catalog's literature status is taken as given.",
+  "id": "1902.07018__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.780832,
+  "eur": 0.808782,
+  "elapsed_s": 1129.1,
+  "status": "completed",
+  "response_id": "resp_05fc11c8e46e474b006a96762df3b087d2a72e807d084284a0",
+  "when": "2026-09-01T07:11:18Z"
+}

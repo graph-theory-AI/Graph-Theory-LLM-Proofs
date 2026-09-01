@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The problem remains open in general, but in dimension one it admits an exact word-theoretic characterization, yielding linear bounds and exact formulas whenever at most two parameters exceed one.",
+  "would_publish": false,
+  "caveats": "Novelty relative to the literature was not checked; the higher-dimensional problem and the resulting finite word parameter remain unresolved in general.",
+  "id": "2506.17777__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.373572,
+  "eur": 1.422739,
+  "elapsed_s": 1675.8,
+  "status": "completed",
+  "response_id": "resp_078f588bad9927b2006a96736d942087d2b2d729992942bf70",
+  "when": "2026-09-01T07:08:41Z"
+}

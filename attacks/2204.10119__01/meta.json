@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 73,
+    "score": 3.85,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2204.10119__01",
+    "title_md": "[Informal Conjecture: min degree $\\geq 6$, max degree $\\leq 8$ forces $K\u2026](https://arxiv.org/abs/2204.10119)",
+    "paper": "Bipartite graphs with no $K_6$ minor",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.10119__01/"
+  },
+  "dossier_meta": {
+    "id": "2204.10119__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.10119__01/",
+    "arxiv_id": "2204.10119",
+    "tier": 4,
+    "score": 3.85,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Bipartite graphs with no $K_6$ minor",
+    "catalog_title": "Informal Conjecture: min degree $\\geq 6$, max degree $\\leq 8$ forces $K_6$ minor",
+    "statement_text": "Every non-null graph with minimum degree at least six and maximum degree at most eight has a $K_6$ minor.",
+    "context_text": "Stated parenthetically immediately after Conjecture 1.3: ``Indeed, as far as we know, every non-null graph with minimum degree at least six and maximum degree at most eight has a $K_6$ minor.'' It is a stronger open belief than Conjecture 1.3."
+  },
+  "started": "2026-09-01T07:03:42Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

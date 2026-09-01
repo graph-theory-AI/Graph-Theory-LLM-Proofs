@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 71,
+    "score": 3.85,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2404.02021__02",
+    "title_md": "[Conjecture 4.6](https://arxiv.org/abs/2404.02021)",
+    "paper": "On off-diagonal hypergraph Ramsey numbers",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2404.02021__02/"
+  },
+  "dossier_meta": {
+    "id": "2404.02021__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2404.02021__02/",
+    "arxiv_id": "2404.02021",
+    "tier": 4,
+    "score": 3.85,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On off-diagonal hypergraph Ramsey numbers",
+    "catalog_title": "Conjecture 4.6",
+    "statement_text": "For every $c>0$, there exists $s$ such that $r(K_{s}^{(3)},K_{n}^{(3)})\\geq 2^{\\Omega_{s}(n^{c})}$.",
+    "context_text": "The authors ask what growth rates are possible for off-diagonal hypergraph Ramsey numbers, noting that for the family $\\mathcal{H}$ of links of nonbipartite graphs the rate $2^{\\Theta_{\\mathcal{H}}(n)}$ is achievable. They contrast this with the tripartite setting, where $r(H,K_{n,n,n}^{(3)})\\leq 2^{O_H(n^2)}$ for all $H$, and note the conjecture fails with $K_{n,n,n}^{(3)}$ in place of $K_{n}^{(3)}$."
+  },
+  "started": "2026-09-01T07:11:19Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

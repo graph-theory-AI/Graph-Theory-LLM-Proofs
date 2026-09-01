@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but the mixed ordinary/non-nested Ramsey number is determined exactly, every putative counterexample must have an ordinary n-matching in each color, and the case n=2 is proved.",
+  "would_publish": false,
+  "caveats": "The hard case where both colors have ordinary n-matchings remains; the global upper bound is not improved, and no unreported computation is claimed.",
+  "id": "2511.02892__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.389228,
+  "eur": 1.438955,
+  "elapsed_s": 1581.0,
+  "status": "completed",
+  "response_id": "resp_0c1ec3d7e2221a47006a967274181887d2814e2337fe0d057d",
+  "when": "2026-09-01T07:02:56Z"
+}

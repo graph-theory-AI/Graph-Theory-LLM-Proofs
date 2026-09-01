@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An explicit closure-of-a-regular-tree family has the conjectured lower bound for every level-homogeneous colouring, and any substantially smaller arbitrary colouring must have a constant-coloured root fibre, but the unrestricted c\u22654 case remains open.",
+  "would_publish": false,
+  "caveats": "The matching lower bound assumes level-homogeneity; the unrestricted root-fibre lemma does not suffice to control colourings inside different branches.",
+  "id": "2407.21360__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.475692,
+  "eur": 1.528514,
+  "elapsed_s": 1708.9,
+  "status": "completed",
+  "response_id": "resp_051a643933e887b5006a96723856e487d2a31bf3d9921723ac",
+  "when": "2026-09-01T07:04:05Z"
+}

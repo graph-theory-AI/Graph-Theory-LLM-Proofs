@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "A 2019 theorem of Cames van Batenburg, Huynh, Joret, and Raymond gives an O_H(k log(k+1)) vertex Erd\u0151s\u2013P\u00f3sa bound for every fixed planar H, and taking H to be a grid proves the conjecture.",
+  "would_publish": false,
+  "caveats": "The deduction is complete but relies on the published planar-minor Erd\u0151s\u2013P\u00f3sa theorem rather than reproving it; the catalog appears to have missed arXiv:1807.04969.",
+  "id": "1710.06282__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.282956,
+  "eur": 0.293084,
+  "elapsed_s": 743.9,
+  "status": "completed",
+  "response_id": "resp_0ff0a91158e859cb006a9675e6115887d2a0dd975f11b3468c",
+  "when": "2026-09-01T07:03:41Z"
+}

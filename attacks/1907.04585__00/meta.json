@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 72,
+    "score": 3.85,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1907.04585__00",
+    "title_md": "[Conjecture 1.3](https://arxiv.org/abs/1907.04585)",
+    "paper": "Quasi-polynomial time approximation schemes for the Maximum Weight Inde\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1907.04585__00/"
+  },
+  "dossier_meta": {
+    "id": "1907.04585__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1907.04585__00/",
+    "arxiv_id": "1907.04585",
+    "tier": 4,
+    "score": 3.85,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Quasi-polynomial time approximation schemes for the Maximum Weight Inde\u2026",
+    "catalog_title": "Conjecture 1.3",
+    "statement_text": "For every forest $H$ of maximum degree at most three, MWIS admits a QPTAS and a subexponential-time algorithm in the class of graphs that do not contain any subdivision of $H$ as an induced subgraph.",
+    "context_text": "Following Theorems 1.1 and 1.2, which establish QPTASes and subexponential-time algorithms for MWIS in $H$-free graphs where every component of $H$ is a path or a subdivided claw, the authors conjecture a broader generalization to all forests of maximum degree at most three and graphs excluding any subdivision of $H$ as an induced subgraph. The paper itself proves Conjecture 1.3 for $H$ being a forest with at most three vertices of degree three (with a $2^{O(|V(G)|^{40/41}\\log|V(G)|)}$ subexponential bound), but the full generality remains open."
+  },
+  "started": "2026-09-01T07:04:05Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
