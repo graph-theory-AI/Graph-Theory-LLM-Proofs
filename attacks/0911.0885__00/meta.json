@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 237,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "0911.0885__00",
+    "title_md": "[Conjecture 1.4](https://arxiv.org/abs/0911.0885)",
+    "paper": "Three-coloring triangle-free graphs on surfaces V. Coloring planar grap\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/0911.0885__00/"
+  },
+  "dossier_meta": {
+    "id": "0911.0885__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/0911.0885__00/",
+    "arxiv_id": "0911.0885",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Three-coloring triangle-free graphs on surfaces V. Coloring planar grap\u2026",
+    "catalog_title": "Conjecture 1.4",
+    "statement_text": "There exists an absolute constant $d \\geq 2$ with the following property. Let $G$ be a plane triangle-free graph, let $S$ be a set of vertices of $G$ and let $\\psi : S \\to \\{1, 2, 3\\}$ be an arbitrary function. If the distance between every two vertices of $S$ is at least $d$, then $\\psi$ extends to a 3-coloring of $G$.",
+    "context_text": "This is a natural extension of Theorem 1.3 to the case of precolored single vertices, where forbidding separating 4-cycles should not be necessary. The paper shows in Theorem 5.1 that Conjecture 1.4 is implied by the seemingly simpler Conjecture 1.5."
+  },
+  "started": "2026-09-01T03:47:15Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 233,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2404.02021__00",
+    "title_md": "[Conjecture 4.1](https://arxiv.org/abs/2404.02021)",
+    "paper": "On off-diagonal hypergraph Ramsey numbers",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2404.02021__00/"
+  },
+  "dossier_meta": {
+    "id": "2404.02021__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2404.02021__00/",
+    "arxiv_id": "2404.02021",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On off-diagonal hypergraph Ramsey numbers",
+    "catalog_title": "Conjecture 4.1",
+    "statement_text": "There exists an absolute constant $a>0$ such that, for all $3$-graphs $G$ and $H$, $r^{p}(G,H)\\geq r(G,H)^{a}$ whenever $p>r(G,H)^{o(1)}$.",
+    "context_text": "The authors introduce the notion of pair constructions $\\chi_{f,g}$ of complexity $p$, observing that stepping-up and inducibility constructions both fit this paradigm. They conjecture that any Ramsey coloring of order $N$ yields one of order $N^{\\Omega(1)}$ with much smaller complexity, which would explain the prevalence of low-complexity constructions in Ramsey theory and potentially illuminate the possible growth rates of $r(H, K_{n}^{(3)})$."
+  },
+  "started": "2026-09-01T03:49:25Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

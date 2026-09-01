@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 241,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1706.00337__00",
+    "title_md": "[Problem 3](https://arxiv.org/abs/1706.00337)",
+    "paper": "Triangle-free graphs of tree-width t are ceil((t + 3)/2)-colorable",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1706.00337__00/"
+  },
+  "dossier_meta": {
+    "id": "1706.00337__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1706.00337__00/",
+    "arxiv_id": "1706.00337",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Triangle-free graphs of tree-width t are ceil((t + 3)/2)-colorable",
+    "catalog_title": "Problem 3",
+    "statement_text": "For integers $k \\geq 4$ and $t \\geq k - 1$, what is the maximum chromatic number of $K_k$-free graphs of tree-width at most $t$?",
+    "context_text": "Theorem 2 establishes that $g(t,k) > \\bigl(1 - \\frac{1}{2^{k-2}}\\bigr)t$ for all $t \\geq 0$ and $k \\geq 2$, providing a lower bound on the maximum chromatic number. The case $k = 3$ (triangle-free) is completely resolved by Theorem 1, which gives the tight bound $\\lceil(t+3)/2\\rceil$, but the question remains open for $k \\geq 4$."
+  },
+  "started": "2026-09-01T03:46:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

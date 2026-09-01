@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A Ramsey-to-edit-distance transfer gives h(n,k,K_4)=Omega(n^2/(k^{3/2}(log k)^2)) and weaker general lower bounds, but it does not remove the logarithmic gap or settle r at least 5.",
+  "would_publish": false,
+  "caveats": "The argument uses established off-diagonal Ramsey lower bounds; for K_4 it determines the conjectured power of k but not the constant-factor asymptotics.",
+  "id": "2102.10220__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.012092,
+  "eur": 1.04832,
+  "elapsed_s": 1419.3,
+  "status": "completed",
+  "response_id": "resp_0ffac7c22e1e1eef006a9644af649887d287f0d028ba4c7172",
+  "when": "2026-09-01T03:44:57Z"
+}

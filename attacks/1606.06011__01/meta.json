@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 245,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1606.06011__01",
+    "title_md": "[Open question on counter-examples to \u2113(G)+br(G)\u2265\\\\",
+    "paper": "G\\\\",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1606.06011__01/"
+  },
+  "dossier_meta": {
+    "id": "1606.06011__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1606.06011__01/",
+    "arxiv_id": "1606.06011",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "G\\\\",
+    "catalog_title": "Open question on counter-examples to \u2113(G)+br(G)\u2265|G|",
+    "statement_text": "It remains unknown whether all counter-examples to $\\ell(G) + \\mathrm{br}(G) \\geq |G|$ can be obtained from a finite set of graphs by replacing a bridge by a path of arbitrary length.",
+    "context_text": "The authors note (on the basis of an observation by Yori Zwols) that any counter-example containing a bridge generates infinitely many counter-examples by path-elongation. They ask whether this operation accounts for all counter-examples."
+  },
+  "started": "2026-09-01T03:43:28Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 236,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2009.12189__00",
+    "title_md": "[Conjecture 1.1](https://arxiv.org/abs/2009.12189)",
+    "paper": "Fractional vertex-arboricity of planar graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2009.12189__00/"
+  },
+  "dossier_meta": {
+    "id": "2009.12189__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2009.12189__00/",
+    "arxiv_id": "2009.12189",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Fractional vertex-arboricity of planar graphs",
+    "catalog_title": "Conjecture 1.1",
+    "statement_text": "Every planar graph has fractional vertex-arboricity at most two.",
+    "context_text": "This is the fractional generalization of the Albertson-Berman Conjecture: since $|V(G)|/a(G) \\leq \\mathrm{va}_f(G)$, the conjecture implies $a(G) \\geq |V(G)|/2$. If true, it would also imply that every planar graph has fractional chromatic number at most four."
+  },
+  "started": "2026-09-01T03:47:25Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

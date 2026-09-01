@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 244,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "1606.06011__00",
+    "title_md": "[Conjecture 2.2](https://arxiv.org/abs/1606.06011)",
+    "paper": "A new class of graphs that satisfies the Chen-Chv\u00e1tal Conjecture",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1606.06011__00/"
+  },
+  "dossier_meta": {
+    "id": "1606.06011__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1606.06011__00/",
+    "arxiv_id": "1606.06011",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "A new class of graphs that satisfies the Chen-Chv\u00e1tal Conjecture",
+    "catalog_title": "Conjecture 2.2",
+    "statement_text": "There is a finite set of graphs $F_0$ such that every connected graph $G \\notin F_0$ either has a pendant edge or satisfies $\\ell(G) + \\mathrm{br}(G) \\geq |G|$.",
+    "context_text": "The authors observe that replacing a bridge by a path of arbitrary length in a counter-example to $\\ell(G)+\\mathrm{br}(G)\\geq|G|$ yields infinitely many counter-examples, so finitely many minimal ones cannot account for all exceptions; they propose that graphs with a pendant edge should be excluded and that all remaining counter-examples come from a finite family. The three known minimal counter-examples with a bridge are depicted in Figure 2."
+  },
+  "started": "2026-09-01T03:44:23Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

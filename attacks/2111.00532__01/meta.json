@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 234,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2111.00532__01",
+    "title_md": "[Informal: which graphs H admit polynomial-size pure pairs](https://arxiv.org/abs/2111.00532)",
+    "paper": "Pure pairs. IX. Transversal trees",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2111.00532__01/"
+  },
+  "dossier_meta": {
+    "id": "2111.00532__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2111.00532__01/",
+    "arxiv_id": "2111.00532",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Pure pairs. IX. Transversal trees",
+    "catalog_title": "Informal: which graphs H admit polynomial-size pure pairs",
+    "statement_text": "For which ordered graphs $H$ can we get $|X|, |Y| \\geq \\varepsilon W^c$ (for some fixed $c > 0$ depending only on $H$) as the pure pair conclusion when there is no ordered $\\mathcal{B}$-transversal copy of $H$ in a blockade of width $W$?",
+    "context_text": "Immediately after stating Theorem 1.2 (Erd\u0151s\u2013Hajnal\u2013Pach), the authors ask for which $H$ the pure pair conclusion can be made polynomial in $W$. They note that $c = 1$ (linear pure pairs) is achievable only for $|H| \\leq 2$, and flag the polynomial question as 'more promising'. The bulk of the paper provides partial answers for trees and caterpillars."
+  },
+  "started": "2026-09-01T03:48:28Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

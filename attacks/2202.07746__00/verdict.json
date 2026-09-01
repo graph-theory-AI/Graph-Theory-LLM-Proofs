@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is proved here for all connected simple cactus graphs, for generalized theta graphs, and deterministically whenever the cycle rank is at most n/3.",
+  "would_publish": false,
+  "caveats": "This assumes the intended connected-graph convention; literally allowing disconnected rotation systems gives the counterexample 2K_3, and the general non-cactus case remains open.",
+  "id": "2202.07746__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.33668,
+  "eur": 1.384526,
+  "elapsed_s": 1508.6,
+  "status": "completed",
+  "response_id": "resp_002be58d4077b62c006a9644af66ec87d2bf09d765049743ab",
+  "when": "2026-09-01T03:46:26Z"
+}

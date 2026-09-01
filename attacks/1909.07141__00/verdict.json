@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured bound is proved and shown sharp for valuations whose pairwise likelihood ratios cross every level at most twice, but arbitrary valuations remain unresolved.",
+  "would_publish": false,
+  "caveats": "The upper proof relies essentially on the two-crossing hypothesis; likelihood ratios for general valuations may oscillate arbitrarily often.",
+  "id": "1909.07141__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.272076,
+  "eur": 1.31761,
+  "elapsed_s": 1482.8,
+  "status": "completed",
+  "response_id": "resp_06bbb1b4b7ee8e55006a9644afb51887d2a736d410484e7676",
+  "when": "2026-09-01T03:46:00Z"
+}

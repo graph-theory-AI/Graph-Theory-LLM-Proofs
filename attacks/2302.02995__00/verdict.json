@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The three-factor sharpness remains unresolved, but the bound improves to O(hb+t) for one-layer simplicial clique extensions of forests, and an explicit forest family shows that the hb interaction is unavoidable.",
+  "would_publish": false,
+  "caveats": "The special-class argument is elementary, gives no global o(thb) bound, and makes no claim of literature novelty.",
+  "id": "2302.02995__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.942916,
+  "eur": 0.976667,
+  "elapsed_s": 1318.8,
+  "status": "completed",
+  "response_id": "resp_059d4ad6a19f63f8006a9644af6fe087d283545aae0f3fbb3b",
+  "when": "2026-09-01T03:43:16Z"
+}

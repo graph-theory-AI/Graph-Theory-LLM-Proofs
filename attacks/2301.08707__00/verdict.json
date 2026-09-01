@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the literal edge-incidence definition, the bound holds for all complete bipartite graphs and some perturbations, with the exact value tau(K_{a,b})=b when b is at least 2a+1, but the general case remains unresolved.",
+  "would_publish": false,
+  "caveats": "The quoted complete-bipartite lower bound is incompatible with the literal definition, so the source definition or catalog summary should be checked.",
+  "id": "2301.08707__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.416284,
+  "eur": 1.46698,
+  "elapsed_s": 1433.5,
+  "status": "completed",
+  "response_id": "resp_08016b94c8b6d328006a9644af75c087d2aabd1c45d549a324",
+  "when": "2026-09-01T03:45:11Z"
+}

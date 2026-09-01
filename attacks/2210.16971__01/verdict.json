@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture reduces exactly to asymmetric bigraph forcing, and it holds for complete bipartite graphs, a broad reflection-unicyclic family, suitable disjoint unions, and in particular every case with at most five arcs.",
+  "would_publish": false,
+  "caveats": "Only special cases and a radial local result are proved; the unrestricted conjecture and the novelty of these elementary cases remain open.",
+  "id": "2210.16971__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.109984,
+  "eur": 1.149716,
+  "elapsed_s": 1330.7,
+  "status": "completed",
+  "response_id": "resp_0003812a880b0e19006a9644af6a0087d2a34ecac2d6b9aed2",
+  "when": "2026-09-01T03:43:28Z"
+}

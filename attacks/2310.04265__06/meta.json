@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 235,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2310.04265__06",
+    "title_md": "[Conjecture 4.11](https://arxiv.org/abs/2310.04265)",
+    "paper": "Clique number of tournaments",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2310.04265__06/"
+  },
+  "dossier_meta": {
+    "id": "2310.04265__06",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2310.04265__06/",
+    "arxiv_id": "2310.04265",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Clique number of tournaments",
+    "catalog_title": "Conjecture 4.11",
+    "statement_text": "Let $(M,\\prec)$ be an ordered graph with maximum degree $1$. Then the class of $(M,\\prec)$-free ordered graphs is $\\chi$-bounded.",
+    "context_text": "This conjecture on ordered graphs arises as a sufficient condition for proving that certain tournament classes are $\\operatorname{\\overrightarrow{\\chi}}$-bounded, via the correspondence between backedge graphs and $\\chi$-boundedness established in the paper. It follows from Property 4.10 that Conjecture 4.11 would imply results about $\\operatorname{\\overrightarrow{\\chi}}$-binding tournaments."
+  },
+  "started": "2026-09-01T03:48:13Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "A 16-vertex graph with four induced terminal-to-terminal paths has anti-complete packing number 1 but requires two closed-neighbourhood centers to destroy all (X,Y)-paths.",
+  "would_publish": false,
+  "caveats": "This uses the extracted definition; the counterexample still works with disjoint stable terminal sets and with induced or terminal-clean (X,Y)-paths.",
+  "id": "2512.17232__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.420588,
+  "eur": 0.435643,
+  "elapsed_s": 432.5,
+  "status": "completed",
+  "response_id": "resp_0fdde8d20580b628006a964912d96c87d2a07f318ee26ea1e7",
+  "when": "2026-09-01T03:47:15Z"
+}

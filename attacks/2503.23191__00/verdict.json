@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "For every even k at least 4, the balanced blow-up of a directed triangle omits a non-antidirected k-edge path.",
+  "would_publish": false,
+  "caveats": "This uses the standard definition that an antidirected path has alternating arc directions, equivalently no directed two-edge subpath.",
+  "id": "2503.23191__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.143616,
+  "eur": 0.148757,
+  "elapsed_s": 507.3,
+  "status": "completed",
+  "response_id": "resp_0e1e2495270ff462006a9649117b3c87d293c59a3856a2ea3c",
+  "when": "2026-09-01T03:48:27Z"
+}

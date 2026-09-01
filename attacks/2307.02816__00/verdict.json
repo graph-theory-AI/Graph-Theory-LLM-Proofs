@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general planar conjecture remains open, but the desired linear dependence is exact for the canonical trivially-perfect path-exclusion witnesses, and polynomial bounds follow when the excluded planar graph has polynomial-size core.",
+  "would_publish": false,
+  "caveats": "No polynomial bound is obtained for all planar X; in particular, the full class of P_m-minor-free graphs remains unresolved.",
+  "id": "2307.02816__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.070284,
+  "eur": 1.108595,
+  "elapsed_s": 1384.6,
+  "status": "completed",
+  "response_id": "resp_0076c33307e0ec37006a9644aff5ec87d2b99b699388de86ce",
+  "when": "2026-09-01T03:44:22Z"
+}

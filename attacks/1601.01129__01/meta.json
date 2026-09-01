@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 246,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1601.01129__01",
+    "title_md": "[Open Question (normality of random graphs)](https://arxiv.org/abs/1601.01129)",
+    "paper": "Minimal normal graph covers",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1601.01129__01/"
+  },
+  "dossier_meta": {
+    "id": "1601.01129__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1601.01129__01/",
+    "arxiv_id": "1601.01129",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Minimal normal graph covers",
+    "catalog_title": "Open Question (normality of random graphs)",
+    "statement_text": "Are random graphs $G(n,p)$ normal with high probability?",
+    "context_text": "The authors note that partial motivation for studying normal graphs with small clique and independence numbers came from this question. They explicitly state that as of the time of writing this question 'is still unresolved.'"
+  },
+  "started": "2026-09-01T03:43:16Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 242,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "1611.03196__03",
+    "title_md": "[Conjecture 1.15](https://arxiv.org/abs/1611.03196)",
+    "paper": "Fair representation by independent sets",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1611.03196__03/"
+  },
+  "dossier_meta": {
+    "id": "1611.03196__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1611.03196__03/",
+    "arxiv_id": "1611.03196",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Fair representation by independent sets",
+    "catalog_title": "Conjecture 1.15",
+    "statement_text": "For every $m$ there exists a number $c(m)$ for which the following is true: if $G$ is a bipartite graph and $E_1, \\ldots, E_m$ are any sets of edges, then there exists a matching $S$ in $G$ of size at least $\\frac{|E(G)|}{\\Delta(G)} - c(m)$ such that $|S \\cap E_i| \\leq \\left\\lceil \\frac{|E_i|}{\\Delta(G)} \\right\\rceil$ for all $i \\leq m$.",
+    "context_text": "An under-representation formulation of the fair representation theme, motivated by the observation that over-representation fails when the sets do not form a partition. The authors suggest $c(m) = m/2$ may suffice. When the $E_i$ form a partition, condition (2) implies all but $c(m)$ sets are fairly represented."
+  },
+  "started": "2026-09-01T03:45:11Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

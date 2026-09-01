@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A fixed monotone FO problem has arbitrarily bad bounded-exchange local optima even on subcubic trees, ruling out the unmodified local-search paradigm but not unrestricted variations.",
+  "would_publish": false,
+  "caveats": "Only strictly improving bounded-support neighborhoods are ruled out; the phrase \u201csome variation\u201d has no formal definition.",
+  "id": "1901.01797__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.383492,
+  "eur": 0.397219,
+  "elapsed_s": 531.7,
+  "status": "completed",
+  "response_id": "resp_0ee2c50c451597ef006a964931fa1c87d2a9fda7668991c4fe",
+  "when": "2026-09-01T03:49:25Z"
+}

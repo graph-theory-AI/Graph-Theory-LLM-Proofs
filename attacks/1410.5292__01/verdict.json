@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The worst-case exponent gap remains unresolved; I prove a quadratic bound for ordered sums of separated matchings and exact values for two canonical matching orders.",
+  "would_publish": false,
+  "caveats": "No bound on the worst-case function is improved, and the restricted lemmas may be folklore.",
+  "id": "1410.5292__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.340084,
+  "eur": 1.388052,
+  "elapsed_s": 1512.5,
+  "status": "completed",
+  "response_id": "resp_0180f15fd3319e83006a9644af6fcc87d2b0ba4e3f666a8e86",
+  "when": "2026-09-01T03:46:30Z"
+}

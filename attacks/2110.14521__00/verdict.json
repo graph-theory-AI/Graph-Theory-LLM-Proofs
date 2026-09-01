@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "In the universal certificate model, the clique algorithm is optimal for all n when k=2 and p1=p2, asymptotically optimal for arbitrary binary probabilities, optimal for n at most 4, and optimal within all incremental algorithms.",
+  "would_publish": false,
+  "caveats": "The exact finite conjecture remains open for n at least 5 and also for unequal binary probabilities.",
+  "id": "2110.14521__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.284264,
+  "eur": 1.330234,
+  "elapsed_s": 1504.9,
+  "status": "completed",
+  "response_id": "resp_0a53fcd36e2b1f3b006a9644af6b9887d289d07ae06465783c",
+  "when": "2026-09-01T03:46:23Z"
+}

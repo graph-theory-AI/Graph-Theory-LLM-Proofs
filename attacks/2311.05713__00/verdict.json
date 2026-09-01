@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open; I reduce its universal form to the path cases, give an FPT algorithm for 2P4-free graphs parameterized by anti-neighborhood components, and prove a mixed-list NP-completeness barrier to the obvious induction.",
+  "would_publish": false,
+  "caveats": "No unrestricted polynomial algorithm is obtained for P8-free or 2P4-free graphs; the NP-hardness result concerns an auxiliary mixed-list problem.",
+  "id": "2311.05713__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.9443,
+  "eur": 0.978101,
+  "elapsed_s": 1164.9,
+  "status": "completed",
+  "response_id": "resp_0af7b424c156e2e9006a9646406b0887d2aa49f672010d6575",
+  "when": "2026-09-01T03:47:25Z"
+}

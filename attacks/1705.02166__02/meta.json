@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 240,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1705.02166__02",
+    "title_md": "[Open problem: removing diameter dependence from Theorem 1.1](https://arxiv.org/abs/1705.02166)",
+    "paper": "Lines in Euclidean Ramsey theory",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1705.02166__02/"
+  },
+  "dossier_meta": {
+    "id": "1705.02166__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1705.02166__02/",
+    "arxiv_id": "1705.02166",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Lines in Euclidean Ramsey theory",
+    "catalog_title": "Open problem: removing diameter dependence from Theorem 1.1",
+    "statement_text": "Can the dependence on the diameter $R$ be removed from Theorem 1.1? That is, does there exist a function $f(n)$, independent of the diameter of $K$, such that $E^n \\not\\to (\\ell_2, K)$ for every $1$-separated set $K \\subset E^n$ with $|K| > f(n)$?",
+    "context_text": "Theorem 1.1 requires $|K| > 10^4 n \\log R$ where $R$ is the diameter of $K$. The authors note in the concluding remarks that a complete answer to the Erd\u0151s et al. problem on a universal two-coloring bound would follow from resolving this problem, and describe it as interesting in its own right."
+  },
+  "started": "2026-09-01T03:46:23Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

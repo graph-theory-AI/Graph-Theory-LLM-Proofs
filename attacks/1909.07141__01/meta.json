@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 238,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1909.07141__01",
+    "title_md": "[Conjecture 3.1](https://arxiv.org/abs/1909.07141)",
+    "paper": "Disproportionate division",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1909.07141__01/"
+  },
+  "dossier_meta": {
+    "id": "1909.07141__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1909.07141__01/",
+    "arxiv_id": "1909.07141",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Disproportionate division",
+    "catalog_title": "Conjecture 3.1",
+    "statement_text": "For any $n \\geq 2$ non-atomic probability measures $\\mu_1, \\mu_2, \\ldots, \\mu_n$ on the unit circle $S^1$ and non-negative reals $\\alpha_1, \\alpha_2, \\ldots, \\alpha_n$ summing to $1$, there exists a partition of the set $[n] = P \\cup Q$ into two nonempty sets and a partition of the circle $S^1 = X \\cup X^c$ into two intervals such that $$\\min_{i \\in P} \\mu_i(X) = \\sum_{j \\in P} \\alpha_j \\quad \\text{and} \\quad \\min_{i \\in Q} \\mu_i(X^c) = \\sum_{j \\in Q} \\alpha_j.$$",
+    "context_text": "The authors introduce this conjecture as a topological measure-partitioning statement whose truth would imply, by a simple inductive argument, that $f(n) = 2n-2$ for all $n \\geq 2$, which would be optimal for disproportionate division. The $n=2$ case is known and is essentially the Stromquist\u2013Woodall theorem, but the conjecture is open already for $n=3$."
+  },
+  "started": "2026-09-01T03:46:30Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
