@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full characterization is not obtained, but stars and all trees with at most three leaves are proved positive, together with a sharp characterization of when expansions contain bounded-size cores.",
+  "would_publish": false,
+  "caveats": "Assumes finite simple host graphs and the standard minor-model definition of expansion; no unresolved ladder case or full characterization is settled.",
+  "id": "1912.07965__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.103816,
+  "eur": 1.143327,
+  "elapsed_s": 1170.0,
+  "status": "completed",
+  "response_id": "resp_0dc59adf07fac800006a9644af678087d28e664777e16aa1b1",
+  "when": "2026-09-01T03:40:47Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For the joint regime 2 <= r <= s I prove Q(s,r) = (1+o(1))s uniformly, with exact equality when s is a prime power, and give explicit general two-parameter bounds.",
+  "would_publish": false,
+  "caveats": "The bounds do not match once r substantially exceeds s; even r=s^2 remains open up to an asymptotic factor of two.",
+  "id": "1905.10483__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.066816,
+  "eur": 1.105002,
+  "elapsed_s": 1124.2,
+  "status": "completed",
+  "response_id": "resp_0e0d069bac42c097006a9644af72c487d288abd1e6f8f02d56",
+  "when": "2026-09-01T03:40:02Z"
+}

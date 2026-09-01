@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 249,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1812.02420__00",
+    "title_md": "[Problem 2.15](https://arxiv.org/abs/1812.02420)",
+    "paper": "On the Complexity of Digraph Colourings and Vertex Arboricity",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.02420__00/"
+  },
+  "dossier_meta": {
+    "id": "1812.02420__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.02420__00/",
+    "arxiv_id": "1812.02420",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "On the Complexity of Digraph Colourings and Vertex Arboricity",
+    "catalog_title": "Problem 2.15",
+    "statement_text": "Let $F$ be a fixed (multi-)digraph. Instance: A (multi-)digraph $D$. Decide whether $D$ is circularly $F$-colourable.",
+    "context_text": "A digraph $D$ is circularly $F$-colourable if there exists a circular homomorphism from $D$ to $F$. This problem generalises Problem 1 and serves as a directed analogue of the $H$-colouring problem for graphs. Conjecture 2.16 asserts that NP-completeness holds whenever $F$ contains a directed cycle, and Theorem 2.17 establishes this for almost all such cases."
+  },
+  "started": "2026-09-01T03:40:41Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

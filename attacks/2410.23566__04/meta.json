@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 256,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2410.23566__04",
+    "title_md": "[Conjecture 10](https://arxiv.org/abs/2410.23566)",
+    "paper": "Blow-ups and extensions of trees in tournaments",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2410.23566__04/"
+  },
+  "dossier_meta": {
+    "id": "2410.23566__04",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2410.23566__04/",
+    "arxiv_id": "2410.23566",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Blow-ups and extensions of trees in tournaments",
+    "catalog_title": "Conjecture 10",
+    "statement_text": "There is an absolute constant $C$ such that for every integer $k$, every $k$-extension of an oriented tree of order $n$ is $C^{k}(2n-2)$-unavoidable.",
+    "context_text": "This conjecture is implied by Conjecture 9 (multiplicative stability under vertex addition) together with Sumner's Conjecture 4 (that oriented trees are $(2n-2)$-unavoidable). The paper proves a weaker result in Corollary 25, establishing $(2\\cdot 3^{\\binom{2k+2}{2}}\\cdot|V(F)|)$-unavoidability for $k$-extensions of sufficiently large oriented trees."
+  },
+  "started": "2026-09-01T03:35:21Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

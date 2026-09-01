@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 254,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2503.20045__02",
+    "title_md": "[Question 4.1](https://arxiv.org/abs/2503.20045)",
+    "paper": "Orientations of cycles in digraphs of high chromatic number and high mi\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2503.20045__02/"
+  },
+  "dossier_meta": {
+    "id": "2503.20045__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2503.20045__02/",
+    "arxiv_id": "2503.20045",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Orientations of cycles in digraphs of high chromatic number and high mi\u2026",
+    "catalog_title": "Question 4.1",
+    "statement_text": "For which fixed digraphs $H$ does there exist a constant $c_{\\varepsilon}\\geq 1$ for all $\\varepsilon>0$ such that every digraph $D$ without loops or parallel arcs with $\\chi(D)\\geq c_{\\varepsilon}$ and minimum out-degree at least $\\varepsilon|V(D)|$ contains $H$ as a subdigraph?",
+    "context_text": "This is a more general version of Question 1.2, replacing cycle orientations by arbitrary fixed digraphs $H$. Theorem 1.3 characterizes the orientations of cycles for which this question is answered affirmatively. The authors also note that all subdigraphs of directed complete bipartite digraphs (with uniform arc orientation between parts) give an affirmative answer via a Ramsey-type argument."
+  },
+  "started": "2026-09-01T03:39:56Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

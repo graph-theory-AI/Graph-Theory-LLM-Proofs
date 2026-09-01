@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "Explicit colorings of K_{r(P_k)} beat the conjectured count for every even k at least 4 and every odd k at least 5.",
+  "would_publish": false,
+  "caveats": "This uses the standard convention of non-induced unlabelled copies of the k-vertex path; the exact value of m(P_k) remains undetermined.",
+  "id": "2108.00991__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.775164,
+  "eur": 0.802911,
+  "elapsed_s": 792.4,
+  "status": "completed",
+  "response_id": "resp_097c09df3259f357006a9644af708887d2853470e4e643fbbf",
+  "when": "2026-09-01T03:34:30Z"
+}

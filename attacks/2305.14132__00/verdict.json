@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The unquantified asymptotic conjecture remains open, but there is a nearest-integral-above-threshold finite failure R(3;12,7)=6>A_2(12,7)+1=5, alongside infinite Plotkin-tight families where equality holds.",
+  "would_publish": false,
+  "caveats": "\u201cSufficiently close\u201d is not quantified; the finite counterexample does not refute an eventual r\u2192\u221e formulation.",
+  "id": "2305.14132__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.982544,
+  "eur": 1.017714,
+  "elapsed_s": 1181.4,
+  "status": "completed",
+  "response_id": "resp_0772b3f82017a1e0006a9644af73b887d2bcc3d793830c5845",
+  "when": "2026-09-01T03:40:59Z"
+}

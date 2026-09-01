@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The known lower bound rules out a degree-uniform polynomial exponent but not polynomial growth at any fixed degree; below I give a self-contained polynomial bound for total maximum degree at most two and a separator-based sufficient condition.",
+  "would_publish": false,
+  "caveats": "The broad request for 'natural parameters' is non-formal, no fixed-degree counterexample or general polynomial bound is obtained, and the cited 2025 preprint is not used or independently checked.",
+  "id": "2105.02383__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.925108,
+  "eur": 0.958222,
+  "elapsed_s": 984.5,
+  "status": "completed",
+  "response_id": "resp_08dac69050435008006a9644af71dc87d2bf29facc6284ac3e",
+  "when": "2026-09-01T03:37:42Z"
+}

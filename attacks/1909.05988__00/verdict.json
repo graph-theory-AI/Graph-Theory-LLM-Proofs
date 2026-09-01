@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The normalized link-Ramsey rate of a disconnected graph is, up to o(1), the maximum of the rates of its non-bipartite connected components, improving the quoted O(s) upper dependence to the order of the largest non-bipartite component.",
+  "would_publish": false,
+  "caveats": "The connected non-bipartite case and existence of a limiting constant remain unresolved; novelty of the reduction has not been literature-checked.",
+  "id": "1909.05988__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.621772,
+  "eur": 0.644028,
+  "elapsed_s": 843.3,
+  "status": "completed",
+  "response_id": "resp_0943ce47c550d3c3006a9644af770087d2913a96dd85733c66",
+  "when": "2026-09-01T03:35:21Z"
+}

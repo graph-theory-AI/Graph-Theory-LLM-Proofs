@@ -1,0 +1,16 @@
+{
+  "verdict": "ill_posed",
+  "confidence": "high",
+  "one_line": "The catalog item is a schematic research programme rather than a quantified conjecture, since neither the connectivity class, the containment relation, nor the permitted obstruction type is specified.",
+  "would_publish": false,
+  "caveats": "Under the standard crossing-free definition, an exact dual criterion and a complete strongly connected 3-connected special case are proved below.",
+  "id": "2601.12746__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.775812,
+  "eur": 0.803582,
+  "elapsed_s": 1358.1,
+  "status": "completed",
+  "response_id": "resp_0682c56949461f3c006a9642cc93f887d2911d770c6faedf18",
+  "when": "2026-09-01T03:35:54Z",
+  "recovered": true
+}

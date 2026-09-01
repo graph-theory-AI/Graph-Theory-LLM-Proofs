@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 255,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2412.21194__00",
+    "title_md": "[Conjecture 5.1](https://arxiv.org/abs/2412.21194)",
+    "paper": "On the clique number of random Cayley graphs and related topics",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2412.21194__00/"
+  },
+  "dossier_meta": {
+    "id": "2412.21194__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2412.21194__00/",
+    "arxiv_id": "2412.21194",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On the clique number of random Cayley graphs and related topics",
+    "catalog_title": "Conjecture 5.1",
+    "statement_text": "There exists $C>0$ and a two-coloring of $\\mathbb{F}_{2}^{n}\\setminus\\{0\\}$ such that there is no subspace $H$ of size $Cn$ for which all nonzero elements of the subspace are monochromatic.",
+    "context_text": "Alon's conjecture remains wide open for $\\mathbb{F}_{2}^{n}$ and $\\mathbb{F}_{3}^{n}$. The finite unions theorem rules out a two-coloring with no monochromatic subspace at all over $\\mathbb{F}_{2}^{n}$ for large $n$, so progress requires understanding the quantitative threshold. Establishing this conjecture would be an important step toward proving Alon's conjecture for $\\mathbb{F}_{2}^{n}$, though the true bound on the minimum monochromatic subspace size may be considerably smaller."
+  },
+  "started": "2026-09-01T03:37:42Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

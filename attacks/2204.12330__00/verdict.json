@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "The proposed group of finitely supported permutations is a witness, because it is elementwise tame under a coset-convex order while its alternating subgroups force arbitrarily large translation grids under every order.",
+  "would_publish": true,
+  "caveats": "This uses the source paper's proved equivalence between permutation-width boundedness and exclusion of interval grids; constants are nonoptimal and literature priority is unchecked.",
+  "id": "2204.12330__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.834888,
+  "eur": 0.864773,
+  "elapsed_s": 1122.6,
+  "status": "completed",
+  "response_id": "resp_0696f1a49a881b9d006a9644af69e887d29a4ed12390363871",
+  "when": "2026-09-01T03:40:00Z"
+}

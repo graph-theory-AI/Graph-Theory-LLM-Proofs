@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 252,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2512.17232__00",
+    "title_md": "[Conjecture 6](https://arxiv.org/abs/2512.17232)",
+    "paper": "An Induced $A$-Path Theorem",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2512.17232__00/"
+  },
+  "dossier_meta": {
+    "id": "2512.17232__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2512.17232__00/",
+    "arxiv_id": "2512.17232",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "An Induced $A$-Path Theorem",
+    "catalog_title": "Conjecture 6",
+    "statement_text": "For every $k\\in\\mathbb{N}$, every graph $G$ and $X,Y\\subseteq V(G)$ satisfies one of the following: $G$ contains $k$ pairwise anti-complete $(X,Y)$-paths; or there exists a set $Z\\subseteq V(G)$ with $|Z|\\leqslant k-1$ such that $G-N_{G}[Z]$ has no $(X,Y)$-path.",
+    "context_text": "The authors pose this $(X,Y)$-path strengthening of their main theorem (Theorem 3), seeking to reduce the separator size from $78(k-1)$ to the optimal $k-1$. If true, it would have immediate application to the study of induced minors, in particular implying an Induced Grid Minor Theorem for $K_{1,t}$-induced-subgraph-free graphs conjectured by Dallard et al."
+  },
+  "started": "2026-09-01T03:40:02Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 257,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2407.18800__01",
+    "title_md": "[Conjecture 3](https://arxiv.org/abs/2407.18800)",
+    "paper": "Towards Characterization of 5-List-Colorability of Toroidal Graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2407.18800__01/"
+  },
+  "dossier_meta": {
+    "id": "2407.18800__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2407.18800__01/",
+    "arxiv_id": "2407.18800",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Towards Characterization of 5-List-Colorability of Toroidal Graphs",
+    "catalog_title": "Conjecture 3",
+    "statement_text": "A toroidal graph is $5$-choosable if and only if it is $5$-colorable.",
+    "context_text": "This conjecture is stated as equivalent to Conjecture 2 and represents the central goal of the paper: a complete choosability analogue of Thomassen's characterization of 5-colorability on the torus. The computational results of the paper, enumerating minimal obstructions under a cyclic-triangle-system condition, provide supporting evidence."
+  },
+  "started": "2026-09-01T03:34:30Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

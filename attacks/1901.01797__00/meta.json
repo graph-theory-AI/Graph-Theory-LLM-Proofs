@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 250,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1901.01797__00",
+    "title_md": "[Open Problem (Section 1.1)](https://arxiv.org/abs/1901.01797)",
+    "paper": "Baker game and polynomial-time approximation schemes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1901.01797__00/"
+  },
+  "dossier_meta": {
+    "id": "1901.01797__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1901.01797__00/",
+    "arxiv_id": "1901.01797",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Baker game and polynomial-time approximation schemes",
+    "catalog_title": "Open Problem (Section 1.1)",
+    "statement_text": "It is an open problem whether some variation on the local search approach can give PTAS for all monotone FO optimization problems.",
+    "context_text": "Cabello\u2013Gajser and Har-Peled\u2013Quanrud showed that the trivial local search algorithm (performing bounded-size changes on an initial solution as long as it can be improved) gives PTASes for maximum independent set and minimum dominating set, as well as many related problems, on classes with strongly sublinear separators. The question is whether this approach, or a variation thereof, can be extended to cover all monotone first-order optimization problems on such classes."
+  },
+  "started": "2026-09-01T03:40:33Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

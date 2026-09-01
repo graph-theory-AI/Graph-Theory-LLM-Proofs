@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 253,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2503.23191__00",
+    "title_md": "[Question 5.1](https://arxiv.org/abs/2503.23191)",
+    "paper": "Two-block paths in oriented graphs of large semidegree",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2503.23191__00/"
+  },
+  "dossier_meta": {
+    "id": "2503.23191__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2503.23191__00/",
+    "arxiv_id": "2503.23191",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Two-block paths in oriented graphs of large semidegree",
+    "catalog_title": "Question 5.1",
+    "statement_text": "Is it true that every oriented graph $G$ with $\\delta^{0}(G)\\geq k/2$ contains every orientation of the $k$-edge path, save for the antidirected orientations?",
+    "context_text": "The tightness of Stein's conjecture for the antidirected orientation is witnessed by the $k/2$-blowup of the directed triangle. More generally, a regular tournament $T$ on $k+1$ vertices has $\\delta^{0}(T)=k/2$ and, by Havet\u2013Thomass\u00e9, contains every oriented $k$-arc path except (with three small exceptions) the antidirected one, suggesting that antidirected paths may be the only obstruction at the threshold $\\delta^{0}(G)=k/2$."
+  },
+  "started": "2026-09-01T03:40:00Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

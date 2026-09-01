@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "The literal tree-depth formulation is false: square grids force the tree-depth factor to be \u03a9(log log n) when the clique factor has size O(\u221an).",
+  "would_publish": false,
+  "caveats": "The supplied source abstract states bounded tree-width, not bounded tree-depth; the actual tree-width conjecture is not addressed here.",
+  "id": "2208.10074__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.455568,
+  "eur": 0.471875,
+  "elapsed_s": 700.0,
+  "status": "completed",
+  "response_id": "resp_092ccf925935777d006a9644afd7ec87d2a555503e1caa45e1",
+  "when": "2026-09-01T03:32:57Z"
+}

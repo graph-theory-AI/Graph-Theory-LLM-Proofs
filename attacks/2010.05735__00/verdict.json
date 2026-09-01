@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The exponent remains open, but the normalized extremal function has a genuine limit in n, the probabilistic upper prefactor can be slightly improved, and random tournaments admit a simple 2^{-k}-density construction.",
+  "would_publish": false,
+  "caveats": "There is no improvement to the worst-case exponential interval, and convergence of the exponent as k tends to infinity is not proved.",
+  "id": "2010.05735__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.050904,
+  "eur": 1.088521,
+  "elapsed_s": 1155.2,
+  "status": "completed",
+  "response_id": "resp_0ebf31469b2095ed006a9644af733487d2bb74a090e3be8f5f",
+  "when": "2026-09-01T03:40:33Z"
+}

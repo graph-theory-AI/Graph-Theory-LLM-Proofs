@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds with the optimal bound 2 for all excluded graphs of treedepth at most 2, and it also follows from the minor theorem for every subcubic excluded graph.",
+  "would_publish": false,
+  "caveats": "Patterns of treedepth at least 3 with several vertices of degree at least 4 remain untreated; the argument uses the standard bounded-degree tree-partition theorem.",
+  "id": "2307.02816__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.780112,
+  "eur": 0.808036,
+  "elapsed_s": 1118.5,
+  "status": "completed",
+  "response_id": "resp_03ce2329349c7067006a9644af700487d293e3c465b70cf6e0",
+  "when": "2026-09-01T03:39:56Z"
+}

@@ -1,0 +1,16 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A balanced-neighborhood recursion gives an n^{O(r log n)}-time MWIS algorithm for P7-free graphs with no induced K_{1,r}, while the unrestricted case remains unresolved.",
+  "would_publish": false,
+  "caveats": "The bound is still quasi-polynomial for fixed r, and unrestricted P7-free graphs have unbounded neighborhood independence.",
+  "id": "2003.05185__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.850564,
+  "eur": 0.88101,
+  "elapsed_s": 1439.4,
+  "status": "completed",
+  "response_id": "resp_0a24d0c9cd949981006a9642d003d887d2b06be8d5b61f4364",
+  "when": "2026-09-01T03:37:19Z",
+  "recovered": true
+}

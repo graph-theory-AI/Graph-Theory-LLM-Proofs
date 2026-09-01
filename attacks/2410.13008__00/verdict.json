@@ -1,0 +1,16 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "A 12-vertex strongly 2-connected oriented graph has a crossing drawing in the annulus with every directed cycle of winding one, but two equally oriented forced facial triangles preclude any such crossing-free drawing.",
+  "would_publish": true,
+  "caveats": "This uses signed winding number and the standard definition that deleting any one vertex leaves a strongly connected digraph.",
+  "id": "2410.13008__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.356104,
+  "eur": 1.404645,
+  "elapsed_s": 1658.0,
+  "status": "completed",
+  "response_id": "resp_081e17e11aeb2bc3006a9642389f6c87d2976607c5b901eb27",
+  "when": "2026-09-01T03:38:25Z",
+  "recovered": true
+}

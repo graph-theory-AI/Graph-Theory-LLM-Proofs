@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured lower bound holds for colorings admitting a sufficiently monochromatic balanced cut, including every one-vertex extension of the canonical Ramsey-critical coloring.",
+  "would_publish": false,
+  "caveats": "The argument does not force an arbitrary low-multiplicity coloring to admit such a cut, so the full conjecture remains open.",
+  "id": "2108.00987__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.089848,
+  "eur": 1.128859,
+  "elapsed_s": 1144.4,
+  "status": "completed",
+  "response_id": "resp_01bf57b026840880006a9644af720c87d29179d696b9ef53f6",
+  "when": "2026-09-01T03:40:22Z"
+}

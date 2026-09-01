@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 251,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1704.02367__01",
+    "title_md": "[Open Problem: Better parameter dependence for ordered binary matrix rem\u2026](https://arxiv.org/abs/1704.02367)",
+    "paper": "Testing hereditary properties of ordered graphs and matrices",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1704.02367__01/"
+  },
+  "dossier_meta": {
+    "id": "1704.02367__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1704.02367__01/",
+    "arxiv_id": "1704.02367",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Testing hereditary properties of ordered graphs and matrices",
+    "catalog_title": "Open Problem: Better parameter dependence for ordered binary matrix removal",
+    "statement_text": "It will be interesting to combine the ideas from the current proof with the binary matrix regularity lemma of Alon, Fischer and Newman to obtain a removal lemma for finite families of ordered binary matrices with better dependence between the parameters $\\delta^{-1}$ and $\\varepsilon^{-1}$; ideally polynomial dependence, but even exponential dependence would be interesting.",
+    "context_text": "For ordered binary matrices, Alon, Fischer and Newman obtained an efficient conditional regularity lemma in which $\\delta^{-1}$ is polynomial in $\\varepsilon^{-1}$. The general ordered removal lemma proved in this paper inherits a wowzer-type dependence from the strong regularity lemma, and improving this for finite families of ordered binary matrices is posed as an open problem."
+  },
+  "started": "2026-09-01T03:40:22Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

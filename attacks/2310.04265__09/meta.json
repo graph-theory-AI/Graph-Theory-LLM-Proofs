@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 247,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "partial",
+    "id": "2310.04265__09",
+    "title_md": "[Question 5.9](https://arxiv.org/abs/2310.04265)",
+    "paper": "Clique number of tournaments",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2310.04265__09/"
+  },
+  "dossier_meta": {
+    "id": "2310.04265__09",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2310.04265__09/",
+    "arxiv_id": "2310.04265",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "balanced",
+    "status": "partial",
+    "paper": "Clique number of tournaments",
+    "catalog_title": "Question 5.9",
+    "statement_text": "Is there a function $\\ell$ such that, for every tournament $T$, if $\\operatorname{\\overrightarrow{\\omega}}(T)\\geq k$, then $T$ has a subtournament $A$ such that $|A|\\leq\\ell(k)$ and $\\operatorname{\\overrightarrow{\\omega}}(A)\\geq k$.",
+    "context_text": "This is a stronger form of Conjecture 5.8 in which the function $f$ is taken to be the identity. The authors could not disprove it, and note that Conjecture 5.10 (infinitely many $k$-$\\operatorname{\\overrightarrow{\\omega}}$-critical tournaments) would answer it negatively."
+  },
+  "started": "2026-09-01T03:40:59Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
