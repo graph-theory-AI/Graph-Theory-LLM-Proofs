@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sol-max attacks on graph-theory conjectures, with a hard €150 budget."""
+"""GPT-5.6 Sol attacks on open graph-theory conjectures (hard euro budget in spend.json)."""
 
 from __future__ import annotations
 
@@ -26,6 +26,7 @@ LEDGER_PATH = ATTACKS / "ledger.jsonl"
 LOCK_PATH = ATTACKS / "spend.lock"
 QUEUE_PATH = CATALOG / "queue.json"
 RANKING_PATH = CATALOG / "ARXIV_OPEN_DIFFICULTY_RANKING.md"
+RESULTS_PATH = ROOT / "RESULTS.md"
 
 # Restored by mlelarge/graph-conjectures#3; not yet in the difficulty ranking.
 RECOVERED_UNRANKED_IDS = (
@@ -860,6 +861,159 @@ def _sweep_worker(deadline: float, max_out: int, timeout_s: int) -> None:
             continue
 
 
+def _md_cell(text: str) -> str:
+    return (text or "").replace("|", "\\|").replace("\n", " ").strip()
+
+
+def collect_verdicts() -> list[dict]:
+    rows: list[dict] = []
+    if not ATTACKS.exists():
+        return rows
+    for path in sorted(ATTACKS.iterdir()):
+        verdict_path = path / "verdict.json"
+        if not path.is_dir() or not verdict_path.exists():
+            continue
+        try:
+            data = json.loads(verdict_path.read_text())
+        except json.JSONDecodeError:
+            continue
+        data["_id"] = path.name
+        rows.append(data)
+    return rows
+
+
+def write_results_md(rows: list[dict] | None = None) -> Path:
+    """Write RESULTS.md from on-disk verdicts. Safe to run during a sweep."""
+    rows = rows if rows is not None else collect_verdicts()
+    rank = {r["id"]: r for r in parse_ranking()}
+    done = attacked_ids()
+    pending = [r for r in parse_ranking() if r["id"] not in done]
+    counts: dict[str, int] = {}
+    publish: dict[str, int] = {}
+    for row in rows:
+        v = row.get("verdict") or "unknown"
+        counts[v] = counts.get(v, 0) + 1
+        if row.get("would_publish"):
+            publish[v] = publish.get(v, 0) + 1
+    order = [
+        "proved",
+        "disproved",
+        "already_resolved",
+        "partial",
+        "ill_posed",
+        "unknown",
+        "no_progress",
+    ]
+    spend = load_spend()
+    rem = remaining(spend)
+    skipped = sorted(
+        p.name
+        for p in ATTACKS.iterdir()
+        if p.is_dir() and (p / "skipped.json").exists() and not (p / "verdict.json").exists()
+    )
+
+    def section(title: str, verdict: str) -> str:
+        items = [r for r in rows if r.get("verdict") == verdict]
+        items.sort(key=lambda r: r.get("_id") or "")
+        lines = [
+            f"## {title} ({len(items)})",
+            "",
+            "| id | conf. | publish? | one line |",
+            "| --- | --- | --- | --- |",
+        ]
+        for r in items:
+            rec_id = r.get("_id") or r.get("id") or ""
+            cat = rank.get(rec_id, {})
+            url = cat.get("url") or SITE_ARXIV.format(id=rec_id)
+            pub = "yes" if r.get("would_publish") else "no"
+            lines.append(
+                f"| [`{rec_id}`]({url}) · [artifact](attacks/{rec_id}/) | "
+                f"{_md_cell(str(r.get('confidence') or ''))} | {pub} | "
+                f"{_md_cell(str(r.get('one_line') or ''))} |"
+            )
+        lines.append("")
+        return "\n".join(lines)
+
+    table_rows = []
+    for key in order:
+        if key in counts:
+            table_rows.append(
+                f"| {key} | {counts[key]} | {publish.get(key, 0)} |"
+            )
+    extra = sorted(set(counts) - set(order))
+    for key in extra:
+        table_rows.append(f"| {key} | {counts[key]} | {publish.get(key, 0)} |")
+
+    pending_lines = [
+        f"Queue records not yet attacked: **{len(pending)}** "
+        f"(plus {len(skipped)} skipped without a model call).",
+        "",
+    ]
+    if pending:
+        pending_lines.append("| id | tier | score | paper |")
+        pending_lines.append("| --- | ---: | ---: | --- |")
+        for r in pending:
+            pending_lines.append(
+                f"| [`{r['id']}`]({r.get('url') or SITE_ARXIV.format(id=r['id'])}) | "
+                f"{r.get('tier') if r.get('tier') is not None else ''} | "
+                f"{r.get('score') if r.get('score') is not None else ''} | "
+                f"{_md_cell(str(r.get('paper') or ''))} |"
+            )
+        pending_lines.append("")
+    if skipped:
+        pending_lines.append("Skipped without a call: " + ", ".join(f"`{s}`" for s in skipped))
+        pending_lines.append("")
+
+    body = f"""# Results
+
+Auto-generated from `attacks/*/verdict.json` by `python attack.py summary`.
+**These are unrefereed model self-reports.** A `proved` / `disproved` label is
+not a theorem. `would_publish` is the model's own claim that it would submit
+the writeup to a journal.
+
+Catalog: [mlelarge/graph-conjectures](https://mlelarge.github.io/graph-conjectures).
+Model: `{MODEL}`, reasoning effort `max`, `mode=pro`. Ultra / 64-subagent
+runs were not used.
+
+## Counts
+
+Finished attacks with a verdict: **{len(rows)}**.
+Spend (promo ledger × prepaid FX): **€{rem['spent_eur']:.2f}** billed USD
+**${rem['spent_usd']:.2f}** / budget €{rem['budget_eur']:.0f}
+(safety margin €{rem['safety_margin_eur']:.0f}).
+
+| verdict | n | would_publish |
+| --- | ---: | ---: |
+{chr(10).join(table_rows)}
+
+{section("Claimed proofs", "proved")}
+{section("Claimed counterexamples", "disproved")}
+{section("Already resolved (model says the literature already closed it)", "already_resolved")}
+{section("Ill-posed / no determinate statement as supplied", "ill_posed")}
+## Coverage
+
+The sweep queue is the easiest-first open/partial arXiv ranking ({len(rank)}
+records, including a handful of questions restored after catalog extraction
+fixes). Open Problem Garden entries were **not** attacked.
+
+{"".join(line + chr(10) for line in pending_lines)}Generated {utc_now()}.
+"""
+    RESULTS_PATH.write_text(body)
+    return RESULTS_PATH
+
+
+def cmd_summary(_: argparse.Namespace) -> None:
+    rows = collect_verdicts()
+    path = write_results_md(rows)
+    counts: dict[str, int] = {}
+    for row in rows:
+        v = row.get("verdict") or "unknown"
+        counts[v] = counts.get(v, 0) + 1
+    print(f"{len(rows)} verdicts -> {path}")
+    for key in sorted(counts, key=lambda k: (-counts[k], k)):
+        print(f"  {counts[key]:4d}  {key}")
+
+
 def cmd_sweep(args: argparse.Namespace) -> None:
     load_dotenv()
     if not os.environ.get("OPENAI_API_KEY"):
@@ -904,6 +1058,9 @@ def main() -> None:
     p_q = sub.add_parser("queue", help="rebuild easiest-first queue")
     p_q.add_argument("-n", type=int, default=15)
     p_q.set_defaults(func=cmd_queue)
+
+    p_sum = sub.add_parser("summary", help="write RESULTS.md from on-disk verdicts")
+    p_sum.set_defaults(func=cmd_summary)
 
     p_run = sub.add_parser("run", help="attack one or more conjectures")
     p_run.add_argument("--id", help="catalog id, e.g. 2402.10782__01")

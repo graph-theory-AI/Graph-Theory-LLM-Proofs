@@ -18,13 +18,13 @@
       "when": "2026-08-31T10:41:34Z",
       "from_eur": 150.0,
       "to_eur": 250.0,
-      "note": "+100 EUR, spend before evening 2026-08-31 CEST; 5h deadline is soft"
+      "note": "First prepaid wallet topped up +\u20ac100 (total \u20ac250)."
     },
     {
       "when": "2026-09-01T01:00:00Z",
       "from_eur": 250.0,
       "to_eur": 400.0,
-      "note": "new \u20ac400 prepaid wallet at 03:00 Europe/Paris 2026-09-01; campaign spend reset; FX from first-wallet prepaid (\u20ac250 \u2248 $241.36)"
+      "note": "Second prepaid wallet (\u20ac400); campaign spend reset. FX from first wallet (\u20ac250 credit \u2248 $241.36 API)."
     }
   ]
 }

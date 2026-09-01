@@ -10,5 +10,8 @@ __pycache__/
 attacks/**/raw.json
 attacks/**/encrypted_reasoning.json
 attacks/**/claimed.json
+attacks/**/*.before-catalog-fix.*
 attacks/spend.lock
+attacks/night-sweep.lock
+attacks/inflight-recover.json
 *.log
