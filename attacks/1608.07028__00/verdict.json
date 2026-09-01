@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The exact asymptotic order remains open, but for every k at least 3 a binary-sum colouring of K_{2^k-2} has no rainbow cycle longer than 2^k-4, so the worst-case deficit is at least 2 on an infinite subsequence.",
+  "would_publish": false,
+  "caveats": "This only improves the constant obstruction on a subsequence and does not distinguish a bounded deficit from a growing one; novelty relative to all literature is not asserted.",
+  "id": "1608.07028__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.900072,
+  "eur": 0.93229,
+  "elapsed_s": 1178.5,
+  "status": "completed",
+  "response_id": "resp_0ffc6674424a7784006a966cf62e4c87d2a7e25b6eb7bf6f3c",
+  "when": "2026-09-01T06:32:48Z"
+}

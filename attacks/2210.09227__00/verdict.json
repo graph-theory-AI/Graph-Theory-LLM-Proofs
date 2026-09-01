@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "For canonical subproducts, I obtain 2^{(1/2-o(1))n^2} < R_2(2,n) <= 2^{2^{2n+O(log n)}}, but this does not settle the intended single-versus-double-exponential question.",
+  "would_publish": false,
+  "caveats": "The excerpt omits the formal copy definition and uses 'superexponential' ambiguously; the full paper may already contain the d=2 refinement.",
+  "id": "2210.09227__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.153104,
+  "eur": 1.194379,
+  "elapsed_s": 1455.3,
+  "status": "completed",
+  "response_id": "resp_043125e62a08cda9006a966cc4907c87d2a303efd0124ffc29",
+  "when": "2026-09-01T06:36:35Z"
+}

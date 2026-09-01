@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general conjecture remains open, but every d-degenerate graph without a K2 component has a neighbour-sum-distinguishing proper edge colouring with at most \u0394 + 20(d+1)^2 colours.",
+  "would_publish": false,
+  "caveats": "The constant depends on degeneracy and hence is not universal; novelty relative to specialized sparse-graph literature has not been checked.",
+  "id": "1804.06104__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.96142,
+  "eur": 0.995834,
+  "elapsed_s": 1766.9,
+  "status": "completed",
+  "response_id": "resp_0de60cda748ddee8006a966b6880c087d282302c7b92685dc7",
+  "when": "2026-09-01T06:35:59Z"
+}

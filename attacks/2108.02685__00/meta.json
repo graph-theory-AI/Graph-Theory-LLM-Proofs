@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 82,
+    "score": 3.8,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2108.02685__00",
+    "title_md": "[Conjecture 1.1](https://arxiv.org/abs/2108.02685)",
+    "paper": "Irregular Subgraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2108.02685__00/"
+  },
+  "dossier_meta": {
+    "id": "2108.02685__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2108.02685__00/",
+    "arxiv_id": "2108.02685",
+    "tier": 4,
+    "score": 3.8,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Irregular Subgraphs",
+    "catalog_title": "Conjecture 1.1",
+    "statement_text": "Every $d$-regular graph $G$ on $n$ vertices contains a spanning subgraph $H$ so that for every $k$, $0 \\leq k \\leq d$, $\\left|m(H, k) - \\frac{n}{d+1}\\right| \\leq 2$.",
+    "context_text": "The paper introduces this conjecture as one of two central open problems on irregular spanning subgraphs. A small value of $m(H)$ measures the irregularity of $H$, and the conjecture asserts that every $d$-regular graph has a spanning subgraph nearly as irregular as its degree permits. The conjecture is tight: the vertex-disjoint union of two 4-cycles shows the additive 2 cannot be reduced to 1 in general."
+  },
+  "started": "2026-09-01T06:31:42Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

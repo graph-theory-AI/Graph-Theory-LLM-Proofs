@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 81,
+    "score": 3.8,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2206.00186__00",
+    "title_md": "[Informal conjecture on improving the $g(t)$ lower bound](https://arxiv.org/abs/2206.00186)",
+    "paper": "Dense minors of graphs with independence number two",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2206.00186__00/"
+  },
+  "dossier_meta": {
+    "id": "2206.00186__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2206.00186__00/",
+    "arxiv_id": "2206.00186",
+    "tier": 4,
+    "score": 3.8,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Dense minors of graphs with independence number two",
+    "catalog_title": "Informal conjecture on improving the $g(t)$ lower bound",
+    "statement_text": "The factor $1/4$ in $g(t) \\geq t(t+2)/8$ can likely be significantly improved. However it appears to be quite challenging, for example, to show that every graph with chromatic number at least $t$ contains a minor on $t$ vertices with at most one tenth of all possible edges missing.",
+    "context_text": "The authors define $g(t)$ as the maximum number of edges guaranteed in a $t$-vertex minor of any graph with chromatic number at least $t$. Mader's theorem yields $g(t) \\geq t(t+2)/8$; the authors believe this is far from the true value, posing a density of $9/10$ as an example of a seemingly hard intermediate target for general graphs."
+  },
+  "started": "2026-09-01T06:32:48Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

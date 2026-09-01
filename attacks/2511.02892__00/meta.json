@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 79,
+    "score": 3.8,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2511.02892__00",
+    "title_md": "[Problem 1.1](https://arxiv.org/abs/2511.02892)",
+    "paper": "Open problems of the 33rd Workshop on Cycles and Colourings",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2511.02892__00/"
+  },
+  "dossier_meta": {
+    "id": "2511.02892__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2511.02892__00/",
+    "arxiv_id": "2511.02892",
+    "tier": 4,
+    "score": 3.8,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Open problems of the 33rd Workshop on Cycles and Colourings",
+    "catalog_title": "Problem 1.1",
+    "statement_text": "Determine the smallest $m$ such that in every $2$-coloring of the edges of the ordered complete graph $K_{m}$, there is a monochromatic non-nested matching of size $n$.",
+    "context_text": "Two independent edges $ij$ and $st$ in an ordered complete graph are nested if $i<s<t<j$ or $s<i<j<t$. The answer is known to lie between $3n-1$ and $4n-2$; the presenting author conjectured (in prior work [2]) that the lower bound $3n-1$ is optimal. A Tur\u00e1n-type approach recently improved the upper bound to $(2+\\sqrt{3})n$."
+  },
+  "started": "2026-09-01T06:36:35Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

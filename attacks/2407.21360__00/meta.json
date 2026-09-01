@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 80,
+    "score": 3.8,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2407.21360__00",
+    "title_md": "[Conjecture 7](https://arxiv.org/abs/2407.21360)",
+    "paper": "Clustered Colouring of Graph Products",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2407.21360__00/"
+  },
+  "dossier_meta": {
+    "id": "2407.21360__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2407.21360__00/",
+    "arxiv_id": "2407.21360",
+    "tier": 4,
+    "score": 3.8,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Clustered Colouring of Graph Products",
+    "catalog_title": "Conjecture 7",
+    "statement_text": "For any fixed integer $c \\geq 2$, there exists an integer $t$ such that for infinitely many graphs $H$ with treewidth $t$ and paths $P$, every $c$-colouring of $H \\boxtimes P$ has clustering $\\Omega(|V(H \\boxtimes P)|^{c/(c^2-c+1)})$.",
+    "context_text": "The upper bound in Theorem 4 gives that $H_1 \\boxtimes H_2$ is $c$-colourable with clustering $O(|V(H_1 \\boxtimes H_2)|^{c/(c^2-c+1)})$ when one graph has bounded degree. The authors believe this upper bound is asymptotically tight, and furthermore conjecture that there exists a matching construction where the bounded-degree graph is a path."
+  },
+  "started": "2026-09-01T06:35:36Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

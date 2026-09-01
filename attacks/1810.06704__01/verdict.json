@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The exact interior function remains open, but an extremal construction gives epsilon at most 1-sqrt(1-delta), exactly solves the perfect and dominating-vertex cases, and yields the correct first-order behavior as delta tends to zero.",
+  "would_publish": false,
+  "caveats": "The literal all-degree statement has answer zero; the substantive results use the intended large-Delta supremal interpretation and the source-paper normalization.",
+  "id": "1810.06704__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.013544,
+  "eur": 1.049824,
+  "elapsed_s": 1149.6,
+  "status": "completed",
+  "response_id": "resp_0063a0b3a024380e006a966dba56e087d28d1986cf810b0c86",
+  "when": "2026-09-01T06:35:35Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "There is an optimal-order linear bound for every rooted tree of height at most two, together with depth-dependent polynomial lower bounds, but the general problem contains the polynomial \u03c7-bounding problem for induced-path-free graphs.",
+  "would_publish": false,
+  "caveats": "No upper bound is obtained for arbitrary rooted trees of height at least three.",
+  "id": "2302.08922__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.830612,
+  "eur": 0.860344,
+  "elapsed_s": 990.8,
+  "status": "completed",
+  "response_id": "resp_0eeee920a7ab3a63006a966f8e6d1087d28f41ba28b97f06af",
+  "when": "2026-09-01T06:40:45Z"
+}

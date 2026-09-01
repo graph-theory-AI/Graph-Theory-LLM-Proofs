@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A growing-uniformity hypergraph construction gives symmetric intersecting families of polynomial density on infinitely many dimensions, greatly improving the projective-plane lower bound, but it does not determine the general asymptotics.",
+  "would_publish": false,
+  "caveats": "The lower bound is presently only on a subsequence, the polynomial upper bound below applies only to set-derived families, and literature novelty has not been independently checked.",
+  "id": "1909.11578__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.187568,
+  "eur": 1.230077,
+  "elapsed_s": 1441.6,
+  "status": "completed",
+  "response_id": "resp_0d27e562cb6e2a7d006a966bac767887d28fc5cfdb6691667e",
+  "when": "2026-09-01T06:31:41Z"
+}

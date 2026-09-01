@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 78,
+    "score": 3.8,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2506.17777__00",
+    "title_md": "[Problem 1.4](https://arxiv.org/abs/2506.17777)",
+    "paper": "Extended VC-dimension, and Radon and Tverberg type theorems for unions \u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2506.17777__00/"
+  },
+  "dossier_meta": {
+    "id": "2506.17777__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2506.17777__00/",
+    "arxiv_id": "2506.17777",
+    "tier": 4,
+    "score": 3.8,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Extended VC-dimension, and Radon and Tverberg type theorems for unions \u2026",
+    "catalog_title": "Problem 1.4",
+    "statement_text": "Determine or estimate the least integer $f=f_{r}(d,s_{1},\\ldots,s_{r})$ such that for any set $P$ of $f$ points in $\\mathbb{R}^{d}$ there is a partition into $r$ pairwise disjoint sets $P=\\bigcup_{i=1}^{r}P_{i}$ such that for any family of sets $C_{1},\\ldots,C_{r}$ with $P_{i}\\subset C_{i}$ where $C_{i}$ is an $s_{i}$-convex set for every $i\\in[r]$ we have that $\\bigcap_{i=1}^{r}C_{i}\\neq\\emptyset$.",
+    "context_text": "This is a Tverberg-type generalization of Problem 1.3 to $r$ parts and $r$ families of $s_i$-convex sets. Radon's theorem is equivalent to $f(d,1,1)=d+2$ and Tverberg's theorem is equivalent to $f_{r}(d,1,\\ldots,1)=(r-1)(d+1)+1$. The paper provides an upper bound via Theorem 1.6 but the exact determination remains open."
+  },
+  "started": "2026-09-01T06:40:45Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
