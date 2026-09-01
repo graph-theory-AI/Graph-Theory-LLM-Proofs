@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full conjecture remains unresolved, but the case \u03bd=1 is exact, bounded triangle-incidence admits a general extension of the triangle-free theorem, and any putative threshold has explicit and probabilistic lower bounds.",
+  "would_publish": false,
+  "caveats": "The essential case k\u22654, \u03bd\u22652 with unbounded triangle incidence remains open.",
+  "id": "1509.06563__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.070816,
+  "eur": 1.109146,
+  "elapsed_s": 1181.9,
+  "status": "completed",
+  "response_id": "resp_01e4b604a85fa64f006a963b40530087d28069da44cff991d5",
+  "when": "2026-09-01T03:00:46Z"
+}

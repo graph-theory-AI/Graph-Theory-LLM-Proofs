@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 294,
+    "score": 3.1,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2009.13319__03",
+    "title_md": "[Research direction: minimal heroic tournament families](https://arxiv.org/abs/2009.13319)",
+    "paper": "Extension of Gyarfas-Sumner conjecture to digraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2009.13319__03/"
+  },
+  "dossier_meta": {
+    "id": "2009.13319__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2009.13319__03/",
+    "arxiv_id": "2009.13319",
+    "tier": 3,
+    "score": 3.1,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Extension of Gyarfas-Sumner conjecture to digraphs",
+    "catalog_title": "Research direction: minimal heroic tournament families",
+    "statement_text": "Characterize all finite and minimal families $\\mathcal{H} = \\{H_1, H_2, \\ldots, H_k\\}$ of tournaments such that $\\{\\overrightarrow{K_2}, \\overleftrightarrow{K_2}, H_1, H_2, \\ldots, H_k\\}$ is a heroic set.",
+    "context_text": "Theorem 2.2 of Berger et al. [4] characterizes minimal heroic sets of this form with $|\\mathcal{H}|=1$ (i.e., single-hero extensions). The authors note that a minimal heroic subset of order 2 or more cannot contain a hero tournament, making the general classification a natural open direction."
+  },
+  "started": "2026-09-01T03:03:11Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

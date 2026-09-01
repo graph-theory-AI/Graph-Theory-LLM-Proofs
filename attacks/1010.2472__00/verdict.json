@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The unrestricted question remains open, but there is a 2^{O_Sigma(sqrt(n))} exact algorithm and an FPT algorithm parameterized by the number of degree-at-least-five vertices in the 4-core, giving polynomial time when that core has O(log n) triangles.",
+  "would_publish": false,
+  "caveats": "This gives neither an unrestricted polynomial algorithm nor an NP-hardness proof; novelty of the partial bounds is not claimed.",
+  "id": "1010.2472__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.859912,
+  "eur": 0.890692,
+  "elapsed_s": 1197.5,
+  "status": "completed",
+  "response_id": "resp_0d84b02fd3b66715006a963b28308887d2b46eb30996953a4f",
+  "when": "2026-09-01T03:00:37Z"
+}

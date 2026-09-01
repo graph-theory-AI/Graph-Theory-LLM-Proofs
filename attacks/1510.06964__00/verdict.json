@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For every 3-colour-compatible triangular torus, all nonsurjective 5-colourings lie in one Kempe class; this proves validity for all such tori of order at most 15 and, by a further argument, for the 18-vertex tori T_{3,6} and T_{6,3}.",
+  "would_publish": false,
+  "caveats": "Larger surjective colourings and periods that destroy the natural tripartition remain unresolved; the precise hypotheses of arXiv:2206.13126 were not independently checked here.",
+  "id": "1510.06964__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.74134,
+  "eur": 1.803671,
+  "elapsed_s": 1914.4,
+  "status": "completed",
+  "response_id": "resp_06742c5e9bb5348a006a96386c6f1887d29287c9fcde236684",
+  "when": "2026-09-01T03:00:54Z"
+}

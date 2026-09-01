@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 299,
+    "score": 3.1,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1706.02896__00",
+    "title_md": "[Problem 1.2](https://arxiv.org/abs/1706.02896)",
+    "paper": "Embedding Quartic Eulerian Digraphs on the Plane",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1706.02896__00/"
+  },
+  "dossier_meta": {
+    "id": "1706.02896__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1706.02896__00/",
+    "arxiv_id": "1706.02896",
+    "tier": 3,
+    "score": 3.1,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Embedding Quartic Eulerian Digraphs on the Plane",
+    "catalog_title": "Problem 1.2",
+    "statement_text": "Determine the complete set of obstructions for diplanar quartic Eulerian digraphs.",
+    "context_text": "The paper studies the partial order on quartic Eulerian digraphs defined by cycle removal followed by suppression of degree-2 vertices. Since diplanarity is hereditary under this order (Lemma 1.1), it is natural to seek the minimal non-diplanar elements (obstructions). The paper makes partial progress, classifying all obstructions containing parallel arcs, but the complete list remains open."
+  },
+  "started": "2026-09-01T03:00:27Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

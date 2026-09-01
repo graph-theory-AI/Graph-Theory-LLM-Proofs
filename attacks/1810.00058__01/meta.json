@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 293,
+    "score": 3.1,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1810.00058__01",
+    "title_md": "[Open case H = K3 for Conjecture 1.4](https://arxiv.org/abs/1810.00058)",
+    "paper": "Sparse graphs with no polynomial-sized anticomplete pairs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1810.00058__01/"
+  },
+  "dossier_meta": {
+    "id": "1810.00058__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1810.00058__01/",
+    "arxiv_id": "1810.00058",
+    "tier": 3,
+    "score": 3.1,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Sparse graphs with no polynomial-sized anticomplete pairs",
+    "catalog_title": "Open case H = K3 for Conjecture 1.4",
+    "statement_text": "It remains open whether $H = K_3$ (the triangle) satisfies Conjecture 1.4.",
+    "context_text": "The paper's main result establishes Conjecture 1.4 for all almost-bipartite graphs $H$; almost-bipartite graphs are triangle-free, so $K_3$ is the simplest graph not covered. This gap is noted both in the abstract and in the body of the paper."
+  },
+  "started": "2026-09-01T03:06:39Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

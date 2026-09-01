@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 295,
+    "score": 3.1,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1909.11578__02",
+    "title_md": "[Polynomial improvement on symmetric intersecting family size bound](https://arxiv.org/abs/1909.11578)",
+    "paper": "On symmetric intersecting families of vectors",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1909.11578__02/"
+  },
+  "dossier_meta": {
+    "id": "1909.11578__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1909.11578__02/",
+    "arxiv_id": "1909.11578",
+    "tier": 3,
+    "score": 3.1,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On symmetric intersecting families of vectors",
+    "catalog_title": "Polynomial improvement on symmetric intersecting family size bound",
+    "statement_text": "Show that there exist constants $c, \\delta > 0$ (possibly depending on $k$) such that for any symmetric intersecting $A \\subset [k]^n$, we have $\\log_k |A| \\leq n - cn^{\\delta}$.",
+    "context_text": "This is posed in Section 4 as a concrete and more modest goal, falling short of identifying the exact extremal size: even a polynomial gain over the $o(k^n)$ bound of Theorem 1.1, expressed as $\\log_k |A| \\leq n - cn^\\delta$, would be a significant advance."
+  },
+  "started": "2026-09-01T03:00:54Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

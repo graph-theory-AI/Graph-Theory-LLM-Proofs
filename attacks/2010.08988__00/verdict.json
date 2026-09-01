@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For oriented matroids given by rational representing matrices, detecting an even directed circuit is NP-complete via a reduction from SUBSET SUM.",
+  "would_publish": false,
+  "caveats": "This settles only the realizable matrix-input model; arbitrary oriented-matroid encodings remain model-dependent, and novelty has not been literature-checked.",
+  "id": "2010.08988__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.517192,
+  "eur": 0.535705,
+  "elapsed_s": 733.4,
+  "status": "completed",
+  "response_id": "resp_06b92319eba310fe006a963d04f6c887d2bd7c935c1a8dccbf",
+  "when": "2026-09-01T03:00:50Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 300,
+    "score": 3.05,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2107.05995__01",
+    "title_md": "[Question on Typical Hat Guessing Number of G(n,1/2)](https://arxiv.org/abs/2107.05995)",
+    "paper": "On the Hat Guessing Number of Graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2107.05995__01/"
+  },
+  "dossier_meta": {
+    "id": "2107.05995__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2107.05995__01/",
+    "arxiv_id": "2107.05995",
+    "tier": 3,
+    "score": 3.05,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "On the Hat Guessing Number of Graphs",
+    "catalog_title": "Question on Typical Hat Guessing Number of G(n,1/2)",
+    "statement_text": "What is the typical asymptotic behavior of the hat guessing number of the random graph $G(n,1/2)$? In particular, is $\\mathrm{HG}(G(n,1/2))$ equal to $o(n)$ with high probability?",
+    "context_text": "The paper improves the known lower bound from $(2-o(1))\\log_2 n$ to $n^{1-o(1)}$ with high probability, but the true order of growth remains unknown. The upper bound is $n$ trivially."
+  },
+  "started": "2026-09-01T03:00:13Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

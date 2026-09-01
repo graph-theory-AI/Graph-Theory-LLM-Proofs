@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The coefficient and greater-than-n questions remain open, but every connected outerplanar graph satisfies capt_2(G) <= n-1 and capt(G) <= n-1.",
+  "would_publish": false,
+  "caveats": "This uses the standard visible-robber timing convention and does not improve the bound for non-outerplanar planar blocks.",
+  "id": "1709.09050__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.167564,
+  "eur": 1.209357,
+  "elapsed_s": 1640.0,
+  "status": "completed",
+  "response_id": "resp_0e9e65cb04e051af006a963b638c3887d28ac1e3c84ce70fa0",
+  "when": "2026-09-01T03:08:59Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 297,
+    "score": 3.1,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1804.07431__00",
+    "title_md": "[Open Problem (exact exponent for maximal cliques in c-closed graphs)](https://arxiv.org/abs/1804.07431)",
+    "paper": "Finding Cliques in Social Networks: A New Distribution-Free Model",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1804.07431__00/"
+  },
+  "dossier_meta": {
+    "id": "1804.07431__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1804.07431__00/",
+    "arxiv_id": "1804.07431",
+    "tier": 3,
+    "score": 3.1,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Finding Cliques in Social Networks: A New Distribution-Free Model",
+    "catalog_title": "Open Problem (exact exponent for maximal cliques in c-closed graphs)",
+    "statement_text": "Determine the exact exponent of $n$ (between $3/2$ and $2 - 2^{1-c}$) in the expression for the maximum number of maximal cliques in a $c$-closed graph on $n$ vertices.",
+    "context_text": "Theorem 1.4 establishes an upper bound of $O(n^{2-2^{1-c}})$ maximal cliques in any $c$-closed graph on $n$ vertices, while Theorem 1.7 gives a matching lower bound of $\\Omega(c^{-3/2} 2^{c/2} n^{3/2})$, leaving the exact exponent of $n$ undetermined for intermediate values of $c$. The two bounds coincide at $3/2$ and diverge as $c$ grows."
+  },
+  "started": "2026-09-01T03:00:46Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

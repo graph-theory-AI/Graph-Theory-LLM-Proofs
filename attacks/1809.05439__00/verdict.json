@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "Under Theorem 5's triangle-free-planar quantifiers, a 23-vertex graph formed from two subdivided 5-wheels gives an explicit counterexample.",
+  "would_publish": false,
+  "caveats": "The counterexample has 4-cycles, so it does not resolve a stronger variant restricted to girth at least five.",
+  "id": "1809.05439__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.708436,
+  "eur": 0.733794,
+  "elapsed_s": 804.7,
+  "status": "completed",
+  "response_id": "resp_0d0636729704fc5b006a963ca6c5b487d297e47419590f0649",
+  "when": "2026-09-01T03:00:27Z"
+}

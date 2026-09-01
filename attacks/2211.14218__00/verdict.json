@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "A clean switching obstruction proves radius-2 nonreconstructibility throughout log(n)/n << p << n^{-3/4}(log n)^{1/4}, but does not establish the high-density reconstruction half.",
+  "would_publish": false,
+  "caveats": "This assumes rooted induced balls; only lower bounds are proved, and overlap with the full arXiv v3 lower-bound argument has not been checked line by line.",
+  "id": "2211.14218__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.197304,
+  "eur": 1.240161,
+  "elapsed_s": 1604.7,
+  "status": "completed",
+  "response_id": "resp_019ea966e5fdce17006a963afaff7c87d2a4d33933323a39d6",
+  "when": "2026-09-01T03:06:39Z"
+}

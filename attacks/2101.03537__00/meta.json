@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 292,
+    "score": 3.1,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2101.03537__00",
+    "title_md": "[Informal belief on Conjecture 1.7 and polylog bound](https://arxiv.org/abs/2101.03537)",
+    "paper": "Pure pairs. VII. Homogeneous submatrices in 0/1-matrices with a forbidd\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2101.03537__00/"
+  },
+  "dossier_meta": {
+    "id": "2101.03537__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2101.03537__00/",
+    "arxiv_id": "2101.03537",
+    "tier": 3,
+    "score": 3.1,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Pure pairs. VII. Homogeneous submatrices in 0/1-matrices with a forbidd\u2026",
+    "catalog_title": "Informal belief on Conjecture 1.7 and polylog bound",
+    "statement_text": "Our guess is that Conjecture 1.7 is false. Perhaps $n/\\operatorname{polylog}(n)$ might be true?",
+    "context_text": "After stating Conjecture 1.7, the authors remark that while it is a natural extension of the unordered theory, they do not believe it holds, and informally suggest that a bound of $n/\\operatorname{polylog}(n)$ for the sizes of the pure pair might be the correct weaker conclusion."
+  },
+  "started": "2026-09-01T03:08:59Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

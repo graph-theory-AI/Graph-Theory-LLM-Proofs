@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A finite connected outerplanar graph is 1-cop-win exactly when it is chordal\u2014equivalently, when every block on at least three vertices is maximal outerplanar\u2014and otherwise its cop number is 2.",
+  "would_publish": false,
+  "caveats": "This uses the standard finite visible game with passing and the given two-cop upper bound; publication priority was not independently checked.",
+  "id": "1709.09050__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.637376,
+  "eur": 0.660191,
+  "elapsed_s": 817.0,
+  "status": "completed",
+  "response_id": "resp_0e216a2f004e1ad2006a963c8c869c87d28d9419fdd4cfebe6",
+  "when": "2026-09-01T03:00:13Z"
+}

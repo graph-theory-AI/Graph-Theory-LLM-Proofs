@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 298,
+    "score": 3.1,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1710.03117__00",
+    "title_md": "[Informal Conjecture (constant-size M)](https://arxiv.org/abs/1710.03117)",
+    "paper": "On classes of graphs with strongly sublinear separators",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1710.03117__00/"
+  },
+  "dossier_meta": {
+    "id": "1710.03117__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1710.03117__00/",
+    "arxiv_id": "1710.03117",
+    "tier": 3,
+    "score": 3.1,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On classes of graphs with strongly sublinear separators",
+    "catalog_title": "Informal Conjecture (constant-size M)",
+    "statement_text": "I conjecture that there actually always exists a balanced separator $C \\cup M$ of $G$ with $q(C) \\leq q(V(G))/\\ell$ for some set $M$ of constant size (dependent on the class and $\\ell$, but not on $|V(G)|$).",
+    "context_text": "Theorem 5 guarantees a weighted balanced separator $C \\cup M$ with $q(C) \\leq q(V(G))/\\ell$, but the bound on $|M|$ is only polylogarithmic in $n$ for graphs from a class with polynomial $\\omega$-expansion. The author conjectures this polylogarithmic dependence on $n$ can be eliminated entirely, yielding a set $M$ of size depending only on the graph class and $\\ell$."
+  },
+  "started": "2026-09-01T03:00:37Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

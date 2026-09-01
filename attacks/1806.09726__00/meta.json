@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 296,
+    "score": 3.1,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1806.09726__00",
+    "title_md": "[Conjecture 7](https://arxiv.org/abs/1806.09726)",
+    "paper": "Online Ramsey Numbers and the Subgraph Query Problem",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1806.09726__00/"
+  },
+  "dossier_meta": {
+    "id": "1806.09726__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1806.09726__00/",
+    "arxiv_id": "1806.09726",
+    "tier": 3,
+    "score": 3.1,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Online Ramsey Numbers and the Subgraph Query Problem",
+    "catalog_title": "Conjecture 7",
+    "statement_text": "(a) The diagonal online random Ramsey numbers satisfy $$\\tilde{r}_{rand}(n, n) = 2^{(1+o(1)) \\frac{2}{3} n}.$$ (b) The off-diagonal online random Ramsey numbers ($m \\geq 3$ fixed and $n \\to \\infty$) satisfy $$\\tilde{r}_{rand}(m, n) = n^{(1+o(1)) \\frac{2}{3} m}.$$",
+    "context_text": "The authors define the online random Ramsey number $\\tilde{r}_{rand}(m,n)$ as the maximum over $p \\in (0,1)$ of $\\tilde{r}(m,n;p)$, where Painter independently colors each edge red with probability $p$. These conjectures on the growth rate are motivated by a connection with the Subgraph Query Problem; Theorem 10 and Conjecture 9 together imply both parts of this conjecture."
+  },
+  "started": "2026-09-01T03:00:50Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
