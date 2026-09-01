@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 422,
+    "score": 2.75,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2302.12633__00",
+    "title_md": "[Problem 41](https://arxiv.org/abs/2302.12633)",
+    "paper": "Neighborhood complexity of planar graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.12633__00/"
+  },
+  "dossier_meta": {
+    "id": "2302.12633__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.12633__00/",
+    "arxiv_id": "2302.12633",
+    "tier": 3,
+    "score": 2.75,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Neighborhood complexity of planar graphs",
+    "catalog_title": "Problem 41",
+    "statement_text": "Determine the profile and neighborhood complexities of planar graphs up to a constant factor. For profile complexity, it is known to be in $\\Omega(r^{3})$ (Theorem 36) and in $\\operatorname{\\mathcal{O}}(r^{4})$ (Theorem 2). For neighborhood complexity, it is known to be in $\\Omega(r^{2})$ (Theorem 36 and Lemma 8) and in $\\operatorname{\\mathcal{O}}(r^{4})$ (Theorem 2).",
+    "context_text": "The paper closes with two open problems. The first asks for tight bounds on the profile and neighborhood complexities of planar graphs; the existing lower bounds ($\\Omega(r^3)$ for profile, $\\Omega(r^2)$ for neighborhood) and the paper's new upper bound ($\\mathcal{O}(r^4)$ for both) leave a small gap that the authors consider tantalizingly close."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

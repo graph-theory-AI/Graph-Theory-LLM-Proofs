@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 423,
+    "score": 2.75,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2305.15585__00",
+    "title_md": "[Question 10](https://arxiv.org/abs/2305.15585)",
+    "paper": "Chromatic number is not tournament-local",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2305.15585__00/"
+  },
+  "dossier_meta": {
+    "id": "2305.15585__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2305.15585__00/",
+    "arxiv_id": "2305.15585",
+    "tier": 3,
+    "score": 2.75,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Chromatic number is not tournament-local",
+    "catalog_title": "Question 10",
+    "statement_text": "Does there exist, for each integer $d$, an integer $\\chi$ such that for every graph $G$ with $\\chi(G)\\geqslant\\chi$ and every tournament $T$ on the same vertex set, there is a vertex $v$ for which $G[N^{+}_{T}(v)]$ has degeneracy at least $d$?",
+    "context_text": "In the closing remarks the authors note they have been unable to determine whether high chromatic number forces an out-neighbourhood with high degeneracy. The paper's disproof of Conjecture 1 shows chromatic number is not preserved, but degeneracy is a weaker measure and may behave differently."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

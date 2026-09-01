@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 563,
+    "score": 2.3,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2304.04690__00",
+    "title_md": "[Conjecture 9.2](https://arxiv.org/abs/2304.04690)",
+    "paper": "Digraph Colouring and Arc-Connectivity",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2304.04690__00/"
+  },
+  "dossier_meta": {
+    "id": "2304.04690__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2304.04690__00/",
+    "arxiv_id": "2304.04690",
+    "tier": 2,
+    "score": 2.3,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Digraph Colouring and Arc-Connectivity",
+    "catalog_title": "Conjecture 9.2",
+    "statement_text": "A digraph is 2-extremal if and only if it is in $\\mathcal{H}_2$.",
+    "context_text": "The paper defines $\\mathcal{H}_2$ as the smallest class containing symmetric odd cycles and closed under directed Haj\u00f3s joins and 2-Haj\u00f3s tree joins. Its main theorem characterizes $k$-extremal digraphs for $k=1$ and $k\\geq 3$; Conjecture 9.2 proposes the missing characterization for $k=2$."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

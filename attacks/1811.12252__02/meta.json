@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 427,
+    "score": 2.75,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1811.12252__02",
+    "title_md": "[Open Cases: Clique-Width Classification for $(H_1,H_2)$-Free Graphs](https://arxiv.org/abs/1811.12252)",
+    "paper": "Graph Isomorphism for $(H_1,H_2)$-free Graphs: An Almost Complete Dicho\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1811.12252__02/"
+  },
+  "dossier_meta": {
+    "id": "1811.12252__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1811.12252__02/",
+    "arxiv_id": "1811.12252",
+    "tier": 3,
+    "score": 2.75,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Graph Isomorphism for $(H_1,H_2)$-free Graphs: An Almost Complete Dicho\u2026",
+    "catalog_title": "Open Cases: Clique-Width Classification for $(H_1,H_2)$-Free Graphs",
+    "statement_text": "Determine, for each of the five remaining pairs $(H_1, H_2)$, whether the class of $(H_1, H_2)$-free graphs has bounded or unbounded clique-width.",
+    "context_text": "The paper continues a project [4,8,11,12,14,15] classifying the boundedness of clique-width of $(H_1,H_2)$-free graph classes. By showing that (gem, $P_1+2P_2$)-free graphs have unbounded clique-width, the authors reduce the number of open pairs from six to five."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

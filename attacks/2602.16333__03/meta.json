@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 587,
+    "score": 2.2,
+    "tier": 2,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2602.16333__03",
+    "title_md": "[Question 4.4](https://arxiv.org/abs/2602.16333)",
+    "paper": "Long cycles in vertex transitive digraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2602.16333__03/"
+  },
+  "dossier_meta": {
+    "id": "2602.16333__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2602.16333__03/",
+    "arxiv_id": "2602.16333",
+    "tier": 2,
+    "score": 2.2,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Long cycles in vertex transitive digraphs",
+    "catalog_title": "Question 4.4",
+    "statement_text": "Does there exist $C>0$ such that in any vertex transitive digraph, the length of a longest path is by at most a factor of $C$ larger than the length of a longest directed cycle?",
+    "context_text": "The paper asks whether the classical constant-factor relation between longest paths and longest cycles in undirected vertex-transitive graphs has a directed analogue."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

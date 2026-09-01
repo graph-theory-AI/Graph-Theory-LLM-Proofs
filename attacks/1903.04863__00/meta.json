@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 428,
+    "score": 2.75,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1903.04863__00",
+    "title_md": "[Informal question on Behrend-style sets avoiding affine patterns with m\u2026](https://arxiv.org/abs/1903.04863)",
+    "paper": "Triforce and Corners",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1903.04863__00/"
+  },
+  "dossier_meta": {
+    "id": "1903.04863__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1903.04863__00/",
+    "arxiv_id": "1903.04863",
+    "tier": 3,
+    "score": 2.75,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Triforce and Corners",
+    "catalog_title": "Informal question on Behrend-style sets avoiding affine patterns with mixed-sign coefficients",
+    "statement_text": "We do not know if there are subsets of $[N]$, in the style of Behrend's construction, with $N^{1-o(1)}$ elements avoiding such patterns (e.g., $2x + 2y = 3w + z$).",
+    "context_text": "In Section 3.1, the authors discuss why the Ruzsa\u2013Bergelson\u2013Host\u2013Kra approach for constructing popular-difference counterexamples fails for certain linear identities $a_1P(b_1)+\\cdots+a_4P(b_4)=0$ in which there are two positive and two negative $a_i$'s (rather than the symmetric case). They note that it is unknown whether large Behrend-style sets avoiding such patterns exist."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 0,
+    "score": 1.0,
+    "tier": 1,
+    "lean": "prove",
+    "status": "open",
+    "id": "2309.04460__02",
+    "title_md": "Question 10.3",
+    "paper": "Essentially tight bounds for rainbow cycles in proper edge-colourings",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2309.04460__02/"
+  },
+  "dossier_meta": {
+    "id": "2309.04460__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2309.04460__02/",
+    "arxiv_id": "2309.04460",
+    "tier": 1,
+    "score": 1.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Essentially tight bounds for rainbow cycles in proper edge-colourings",
+    "catalog_title": "Question 10.3",
+    "statement_text": "Given a positive integer $n$, what is the smallest number $d=d(n)$ so that in any group $G$ of size $|G|=n$, given any subset $S\\subseteq G$ of size $|S|\\geq d$, we can always find a solution to $g_{1}^{\\varepsilon_{1}}\\cdot\\ldots\\cdot g_{m}^{\\varepsilon_{m}}=e$ with distinct $g_{1},\\ldots,g_{m}\\in S$ as well as $\\varepsilon_{1},\\ldots,\\varepsilon_{m}\\in\\{-1,1\\}$ and $m\\geq 1$.",
+    "context_text": "Appears in Section 10 of the paper, which collects open questions remaining after the main results on rainbow cycles and the connections to additive number theory for non-abelian groups."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

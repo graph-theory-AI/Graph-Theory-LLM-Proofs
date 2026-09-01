@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 624,
+    "score": 2.1,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2603.02786__03",
+    "title_md": "[Conjecture 6](https://arxiv.org/abs/2603.02786)",
+    "paper": "Packing arithmetic progressions",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2603.02786__03/"
+  },
+  "dossier_meta": {
+    "id": "2603.02786__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2603.02786__03/",
+    "arxiv_id": "2603.02786",
+    "tier": 2,
+    "score": 2.1,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Packing arithmetic progressions",
+    "catalog_title": "Conjecture 6",
+    "statement_text": "If $k\\ll n$, then $M_{k}(n)\\sim\\frac{k^{2}}{2\\ln k}\\cdot n$, while otherwise, $M_{k}(n)\\sim\\frac{k^{2}}{2\\ln k}\\cdot n-\\frac{k^{3}}{3\\ln k}$.",
+    "context_text": "Conjectured asymptotic behaviour of $M_k(n)$ for $k<n$ in view of Theorem 5, splitting into two regimes according to whether $k\\ll n$ or not."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

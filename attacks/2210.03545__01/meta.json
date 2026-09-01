@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 425,
+    "score": 2.75,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "2210.03545__01",
+    "title_md": "[Informal Conjecture: r(K^(3)_4, S^(3)_n) and gr(G_{2x2}, K_n) have the \u2026](https://arxiv.org/abs/2210.03545)",
+    "paper": "Hypergraph Ramsey numbers of cliques versus stars",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.03545__01/"
+  },
+  "dossier_meta": {
+    "id": "2210.03545__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.03545__01/",
+    "arxiv_id": "2210.03545",
+    "tier": 3,
+    "score": 2.75,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Hypergraph Ramsey numbers of cliques versus stars",
+    "catalog_title": "Informal Conjecture: r(K^(3)_4, S^(3)_n) and gr(G_{2x2}, K_n) have the same order",
+    "statement_text": "We strongly believe that $r(K^{(3)}_4, S^{(3)}_n)$ and $\\mathrm{gr}(G_{2\\times 2}, K_n)$ are of roughly the same order.",
+    "context_text": "The paper shows $r(K^{(3)}_4, S^{(3)}_n) \\le 2^{\\mathrm{gr}(G_{2\\times 2},K_n)}$, and the authors construct lower bounds for $r(K^{(3)}_4, S^{(3)}_n)$ by gluing together lower-bound constructions for $\\mathrm{gr}(G_{2\\times 2}, K_n)$, yielding comparable sizes. No direct implication between the lower bounds is known."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

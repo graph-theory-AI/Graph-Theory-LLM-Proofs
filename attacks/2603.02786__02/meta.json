@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 585,
+    "score": 2.2,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2603.02786__02",
+    "title_md": "[Conjecture 5](https://arxiv.org/abs/2603.02786)",
+    "paper": "Packing arithmetic progressions",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2603.02786__02/"
+  },
+  "dossier_meta": {
+    "id": "2603.02786__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2603.02786__02/",
+    "arxiv_id": "2603.02786",
+    "tier": 2,
+    "score": 2.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Packing arithmetic progressions",
+    "catalog_title": "Conjecture 5",
+    "statement_text": "For every $k$ satisfying $\\Omega(\\sqrt{n})=k<\\sqrt{n}$, we have $m_{k}(n)\\sim\\left(1-\\frac{k^{2}}{3n}\\right)\\frac{k}{\\ln k}\\cdot n$.",
+    "context_text": "If Conjecture 1 holds, it also resolves $m_k(n)$ asymptotically for $k\\geqslant\\sqrt{n}$ via Theorem 4. The only remaining open case is $k<\\sqrt{n}$ with $k\\not=o(\\sqrt{n})$, which this conjecture addresses."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

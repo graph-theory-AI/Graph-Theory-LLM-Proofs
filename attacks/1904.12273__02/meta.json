@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 426,
+    "score": 2.75,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1904.12273__02",
+    "title_md": "[Open Question (running time improvement for long hole detection)](https://arxiv.org/abs/1904.12273)",
+    "paper": "Detecting a long odd hole",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1904.12273__02/"
+  },
+  "dossier_meta": {
+    "id": "1904.12273__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1904.12273__02/",
+    "arxiv_id": "1904.12273",
+    "tier": 3,
+    "score": 2.75,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Detecting a long odd hole",
+    "catalog_title": "Open Question (running time improvement for long hole detection)",
+    "statement_text": "Can the running times of $O(|G|^{\\ell+1})$ for detecting a long hole and $O(|G|^{20\\ell+40})$ for detecting a long odd hole \u2014 both $|G|^{O(\\ell)}$ \u2014 be substantially improved for fixed $\\ell$?",
+    "context_text": "The paper gives algorithms with running time $|G|^{O(\\ell)}$ for both long hole and long odd hole detection. Both problems are NP-hard when $\\ell$ is part of the input, but whether the dependence on $\\ell$ in the exponent can be reduced for fixed $\\ell$ is left as an open question."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

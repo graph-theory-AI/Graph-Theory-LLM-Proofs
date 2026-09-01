@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 467,
+    "score": 2.6,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2005.12861__00",
+    "title_md": "[Question 1.5](https://arxiv.org/abs/2005.12861)",
+    "paper": "Finding an induced path that is not a shortest path",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2005.12861__00/"
+  },
+  "dossier_meta": {
+    "id": "2005.12861__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2005.12861__00/",
+    "arxiv_id": "2005.12861",
+    "tier": 3,
+    "score": 2.6,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Finding an induced path that is not a shortest path",
+    "catalog_title": "Question 1.5",
+    "statement_text": "For fixed $k > 1$, is there a polynomial-time algorithm that, given a graph $G$ and $u, v \\in V(G)$, decides whether there is an induced $uv$-path $P$ in $G$ of length at least $d(u, v) + k$?",
+    "context_text": "The paper's main result (Theorem 1.1) gives a polynomial-time algorithm for the case $k = 1$ (detecting any induced non-shortest path), and the authors note the algorithm can be adjusted for $k = 2$. The question remains open even for $k = 3$. Fixing $k$ is necessary, since Theorem 1.6 shows the problem is NP-hard when $k$ is part of the input (e.g., deciding whether there exists a $uv$-NSP of length at least $2d_G(u,v)$)."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

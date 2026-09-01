@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 661,
+    "score": 1.85,
+    "tier": 2,
+    "lean": "prove",
+    "status": "open",
+    "id": "2604.09449__00",
+    "title_md": "[Conjecture 6.1](https://arxiv.org/abs/2604.09449)",
+    "paper": "Colour-balanced subgraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2604.09449__00/"
+  },
+  "dossier_meta": {
+    "id": "2604.09449__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2604.09449__00/",
+    "arxiv_id": "2604.09449",
+    "tier": 2,
+    "score": 1.85,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Colour-balanced subgraphs",
+    "catalog_title": "Conjecture 6.1",
+    "statement_text": "Let $h\\colon E(K_{n,n})\\to\\mathbb{R}^{k}$ such that $\\|h(e)\\|_{1}\\leq 1$ for all $e\\in E(K_{n,n})$. Then there is a perfect matching $M$ of $K_{n,n}$ satisfying $f_{h}(M)=O(\\sqrt{k})$.",
+    "context_text": "There is a gap between the $O(k^2)$ upper bound for representative matchings in bipartite complete graphs (Section 1.1) and the worst-case lower bound of $\\sqrt{k/2}$ constructed in Theorem 5.1. The authors conjecture that the lower bound gives the correct order, so that the true bound is $\\Theta(\\sqrt{k})$."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

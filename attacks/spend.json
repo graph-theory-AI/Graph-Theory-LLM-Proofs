@@ -1,24 +1,30 @@
 {
-  "budget_eur": 250.0,
-  "eur_per_usd": 0.8636,
-  "usd_per_eur": 1.158,
-  "fx_as_of": "2026-08-30",
+  "budget_eur": 400.0,
+  "eur_per_usd": 1.0357947977479733,
+  "usd_per_eur": 0.965442192,
+  "fx_as_of": "2026-08-31-openai-prepaid",
   "safety_margin_eur": 5.0,
   "conservative_max_usd_per_call": 3.5,
-  "spent_usd": 241.360548,
-  "spent_eur": 208.438969,
-  "reserved_usd": 0.0,
-  "in_flight": 0,
+  "spent_usd": 0.0,
+  "spent_eur": 0.0,
+  "reserved_usd": 84.0,
+  "in_flight": 24,
   "n_calls": 248,
   "n_attacks": 248,
-  "stopped": true,
-  "stop_reason": "preflight refused: remaining usable \u20ac2.99 < reserve \u20ac3.02 ($3.50)",
+  "stopped": false,
+  "stop_reason": null,
   "budget_history": [
     {
       "when": "2026-08-31T10:41:34Z",
       "from_eur": 150.0,
       "to_eur": 250.0,
       "note": "+100 EUR, spend before evening 2026-08-31 CEST; 5h deadline is soft"
+    },
+    {
+      "when": "2026-09-01T01:00:00Z",
+      "from_eur": 250.0,
+      "to_eur": 400.0,
+      "note": "new \u20ac400 prepaid wallet at 03:00 Europe/Paris 2026-09-01; campaign spend reset; FX from first-wallet prepaid (\u20ac250 \u2248 $241.36)"
     }
   ]
 }

@@ -1,27 +1,27 @@
 {
   "record": {
-    "rank_hardest": 686,
-    "score": 1.45,
+    "rank_hardest": 0,
+    "score": 1.0,
     "tier": 1,
     "lean": "prove",
     "status": "open",
-    "id": "2309.04460__00",
-    "title_md": "[Question 10.1](https://arxiv.org/abs/2309.04460)",
+    "id": "2309.04460__01",
+    "title_md": "Question 10.2",
     "paper": "Essentially tight bounds for rainbow cycles in proper edge-colourings",
     "source": "arxiv",
-    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2309.04460__00/"
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2309.04460__01/"
   },
   "dossier_meta": {
-    "id": "2309.04460__00",
-    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2309.04460__00/",
+    "id": "2309.04460__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2309.04460__01/",
     "arxiv_id": "2309.04460",
     "tier": 1,
-    "score": 1.45,
+    "score": 1.0,
     "lean": "prove",
     "status": "open",
     "paper": "Essentially tight bounds for rainbow cycles in proper edge-colourings",
-    "catalog_title": "Question 10.1",
-    "statement_text": "Is the $\\log\\log n$ factor in the bound for the average degree in Theorem 1.1 necessary in order to guarantee a rainbow cycle?",
+    "catalog_title": "Question 10.2",
+    "statement_text": "Does there exist a constant $C>0$ such that the edges of any $n$-vertex properly edge-coloured robust sublinear expander $G$ with average degree at least $C\\log n$ can be decomposed into two spanning connected subgraphs in such a way that every colour appears on only one of them?",
     "context_text": "Appears in Section 10 of the paper, which collects open questions remaining after the main results on rainbow cycles and the connections to additive number theory for non-abelian groups."
   },
   "started": "2026-09-01T01:00:01Z",

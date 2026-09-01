@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 424,
+    "score": 2.75,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2305.13422__00",
+    "title_md": "[Conjecture 1.7](https://arxiv.org/abs/2305.13422)",
+    "paper": "Flashes and rainbows in tournaments",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2305.13422__00/"
+  },
+  "dossier_meta": {
+    "id": "2305.13422__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2305.13422__00/",
+    "arxiv_id": "2305.13422",
+    "tier": 3,
+    "score": 2.75,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Flashes and rainbows in tournaments",
+    "catalog_title": "Conjecture 1.7",
+    "statement_text": "For all positive integers $l$ and $k$, $t(l, k) = l^{k-1}$.",
+    "context_text": "Here $t(l,k)$ denotes the smallest integer such that every colouring of the edges of any tournament with more than $t(l,k)$ vertices contains an $l$-flash or a $k$-rainbow. Since $t(l,k) \\geq f(l,k) \\geq l^{k-1}$, this is a tournament strengthening of the Lefmann\u2013R\u00f6dl\u2013Thomas Conjecture 1.2. The paper proves two upper bounds on $t(l,k)$ confirming it asymptotically for $l = \\omega(k^2)$, and also shows that some tournaments are strictly worse than transitive tournaments (Theorem 1.10)."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

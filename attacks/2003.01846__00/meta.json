@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 510,
+    "score": 2.55,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2003.01846__00",
+    "title_md": "[Informal Conjecture (outerplanar strongly perfect graphs)](https://arxiv.org/abs/2003.01846)",
+    "paper": "New Examples of Minimal Non-Strongly-Perfect Graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2003.01846__00/"
+  },
+  "dossier_meta": {
+    "id": "2003.01846__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2003.01846__00/",
+    "arxiv_id": "2003.01846",
+    "tier": 3,
+    "score": 2.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "New Examples of Minimal Non-Strongly-Perfect Graphs",
+    "catalog_title": "Informal Conjecture (outerplanar strongly perfect graphs)",
+    "statement_text": "While obtaining a complete list of minimal non-strongly-perfect graphs appears to be out of reach, one might conjecture that the characterization of outerplanar strongly perfect graphs can be obtained through the minimal examples given in this paper.",
+    "context_text": "At the end of the paper the authors remark that a full characterisation of minimal non-strongly-perfect graphs is currently intractable, but suggest that restricting to the outerplanar setting may be a more approachable subproblem."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

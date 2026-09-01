@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 0,
+    "score": 1.0,
+    "tier": 1,
+    "lean": "prove",
+    "status": "open",
+    "id": "2308.15387__03",
+    "title_md": "Question 4.5",
+    "paper": "The power of many colours",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.15387__03/"
+  },
+  "dossier_meta": {
+    "id": "2308.15387__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.15387__03/",
+    "arxiv_id": "2308.15387",
+    "tier": 1,
+    "score": 1.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "The power of many colours",
+    "catalog_title": "Question 4.5",
+    "statement_text": "What is the minimum number of edges in an $r$-vertex intersecting hypergraph if any subset of $m$ vertices needs to contain at least $t$ edges?",
+    "context_text": "One of several open questions posed by the authors in Section 4, concerned with the behaviour of $f(n,r,s)$ and/or $g(n,r,s)$."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

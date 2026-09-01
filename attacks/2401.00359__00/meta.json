@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 450,
+    "score": 2.65,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2401.00359__00",
+    "title_md": "[Conjecture 6.1](https://arxiv.org/abs/2401.00359)",
+    "paper": "Ramsey and Tur\u00e1n numbers of sparse hypergraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2401.00359__00/"
+  },
+  "dossier_meta": {
+    "id": "2401.00359__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2401.00359__00/",
+    "arxiv_id": "2401.00359",
+    "tier": 3,
+    "score": 2.65,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Ramsey and Tur\u00e1n numbers of sparse hypergraphs",
+    "catalog_title": "Conjecture 6.1",
+    "statement_text": "For a 3-uniform $n$-vertex hypergraph $H$ with $d_{1}(H)=d$, $r(H;q)\\leq\\exp^{(2)}(O_{q}(d))n$.",
+    "context_text": "For 3-uniform hypergraphs the paper's argument gives $r(H;q)\\leq\\exp^{(2)}(O_q(d\\log d))n$ in general, and removes the $\\log d$ factor when the 1-skeleton has bounded chromatic number. Conjecture 6.1 asks to remove that factor for every 3-uniform hypergraph of first skeletal degeneracy $d$."
+  },
+  "started": "2026-09-01T01:00:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
