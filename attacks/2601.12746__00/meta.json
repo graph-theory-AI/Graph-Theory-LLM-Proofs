@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 289,
+    "score": 3.1,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2601.12746__00",
+    "title_md": "[Open Question on Circular Drawing Characterisation](https://arxiv.org/abs/2601.12746)",
+    "paper": "When all directed cycles have the same weight",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2601.12746__00/"
+  },
+  "dossier_meta": {
+    "id": "2601.12746__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2601.12746__00/",
+    "arxiv_id": "2601.12746",
+    "tier": 3,
+    "score": 3.1,
+    "lean": "prove",
+    "status": "open",
+    "paper": "When all directed cycles have the same weight",
+    "catalog_title": "Open Question on Circular Drawing Characterisation",
+    "statement_text": "Is there a theorem that says ``every appropriately connected digraph $G$ contains no thing of type $X$ if and only if $G$ admits a circular drawing''?",
+    "context_text": "Thomassen's theorem gives a characterisation of circular drawings in the presence of a specific 2-vertex separator. The authors generalise this into a motivating question and, despite fully characterising weightable digraphs in the paper, explicitly state: ``We still have not come up with the characterization we hoped for of the digraphs with circular drawings.''"
+  },
+  "started": "2026-09-01T03:13:16Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 290,
+    "score": 3.1,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2410.13008__00",
+    "title_md": "[Conjecture 1.2](https://arxiv.org/abs/2410.13008)",
+    "paper": "When all directed cycles have length three",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2410.13008__00/"
+  },
+  "dossier_meta": {
+    "id": "2410.13008__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2410.13008__00/",
+    "arxiv_id": "2410.13008",
+    "tier": 3,
+    "score": 3.1,
+    "lean": "prove",
+    "status": "open",
+    "paper": "When all directed cycles have length three",
+    "catalog_title": "Conjecture 1.2",
+    "statement_text": "Let $G$ be a strongly 2-connected digraph drawn (possibly with crossings) in an annulus $\\Sigma$, such that every directed cycle has winding number one around the annulus in the natural sense. Then $G$ can be drawn in $\\Sigma$ without crossings, such that every directed cycle has winding number one.",
+    "context_text": "This conjecture arises from an analogy with Thomassen's theorem on acyclic digraphs: gluing the north and south sides of a rectangle produces an annulus, and the question becomes whether a drawing with crossings in the annulus can be continuously deformed to a crossing-free drawing while preserving winding numbers of directed cycles. The author states explicitly that 'we cannot prove it.'"
+  },
+  "started": "2026-09-01T03:10:48Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

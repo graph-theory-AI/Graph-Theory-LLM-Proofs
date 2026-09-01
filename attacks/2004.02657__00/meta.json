@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 286,
+    "score": 3.1,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2004.02657__00",
+    "title_md": "[Conjecture 1.2](https://arxiv.org/abs/2004.02657)",
+    "paper": "A universal exponent for homeomorphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2004.02657__00/"
+  },
+  "dossier_meta": {
+    "id": "2004.02657__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2004.02657__00/",
+    "arxiv_id": "2004.02657",
+    "tier": 3,
+    "score": 3.1,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "A universal exponent for homeomorphs",
+    "catalog_title": "Conjecture 1.2",
+    "statement_text": "For each 3-graph $H$, there exists $C_H > 0$ such that any 3-graph $G$ on $n$ vertices with at least $C_H n^{5/2}$ edges contains a homeomorph of $H$.",
+    "context_text": "The paper proves the exponent $3-1/5$ is universal but does not believe it to be tight. The conjectured optimal exponent $5/2 = 3 - 1/2$ is motivated by the Brown\u2013Erd\u0151s\u2013S\u00f3s result that $5/2$ is the correct exponent for the sphere $S^2$ (i.e., $K^3_4$), and by the analogy that homeomorphs in 3-graphs should appear roughly once spheres (homeomorphs of $S^2$) can be found, just as homeomorphs in graphs appear roughly once cycles (homeomorphs of $S^1$) can be found."
+  },
+  "started": "2026-09-01T03:13:22Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

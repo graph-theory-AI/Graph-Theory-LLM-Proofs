@@ -280,13 +280,14 @@ def release_reserve(amount: float) -> dict:
         return remaining(spend)
 
 
-def record_call(record: dict, reserved: float) -> dict:
+def record_call(record: dict, reserved: float, *, consume_inflight: bool = True) -> dict:
     with SpendLock():
         spend = load_spend()
         spend["spent_usd"] = round(spend["spent_usd"] + record["usd"], 6)
         spend["spent_eur"] = round(spend["spent_usd"] * spend["eur_per_usd"], 6)
-        spend["reserved_usd"] = round(max(spend.get("reserved_usd", 0.0) - reserved, 0.0), 6)
-        spend["in_flight"] = max(int(spend.get("in_flight", 0)) - 1, 0)
+        if consume_inflight:
+            spend["reserved_usd"] = round(max(spend.get("reserved_usd", 0.0) - reserved, 0.0), 6)
+            spend["in_flight"] = max(int(spend.get("in_flight", 0)) - 1, 0)
         spend["n_calls"] = spend.get("n_calls", 0) + 1
         spend["n_attacks"] = spend.get("n_attacks", 0) + 1
         rem = remaining(spend)

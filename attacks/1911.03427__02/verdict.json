@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For a single rank-two three-form pattern, polynomial removal holds whenever a prescribed color is unused and also for every two-color assignment, leaving only the rainbow three-color case among nontrivial three-form assignments.",
+  "would_publish": false,
+  "caveats": "This does not cover rainbow three-color triples, systems with four or more forms, or arbitrary forbidden families.",
+  "id": "1911.03427__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.40848,
+  "eur": 1.458896,
+  "elapsed_s": 1409.7,
+  "status": "completed",
+  "response_id": "resp_0abf6a47e3df69d0006a963cb690b887d29124024566600d6b",
+  "when": "2026-09-01T03:10:48Z"
+}

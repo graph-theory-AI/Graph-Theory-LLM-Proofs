@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 288,
+    "score": 3.1,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1902.06830__00",
+    "title_md": "[Remark 1.2 (Open Problem on Sparse Densities)](https://arxiv.org/abs/1902.06830)",
+    "paper": "Moderate deviations of subgraph counts in the Erd\u0151s-R\u00e9nyi random graphs\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1902.06830__00/"
+  },
+  "dossier_meta": {
+    "id": "1902.06830__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1902.06830__00/",
+    "arxiv_id": "1902.06830",
+    "tier": 3,
+    "score": 3.1,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Moderate deviations of subgraph counts in the Erd\u0151s-R\u00e9nyi random graphs\u2026",
+    "catalog_title": "Remark 1.2 (Open Problem on Sparse Densities)",
+    "statement_text": "The problem of finding the asymptotic rate across the whole range of sparse densities remains open.",
+    "context_text": "Theorem 1.1 establishes the asymptotic rate for moderate deviations of subgraph counts in $G(n,m)$ when $t(n)$ is bounded away from 1, with a partial extension to sparser regimes satisfying $\\max\\{t^{1/2}n^{-1/2}\\log n,\\, t^{e-3/2}\\} \\ll \\alpha_n \\ll \\min\\{t^{2e-5/2}n^{1/2},\\, t^{e+2}n^{1/2}\\}$. The authors note they initially proved results only in the dense case $t\\in(0,1)$ constant and have only partially extended to sparser regimes."
+  },
+  "started": "2026-09-01T03:13:16Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

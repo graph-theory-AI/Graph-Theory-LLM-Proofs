@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The asymptotic question remains open, but Clow's upper bound shows that any positive exponent improvement would force a corresponding exponential strengthening of the Moore bound, while any asymptotically Moore family would make the coefficient 1/4 exact.",
+  "would_publish": false,
+  "caveats": "No unbounded-girth asymptotically Moore family is known; bounded-girth examples only clarify the necessary quantifiers.",
+  "id": "2005.10849__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.962388,
+  "eur": 0.996836,
+  "elapsed_s": 1174.3,
+  "status": "completed",
+  "response_id": "resp_00ce531b3b7ddf4d006a963e87d1bc87d2bc68ba94fc6d5b67",
+  "when": "2026-09-01T03:14:37Z"
+}

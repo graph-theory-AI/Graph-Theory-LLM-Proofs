@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 287,
+    "score": 3.1,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2003.05185__01",
+    "title_md": "[MWIS in P7-free graphs](https://arxiv.org/abs/2003.05185)",
+    "paper": "Induced subgraphs of bounded treewidth and the container method",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2003.05185__01/"
+  },
+  "dossier_meta": {
+    "id": "2003.05185__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2003.05185__01/",
+    "arxiv_id": "2003.05185",
+    "tier": 3,
+    "score": 3.1,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Induced subgraphs of bounded treewidth and the container method",
+    "catalog_title": "MWIS in P7-free graphs",
+    "statement_text": "Determine the computational complexity of the Maximum Weight Independent Set problem in $P_7$-free graphs.",
+    "context_text": "Polynomial-time algorithms for MWIS in $P_5$-free graphs (2014) and $P_6$-free graphs (2019) were previously known. This paper extends tractability to the class $\\mathcal{C}$ (which contains all $P_5$-free graphs), but the authors note that the case of $P_7$-free graphs remains open."
+  },
+  "started": "2026-09-01T03:13:19Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
