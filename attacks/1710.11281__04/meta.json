@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 139,
+    "score": 3.5,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1710.11281__04",
+    "title_md": "[Question (Riemannian surfaces): supremum of cop number for geometricall\u2026](https://arxiv.org/abs/1710.11281)",
+    "paper": "Notes on Cops and Robber game on graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1710.11281__04/"
+  },
+  "dossier_meta": {
+    "id": "1710.11281__04",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1710.11281__04/",
+    "arxiv_id": "1710.11281",
+    "tier": 4,
+    "score": 3.5,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Notes on Cops and Robber game on graphs",
+    "catalog_title": "Question (Riemannian surfaces): supremum of cop number for geometrically bounded surfaces",
+    "statement_text": "What is the supremum of the cop numbers taken over all surfaces whose cut locus is at least $1$ and whose area is at most $\\alpha$? Is it bounded?",
+    "context_text": "The author asks whether restricting to Riemannian surfaces with a positive lower bound on the injectivity radius and an upper bound on total area is enough to guarantee a finite supremum for the cop number."
+  },
+  "started": "2026-09-01T05:15:36Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

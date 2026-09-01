@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general case remains open, but I determine the linear maxima exactly for C4 and both two-edge graphs and up to constants for K1,4 and 4K2.",
+  "would_publish": false,
+  "caveats": "Only special cases are resolved; novelty was not literature-checked, and one displayed bound in the supplied catalog appears mistyped.",
+  "id": "2301.13305__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.99744,
+  "eur": 1.033143,
+  "elapsed_s": 1230.9,
+  "status": "completed",
+  "response_id": "resp_02f82479017e2f09006a965b70e51887d2a42c95468f84830c",
+  "when": "2026-09-01T05:18:55Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds with r(G_n)=(1+o(1))f(n) whenever log(f(n)/n)=o(sqrt(n)), and uniformly throughout that range.",
+  "would_publish": false,
+  "caveats": "The exponential-scale regime remains open; the construction uses isolated vertices, as allowed by the stated problem.",
+  "id": "2311.01887__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.780844,
+  "eur": 0.808794,
+  "elapsed_s": 1229.1,
+  "status": "completed",
+  "response_id": "resp_063d8d030830805d006a965bdfdec087d296facdfee36738c6",
+  "when": "2026-09-01T05:20:44Z"
+}

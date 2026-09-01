@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 141,
+    "score": 3.5,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2307.15512__00",
+    "title_md": "[Conjecture 1.4](https://arxiv.org/abs/2307.15512)",
+    "paper": "Catching a robber on a random $k$-uniform hypergraph",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2307.15512__00/"
+  },
+  "dossier_meta": {
+    "id": "2307.15512__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2307.15512__00/",
+    "arxiv_id": "2307.15512",
+    "tier": 4,
+    "score": 3.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Catching a robber on a random $k$-uniform hypergraph",
+    "catalog_title": "Conjecture 1.4",
+    "statement_text": "Let $H$ be a connected $k$-graph on $n$ vertices. Then $c(H) = O\\!\\left(\\sqrt{\\dfrac{n}{k}}\\right)$.",
+    "context_text": "The authors introduce this as a generalisation of Meyniel's conjecture to $k$-uniform hypergraphs, motivated by a blow-up construction that shows $c(H) = \\Omega\\!\\left(\\sqrt{n/k}\\right)$ is achievable. They further observe that for any polynomial $k = n^\\alpha$ with $\\alpha < 1$, Conjecture 1.4 implies Meyniel's conjecture."
+  },
+  "started": "2026-09-01T05:12:38Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

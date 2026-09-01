@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds when the packing number of pairwise base-disjoint pyramids is bounded, hence in particular for t at most 3, and a bounded-rank triangle-free skeleton reduction identifies permitted pyramids as the central obstruction.",
+  "would_publish": false,
+  "caveats": "No uniform bound or counterexample is obtained; the packing result uses Theorem 1.4 of the supplied source, and post-catalog literature was not independently verified.",
+  "id": "2203.06775__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.168748,
+  "eur": 1.210583,
+  "elapsed_s": 1412.0,
+  "status": "completed",
+  "response_id": "resp_007eca290699cb67006a9659f49ee887d29647fff768aa9d74",
+  "when": "2026-09-01T05:15:36Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 134,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1802.03727__00",
+    "title_md": "[Conjecture 1.3](https://arxiv.org/abs/1802.03727)",
+    "paper": "Separation choosability and dense bipartite induced subgraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1802.03727__00/"
+  },
+  "dossier_meta": {
+    "id": "1802.03727__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1802.03727__00/",
+    "arxiv_id": "1802.03727",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Separation choosability and dense bipartite induced subgraphs",
+    "catalog_title": "Conjecture 1.3",
+    "statement_text": "There is a function $x_1(d)$ that satisfies $x_1(d) \\to \\infty$ as $d \\to \\infty$ such that $\\mathrm{ch}_{\\mathrm{sep}}(G) \\geq x_1(d)$ for any graph $G$ with minimum degree $d$.",
+    "context_text": "The authors prove Theorem 1.2 that separation choosability grows logarithmically in minimum degree for bipartite graphs, and ask whether the bipartiteness assumption can be dropped. The difficulty is that a bad list assignment with maximum separation on a graph does not necessarily retain maximum separation when edges are added, so the standard bipartite-subgraph reduction used for ordinary choosability fails."
+  },
+  "started": "2026-09-01T05:20:11Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

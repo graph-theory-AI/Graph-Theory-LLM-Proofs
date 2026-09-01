@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 136,
+    "score": 3.5,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1806.09726__01",
+    "title_md": "[Conjecture 9](https://arxiv.org/abs/1806.09726)",
+    "paper": "Online Ramsey Numbers and the Subgraph Query Problem",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1806.09726__01/"
+  },
+  "dossier_meta": {
+    "id": "1806.09726__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1806.09726__01/",
+    "arxiv_id": "1806.09726",
+    "tier": 4,
+    "score": 3.5,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Online Ramsey Numbers and the Subgraph Query Problem",
+    "catalog_title": "Conjecture 9",
+    "statement_text": "For any $m \\geq 4$, $$f(K_m, p) = 2^{o(m)} p^{-\\frac{2}{3}m + c_m},$$ where $c_m$ is a constant depending on $m \\bmod 3$ (exact case formula garbled in PDF extraction).",
+    "context_text": "Here $f(K_m, p)$ is the minimum number of queries needed to find a copy of $K_m$ with probability at least $1/2$ in the Subgraph Query Game on $G(\\mathbb{Z}, p)$. The upper bound in this conjecture is proved in Section 5.2, and together with Theorem 12 (the matching lower bound) it is fully verified for $m = 4$ and $m = 5$."
+  },
+  "started": "2026-09-01T05:18:23Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

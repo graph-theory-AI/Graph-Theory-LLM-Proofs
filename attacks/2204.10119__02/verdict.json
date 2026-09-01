@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Any counterexample must have both bipartition classes of size at least seven and must contain at least 63 distinct four-cycles, with stronger quantitative restrictions proved below.",
+  "would_publish": false,
+  "caveats": "The argument does not control the remaining C4-rich configurations and therefore neither proves nor disproves the conjecture.",
+  "id": "2204.10119__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.280588,
+  "eur": 1.326426,
+  "elapsed_s": 1344.8,
+  "status": "completed",
+  "response_id": "resp_0f2b64654db90d1f006a9659857cfc87d2b84bf67b188509b7",
+  "when": "2026-09-01T05:12:38Z"
+}

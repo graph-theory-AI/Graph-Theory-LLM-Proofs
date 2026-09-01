@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 135,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "disprove",
+    "status": "open",
+    "id": "1703.07871__00",
+    "title_md": "[Conjecture 3](https://arxiv.org/abs/1703.07871)",
+    "paper": "Burling graphs, chromatic number, and orthogonal tree-decompositions",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1703.07871__00/"
+  },
+  "dossier_meta": {
+    "id": "1703.07871__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1703.07871__00/",
+    "arxiv_id": "1703.07871",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Burling graphs, chromatic number, and orthogonal tree-decompositions",
+    "catalog_title": "Conjecture 3",
+    "statement_text": "There exists a function $f : \\mathbb{N} \\to \\mathbb{N}$ such that $\\chi(G) \\leq f(k)$ for every $k \\geq 1$ and every graph $G$ admitting a spaghetti tree-decomposition $(T, \\{B_t\\}_{t \\in V(T)})$ and a path-decomposition $(P, \\{B_p\\}_{p \\in V(P)})$ such that $|B_t \\cap B_p| \\leq k$ for every $t \\in V(T)$ and $p \\in V(P)$.",
+    "context_text": "The authors conclude the paper with this conjecture as an open problem in the spirit of exploring how the Asplund\u2013Gr\u00fcnbaum result could be extended. A spaghetti tree-decomposition is a tree-decomposition rooted at some vertex $r$ such that, orienting edges away from $r$, the subtree induced by bags containing any fixed vertex $v$ forms a directed path. The authors remark that the conjecture could even hold with two spaghetti tree-decompositions."
+  },
+  "started": "2026-09-01T05:18:55Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

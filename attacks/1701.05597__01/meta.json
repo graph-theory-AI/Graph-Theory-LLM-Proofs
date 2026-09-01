@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 133,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1701.05597__01",
+    "title_md": "[Conjecture 1.10](https://arxiv.org/abs/1701.05597)",
+    "paper": "Induced subgraphs of graphs with large chromatic number. VI. Banana tre\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1701.05597__01/"
+  },
+  "dossier_meta": {
+    "id": "1701.05597__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1701.05597__01/",
+    "arxiv_id": "1701.05597",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Induced subgraphs of graphs with large chromatic number. VI. Banana tre\u2026",
+    "catalog_title": "Conjecture 1.10",
+    "statement_text": "For all graphs $J$ and for all integers $\\tau \\geq 0$, there exists $c$ such that if $G$ is a graph with chromatic number more than $c$, then either some induced subgraph of $G$ is a subdivision of $J$ or $\\chi_2(G) > \\tau$.",
+    "context_text": "This conjecture is shown to be equivalent to Conjecture 1.8 (every multigraph is widespread), using the result from [3] that for all $\\rho \\geq 2$ and every multigraph $J$, every $\\rho$-controlled class of $J$-subdivision-free graphs is $2$-controlled. The authors present 1.10 as a nicer reformulation of 1.8, though they do not use it directly in the paper."
+  },
+  "started": "2026-09-01T05:20:45Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The problem remains open, but K1 and K2 recover the complete induced three-vertex profile, their behavior is classified exactly on forests, and shallow coefficients of any fixed H-family cannot determine a typical graph.",
+  "would_publish": false,
+  "caveats": "No finite family is shown to work or fail; the entropy obstruction applies only to the first o(n/sqrt(log n)) coefficients below the leading terms.",
+  "id": "2402.04237__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.003644,
+  "eur": 1.039569,
+  "elapsed_s": 1163.0,
+  "status": "completed",
+  "response_id": "resp_0dca14e87f7fba4e006a965c00af4487d2b58706507df451e8",
+  "when": "2026-09-01T05:20:11Z"
+}

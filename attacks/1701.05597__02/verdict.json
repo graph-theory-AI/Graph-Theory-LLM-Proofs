@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full characterisation remains open, but for the diamond (equivalently, under the usual convention, the three-edge dipole) the forbidden class is exactly the graphs whose blocks are cliques or chordless cycles, giving the sharp bound \u03c7\u2264max{\u03ba,3}, while known ISK4-free Burling graphs give a general necessary obstruction.",
+  "would_publish": false,
+  "caveats": "This treats induced subdivisions and one target exactly; the K4 obstruction uses an established external construction, and no general sufficiency characterisation is obtained.",
+  "id": "1701.05597__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.04792,
+  "eur": 1.08543,
+  "elapsed_s": 1454.6,
+  "status": "completed",
+  "response_id": "resp_0486d0970ac3b4ca006a9658f0b3ac87d29e6ea7053d8fe453",
+  "when": "2026-09-01T05:11:59Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Fixed vertex blow-ups preserve the power of q in a single-exponential Ramsey number, and every non-tripartite 3-graph admitting a vertex set meeting each edge exactly once has exponent 1, ruling out these natural routes to exponents at least 2.",
+  "would_publish": false,
+  "caveats": "No construction for ell at least 3 is obtained, and the blow-up observations may be implicit in standard Ramsey arguments.",
+  "id": "2312.13965__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.964732,
+  "eur": 0.999264,
+  "elapsed_s": 990.2,
+  "status": "completed",
+  "response_id": "resp_0b73094d108346f2006a965c21d9d487d29862527ccb347019",
+  "when": "2026-09-01T05:17:51Z"
+}

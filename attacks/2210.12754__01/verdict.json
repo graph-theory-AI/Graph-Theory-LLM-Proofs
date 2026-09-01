@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For fixed p I prove sharp whp orders n log n for induced-star-free graphs and n^(3/2)(log n)^(1/2) for induced-K_{2,t}-free graphs with t at least 3, while the arbitrary hereditary case remains open.",
+  "would_publish": false,
+  "caveats": "Only special complete-bipartite exclusions are settled; induced C4 retains a logarithmic gap, general bipartite exclusions remain open, and novelty relative to arXiv:2405.09486 is unchecked.",
+  "id": "2210.12754__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.986816,
+  "eur": 1.022139,
+  "elapsed_s": 1017.6,
+  "status": "completed",
+  "response_id": "resp_0e1c0b20c171ca96006a965afef77887d295d57c87dd072ce1",
+  "when": "2026-09-01T05:13:28Z"
+}

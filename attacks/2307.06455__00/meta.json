@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 140,
+    "score": 3.5,
+    "tier": 4,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2307.06455__00",
+    "title_md": "[Conjecture 1.8](https://arxiv.org/abs/2307.06455)",
+    "paper": "Induced subgraph density. IV. New graphs with the Erd\u0151s-Hajnal property",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2307.06455__00/"
+  },
+  "dossier_meta": {
+    "id": "2307.06455__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2307.06455__00/",
+    "arxiv_id": "2307.06455",
+    "tier": 4,
+    "score": 3.5,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Induced subgraph density. IV. New graphs with the Erd\u0151s-Hajnal property",
+    "catalog_title": "Conjecture 1.8",
+    "statement_text": "For every graph $H$, there exists $d>0$ such that for every $\\varepsilon\\in(0,\\frac{1}{2})$ and every graph $G$ with $\\mathrm{ind}_{H}(G)\\leq(\\varepsilon^{d}\\lvert G\\rvert)^{\\lvert H\\rvert}$, there is an $\\varepsilon$-restricted subset of $V(G)$ with size at least $\\varepsilon^{d}\\lvert G\\rvert$.",
+    "context_text": "This 'polynomial Nikiforov' statement, introduced without external attribution, unifies Theorem 1.6 and Conjecture 1.7. A graph $H$ satisfying it is called viral; Buci\u0107, Fox, and Pham [4] proved that having the Erd\u0151s-Hajnal property is equivalent to being viral."
+  },
+  "started": "2026-09-01T05:13:29Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

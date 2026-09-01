@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but the desired exponential bound holds for families of bounded dual-laminarity and for shifted families, while bounded pairwise intersections give a stronger polynomial bound.",
+  "would_publish": false,
+  "caveats": "These structural hypotheses do not follow from bounded VC-dimension, and the unrestricted VC-dimension-2 case remains open.",
+  "id": "2103.10497__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.237988,
+  "eur": 1.282302,
+  "elapsed_s": 1315.8,
+  "status": "completed",
+  "response_id": "resp_0db1d5ea48b1103f006a965ac74b0487d2974ab174202a15b2",
+  "when": "2026-09-01T05:17:30Z"
+}
