@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 230,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1905.12142__00",
+    "title_md": "[Conjecture 1.12](https://arxiv.org/abs/1905.12142)",
+    "paper": "Combinatorial anti-concentration inequalities, with applications",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1905.12142__00/"
+  },
+  "dossier_meta": {
+    "id": "1905.12142__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1905.12142__00/",
+    "arxiv_id": "1905.12142",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Combinatorial anti-concentration inequalities, with applications",
+    "catalog_title": "Conjecture 1.12",
+    "statement_text": "Fix $p \\in (0,1)$ and fix a graph $H$ with $h$ non-isolated vertices. Let $G \\in G(n,p)$. Then for any $x \\in \\mathbb{N}$, $$\\Pr(X_H = x) = O\\!\\left(1/\\sqrt{\\mathrm{Var}(X_H)}\\right) = O\\!\\left(1/n^{h-1}\\right).$$",
+    "context_text": "The authors establish via Corollary 1.11 that $\\Pr(X_H = x) = O(1/\\sqrt{r})$ where $r$ is the number of edge-disjoint copies of $H$ in $G$, giving $O(1/n)$ in $G(n,p)$, but believe this is far from optimal. The conjectured bound matches the Gaussian scale and is best-possible given the known CLT for $X_H$. Theorem 1.14 confirms the conjecture for cliques $H = K_h$."
+  },
+  "started": "2026-09-01T03:53:57Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

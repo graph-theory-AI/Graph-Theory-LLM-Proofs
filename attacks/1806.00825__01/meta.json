@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 231,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "partial",
+    "id": "1806.00825__01",
+    "title_md": "[Conjecture 12](https://arxiv.org/abs/1806.00825)",
+    "paper": "Short rainbow cycles in graphs and matroids",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1806.00825__01/"
+  },
+  "dossier_meta": {
+    "id": "1806.00825__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1806.00825__01/",
+    "arxiv_id": "1806.00825",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "balanced",
+    "status": "partial",
+    "paper": "Short rainbow cycles in graphs and matroids",
+    "catalog_title": "Conjecture 12",
+    "statement_text": "Let $M$ be a simple rank-$(n-1)$ matroid and $c$ be a colouring of $E(M)$ with $n$ colours, where each colour class has size at least $2$. Then $M$ contains a rainbow circuit of size at most $\\lceil n/2 \\rceil$.",
+    "context_text": "Proposed as the natural matroid analogue of Theorem 5. The authors note it holds for graphic matroids (by Theorem 5) and prove it for cographic matroids (Theorem 13), but observe it fails for general binary matroids because the uniform matroid $U_{n-1,m}$ contains no circuits of size less than $n$."
+  },
+  "started": "2026-09-01T03:52:15Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

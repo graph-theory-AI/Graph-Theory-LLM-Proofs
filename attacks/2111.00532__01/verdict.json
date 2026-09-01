@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "Under the standard fixed-position meaning of an ordered transversal copy, every finite ordered graph H has the requested property, with exponent c=1/(|H|-1).",
+  "would_publish": false,
+  "caveats": "The catalog statement is probably missing a stronger requirement, since the literal formulation has the elementary proof below.",
+  "id": "2111.00532__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.368972,
+  "eur": 0.382179,
+  "elapsed_s": 502.4,
+  "status": "completed",
+  "response_id": "resp_0fc1d1cc447d9dec006a964b0c4e2c87d290344e6e8b2b1e9b",
+  "when": "2026-09-01T03:56:50Z"
+}

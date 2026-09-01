@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 225,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1603.07056__00",
+    "title_md": "[Characterization of Social Graphs](https://arxiv.org/abs/1603.07056)",
+    "paper": "On the number of cliques in graphs with a forbidden minor",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1603.07056__00/"
+  },
+  "dossier_meta": {
+    "id": "1603.07056__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1603.07056__00/",
+    "arxiv_id": "1603.07056",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On the number of cliques in graphs with a forbidden minor",
+    "catalog_title": "Characterization of Social Graphs",
+    "statement_text": "Characterize social graphs, i.e., graphs $G$ such that contracting any edge of $G$ does not increase the number of cliques of $G$.",
+    "context_text": "Social graphs are introduced as a key structural tool in the proof of Theorem 1.2: the authors show that any very dense social graph is, apart from a small number of vertices, the complement of a (not necessarily perfect) matching. The paper explicitly notes that a full characterization of social graphs appears to be a challenging problem."
+  },
+  "started": "2026-09-01T04:00:38Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

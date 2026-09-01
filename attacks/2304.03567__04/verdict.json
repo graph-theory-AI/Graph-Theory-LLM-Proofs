@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "A cyclic chain of directed three-way diamonds on 3m vertices has m vertex pairs such that any ordering forward-connects at most one of them.",
+  "would_publish": false,
+  "caveats": "This disproves the statement exactly as extracted; the source definition should be checked for an omitted qualification.",
+  "id": "2304.03567__04",
+  "model": "gpt-5.6-sol",
+  "usd": 0.935364,
+  "eur": 0.968845,
+  "elapsed_s": 1296.5,
+  "status": "completed",
+  "response_id": "resp_04b9d2aa40ee70f0006a9646df49a487d2a10d5e61e87f4940",
+  "when": "2026-09-01T03:52:15Z"
+}

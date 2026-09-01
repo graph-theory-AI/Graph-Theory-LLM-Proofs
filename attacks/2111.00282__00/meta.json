@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 229,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2111.00282__00",
+    "title_md": "[Open Challenge: Efficient Approximation of Twin-Width for Unordered Gra\u2026](https://arxiv.org/abs/2111.00282)",
+    "paper": "Twin-width VI: the lens of contraction sequences",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2111.00282__00/"
+  },
+  "dossier_meta": {
+    "id": "2111.00282__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2111.00282__00/",
+    "arxiv_id": "2111.00282",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Twin-width VI: the lens of contraction sequences",
+    "catalog_title": "Open Challenge: Efficient Approximation of Twin-Width for Unordered Graphs",
+    "statement_text": "Efficiently approximating twin-width (that is, returning an $f(d)$-sequence when the twin-width of the input is at most $d$) remains an open challenge for unordered graphs.",
+    "context_text": "The authors note that efficient approximation of twin-width has been achieved for classes of totally ordered binary structures and for all mentioned classes of bounded twin-width (bounded tree-width, proper minor-closed, hereditary subclasses of permutation graphs, etc.), but the problem is unresolved for general unordered graphs. This open challenge is stated in the introduction as a key missing piece in the twin-width landscape."
+  },
+  "started": "2026-09-01T03:56:33Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

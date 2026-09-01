@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but it reduces to 5-colorable toroidal triangulations and holds when the maximum average degree is at most 5, in particular when each vertex lies in at most three triangles.",
+  "would_publish": false,
+  "caveats": "The argument does not handle triangle-dense critical cores or general toroidal triangulations, which contain the hard cases.",
+  "id": "2407.18800__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.140816,
+  "eur": 1.181651,
+  "elapsed_s": 1585.0,
+  "status": "completed",
+  "response_id": "resp_07327236885d8168006a9647c6e26087d2b65b2bd1d96c5fc8",
+  "when": "2026-09-01T04:00:55Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 232,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1608.03040__05",
+    "title_md": "[Open Problem 5](https://arxiv.org/abs/1608.03040)",
+    "paper": "Majority Colourings of Digraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1608.03040__05/"
+  },
+  "dossier_meta": {
+    "id": "1608.03040__05",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1608.03040__05/",
+    "arxiv_id": "1608.03040",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Majority Colourings of Digraphs",
+    "catalog_title": "Open Problem 5",
+    "statement_text": "Is there a characterisation of digraphs that have a majority 2-colouring, or a polynomial-time algorithm to recognise such digraphs?",
+    "context_text": "Majority 2-colourability is not closed under taking induced subdigraphs (an example with four vertices is given in the introduction), making a simple hereditary characterisation impossible; no structural characterisation or efficient recognition algorithm is known."
+  },
+  "started": "2026-09-01T03:52:15Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

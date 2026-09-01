@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but it holds for tournaments admitting a homogeneous partition into at most n^{9/16+o(1)} transitive blocks.",
+  "would_publish": false,
+  "caveats": "The homogeneous-block hypothesis is restrictive; there is no improved exponent for arbitrary tournaments, and the literature novelty of the composition lemma was not checked.",
+  "id": "1912.07722__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.825912,
+  "eur": 0.855475,
+  "elapsed_s": 1445.4,
+  "status": "completed",
+  "response_id": "resp_0aacf6fcd9c85d6b006a96476a27b087d29cde064d9e5f85f5",
+  "when": "2026-09-01T03:57:03Z"
+}

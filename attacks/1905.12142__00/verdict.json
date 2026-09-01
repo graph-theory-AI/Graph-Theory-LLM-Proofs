@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The universal conjecture is false: for H = 2K2 there are x_n with Pr(X_H = x_n) = Omega(n^{-5/2}), whereas Var(X_H) = Theta(n^6), so the conjecture would require O(n^{-3}).",
+  "would_publish": false,
+  "caveats": "The counterexample below is self-contained for ordinary non-induced subgraph counts; the positive connected case is cited rather than reproved.",
+  "id": "1905.12142__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.386628,
+  "eur": 0.400467,
+  "elapsed_s": 399.5,
+  "status": "completed",
+  "response_id": "resp_07496c4408287906006a964c561f6c87d2a4ab625aa4c3cf48",
+  "when": "2026-09-01T04:00:37Z"
+}

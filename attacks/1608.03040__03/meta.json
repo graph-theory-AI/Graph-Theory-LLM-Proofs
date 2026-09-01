@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 224,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1608.03040__03",
+    "title_md": "[Open Problem 2](https://arxiv.org/abs/1608.03040)",
+    "paper": "Majority Colourings of Digraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1608.03040__03/"
+  },
+  "dossier_meta": {
+    "id": "1608.03040__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1608.03040__03/",
+    "arxiv_id": "1608.03040",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Majority Colourings of Digraphs",
+    "catalog_title": "Open Problem 2",
+    "statement_text": "Does every tournament have a majority 3-colouring?",
+    "context_text": "Ilya Bogdanov proved (in response to the original MathOverflow question [7]) that tournaments admit a majority colouring with a bounded number of colours, but whether 3 colours suffice for all tournaments is open."
+  },
+  "started": "2026-09-01T04:00:56Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

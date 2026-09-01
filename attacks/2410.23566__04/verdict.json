@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but every admissible constant must satisfy C at least 2, one-sided extensions satisfy u(D) at most 2^k u(F), and every extension reduces to a fully mixed core.",
+  "would_publish": false,
+  "caveats": "Assumes n at least 2 and the standard definition that added universal vertices are universal in the whole digraph; the Corollary 25 consequence retains its large-n hypothesis.",
+  "id": "2410.23566__04",
+  "model": "gpt-5.6-sol",
+  "usd": 0.855872,
+  "eur": 0.886508,
+  "elapsed_s": 1271.1,
+  "status": "completed",
+  "response_id": "resp_0140ed19601c092b006a9647f9c6c087d2b44ab14b40cfee97",
+  "when": "2026-09-01T03:56:32Z"
+}

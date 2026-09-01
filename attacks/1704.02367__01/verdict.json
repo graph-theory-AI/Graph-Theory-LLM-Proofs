@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Polynomial removal bounds are proved for the genuinely two-dimensional family of nonsingular fixed-size binary patterns, for every finite one-row or one-column family, and for a monochromatic-anchor class, but not for arbitrary finite families.",
+  "would_publish": false,
+  "caveats": "Only structured finite families are handled; no polynomial or exponential bound is obtained for arbitrary mixed two-dimensional families, and novelty was not checked.",
+  "id": "1704.02367__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.027896,
+  "eur": 1.064689,
+  "elapsed_s": 1068.1,
+  "status": "completed",
+  "response_id": "resp_0500f7084fcfbce8006a964926cc6887d2a3f94b0b6a2b3ca9",
+  "when": "2026-09-01T03:58:10Z"
+}

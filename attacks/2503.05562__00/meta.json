@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 227,
+    "score": 3.2,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2503.05562__00",
+    "title_md": "[Question 1.1](https://arxiv.org/abs/2503.05562)",
+    "paper": "On graph classes with constant domination-packing ratio",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2503.05562__00/"
+  },
+  "dossier_meta": {
+    "id": "2503.05562__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2503.05562__00/",
+    "arxiv_id": "2503.05562",
+    "tier": 3,
+    "score": 3.2,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "On graph classes with constant domination-packing ratio",
+    "catalog_title": "Question 1.1",
+    "statement_text": "Given a graph class $\\mathcal{G}$, is there a constant $c_{\\mathcal{G}}$ such that $$\\frac{\\gamma(G)}{\\rho(G)}\\leqslant c_{\\mathcal{G}}\\quad\\text{ for each }\\quad G\\in\\mathcal{G}~{}~{}?$$",
+    "context_text": "The paper studies the ratio between the dominating number $\\gamma(G)$ and the packing number $\\rho(G)$ of a graph $G$. A positive answer immediately gives the bound $c_{\\mathcal{G}}$ on the integrality gap of both the dominating and the packing integer programs for any $G\\in\\mathcal{G}$."
+  },
+  "started": "2026-09-01T03:57:03Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

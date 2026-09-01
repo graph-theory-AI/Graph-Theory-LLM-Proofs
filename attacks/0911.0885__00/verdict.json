@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The final source version records that Dvo\u0159\u00e1k and Lidick\u00fd proved Conjecture 1.5, while its Theorem 5.1 proves that Conjecture 1.5 implies Conjecture 1.4.",
+  "would_publish": false,
+  "caveats": "This is a literature-status correction rather than an independent proof; the supplied material does not reproduce the proof or an explicit value of d.",
+  "id": "0911.0885__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.136292,
+  "eur": 0.141171,
+  "elapsed_s": 299.2,
+  "status": "completed",
+  "response_id": "resp_02dca787555766de006a964ac3e3c887d290eaaf54da2eae85",
+  "when": "2026-09-01T03:52:14Z"
+}
