@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 301,
+    "score": 3.05,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "partial",
+    "id": "2009.07840__00",
+    "title_md": "[Informal Conjecture (\u00a71.2, Theorem 1.1 remarks)](https://arxiv.org/abs/2009.07840)",
+    "paper": "Typical and Extremal Aspects of Friends-and-Strangers Graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2009.07840__00/"
+  },
+  "dossier_meta": {
+    "id": "2009.07840__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2009.07840__00/",
+    "arxiv_id": "2009.07840",
+    "tier": 3,
+    "score": 3.05,
+    "lean": "balanced",
+    "status": "partial",
+    "paper": "Typical and Extremal Aspects of Friends-and-Strangers Graphs",
+    "catalog_title": "Informal Conjecture (\u00a71.2, Theorem 1.1 remarks)",
+    "statement_text": "The threshold for $\\mathrm{FS}(X, Y)$ to be connected when $X, Y \\sim G(n,p)$ is determined by the isolated-vertex threshold: ``it seems that (as in the usual case of a binomial random graph) this local obstruction to connectedness tells essentially the whole story.''",
+    "context_text": "Theorem 1.1 establishes a lower bound $p \\leq (2^{-1/2}-\\varepsilon)/n^{1/2}$ arising from isolated vertices and an upper bound $p \\geq \\exp(2(\\log n)^{2/3})/n^{1/2}$ for the high-probability connectivity threshold of $\\mathrm{FS}(X,Y)$. The authors suggest the gap between these bounds is an artifact of the proof method and that the two thresholds should coincide up to lower-order factors."
+  },
+  "started": "2026-09-01T03:00:05Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

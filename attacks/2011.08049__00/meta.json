@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 306,
+    "score": 3.05,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2011.08049__00",
+    "title_md": "[Open Problem (Spherical Density Regime)](https://arxiv.org/abs/2011.08049)",
+    "paper": "Efficient polynomial-time approximation scheme for the genus of dense g\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2011.08049__00/"
+  },
+  "dossier_meta": {
+    "id": "2011.08049__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2011.08049__00/",
+    "arxiv_id": "2011.08049",
+    "tier": 3,
+    "score": 3.05,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Efficient polynomial-time approximation scheme for the genus of dense g\u2026",
+    "catalog_title": "Open Problem (Spherical Density Regime)",
+    "statement_text": "Determine whether efficient constant-factor approximation algorithms exist for the genus of graphs with average degree at most 6 (spherical density regime), or prove that approximating the genus in this regime is hard.",
+    "context_text": "The authors partition the genus approximation problem into three density regimes. The spherical density regime (average degree $\\leq 6$) is described as 'probably most interesting'; no efficient constant-factor approximation algorithm is known for it, and the authors identify resolving this as 'the major open problem'. Conjecture 1.1 (APX-hardness for cubic graphs) is the leading candidate resolution."
+  },
+  "started": "2026-09-01T02:56:09Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

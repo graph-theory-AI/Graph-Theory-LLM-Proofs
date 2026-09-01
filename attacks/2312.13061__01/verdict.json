@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "medium",
+  "one_line": "For \u2113=6, a threefold-subdivided grid with a length-three boundary ear gives counterexamples for every d, using the viable precoloring (1,2,3,4,3,2).",
+  "would_publish": false,
+  "caveats": "The excerpt omits the formal definition of viable; the argument uses the signed weak-dual balance definition from the arXiv source.",
+  "id": "2312.13061__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.483304,
+  "eur": 1.536399,
+  "elapsed_s": 2068.8,
+  "status": "completed",
+  "response_id": "resp_0f8c8ba791c2b3bf006a9635bdc01087d29fc0db54753f3e50",
+  "when": "2026-09-01T02:52:02Z"
+}

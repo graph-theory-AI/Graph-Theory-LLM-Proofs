@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For d=2 the answer is affirmative for every finitely defined hereditary class, and any counterexample must contain every forest and have infinitely many minimal forbidden induced graphs of unbounded girth.",
+  "would_publish": false,
+  "caveats": "The general infinitely based case, including the full d=2 question, remains unresolved.",
+  "id": "2202.05557__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.023988,
+  "eur": 1.060641,
+  "elapsed_s": 1179.7,
+  "status": "completed",
+  "response_id": "resp_073586f62af86f0f006a963a2dc7f087d295e9454f51bf018b",
+  "when": "2026-09-01T02:56:08Z"
+}

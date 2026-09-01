@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The unrestricted threshold problem remains unresolved, but exact fixed excess is polynomial-time, and the threshold problem is polynomial on graphs with bounded geodesic multiplicity, bounded induced-cycle length, or cactus structure.",
+  "would_publish": false,
+  "caveats": "No polynomial algorithm or NP-hardness proof is obtained for unrestricted graphs, and the literature novelty of the partial results has not been checked.",
+  "id": "1904.12273__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.15826,
+  "eur": 1.19972,
+  "elapsed_s": 1279.9,
+  "status": "completed",
+  "response_id": "resp_0875b7b745836ef7006a9639877ea887d283baccb42a2a3eb7",
+  "when": "2026-09-01T02:55:03Z"
+}

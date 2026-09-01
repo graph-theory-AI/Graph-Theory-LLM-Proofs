@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 311,
+    "score": 3.0,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2401.00359__03",
+    "title_md": "[Conjecture 6.5](https://arxiv.org/abs/2401.00359)",
+    "paper": "Ramsey and Tur\u00e1n numbers of sparse hypergraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2401.00359__03/"
+  },
+  "dossier_meta": {
+    "id": "2401.00359__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2401.00359__03/",
+    "arxiv_id": "2401.00359",
+    "tier": 3,
+    "score": 3.0,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Ramsey and Tur\u00e1n numbers of sparse hypergraphs",
+    "catalog_title": "Conjecture 6.5",
+    "statement_text": "There is a constant $c>0$ such that for all $d\\geq 4$ the following holds. If $G$ is a (not necessarily linear) 3-uniform hypergraph on $n$ vertices with at least $n^{3-c/d}$ edges, then there is a linear subhypergraph of $G$ with $d$ vertices and at least $d^{2}/100$ edges.",
+    "context_text": "Proving that $\\mathrm{ex}(n,H_{L})\\leq O(n^{3-c/d})$ would require finding $H_{L}$ \u2014 a linear hypergraph \u2014 in any sufficiently dense host. The current barrier is that the techniques only find $K^{(3)}_{d,d,d}$, a non-linear structure. If Conjecture 6.5 holds, finding any dense enough linear subhypergraph (with quadratically many edges) would be the key missing step. The conjecture is known without the linearity constraint, since a hypergraph K\u0151v\u00e1ri\u2013S\u00f3s\u2013Tur\u00e1n argument gives $K^{(3)}_{1,(d-1)/2,(d-1)/2}$ in any 3-uniform hypergraph with $n^{3-c/d}$ edges."
+  },
+  "started": "2026-09-01T02:52:02Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

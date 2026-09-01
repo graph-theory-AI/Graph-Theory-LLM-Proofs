@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 302,
+    "score": 3.05,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1812.09752__00",
+    "title_md": "[Problem 1.4](https://arxiv.org/abs/1812.09752)",
+    "paper": "The hat guessing number of graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.09752__00/"
+  },
+  "dossier_meta": {
+    "id": "1812.09752__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.09752__00/",
+    "arxiv_id": "1812.09752",
+    "tier": 3,
+    "score": 3.05,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "The hat guessing number of graphs",
+    "catalog_title": "Problem 1.4",
+    "statement_text": "Do there exist functions $f_i : \\mathbb{N} \\to \\mathbb{N}$, $1 \\leq i \\leq 3$ such that (i) if the maximum degree of $G$ is $\\Delta$, then $HG(G) \\leq f_1(\\Delta)$; (ii) if $G$ is $d$-degenerate, then $HG(G) \\leq f_2(d)$; (iii) if the minimum degree of $G$ is $\\delta$, then $HG(G) \\geq f_3(\\delta)$, and $f_3(\\delta)$ tends to infinity when $\\delta$ tends to infinity.",
+    "context_text": "The authors seek to understand how basic graph parameters control the hat guessing number. The existence of $f_1$ is already known via the Lov\u00e1sz Local Lemma ($HG(G) < e^\\Delta$), but whether $f_2$ (degeneracy bound) or $f_3$ (minimum-degree lower bound) exist is unclear. Theorems 1.6 and 1.8 provide partial progress toward part (ii)."
+  },
+  "started": "2026-09-01T02:58:30Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

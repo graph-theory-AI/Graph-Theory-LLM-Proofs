@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The unrestricted fixed-t problem remains open, but fixed-t NP-hardness contradicts ETH under the reported quasi-polynomial algorithm, and rigorous polynomial algorithms follow for logarithmic 3-core degree, bounded planar-deletion number, and a broader clique-cutset decomposition class.",
+  "would_publish": false,
+  "caveats": "No unrestricted case t >= 8 is settled; the quasi-polynomial upper bound and current literature status are taken from the supplied review.",
+  "id": "1803.05396__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.988156,
+  "eur": 1.023527,
+  "elapsed_s": 1074.7,
+  "status": "completed",
+  "response_id": "resp_0a54a132d8bed5ee006a963af71e1487d2804efede633e94f4",
+  "when": "2026-09-01T02:57:45Z"
+}

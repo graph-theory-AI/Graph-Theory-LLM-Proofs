@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A full regularity-free proof is not obtained, but exact reductions to ordinary clique removal work for interval-transversal and common-safe-color patterns, while monotone ordered stars and order-spined graphs admit regularity-free bounds.",
+  "would_publish": false,
+  "caveats": "The arbitrary induced colored case with no unused color, particularly for unbounded forbidden families, remains unresolved.",
+  "id": "1704.02367__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.236404,
+  "eur": 1.280661,
+  "elapsed_s": 1368.0,
+  "status": "completed",
+  "response_id": "resp_092db76938b81fb9006a963878fe4087d2864e8c1d1eba1087",
+  "when": "2026-09-01T02:52:00Z"
+}

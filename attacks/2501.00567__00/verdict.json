@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A Perron-weight multiscale decomposition combined with Molloy's list-coloring theorem gives the universal bound \u03c7(G) \u2264 (e+o(1))\u03c1(G)ln ln \u03c1(G)/ln \u03c1(G), and proves the conjecture for asymptotically regular graphs.",
+  "would_publish": false,
+  "caveats": "An extra factor e ln ln \u03c1 remains; novelty of this partial bound has not been literature-checked.",
+  "id": "2501.00567__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.756436,
+  "eur": 0.783512,
+  "elapsed_s": 1611.0,
+  "status": "completed",
+  "response_id": "resp_01206c45275dc44e006a9637c33ec087d299ae914d76a812b1",
+  "when": "2026-09-01T02:53:01Z"
+}

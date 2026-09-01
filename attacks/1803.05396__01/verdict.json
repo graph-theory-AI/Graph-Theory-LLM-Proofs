@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general question remains open, but for every t >= 5 it is equivalent to its restriction to prime, clique-cutset-free diameter-two graphs, while logarithmic prime-quotient degree is polynomial-time solvable.",
+  "would_publish": false,
+  "caveats": "No general polynomial-time algorithm is obtained, and the novelty of the reduction lemmas has not been checked against the complete literature.",
+  "id": "1803.05396__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.978964,
+  "eur": 1.014006,
+  "elapsed_s": 990.1,
+  "status": "completed",
+  "response_id": "resp_0fb63ad38cd5bbac006a963ac29b9887d2afc3f3ed8b656325",
+  "when": "2026-09-01T02:55:28Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 312,
+    "score": 3.0,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2204.10119__00",
+    "title_md": "[Conjecture 1.3](https://arxiv.org/abs/2204.10119)",
+    "paper": "Bipartite graphs with no $K_6$ minor",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.10119__00/"
+  },
+  "dossier_meta": {
+    "id": "2204.10119__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.10119__00/",
+    "arxiv_id": "2204.10119",
+    "tier": 3,
+    "score": 3.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Bipartite graphs with no $K_6$ minor",
+    "catalog_title": "Conjecture 1.3",
+    "statement_text": "Every non-null 6-regular graph has a $K_6$ minor.",
+    "context_text": "The authors have found $K_6$-minor-free graphs with minimum degree six and maximum degree at most nine, and $K_6$-minor-free graphs with minimum degree five, maximum degree seven, and average degree arbitrarily close to $98/15$. Conjecture 1.3 asks whether 6-regularity alone forces a $K_6$ minor."
+  },
+  "started": "2026-09-01T02:52:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

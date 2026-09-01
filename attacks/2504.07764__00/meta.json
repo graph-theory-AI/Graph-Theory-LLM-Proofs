@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 305,
+    "score": 3.05,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2504.07764__00",
+    "title_md": "[Conjecture 4](https://arxiv.org/abs/2504.07764)",
+    "paper": "A note on extendable sets of colorings and rooted minors",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2504.07764__00/"
+  },
+  "dossier_meta": {
+    "id": "2504.07764__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2504.07764__00/",
+    "arxiv_id": "2504.07764",
+    "tier": 3,
+    "score": 3.05,
+    "lean": "prove",
+    "status": "open",
+    "paper": "A note on extendable sets of colorings and rooted minors",
+    "catalog_title": "Conjecture 4",
+    "statement_text": "For every integer $k\\geq 3$, there exists a set $X$ of vertices and a set $C$ of $k$-colorings of $X$ such that no $X$-rooted-$K_{k}$-minor-free graph $G$ realizes $C$.",
+    "context_text": "The conjecture asserts that Theorem 3 (the generalization of the DeVos\u2013Seymour result to $X$-rooted-$K_{k+1}$-minor-free $K_{k+2}$-minor-free graphs) does not further extend to $X$-rooted-$K_{k}$-minor-free graphs, i.e., reducible configurations cannot exploit the full global structure when the number of colors falls below what Hadwiger's conjecture postulates. Holroyd's conjecture \u2014 that if $G$ is $k$-colorable and every $k$-coloring uses all $k$ colors on $X$ then $K_k$ is an $X$-rooted minor of $G$ \u2014 would imply this conjecture if true in general."
+  },
+  "started": "2026-09-01T02:57:34Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

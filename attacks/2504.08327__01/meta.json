@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 304,
+    "score": 3.05,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2504.08327__01",
+    "title_md": "[Conjecture 2](https://arxiv.org/abs/2504.08327)",
+    "paper": "On a conjecture concerning 4-coloring of graphs with one crossing",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2504.08327__01/"
+  },
+  "dossier_meta": {
+    "id": "2504.08327__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2504.08327__01/",
+    "arxiv_id": "2504.08327",
+    "tier": 3,
+    "score": 3.05,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "On a conjecture concerning 4-coloring of graphs with one crossing",
+    "catalog_title": "Conjecture 2",
+    "statement_text": "If a graph $G$ does not contain separating triangles and has a drawing in the plane with one crossing such that all vertices not incident with the crossed edges have degree at least five, then $G$ is 4-colorable.",
+    "context_text": "This is the central conjecture of the paper. The authors verify it by computer enumeration for all graphs with at most 28 vertices, prove that it implies Conjecture 1, and note that the assumption on separating triangles is necessary. It generalises the Four Color Theorem to graphs drawable with one crossing under a minimum-degree condition."
+  },
+  "started": "2026-09-01T02:57:45Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

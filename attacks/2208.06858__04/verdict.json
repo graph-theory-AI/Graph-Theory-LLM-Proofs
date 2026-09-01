@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A closed-neighborhood deficit inequality proves the conjecture for all claw-free graphs, bounded-degree or bounded-average-degree graphs, and graphs with clique-cover number sufficiently close to their independence number, with exact bounds for perfect graphs.",
+  "would_publish": false,
+  "caveats": "The argument does not cover dense, highly imperfect graphs with unbounded induced stars; throughout, 'maximal' is interpreted as maximum-cardinality.",
+  "id": "2208.06858__04",
+  "model": "gpt-5.6-sol",
+  "usd": 1.21112,
+  "eur": 1.254472,
+  "elapsed_s": 1519.2,
+  "status": "completed",
+  "response_id": "resp_0c6db2e279b4cb2e006a963949dde887d28edb5f63db285ee5",
+  "when": "2026-09-01T02:58:00Z"
+}

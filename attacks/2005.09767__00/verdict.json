@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A finite-field support bound settles the order-7 case, while a CRT decomposition and three explicit families of flows give at least 3^{n/12} admissible Z_6-flows.",
+  "would_publish": true,
+  "caveats": "Uses the established existence theorem for groups of order at least 6 and Theorem 1.9 for orders at least 8; novelty and degenerate one-vertex conventions should be checked.",
+  "id": "2005.09767__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.087232,
+  "eur": 1.126149,
+  "elapsed_s": 1491.0,
+  "status": "completed",
+  "response_id": "resp_0f4f908d3554a071006a9639837d6487d2b3c336ca77eb4075",
+  "when": "2026-09-01T02:58:30Z"
+}

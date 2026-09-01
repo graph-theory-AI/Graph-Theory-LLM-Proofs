@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 310,
+    "score": 3.0,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2401.00359__02",
+    "title_md": "[Conjecture 6.4](https://arxiv.org/abs/2401.00359)",
+    "paper": "Ramsey and Tur\u00e1n numbers of sparse hypergraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2401.00359__02/"
+  },
+  "dossier_meta": {
+    "id": "2401.00359__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2401.00359__02/",
+    "arxiv_id": "2401.00359",
+    "tier": 3,
+    "score": 3.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Ramsey and Tur\u00e1n numbers of sparse hypergraphs",
+    "catalog_title": "Conjecture 6.4",
+    "statement_text": "Let $L$ be a $d\\times d$ Latin square. Define $H_{L}$ to be the 3-uniform 3-partite hypergraph on vertex set $[d]\\sqcup[d]\\sqcup[d]$ where $(i,j,k)\\in E(H_{L})$ if and only if $L(i,j)=k$. Then $\\mathrm{ex}(n,H_{L})=n^{3-\\Theta(1/d)}$.",
+    "context_text": "For every $d\\times d$ Latin square one has $d_{1}(H_{L}),d_{2}(H_{L})=\\Theta(d)$, so $d_{\\mathsf{max}}(H_{L})=\\Theta(d)$, yet Theorem 1.4 only yields $\\mathrm{ex}(n,H_{L})\\leq O(n^{3-c/d^{2}})$. The 1-skeleton of $H_{L}$ is $K_{d,d,d}$, the same as that of the complete 3-partite hypergraph $K^{(3)}_{d,d,d}$, so current techniques cannot distinguish $H_{L}$ from $K^{(3)}_{d,d,d}$ at the level of the Tur\u00e1n exponent. Conjecture 6.4 predicts that the exponent is $3-\\Theta(1/d)$, matching $d_{\\mathsf{max}}(H_{L})=\\Theta(d)$ via Conjecture 6.2."
+  },
+  "started": "2026-09-01T02:53:02Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

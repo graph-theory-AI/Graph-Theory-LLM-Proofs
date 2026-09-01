@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 303,
+    "score": 3.05,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1912.11246__02",
+    "title_md": "[Open problem: polynomial separator property for (prism, pyramid, theta,\u2026](https://arxiv.org/abs/1912.11246)",
+    "paper": "Maximum independent sets in (pyramid, even hole)-free graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1912.11246__02/"
+  },
+  "dossier_meta": {
+    "id": "1912.11246__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1912.11246__02/",
+    "arxiv_id": "1912.11246",
+    "tier": 3,
+    "score": 3.05,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Maximum independent sets in (pyramid, even hole)-free graphs",
+    "catalog_title": "Open problem: polynomial separator property for (prism, pyramid, theta, even wheel)-free graphs",
+    "statement_text": "It is unknown whether (prism, pyramid, theta, even wheel)-free graphs have polynomially many minimal separators.",
+    "context_text": "The authors note that a weakening of Conjecture 2.2 is obtained by restricting to (prism, pyramid, theta, even wheel)-free graphs (since prisms, thetas, and turtles all contain even holes). They explicitly state they 'were not able to prove that (prism, pyramid, theta, even wheel)-free graphs have polynomially many minimal separators,' which is why the main result (Theorem 2.3) additionally excludes squares."
+  },
+  "started": "2026-09-01T02:58:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

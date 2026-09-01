@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A self-contained inertia argument gives n(2,d) <= d^2+1 and the conjectured half-quadratic upper bound under two broad structural conditions, but the unrestricted case remains open.",
+  "would_publish": false,
+  "caveats": "Dense incompatibility among coordinate splits and a linear number of spectral eigenvalues below -2 remain uncontrolled; the formal Section 3 lamination conjecture was not supplied.",
+  "id": "2212.05133__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.575116,
+  "eur": 1.631497,
+  "elapsed_s": 1649.5,
+  "status": "completed",
+  "response_id": "resp_0f5a6b6b578ccf96006a963943f39887d28e9210e80433a918",
+  "when": "2026-09-01T03:00:05Z"
+}

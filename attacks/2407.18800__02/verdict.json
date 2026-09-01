@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is not settled, but any counterexample has an induced critical core of average degree greater than 21/4 with linearly many induced diamonds, proving the conjecture for induced-diamond-free and sufficiently sparse graphs.",
+  "would_publish": false,
+  "caveats": "Dense cores, notably 6-regular toroidal triangulations, remain; novelty of the partial lemmas was not literature-checked.",
+  "id": "2407.18800__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.332984,
+  "eur": 1.380698,
+  "elapsed_s": 1845.9,
+  "status": "completed",
+  "response_id": "resp_002838897c7ed9f3006a96375fa92487d2a34d938aee437156",
+  "when": "2026-09-01T02:55:17Z"
+}

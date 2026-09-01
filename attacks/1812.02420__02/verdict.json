@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "For digraphs allowing digons, the p=2 problem is NP-complete via a two-layer construction in which matching digons force every weight-2 fractional colouring to encode an ordinary acyclic 2-colouring.",
+  "would_publish": true,
+  "caveats": "The reduction uses antiparallel pairs; it does not settle a variant restricted to oriented digraphs.",
+  "id": "1812.02420__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.42866,
+  "eur": 0.444004,
+  "elapsed_s": 614.7,
+  "status": "completed",
+  "response_id": "resp_06ba9d2c4c6ea9e7006a963cb7136487d2afae26c1d685a6d6",
+  "when": "2026-09-01T02:57:33Z"
+}

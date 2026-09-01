@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 309,
+    "score": 3.05,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2005.10849__00",
+    "title_md": "[Optimality of the exponent 1/4](https://arxiv.org/abs/2005.10849)",
+    "paper": "On the cop number of graphs of high girth",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2005.10849__00/"
+  },
+  "dossier_meta": {
+    "id": "2005.10849__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2005.10849__00/",
+    "arxiv_id": "2005.10849",
+    "tier": 3,
+    "score": 3.05,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On the cop number of graphs of high girth",
+    "catalog_title": "Optimality of the exponent 1/4",
+    "statement_text": "Is the coefficient $\\frac{1}{4}$ of $g$ in the lower bound $\\Omega\\!\\left((\\delta-1)^{g/4}\\right)$ for the cop number of graphs of girth $g$ and minimum degree $\\delta$ best possible, i.e., can the exponent be improved to $\\left(\\frac{1}{4}+\\varepsilon\\right)g$ for some $\\varepsilon > 0$?",
+    "context_text": "Immediately after stating Theorem 1.1, the authors note: 'One may naturally ask if the coefficient $\\frac{1}{4}$ of $g$ is best possible. While we do not have an answer to this question \u2026'. They exhibit conditional evidence (via Meyniel's conjecture and Conjecture 1.3) that $\\frac{1}{4}$ is optimal, and also prove via Ramanujan graphs that the true exponent cannot exceed $\\frac{3}{8}$."
+  },
+  "started": "2026-09-01T02:55:03Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

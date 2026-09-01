@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 307,
+    "score": 3.05,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2302.04986__04",
+    "title_md": "[Open problem on $\\eta$-boundedness for disjoint union of two stars](https://arxiv.org/abs/2302.04986)",
+    "paper": "Hitting all maximum stable sets in $P_5$-free graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.04986__04/"
+  },
+  "dossier_meta": {
+    "id": "2302.04986__04",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.04986__04/",
+    "arxiv_id": "2302.04986",
+    "tier": 3,
+    "score": 3.05,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Hitting all maximum stable sets in $P_5$-free graphs",
+    "catalog_title": "Open problem on $\\eta$-boundedness for disjoint union of two stars",
+    "statement_text": "It remains open whether the disjoint union of two stars satisfies Conjecture 1.8, i.e., whether the class of $(S_{a}\\cup S_{b})$-free graphs is $\\eta$-bounded for all $a,b\\geq 1$.",
+    "context_text": "For the Gy\u00e1rf\u00e1s\u2013Sumner conjecture, $\\chi$-boundedness of an $H$-free class reduces to $\\chi$-boundedness of the component-free classes. The authors do not know whether the analogous reduction holds for Conjecture 1.8, and in particular whether the disjoint union of two stars satisfies $\\eta$-boundedness."
+  },
+  "started": "2026-09-01T02:55:28Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
