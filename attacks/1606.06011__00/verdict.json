@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but it holds for every cactus graph with the sole non-pendant exception C4, and the complete multipartite counterexamples without pendant edges are exactly five explicitly listed graphs.",
+  "would_publish": false,
+  "caveats": "No argument covers arbitrary graphs with overlapping cycles, and no infinite counterexample family is produced.",
+  "id": "1606.06011__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.197924,
+  "eur": 1.240803,
+  "elapsed_s": 1612.7,
+  "status": "completed",
+  "response_id": "resp_080db3e69dae8a6c006a964a1730a487d2bfbd93c883e82405",
+  "when": "2026-09-01T04:11:15Z"
+}

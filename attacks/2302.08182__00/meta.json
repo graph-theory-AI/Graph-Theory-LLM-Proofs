@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 202,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2302.08182__00",
+    "title_md": "[Question 2](https://arxiv.org/abs/2302.08182)",
+    "paper": "Maximum Independent Set when excluding an induced minor: $K_1 + tK_2$ a\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.08182__00/"
+  },
+  "dossier_meta": {
+    "id": "2302.08182__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.08182__00/",
+    "arxiv_id": "2302.08182",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Maximum Independent Set when excluding an induced minor: $K_1 + tK_2$ a\u2026",
+    "catalog_title": "Question 2",
+    "statement_text": "Is it true that for every planar graph $H$, Max Independent Set can be solved in quasipolynomial time in the class of graphs excluding $H$ as an induced minor?",
+    "context_text": "Question 2 is the quasipolynomial-time relaxation of Question 1, for which substantially more positive evidence exists: quasipolynomial-time algorithms are known for $C_t$-induced-minor-free graphs and for $tC_3$-induced-minor-free graphs. The present paper contributes a quasipolynomial-time algorithm for $tC_3 \\uplus C_4$-induced-minor-free graphs, running in $n^{O(t^{2}\\log n)+f(t)}$."
+  },
+  "started": "2026-09-01T04:17:19Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

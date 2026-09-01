@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Recognition is known to be NP-complete; below is an exact sparse-class characterization, but no unrestricted structural characterization is obtained.",
+  "would_publish": false,
+  "caveats": "The NP-hardness reduction is cited from arXiv:1911.01954 rather than reproduced, and the general structural question remains open.",
+  "id": "1608.03040__05",
+  "model": "gpt-5.6-sol",
+  "usd": 1.140504,
+  "eur": 1.181328,
+  "elapsed_s": 1240.6,
+  "status": "completed",
+  "response_id": "resp_01b4b0626afeaf1e006a964bef884887d2b8b8882c9143cc20",
+  "when": "2026-09-01T04:12:55Z"
+}

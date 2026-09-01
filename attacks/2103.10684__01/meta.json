@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 205,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2103.10684__01",
+    "title_md": "[Question 1.7](https://arxiv.org/abs/2103.10684)",
+    "paper": "On a recolouring version of Hadwiger's conjecture",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2103.10684__01/"
+  },
+  "dossier_meta": {
+    "id": "2103.10684__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2103.10684__01/",
+    "arxiv_id": "2103.10684",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On a recolouring version of Hadwiger's conjecture",
+    "catalog_title": "Question 1.7",
+    "statement_text": "Is there a constant $c^{\\prime}$ such that for every $t$, all the $c^{\\prime}\\cdot t$-colourings of a graph with no $K_{t}$-minor form a single equivalence class?",
+    "context_text": "Theorem 1.3 shows $c'\\geqslant\\frac{3}{2}$ if such a constant exists. The best known upper bound comes from results of Kostochka and Thomason showing degeneracy $O(t\\sqrt{\\log t})$ for $K_t$-minor-free graphs, combined with the fact that all $k$-colourings of $d$-degenerate graphs are Kempe equivalent for $k>d$."
+  },
+  "started": "2026-09-01T04:12:56Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,555 @@
+Attack the following open graph-theory problem.
+
+Catalog id: 2305.15585__02
+Catalog status: open (triage tier 3, lean prove)
+Catalog page: https://mlelarge.github.io/graph-conjectures/arxiv/2305.15585__02/
+Source paper: Chromatic number is not tournament-local (arXiv:2305.15585)
+
+=== Extracted statement (catalog JSON) ===
+Title: Conjecture 12
+For every positive integer $k$, there exists a $\chi$ such that if $T$ is the uniformly random tournament on vertex set $[N]$, then with high probability (as $N\to\infty$), for every graph $G$ on $[N]$ with $\chi(G)\geqslant\chi$ there is a vertex $v\in[N]$ for which $G[N^{+}_{T}(v)]\geqslant k$.
+
+Context:
+The counterexamples to Conjecture 1 use very structured tournaments; the authors conjecture that a random tournament cannot be used as such a counterexample, i.e., that the Scott–Seymour phenomenon holds with high probability for the random tournament.
+
+=== Catalog page (statement + literature review) ===
+Scott–Seymour property for random tournaments — Graph-theory open problems (arXiv)
+
+ 
+ Status
+ open
+ high confidence
+ 
+
+ Conjecture 12 from arXiv:2305.15585 posits that the uniformly random tournament on $[N]$ witnesses the Scott–Seymour phenomenon with high probability: for every $k$ there exists $\chi$ such that whp every graph $G$ on $[N]$ with $\chi(G)\geq\chi$ contains a vertex $v$ whose out-neighborhood induces a subgraph of chromatic number at least $k$. The source paper disproves the deterministic Scott–Seymour conjecture using highly structured tournaments, and Conjecture 12 asserts that such structured adversarial examples cannot be replaced by a random tournament. No subsequent paper resolving or making partial progress on this specific conjecture was found in the indexed literature as of May 2026.
+
+ Reviewer notes. No follow-up found addressing Conjecture 12 specifically. The source paper itself was published in Journal of Combinatorial Theory, Series B, vol. 168 (2024), pp. 86–95. Web searches found no paper proving or disproving this random-tournament variant of the Scott–Seymour phenomenon. The conjecture is recent (≤2 years) and absence of follow-up is expected; status open with high confidence.
+
+ 
+ Auto-reviewed 2026-05-15 with claude-sonnet-4-6 (web search enabled).
+ 
+
+Conjecture. For every positive integer $k$, there exists a $\chi$ such that if $T$ is the uniformly random tournament on vertex set $[N]$, then with high probability (as $N\to\infty$), for every graph $G$ on $[N]$ with $\chi(G)\geqslant\chi$ there is a vertex $v\in[N]$ for which $G[N^{+}_{T}(v)]\geqslant k$.
+
+Context
+
+The counterexamples to Conjecture 1 use very structured tournaments; the authors conjecture that a random tournament cannot be used as such a counterexample, i.e., that the Scott–Seymour phenomenon holds with high probability for the random tournament.
+
+Notes. The statement as extracted likely contains a typographical omission: '$G[N^{+}_{T}(v)]\geqslant k$' should read '$\chi(G[N^{+}_{T}(v)])\geqslant k$'.
+
+Source paper
+
+ Chromatic number is not tournament-local
+ António Girão, Kevin Hendrey, Freddie Illingworth, Florian Lehner, Lukas Michel, Michael Savery, Raphael Steiner · 2023-12-04
+ https://arxiv.org/abs/2305.15585
+
+=== Source paper abstract / header ===
+Abstract:Scott and Seymour conjectured the existence of a function $f \colon \mathbb{N} \to \mathbb{N}$ such that, for every graph $G$ and tournament $T$ on the same vertex set, $\chi(G) \geqslant f(k)$ implies that $\chi(G[N_T^+(v)]) \geqslant k$ for some vertex $v$. In this note we disprove this conjecture even if $v$ is replaced by a vertex set of size $\mathcal{O}(\log{\lvert V(G)\rvert})$. As a consequence, we answer in the negative a question of Harutyunyan, Le, Thomassé, and Wu concerning the corresponding statement where the graph $G$ is replaced by another tournament, and disprove a related conjecture of Nguyen, Scott, and Seymour. We also show that the setting where chromatic number is replaced by degeneracy exhibits a quite different behaviour.
+ 
+
+ 
+ 
+ 
+ Comments:
+ 7 pages; funding information added
+ 
+
+ Subjects:
+ 
+ Combinatorics (math.CO)
+ 
+ 
+ MSC classes:
+ 05C15, 05C20
+ 
+
+ Cite as:
+ arXiv:2305.15585 [math.CO]
+ 
+
+ 
+  
+ (or 
+ arXiv:2305.15585v2 [math.CO] for this version)
+ 
+ 
+
+ 
+  
+ https://doi.org/10.48550/arXiv.2305.15585
+ 
+ 
+ Focus to learn more
+ 
+ 
+ 
+ arXiv-issued DOI via DataCite
+
+ 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+ Submission history
+ From: Freddie Illingworth Dr [view email] 
+ [v1]
+ Wed, 24 May 2023 21:41:18 UTC (19 KB)
+
+ [v2]
+ Mon, 4 Dec 2023 15:19:50 UTC (19 KB)
+
+ 
+
+ 
+ 
+ 
+ Full-text links:
+ Access Paper:
+
+ 
+ 
+View a PDF of the paper titled Chromatic number is not tournament-local, by Ant\'onio Gir\~ao and 6 other authors
+View PDF
+HTML (experimental)
+TeX Source
+ 
+
+ 
+ 
+ view license
+ 
+
+ 
+
+ 
+ Current browse context:
+
+ math.CO
+
+ 
+
+ < prev
+ 
+   |   
+ next >
+ 
+
+ 
+
+ new
+ | 
+ recent
+ | 2023-05
+ 
+
+ Change to browse by:
+ 
+ math
+ 
+
+ 
+
+ 
+
+ 
+ References & Citations
+
+ 
+ NASA ADS
+Google Scholar
+
+ Semantic Scholar
+
+ 
+ 
+
+ 
+
+ export BibTeX citation
+ Loading...
+
+ 
+ 
+ BibTeX formatted citation
+
+ ×
+ 
+
+ 
+ loading...
+ 
+
+ 
+ Data provided by: 
+ 
+ 
+
+ 
+
+ Bookmark
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+
+ 
+ Bibliographic Tools
+ 
+ Bibliographic and Citation Tools
+
+ 
+ 
+ 
+ 
+ 
+ 
+ Bibliographic Explorer Toggle
+ 
+ 
+
+ 
+ Bibliographic Explorer (What is the Explorer?)
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ Connected Papers Toggle
+ 
+ 
+
+ 
+ Connected Papers (What is Connected Papers?)
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ Litmaps Toggle
+ 
+ 
+
+ 
+ Litmaps (What is Litmaps?)
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ scite.ai Toggle
+ 
+ 
+
+ 
+ scite Smart Citations (What are Smart Citations?)
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ Code, Data, Media
+ 
+ Code, Data and Media Associated with this Article
+
+ 
+ 
+ 
+ 
+ 
+ 
+ alphaXiv Toggle
+ 
+ 
+
+ 
+ alphaXiv (What is alphaXiv?)
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ Links to Code Toggle
+ 
+ 
+
+ 
+ CatalyzeX Code Finder for Papers (What is CatalyzeX?)
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ DagsHub Toggle
+ 
+ 
+
+ 
+ DagsHub (What is DagsHub?)
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ GotitPub Toggle
+ 
+ 
+
+ 
+ Gotit.pub (What is GotitPub?)
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ Huggingface Toggle
+ 
+ 
+
+ 
+ Hugging Face (What is Huggingface?)
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ ScienceCast Toggle
+ 
+ 
+
+ 
+ ScienceCast (What is ScienceCast?)
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ Demos
+ 
+ Demos
+
+ 
+ 
+ 
+ 
+ 
+ 
+ Replicate Toggle
+ 
+ 
+
+ 
+ Replicate (What is Replicate?)
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ Spaces Toggle
+ 
+ 
+
+ 
+ Hugging Face Spaces (What is Spaces?)
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ Spaces Toggle
+ 
+ 
+
+ 
+ TXYZ.AI (What is TXYZ.AI?)
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ Related Papers
+ 
+ Recommenders and Search Tools
+
+ 
+ 
+ 
+ 
+ 
+ 
+ Link to Influence Flower
+ 
+ 
+
+ 
+ Influence Flower (What are Influence Flowers?)
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ Core recommender toggle
+ 
+ 
+
+ 
+ CORE Recommender (What is CORE?)
+ 
+
+ 
+
+ 
+
+ 
+ 
+ Author
+
+ Venue
+
+ Institution
+
+ Topic
+
+ 
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+ About arXivLabs
+ 
+ 
+ 
+ 
+ arXivLabs: experimental projects with community collaborators
+
+ arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.
+
+ Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.
+
+ Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.
+
+ 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ Which authors of this paper are endorsers? |
+ Disable MathJax (What is MathJax?)

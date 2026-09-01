@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 210,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2202.10412__01",
+    "title_md": "[Conjecture 2.3](https://arxiv.org/abs/2202.10412)",
+    "paper": "Polynomial bounds for chromatic number VI. Adding a four-vertex path",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.10412__01/"
+  },
+  "dossier_meta": {
+    "id": "2202.10412__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.10412__01/",
+    "arxiv_id": "2202.10412",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Polynomial bounds for chromatic number VI. Adding a four-vertex path",
+    "catalog_title": "Conjecture 2.3",
+    "statement_text": "Let $\\psi, \\sigma : \\mathbb{N} \\to \\mathbb{N}$ be non-decreasing polynomials, let $q \\geq 0$ an integer, and let $H$ be a broom. Then there is a non-decreasing polynomial $\\phi : \\mathbb{N} \\to \\mathbb{N}$ such that if $G$ is a graph, and $\\chi(G) > \\phi(\\omega(G))$, and $G$ contains no $(\\psi, q)$-scattering, then $G$ [contains] a $\\sigma$-nondominating copy of $H$.",
+    "context_text": "The authors remark that Conjecture 2.3 is 'an appealing possible strengthening of 2.2 that we could not prove.' Theorem 2.2 (which is proved) requires $H$ to be a broom and $J$ a path, finding both; Conjecture 2.3 would give a $\\sigma$-nondominating copy of a broom alone without needing a path. This would extend the self-isolating property (proved for paths as Corollary 2.4) to brooms."
+  },
+  "started": "2026-09-01T04:11:16Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

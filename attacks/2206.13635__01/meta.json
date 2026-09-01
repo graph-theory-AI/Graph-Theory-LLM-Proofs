@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 206,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2206.13635__01",
+    "title_md": "[Problem 1](https://arxiv.org/abs/2206.13635)",
+    "paper": "Coloring hypergraphs with excluded minors",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2206.13635__01/"
+  },
+  "dossier_meta": {
+    "id": "2206.13635__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2206.13635__01/",
+    "arxiv_id": "2206.13635",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Coloring hypergraphs with excluded minors",
+    "catalog_title": "Problem 1",
+    "statement_text": "Is every $K_{3}$-minor-free hypergraph $3$-colorable?",
+    "context_text": "Conjecture 2 predicts $h(3)=3$, but the best known upper bound for the chromatic number of $K_3$-minor-free hypergraphs is $4$ (from Corollary 2 of the paper). Problem 1 isolates the smallest open case of Conjecture 2."
+  },
+  "started": "2026-09-01T04:12:06Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

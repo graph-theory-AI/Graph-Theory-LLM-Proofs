@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Kruskal\u2013Katona reduces each fixed-t instance to the endpoint s=t; I prove the complete t=3 row and establish general shadow and local-witness lower bounds, while the endpoint cases t>=4 remain open.",
+  "would_publish": false,
+  "caveats": "No novelty claim is made for the t=3 case; the proof uses standard Dirac and Gallai lemmas on critical graphs.",
+  "id": "2312.06895__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.077996,
+  "eur": 1.116583,
+  "elapsed_s": 1147.8,
+  "status": "completed",
+  "response_id": "resp_0661118920ac87f6006a964d5344e487d2921449784d8bd4f2",
+  "when": "2026-09-01T04:17:18Z"
+}

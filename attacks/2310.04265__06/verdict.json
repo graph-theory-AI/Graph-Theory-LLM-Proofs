@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds, with an exponential chi-bound, whenever the ordered matching is noncrossing, with isolated vertices allowed.",
+  "would_publish": false,
+  "caveats": "The crossing two-edge pattern with edges 13 and 24 is not covered, and no claim of literature priority is made.",
+  "id": "2310.04265__06",
+  "model": "gpt-5.6-sol",
+  "usd": 0.872036,
+  "eur": 0.90325,
+  "elapsed_s": 1433.1,
+  "status": "completed",
+  "response_id": "resp_0131932d87cddb39006a964afd756487d2b951a7979f09af9b",
+  "when": "2026-09-01T04:12:06Z"
+}

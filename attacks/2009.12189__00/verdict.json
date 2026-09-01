@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "The planar dual of Tutte's 46-vertex non-Hamiltonian cubic polyhedral graph is a 25-vertex triangulation with fractional vertex-arboricity at least 88/43>2.",
+  "would_publish": false,
+  "caveats": "This uses the standard LP definition of fractional vertex-arboricity and the classical verified non-Hamiltonicity of the explicit Tutte graph; publication priority has not been checked.",
+  "id": "2009.12189__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.261448,
+  "eur": 1.306601,
+  "elapsed_s": 1474.3,
+  "status": "completed",
+  "response_id": "resp_0e239f10f5b7d5c0006a964acdc32887d29a31d80396ac8491",
+  "when": "2026-09-01T04:11:59Z"
+}

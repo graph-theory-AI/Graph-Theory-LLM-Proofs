@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every pair of vertices differing on at most d other vertices in a graph of twin-width at most d is extendible as the first contraction of a 2d-sequence, giving a polynomially findable first move but not a full approximation algorithm.",
+  "would_publish": false,
+  "caveats": "The completion uses an unknown sequence of an induced subgraph; naive recursion can accumulate unbounded width even when d equals 1, and novelty relative to folklore has not been checked.",
+  "id": "2111.00282__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.99102,
+  "eur": 1.026493,
+  "elapsed_s": 1251.9,
+  "status": "completed",
+  "response_id": "resp_0f6a3e178192171d006a964cf146e487d2b3616083d142608f",
+  "when": "2026-09-01T04:17:24Z"
+}

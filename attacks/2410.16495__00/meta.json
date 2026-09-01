@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 201,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2410.16495__00",
+    "title_md": "[Question 1.1](https://arxiv.org/abs/2410.16495)",
+    "paper": "Induced subgraphs and tree decompositions XVI. Complete bipartite induc\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2410.16495__00/"
+  },
+  "dossier_meta": {
+    "id": "2410.16495__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2410.16495__00/",
+    "arxiv_id": "2410.16495",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Induced subgraphs and tree decompositions XVI. Complete bipartite induc\u2026",
+    "catalog_title": "Question 1.1",
+    "statement_text": "What are the unavoidable induced subgraphs of graphs with large treewidth?",
+    "context_text": "This question is the central goal of the series of papers on induced subgraphs and tree decompositions. The answer is known when 'induced subgraphs' is replaced by 'subgraphs' or 'minors' via Robertson and Seymour's grid theorem, but the induced setting is more complex, requiring all basic obstructions (complete graphs, complete bipartite graphs, subdivided walls, and their line graphs) as well as non-basic ones such as Pohoata-Davies graphs, occultations, and layered wheels."
+  },
+  "started": "2026-09-01T04:17:25Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

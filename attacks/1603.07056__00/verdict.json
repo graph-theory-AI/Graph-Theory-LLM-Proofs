@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An exact local contraction identity is proved, yielding complete characterizations for triangle-free graphs, complete multipartite graphs, cographs recursively, and graphs whose complement has maximum degree at most two.",
+  "would_publish": false,
+  "caveats": "The exact criterion still involves clique counting, and no global structural characterization or unrestricted recognition complexity is obtained.",
+  "id": "1603.07056__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.896184,
+  "eur": 0.928263,
+  "elapsed_s": 966.3,
+  "status": "completed",
+  "response_id": "resp_04cd4d63dd0327b1006a964de6884487d29426c3e9020c2fe4",
+  "when": "2026-09-01T04:16:44Z"
+}

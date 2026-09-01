@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 207,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2402.04237__00",
+    "title_md": "[Problem 11](https://arxiv.org/abs/2402.04237)",
+    "paper": "A note on graphs of $k$-colourings",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2402.04237__00/"
+  },
+  "dossier_meta": {
+    "id": "2402.04237__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2402.04237__00/",
+    "arxiv_id": "2402.04237",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "A note on graphs of $k$-colourings",
+    "catalog_title": "Problem 11",
+    "statement_text": "For which graphs $H$ does there exist an $H^{\\prime}$ such that $\\pi_{G}^{(H^{\\prime})}$ determines $\\pi_{G}^{(H)}$ for every graph $G$?",
+    "context_text": "Asgarli et al. conjectured (their Conjecture 5.2) that $\\pi_{G}^{(K_{2})}$ determines the chromatic polynomial $\\pi_{G}^{(K_{1})}$, i.e., that equal edge-count polynomials of colouring graphs imply equal chromatic polynomials. This broader problem asks for which pairs $(H, H')$ such a determination holds, motivated by Remark 10 in the paper."
+  },
+  "started": "2026-09-01T04:12:00Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

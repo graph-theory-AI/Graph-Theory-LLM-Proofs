@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The diameter-free bound may be taken as f(1)=99 in ambient dimension one, and a finite-orientation analogue holds in every dimension, but the full n>=2 problem remains open.",
+  "would_publish": false,
+  "caveats": "The one-dimensional coloring is nonconstructive and potentially nonmeasurable; the higher-dimensional argument does not handle the continuum of rotations.",
+  "id": "1705.02166__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.236136,
+  "eur": 1.280383,
+  "elapsed_s": 1508.0,
+  "status": "completed",
+  "response_id": "resp_0a2f667fc239b68d006a964a8f810087d28917683e6a62aef9",
+  "when": "2026-09-01T04:11:31Z"
+}

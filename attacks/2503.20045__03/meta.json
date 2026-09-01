@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 204,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2503.20045__03",
+    "title_md": "[Question 4.2](https://arxiv.org/abs/2503.20045)",
+    "paper": "Orientations of cycles in digraphs of high chromatic number and high mi\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2503.20045__03/"
+  },
+  "dossier_meta": {
+    "id": "2503.20045__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2503.20045__03/",
+    "arxiv_id": "2503.20045",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Orientations of cycles in digraphs of high chromatic number and high mi\u2026",
+    "catalog_title": "Question 4.2",
+    "statement_text": "For a fixed digraph $H$, what is the minimum value $\\varepsilon_{H}\\geq 0$ such that there exists a constant $c\\geq 1$ such that every digraph $D$ without loops or parallel arcs with $\\chi(D)\\geq c$ and minimum out-degree at least $\\varepsilon_{H}|V(D)|$ contains $H$ as a subdigraph?",
+    "context_text": "The quantity $\\varepsilon_H$ provides a directed analogue of the chromatic threshold studied for undirected graphs. Theorem 1.3 may be interpreted as characterizing the orientations of cycles for which the directed chromatic threshold $\\varepsilon_H$ equals zero. The authors also suggest studying variants where high chromatic number is replaced by high dichromatic number."
+  },
+  "started": "2026-09-01T04:14:24Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

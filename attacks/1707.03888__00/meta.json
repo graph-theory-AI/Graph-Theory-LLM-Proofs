@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 200,
+    "score": 3.3,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1707.03888__00",
+    "title_md": "[Open question: additive approximation for triangle-free graphs](https://arxiv.org/abs/1707.03888)",
+    "paper": "Additive non-approximability of chromatic number in proper minor-closed\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1707.03888__00/"
+  },
+  "dossier_meta": {
+    "id": "1707.03888__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1707.03888__00/",
+    "arxiv_id": "1707.03888",
+    "tier": 3,
+    "score": 3.3,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Additive non-approximability of chromatic number in proper minor-closed\u2026",
+    "catalog_title": "Open question: additive approximation for triangle-free graphs",
+    "statement_text": "Does there exist $\\alpha \\geq 0$ such that for every proper minor-closed class $\\mathcal{G}$, the chromatic number of triangle-free graphs in $\\mathcal{G}$ can be approximated in polynomial time within additive error $\\alpha$?",
+    "context_text": "Forbidding triangles makes coloring more tractable for embedded graphs (all planar graphs are 3-colorable and 3-colorability in any fixed surface is linear-time decidable). The authors show forbidding cliques of size 4 is insufficient (Theorem 6), but explicitly state the triangle-free case remains open."
+  },
+  "started": "2026-09-01T04:19:25Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

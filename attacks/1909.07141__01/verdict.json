@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An extremal common-arc lemma proves the conjecture for equal demands, more generally for n\u22121 equal demands, and settles n=3 when two demands coincide or one demand is 1/2.",
+  "would_publish": false,
+  "caveats": "The case n=3 with three distinct positive demands, none equal to 1/2, remains unresolved; no counterexample is constructed.",
+  "id": "1909.07141__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.558432,
+  "eur": 1.614216,
+  "elapsed_s": 1673.1,
+  "status": "completed",
+  "response_id": "resp_0483cb33f8f06500006a964a97109487d2b61fe451e66abb7d",
+  "when": "2026-09-01T04:14:23Z"
+}

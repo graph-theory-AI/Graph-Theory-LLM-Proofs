@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 208,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2305.15585__02",
+    "title_md": "[Conjecture 12](https://arxiv.org/abs/2305.15585)",
+    "paper": "Chromatic number is not tournament-local",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2305.15585__02/"
+  },
+  "dossier_meta": {
+    "id": "2305.15585__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2305.15585__02/",
+    "arxiv_id": "2305.15585",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Chromatic number is not tournament-local",
+    "catalog_title": "Conjecture 12",
+    "statement_text": "For every positive integer $k$, there exists a $\\chi$ such that if $T$ is the uniformly random tournament on vertex set $[N]$, then with high probability (as $N\\to\\infty$), for every graph $G$ on $[N]$ with $\\chi(G)\\geqslant\\chi$ there is a vertex $v\\in[N]$ for which $G[N^{+}_{T}(v)]\\geqslant k$.",
+    "context_text": "The counterexamples to Conjecture 1 use very structured tournaments; the authors conjecture that a random tournament cannot be used as such a counterexample, i.e., that the Scott\u2013Seymour phenomenon holds with high probability for the random tournament."
+  },
+  "started": "2026-09-01T04:11:48Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

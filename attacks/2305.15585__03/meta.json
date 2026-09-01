@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 209,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2305.15585__03",
+    "title_md": "[Conjecture 13](https://arxiv.org/abs/2305.15585)",
+    "paper": "Chromatic number is not tournament-local",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2305.15585__03/"
+  },
+  "dossier_meta": {
+    "id": "2305.15585__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2305.15585__03/",
+    "arxiv_id": "2305.15585",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Chromatic number is not tournament-local",
+    "catalog_title": "Conjecture 13",
+    "statement_text": "There exists $f(N)$ satisfying $f(N)=o(\\log N)$ such that for every $N$-vertex graph $G$ with $\\chi(G)\\geqslant f(N)$, and every tournament $T$ on the same vertex set, there is a vertex $v$ for which $\\chi(G[N^{+}_{T}(v)])\\geqslant 3$.",
+    "context_text": "Theorem 2 shows a collection of at most $\\lceil\\log_2(N)/\\lfloor\\chi/2-1\\rfloor\\rceil$ out-neighbourhoods suffices to force chromatic number at least 3; the authors ask whether $o(\\log(N)/\\chi)$ out-neighbourhoods (or even a single vertex) suffice when the chromatic number threshold itself grows with $N$ as $o(\\log N)$."
+  },
+  "started": "2026-09-01T04:11:31Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

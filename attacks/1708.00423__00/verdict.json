@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is not resolved here, but the factorial estimate sharpens to \u03b3(D) \u2264 a! \u03a3_{j=0}^{a-1} 1/j! < e a!, while an explicit family has \u03b3(D)=a+1 and hence forces \u2113\u22652 in the literal formulation.",
+  "would_publish": false,
+  "caveats": "The improvement is only a factor of order a and may be implicit in the source proof; it remains factorial rather than polynomial.",
+  "id": "1708.00423__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.4724,
+  "eur": 1.525104,
+  "elapsed_s": 1978.3,
+  "status": "completed",
+  "response_id": "resp_0b4a31be4cef787e006a964a92ad8487d2bdd14c038f72491b",
+  "when": "2026-09-01T04:19:24Z"
+}

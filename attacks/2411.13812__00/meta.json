@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 203,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2411.13812__00",
+    "title_md": "[Conjecture 1.1](https://arxiv.org/abs/2411.13812)",
+    "paper": "When are off-diagonal hypergraph Ramsey numbers polynomial?",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2411.13812__00/"
+  },
+  "dossier_meta": {
+    "id": "2411.13812__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2411.13812__00/",
+    "arxiv_id": "2411.13812",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "When are off-diagonal hypergraph Ramsey numbers polynomial?",
+    "catalog_title": "Conjecture 1.1",
+    "statement_text": "For a $3$-graph $H$, there exists a constant $c$ depending only on $H$ such that $r(H,K_{n}^{(3)})\\leq n^{c}$ for all $n$ if and only if $H$ is a subgraph of an iterated blowup of an edge.",
+    "context_text": "The paper proposes a full classification of those $3$-graphs $H$ for which the off-diagonal Ramsey number $r(H,K_{n}^{(3)})$ grows polynomially with $n$. The 'if' direction (polynomial upper bound when $H$ is iterated tripartite) was already known to Erd\u0151s and Hajnal; the 'only if' direction is new. The problem was first raised explicitly by the first author at an AIM workshop in 2015."
+  },
+  "started": "2026-09-01T04:16:44Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
