@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 65,
+    "score": 3.95,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1702.01607__00",
+    "title_md": "[Problem 3](https://arxiv.org/abs/1702.01607)",
+    "paper": "Coloring tournaments: from local to global",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1702.01607__00/"
+  },
+  "dossier_meta": {
+    "id": "1702.01607__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1702.01607__00/",
+    "arxiv_id": "1702.01607",
+    "tier": 4,
+    "score": 3.95,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Coloring tournaments: from local to global",
+    "catalog_title": "Problem 3",
+    "statement_text": "For every integer $i \\geq 1$, there exists $f(i)$ such that every tournament $T$ with dominating number at least $f(i)$ contains an isomorphic copy of $S_i$.",
+    "context_text": "The tournaments $S_i$ are defined recursively: $S_1$ is a single vertex, and for $i > 1$, $S_i$ is the tournament on $2^i - 1$ vertices obtained by blowing up two vertices of an oriented triangle into two copies of $S_{i-1}$; one can check $\\vec{\\chi}(S_i) \\geq i$. The problem is trivial for $i \\leq 2$, verified for $i = 3$ in [7], and open for all $i \\geq 4$."
+  },
+  "started": "2026-09-01T07:53:02Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

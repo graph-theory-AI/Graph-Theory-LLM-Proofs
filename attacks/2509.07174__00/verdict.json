@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full surface conjecture remains open, but it holds for forests with the optimal uniform radius ceil(c/2) and, more generally, for every class of uniformly bounded tree-breadth.",
+  "would_publish": false,
+  "caveats": "Finite graphs and the source convention distance > c are assumed; the argument does not control arbitrary surface graphs.",
+  "id": "2509.07174__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.967188,
+  "eur": 1.001808,
+  "elapsed_s": 1414.2,
+  "status": "completed",
+  "response_id": "resp_0feed3c105774de9006a967ed8530887d29a9d29620ee22bae",
+  "when": "2026-09-01T07:53:01Z"
+}
