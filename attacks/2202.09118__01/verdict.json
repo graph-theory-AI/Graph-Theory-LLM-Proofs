@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but a tight exponent log_3(7/2) is obtained for a natural perfect/odd-antihole decomposition subclass, and an explicit {P5,C5}-free family rules out every linear bound for all k.",
+  "would_publish": false,
+  "caveats": "The argument does not control arbitrary odd-hole-free prime atoms or graphs containing up to k-1 pairwise anticomplete odd holes.",
+  "id": "2202.09118__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.28658,
+  "eur": 1.332633,
+  "elapsed_s": 1523.6,
+  "status": "completed",
+  "response_id": "resp_0cdf9573a20c0435006a96557d0bec87d2a6baaf1635cce1fd",
+  "when": "2026-09-01T04:58:24Z"
+}

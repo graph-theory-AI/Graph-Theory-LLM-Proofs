@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 159,
+    "score": 3.45,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2301.13305__02",
+    "title_md": "[Open problem: tighter bounds for linear graph-codes](https://arxiv.org/abs/2301.13305)",
+    "paper": "Graph-codes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2301.13305__02/"
+  },
+  "dossier_meta": {
+    "id": "2301.13305__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2301.13305__02/",
+    "arxiv_id": "2301.13305",
+    "tier": 3,
+    "score": 3.45,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Graph-codes",
+    "catalog_title": "Open problem: tighter bounds for linear graph-codes",
+    "statement_text": "Establish tighter bounds for the maximum possible cardinality of a linear family of graphs on $[n]$ in which no symmetric difference is a copy of a fixed graph $H$ with an even number of edges.",
+    "context_text": "The paper notes that for any fixed graph $H$ with an even number of edges the maximum size of a linear $H$-code is $o\\bigl(2^{\\binom{n}{2}}\\bigr)$, but the proof via Ramsey's Theorem yields very weak quantitative bounds. Theorem 1.6 gives a tight result for the family $\\mathcal{K}$ of all cliques as a model for what such tight results could look like."
+  },
+  "started": "2026-09-01T04:58:24Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

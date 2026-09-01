@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 165,
+    "score": 3.45,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2201.08204__01",
+    "title_md": "[Question 3.2](https://arxiv.org/abs/2201.08204)",
+    "paper": "A counterexample to a conjecture about triangle-free induced subgraphs \u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2201.08204__01/"
+  },
+  "dossier_meta": {
+    "id": "2201.08204__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2201.08204__01/",
+    "arxiv_id": "2201.08204",
+    "tier": 3,
+    "score": 3.45,
+    "lean": "prove",
+    "status": "open",
+    "paper": "A counterexample to a conjecture about triangle-free induced subgraphs \u2026",
+    "catalog_title": "Question 3.2",
+    "statement_text": "Is there a function $f : \\mathbb{N} \\to \\mathbb{N}$ such that for every digraph $D$ with no induced directed cycle of odd length, we have $\\vec{\\chi}(D) \\leq f(\\omega(D))$?",
+    "context_text": "Motivated by Theorem 1.5, which shows that the digraph analogue of the Scott\u2013Seymour theorem on odd holes fails, the authors ask whether banning all odd-length induced directed cycles forces the dichromatic number to be bounded by a function of the clique number."
+  },
+  "started": "2026-09-01T04:51:40Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

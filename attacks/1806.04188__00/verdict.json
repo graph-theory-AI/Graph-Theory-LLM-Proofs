@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is not settled, but it holds with k=ceil(log2 s) for weight-at-most-two binary matroids and their complete lifts, while explicit non-frame examples force any general bound k(s) to be at least (s-3)/4.",
+  "would_publish": false,
+  "caveats": "Arbitrary binary matroids for fixed s at least 5 remain uncontrolled, and the linear lower-bound examples avoid I_s only because their rank is less than s.",
+  "id": "1806.04188__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.089628,
+  "eur": 1.128631,
+  "elapsed_s": 1628.0,
+  "status": "completed",
+  "response_id": "resp_0cd9325d00b19f6d006a965468174887d2be7ef0fa19113b84",
+  "when": "2026-09-01T04:55:31Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The proposed linear-scale coherence is genuinely much weaker: there are arbitrarily large such coherent graphs of arbitrarily large girth, so no black-box reduction to the original hypothesis is possible.",
+  "would_publish": false,
+  "caveats": "The extracted question omits the full statement and auxiliary hypotheses of Theorem 3.3, so the construction below is an obstruction rather than a complete counterexample to that theorem.",
+  "id": "2201.04062__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.739884,
+  "eur": 0.766368,
+  "elapsed_s": 1466.5,
+  "status": "completed",
+  "response_id": "resp_0dfdd59eb0855301006a9656647bb887d2ad06ab720bfdd8a9",
+  "when": "2026-09-01T05:01:18Z"
+}

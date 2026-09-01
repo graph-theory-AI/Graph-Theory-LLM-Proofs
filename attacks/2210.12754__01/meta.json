@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 160,
+    "score": 3.45,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2210.12754__01",
+    "title_md": "[Open Problem (accurate estimate in the bipartite case)](https://arxiv.org/abs/2210.12754)",
+    "paper": "Largest subgraph from a hereditary property in a random graph",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.12754__01/"
+  },
+  "dossier_meta": {
+    "id": "2210.12754__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.12754__01/",
+    "arxiv_id": "2210.12754",
+    "tier": 3,
+    "score": 3.45,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Largest subgraph from a hereditary property in a random graph",
+    "catalog_title": "Open Problem (accurate estimate in the bipartite case)",
+    "statement_text": "Provide a more accurate estimate for $\\mathrm{ex}(G, \\mathcal{P})$ when $\\mathcal{P}$ misses a bipartite graph (i.e., when Theorem 1.1 gives only $\\mathrm{ex}(G(n,p),\\mathcal{P}) = o(n^2)$ whp).",
+    "context_text": "When the minimum chromatic number $k$ of a graph not in $\\mathcal{P}$ equals 2, Theorem 1.1 yields $\\mathrm{ex}(G(n,p),\\mathcal{P}) = o(n^2)$ whp but does not determine the precise order of magnitude. The authors ask for a sharper asymptotic in this regime."
+  },
+  "started": "2026-09-01T04:56:30Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

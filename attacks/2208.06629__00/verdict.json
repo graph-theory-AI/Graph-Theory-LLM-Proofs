@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The proposed identity is false: the source paper's bound for full shuffles already gives strict counterexamples, and these also yield counterexamples with t=n-1<n.",
+  "would_publish": false,
+  "caveats": "This settles the yes/no question, not the exact values of U_t(n) for t>=3.",
+  "id": "2208.06629__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.18296,
+  "eur": 0.189509,
+  "elapsed_s": 630.3,
+  "status": "completed",
+  "response_id": "resp_0996b46ad1d88b9b006a965850b6ac87d28157eb000bafa4d8",
+  "when": "2026-09-01T04:55:34Z"
+}

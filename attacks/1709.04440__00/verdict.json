@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The exponent is determined for k=3, and the lower-endpoint exponent is exact for systems with bounded cycle-to-matching ratio, but the unrestricted k>3 gap remains.",
+  "would_publish": false,
+  "caveats": "The high-dimensional case with many off-diagonal cycles is not controlled, so no new exact value for k>3 is proved.",
+  "id": "1709.04440__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.974792,
+  "eur": 1.009684,
+  "elapsed_s": 1046.4,
+  "status": "completed",
+  "response_id": "resp_0b46db0c20416cbd006a9657ea7d3887d29bf3bf8fb7aad398",
+  "when": "2026-09-01T05:00:48Z"
+}

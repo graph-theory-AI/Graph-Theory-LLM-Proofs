@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 162,
+    "score": 3.45,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1802.04179__01",
+    "title_md": "[Informal conjecture on optimality of 11/3](https://arxiv.org/abs/1802.04179)",
+    "paper": "Planar graphs without cycles of length 4 or 5 are (11:3)-colorable",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1802.04179__01/"
+  },
+  "dossier_meta": {
+    "id": "1802.04179__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1802.04179__01/",
+    "arxiv_id": "1802.04179",
+    "tier": 3,
+    "score": 3.45,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Planar graphs without cycles of length 4 or 5 are (11:3)-colorable",
+    "catalog_title": "Informal conjecture on optimality of 11/3",
+    "statement_text": "It is not clear whether the constant $\\frac{11}{3}$ from Theorem 1.1 is the best possible, and we suspect this is not the case.",
+    "context_text": "Immediately after stating Problem 1.3, the authors express their belief that $\\frac{11}{3}$ is not the tight infimum of fractional chromatic numbers for planar graphs without cycles of length 4 or 5, motivating the open problem."
+  },
+  "started": "2026-09-01T04:55:32Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

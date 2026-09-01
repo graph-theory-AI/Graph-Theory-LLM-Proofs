@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the standard adversarial MIS-oracle model, there is a deterministic O(n\u0394 log(en/\u0394)) algorithm, yielding a genuine subcubic saving when 2\u0394 \u2264 n = o(\u0394\u00b2), and any bounded-degree transcript supergraph can be completed in O(D\u00b2) further queries.",
+  "would_publish": false,
+  "caveats": "This does not improve the general regime n much larger than \u0394\u00b2; the elementary lemmas may be folklore, and the argument assumes queries return arbitrary MISs of induced subgraphs.",
+  "id": "2404.03472__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.230192,
+  "eur": 1.274226,
+  "elapsed_s": 1293.9,
+  "status": "completed",
+  "response_id": "resp_037effad45bb1f1f006a9656b701e087d2b385142fe5b1b7fe",
+  "when": "2026-09-01T04:59:48Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The answer is negative: the t=4 case of the cited fixed-length-cycle theorem gives bounded-clique digraphs with unbounded dichromatic number and no odd induced directed cycle.",
+  "would_publish": false,
+  "caveats": "This is a direct corollary of the theorem reported for arXiv:2203.15575, not a new proof of its construction.",
+  "id": "2201.08204__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.1394,
+  "eur": 0.14439,
+  "elapsed_s": 166.8,
+  "status": "completed",
+  "response_id": "resp_09b5ec069f06e704006a9659dd04c087d2aa401c2a3e35040b",
+  "when": "2026-09-01T04:54:27Z"
+}

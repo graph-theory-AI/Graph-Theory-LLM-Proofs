@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 155,
+    "score": 3.5,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "2404.02021__03",
+    "title_md": "[Conjecture 4.7](https://arxiv.org/abs/2404.02021)",
+    "paper": "On off-diagonal hypergraph Ramsey numbers",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2404.02021__03/"
+  },
+  "dossier_meta": {
+    "id": "2404.02021__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2404.02021__03/",
+    "arxiv_id": "2404.02021",
+    "tier": 3,
+    "score": 3.5,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "On off-diagonal hypergraph Ramsey numbers",
+    "catalog_title": "Conjecture 4.7",
+    "statement_text": "There is an absolute constant $C>0$ such that $r(F,K_{n}^{(3)})\\leq 2^{O_{F}(n^{C})}$ for every fixed linear $3$-graph $F$.",
+    "context_text": "Following Theorem 1.4, which disproves the polynomial upper bound for linear $3$-graphs, the authors propose the weaker conjecture that $r(F,K_{n}^{(3)})$ remains subexponential for linear $F$. They note possible further strengthenings (replacing $n^C$ by $n^{o(1)}$ or extending to $123$-inducible $3$-graphs) but are less certain about those variants."
+  },
+  "started": "2026-09-01T05:01:19Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

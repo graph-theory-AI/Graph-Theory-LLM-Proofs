@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full question remains open, but it is equivalent to the rank-width formulation and is FPT on a broad subclass defined by biclique-free prime modular quotients.",
+  "would_publish": false,
+  "caveats": "The additional biclique parameter is unbounded already on prime clique-width-3 half-graphs, and no novelty claim is made.",
+  "id": "1811.12252__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.743528,
+  "eur": 0.770142,
+  "elapsed_s": 1305.1,
+  "status": "completed",
+  "response_id": "resp_0c94ce1ad93dd296006a9654db389487d283ad66929517660a",
+  "when": "2026-09-01T04:52:04Z"
+}

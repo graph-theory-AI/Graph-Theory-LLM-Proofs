@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "For every t at least 6, the Cartesian product G=K_{t-1} square C_{2t-3} is induced-C_{2t-2}-free and every non-edge is the pair of ends of an induced P_{2t-2}.",
+  "would_publish": true,
+  "caveats": "This interprets the undefined H as C_{2t-2}; it proves only the edge-addition half and makes no literature-priority claim.",
+  "id": "2505.24100__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.211984,
+  "eur": 1.255367,
+  "elapsed_s": 1796.0,
+  "status": "completed",
+  "response_id": "resp_0f211a3c3cc84d1f006a9652d8bc6487d28960e5dde6cb9334",
+  "when": "2026-09-01T04:51:40Z"
+}

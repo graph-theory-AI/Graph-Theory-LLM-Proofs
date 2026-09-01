@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 163,
+    "score": 3.45,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2601.15245__02",
+    "title_md": "[Problem 6.2](https://arxiv.org/abs/2601.15245)",
+    "paper": "Coloring small locally sparse degenerate graphs and related problems",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2601.15245__02/"
+  },
+  "dossier_meta": {
+    "id": "2601.15245__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2601.15245__02/",
+    "arxiv_id": "2601.15245",
+    "tier": 3,
+    "score": 3.45,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Coloring small locally sparse degenerate graphs and related problems",
+    "catalog_title": "Problem 6.2",
+    "statement_text": "Is the following statement true for all $\\varepsilon>0$? If $G$ is a $d$-degenerate triangle-free graph with maximum degree $\\Delta(G)\\leq e^{d^{1-\\varepsilon}}$, then we have $\\chi(G)=O\\left(\\frac{d}{\\log d}\\right)$.",
+    "context_text": "Resolving this problem would likely require localizing the random coloring process used in the paper so that the union bound can be replaced by an application of the Lov\u00e1sz Local Lemma. An affirmative answer would imply results on immersion analogues of Hadwiger's conjecture, as conjectured by Lescure and Meyniel in 1988."
+  },
+  "started": "2026-09-01T04:54:28Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

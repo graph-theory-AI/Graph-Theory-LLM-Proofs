@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 164,
+    "score": 3.45,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2203.06775__00",
+    "title_md": "[Conjecture 1.6](https://arxiv.org/abs/2203.06775)",
+    "paper": "Induced subgraphs and tree decompositions IV. (Even hole, diamond, pyra\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2203.06775__00/"
+  },
+  "dossier_meta": {
+    "id": "2203.06775__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2203.06775__00/",
+    "arxiv_id": "2203.06775",
+    "tier": 3,
+    "score": 3.45,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Induced subgraphs and tree decompositions IV. (Even hole, diamond, pyra\u2026",
+    "catalog_title": "Conjecture 1.6",
+    "statement_text": "For all $t > 0$ there exists $c_t \\geq 0$ such that $\\mathrm{tw}(G) \\leq c_t$ for every $G \\in \\mathcal{C}^*_t$.",
+    "context_text": "Here $\\mathcal{C}^*_t$ denotes the class of $(C_4, \\text{diamond}, \\text{theta}, \\text{prism}, \\text{even wheel}, K_t)$-free graphs \u2014 a relaxation of $\\mathcal{C}_t$ in which pyramids are no longer excluded. The authors pose this as a slight generalization of Sintiari\u2013Trotignon's Conjecture 1.5, noting that Theorem 1.4 (the main result of the paper) would serve as the base case if the conjecture could be proved by the same techniques."
+  },
+  "started": "2026-09-01T04:52:04Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
