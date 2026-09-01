@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 66,
+    "score": 3.95,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1608.03040__04",
+    "title_md": "[Open Problem 3](https://arxiv.org/abs/1608.03040)",
+    "paper": "Majority Colourings of Digraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1608.03040__04/"
+  },
+  "dossier_meta": {
+    "id": "1608.03040__04",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1608.03040__04/",
+    "arxiv_id": "1608.03040",
+    "tier": 4,
+    "score": 3.95,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Majority Colourings of Digraphs",
+    "catalog_title": "Open Problem 3",
+    "statement_text": "Does every Eulerian digraph have a majority 3-colouring?",
+    "context_text": "For Eulerian digraphs $G$ where every vertex $v$ has equal in- and out-degree $\\deg(v)$, Lov\u00e1sz's result for undirected graphs gives a majority 4-colouring, and an analogous argument yields a 3-colouring in which each vertex $v$ has at most $\\frac{2}{3}\\deg(v)$ same-colour in-or-out-neighbours, proving a special case of Open Problem 1. Whether a full majority 3-colouring (with $\\frac{1}{2}\\deg^+(v)$) exists for all Eulerian digraphs is open."
+  },
+  "started": "2026-09-01T07:47:33Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

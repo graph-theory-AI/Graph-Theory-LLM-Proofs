@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "medium",
+  "one_line": "Assuming the catalog's stated 2026 result is accurate, polynomial-time recognition puts weightability in P and hence in NP, while independently weightability is equivalent to admitting a 0\u20131 edge set meeting every directed cycle exactly once.",
+  "would_publish": false,
+  "caveats": "The cited 2026 preprint and its bit-model algorithm were not independently checked, and its construction operations are not reproduced here.",
+  "id": "2410.13008__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.7277,
+  "eur": 0.753748,
+  "elapsed_s": 1120.4,
+  "status": "completed",
+  "response_id": "resp_03ead12f91195249006a967eb5bc6c87d294617767a471e206",
+  "when": "2026-09-01T07:47:32Z"
+}
