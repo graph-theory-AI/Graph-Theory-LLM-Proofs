@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For every uniformity, height 1 occurs exactly for partite hypergraphs, all heights from 1 through k are realizable, and suspensions of graphs are classified, but arbitrary k-uniform hypergraphs for k at least 4 remain unclassified.",
+  "would_publish": false,
+  "caveats": "The k=3 case is already settled by the source paper, while the results below are elementary or standard partial reductions rather than a general k at least 4 classification.",
+  "id": "2312.13965__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.673028,
+  "eur": 0.697119,
+  "elapsed_s": 936.0,
+  "status": "completed",
+  "response_id": "resp_02b0f78cb56be8b5006a9663114c1487d28066efe9b8c527b6",
+  "when": "2026-09-01T05:46:32Z"
+}

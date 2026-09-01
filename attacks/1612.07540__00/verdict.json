@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A polynomial bound is known, currently O(h^3), but the linear bound remains open; the reduction below identifies a linear bound for k-outerplanar cover graphs as a sufficient target.",
+  "would_publish": false,
+  "caveats": "No subcubic improvement or counterexample is obtained, and the O(k^3) input is imported from the supplied literature.",
+  "id": "1612.07540__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.806068,
+  "eur": 0.834921,
+  "elapsed_s": 1210.4,
+  "status": "completed",
+  "response_id": "resp_0dc95022e6b800e3006a9661ae0ef087d2a415a5708ec1ddff",
+  "when": "2026-09-01T05:45:12Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "ill_posed",
+  "confidence": "high",
+  "one_line": "The catalog item is a research programme rather than a quantified conjecture; moreover, one natural universal Kendall-tau formulation is false in the canonical sampling model.",
+  "would_publish": false,
+  "caveats": "The negative result below concerns property-independent canonical induced-subpermutation testers, not fixed-property polynomial bounds or adaptive value-query models.",
+  "id": "1611.01270__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.590712,
+  "eur": 0.611856,
+  "elapsed_s": 993.2,
+  "status": "completed",
+  "response_id": "resp_0b2fec0a5567a935006a9663e9ef8c87d2adade7edfe62c7fe",
+  "when": "2026-09-01T05:51:06Z"
+}

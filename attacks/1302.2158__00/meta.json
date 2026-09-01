@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 108,
+    "score": 3.65,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1302.2158__00",
+    "title_md": "[Conjecture 1.7](https://arxiv.org/abs/1302.2158)",
+    "paper": "Three-coloring triangle-free graphs on surfaces II. 4-critical graphs i\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1302.2158__00/"
+  },
+  "dossier_meta": {
+    "id": "1302.2158__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1302.2158__00/",
+    "arxiv_id": "1302.2158",
+    "tier": 4,
+    "score": 3.65,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Three-coloring triangle-free graphs on surfaces II. 4-critical graphs i\u2026",
+    "catalog_title": "Conjecture 1.7",
+    "statement_text": "For every integer $k \\geq 5$, there exists an integer $K$ with the following property. Let $G$ be a planar graph of girth at least five, let $C_1, C_2$ be two cycles in $G$ of lengths at most $k$, and for every $v \\in V(G)$ let $L(v)$ be a set such that $|L(v)| = 1$ if $v \\in V(C_1 \\cup C_2)$ and $|L(v)| \\geq 3$ otherwise. If there exists no proper coloring $\\phi$ of $G$ such that $\\phi(v) \\in L(v)$ for every $v \\in V(G)$, then $G$ has a subgraph $H$ on at most $K$ vertices such that $C_1$ and $C_2$ are subgraphs of $H$ and there exists no proper coloring $\\psi$ of $H$ such that $\\psi(v) \\in L(v)$ for every $v \\in V(H)$.",
+    "context_text": "The conjecture is a list-coloring generalisation of the paper's main result (Theorem 1.6). The authors note that an affirmative answer would imply an analogue of Theorem 1.4 for graphs of girth at least five in the list-coloring setting, and that Luke Postle (private communication) believes he has a proof, though it had not yet been written down at the time of submission."
+  },
+  "started": "2026-09-01T05:46:33Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

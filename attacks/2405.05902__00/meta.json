@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 111,
+    "score": 3.6,
+    "tier": 4,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2405.05902__00",
+    "title_md": "[Problem 1.1](https://arxiv.org/abs/2405.05902)",
+    "paper": "The largest subgraph without a forbidden induced subgraph",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2405.05902__00/"
+  },
+  "dossier_meta": {
+    "id": "2405.05902__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2405.05902__00/",
+    "arxiv_id": "2405.05902",
+    "tier": 4,
+    "score": 3.6,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "The largest subgraph without a forbidden induced subgraph",
+    "catalog_title": "Problem 1.1",
+    "statement_text": "Given a hereditary property $\\mathcal{P}$ which misses a bipartite graph and a $(c,t)$-sparse graph $\\Gamma$, determine $\\mathrm{ex}(\\Gamma,\\mathcal{P})$.",
+    "context_text": "The authors introduce the notion of a $(c,t)$-sparse graph $\\Gamma$ (one where the edge density between any two vertex subsets of size at least $t$ is at most $1-c$), which generalizes both dense random graphs and $K_{t,t}$-free graphs. This problem asks for a unified Tur\u00e1n-type theory covering both settings, extending a question of Alon, Krivelevich, and Samotij on hereditary properties in random graphs."
+  },
+  "started": "2026-09-01T05:44:13Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

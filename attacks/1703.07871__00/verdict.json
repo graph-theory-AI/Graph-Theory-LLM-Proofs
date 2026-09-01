@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains unresolved, but every n-vertex instance satisfies \u03c7(G) \u2264 k(\u230alog\u2082 n\u230b+1), and the problem reduces up to a factor 3k\u22122 to a sharply defined strictly nested subclass.",
+  "would_publish": false,
+  "caveats": "No bound depending only on k and no unbounded-chromatic counterexample is obtained.",
+  "id": "1703.07871__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.33696,
+  "eur": 1.384816,
+  "elapsed_s": 1648.6,
+  "status": "completed",
+  "response_id": "resp_0d6c30fb086793f9006a96604020d087d28fde64e28c2213c8",
+  "when": "2026-09-01T05:46:24Z"
+}

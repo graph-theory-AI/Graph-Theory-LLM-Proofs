@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 106,
+    "score": 3.65,
+    "tier": 4,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1907.12091__00",
+    "title_md": "[Conjecture 2](https://arxiv.org/abs/1907.12091)",
+    "paper": "Bounding the number of cycles in a graph in terms of its degree sequence",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1907.12091__00/"
+  },
+  "dossier_meta": {
+    "id": "1907.12091__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1907.12091__00/",
+    "arxiv_id": "1907.12091",
+    "tier": 4,
+    "score": 3.65,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Bounding the number of cycles in a graph in terms of its degree sequence",
+    "catalog_title": "Conjecture 2",
+    "statement_text": "Every simple graph with $m$ edges has at most $O(\\kappa_1^m)$ cycles, where $\\kappa_1 = (2+2\\sqrt{2})^{1/5} \\approx 1.3701$.",
+    "context_text": "The Arman\u2013Tsaturian construction [2] gives simple graphs with $\\Omega(\\kappa_1^m)$ cycles, which is the best known lower bound. The authors verified by computer several similar constructions and could not find a better one, leading them to conjecture that this construction is optimal. Remark 9 notes that any counterexample would necessarily have average degree in the range $(4.24, 7.18)$."
+  },
+  "started": "2026-09-01T05:51:07Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

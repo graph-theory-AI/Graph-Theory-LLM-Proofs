@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A standard induced-topological extremal theorem reduces the conjecture to an induced-biclique obstruction, proving it for complete-bipartite targets and certain disconnected mixtures.",
+  "would_publish": false,
+  "caveats": "This uses the standard closed radius-two definition and the K\u00fchn\u2013Osthus extremal theorem; arbitrary targets remain open because induced bicliques have bounded \u03c7\u2082.",
+  "id": "1701.05597__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.827256,
+  "eur": 0.856867,
+  "elapsed_s": 1388.2,
+  "status": "completed",
+  "response_id": "resp_00d703f21e35fa22006a9660ad3e5c87d28f1c2a5c929b8b94",
+  "when": "2026-09-01T05:43:53Z"
+}

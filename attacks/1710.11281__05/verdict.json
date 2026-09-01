@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "On closed surfaces, the cited hyperbolic theorem gives cop number exactly two and, together with Gauss\u2013Bonnet and known genus bounds, a genus-independent bound for every constant-curvature metric.",
+  "would_publish": false,
+  "caveats": "Closed compact boundaryless asymptotic game only; exact flat/spherical values and smooth general lower-bound examples are not established here.",
+  "id": "1710.11281__05",
+  "model": "gpt-5.6-sol",
+  "usd": 0.466516,
+  "eur": 0.483215,
+  "elapsed_s": 946.9,
+  "status": "completed",
+  "response_id": "resp_0d5731a0556fdabe006a96627a799c87d2ba0f2b6a15bfa7a8",
+  "when": "2026-09-01T05:44:13Z"
+}

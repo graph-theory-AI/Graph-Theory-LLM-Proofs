@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 107,
+    "score": 3.65,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1710.02727__00",
+    "title_md": "[Conjecture 4](https://arxiv.org/abs/1710.02727)",
+    "paper": "Islands in minor-closed classes. I. Bounded treewidth and separators",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1710.02727__00/"
+  },
+  "dossier_meta": {
+    "id": "1710.02727__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1710.02727__00/",
+    "arxiv_id": "1710.02727",
+    "tier": 4,
+    "score": 3.65,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Islands in minor-closed classes. I. Bounded treewidth and separators",
+    "catalog_title": "Conjecture 4",
+    "statement_text": "A minor-closed class of graphs $\\mathcal{G}$ satisfies $\\mathrm{col}^\\star(\\mathcal{G}) \\leq t$ if and only if there exists $m \\geq 1$ such that $K_{t,m} \\notin \\mathcal{G}$ and $I_{t-1}+P_m \\notin \\mathcal{G}$.",
+    "context_text": "Observation 3 shows that any class $\\mathcal{G}$ with $\\mathrm{col}^\\star(\\mathcal{G}) \\leq t$ can contain only finitely many graphs of the form $K_{t,m}$ or $I_{t-1}+P_m$; the conjecture asserts that this necessary condition is also sufficient for minor-closed classes. Theorem 7 confirms the conjecture for the special case of minor-closed classes of bounded treewidth, and Conjecture 4 would imply $\\chi^\\star_{\\ell}(\\mathcal{G}) = \\mathrm{col}^\\star(\\mathcal{G})$ for every minor-closed class."
+  },
+  "started": "2026-09-01T05:47:37Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

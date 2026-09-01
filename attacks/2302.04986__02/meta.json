@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 112,
+    "score": 3.6,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2302.04986__02",
+    "title_md": "[Conjecture 1.17](https://arxiv.org/abs/2302.04986)",
+    "paper": "Hitting all maximum stable sets in $P_5$-free graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.04986__02/"
+  },
+  "dossier_meta": {
+    "id": "2302.04986__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.04986__02/",
+    "arxiv_id": "2302.04986",
+    "tier": 4,
+    "score": 3.6,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Hitting all maximum stable sets in $P_5$-free graphs",
+    "catalog_title": "Conjecture 1.17",
+    "statement_text": "There exists $d\\in\\mathbb{N}$ such that every $P_{5}$-free graph $G$ satisfies $\\eta(G)\\leq\\omega(G)^{d}$.",
+    "context_text": "A special case of Conjecture 1.16 singled out because of its connection to the Erd\u0151s\u2013Hajnal conjecture: by Theorem 1.6, a polynomial $\\eta$-bound for $P_5$-free graphs would imply the Erd\u0151s\u2013Hajnal conjecture for $P_5$-free graphs. The bound in the paper's main theorem (Theorem 1.12) is super-exponential."
+  },
+  "started": "2026-09-01T05:42:09Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

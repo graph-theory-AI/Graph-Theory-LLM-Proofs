@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "A clique-plus-sparse-random-core construction gives k = Theta(sqrt(n)) and c(H) = Omega(n^(1/4) log n), exceeding sqrt(n/k) by a logarithmic factor.",
+  "would_publish": false,
+  "caveats": "This uses the standard vertex-move game, in which c(H) equals the cop number of the 2-section; any additional source-specific restriction would need checking.",
+  "id": "2307.15512__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.403664,
+  "eur": 1.453908,
+  "elapsed_s": 2018.3,
+  "status": "completed",
+  "response_id": "resp_01343e8e596e0f06006a965ec6aaf487d2b5b2971836f7a873",
+  "when": "2026-09-01T05:46:16Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 110,
+    "score": 3.6,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2009.13319__00",
+    "title_md": "[Problem 1.2](https://arxiv.org/abs/2009.13319)",
+    "paper": "Extension of Gyarfas-Sumner conjecture to digraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2009.13319__00/"
+  },
+  "dossier_meta": {
+    "id": "2009.13319__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2009.13319__00/",
+    "arxiv_id": "2009.13319",
+    "tier": 4,
+    "score": 3.6,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Extension of Gyarfas-Sumner conjecture to digraphs",
+    "catalog_title": "Problem 1.2",
+    "statement_text": "What are the finite sets $\\mathcal{F}$ of digraphs for which the class $\\mathrm{Forb}_{\\mathrm{ind}}(\\mathcal{F})$ has bounded dichromatic number?",
+    "context_text": "This is the central problem of the paper, extending the Gy\u00e1rf\u00e1s-Sumner interrogation to directed graphs via the dichromatic number $\\vec{\\chi}$. A finite set $\\mathcal{F}$ of digraphs is called heroic if $\\mathrm{Forb}_{\\mathrm{ind}}(\\mathcal{F})$ has bounded dichromatic number. The paper focuses primarily on characterizing heroic sets of size three."
+  },
+  "started": "2026-09-01T05:45:12Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

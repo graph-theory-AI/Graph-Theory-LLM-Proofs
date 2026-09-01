@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "Yes: the finite-state bound gives capt_k(G) <= n^{c(G)+1} for every k >= c(G), and hence Schroeder's conjecture immediately yields capt_k(G) <= n^{g+4}.",
+  "would_publish": false,
+  "caveats": "This does not prove Schroeder's conjecture or any sharper surface-specific capture-time bound.",
+  "id": "1709.09050__03",
+  "model": "gpt-5.6-sol",
+  "usd": 0.322172,
+  "eur": 0.333704,
+  "elapsed_s": 651.2,
+  "status": "completed",
+  "response_id": "resp_02dd84c94317ac2a006a96646e42a087d2ae358593516cb78c",
+  "when": "2026-09-01T05:47:37Z"
+}

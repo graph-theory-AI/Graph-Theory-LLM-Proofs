@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "After correcting the malformed asymptotic statement, I recover the missing residue formula, prove the standard adaptive lower bound, and verify the conjectured exponent as optimal for a broad single-core fan strategy class, but unrestricted multicore adaptivity remains open.",
+  "would_publish": false,
+  "caveats": "I interpret the catalog's 2^{o(m)} as p^{o(1)} in the fixed-m, p-to-zero limit; the restricted-strategy result does not prove the conjecture.",
+  "id": "1806.09726__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.776716,
+  "eur": 1.840313,
+  "elapsed_s": 1978.7,
+  "status": "completed",
+  "response_id": "resp_0a6ca2bbfa9f1bde006a96601fb0a487d28ff6bcb4de0011fb",
+  "when": "2026-09-01T05:51:22Z"
+}

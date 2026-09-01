@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 105,
+    "score": 3.65,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1907.01083__00",
+    "title_md": "[Open problem: Combinatorial algorithm for MIS on perfect graphs](https://arxiv.org/abs/1907.01083)",
+    "paper": "The independent set problem is FPT for even-hole-free graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1907.01083__00/"
+  },
+  "dossier_meta": {
+    "id": "1907.01083__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1907.01083__00/",
+    "arxiv_id": "1907.01083",
+    "tier": 4,
+    "score": 3.65,
+    "lean": "prove",
+    "status": "open",
+    "paper": "The independent set problem is FPT for even-hole-free graphs",
+    "catalog_title": "Open problem: Combinatorial algorithm for MIS on perfect graphs",
+    "statement_text": "It remains an open question to find a combinatorial algorithm for the maximum independent set problem on perfect graphs. In fact, we do not even have a combinatorial FPT algorithm for the maximum independent set problem on perfect graphs.",
+    "context_text": "The maximum independent set problem on perfect graphs is solvable in polynomial time via the ellipsoid method, but a combinatorial algorithm (i.e., one not relying on the ellipsoid method) is unknown. This is mentioned as a side remark motivating the study of related graph classes."
+  },
+  "started": "2026-09-01T05:51:22Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

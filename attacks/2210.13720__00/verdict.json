@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds with explicit bounds for chordal graphs, cactus graphs, and more generally graphs whose blocks are chordal or cycles, and it is equivalent to the existence of growth-preserving chordal completions.",
+  "would_publish": false,
+  "caveats": "The general growth-preserving completion step remains open; the argument assumes finite simple graphs and the source paper's hereditary radius-growth definition.",
+  "id": "2210.13720__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.484972,
+  "eur": 1.538126,
+  "elapsed_s": 1878.3,
+  "status": "completed",
+  "response_id": "resp_069f1f4f1c1410cb006a965e5ac77887d28fb70e1ce7f04420",
+  "when": "2026-09-01T05:42:08Z"
+}
