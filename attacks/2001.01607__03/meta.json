@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 418,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2001.01607__03",
+    "title_md": "[Maximum Independent Set complexity for (even hole, K4)-free and (theta,\u2026](https://arxiv.org/abs/2001.01607)",
+    "paper": "(Theta, triangle)-free and (even hole, $K_4$)-free graphs. Part 2 : bou\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2001.01607__03/"
+  },
+  "dossier_meta": {
+    "id": "2001.01607__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2001.01607__03/",
+    "arxiv_id": "2001.01607",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "(Theta, triangle)-free and (even hole, $K_4$)-free graphs. Part 2 : bou\u2026",
+    "catalog_title": "Maximum Independent Set complexity for (even hole, K4)-free and (theta, triangle)-free graphs",
+    "statement_text": "Determine the computational complexity of the Maximum Independent Set problem for (even hole, $K_4$)-free graphs and for (theta, triangle)-free graphs.",
+    "context_text": "Maximum Independent Set is polynomial for (even hole, triangle)-free and (even hole, pyramid)-free graphs. The paper gives polynomial algorithms for (theta, triangle, $S_{i,j,k}$)-free and (even hole, pyramid, $K_t$, $S_{i,j,k}$)-free graphs via bounded treewidth, but the complexity for the larger classes (even hole, $K_4$)-free and (theta, triangle)-free is stated as unknown."
+  },
+  "started": "2026-09-01T01:17:47Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

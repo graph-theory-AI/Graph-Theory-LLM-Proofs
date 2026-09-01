@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For fixed \u2113\u22654, long-hole detection admits an O(n^\u2113) combinatorial algorithm and an n^{\u2113-3+\u03c9+o(1)} algorithm using fast Boolean matrix multiplication, but no analogous improvement is obtained for long odd holes.",
+  "would_publish": false,
+  "caveats": "This is only an additive exponent saving for long holes; \u201csubstantially\u201d is undefined, the odd case remains open, and literature priority has not been checked.",
+  "id": "1904.12273__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.619576,
+  "eur": 0.641754,
+  "elapsed_s": 959.6,
+  "status": "completed",
+  "response_id": "resp_021b23ae865390c1006a962394526c87d2b59201e92993d000",
+  "when": "2026-09-01T01:16:01Z"
+}

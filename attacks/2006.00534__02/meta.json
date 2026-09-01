@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 417,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2006.00534__02",
+    "title_md": "[Question 9](https://arxiv.org/abs/2006.00534)",
+    "paper": "Inverse problems for minimal complements and maximal supplements",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2006.00534__02/"
+  },
+  "dossier_meta": {
+    "id": "2006.00534__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2006.00534__02/",
+    "arxiv_id": "2006.00534",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Inverse problems for minimal complements and maximal supplements",
+    "catalog_title": "Question 9",
+    "statement_text": "What is the optimal function in Theorem 5?",
+    "context_text": "Theorem 5 shows that every non-empty solid subset of a finite abelian group $G$ of size $O((|G|/\\log|G|)^{1/4})$ is a maximal supplement, but it is unclear whether this bound is anywhere near optimal."
+  },
+  "started": "2026-09-01T01:19:13Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

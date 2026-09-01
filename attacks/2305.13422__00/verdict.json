@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full conjecture remains open, but the conjectured bound holds for bounded palettes and low-chromatic color-transition graphs, and one obtains the exact additional case t(2,3)=4.",
+  "would_publish": false,
+  "caveats": "The rainbow condition alone does not bound the transition-graph chromatic number, so the main argument does not extend to general l and k.",
+  "id": "2305.13422__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.90964,
+  "eur": 0.9422,
+  "elapsed_s": 993.2,
+  "status": "completed",
+  "response_id": "resp_0fbe2c291462d707006a96239430c087d2bce0f6aedd5d1d88",
+  "when": "2026-09-01T01:16:35Z"
+}

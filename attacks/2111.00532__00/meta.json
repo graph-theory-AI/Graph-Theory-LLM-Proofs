@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 421,
+    "score": 2.75,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2111.00532__00",
+    "title_md": "[Question 1.3](https://arxiv.org/abs/2111.00532)",
+    "paper": "Pure pairs. IX. Transversal trees",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2111.00532__00/"
+  },
+  "dossier_meta": {
+    "id": "2111.00532__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2111.00532__00/",
+    "arxiv_id": "2111.00532",
+    "tier": 3,
+    "score": 2.75,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Pure pairs. IX. Transversal trees",
+    "catalog_title": "Question 1.3",
+    "statement_text": "Do there exist $c, \\varepsilon > 0$ with the following property? Let $\\mathcal{B} = (B_1, B_2, B_3)$ be a blockade in a graph $G$, and let $W$ be its width. If there is no $\\mathcal{B}$-transversal triangle, then there exist distinct $i, j \\in \\{1, 2, 3\\}$ and $X \\subseteq B_i$ and $Y \\subseteq B_j$, such that $X, Y$ is a pure pair, and $|X|, |Y| \\geq \\varepsilon W^c$.",
+    "context_text": "This is a variant of a conjecture of Conlon, Fox and Sudakov. Settling Question 1.3 was the authors' initial goal, though they were unable to do so. It is also equivalent to the $k=3$ case of Theorem 1.4 (which handles cycles of length $k \\geq 4$), and can be reduced to the sparse case where every vertex in $B_i$ has at most $|B_j|/100$ neighbours in $B_j$ for all distinct $i, j \\in \\{1,2,3\\}$."
+  },
+  "started": "2026-09-01T01:16:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

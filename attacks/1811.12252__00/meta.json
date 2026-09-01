@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 420,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1811.12252__00",
+    "title_md": "[Research Question (Introduction)](https://arxiv.org/abs/1811.12252)",
+    "paper": "Graph Isomorphism for $(H_1,H_2)$-free Graphs: An Almost Complete Dicho\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1811.12252__00/"
+  },
+  "dossier_meta": {
+    "id": "1811.12252__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1811.12252__00/",
+    "arxiv_id": "1811.12252",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Graph Isomorphism for $(H_1,H_2)$-free Graphs: An Almost Complete Dicho\u2026",
+    "catalog_title": "Research Question (Introduction)",
+    "statement_text": "Is it possible to determine the computational complexity of Graph Isomorphism for $(H_1, H_2)$-free graphs for all pairs $H_1, H_2$?",
+    "context_text": "Kratsch and Schweitzer [22] initiated the classification of Graph Isomorphism for $(H_1,H_2)$-free graphs, and Schweitzer [30] later proved that only finitely many cases remain open without specifying them. This question frames the paper's programme to complete the dichotomy."
+  },
+  "started": "2026-09-01T01:16:35Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

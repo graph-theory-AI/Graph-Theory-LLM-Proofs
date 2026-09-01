@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 419,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1505.05637__00",
+    "title_md": "[Open Problem: Expansion vs. Corruption Detection](https://arxiv.org/abs/1505.05637)",
+    "paper": "Distributed Corruption Detection in Networks",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1505.05637__00/"
+  },
+  "dossier_meta": {
+    "id": "1505.05637__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1505.05637__00/",
+    "arxiv_id": "1505.05637",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Distributed Corruption Detection in Networks",
+    "catalog_title": "Open Problem: Expansion vs. Corruption Detection",
+    "statement_text": "There is still a significant gap between the expansion properties that suffice for solving the detection problem (Theorem 1.4) and the conditions in Proposition 1.6 that are necessary for such a solution. It will be interesting to obtain tighter relations between expansion and corruption detection.",
+    "context_text": "Theorem 1.4 shows that strong spectral expansion (Ramanujan-type $(n,d,\\lambda)$-graphs with $\\lambda \\leq 2\\sqrt{d-1}$) suffices for identifying most truthful and corrupt vertices. Proposition 1.6 shows that if removing at most $\\epsilon n$ vertices splits the graph into components of size at most $\\epsilon n$, then no corruption detection is possible. The gap between these two regimes is noted by the authors as an open research direction."
+  },
+  "started": "2026-09-01T01:17:39Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

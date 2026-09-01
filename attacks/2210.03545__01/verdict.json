@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the standard normalization one has R(n) \u2264 2G(n), and a weak converse can be proved only after a very large change of the star parameter; the same-parameter reverse bound remains open.",
+  "would_publish": false,
+  "caveats": "\"Roughly the same order\" is undefined, and the unretrieved 2025 citation is not used.",
+  "id": "2210.03545__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.9264,
+  "eur": 0.95956,
+  "elapsed_s": 1064.8,
+  "status": "completed",
+  "response_id": "resp_0e756509e724e4c0006a962394623087d29f601367583e492d",
+  "when": "2026-09-01T01:17:46Z"
+}

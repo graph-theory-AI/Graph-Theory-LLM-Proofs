@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured bound holds when the 1-skeleton has treewidth O(d), in particular when it is chordal.",
+  "would_publish": false,
+  "caveats": "General d-degenerate skeletons can have arbitrarily larger treewidth, and the argument does not handle them; novelty relative to the literature was not checked.",
+  "id": "2401.00359__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.6288,
+  "eur": 0.651308,
+  "elapsed_s": 1151.3,
+  "status": "completed",
+  "response_id": "resp_00fe1cf3dfcefe8f006a96239454ac87d2b9762af6f910e1b5",
+  "when": "2026-09-01T01:19:13Z"
+}

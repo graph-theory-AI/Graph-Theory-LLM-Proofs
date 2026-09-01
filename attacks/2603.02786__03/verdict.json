@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "Integer-translate packings satisfy M_k(n) >= (6619/10800-o(1))nk^2/ln k when k=o(n), contradicting the conjectured constant 1/2.",
+  "would_publish": false,
+  "caveats": "This uses the intended definition in which all translations are integral; only the first regime is needed for the disproof.",
+  "id": "2603.02786__03",
+  "model": "gpt-5.6-sol",
+  "usd": 0.691848,
+  "eur": 0.716613,
+  "elapsed_s": 1057.2,
+  "status": "completed",
+  "response_id": "resp_0febb31bde66b302006a96239455ac87d2842d183f8409d802",
+  "when": "2026-09-01T01:17:39Z"
+}
