@@ -1,0 +1,15 @@
+{
+  "verdict": "ill_posed",
+  "confidence": "high",
+  "one_line": "The quoted belief has no fixed quantifiers or specified hopper variant, although the natural strong-hopper reading forces a rigid two-unit genus-jump configuration.",
+  "would_publish": false,
+  "caveats": "The conditional reductions below do not decide existence under the source paper's intended conventions.",
+  "id": "2002.00258__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.849116,
+  "eur": 0.87951,
+  "elapsed_s": 973.4,
+  "status": "completed",
+  "response_id": "resp_09ddfc955a4535b3006a9631b3b1e087d2b287387cd53926d6",
+  "when": "2026-09-01T02:16:32Z"
+}

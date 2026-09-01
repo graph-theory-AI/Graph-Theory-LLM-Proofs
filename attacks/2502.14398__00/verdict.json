@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A self-contained argument proves the conjectured converse for all composite n divisible by 2 or 3 and gives stronger structural obstructions, but it does not settle composite n coprime to 6, beginning with n=25.",
+  "would_publish": false,
+  "caveats": "The unresolved case t(25) in {22,23}, and hence the general coprime-to-6 case, remains open.",
+  "id": "2502.14398__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.22116,
+  "eur": 1.264871,
+  "elapsed_s": 1422.3,
+  "status": "completed",
+  "response_id": "resp_0a73aa5752ca2eaa006a963039940887d2beb4bc6be940663c",
+  "when": "2026-09-01T02:17:43Z"
+}

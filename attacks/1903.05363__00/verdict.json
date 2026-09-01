@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For every 2\u2264c\u226412, D_c\u22654c, and D_2 can exceed 8 only through a 2-connected 2-critical graph having no two edge-disjoint Kuratowski subdivisions.",
+  "would_publish": false,
+  "caveats": "The remaining low-Kuratowski-packing, single-block case is not bounded sharply, so none of D_2,\u2026,D_12 is determined exactly.",
+  "id": "1903.05363__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.87354,
+  "eur": 0.904808,
+  "elapsed_s": 981.7,
+  "status": "completed",
+  "response_id": "resp_0a9ac93d63b12a25006a963268c68087d2813db55eb6642d57",
+  "when": "2026-09-01T02:19:42Z"
+}

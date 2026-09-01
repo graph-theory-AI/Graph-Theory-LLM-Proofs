@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 346,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2401.00359__01",
+    "title_md": "[Conjecture 6.2](https://arxiv.org/abs/2401.00359)",
+    "paper": "Ramsey and Tur\u00e1n numbers of sparse hypergraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2401.00359__01/"
+  },
+  "dossier_meta": {
+    "id": "2401.00359__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2401.00359__01/",
+    "arxiv_id": "2401.00359",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Ramsey and Tur\u00e1n numbers of sparse hypergraphs",
+    "catalog_title": "Conjecture 6.2",
+    "statement_text": "There is a constant $c_{k}>0$ such that for every $k$-uniform $k$-partite hypergraph $H$, $\\mathrm{ex}(n,H)\\leq O_{H}\\left(n^{k-\\frac{c_{k}}{d_{\\mathsf{max}}(H)}}\\right).$",
+    "context_text": "Theorem 1.4 gives $\\Omega_{k}(n^{k-C_{k}/d_{1}(H)})\\leq\\operatorname{ex}(n,H)\\leq O_{H}(n^{k-c_{k}/d_{1}(H)^{k-1}})$. The complete $k$-partite hypergraph $K^{(k)}_{d,\\ldots,d}$ shows the upper bound is tight in $d_{1}$, while the bipartite hedgehog $H_{d}^{(k)}$ shows the lower bound is tight in $d_{1}$. This gap motivates replacing $d_{1}(H)$ by the finer quantity $d_{\\mathsf{max}}(H)=\\max_{1\\leq i<k}d_{i}(H)$, and Conjecture 6.2 asserts that the Tur\u00e1n exponent is controlled by $d_{\\mathsf{max}}(H)$."
+  },
+  "started": "2026-09-01T02:17:44Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

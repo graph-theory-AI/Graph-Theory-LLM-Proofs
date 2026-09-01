@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The CAT(0) case is known in every dimension, while cubical inflation and an explicit locally CAT(0) pair show that substantially weaker unrestricted hypotheses cannot suffice.",
+  "would_publish": false,
+  "caveats": "No necessary-and-sufficient characterization is obtained; the all-dimensional CAT(0) theorem is used as reported, and the examples use regular cube complexes with topological boundary vertices.",
+  "id": "2309.04385__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.956904,
+  "eur": 0.991156,
+  "elapsed_s": 1180.9,
+  "status": "completed",
+  "response_id": "resp_05af31b5136c90cc006a96300c380887d289cf9417867be016",
+  "when": "2026-09-01T02:12:56Z"
+}

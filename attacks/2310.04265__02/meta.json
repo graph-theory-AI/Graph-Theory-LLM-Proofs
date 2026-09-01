@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 349,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "2310.04265__02",
+    "title_md": "[Conjecture 3.12](https://arxiv.org/abs/2310.04265)",
+    "paper": "Clique number of tournaments",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2310.04265__02/"
+  },
+  "dossier_meta": {
+    "id": "2310.04265__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2310.04265__02/",
+    "arxiv_id": "2310.04265",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Clique number of tournaments",
+    "catalog_title": "Conjecture 3.12",
+    "statement_text": "Let $k\\geq 1$. The class of tournaments with twin-width at most $k$ is $\\operatorname{\\overrightarrow{\\chi}}$-bounded.",
+    "context_text": "For every integer $k\\geq 2$, the tournament $S_k$ has twin-width $1$ and dichromatic number $k$, so tournaments with bounded twin-width can have arbitrarily large dichromatic number. Nevertheless, the authors conjecture that $\\operatorname{\\overrightarrow{\\chi}}$-boundedness holds. Conjecture 3.13 is presented as a sufficient condition implying this conjecture."
+  },
+  "started": "2026-09-01T02:14:58Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 350,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2310.04265__11",
+    "title_md": "[Conjecture 6.1](https://arxiv.org/abs/2310.04265)",
+    "paper": "Clique number of tournaments",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2310.04265__11/"
+  },
+  "dossier_meta": {
+    "id": "2310.04265__11",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2310.04265__11/",
+    "arxiv_id": "2310.04265",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Clique number of tournaments",
+    "catalog_title": "Conjecture 6.1",
+    "statement_text": "If a class of digraphs $\\mathcal{C}$ is $\\operatorname{\\overrightarrow{\\chi}}$-bounded, then so is its closure under substitution.",
+    "context_text": "In the concluding section the authors generalise Question 3.10 (which asked the same for tournaments) to all digraphs. They note that Theorem 3.3 does not hold for general digraphs, making the digraph setting harder, and discuss partial positive evidence from the tournament case."
+  },
+  "started": "2026-09-01T02:13:44Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

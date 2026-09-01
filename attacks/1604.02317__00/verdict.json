@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The fixed-k conjecture remains unresolved, but stability-two instances are polynomial-time solvable when directed cycle packing, feedback vertex number, or directed circumference is bounded, including an explicit O(n^{2k}) algorithm for acyclic digraphs.",
+  "would_publish": false,
+  "caveats": "No hardness reduction or unrestricted polynomial algorithm is obtained; the unbounded-k interpretation is already NP-complete on tournaments.",
+  "id": "1604.02317__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.751372,
+  "eur": 0.778267,
+  "elapsed_s": 1067.4,
+  "status": "completed",
+  "response_id": "resp_02641e5ffad6ea73006a9631920f1487d2a6f9891ee4e97cf4",
+  "when": "2026-09-01T02:17:33Z"
+}

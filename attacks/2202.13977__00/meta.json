@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 352,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2202.13977__00",
+    "title_md": "[Conjecture 1.5](https://arxiv.org/abs/2202.13977)",
+    "paper": "Pure pairs. X. Tournaments and the strong Erdos-Hajnal property",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.13977__00/"
+  },
+  "dossier_meta": {
+    "id": "2202.13977__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.13977__00/",
+    "arxiv_id": "2202.13977",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Pure pairs. X. Tournaments and the strong Erdos-Hajnal property",
+    "catalog_title": "Conjecture 1.5",
+    "statement_text": "A tournament has the strong EH-property if and only if it admits a numbering for which the backedge graph is a forest.",
+    "context_text": "The paper proves (Theorem 1.4) that the forward direction holds: every tournament with the strong EH-property admits a numbering for which the backedge graph is a forest. The authors initially thought the converse unlikely but failed to find a counterexample. This would be a tournament analogue of Theorem 1.3, which characterises graphs with the strong EH-property as those for which one of $H$ or $\\bar{H}$ is a forest."
+  },
+  "started": "2026-09-01T02:11:21Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

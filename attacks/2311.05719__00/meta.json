@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 348,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2311.05719__00",
+    "title_md": "[Conjecture 1.3](https://arxiv.org/abs/2311.05719)",
+    "paper": "Induced subgraphs and tree decompositions XIV. Non-adjacent neighbours \u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2311.05719__00/"
+  },
+  "dossier_meta": {
+    "id": "2311.05719__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2311.05719__00/",
+    "arxiv_id": "2311.05719",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Induced subgraphs and tree decompositions XIV. Non-adjacent neighbours \u2026",
+    "catalog_title": "Conjecture 1.3",
+    "statement_text": "For every fixed $t \\geq 1$, the family of $t$-clock-free graphs is clean.",
+    "context_text": "A $t$-clock is a clock consisting of a hole $C$ and a vertex $v$ such that there are two neighbours $x, y \\in V(C)$ of $v$ where the distance between $x$ and $y$ along $C$ is at least $t$. The main result of the paper (Theorem 1.1) establishes cleanness for $t = 2$ (all clocks); Conjecture 1.3 proposes that cleanness persists even when clocks with close non-adjacent pairs are allowed, for every fixed threshold $t$."
+  },
+  "started": "2026-09-01T02:16:33Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

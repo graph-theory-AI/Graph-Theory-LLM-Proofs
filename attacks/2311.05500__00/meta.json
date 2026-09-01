@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 345,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2311.05500__00",
+    "title_md": "[Conjecture 1.1](https://arxiv.org/abs/2311.05500)",
+    "paper": "Universality for graphs with bounded density",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2311.05500__00/"
+  },
+  "dossier_meta": {
+    "id": "2311.05500__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2311.05500__00/",
+    "arxiv_id": "2311.05500",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Universality for graphs with bounded density",
+    "catalog_title": "Conjecture 1.1",
+    "statement_text": "For every $d\\in\\mathbb{Q}$, $d>1$, and $n\\in\\mathbb{N}$, there exists a graph $G$ with $$e(G)\\leq Cn^{2-1/d}$$ edges which is $\\mathcal{H}_{d}(n)$-universal, where $C=C(d)$.",
+    "context_text": "The authors initiate the study of universality for graphs with bounded density, unifying earlier results on bounded-degree graphs, forests, and degenerate graphs. They note that a simple counting argument shows $e(G)=o(n^{2-1/d})$ is insufficient, making the conjectured bound tight up to the constant $C$. The paper proves constructions achieving $O_d(n^{2-1/(\\lceil d\\rceil+1)})$ edges, approaching but not yet matching this conjecture."
+  },
+  "started": "2026-09-01T02:19:42Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

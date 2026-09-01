@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "The stated range includes p=1, for which G(n,1-p)=G(n,0) is edgeless and has correspondence chromatic number 1, not \u0398(n/log n).",
+  "would_publish": false,
+  "caveats": "This only refutes the literal endpoint-inclusive formulation; the intended conjecture for 0<p<1 remains open.",
+  "id": "2307.15048__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.1846,
+  "eur": 0.191208,
+  "elapsed_s": 300.3,
+  "status": "completed",
+  "response_id": "resp_0b714769df4438f8006a9633ac4dd887d2a24414b30efaf973",
+  "when": "2026-09-01T02:13:44Z"
+}

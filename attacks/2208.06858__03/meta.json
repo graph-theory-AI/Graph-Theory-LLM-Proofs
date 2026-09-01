@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 351,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "2208.06858__03",
+    "title_md": "[Conjecture 2.8](https://arxiv.org/abs/2208.06858)",
+    "paper": "The success probability in Levine's hat problem, and independent sets i\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2208.06858__03/"
+  },
+  "dossier_meta": {
+    "id": "2208.06858__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2208.06858__03/",
+    "arxiv_id": "2208.06858",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "The success probability in Levine's hat problem, and independent sets i\u2026",
+    "catalog_title": "Conjecture 2.8",
+    "statement_text": "$\\varepsilon^*(\\alpha) > 0$ for all $\\alpha \\in (0, 1/2)$.",
+    "context_text": "Here $\\varepsilon^*(\\alpha) = \\inf_{G:\\,\\bar{\\alpha}(G)\\geq\\alpha}(\\bar{\\alpha}(G) - \\alpha^*(G))$, where $\\alpha^*(G)$ is defined via an optimal partition of $V(G)^r$ and a positively-correlated random-subset distribution with Bernoulli$(1/2)$ marginals. This conjecture would imply Conjecture 2.6 and hence Levine's conjecture."
+  },
+  "started": "2026-09-01T02:12:57Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

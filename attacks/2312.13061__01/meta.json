@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 347,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2312.13061__01",
+    "title_md": "[Conjecture 4](https://arxiv.org/abs/2312.13061)",
+    "paper": "Precoloring extension in planar near-Eulerian-triangulations",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2312.13061__01/"
+  },
+  "dossier_meta": {
+    "id": "2312.13061__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2312.13061__01/",
+    "arxiv_id": "2312.13061",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Precoloring extension in planar near-Eulerian-triangulations",
+    "catalog_title": "Conjecture 4",
+    "statement_text": "For every positive even integer $\\ell$, there exists an integer $d$ such that the following claim holds. Let $G$ be a planar near-Eulerian-triangulation with the outer face bounded by a cycle $C$ of length $\\ell$ and let $U$ be an independent set disjoint from $C$ such that $G-U$ is bipartite. Moreover, suppose that $G-U$ has a set $S$ of $d$ faces of length at least six such that there is no 4-cycle in $G-U$ separating a face of $S$ from the outer face, and for distinct faces $s_{1},s_{2}\\in S$, the distance between $s_{1}$ and $s_{2}$ in $G-U$ is at least $d$ and there is no closed walk of length less than $\\ell$ in $G-U$ separating both $s_{1}$ and $s_{2}$ from the outer face. Then any viable 4-coloring of $C$ extends to a 4-coloring of $G$.",
+    "context_text": "This conjecture captures a 'sufficiently generic' structural condition under which the necessary topological condition for precoloring extension is also sufficient. It is posed as an intermediate step toward Conjecture 3, asserting that when $G-U$ is bipartite and contains sufficiently many well-separated long faces, every viable precoloring of the outer face extends to a full 4-coloring."
+  },
+  "started": "2026-09-01T02:17:33Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
