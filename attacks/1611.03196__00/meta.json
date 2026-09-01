@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 400,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "1611.03196__00",
+    "title_md": "[Conjecture 1.6](https://arxiv.org/abs/1611.03196)",
+    "paper": "Fair representation by independent sets",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1611.03196__00/"
+  },
+  "dossier_meta": {
+    "id": "1611.03196__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1611.03196__00/",
+    "arxiv_id": "1611.03196",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Fair representation by independent sets",
+    "catalog_title": "Conjecture 1.6",
+    "statement_text": "Given a partition of the vertex set of a path into sets $V_1, \\ldots, V_m$ there exists an independent set $S$ and integers $b_i$, $i \\leq m$, such that $|S \\cap V_i| \\geq \\frac{|V_i|}{2} - b_i$ for all $i$, and 1. $\\sum_{i \\leq m} b_i \\leq \\frac{m}{2}$ and 2. $b_i \\leq 1$ for all $i \\leq m$.",
+    "context_text": "The paper proves (Theorem 1.7) that either condition alone holds for the independence complex of a path, but not necessarily both simultaneously. Conjecture 1.6 asserts both conditions can be satisfied at once. The matching complex of a path is the independence complex of a path one vertex shorter."
+  },
+  "started": "2026-09-01T01:29:47Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

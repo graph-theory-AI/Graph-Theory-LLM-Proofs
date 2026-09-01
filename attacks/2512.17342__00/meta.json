@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 405,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2512.17342__00",
+    "title_md": "[Problem 1.1](https://arxiv.org/abs/2512.17342)",
+    "paper": "Nowhere-zero flow reconfiguration",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2512.17342__00/"
+  },
+  "dossier_meta": {
+    "id": "2512.17342__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2512.17342__00/",
+    "arxiv_id": "2512.17342",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Nowhere-zero flow reconfiguration",
+    "catalog_title": "Problem 1.1",
+    "statement_text": "Is it true that for every 2-edge-connected graph $G$, the reconfiguration graph $\\mathcal{F}(G,5)$ is connected?",
+    "context_text": "This is the natural reconfiguration version of Tutte's 5-flow conjecture. The paper notes that Problem 1.1 is incomparable to Tutte's 5-flow conjecture itself, since connectedness of $\\mathcal{F}(G,k)$ does not imply non-emptiness. The group-flow analogue is posed separately as Problem 1.3."
+  },
+  "started": "2026-09-01T01:27:31Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 404,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1908.03788__01",
+    "title_md": "[Question 4.1](https://arxiv.org/abs/1908.03788)",
+    "paper": "Avoidable paths in graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1908.03788__01/"
+  },
+  "dossier_meta": {
+    "id": "1908.03788__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1908.03788__01/",
+    "arxiv_id": "1908.03788",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Avoidable paths in graphs",
+    "catalog_title": "Question 4.1",
+    "statement_text": "Does there exist a family $\\mathcal{H}$ of connected graphs, not containing any path, such that any graph is either $\\mathcal{H}$-free or contains an avoidable element of $\\mathcal{H}$?",
+    "context_text": "Having established avoidable paths of every length, the authors ask whether avoidability extends to other graph structures. They note that even allowing a family rather than a single pattern, no candidate beyond paths seems to survive tests on chordal graphs or simple ad hoc constructions, and that the notion of avoidability for non-path structures is deliberately left open to interpretation."
+  },
+  "started": "2026-09-01T01:27:38Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

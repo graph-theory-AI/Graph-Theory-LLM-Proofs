@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 412,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "2304.03567__01",
+    "title_md": "[Problem 2](https://arxiv.org/abs/2304.03567)",
+    "paper": "Temporalizing digraphs via linear-size balanced bi-trees",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2304.03567__01/"
+  },
+  "dossier_meta": {
+    "id": "2304.03567__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2304.03567__01/",
+    "arxiv_id": "2304.03567",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Temporalizing digraphs via linear-size balanced bi-trees",
+    "catalog_title": "Problem 2",
+    "statement_text": "What is the maximum $c_{b}$ for which every strongly connected directed graph on $n$ vertices has a balanced bi-tree of size at least $c_{b}.n$?",
+    "context_text": "The paper proves $c_{b}\\geq 1/3$ (Theorem 4), where both the out-tree $|T^{+}|$ and in-tree $|T^{-}|$ of the bi-tree each have size at least $n/6$. The exact optimal constant $c_{b}$ is unknown."
+  },
+  "started": "2026-09-01T01:23:29Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

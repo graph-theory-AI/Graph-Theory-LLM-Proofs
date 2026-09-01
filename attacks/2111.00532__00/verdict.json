@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "For the literal statement, there is always an anticomplete pair of size at least floor(sqrt(W)), so c=1/2 and epsilon=1/2 suffice.",
+  "would_publish": false,
+  "caveats": "This uses the standard convention that the width is min_i |B_i|; the reported open status suggests that a stronger requirement may be missing from the extracted statement.",
+  "id": "2111.00532__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.37146,
+  "eur": 0.384756,
+  "elapsed_s": 447.6,
+  "status": "completed",
+  "response_id": "resp_0847b1b817f8851b006a962752131487d2943d29267a302350",
+  "when": "2026-09-01T01:23:29Z"
+}

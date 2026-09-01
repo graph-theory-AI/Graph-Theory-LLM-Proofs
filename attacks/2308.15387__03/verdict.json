@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the natural parallel-edge interpretation, I prove a sharp universal lower bound, characterize equality, and determine several nontrivial exact cases, but not the general minimum.",
+  "would_publish": false,
+  "caveats": "The extracted statement does not specify parallel edges; I count them and interpret containment as E subseteq M.",
+  "id": "2308.15387__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.025136,
+  "eur": 1.061831,
+  "elapsed_s": 1338.2,
+  "status": "completed",
+  "response_id": "resp_0b694420ad57d258006a962394659887d2af01b669fb83b027",
+  "when": "2026-09-01T01:22:20Z"
+}

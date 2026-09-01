@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A general random-activation lemma gives the desired decomposition whenever every cut is crossed by more than 2 log_2(2n) colours, which proves the question for any constant-fraction resilience definition of robust sublinear expansion.",
+  "would_publish": false,
+  "caveats": "The prompt omits the quantitative definition of robust sublinear expander; weaker logarithmic-resilience definitions admit the obstructions described below.",
+  "id": "2309.04460__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.185992,
+  "eur": 1.228444,
+  "elapsed_s": 1478.5,
+  "status": "completed",
+  "response_id": "resp_0c843c1e03866996006a9623943c6487d29b1a307729a42a71",
+  "when": "2026-09-01T01:24:40Z"
+}

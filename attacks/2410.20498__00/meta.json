@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 409,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2410.20498__00",
+    "title_md": "[Conjecture on $\\lambda(d,1)$](https://arxiv.org/abs/2410.20498)",
+    "paper": "On hypercube statistics",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2410.20498__00/"
+  },
+  "dossier_meta": {
+    "id": "2410.20498__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2410.20498__00/",
+    "arxiv_id": "2410.20498",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "On hypercube statistics",
+    "catalog_title": "Conjecture on $\\lambda(d,1)$",
+    "statement_text": "$\\lambda(d,1)=(1+o(1))/e$ where the $o(1)$-term tends to $0$ as $d$ tends to infinity.",
+    "context_text": "The lower bound in Theorem 2, $(1-2^{-d})^{2^{d}-1}$, approaches $e^{-1}\\approx 0.37$ as $d\\to\\infty$. The authors suspect this lower bound is asymptotically sharp, making $1/e$ the true limit of $\\lambda(d,1)$."
+  },
+  "started": "2026-09-01T01:25:28Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

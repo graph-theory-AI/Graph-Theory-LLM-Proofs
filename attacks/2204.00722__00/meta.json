@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 403,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2204.00722__00",
+    "title_md": "[Open Question (unit segment graphs delineation)](https://arxiv.org/abs/2204.00722)",
+    "paper": "Twin-width VIII: delineation and win-wins",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.00722__00/"
+  },
+  "dossier_meta": {
+    "id": "2204.00722__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.00722__00/",
+    "arxiv_id": "2204.00722",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Twin-width VIII: delineation and win-wins",
+    "catalog_title": "Open Question (unit segment graphs delineation)",
+    "statement_text": "Are unit segment graphs delineated (by twin-width)?",
+    "context_text": "The paper establishes that axis-parallel $H_t$-free unit segment graphs have bounded twin-width, while axis-parallel $H_4$-free two-lengthed segment graphs have unbounded twin-width, and that (triangle-free) pure axis-parallel unit segment graphs have unbounded twin-width. This places unit segment graphs at the frontier between delineated and non-delineated intersection graph classes, and the authors explicitly leave their delineation status as an open question."
+  },
+  "started": "2026-09-01T01:28:14Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

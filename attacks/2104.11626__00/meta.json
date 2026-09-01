@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 414,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2104.11626__00",
+    "title_md": "[Informal Conjecture on similar growth of $N_{DFL}(\\varepsilon)$ and $1/\u2026](https://arxiv.org/abs/2104.11626)",
+    "paper": "Removal lemmas and approximate homomorphisms",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2104.11626__00/"
+  },
+  "dossier_meta": {
+    "id": "2104.11626__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2104.11626__00/",
+    "arxiv_id": "2104.11626",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Removal lemmas and approximate homomorphisms",
+    "catalog_title": "Informal Conjecture on similar growth of $N_{DFL}(\\varepsilon)$ and $1/\\delta_{TRL}(\\varepsilon)$",
+    "statement_text": "We suspect that $N_{DFL}(\\varepsilon)$ and $1/\\delta_{TRL}(\\varepsilon)$ have similar growth.",
+    "context_text": "The authors note that the best known lower bound on $N_{DFL}(\\varepsilon)$ has the form $(1/\\varepsilon)^{c\\log(1/\\varepsilon)}$ arising from the Behrend construction, while $1/\\delta_{TRL}(\\varepsilon)$ satisfies $1/\\delta_{TRL}(\\varepsilon) \\leq \\text{tower}(O(\\log(1/\\varepsilon)))$ (Fox [8]). Theorem 1.12 provides supporting evidence: if $N_{DFL}(\\varepsilon)$ grows subexponentially in $\\varepsilon^{-1}$, then so does $1/\\delta_{TRL}(\\varepsilon)$. If the suspected similarity holds, Theorem 1.10 and inequality (1.1) would together give comparable lower and upper bounds on $M_{TFL}(\\varepsilon)$."
+  },
+  "started": "2026-09-01T01:22:20Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

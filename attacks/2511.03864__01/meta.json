@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 407,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2511.03864__01",
+    "title_md": "[Question 5.3](https://arxiv.org/abs/2511.03864)",
+    "paper": "Induced matching treewidth and tree-independence number, revisited",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2511.03864__01/"
+  },
+  "dossier_meta": {
+    "id": "2511.03864__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2511.03864__01/",
+    "arxiv_id": "2511.03864",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Induced matching treewidth and tree-independence number, revisited",
+    "catalog_title": "Question 5.3",
+    "statement_text": "Is it true that for classes of graphs with bounded induced matching treewidth, tree-independence number is bounded from above by a polynomial function of the induced biclique number?",
+    "context_text": "The induced biclique number of $G$ is the largest nonnegative integer $t$ such that $G$ contains an induced subgraph isomorphic to $K_{t,t}$. This question is an equivalent restatement of Question 5.2 using the induced biclique number, and is noted as closely related to recent work bounding tree-independence number in terms of clique-like parameters."
+  },
+  "started": "2026-09-01T01:25:44Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

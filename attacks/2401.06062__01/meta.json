@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 402,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2401.06062__01",
+    "title_md": "[Question 4.28](https://arxiv.org/abs/2401.06062)",
+    "paper": "On prime Cayley graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2401.06062__01/"
+  },
+  "dossier_meta": {
+    "id": "2401.06062__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2401.06062__01/",
+    "arxiv_id": "2401.06062",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "On prime Cayley graphs",
+    "catalog_title": "Question 4.28",
+    "statement_text": "When is $X_{R}$ prime?",
+    "context_text": "$X_R$ denotes the Cayley graph constructed from a finite ring $R$ using its group of units and a connection set derived from the ring structure. This question is the central driving question of Section 4, and is reduced first to the semisimple case (showing non-semisimple $R$ gives non-prime $X_R$) and then to a combinatorial question about tensor products of complete graphs."
+  },
+  "started": "2026-09-01T01:28:30Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

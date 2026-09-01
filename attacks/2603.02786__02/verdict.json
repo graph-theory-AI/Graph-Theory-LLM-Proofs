@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "The conjectured asymptotic is proved when k = Omega(sqrt(n)) and k^2 <= n/2, with a capped prime-square upper bound obtained throughout the full range k < sqrt(n).",
+  "would_publish": false,
+  "caveats": "The range n/2 < k^2 < n remains open, and novelty has not been checked against the complete source text.",
+  "id": "2603.02786__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.37834,
+  "eur": 1.427677,
+  "elapsed_s": 1649.4,
+  "status": "completed",
+  "response_id": "resp_01493d4613b7b9f3006a96239458c487d2a615b3caf8617f53",
+  "when": "2026-09-01T01:27:31Z"
+}

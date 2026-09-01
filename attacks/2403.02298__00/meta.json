@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 411,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2403.02298__00",
+    "title_md": "[Conjecture 3](https://arxiv.org/abs/2403.02298)",
+    "paper": "Minimum acyclic number and maximum dichromatic number of oriented trian\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2403.02298__00/"
+  },
+  "dossier_meta": {
+    "id": "2403.02298__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2403.02298__00/",
+    "arxiv_id": "2403.02298",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Minimum acyclic number and maximum dichromatic number of oriented trian\u2026",
+    "catalog_title": "Conjecture 3",
+    "statement_text": "$\\vec{a}(n)=\\Theta(\\sqrt{n\\log n})$.",
+    "context_text": "The paper establishes $\\left(\\frac{1}{\\sqrt{2}}-\\varepsilon\\right)\\sqrt{n\\log n}\\leq\\vec{a}(n)\\leq\\frac{107}{8}\\sqrt{n}\\log n$, a logarithmic gap between lower and upper bounds. The authors believe the upper bound can be sharpened to $C\\sqrt{n\\log n}$ by analysing a suitable orientation of the triangle-free process $G_{\\triangle}$."
+  },
+  "started": "2026-09-01T01:23:39Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

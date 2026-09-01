@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "A clean four-vertex switching proves non-reconstructibility up to a small constant times n^{-3/4}(log n)^{1/4}, but the reconstructible side remains open.",
+  "would_publish": false,
+  "caveats": "This is one-sided, assumes induced radius-two balls and np/log n tending to infinity, and may overlap the source paper's unstated logarithmic lower bound.",
+  "id": "2211.14218__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.061892,
+  "eur": 1.099902,
+  "elapsed_s": 1607.3,
+  "status": "completed",
+  "response_id": "resp_0ec729985e50a320006a962394b7b887d281d8e59e9e1068a1",
+  "when": "2026-09-01T01:26:49Z"
+}

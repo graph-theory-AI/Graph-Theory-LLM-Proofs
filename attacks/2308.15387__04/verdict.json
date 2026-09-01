@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For s>=1 only r=2s+1, 2s+2, or 2s+3 can occur, with the latter two cases equivalent to sharply constrained halving and Steiner-design existence problems.",
+  "would_publish": false,
+  "caveats": "The residual design-existence cases are not settled here; simple hypergraphs are assumed.",
+  "id": "2308.15387__04",
+  "model": "gpt-5.6-sol",
+  "usd": 1.336488,
+  "eur": 1.384327,
+  "elapsed_s": 1784.9,
+  "status": "completed",
+  "response_id": "resp_07bfee5fb07baa9f006a962394698087d2b630bb30d2a04f62",
+  "when": "2026-09-01T01:29:46Z"
+}

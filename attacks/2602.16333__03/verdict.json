@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open in general, but C=2 holds for every connected vertex-transitive digraph admitting a transitive abelian automorphism group, and more generally for a class of normal-chain Cayley digraphs.",
+  "would_publish": false,
+  "caveats": "The argument does not cover non-Cayley digraphs or general nonabelian Cayley digraphs, and it assumes the intended connected nontrivial formulation.",
+  "id": "2602.16333__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.014336,
+  "eur": 1.050644,
+  "elapsed_s": 1417.8,
+  "status": "completed",
+  "response_id": "resp_01a6ff708de99980006a962394513487d2bb9c7b8167b5d17d",
+  "when": "2026-09-01T01:23:39Z"
+}

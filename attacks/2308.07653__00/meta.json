@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 413,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2308.07653__00",
+    "title_md": "[Open Problem: m(C_t \u00d7 C_s) for all t, s](https://arxiv.org/abs/2308.07653)",
+    "paper": "Connectivity Graph-Codes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.07653__00/"
+  },
+  "dossier_meta": {
+    "id": "2308.07653__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.07653__00/",
+    "arxiv_id": "2308.07653",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Connectivity Graph-Codes",
+    "catalog_title": "Open Problem: m(C_t \u00d7 C_s) for all t, s",
+    "statement_text": "Determine $m(C_t \\times C_s)$ for all $t, s$.",
+    "context_text": "Proposition 3.2 establishes that $m(C_3 \\times C_s) \\leq 8$ for all $s > 36$ (since $K_3 = C_3$), answering a question raised in [6] about whether the connectivity code for large tori is strictly smaller than the trivial edge-connectivity bound $2^4 = 16$. The paper explicitly notes that the broader problem of determining $m(C_t \\times C_s)$ for all $t$ and $s$ remains open."
+  },
+  "started": "2026-09-01T01:23:06Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The unrestricted question is not settled, but exact polynomial solvability is proved for chordal graphs and n^(2k+O(1)) solvability when every vertex has a unique shortest path from u.",
+  "would_publish": false,
+  "caveats": "The general k>=3 case remains; the novelty of the chordal special case has not been checked against the full literature.",
+  "id": "2005.12861__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.042424,
+  "eur": 1.079737,
+  "elapsed_s": 1542.3,
+  "status": "completed",
+  "response_id": "resp_0f482307cb47a2dc006a9623945a0087d2817aeef6d71a5294",
+  "when": "2026-09-01T01:25:44Z"
+}

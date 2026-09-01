@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 410,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2308.15387__01",
+    "title_md": "[Question 4.3](https://arxiv.org/abs/2308.15387)",
+    "paper": "The power of many colours",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.15387__01/"
+  },
+  "dossier_meta": {
+    "id": "2308.15387__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.15387__01/",
+    "arxiv_id": "2308.15387",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "prove",
+    "status": "open",
+    "paper": "The power of many colours",
+    "catalog_title": "Question 4.3",
+    "statement_text": "Given $n$ and $r$, what is the smallest value of $s$ for which $f(n,r,s)=g(n,r,s)$?",
+    "context_text": "After establishing that the functions $f$ and $g$ behave differently for $s\\ll\\frac{\\sqrt{r}}{\\log r}$ and similarly when $s\\geq\\sqrt{r\\log r}$, the authors find it interesting to determine precisely when the two functions start to exhibit different behaviour; Question 4.3 is described as an explicit question in this direction."
+  },
+  "started": "2026-09-01T01:24:40Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

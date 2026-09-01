@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "medium",
+  "one_line": "For the standard unnormalised \u21131 representative discrepancy, the signing h(x_i y_j)=s_j e_i on K_{k,k} forces f_h(M)=k for every perfect matching.",
+  "would_publish": false,
+  "caveats": "The prompt omits the definition of f_h; the counterexample is conclusive if f_h is the unnormalised centred \u21131 error described by the catalog.",
+  "id": "2604.09449__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.744744,
+  "eur": 0.771402,
+  "elapsed_s": 1205.7,
+  "status": "completed",
+  "response_id": "resp_03f7960764ae6e21006a962394572487d296ac0fb9a9425064",
+  "when": "2026-09-01T01:20:07Z"
+}

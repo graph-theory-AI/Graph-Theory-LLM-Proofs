@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 406,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2507.04254__00",
+    "title_md": "[Conjecture 13](https://arxiv.org/abs/2507.04254)",
+    "paper": "On Modular Edge Colourings of Graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2507.04254__00/"
+  },
+  "dossier_meta": {
+    "id": "2507.04254__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2507.04254__00/",
+    "arxiv_id": "2507.04254",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On Modular Edge Colourings of Graphs",
+    "catalog_title": "Conjecture 13",
+    "statement_text": "Let $k$ be a positive integer. For every $0_{k}$-graph $G$ we have $\\chi^{\\prime}_{k}(G)\\leq k+o(k)$.",
+    "context_text": "A $0_k$-graph is a graph whose relevant subgraph structure satisfies a $0\\pmod{k}$ degree condition. If Conjecture 13 holds, the proof strategy of Theorem 2 can be adapted so that a maximal $0_k$-subgraph $H$ of any graph $G$ is coloured with $\\leq k+o(k)$ colours and the remainder (which would then be $(2q(k)-2)$-degenerate) is coloured via Lemma 9, yielding an overall bound approaching $\\chi^{\\prime}_{k}(G)\\leq k+o(k)$ for all graphs."
+  },
+  "started": "2026-09-01T01:26:49Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

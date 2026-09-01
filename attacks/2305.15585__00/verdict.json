@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The problem remains open for d at least 2, but failure forces the sharp bound \u03c7_f(G)\u22642d+1, the case d=1 has exact threshold 4, and a hypothetical d=2 counterexample must have very large girth and order.",
+  "would_publish": false,
+  "caveats": "No bound on ordinary chromatic number is obtained for d\u22652, and some elementary observations may be implicit in the source paper.",
+  "id": "2305.15585__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.331988,
+  "eur": 1.379666,
+  "elapsed_s": 1526.4,
+  "status": "completed",
+  "response_id": "resp_09879714decc21be006a9623945d6487d28dcca7c816c18959",
+  "when": "2026-09-01T01:25:28Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 408,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2511.02892__04",
+    "title_md": "[Problem 5.1](https://arxiv.org/abs/2511.02892)",
+    "paper": "Open problems of the 33rd Workshop on Cycles and Colourings",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2511.02892__04/"
+  },
+  "dossier_meta": {
+    "id": "2511.02892__04",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2511.02892__04/",
+    "arxiv_id": "2511.02892",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Open problems of the 33rd Workshop on Cycles and Colourings",
+    "catalog_title": "Problem 5.1",
+    "statement_text": "If a cubic graph admits a $2$-homogeneous coloring,\nthen $4$ colors are always sufficient.",
+    "context_text": "A $k$-homogeneous coloring is a proper vertex coloring in which exactly $k$ colors appear in the open neighborhood of every vertex. For bipartite cubic graphs it is known that at most 6 colors suffice for a 2-homogeneous coloring; the conjecture asks whether 4 always suffice whenever a 2-homogeneous coloring exists."
+  },
+  "started": "2026-09-01T01:25:36Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

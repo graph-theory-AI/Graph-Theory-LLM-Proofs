@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I do not settle the five classes, but prove bounded clique-width for natural low-independence and split subcases and obtain strong shortest-odd-cycle reductions for the two triangle-free cases.",
+  "would_publish": false,
+  "caveats": "The high-independence cores, short-odd-cycle cases, and unbounded-width cyclic interfaces remain unresolved; no priority claim is made.",
+  "id": "1811.12252__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.161456,
+  "eur": 1.20303,
+  "elapsed_s": 1534.2,
+  "status": "completed",
+  "response_id": "resp_0ff0ba7376fbc20e006a9623945b9c87d29259d3aa4451536d",
+  "when": "2026-09-01T01:25:36Z"
+}

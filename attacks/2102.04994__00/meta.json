@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 416,
+    "score": 2.8,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2102.04994__00",
+    "title_md": "[Erd\u0151s-Hajnal property for $\\{C_8, \\overline{C_8}\\}$](https://arxiv.org/abs/2102.04994)",
+    "paper": "Erdos-Hajnal for graphs with no 5-hole",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2102.04994__00/"
+  },
+  "dossier_meta": {
+    "id": "2102.04994__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2102.04994__00/",
+    "arxiv_id": "2102.04994",
+    "tier": 3,
+    "score": 2.8,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Erdos-Hajnal for graphs with no 5-hole",
+    "catalog_title": "Erd\u0151s-Hajnal property for $\\{C_8, \\overline{C_8}\\}$",
+    "statement_text": "Does $\\{C_8, \\overline{C_8}\\}$ have the Erd\u0151s-Hajnal property?",
+    "context_text": "The paper proves that $\\{C_6, \\overline{C_6}\\}$ (result 1.7) and $\\{C_7, \\overline{C_7}\\}$ (result 1.8) each have the Erd\u0151s-Hajnal property. The authors remark that it would be nice to know whether the same holds for $\\{C_8, \\overline{C_8}\\}$, but that this remains open."
+  },
+  "started": "2026-09-01T01:20:07Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

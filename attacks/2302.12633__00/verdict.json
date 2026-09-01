@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured bounds hold, with matching examples, for the unbounded-treewidth planar class obtained by attaching arbitrary trees to a planar core of quadratic metric growth.",
+  "would_publish": false,
+  "caveats": "This gives no universal improvement for planar graphs whose 2-core has superquadratic or exponential ball growth, and novelty relative to all follow-up literature was not checked.",
+  "id": "2302.12633__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.99592,
+  "eur": 1.031569,
+  "elapsed_s": 1708.2,
+  "status": "completed",
+  "response_id": "resp_0fd8e15a22ea9272006a962394312487d28dea5922338fc8ed",
+  "when": "2026-09-01T01:28:30Z"
+}
