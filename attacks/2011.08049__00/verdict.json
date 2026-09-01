@@ -1,0 +1,16 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The literal average-degree-at-most-6 problem is approximation-preserving equivalent to unrestricted genus, even when the constructed instances are connected, simple, and have minimum degree at least three.",
+  "would_publish": false,
+  "caveats": "This yields neither a constant-factor algorithm nor an inapproximability theorem, and it does not reduce arbitrary graphs to cubic or irreducible 3-connected graphs.",
+  "id": "2011.08049__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.64584,
+  "eur": 0.668958,
+  "elapsed_s": 1509.3,
+  "status": "completed",
+  "response_id": "resp_05c68ce3174dd578006a963ec9760487d28aa244c5ef1b9085",
+  "when": "2026-09-01T03:21:18Z",
+  "recovered": true
+}

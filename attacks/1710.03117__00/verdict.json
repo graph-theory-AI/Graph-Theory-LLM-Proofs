@@ -1,0 +1,16 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds, with an explicit bound, for classes of bounded layered treewidth modulo a bounded exceptional set, and more generally for fractionally treewidth-fragile classes.",
+  "would_publish": false,
+  "caveats": "The general implication from polynomial omega-expansion is not proved, and the unverified 2022 follow-up is not used.",
+  "id": "1710.03117__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.91574,
+  "eur": 0.948519,
+  "elapsed_s": 1243.1,
+  "status": "completed",
+  "response_id": "resp_0acd263a4df67576006a963fd60c9487d29db27b4ee6806d75",
+  "when": "2026-09-01T03:21:21Z",
+  "recovered": true
+}

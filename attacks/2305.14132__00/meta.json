@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 264,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2305.14132__00",
+    "title_md": "[Informal Conjecture (Equality in Theorem 1.1 near the zero-rate thresho\u2026](https://arxiv.org/abs/2305.14132)",
+    "paper": "Set-coloring Ramsey numbers and error-correcting codes near the zero-ra\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2305.14132__00/"
+  },
+  "dossier_meta": {
+    "id": "2305.14132__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2305.14132__00/",
+    "arxiv_id": "2305.14132",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Set-coloring Ramsey numbers and error-correcting codes near the zero-ra\u2026",
+    "catalog_title": "Informal Conjecture (Equality in Theorem 1.1 near the zero-rate threshold)",
+    "statement_text": "We suspect that there may even be equality in Theorem 1.1 when $s$ is sufficiently close to $(1 - 1/q)r$, i.e., $R(q+1; r, s) = A_q(r, s) + 1$, though our methods fall somewhat short of proving this.",
+    "context_text": "Theorem 1.1 (from prior work [7]) establishes the lower bound $R(q+1; r, s) \\geq A_q(r, s) + 1$ for all positive integers $q, r, s$ with $r > s$. The current paper proves Theorem 1.2, an upper bound showing $R(q+1; r, s) \\leq (1+\\epsilon)A_q(r, s - cj)$ when $s$ is close to $(1-1/q)r$, but the gap between lower and upper bounds remains. The authors conjecture the lower bound is essentially sharp in this intermediate regime."
+  },
+  "started": "2026-09-01T03:21:18Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

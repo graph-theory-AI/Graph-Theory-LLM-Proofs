@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 267,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2304.04246__00",
+    "title_md": "[Problem 1](https://arxiv.org/abs/2304.04246)",
+    "paper": "On the choosability of $H$-minor-free graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2304.04246__00/"
+  },
+  "dossier_meta": {
+    "id": "2304.04246__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2304.04246__00/",
+    "arxiv_id": "2304.04246",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On the choosability of $H$-minor-free graphs",
+    "catalog_title": "Problem 1",
+    "statement_text": "Characterize the class $\\mathcal{H}$ of graphs $H$ such that $f_\\ell(H') = v(H')-1$ for all $H' \\subseteq H$.",
+    "context_text": "The authors ask for a structural characterization of graphs $H$ for which the list chromatic number of $H$-minor-free graphs matches the trivial lower bound $v(H)-1$. The problem is posed in the spirit of perfect graph theory, seeking the largest subgraph-closed class with this property; the paper's main results (Theorems 2 and 4) strongly limit the horizon for positive instances."
+  },
+  "started": "2026-09-01T03:21:17Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

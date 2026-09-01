@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 262,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2301.08707__00",
+    "title_md": "[Problem 3](https://arxiv.org/abs/2301.08707)",
+    "paper": "Separating the edges of a graph by a linear number of paths",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2301.08707__00/"
+  },
+  "dossier_meta": {
+    "id": "2301.08707__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2301.08707__00/",
+    "arxiv_id": "2301.08707",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Separating the edges of a graph by a linear number of paths",
+    "catalog_title": "Problem 3",
+    "statement_text": "Does every graph on $n$ vertices admit a strongly-separating path system of size $2n$?",
+    "context_text": "The upper bound of $19n$ from Theorem 2 is likely far from optimal. Balogh et al. showed that the complete bipartite graph $K_{\\varepsilon n,(1-\\varepsilon)n}$ cannot be strongly separated by fewer than $2(1-2\\varepsilon)n$ paths, but no graph with a larger lower bound is known, suggesting the optimal constant might be $2$."
+  },
+  "started": "2026-09-01T03:21:17Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full programme remains open, but the sparse appearance threshold is Poisson for every fixed strictly balanced graph, while cherries admit an exact zero-tail rate and a rigorous localized moderate-upper-tail mechanism in G(n,m).",
+  "would_publish": false,
+  "caveats": "The catalog sentence is not a quantified conjecture, and the results below cover only endpoint and special-graph regimes.",
+  "id": "1902.06830__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.947784,
+  "eur": 0.98171,
+  "elapsed_s": 941.2,
+  "status": "completed",
+  "response_id": "resp_0457dbf8e27408d8006a9642ccba6c87d2a192366c448c3796",
+  "when": "2026-09-01T03:28:57Z",
+  "recovered": true
+}

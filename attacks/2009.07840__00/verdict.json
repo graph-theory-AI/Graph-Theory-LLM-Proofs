@@ -1,0 +1,16 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A self-contained packing argument places the isolated-state threshold between asymptotically sqrt(log n/(2n)) and sqrt(2 log n/n), but it does not show that absence of isolated states implies connectivity.",
+  "would_publish": false,
+  "caveats": "The conjecture is informal, and the packing lower bound may overlap the cited follow-up literature; no sharp connectivity result is obtained.",
+  "id": "2009.07840__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.83414,
+  "eur": 0.863998,
+  "elapsed_s": 1274.3,
+  "status": "completed",
+  "response_id": "resp_08b37366a4b395d6006a963fb5c54c87d2bb84d141378ab992",
+  "when": "2026-09-01T03:21:19Z",
+  "recovered": true
+}

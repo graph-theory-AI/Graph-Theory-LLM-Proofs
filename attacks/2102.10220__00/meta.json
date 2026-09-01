@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 275,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2102.10220__00",
+    "title_md": "[Conjecture on sharpness of Theorem 1.1](https://arxiv.org/abs/2102.10220)",
+    "paper": "Making an $H$-Free Graph $k$-Colorable",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2102.10220__00/"
+  },
+  "dossier_meta": {
+    "id": "2102.10220__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2102.10220__00/",
+    "arxiv_id": "2102.10220",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Making an $H$-Free Graph $k$-Colorable",
+    "catalog_title": "Conjecture on sharpness of Theorem 1.1",
+    "statement_text": "For each integer $r \\geq 3$ there is $c_r$ such that for all positive integers $n, k$ with $n$ sufficiently large in terms of $k$, $$h(n, k, K_r) = \\Theta_r\\!\\left(\\frac{n^2}{k^{(r-1)/(r-2)}}\\right),$$ i.e., the upper bound $h(n, k, K_r) \\leq c_r \\dfrac{n^2}{k^{(r-1)/(r-2)}}$ is tight up to the constant factor $c_r$.",
+    "context_text": "Theorem 1.1 establishes the upper bound $h(n,k,K_r) \\leq c_r n^2/k^{(r-1)/(r-2)}$ for all $r \\geq 3$. The authors prove the matching lower bound for $r=3$ and conjecture the bound is sharp for all $r \\geq 3$."
+  },
+  "started": "2026-09-01T03:21:17Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

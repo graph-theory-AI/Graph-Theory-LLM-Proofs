@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "For (x,y)=(2/5,1/4), an explicit 5-5-4 tripartite graph gives \u03c6(x,y)=2/5, while every proposed ceiling expression is at least 1/2.",
+  "would_publish": false,
+  "caveats": "This addresses exactly the one-sided definition of \u03c6 quoted in the question; a biconstrained variant would be a different problem.",
+  "id": "1902.10878__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.374292,
+  "eur": 0.38769,
+  "elapsed_s": 560.7,
+  "status": "completed",
+  "response_id": "resp_0aff6cff901274cc006a9644af74b087d297cba0b7ece33a76",
+  "when": "2026-09-01T03:30:38Z"
+}

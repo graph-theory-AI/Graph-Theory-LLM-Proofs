@@ -1,0 +1,16 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every hypothetical counterexample has a crossing K4 and at least six degree-five noncrossing vertices, yielding an exact curvature inequality and proving the strengthened degree-at-least-six case.",
+  "would_publish": false,
+  "caveats": "The sharp degree-five case remains open, and these elementary structural reductions may overlap with the source paper.",
+  "id": "2504.08327__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.448624,
+  "eur": 1.500477,
+  "elapsed_s": 1720.7,
+  "status": "completed",
+  "response_id": "resp_02312ec3a9d63054006a963f2a232c87d29cca447c4321e88a",
+  "when": "2026-09-01T03:26:26Z",
+  "recovered": true
+}

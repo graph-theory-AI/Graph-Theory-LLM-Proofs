@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 266,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2307.02816__01",
+    "title_md": "[Question 2](https://arxiv.org/abs/2307.02816)",
+    "paper": "The grid-minor theorem revisited",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2307.02816__01/"
+  },
+  "dossier_meta": {
+    "id": "2307.02816__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2307.02816__01/",
+    "arxiv_id": "2307.02816",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "The grid-minor theorem revisited",
+    "catalog_title": "Question 2",
+    "statement_text": "Is there a function $f$ such that for every graph $X$ there exists a function $c$ such that for every positive integer $t$ and for every graph $G$ with $\\operatorname{tw}(G)<t$ that does not contain $X$ as a topological minor, there exists a graph $H$ of treewidth at most $f(\\operatorname{td}(X))$ such that $G\\mathrel{\\ooalign{\\raise 0.75348pt\\hbox{$\\subset$}\\cr\\raise-3.87495pt\\hbox{\\scalebox{0.9}{$\\sim$}}\\cr}}H\\boxtimes K_{c(t)}$?",
+    "context_text": "This question asks whether Theorem 2 can be extended from the excluded-minor setting to the excluded-topological-minor setting. Campbell et al. proved a weaker version with $\\operatorname{tw}(H)\\leqslant|V(X)|$, and that bound is tight for complete graphs."
+  },
+  "started": "2026-09-01T03:21:18Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

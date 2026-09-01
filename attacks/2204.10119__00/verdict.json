@@ -1,0 +1,16 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is proved here for 6-regular graphs of order at most 10, for those of girth at least five with a quantitative short-cycle extension, and for all 6-regular line graphs.",
+  "would_publish": false,
+  "caveats": "The dense short-cycle, non-line-graph case remains open, and the literature novelty of these partial results has not been checked.",
+  "id": "2204.10119__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.056492,
+  "eur": 1.094309,
+  "elapsed_s": 1755.6,
+  "status": "completed",
+  "response_id": "resp_0705170c46666ec0006a963dd1551487d28ef616832866b128",
+  "when": "2026-09-01T03:21:16Z",
+  "recovered": true
+}

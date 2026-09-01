@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 270,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2108.00991__00",
+    "title_md": "[Conjecture 3](https://arxiv.org/abs/2108.00991)",
+    "paper": "Threshold Ramsey multiplicity for paths and even cycles",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2108.00991__00/"
+  },
+  "dossier_meta": {
+    "id": "2108.00991__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2108.00991__00/",
+    "arxiv_id": "2108.00991",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Threshold Ramsey multiplicity for paths and even cycles",
+    "catalog_title": "Conjecture 3",
+    "statement_text": "For sufficiently large $k$, if $k$ is even, then $m(P_k) = k!/2$ and if $k$ is odd, then $m(P_k) = \\frac{k-1}{4}(k-1)!$.",
+    "context_text": "The authors identify specific extremal colorings $\\chi(a_0, b_0)$ of $K_{r(P_k)}$ that achieve exact counts of monochromatic $P_k$, demonstrating tightness of Theorem 2 up to the constant $c$. These colorings are believed to realize the threshold Ramsey multiplicity for all sufficiently large $k$."
+  },
+  "started": "2026-09-01T03:21:18Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

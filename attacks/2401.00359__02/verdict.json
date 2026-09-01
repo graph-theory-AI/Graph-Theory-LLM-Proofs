@@ -1,0 +1,16 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The unrestricted upper bound remains open, but one obtains an explicit lower bound \u03a9_d(n^{3-2/(d+1)}) and the conjectured exponent for hosts whose link graphs have small inclusion width.",
+  "would_publish": false,
+  "caveats": "No unrestricted n^{3-c/d} upper bound is proved; novelty of the elementary structural lemma is not asserted, and d=1 is exceptional.",
+  "id": "2401.00359__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.10864,
+  "eur": 1.148324,
+  "elapsed_s": 1695.1,
+  "status": "completed",
+  "response_id": "resp_056941140cf8b752006a963e0e6df887d2be82ea4bfa52f56e",
+  "when": "2026-09-01T03:21:17Z",
+  "recovered": true
+}

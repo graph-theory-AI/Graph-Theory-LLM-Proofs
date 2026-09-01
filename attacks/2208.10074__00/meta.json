@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 263,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2208.10074__00",
+    "title_md": "[Conjecture (product structure with bounded tree-depth and tight clique \u2026](https://arxiv.org/abs/2208.10074)",
+    "paper": "Product structure of graph classes with strongly sublinear separators",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2208.10074__00/"
+  },
+  "dossier_meta": {
+    "id": "2208.10074__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2208.10074__00/",
+    "arxiv_id": "2208.10074",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Product structure of graph classes with strongly sublinear separators",
+    "catalog_title": "Conjecture (product structure with bounded tree-depth and tight clique size)",
+    "statement_text": "For any hereditary graph class $\\mathcal{G}$ that admits $O(n^{1-\\epsilon})$ separators, every $n$-vertex graph in $\\mathcal{G}$ is a subgraph of the strong product of a graph $H$ with bounded tree-depth and a complete graph of size $O(n^{1-\\epsilon})$.",
+    "context_text": "The abstract states that the paper investigates this conjecture. The proven results in the paper achieve the conclusion either with an extra $n^{\\delta}$ factor in the clique size (for $H$ with constant tree-depth, any fixed $\\delta\\in(0,\\epsilon)$) or with tree-depth $O(\\log\\log n)$ for $H$ when $\\delta=0$; moreover, both limitations are shown to be best possible via isoperimetric inequalities for grid graphs. The conjecture in its strongest form \u2014 constant tree-depth of $H$ with clique size exactly $O(n^{1-\\epsilon})$ \u2014 is investigated but not fully resolved."
+  },
+  "started": "2026-09-01T03:21:17Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For fixed c the exponent is already determined by maximal cliques of order at most c; in particular, the c=3 case reduces exactly to counting maximal triangles, for which a sharp n^{3/2} special case and a structural derivation of the n^{7/4} barrier are proved.",
+  "would_publish": false,
+  "caveats": "The worst-case exponent is not improved; the remaining obstruction is maximal triangles with moderately large, globally compatible edge books.",
+  "id": "1804.07431__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.715728,
+  "eur": 1.777142,
+  "elapsed_s": 1723.4,
+  "status": "completed",
+  "response_id": "resp_01f2681c3eb3b617006a963fde9e8887d2acdf7e9a3b27c804",
+  "when": "2026-09-01T03:29:29Z",
+  "recovered": true
+}

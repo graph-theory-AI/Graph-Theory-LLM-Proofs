@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The source paper itself proves polynomial bounds for the homothet and ball-like cases and gives an exponential counterexample for comparable boxes in dimension three.",
+  "would_publish": false,
+  "caveats": "The conclusion fixes the geometric parameters as in the source; any restriction excluding the three-dimensional comparable-box construction is a different question.",
+  "id": "2103.17094__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.279256,
+  "eur": 0.289252,
+  "elapsed_s": 402.0,
+  "status": "completed",
+  "response_id": "resp_0c21490c39d1115c006a9644af678887d2a23b510a27436295",
+  "when": "2026-09-01T03:27:59Z"
+}

@@ -1,0 +1,16 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the intended independent-pair notation, I exhibit a four-tournament jointly heroic family with bound two and derive a canonical necessary condition for every heroic family, but do not classify all minimal subfamilies.",
+  "would_publish": false,
+  "caveats": "Literally using a directed edge instead of an independent pair makes the problem trivial; the four-pattern family is not proved inclusion-minimal.",
+  "id": "2009.13319__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.140296,
+  "eur": 1.181113,
+  "elapsed_s": 1144.9,
+  "status": "completed",
+  "response_id": "resp_024ea062207b0fc2006a96406fb2c887d2ab1286a225116808",
+  "when": "2026-09-01T03:22:15Z",
+  "recovered": true
+}

@@ -1,0 +1,16 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A Shearer-polynomial argument gives the rigorous bound HG(G(n,1/2)) <= (0.67201+o(1))n with high probability, but does not prove o(n).",
+  "would_publish": false,
+  "caveats": "The main sublinearity question remains open, and the literature novelty of this constant-factor improvement has not been checked.",
+  "id": "2107.05995__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.822128,
+  "eur": 0.851556,
+  "elapsed_s": 1266.8,
+  "status": "completed",
+  "response_id": "resp_0b04e00c4c0d3c6c006a963fbdf06487d2a5f64df4fd819ac6",
+  "when": "2026-09-01T03:21:19Z",
+  "recovered": true
+}

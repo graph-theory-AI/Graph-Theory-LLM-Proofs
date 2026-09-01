@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 284,
+    "score": 3.1,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2110.15429__00",
+    "title_md": "[Conjecture (Section 7)](https://arxiv.org/abs/2110.15429)",
+    "paper": "Discrepancy of arithmetic progressions in grids",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2110.15429__00/"
+  },
+  "dossier_meta": {
+    "id": "2110.15429__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2110.15429__00/",
+    "arxiv_id": "2110.15429",
+    "tier": 3,
+    "score": 3.1,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Discrepancy of arithmetic progressions in grids",
+    "catalog_title": "Conjecture (Section 7)",
+    "statement_text": "The lower bound for the discrepancy of arithmetic progressions in grids given in Theorem 1.3 is tight up to the constant factor, i.e., for any positive integer $d$ and $N = (N_1, \\ldots, N_d)$ with $N_1 \\cdots N_d \\geq 3$, $$\\mathrm{disc}(\\mathcal{A}_N) = \\Theta_d\\!\\left(\\max_{I \\subseteq [d]} \\left(\\prod_{i \\in I} N_i\\right)^{\\frac{1}{2|I|+2}}\\right).$$",
+    "context_text": "Theorem 1.3 establishes matching lower and upper bounds for the discrepancy of arithmetic progressions in general grids of differing side lengths, but the upper bound carries an extra sub-logarithmic factor $\\frac{\\log(N_1 \\cdots N_d)}{\\log\\log(N_1 \\cdots N_d)}$ relative to the lower bound. The authors conjecture in their concluding remarks (Section 7) that this gap is an artifact of the proof and the lower bound is in fact tight up to a constant depending only on $d$."
+  },
+  "started": "2026-09-01T03:21:17Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

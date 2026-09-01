@@ -1,0 +1,16 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but two disjoint models suffice for k at most 4, and for every k they suffice whenever the two models have five disjoint connecting paths, hence in every 5-connected graph.",
+  "would_publish": false,
+  "caveats": "The 3-connected case for k at least 5 remains unresolved; novelty of these elementary partial results has not been checked.",
+  "id": "2002.00496__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.417776,
+  "eur": 1.468525,
+  "elapsed_s": 1899.9,
+  "status": "completed",
+  "response_id": "resp_0c32a4bd0d620a42006a963d40316487d2936548c21e2a07de",
+  "when": "2026-09-01T03:21:15Z",
+  "recovered": true
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 279,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1912.07965__00",
+    "title_md": "[Open Problem (edge-EP property characterization for planar graph expans\u2026](https://arxiv.org/abs/1912.07965)",
+    "paper": "Erd\u0151s-P\u00f3sa from ball packing",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1912.07965__00/"
+  },
+  "dossier_meta": {
+    "id": "1912.07965__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1912.07965__00/",
+    "arxiv_id": "1912.07965",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Erd\u0151s-P\u00f3sa from ball packing",
+    "catalog_title": "Open Problem (edge-EP property characterization for planar graph expansions)",
+    "statement_text": "Finding a characterization for the planar graphs $J$ such that $J$-expansions have the edge-Erd\\H{o}s-P\\'osa property remains an intriguing open problem.",
+    "context_text": "Robertson and Seymour showed that $J$-expansions have the vertex-EP property if and only if $J$ is planar. By contrast, it was shown in [4] that there exist planar graphs $J$ \u2014 in particular sufficiently large ladders and subcubic trees with sufficiently large pathwidth \u2014 for which $J$-expansions do not have the edge-EP property. The precise characterization of which planar $J$ yield the edge-EP property is unknown."
+  },
+  "started": "2026-09-01T03:21:17Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

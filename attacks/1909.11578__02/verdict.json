@@ -1,0 +1,16 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "A cyclically invariant family defined by comparing the longest cyclic runs inside a support and its complement is intersecting and has only polynomially small density.",
+  "would_publish": false,
+  "caveats": "This uses the source definition of symmetry as invariance under a transitive coordinate group; the construction is not invariant under the full symmetric group.",
+  "id": "1909.11578__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.642624,
+  "eur": 0.665627,
+  "elapsed_s": 1227.2,
+  "status": "completed",
+  "response_id": "resp_0cbbfd606b4300dc006a963fe7028487d29532a9c9f9364685",
+  "when": "2026-09-01T03:21:22Z",
+  "recovered": true
+}

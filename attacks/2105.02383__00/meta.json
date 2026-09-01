@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 283,
+    "score": 3.1,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2105.02383__00",
+    "title_md": "[Open problem on parameters governing $\\overrightarrow{r}_1(H)$](https://arxiv.org/abs/2105.02383)",
+    "paper": "Ramsey numbers of sparse digraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2105.02383__00/"
+  },
+  "dossier_meta": {
+    "id": "2105.02383__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2105.02383__00/",
+    "arxiv_id": "2105.02383",
+    "tier": 3,
+    "score": 3.1,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Ramsey numbers of sparse digraphs",
+    "catalog_title": "Open problem on parameters governing $\\overrightarrow{r}_1(H)$",
+    "statement_text": "What natural parameters (analogous to degeneracy and vertex count for undirected graphs) determine the growth order of $\\overrightarrow{r}_1(H)$ for acyclic digraphs? In particular, is $\\overrightarrow{r}_1(H)$ polynomial or super-polynomial in $n$ when $H$ has bounded degree?",
+    "context_text": "For undirected graphs, the Ramsey number is governed by degeneracy and vertex count (Conlon\u2013Fox\u2013Sudakov conjecture, verified up to a $\\log^2 d$ factor). The authors introduce the notion of 'multiscale complexity' as a candidate parameter for the directed setting, but stress that the full picture remains unresolved and deserves further research."
+  },
+  "started": "2026-09-01T03:21:17Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

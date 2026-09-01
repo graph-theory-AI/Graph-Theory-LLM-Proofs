@@ -142,10 +142,6 @@ def main() -> None:
 
     client = OpenAI(timeout=120)
     mapping = match_ids(client)
-    (A.ATTACKS / "inflight-recover.json").write_text(
-        json.dumps({"when": A.utc_now(), "pid": os.getpid(), "mapping": mapping}, indent=2)
-        + "\n"
-    )
     pid = os.getpid()
     for rec_id in mapping:
         dest = A.ATTACKS / rec_id
@@ -154,6 +150,10 @@ def main() -> None:
             json.dumps({"id": rec_id, "pid": pid, "when": A.utc_now(), "recover": True}, indent=2)
             + "\n"
         )
+    (A.ATTACKS / "inflight-recover.json").write_text(
+        json.dumps({"when": A.utc_now(), "pid": pid, "mapping": mapping}, indent=2)
+        + "\n"
+    )
 
     pending = dict(mapping)
     while pending:

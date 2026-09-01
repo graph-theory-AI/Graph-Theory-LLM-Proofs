@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 268,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2202.07746__00",
+    "title_md": "[Conjecture 4](https://arxiv.org/abs/2202.07746)",
+    "paper": "Expected number of faces in a random embedding of any graph is at most \u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.07746__00/"
+  },
+  "dossier_meta": {
+    "id": "2202.07746__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.07746__00/",
+    "arxiv_id": "2202.07746",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Expected number of faces in a random embedding of any graph is at most \u2026",
+    "catalog_title": "Conjecture 4",
+    "statement_text": "For any simple graph $G$ of order $n$, $E[F] \\leq \\frac{1}{3}n + 1$.",
+    "context_text": "The paper proves $E[F] \\leq \\frac{\\pi^2}{6}n$ for simple graphs (Theorem 8), but no examples approaching this constant are known. A chain of triangles connected by cut edges achieves $E[F] = \\frac{1}{3}n+1$, which the authors conjecture is the true optimal bound."
+  },
+  "started": "2026-09-01T03:21:17Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 261,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2302.02995__00",
+    "title_md": "[Open Problem: sharpness of the treedepth bound in Theorem 1](https://arxiv.org/abs/2302.02995)",
+    "paper": "Tight bound on treedepth in terms of pathwidth and longest path",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.02995__00/"
+  },
+  "dossier_meta": {
+    "id": "2302.02995__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.02995__00/",
+    "arxiv_id": "2302.02995",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Tight bound on treedepth in terms of pathwidth and longest path",
+    "catalog_title": "Open Problem: sharpness of the treedepth bound in Theorem 1",
+    "statement_text": "Whether the bound $O(thb)$ in Theorem 1 \u2014 that every graph of treewidth less than $t$ with no complete binary tree of height $h$ as a minor and no $2^b$-vertex path has treedepth $O(thb)$ \u2014 can be improved remains an open problem.",
+    "context_text": "Theorems 2 and 3 together imply Theorem 1, and their individual bounds are each sharp up to constant factors. However, it is unknown whether the combined bound $O(thb)$ in Theorem 1 is optimal or can be reduced."
+  },
+  "started": "2026-09-01T03:21:17Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

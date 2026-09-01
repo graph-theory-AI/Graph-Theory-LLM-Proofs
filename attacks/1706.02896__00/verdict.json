@@ -1,0 +1,16 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Diplanarity admits an exact bipartite-interlacement test, and the circulant digraphs with arcs i\u2192i\u22121 and i\u2192i+2 form an infinite family of simple obstructions for odd order.",
+  "would_publish": false,
+  "caveats": "The arbitrary obstruction case remains, and these structural facts or examples may already be known in this specialized literature.",
+  "id": "1706.02896__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.915048,
+  "eur": 0.947802,
+  "elapsed_s": 1422.0,
+  "status": "completed",
+  "response_id": "resp_007f7a0aeea6711a006a963fcc09c487d2a19bbf3361fe019a",
+  "when": "2026-09-01T03:24:09Z",
+  "recovered": true
+}

@@ -1,0 +1,16 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The n^(5/2) conjecture holds for every H admitting a homeomorphic triangulation whose facets are met by two fixed vertices, but this does not cover arbitrary H.",
+  "would_publish": false,
+  "caveats": "Only targets with topological triangle-transversal number at most two are covered; the torus and general targets remain open.",
+  "id": "2004.02657__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.914692,
+  "eur": 0.947433,
+  "elapsed_s": 979.1,
+  "status": "completed",
+  "response_id": "resp_09ded04df474680f006a9642d2ab2487d2bfe1c01386df44a7",
+  "when": "2026-09-01T03:29:41Z",
+  "recovered": true
+}

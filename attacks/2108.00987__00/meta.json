@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 273,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2108.00987__00",
+    "title_md": "[Conjecture 4](https://arxiv.org/abs/2108.00987)",
+    "paper": "Threshold Ramsey multiplicity for odd cycles",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2108.00987__00/"
+  },
+  "dossier_meta": {
+    "id": "2108.00987__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2108.00987__00/",
+    "arxiv_id": "2108.00987",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Threshold Ramsey multiplicity for odd cycles",
+    "catalog_title": "Conjecture 4",
+    "statement_text": "For any sufficiently large odd integer $k$, $m(C_k) = (k-1)!/2$.",
+    "context_text": "The extremal coloring $\\chi(k, k-1)$ of $K_{2k-1}$ contains exactly $(k-1)!/2$ monochromatic copies of $C_k$ (all in the blue clique of order $k$), giving an upper bound on $m(C_k)$. The authors suggest this upper bound is in fact tight for all sufficiently large odd $k$, strengthening the $(ck)^k$ lower bound proved as Theorem 3."
+  },
+  "started": "2026-09-01T03:21:17Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

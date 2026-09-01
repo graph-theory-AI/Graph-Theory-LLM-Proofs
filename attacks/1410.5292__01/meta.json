@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 282,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1410.5292__01",
+    "title_md": "[Open problem: true ordered Ramsey number of matchings](https://arxiv.org/abs/1410.5292)",
+    "paper": "Ordered Ramsey numbers",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1410.5292__01/"
+  },
+  "dossier_meta": {
+    "id": "1410.5292__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1410.5292__01/",
+    "arxiv_id": "1410.5292",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Ordered Ramsey numbers",
+    "catalog_title": "Open problem: true ordered Ramsey number of matchings",
+    "statement_text": "What is the true ordered Ramsey number of an ordered matching $M$ on $n$ vertices? Theorem 1.1 gives the lower bound $r_<(M) \\geq n^{c\\log n/\\log\\log n}$ for some labeling, while Theorem 1.2 gives $r_<(M) \\leq n^{\\lceil \\log n \\rceil}$; the authors describe the upper bound as 'almost matching' but the gap remains open.",
+    "context_text": "For ordinary matchings the Ramsey number is clearly linear, but for ordered matchings the paper shows the ordered Ramsey number can be superpolynomial. The precise exponent (between $c\\log n/\\log\\log n$ and $\\log n$) is not determined."
+  },
+  "started": "2026-09-01T03:21:18Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

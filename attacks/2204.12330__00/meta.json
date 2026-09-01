@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 271,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "2204.12330__00",
+    "title_md": "[Informal Conjecture (uniform twin-width strictly stronger than twin-wid\u2026](https://arxiv.org/abs/2204.12330)",
+    "paper": "Twin-width VII: groups",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.12330__00/"
+  },
+  "dossier_meta": {
+    "id": "2204.12330__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.12330__00/",
+    "arxiv_id": "2204.12330",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Twin-width VII: groups",
+    "catalog_title": "Informal Conjecture (uniform twin-width strictly stronger than twin-width)",
+    "statement_text": "Uniform twin-width is strictly stronger than twin-width, i.e. there are groups with finite twin-width and infinite uniform twin-width.",
+    "context_text": "Uniform twin-width requires a uniform bound on the permutation width of the action of every group element, whereas finite twin-width only requires each action to have finite width individually. Having finite uniform twin-width implies finite twin-width, but the converse is not established. The group of finitely supported permutations on $\\mathbb{Z}$ is proposed as a candidate counterexample."
+  },
+  "started": "2026-09-01T03:21:17Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

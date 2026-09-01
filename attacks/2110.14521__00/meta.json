@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 272,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2110.14521__00",
+    "title_md": "[Conjecture 5](https://arxiv.org/abs/2110.14521)",
+    "paper": "Active clustering for labeling training data",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2110.14521__00/"
+  },
+  "dossier_meta": {
+    "id": "2110.14521__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2110.14521__00/",
+    "arxiv_id": "2110.14521",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Active clustering for labeling training data",
+    "catalog_title": "Conjecture 5",
+    "statement_text": "For an $n$-set with a random partition with probabilities $p_1, p_2, \\ldots, p_k$, the clique algorithm has minimal average complexity among all AC algorithms.",
+    "context_text": "In the model where each of $n$ items independently belongs to class $C_i$ with probability $p_i$ (with $p_1 \\geq p_2 \\geq \\cdots \\geq p_k$), the authors argue that an optimal algorithm should compare each new element first to the largest identified class. The clique algorithm does exactly this, comparing each new item to blocks in decreasing order of size. The conjecture is stated directly before Theorem 6, which characterises the asymptotic expected query count of the clique algorithm as $\\sum_{i=1}^k i p_i n$, offered as supporting evidence."
+  },
+  "started": "2026-09-01T03:21:18Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

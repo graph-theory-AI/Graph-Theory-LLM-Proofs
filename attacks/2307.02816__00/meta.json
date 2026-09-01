@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 265,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2307.02816__00",
+    "title_md": "[Question 1](https://arxiv.org/abs/2307.02816)",
+    "paper": "The grid-minor theorem revisited",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2307.02816__00/"
+  },
+  "dossier_meta": {
+    "id": "2307.02816__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2307.02816__00/",
+    "arxiv_id": "2307.02816",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "The grid-minor theorem revisited",
+    "catalog_title": "Question 1",
+    "statement_text": "Can the upper bound on $\\operatorname{utw}(\\mathcal{G}_{X})$ in Equation 1 be improved? In particular, is $\\operatorname{utw}(\\mathcal{G}_{X})$ at most a polynomial function of $\\operatorname{td}(X)$?",
+    "context_text": "The paper's main theorem (Theorem 1) gives an upper bound on the underlying treewidth of $X$-minor-free graph classes in terms of $\\operatorname{td}(X)$. This question opens the concluding open-problems section and asks whether that bound can be tightened to a polynomial dependence on $\\operatorname{td}(X)$."
+  },
+  "started": "2026-09-01T03:21:18Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

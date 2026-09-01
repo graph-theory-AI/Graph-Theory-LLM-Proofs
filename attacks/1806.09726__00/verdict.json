@@ -1,0 +1,16 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "Part (b) is false as written: for fixed m=4 the online random Ramsey number is Theta(n^2), not n^(8/3+o(1)).",
+  "would_publish": false,
+  "caveats": "Part (a) is untouched; if the intended statement takes m to infinity and permits an additive O(1) in the exponent, this fixed-m counterexample does not apply.",
+  "id": "1806.09726__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.645828,
+  "eur": 0.668945,
+  "elapsed_s": 1231.7,
+  "status": "completed",
+  "response_id": "resp_0eb10c6937ec9fa6006a963fe2a84087d283eb49946d3a20dd",
+  "when": "2026-09-01T03:21:21Z",
+  "recovered": true
+}

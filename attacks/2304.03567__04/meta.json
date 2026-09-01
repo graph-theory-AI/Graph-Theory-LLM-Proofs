@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 259,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2304.03567__04",
+    "title_md": "[Conjecture 1](https://arxiv.org/abs/2304.03567)",
+    "paper": "Temporalizing digraphs via linear-size balanced bi-trees",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2304.03567__04/"
+  },
+  "dossier_meta": {
+    "id": "2304.03567__04",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2304.03567__04/",
+    "arxiv_id": "2304.03567",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Temporalizing digraphs via linear-size balanced bi-trees",
+    "catalog_title": "Conjecture 1",
+    "statement_text": "Every strong digraph $D$ on $n$ vertices has a $O(\\log n)$ size forward cover.",
+    "context_text": "A forward cover is a small set of vertex orderings such that every pair of vertices is forward connected in at least one ordering. The conjecture is verified for bi-oriented graphs (undirected graphs with each edge replaced by two arcs) using a centroid-decomposition argument. The general case for arbitrary strongly connected digraphs remains open."
+  },
+  "started": "2026-09-01T03:30:39Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

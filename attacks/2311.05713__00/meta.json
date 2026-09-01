@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 260,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2311.05713__00",
+    "title_md": "[Converse to Theorem 1.1 (3-Coloring dichotomy for $H$-free graphs)](https://arxiv.org/abs/2311.05713)",
+    "paper": "List-$k$-Coloring $H$-free graphs for all $k>4$",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2311.05713__00/"
+  },
+  "dossier_meta": {
+    "id": "2311.05713__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2311.05713__00/",
+    "arxiv_id": "2311.05713",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "List-$k$-Coloring $H$-free graphs for all $k>4$",
+    "catalog_title": "Converse to Theorem 1.1 (3-Coloring dichotomy for $H$-free graphs)",
+    "statement_text": "If every component of $H$ is a path, then the $3$-Coloring Problem restricted to $H$-free graphs can be solved in polynomial time.",
+    "context_text": "Theorem 1.1 (Holyer; Kami\u0144ski and Lozin) establishes that if $H$ has at least one component which is not a path then the $3$-Coloring Problem on $H$-free graphs is NP-hard. Immediately after stating this theorem the paper notes: 'The converse to Theorem 1.1 is wide open.'"
+  },
+  "started": "2026-09-01T03:28:00Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

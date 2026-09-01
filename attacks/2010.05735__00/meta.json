@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 277,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2010.05735__00",
+    "title_md": "[Open Problem: exact constant in the exponent](https://arxiv.org/abs/2010.05735)",
+    "paper": "Powers of paths in tournaments",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2010.05735__00/"
+  },
+  "dossier_meta": {
+    "id": "2010.05735__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2010.05735__00/",
+    "arxiv_id": "2010.05735",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Powers of paths in tournaments",
+    "catalog_title": "Open Problem: exact constant in the exponent",
+    "statement_text": "It would be interesting to find the exact value of the constant factor in the exponent. Optimizing our proof can yield a lower bound of $n/2^{ck+o(k)}$ with $c \\approx 3.9$, but is unlikely to give the correct bound.",
+    "context_text": "Theorem 1 and Yuster's construction together show that the optimal guaranteed length of the $k$-th power of a directed path in any $n$-vertex tournament has the form $n/2^{\\Theta(k)}$. The paper provides a lower bound $n/2^{4k+6k}$ and an upper bound $k(k+1)n/2^k$, leaving a gap in the constant in the exponent."
+  },
+  "started": "2026-09-01T03:21:18Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

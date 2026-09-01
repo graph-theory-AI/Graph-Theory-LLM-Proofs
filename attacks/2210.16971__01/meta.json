@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 269,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2210.16971__01",
+    "title_md": "[Conjecture 1.7](https://arxiv.org/abs/2210.16971)",
+    "paper": "A note on directed analogues of the Sidorenko and forcing conjectures",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.16971__01/"
+  },
+  "dossier_meta": {
+    "id": "2210.16971__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.16971__01/",
+    "arxiv_id": "2210.16971",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "A note on directed analogues of the Sidorenko and forcing conjectures",
+    "catalog_title": "Conjecture 1.7",
+    "statement_text": "If $B$ is an oriented graph with a homomorphism to an edge and whose underlying undirected graph has a cycle, then $B$ has the directed forcing property.",
+    "context_text": "Theorem 1.6 establishes that admitting a homomorphism to a directed edge and having a cycle in the underlying undirected graph are both necessary conditions for the directed forcing property. The authors conjecture these two conditions together are also sufficient, providing a directed analogue of the Skokan\u2013Thoma forcing conjecture."
+  },
+  "started": "2026-09-01T03:21:17Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

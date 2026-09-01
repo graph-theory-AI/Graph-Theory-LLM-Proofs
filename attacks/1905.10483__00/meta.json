@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 280,
+    "score": 3.15,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1905.10483__00",
+    "title_md": "[Open Problem: asymptotic behavior of $Q(s,r)$ when $s$ and $r$ grow tog\u2026](https://arxiv.org/abs/1905.10483)",
+    "paper": "On the product dimension of clique factors",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1905.10483__00/"
+  },
+  "dossier_meta": {
+    "id": "1905.10483__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1905.10483__00/",
+    "arxiv_id": "1905.10483",
+    "tier": 3,
+    "score": 3.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On the product dimension of clique factors",
+    "catalog_title": "Open Problem: asymptotic behavior of $Q(s,r)$ when $s$ and $r$ grow together",
+    "statement_text": "Determine the asymptotic behavior of $Q(s, r)$ when $s$ and $r$ grow together (i.e., when $s$ is not fixed as $r \\to \\infty$).",
+    "context_text": "The paper resolves $Q(s,r) = (1+o(1))\\log_2 r$ for every fixed $s$ as $r \\to \\infty$, but explicitly states in the abstract that the problem of determining the asymptotic behavior of $Q(s,r)$ when both $s$ and $r$ grow simultaneously remains open."
+  },
+  "started": "2026-09-01T03:21:18Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

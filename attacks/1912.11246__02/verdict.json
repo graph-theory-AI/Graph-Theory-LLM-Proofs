@@ -1,0 +1,16 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "Every turtle contains an induced even wheel, so the cited n^18 bound for (theta, pyramid, prism, turtle)-free graphs applies directly.",
+  "would_publish": false,
+  "caveats": "This uses the standard adjacent-centers definition of a turtle from arXiv:2005.05042 and the theorem quoted in the prompt.",
+  "id": "1912.11246__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.3219,
+  "eur": 0.333422,
+  "elapsed_s": 1397.9,
+  "status": "completed",
+  "response_id": "resp_0bb7e3958188504b006a963f3961e087d2b96f3d710e65594b",
+  "when": "2026-09-01T03:21:18Z",
+  "recovered": true
+}

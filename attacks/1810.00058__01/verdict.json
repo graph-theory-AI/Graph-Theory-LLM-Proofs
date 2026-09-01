@@ -1,0 +1,16 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The triangle case is not resolved, but a quantitative no-hole lemma proves it for polynomially sublinear-codegree families and for triangle-free strongly regular graphs.",
+  "would_publish": false,
+  "caveats": "The biclique-rich, near-linear common-neighborhood regime remains unresolved; these elementary partial results may already be known.",
+  "id": "1810.00058__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.24016,
+  "eur": 1.284551,
+  "elapsed_s": 1430.2,
+  "status": "completed",
+  "response_id": "resp_031dfce2bd567561006a9641401b9c87d2a7bbbc9a7e3595d2",
+  "when": "2026-09-01T03:30:30Z",
+  "recovered": true
+}

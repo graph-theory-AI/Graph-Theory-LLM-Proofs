@@ -1,0 +1,16 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general polylogarithmic question remains open, but linear bounds hold for all extreme-star patterns, and the exact value for the 2-by-2 identity is ceil(n/2).",
+  "would_publish": false,
+  "caveats": "The polylogarithmic quantifiers are informal, and these elementary special cases may overlap the prior two-row results mentioned in the source.",
+  "id": "2101.03537__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.22668,
+  "eur": 1.270589,
+  "elapsed_s": 1263.1,
+  "status": "completed",
+  "response_id": "resp_03e712a95449ec2b006a9641cc035487d28fc89cace5bd10c3",
+  "when": "2026-09-01T03:30:03Z",
+  "recovered": true
+}
