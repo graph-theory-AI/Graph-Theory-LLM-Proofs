@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains unresolved, but it reduces to a single coloring-count inequality and holds for every graph obtained by inserting an alternating decagonal collar, ruling out a natural 36-vertex test family.",
+  "would_publish": false,
+  "caveats": "The collar operation is not reversible, and general plane near-cubic graphs need not contain such a collar.",
+  "id": "1907.04066__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.63028,
+  "eur": 1.688636,
+  "elapsed_s": 2028.1,
+  "status": "completed",
+  "response_id": "resp_08e8bd6c90f3a65d006a964fca2d5487d290f621fd7a880275",
+  "when": "2026-09-01T04:42:29Z"
+}

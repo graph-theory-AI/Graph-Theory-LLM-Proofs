@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 170,
+    "score": 3.45,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1701.05597__02",
+    "title_md": "[Open Question: first pervasiveness characterisation](https://arxiv.org/abs/1701.05597)",
+    "paper": "Induced subgraphs of graphs with large chromatic number. VI. Banana tre\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1701.05597__02/"
+  },
+  "dossier_meta": {
+    "id": "1701.05597__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1701.05597__02/",
+    "arxiv_id": "1701.05597",
+    "tier": 3,
+    "score": 3.45,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Induced subgraphs of graphs with large chromatic number. VI. Banana tre\u2026",
+    "catalog_title": "Open Question: first pervasiveness characterisation",
+    "statement_text": "Which multigraphs $H$ have the property that for all $\\kappa$ there exists $c$ such that every $H$-subdivision-free graph with clique number at most $\\kappa$ has chromatic number at most $c$?",
+    "context_text": "The paper poses two bullet-point questions about characterising multigraphs $H$ by a pervasiveness-type condition. For the second (stronger) question, which involves all subdivisions of $H$, the answer is known for controlled classes; the first question, which asks about $H$-subdivision-free graphs directly, is explicitly stated to remain open."
+  },
+  "started": "2026-09-01T04:47:44Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

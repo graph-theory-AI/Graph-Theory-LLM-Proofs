@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains unresolved, but bounded-gap sets are proved constricting for graphs with tame neighborhood matchings, and any least counterexample is reduced to locally bounded-chromatic graphs whose every vertex neighborhood contains arbitrarily large matched triangle configurations.",
+  "would_publish": false,
+  "caveats": "The neighborhood restrictions are not consequences of bounded clique number, so the unrestricted k=4 case remains open.",
+  "id": "1509.06563__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.279464,
+  "eur": 1.325262,
+  "elapsed_s": 1356.4,
+  "status": "completed",
+  "response_id": "resp_05ba913959cecaac006a965412ffe887d2901652d270b82a8c",
+  "when": "2026-09-01T04:49:35Z"
+}

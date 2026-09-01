@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full conjecture remains open, but it reduces exactly to trees, isolated components preserve polynomial chi-boundedness quantitatively, and a substitution construction forces every P6-free polynomial bound to have exponent at least log_2(16/5).",
+  "would_publish": false,
+  "caveats": "No polynomial upper bound for P6-free graphs is obtained, and the reported 2025 P5 result is used only conditionally.",
+  "id": "2202.10412__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.999188,
+  "eur": 1.034954,
+  "elapsed_s": 995.6,
+  "status": "completed",
+  "response_id": "resp_0cfc53d151a903d9006a96546c97e087d2a504261bf8f0ec07",
+  "when": "2026-09-01T04:45:04Z"
+}

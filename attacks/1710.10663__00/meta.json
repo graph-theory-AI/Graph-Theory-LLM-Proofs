@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 171,
+    "score": 3.45,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1710.10663__00",
+    "title_md": "[Informal Conjecture on exact asymptotics of maxcode_L for even L](https://arxiv.org/abs/1710.10663)",
+    "paper": "List-decodable zero-rate codes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1710.10663__00/"
+  },
+  "dossier_meta": {
+    "id": "1710.10663__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1710.10663__00/",
+    "arxiv_id": "1710.10663",
+    "tier": 3,
+    "score": 3.45,
+    "lean": "prove",
+    "status": "open",
+    "paper": "List-decodable zero-rate codes",
+    "catalog_title": "Informal Conjecture on exact asymptotics of maxcode_L for even L",
+    "statement_text": "We believe that in fact $\\mathrm{maxcode}_L(\\varepsilon) = c_L \\varepsilon^{-1} + O(1)$ for even $L$.",
+    "context_text": "Theorem 2 establishes the two-sided bound $c_L \\varepsilon^{-1} + O(1) \\leq \\mathrm{maxcode}_L(\\varepsilon) = O(\\varepsilon^{-1})$ for every even $L \\geq 2$, where $c_L = 2^{-\\lfloor L/2 \\rfloor}\\binom{L}{\\lfloor L/2 \\rfloor}$ comes from Theorem 1. The authors conjecture that the lower bound is tight up to an additive constant, i.e., that the exact leading coefficient is $c_L$."
+  },
+  "started": "2026-09-01T04:46:38Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

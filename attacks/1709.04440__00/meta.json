@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 176,
+    "score": 3.4,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1709.04440__00",
+    "title_md": "[Question 1.4](https://arxiv.org/abs/1709.04440)",
+    "paper": "A polynomial bound for the arithmetic $k$-cycle removal lemma in vector\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1709.04440__00/"
+  },
+  "dossier_meta": {
+    "id": "1709.04440__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1709.04440__00/",
+    "arxiv_id": "1709.04440",
+    "tier": 3,
+    "score": 3.4,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "A polynomial bound for the arithmetic $k$-cycle removal lemma in vector\u2026",
+    "catalog_title": "Question 1.4",
+    "statement_text": "What is the smallest possible exponent $C_{p,k}$ for which Theorem 1.3 is true?",
+    "context_text": "The paper proves Theorem 1.3 with exponent $C_{p,k} = \\frac{k-2}{c_{p,3}} + 1$, and shows via constructions of $k$-colored sum-free sets that the smallest possible exponent must be at least $\\frac{k-2}{c_{p,k}} + 1$. The achieved exponent is within a factor of $O(\\log p)$ from this lower bound (independently of $k$), but the exact optimum remains open."
+  },
+  "started": "2026-09-01T04:43:21Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

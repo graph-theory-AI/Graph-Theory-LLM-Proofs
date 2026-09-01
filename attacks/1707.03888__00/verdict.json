@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "There are uniform additive bounds for substantial subclasses, while exact coloring is NP-hard even for triangle-free K13-minor-free graphs, but neither argument settles additive error at least one in all proper minor-closed classes.",
+  "would_publish": false,
+  "caveats": "The general case remains open; the lower bound assumes P != NP and uses the source paper's one-sided coloring notion.",
+  "id": "1707.03888__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.258712,
+  "eur": 1.303767,
+  "elapsed_s": 1824.9,
+  "status": "completed",
+  "response_id": "resp_07a31623b7f078f5006a96524d671c87d2b9bdcad4ede1dd76",
+  "when": "2026-09-01T04:49:50Z"
+}

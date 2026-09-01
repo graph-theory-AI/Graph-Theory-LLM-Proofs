@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I do not settle the polynomial-time conjecture, but I prove a deterministic n^{O_t(sqrt(n))}-time algorithm for List-3-Coloring on P_t-free graphs.",
+  "would_publish": false,
+  "caveats": "The cases t >= 8 remain unresolved in polynomial time, and I have not checked whether this elementary subexponential bound is already in the literature.",
+  "id": "1806.11196__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.959592,
+  "eur": 0.99394,
+  "elapsed_s": 1066.8,
+  "status": "completed",
+  "response_id": "resp_0bd792b7384c269c006a9653f2f50887d2887b535c9f375891",
+  "when": "2026-09-01T04:44:13Z"
+}

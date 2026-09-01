@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every chordal graph of clique number at most K has a (K, sqsubseteq_{2^K})-tame ball representation in R^K, which completely answers the question when p(1)<3.",
+  "would_publish": false,
+  "caveats": "The construction relies on a perfect-elimination order and does not cover the nonchordal graphs permitted when col_1 is at least 3.",
+  "id": "2001.01552__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.055988,
+  "eur": 1.093787,
+  "elapsed_s": 1576.0,
+  "status": "completed",
+  "response_id": "resp_03c6f95d56303677006a9652c851d487d2a57f8428e4b2d009",
+  "when": "2026-09-01T04:47:44Z"
+}

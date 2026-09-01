@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 169,
+    "score": 3.45,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2004.12166__00",
+    "title_md": "[Conjecture 5 (Improved Approximation Conjecture)](https://arxiv.org/abs/2004.12166)",
+    "paper": "An algorithmic weakening of the Erd\u0151s-Hajnal conjecture",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2004.12166__00/"
+  },
+  "dossier_meta": {
+    "id": "2004.12166__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2004.12166__00/",
+    "arxiv_id": "2004.12166",
+    "tier": 3,
+    "score": 3.45,
+    "lean": "prove",
+    "status": "open",
+    "paper": "An algorithmic weakening of the Erd\u0151s-Hajnal conjecture",
+    "catalog_title": "Conjecture 5 (Improved Approximation Conjecture)",
+    "statement_text": "Every graph $H$ satisfies the improved approximation property, i.e., there exists a constant $\\varepsilon > 0$ such that MIS admits a (randomized) $n^{1-\\varepsilon}$-approximation polynomial algorithm on every $H$-free $n$-vertex graph $G$.",
+    "context_text": "This conjecture is introduced as an algorithmic weakening of the Erd\u0151s-Hajnal conjecture. It states informally that the inapproximability of MIS in general graphs can always be beaten in any proper hereditary class. It is strictly weaker than the Erd\u0151s-Hajnal conjecture, since MIS is polynomial in $P_6$-free graphs while it is open whether $P_5$ satisfies the Erd\u0151s-Hajnal property."
+  },
+  "started": "2026-09-01T04:49:03Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

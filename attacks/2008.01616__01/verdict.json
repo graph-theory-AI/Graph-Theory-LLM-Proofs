@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "No conditional superlinear lower bound is proved; I formalize the target and prove linear-time algorithms for rooted instances and for tuples admitting a short-word n-cycle, including one-vertex and one-face oriented maps.",
+  "would_publish": false,
+  "caveats": "The catalog item does not specify the conditioning hypothesis, machine model, encoding, or whether d is fixed.",
+  "id": "2008.01616__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.740248,
+  "eur": 0.766745,
+  "elapsed_s": 1122.2,
+  "status": "completed",
+  "response_id": "resp_02cddbb2f36eaf06006a965522fe1087d2a71f5a8c2dbd70c0",
+  "when": "2026-09-01T04:50:12Z"
+}

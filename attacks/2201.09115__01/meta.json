@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 167,
+    "score": 3.45,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2201.09115__01",
+    "title_md": "[Question 2](https://arxiv.org/abs/2201.09115)",
+    "paper": "Disproof of a Conjecture by Woodall",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2201.09115__01/"
+  },
+  "dossier_meta": {
+    "id": "2201.09115__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2201.09115__01/",
+    "arxiv_id": "2201.09115",
+    "tier": 3,
+    "score": 3.45,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Disproof of a Conjecture by Woodall",
+    "catalog_title": "Question 2",
+    "statement_text": "Is it true that for all integers $1 \\leq s \\leq t$, every graph $G$ with $G \\not\\succeq K_{s,t}$ satisfies $\\chi_{\\ell}(G) \\leq 2s + t$?",
+    "context_text": "Theorem 1 shows that the bound $s+t-1$ in Woodall's conjecture is false for large comparable $s$ and $t$, and that the list chromatic number can exceed $(1-\\varepsilon)(2s+t)$; the authors ask whether the matching upper bound $2s+t$ holds universally as the correct asymptotic threshold."
+  },
+  "started": "2026-09-01T04:49:50Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A bad pair has tournament domination number and odd girth at least half its chromatic number, fractional chromatic number at most 5 (at most 9/2 in the high-chromatic regime), and the conjecture follows in several substantial special cases.",
+  "would_publish": false,
+  "caveats": "No general o(log N) bound or counterexample is obtained; short even cycles obstruct the available Moore-bound argument.",
+  "id": "2305.15585__03",
+  "model": "gpt-5.6-sol",
+  "usd": 2.02566,
+  "eur": 2.098168,
+  "elapsed_s": 2106.4,
+  "status": "completed",
+  "response_id": "resp_0340a3de8d736d72006a965073e0ec87d282ffacf804b9142e",
+  "when": "2026-09-01T04:46:38Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "ill_posed",
+  "confidence": "high",
+  "one_line": "The catalog item is a research direction rather than a proposition, since \u201cnear-extremal,\u201d \u201clarge piece,\u201d and \u201cbased on a projective plane\u201d have no specified quantitative meanings.",
+  "would_publish": false,
+  "caveats": "The auxiliary results below require linearity and balanced part sizes and do not settle an additive-stability formulation.",
+  "id": "1609.05458__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.689776,
+  "eur": 0.714466,
+  "elapsed_s": 829.8,
+  "status": "completed",
+  "response_id": "resp_011e91aa48a2dd68006a9654b8a06087d28d62410c5022b657",
+  "when": "2026-09-01T04:43:34Z"
+}

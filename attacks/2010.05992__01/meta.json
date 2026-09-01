@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 175,
+    "score": 3.4,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2010.05992__01",
+    "title_md": "[Informal conjecture on non-tightness of upper bound for binary focal fa\u2026](https://arxiv.org/abs/2010.05992)",
+    "paper": "Near-sunflowers and focal families",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2010.05992__01/"
+  },
+  "dossier_meta": {
+    "id": "2010.05992__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2010.05992__01/",
+    "arxiv_id": "2010.05992",
+    "tier": 3,
+    "score": 3.4,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Near-sunflowers and focal families",
+    "catalog_title": "Informal conjecture on non-tightness of upper bound for binary focal families",
+    "statement_text": "For $q = 2$ and large $n$, the upper bound $g^{q\\text{-ff}}_r(n) \\leq (r-1)\\, q^{\\lceil (r-2)n/(r-1) \\rceil}$ of Theorem 1.3 is not tight.",
+    "context_text": "Proposition 3.2 shows via Reed-Solomon codes that the upper bound is essentially tight when $q \\geq n$ and $q$ is a prime power. The authors believe the binary case ($q = 2$) behaves differently, and support this belief by proving in Section 4 that the bound can be significantly improved when the family of binary vectors forms a linear code (closed under addition modulo 2)."
+  },
+  "started": "2026-09-01T04:43:34Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

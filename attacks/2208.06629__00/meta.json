@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 173,
+    "score": 3.4,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2208.06629__00",
+    "title_md": "[Problem 3](https://arxiv.org/abs/2208.06629)",
+    "paper": "Perfect shuffling with fewer lazy transpositions",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2208.06629__00/"
+  },
+  "dossier_meta": {
+    "id": "2208.06629__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2208.06629__00/",
+    "arxiv_id": "2208.06629",
+    "tier": 3,
+    "score": 3.4,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Perfect shuffling with fewer lazy transpositions",
+    "catalog_title": "Problem 3",
+    "statement_text": "Does $U_t(n) = tn - \\binom{t+1}{2}$?",
+    "context_text": "This generalises Problem 1 to the setting of shuffling $t$ distinguishable counters across $n$ positions using the fewest lazy transpositions. The upper bound $U_t(n)\\leq tn-\\binom{t+1}{2}$ is achieved by existing sweeping/divide-and-conquer constructions. When $t=n$ the problem reduces to Problem 1, which Theorem 2 answers negatively; the paper asks whether the trivial bound is tight for other values of $t$."
+  },
+  "started": "2026-09-01T04:45:04Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

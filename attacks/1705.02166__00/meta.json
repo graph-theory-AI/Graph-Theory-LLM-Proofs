@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 177,
+    "score": 3.4,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1705.02166__00",
+    "title_md": "[Question 1.1](https://arxiv.org/abs/1705.02166)",
+    "paper": "Lines in Euclidean Ramsey theory",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1705.02166__00/"
+  },
+  "dossier_meta": {
+    "id": "1705.02166__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1705.02166__00/",
+    "arxiv_id": "1705.02166",
+    "tier": 3,
+    "score": 3.4,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Lines in Euclidean Ramsey theory",
+    "catalog_title": "Question 1.1",
+    "statement_text": "For which subsets $K \\subset E^n$ does every red/blue-coloring of $E^n$ contain a red pair of points of distance one or a blue isometric copy of $K$?",
+    "context_text": "This is the central question studied throughout the paper. The notation $E^n \\to (\\ell_2, K)$ means every red/blue-coloring of $E^n$ contains a red copy of $\\ell_2$ or a blue copy of $K$, and $E^n \\not\\to (\\ell_2, K)$ means there is a coloring avoiding both. The paper says it follows Erd\u0151s et al. [4] in studying this question."
+  },
+  "started": "2026-09-01T04:42:30Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 174,
+    "score": 3.4,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2001.01607__04",
+    "title_md": "[Maximum Independent Set complexity for H-free graphs when H contains P7\u2026](https://arxiv.org/abs/2001.01607)",
+    "paper": "(Theta, triangle)-free and (even hole, $K_4$)-free graphs. Part 2 : bou\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2001.01607__04/"
+  },
+  "dossier_meta": {
+    "id": "2001.01607__04",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2001.01607__04/",
+    "arxiv_id": "2001.01607",
+    "tier": 3,
+    "score": 3.4,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "(Theta, triangle)-free and (even hole, $K_4$)-free graphs. Part 2 : bou\u2026",
+    "catalog_title": "Maximum Independent Set complexity for H-free graphs when H contains P7, S1,1,3, or S1,2,2",
+    "statement_text": "Determine the computational complexity of the Maximum Independent Set problem for $H$-free graphs whenever $H$ is some $S_{i,j,k}$ that contains either $P_7$, $S_{1,1,3}$, or $S_{1,2,2}$.",
+    "context_text": "The problem is polynomial for $H \\subseteq P_k$ with $k \\leq 6$ and for $H \\subseteq S_{i,j,k}$ with $(i,j,k) \\leq (1,1,2)$, and is NP-hard when $H$ is not an induced subgraph of any $S_{i,j,k}$. The boundary region where $H$ contains $P_7$, $S_{1,1,3}$, or $S_{1,2,2}$ is listed as completely open."
+  },
+  "started": "2026-09-01T04:44:14Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

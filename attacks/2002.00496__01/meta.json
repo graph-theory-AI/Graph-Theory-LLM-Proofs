@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 168,
+    "score": 3.45,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2002.00496__01",
+    "title_md": "[Open Problem: Characterization of Unavoidable Graphs](https://arxiv.org/abs/2002.00496)",
+    "paper": "Excluding a ladder",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2002.00496__01/"
+  },
+  "dossier_meta": {
+    "id": "2002.00496__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2002.00496__01/",
+    "arxiv_id": "2002.00496",
+    "tier": 3,
+    "score": 3.45,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Excluding a ladder",
+    "catalog_title": "Open Problem: Characterization of Unavoidable Graphs",
+    "statement_text": "Obtain a full characterization of unavoidable graphs, where a graph $H$ is unavoidable if the cover graph of every poset with large enough dimension contains $H$ as a minor.",
+    "context_text": "The known positive results are that every ladder and $K_4$ are unavoidable. Kelly's construction shows that every unavoidable graph must be a minor of some graph from that construction, providing a necessary condition. The paper's Conjecture 6 proposes that this necessary condition is also sufficient."
+  },
+  "started": "2026-09-01T04:49:35Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

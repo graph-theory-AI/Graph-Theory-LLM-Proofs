@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 166,
+    "score": 3.45,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2204.10119__02",
+    "title_md": "[Open Question: minimum degree five in Theorem 1.6](https://arxiv.org/abs/2204.10119)",
+    "paper": "Bipartite graphs with no $K_6$ minor",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.10119__02/"
+  },
+  "dossier_meta": {
+    "id": "2204.10119__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2204.10119__02/",
+    "arxiv_id": "2204.10119",
+    "tier": 3,
+    "score": 3.45,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Bipartite graphs with no $K_6$ minor",
+    "catalog_title": "Open Question: minimum degree five in Theorem 1.6",
+    "statement_text": "We do not know whether ``six'' can be replaced by ``five'' in 1.6 (every non-null bipartite graph with minimum degree at least six has a $K_6$ minor).",
+    "context_text": "Immediately after stating Theorem 1.6, the authors note that the analogous statement for minimum degree five in bipartite graphs is open. They also remark that minimum degree is more difficult than average degree to handle inductively."
+  },
+  "started": "2026-09-01T04:50:13Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

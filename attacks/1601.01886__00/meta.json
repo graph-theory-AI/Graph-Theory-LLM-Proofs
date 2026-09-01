@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 172,
+    "score": 3.45,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1601.01886__00",
+    "title_md": "[Optimality of factor 2 in Lemma 4](https://arxiv.org/abs/1601.01886)",
+    "paper": "Pathwidth and nonrepetitive list coloring",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1601.01886__00/"
+  },
+  "dossier_meta": {
+    "id": "1601.01886__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1601.01886__00/",
+    "arxiv_id": "1601.01886",
+    "tier": 3,
+    "score": 3.45,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Pathwidth and nonrepetitive list coloring",
+    "catalog_title": "Optimality of factor 2 in Lemma 4",
+    "statement_text": "We do not know whether the factor 2 is unavoidable in the bound of Lemma 4, which states that every tree of pathwidth $k$ has a path-partition of height at most $2k$.",
+    "context_text": "Lemma 4 is a key structural tool used in the proof of Theorem 2. The authors note that they made no effort to optimise the bound and leave open whether the factor 2 can be reduced."
+  },
+  "started": "2026-09-01T04:46:38Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

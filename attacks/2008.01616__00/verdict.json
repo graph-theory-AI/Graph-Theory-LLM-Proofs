@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A birthday-sampling argument gives a one-sided-error randomized O(n^(3/2) log n) algorithm, but the deterministic conjecture remains unresolved.",
+  "would_publish": false,
+  "caveats": "This disproves the statement only if bounded-error randomized algorithms are included; no deterministic truly subquadratic algorithm or lower bound is proved.",
+  "id": "2008.01616__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.39148,
+  "eur": 0.405493,
+  "elapsed_s": 977.4,
+  "status": "completed",
+  "response_id": "resp_0f577b9020d99993006a96556d9f6487d29a7442c1188b7162",
+  "when": "2026-09-01T04:49:02Z"
+}

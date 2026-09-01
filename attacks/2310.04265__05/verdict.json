@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture reduces exactly to the directed-clique-number-two case, and the binding implication holds for interval unions of ordered stars, in particular for every tournament with a star backedge tree.",
+  "would_publish": false,
+  "caveats": "Uses the established induced triangle-free extraction theorem of R\u00f6dl; non-star backedge trees remain untreated and novelty of the special case was not checked.",
+  "id": "2310.04265__05",
+  "model": "gpt-5.6-sol",
+  "usd": 1.119096,
+  "eur": 1.159154,
+  "elapsed_s": 1494.6,
+  "status": "completed",
+  "response_id": "resp_03de9ca5c33ee3f5006a9652d7608487d2ad522cb0c71b4bfb",
+  "when": "2026-09-01T04:46:37Z"
+}
