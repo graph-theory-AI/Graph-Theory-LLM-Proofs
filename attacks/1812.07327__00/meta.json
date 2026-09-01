@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 124,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "balanced",
+    "status": "partial",
+    "id": "1812.07327__00",
+    "title_md": "[Problem 4](https://arxiv.org/abs/1812.07327)",
+    "paper": "1-subdivisions, fractional chromatic number and Hall ratio",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.07327__00/"
+  },
+  "dossier_meta": {
+    "id": "1812.07327__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.07327__00/",
+    "arxiv_id": "1812.07327",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "balanced",
+    "status": "partial",
+    "paper": "1-subdivisions, fractional chromatic number and Hall ratio",
+    "catalog_title": "Problem 4",
+    "statement_text": "Determine the smallest function $g : \\mathbb{Z}^+ \\to \\mathbb{R}^+$ such that for every graph $G$, $\\chi_f(G) \\leq \\rho(G)\\,g(|V(G)|)$.",
+    "context_text": "Since $\\chi_f(G) = O(\\rho(G) \\log n)$ follows from a greedy independent-set argument, and the graphs produced by Corollary 3 have doubly exponential size in their fractional chromatic number (giving $g(n) = \\Omega(\\log\\log n)$), the true growth rate of the smallest such $g$ is unknown."
+  },
+  "started": "2026-09-01T05:30:16Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

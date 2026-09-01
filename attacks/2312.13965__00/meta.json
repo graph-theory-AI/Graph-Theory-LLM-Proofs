@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 121,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2312.13965__00",
+    "title_md": "[Problem 1.1](https://arxiv.org/abs/2312.13965)",
+    "paper": "The growth rate of multicolor Ramsey numbers of $3$-graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2312.13965__00/"
+  },
+  "dossier_meta": {
+    "id": "2312.13965__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2312.13965__00/",
+    "arxiv_id": "2312.13965",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "The growth rate of multicolor Ramsey numbers of $3$-graphs",
+    "catalog_title": "Problem 1.1",
+    "statement_text": "Given a fixed $k$-uniform hypergraph $G$, determine the integer $h$ (if it exists) such that $r(G;q)$ grows as a tower of height $h$ as $q$ tends to infinity.",
+    "context_text": "In the graph case, $r(G;q)$ grows as a tower of height $1$ if $G$ is bipartite (with at least two edges) and as a tower of height $2$ otherwise. For 3-uniform hypergraphs, Abbott and Williams showed that $r(K_4^{(3)};q)$ grows as a tower of height $3$. The paper's main theorem (Theorem 1.4) resolves this problem for $k=3$ in full generality."
+  },
+  "started": "2026-09-01T05:30:56Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

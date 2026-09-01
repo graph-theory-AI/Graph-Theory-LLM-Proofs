@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 129,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1710.11281__05",
+    "title_md": "[Question (Riemannian surfaces): constant curvature surfaces](https://arxiv.org/abs/1710.11281)",
+    "paper": "Notes on Cops and Robber game on graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1710.11281__05/"
+  },
+  "dossier_meta": {
+    "id": "1710.11281__05",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1710.11281__05/",
+    "arxiv_id": "1710.11281",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Notes on Cops and Robber game on graphs",
+    "catalog_title": "Question (Riemannian surfaces): constant curvature surfaces",
+    "statement_text": "Are the surfaces of constant curvature any simpler than general Riemannian surfaces with respect to the Cops and Robber game?",
+    "context_text": "The author asks whether the special geometric structure of constant-curvature surfaces (spherical, Euclidean, or hyperbolic) renders the continuous Cops and Robbers game more tractable than on general Riemannian surfaces."
+  },
+  "started": "2026-09-01T05:28:26Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 126,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1708.02370__00",
+    "title_md": "[Conjecture 4](https://arxiv.org/abs/1708.02370)",
+    "paper": "Clustered Colouring in Minor-Closed Classes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1708.02370__00/"
+  },
+  "dossier_meta": {
+    "id": "1708.02370__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1708.02370__00/",
+    "arxiv_id": "1708.02370",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Clustered Colouring in Minor-Closed Classes",
+    "catalog_title": "Conjecture 4",
+    "statement_text": "For every graph $H$, $\\chi^*(\\mathcal{M}_H) \\leq 2\\,\\mathrm{td}(H) - 2$.",
+    "context_text": "Theorem 3 establishes the matching lower bound $\\chi^*(\\mathcal{M}_{H_k}) \\geq 2k-2$ for graphs $H_k$ with $\\mathrm{td}(H_k) = k$, showing that defective and clustered chromatic numbers can differ. The authors conjecture this lower bound is tight, and note the conjecture is proved in Section 4 for the special case $\\mathrm{td}(H) = 3$."
+  },
+  "started": "2026-09-01T05:29:18Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

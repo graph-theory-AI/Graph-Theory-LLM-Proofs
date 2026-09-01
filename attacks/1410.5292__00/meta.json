@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 131,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1410.5292__00",
+    "title_md": "[Open problem: ordered Ramsey number of matchings vs triangles](https://arxiv.org/abs/1410.5292)",
+    "paper": "Ordered Ramsey numbers",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1410.5292__00/"
+  },
+  "dossier_meta": {
+    "id": "1410.5292__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1410.5292__00/",
+    "arxiv_id": "1410.5292",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Ordered Ramsey numbers",
+    "catalog_title": "Open problem: ordered Ramsey number of matchings vs triangles",
+    "statement_text": "What is the correct order of magnitude of $r_<(M, K_3)$ for an ordered matching $M$ on $n$ vertices? The paper can only prove the trivial upper bound $r_<(M, K_3) \\leq r_<(K_n, K_3) = O\\!\\left(\\frac{n^2}{\\log n}\\right)$, while the lower bound of Theorem 1.8 gives $r_<(M, K_3) \\geq c\\left(\\frac{n}{\\log n}\\right)^{4/3}$ for some ordered matching $M$ on $n$ vertices.",
+    "context_text": "The classical off-diagonal Ramsey number $r(K_n, K_3)$ is known up to an asymptotic factor of 4 thanks to Kim's result and improvements via triangle-free processes. For ordered matchings the authors identify the analogous ordered problem but can only close a gap between an exponent of $4/3$ (lower) and $2$ (upper) in the logarithmic scale."
+  },
+  "started": "2026-09-01T05:22:24Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "The bipartite logarithmic lower bound transfers to all graphs by combining an affine-function obstruction for high chromatic number with a dense induced bipartite core in the low-chromatic case.",
+  "would_publish": true,
+  "caveats": "This uses the standard edgewise definition of separation and the quoted bipartite Theorem 1.2; literature priority has not been independently checked.",
+  "id": "1802.03727__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.554752,
+  "eur": 0.574609,
+  "elapsed_s": 641.0,
+  "status": "completed",
+  "response_id": "resp_005cb916cdb9dee5006a96608c053087d28bab6d50b0805a63",
+  "when": "2026-09-01T05:30:52Z"
+}

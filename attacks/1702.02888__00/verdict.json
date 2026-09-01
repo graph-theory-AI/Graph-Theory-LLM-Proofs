@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general problem remains open, but equality is completely characterized for 3-degenerate planar graphs by a K4-factor, and arbitrary instances reduce exactly to a minimum-degree-at-least-four core.",
+  "would_publish": false,
+  "caveats": "No characterization or polynomial algorithm is obtained for the residual degree-4/5 cores; novelty of the special-case results was not literature-checked.",
+  "id": "1702.02888__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.22502,
+  "eur": 1.268869,
+  "elapsed_s": 1665.3,
+  "status": "completed",
+  "response_id": "resp_02fb7478dd1e3849006a965c447cb087d289e2145857321585",
+  "when": "2026-09-01T05:29:41Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 125,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1812.02420__01",
+    "title_md": "[Conjecture 2.16](https://arxiv.org/abs/1812.02420)",
+    "paper": "On the Complexity of Digraph Colourings and Vertex Arboricity",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.02420__01/"
+  },
+  "dossier_meta": {
+    "id": "1812.02420__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.02420__01/",
+    "arxiv_id": "1812.02420",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "On the Complexity of Digraph Colourings and Vertex Arboricity",
+    "catalog_title": "Conjecture 2.16",
+    "statement_text": "Let $F$ be a digraph which contains a directed cycle. Then the circular $F$-colouring problem is NP-complete.",
+    "context_text": "The authors conjecture that, under the assumption $\\mathsf{P}\\neq\\mathsf{NP}$, the only polynomially solvable instances of Problem 2.15 are those where $F$ is acyclic (for which only acyclic digraphs map circularly to $F$). Theorem 2.17 confirms this conjecture for almost all cases."
+  },
+  "started": "2026-09-01T05:29:42Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

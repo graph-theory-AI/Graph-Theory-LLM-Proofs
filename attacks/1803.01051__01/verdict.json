@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "No general resolution is obtained, but matching and kernel-orientation arguments prove the bound for several substantial special classes and sharply constrain the first unresolved parameter case.",
+  "would_publish": false,
+  "caveats": "No general case is settled; the asymptotic and planar corollaries invoke established external theorems, and novelty is not claimed.",
+  "id": "1803.01051__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.121168,
+  "eur": 1.1613,
+  "elapsed_s": 1346.7,
+  "status": "completed",
+  "response_id": "resp_03b2789f992a64f3006a965c6abdb887d2a7b4a1d5a1405bce",
+  "when": "2026-09-01T05:25:01Z"
+}

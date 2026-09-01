@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "medium",
+  "one_line": "For every fixed m\u22653, Guo and Warnke proved the natural exponent-level extension r\u0303(m,n)\u2265n^{m-o(1)}, although the original remark specified no logarithmic factor.",
+  "would_publish": false,
+  "caveats": "Resolution is for fixed m and the standard exponent-level interpretation; the literal informal sentence has no unique quantitative meaning.",
+  "id": "1806.09726__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.6101,
+  "eur": 0.631938,
+  "elapsed_s": 743.6,
+  "status": "completed",
+  "response_id": "resp_049c30ede730cdc1006a966000eb3087d298653da6e9168527",
+  "when": "2026-09-01T05:30:16Z"
+}

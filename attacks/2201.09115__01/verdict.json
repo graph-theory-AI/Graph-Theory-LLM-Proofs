@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The universal conjecture is not resolved, but it holds sharply for s=1 and s=2, for the pair (3,3), and for chordal and complete multipartite graphs.",
+  "would_publish": false,
+  "caveats": "The arguments do not cover arbitrary graphs for s>=3 beyond (3,3), and the special cases are likely standard.",
+  "id": "2201.09115__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.324788,
+  "eur": 1.372209,
+  "elapsed_s": 1931.6,
+  "status": "completed",
+  "response_id": "resp_0ae028f7be8d04a8006a96596ebb9487d2ba61ebdbf97eb5ee",
+  "when": "2026-09-01T05:22:02Z"
+}

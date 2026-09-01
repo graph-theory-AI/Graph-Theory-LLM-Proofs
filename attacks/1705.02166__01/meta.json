@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 127,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1705.02166__01",
+    "title_md": "[Open problem: $E^n \\not\\to (\\ell_3, \\ell_m)$ for large $m$](https://arxiv.org/abs/1705.02166)",
+    "paper": "Lines in Euclidean Ramsey theory",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1705.02166__01/"
+  },
+  "dossier_meta": {
+    "id": "1705.02166__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1705.02166__01/",
+    "arxiv_id": "1705.02166",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Lines in Euclidean Ramsey theory",
+    "catalog_title": "Open problem: $E^n \\not\\to (\\ell_3, \\ell_m)$ for large $m$",
+    "statement_text": "For every natural number $m$, does there exist a natural number $n$ such that $E^n \\not\\to (\\ell_3, \\ell_m)$?",
+    "context_text": "In the concluding remarks the authors say they were unable to decide this question. They consider it unlikely to hold for large $m$ but were unable to exhibit a coloring confirming their suspicion. Erd\u0151s et al. [3] showed that $E^n \\to (\\ell_6, \\ell_6)$ for all $n$, providing related context."
+  },
+  "started": "2026-09-01T05:28:55Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

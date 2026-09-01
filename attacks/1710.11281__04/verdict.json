@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For compact closed surfaces in the intended geodesic game, the supremum is finite and has a universal O(1 + alpha log^2(alpha + 2)) upper bound, although its exact value is not determined.",
+  "would_publish": false,
+  "caveats": "This interprets the condition as a global injectivity-radius bound and uses the genus-linear cop-number theorem for the same geodesic-space game.",
+  "id": "1710.11281__04",
+  "model": "gpt-5.6-sol",
+  "usd": 0.626668,
+  "eur": 0.649099,
+  "elapsed_s": 769.2,
+  "status": "completed",
+  "response_id": "resp_05e46f6c4529734c006a965f78e37087d2a4620a9033b5f07e",
+  "when": "2026-09-01T05:28:25Z"
+}

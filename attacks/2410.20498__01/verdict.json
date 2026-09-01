@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For s = 2^(d-r) and 2^d-2^(d-r) with r = o(d), the deficit 1-lambda(d,s) has an exact exponential rate, although the general problem remains open.",
+  "would_publish": false,
+  "caveats": "Only a special power-of-two family is covered; multiplicative constants and general s remain open, and novelty against the full literature was not checked.",
+  "id": "2410.20498__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.801632,
+  "eur": 0.830326,
+  "elapsed_s": 1354.8,
+  "status": "completed",
+  "response_id": "resp_0bc9188066136432006a965bc53a6087d2b0bc8b3d388cf274",
+  "when": "2026-09-01T05:22:23Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 122,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2302.13312__00",
+    "title_md": "[Conjecture 2](https://arxiv.org/abs/2302.13312)",
+    "paper": "Partitioning edges of a planar graph into linear forests and a matching",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.13312__00/"
+  },
+  "dossier_meta": {
+    "id": "2302.13312__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.13312__00/",
+    "arxiv_id": "2302.13312",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Partitioning edges of a planar graph into linear forests and a matching",
+    "catalog_title": "Conjecture 2",
+    "statement_text": "For every planar graph $G$ of odd maximum degree $\\Delta \\geq 7$ the edges of $G$ can be partitioned into $\\frac{\\Delta-1}{2}$ linear forests and one matching.",
+    "context_text": "This conjecture refines the known linear arboricity bound for planar graphs with odd maximum degree by replacing one linear forest with the weaker structure of a matching. The case $\\Delta \\geq 11$ follows from existing results; the paper resolves $\\Delta = 9$ (Theorem 2), leaving $\\Delta = 7$ as the sole remaining open case."
+  },
+  "started": "2026-09-01T05:30:53Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 132,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2303.11766__00",
+    "title_md": "[Conjecture 1.6](https://arxiv.org/abs/2303.11766)",
+    "paper": "Polynomial bounds for chromatic number VIII. Excluding a path and a com\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2303.11766__00/"
+  },
+  "dossier_meta": {
+    "id": "2303.11766__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2303.11766__00/",
+    "arxiv_id": "2303.11766",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Polynomial bounds for chromatic number VIII. Excluding a path and a com\u2026",
+    "catalog_title": "Conjecture 1.6",
+    "statement_text": "Every forest is multibounding.",
+    "context_text": "A graph $H$ is multibounding if for every $d \\geq 1$ there is a polynomial $f(t)$ such that, for all $t \\geq 1$, every $H$-free graph with no $K_d(t)$ subgraph satisfies $\\chi(G) \\leq f(t)$. Every multibounding graph must be a forest satisfying the Gy\u00e1rf\u00e1s-Sumner conjecture, and any forest satisfying the polynomial-bound Conjecture 1.2 is multibounding. The paper establishes that paths, brooms, and disjoint unions of multibounding forests are multibounding, motivating the general conjecture."
+  },
+  "started": "2026-09-01T05:22:02Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

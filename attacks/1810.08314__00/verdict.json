@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is not settled; I prove qn(G) <= 3k-2 for layered pathwidth k and qn(G) <= 3p+1 when a width-one layered tree decomposition has an index tree of pathwidth p.",
+  "would_publish": false,
+  "caveats": "The bound still depends on an auxiliary pathwidth parameter, and no counterexample or constant bound for arbitrary decomposition trees is obtained.",
+  "id": "1810.08314__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.026528,
+  "eur": 1.063272,
+  "elapsed_s": 1378.9,
+  "status": "completed",
+  "response_id": "resp_0c64b9b2a0e5c552006a965d8b337087d2a9081ffd75858812",
+  "when": "2026-09-01T05:30:21Z"
+}

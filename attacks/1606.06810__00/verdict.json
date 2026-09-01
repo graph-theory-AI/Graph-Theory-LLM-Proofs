@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured formula holds for all t when n is at most t+2, for all n when t is at most 4, and for every (t-2)-degenerate instance.",
+  "would_publish": false,
+  "caveats": "The minimum-degree core for t at least 5 and n at least t+3 remains unresolved; no counterexample to the conjectured bound is found.",
+  "id": "1606.06810__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.160136,
+  "eur": 1.201663,
+  "elapsed_s": 1514.4,
+  "status": "completed",
+  "response_id": "resp_082a1b58899882e5006a965cc438b087d2b4d27fbf3b223d42",
+  "when": "2026-09-01T05:29:18Z"
+}

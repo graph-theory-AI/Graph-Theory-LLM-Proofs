@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains unresolved; elementary Ramsey recurrences yield a weakened form, show that no k at most 33 is polite, and quantify the missing near-diagonal growth estimate.",
+  "would_publish": false,
+  "caveats": "There is no asymptotic proof or counterexample; the results below are self-contained but elementary.",
+  "id": "2207.07775__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.154588,
+  "eur": 1.195916,
+  "elapsed_s": 1195.3,
+  "status": "completed",
+  "response_id": "resp_02613fc64eaa0cb4006a965e65976487d292e25bf6259cbb45",
+  "when": "2026-09-01T05:30:56Z"
+}

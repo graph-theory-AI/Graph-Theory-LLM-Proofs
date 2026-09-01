@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 123,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2301.13305__04",
+    "title_md": "[Open problem: minimum edge-coloring with odd intersection property](https://arxiv.org/abs/2301.13305)",
+    "paper": "Graph-codes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2301.13305__04/"
+  },
+  "dossier_meta": {
+    "id": "2301.13305__04",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2301.13305__04/",
+    "arxiv_id": "2301.13305",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Graph-codes",
+    "catalog_title": "Open problem: minimum edge-coloring with odd intersection property",
+    "statement_text": "Determine or estimate the smallest number of colors in an edge coloring of $K_n$ in which every copy of a given graph $H$ (or every copy of any member of a prescribed family $\\mathcal{H}$ of graphs) intersects at least one color class by an odd number of edges.",
+    "context_text": "The authors propose this in the concluding remarks as a natural variant of classical Ramsey Theory questions arising from the coloring method used throughout the paper to produce lower bounds on independence numbers of Cayley graphs."
+  },
+  "started": "2026-09-01T05:30:22Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

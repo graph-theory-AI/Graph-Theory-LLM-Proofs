@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is proved here for every threshold graph, with the explicit exponent d=2|H|-1, via a closure theorem for adjoining universal or isolated vertices.",
+  "would_publish": false,
+  "caveats": "The argument does not handle general prime graphs, and the reported converse implication from Erd\u0151s-Hajnal to virality is not reproved.",
+  "id": "2307.06455__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.569512,
+  "eur": 0.589898,
+  "elapsed_s": 907.0,
+  "status": "completed",
+  "response_id": "resp_0c093d5a6439af2b006a965ef946d487d2890e7c716c85fda5",
+  "when": "2026-09-01T05:28:36Z"
+}

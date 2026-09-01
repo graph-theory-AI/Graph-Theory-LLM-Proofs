@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 128,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1612.09143__00",
+    "title_md": "[Motivating Question (Introduction)](https://arxiv.org/abs/1612.09143)",
+    "paper": "Many cliques in $H$-free subgraphs of random graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1612.09143__00/"
+  },
+  "dossier_meta": {
+    "id": "1612.09143__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1612.09143__00/",
+    "arxiv_id": "1612.09143",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Many cliques in $H$-free subgraphs of random graphs",
+    "catalog_title": "Motivating Question (Introduction)",
+    "statement_text": "For which values of $p$ is it true that $\\mathrm{ex}(G(n,p), K_m, H) = (1+o(1))\\binom{k-1}{m}\\left(\\frac{n}{k-1}\\right)^m p^{\\binom{m}{2}}$ w.h.p.?",
+    "context_text": "For any fixed $H$ with $\\chi(H)=k>m$ the deterministic extremal result gives $\\mathrm{ex}(n,K_m,H)=(1+o(1))\\binom{k-1}{m}(n/(k-1))^m$. Analogous to the edge case characterised by Theorem 1.1, the authors ask for which values of $p$ this extremal count is achieved with high probability in $G(n,p)$. The paper answers the question fully when $m_2(H)\\geq m_2(K_m)$ (Theorem 1.2) and only partially when $m_2(H)<m_2(K_m)$ (Theorem 1.4), leaving the exact transition threshold in the latter case open; the paper closes with a dedicated Section 6 of open problems not included in the provided text."
+  },
+  "started": "2026-09-01T05:28:36Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

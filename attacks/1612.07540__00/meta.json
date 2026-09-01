@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 130,
+    "score": 3.55,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1612.07540__00",
+    "title_md": "[Open problem: dimension of posets with planar cover graphs vs. height](https://arxiv.org/abs/1612.07540)",
+    "paper": "Planar posets have dimension at most linear in their height",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1612.07540__00/"
+  },
+  "dossier_meta": {
+    "id": "1612.07540__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1612.07540__00/",
+    "arxiv_id": "1612.07540",
+    "tier": 4,
+    "score": 3.55,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Planar posets have dimension at most linear in their height",
+    "catalog_title": "Open problem: dimension of posets with planar cover graphs vs. height",
+    "statement_text": "It is not known whether the dimension of posets with planar cover graphs is bounded by a linear function of their height (or any polynomial function for that matter).",
+    "context_text": "The paper's main result (Theorem 1) establishes a linear bound $\\dim(P) \\leq 192h + 96$ for planar posets. The Streib\u2013Trotter theorem guarantees only that some (exponential) function $f(h)$ bounds the dimension for the broader class of posets with planar cover graphs. Whether a polynomial \u2014 let alone linear \u2014 bound holds in this more general setting is explicitly left open by the authors, who also provide an improved lower bound of $2h - 2$ (Theorem 3) for this class."
+  },
+  "started": "2026-09-01T05:25:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
