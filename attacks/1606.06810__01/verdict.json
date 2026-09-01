@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but the sharp 3^(2t/3) exponent is proved for complete multipartite pieces and, in another direction, for pieces whose complements have maximum degree at most two.",
+  "would_publish": false,
+  "caveats": "No improved bound is obtained for arbitrary graphs, and I have not verified whether these elementary special cases already appear in the literature.",
+  "id": "1606.06810__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.00718,
+  "eur": 1.043232,
+  "elapsed_s": 1228.7,
+  "status": "completed",
+  "response_id": "resp_03a5efb406982e5a006a969159154c87d2a009dabe26217d6b",
+  "when": "2026-09-01T09:08:53Z"
+}

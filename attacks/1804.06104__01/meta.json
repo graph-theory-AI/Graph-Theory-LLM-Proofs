@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 60,
+    "score": 4.0,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1804.06104__01",
+    "title_md": "[Informal Conjecture: probabilistic methods insufficient for the $\\Delta\u2026](https://arxiv.org/abs/1804.06104)",
+    "paper": "Progress on the adjacent vertex distinguishing edge colouring conjecture",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1804.06104__01/"
+  },
+  "dossier_meta": {
+    "id": "1804.06104__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1804.06104__01/",
+    "arxiv_id": "1804.06104",
+    "tier": 4,
+    "score": 4.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Progress on the adjacent vertex distinguishing edge colouring conjecture",
+    "catalog_title": "Informal Conjecture: probabilistic methods insufficient for the $\\Delta+2$ bound",
+    "statement_text": "One could suspect, as we do, that probabilistic methods such as the Local Lemma or entropy compression will probably not be enough on their own to prove the $\\Delta+2$ bound from Conjecture 1, assuming the conjecture is true.",
+    "context_text": "After reducing Hatami's $\\Delta+300$ bound to $\\Delta+19$ using entropy compression, the authors reflect on the limitations of probabilistic techniques for fully resolving the Zhang\u2013Liu\u2013Wang conjecture, noting that some extra colours seem inevitably wasted in any random process."
+  },
+  "started": "2026-09-01T09:08:53Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
