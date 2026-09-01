@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Clebsch-based lexicographic powers give explicit P6-free graphs with eta at least omega squared over three, and eta equal to omega squared when omega is a power of two.",
+  "would_publish": false,
+  "caveats": "This is only a lower bound for the P6 case; it gives neither an upper bound nor a fixed-clique counterexample, and its literature novelty was not checked.",
+  "id": "2302.04986__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.375436,
+  "eur": 1.424669,
+  "elapsed_s": 2494.2,
+  "status": "completed",
+  "response_id": "resp_0fe14e3ea2f296b3006a967ddfb3a487d2b96e966733bb5a5f",
+  "when": "2026-09-01T08:06:53Z"
+}

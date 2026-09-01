@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general conjecture remains open, but every Eulerian tournament and every Eulerian digraph satisfying an explicit high-degree Lov\u00e1sz-local-lemma condition has a majority 3-colouring.",
+  "would_publish": false,
+  "caveats": "Assumes finite loopless simple digraphs; the tournament special case may already be known, and the general mixed-degree case remains untouched.",
+  "id": "1608.03040__04",
+  "model": "gpt-5.6-sol",
+  "usd": 1.14148,
+  "eur": 1.182339,
+  "elapsed_s": 983.5,
+  "status": "completed",
+  "response_id": "resp_034331e7e526335d006a968315811087d2b64579c7c45ccc76",
+  "when": "2026-09-01T08:03:56Z"
+}

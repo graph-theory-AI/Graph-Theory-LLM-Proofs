@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 64,
+    "score": 3.95,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1809.08324__01",
+    "title_md": "[Conjecture 1.5](https://arxiv.org/abs/1809.08324)",
+    "paper": "Short directed cycles in bipartite digraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1809.08324__01/"
+  },
+  "dossier_meta": {
+    "id": "1809.08324__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1809.08324__01/",
+    "arxiv_id": "1809.08324",
+    "tier": 4,
+    "score": 3.95,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Short directed cycles in bipartite digraphs",
+    "catalog_title": "Conjecture 1.5",
+    "statement_text": "For every integer $k \\geq 1$, and every pair of reals $\\alpha, \\beta > 0$ with $k\\alpha + \\beta > 1$, if $G$ is a non-null bipartite digraph with bipartition $(A, B)$, where every vertex in $A$ has out-degree at least $\\beta|B|$, and every vertex in $B$ has out-degree at least $\\alpha|A|$, then $G$ has girth at most $2k$.",
+    "context_text": "A conjecture stronger than Conjecture 1.2 (the case $\\alpha = \\beta$) that also implies the Caccetta-H\u00e4ggkvist conjecture (via $\\beta \\to 0$). It is best possible for infinitely many pairs $(\\alpha, \\beta)$, as witnessed by an explicit circulant-type extremal construction; the maximal bad pairs all lie on the lines $\\alpha + k\\beta = 1$ or $k\\alpha + \\beta = 1$."
+  },
+  "started": "2026-09-01T08:03:57Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
