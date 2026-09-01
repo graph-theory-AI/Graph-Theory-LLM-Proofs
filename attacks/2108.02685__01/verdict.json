@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open in general, but it holds for minimum degree at most one, all complete multipartite graphs, balanced joins, and optimally with multiplicity two whenever the complement is a pseudoforest.",
+  "would_publish": false,
+  "caveats": "Only special classes are resolved; the fractional argument does not round to a single subgraph, and novelty of the special cases has not been literature-checked.",
+  "id": "2108.02685__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.09982,
+  "eur": 1.139188,
+  "elapsed_s": 1274.6,
+  "status": "completed",
+  "response_id": "resp_0dc60e5cfe94690b006a9670eb0c6487d2805c5b48712761c2",
+  "when": "2026-09-01T06:51:17Z"
+}

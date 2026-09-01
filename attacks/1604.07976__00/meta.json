@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 77,
+    "score": 3.85,
+    "tier": 4,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1604.07976__00",
+    "title_md": "[Conjecture 1](https://arxiv.org/abs/1604.07976)",
+    "paper": "Smaller Extended Formulations for the Spanning Tree Polytope of Bounded\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1604.07976__00/"
+  },
+  "dossier_meta": {
+    "id": "1604.07976__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1604.07976__00/",
+    "arxiv_id": "1604.07976",
+    "tier": 4,
+    "score": 3.85,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Smaller Extended Formulations for the Spanning Tree Polytope of Bounded\u2026",
+    "catalog_title": "Conjecture 1",
+    "statement_text": "If $G = (V, E)$ is a connected graph embedded in a fixed surface, then $\\mathrm{xc}(P_{\\mathrm{sp.trees}}(G)) = O(|V|)$.",
+    "context_text": "The authors prove an $O(g^{1/2}|V|^{3/2} + g^{3/2}|V|^{1/2})$ upper bound for graphs embedded in a surface of genus $g$ (Theorem 3). They conjecture that this can be improved to match the linear bound known for planar graphs (Theorem 2, due to Williams)."
+  },
+  "started": "2026-09-01T06:48:38Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

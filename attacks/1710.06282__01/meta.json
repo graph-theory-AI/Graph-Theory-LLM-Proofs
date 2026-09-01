@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 76,
+    "score": 3.85,
+    "tier": 4,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1710.06282__01",
+    "title_md": "[Conjecture 1.4](https://arxiv.org/abs/1710.06282)",
+    "paper": "A tight Erd\u0151s-P\u00f3sa function for wheel minors",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1710.06282__01/"
+  },
+  "dossier_meta": {
+    "id": "1710.06282__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1710.06282__01/",
+    "arxiv_id": "1710.06282",
+    "tier": 4,
+    "score": 3.85,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "A tight Erd\u0151s-P\u00f3sa function for wheel minors",
+    "catalog_title": "Conjecture 1.4",
+    "statement_text": "There is a function $f : \\mathbb{N} \\to \\mathbb{N}$ such that for all integers $r, k \\geq 1$, every graph $G$ of treewidth at least $f(r) \\cdot k \\log(k + 1)$ has $k$ vertex-disjoint subgraphs $G_1, \\ldots, G_k$, each of treewidth at least $r$.",
+    "context_text": "This is the treewidth-level analogue of Conjecture 1.2: it asserts that $c' = 1$ suffices in Theorem 1.3 of Chekuri and Chuzhoy (at least ignoring the precise dependence on $r$), whereas their proof only gives $c' \\geq 1$. The authors note it is implied by Conjecture 1.2 by taking $H$ to be the $r \\times r$ grid."
+  },
+  "started": "2026-09-01T06:51:17Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

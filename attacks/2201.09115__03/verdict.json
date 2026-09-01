@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The exact minimum remains open, but every failure has s at least 3 and t at least 4 after normalization, and every witness contains a critical core on at least s+t+3 vertices.",
+  "would_publish": false,
+  "caveats": "The upper bound s+t at most 96 is taken from the supplied 2025 catalog entry and was not independently audited here.",
+  "id": "2201.09115__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.067256,
+  "eur": 1.105458,
+  "elapsed_s": 1598.9,
+  "status": "completed",
+  "response_id": "resp_0909b77c033dfe00006a966f06f9b487d2bd6c69c3182c0ed4",
+  "when": "2026-09-01T06:48:37Z"
+}

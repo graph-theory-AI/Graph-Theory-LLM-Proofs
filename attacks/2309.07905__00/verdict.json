@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured dichotomy holds for every fixed bounded-treewidth class, hence for forests, bounded-degree chordal graphs, and all graphs with maximum degree at most two, with explicit constants whose dependence on d is essentially necessary.",
+  "would_publish": false,
+  "caveats": "The argument does not cover bounded-degree graphs of unbounded treewidth, and no claim of novelty is made.",
+  "id": "2309.07905__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.952824,
+  "eur": 0.98693,
+  "elapsed_s": 1174.0,
+  "status": "completed",
+  "response_id": "resp_066c6b2c1a7de919006a966fe9edd487d28ee578ba6bc97961",
+  "when": "2026-09-01T06:45:19Z"
+}
