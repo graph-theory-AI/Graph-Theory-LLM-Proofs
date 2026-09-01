@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 70,
+    "score": 3.85,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1802.03727__01",
+    "title_md": "[Conjecture 1.4](https://arxiv.org/abs/1802.03727)",
+    "paper": "Separation choosability and dense bipartite induced subgraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1802.03727__01/"
+  },
+  "dossier_meta": {
+    "id": "1802.03727__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1802.03727__01/",
+    "arxiv_id": "1802.03727",
+    "tier": 4,
+    "score": 3.85,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Separation choosability and dense bipartite induced subgraphs",
+    "catalog_title": "Conjecture 1.4",
+    "statement_text": "There are functions $x_2(d)$ and $x_3(d)$ satisfying $x_2(d) \\to \\infty$ and $x_3(d) \\to \\infty$ as $d \\to \\infty$ such that any graph with minimum degree at least $d$ contains a complete subgraph on $x_2(d)$ vertices or a bipartite induced subgraph with minimum degree at least $x_3(d)$.",
+    "context_text": "This conjecture, if true, would imply Conjecture 1.3: since $\\mathrm{ch}_{\\mathrm{sep}}(K_{d+1}) \\sim \\sqrt{d}$ (Kratochv\u00edl\u2013Tuza\u2013Voigt) and Theorem 1.2 handles the dense bipartite induced subgraph case, the two alternatives together would give a separation-choosability lower bound tending to infinity for any graph of large minimum degree."
+  },
+  "started": "2026-09-01T07:21:37Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

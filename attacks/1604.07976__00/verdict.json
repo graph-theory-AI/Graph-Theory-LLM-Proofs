@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A linear-size incidence-matching formulation is exact when one vertex meets every noncontractible cycle, while an explicit torus embedding shows why the same formulation fails in general.",
+  "would_publish": false,
+  "caveats": "The full conjecture remains open; the intended simple-graph convention and cellular embeddings are assumed.",
+  "id": "1604.07976__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.18928,
+  "eur": 1.23185,
+  "elapsed_s": 1978.9,
+  "status": "completed",
+  "response_id": "resp_03cfb0faf5e17629006a9675462dd487d2bbb019b68fa29c87",
+  "when": "2026-09-01T07:21:36Z"
+}
