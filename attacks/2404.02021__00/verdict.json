@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Pair constructions of complexity O(n^4 alpha^(-n)) attain every biased first-moment Ramsey lower bound, while diagonal cliques show that an arbitrary growing subpolynomial complexity does not suffice.",
+  "would_publish": false,
+  "caveats": "The phrase p > r(G,H)^{o(1)} needs a uniform threshold quantifier; under the likely intended interpretation the conjecture remains open.",
+  "id": "2404.02021__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.857524,
+  "eur": 0.888219,
+  "elapsed_s": 1278.4,
+  "status": "completed",
+  "response_id": "resp_0cd3a3bf55bcea40006a964b45fb9c87d2a670bed1a94dfe0f",
+  "when": "2026-09-01T04:10:44Z"
+}

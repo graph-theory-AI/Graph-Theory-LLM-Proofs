@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A width-plus-one subadditivity argument sharpens the quoted lower bound and determines the maximum as t+1 for an exponential initial range of parameters.",
+  "would_publish": false,
+  "caveats": "This relies on the source paper's Theorem 2 and leaves the remaining range, including (k,t)=(4,4), open.",
+  "id": "1706.00337__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.216152,
+  "eur": 1.259684,
+  "elapsed_s": 1242.0,
+  "status": "completed",
+  "response_id": "resp_0686a5c67e25d5cb006a964a795af487d2aa5e148cc8a896b0",
+  "when": "2026-09-01T04:06:43Z"
+}

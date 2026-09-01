@@ -1,0 +1,15 @@
+{
+  "verdict": "ill_posed",
+  "confidence": "high",
+  "one_line": "With no graph class specified the question has no single answer, and its universal interpretation is false even for the hereditary class of split graphs.",
+  "would_publish": false,
+  "caveats": "The counterexamples settle only the universal reading; they do not characterize all classes with bounded ratio and may overlap known negative examples.",
+  "id": "2503.05562__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.356916,
+  "eur": 0.369692,
+  "elapsed_s": 425.3,
+  "status": "completed",
+  "response_id": "resp_0499e6fa46299091006a964d0fd72087d281392c767217c008",
+  "when": "2026-09-01T04:04:08Z"
+}

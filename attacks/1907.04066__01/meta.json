@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 213,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "1907.04066__01",
+    "title_md": "[Conjecture 8](https://arxiv.org/abs/1907.04066)",
+    "paper": "Coloring count cones of planar graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1907.04066__01/"
+  },
+  "dossier_meta": {
+    "id": "1907.04066__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1907.04066__01/",
+    "arxiv_id": "1907.04066",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Coloring count cones of planar graphs",
+    "catalog_title": "Conjecture 8",
+    "statement_text": "Every plane near-cubic graph $\\tilde{G}$ with $d(\\tilde{G}) = 5$ satisfies $n_{\\tilde{G}} \\in B'_5$.",
+    "context_text": "The cone $B'_5$ is defined as the subcone of $B_5$ spanned by the rays $\\operatorname{ray}(\\tilde{R}_{5,1}), \\ldots, \\operatorname{ray}(\\tilde{R}_{5,11})$, excluding the ray corresponding to the non-planar graph $\\tilde{R}_{5,12}$. By Lemma 7, membership of $n_{\\tilde{G}}$ in the full cone $B_5$ is equivalent to the Four Color Theorem, so this conjecture is a strict strengthening of the Four Color Theorem. The authors verify it for all plane near-cubic graphs with fewer than 30 vertices."
+  },
+  "started": "2026-09-01T04:08:41Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds with c=2 when deleting O(n^{1-\u03b5}) vertices leaves bounded maximum degree, and with c=q+1 when O(n^{1-\u03b5}) vertices suffice to reduce to treewidth q.",
+  "would_publish": false,
+  "caveats": "The extra modulator hypotheses are not consequences presently derived from strongly sublinear separators, so the unrestricted hereditary case remains open.",
+  "id": "2208.10074__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.183548,
+  "eur": 1.225913,
+  "elapsed_s": 1281.4,
+  "status": "completed",
+  "response_id": "resp_083dd16202d4fb3f006a964940565487d29d55bf6c05fbdf6b",
+  "when": "2026-09-01T04:02:09Z"
+}

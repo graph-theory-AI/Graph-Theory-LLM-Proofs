@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 216,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1812.02420__03",
+    "title_md": "[Problem 5.40](https://arxiv.org/abs/1812.02420)",
+    "paper": "On the Complexity of Digraph Colourings and Vertex Arboricity",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.02420__03/"
+  },
+  "dossier_meta": {
+    "id": "1812.02420__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.02420__03/",
+    "arxiv_id": "1812.02420",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On the Complexity of Digraph Colourings and Vertex Arboricity",
+    "catalog_title": "Problem 5.40",
+    "statement_text": "For given $k,b\\in\\mathbb{N}$ with $k\\geq b$, is there a directed graph $\\vec{K}(k,b)$ with vertex set $\\binom{[k]}{b}$ such that the following holds? The subdigraph of $\\vec{K}(k,b)$ induced by any $\\{B_{1},\\ldots,B_{l}\\}\\subseteq\\binom{[k]}{b}$ is acylic if and only if $\\bigcap_{i=1}^{l}{B_{i}}\\neq\\emptyset$.",
+    "context_text": "Such 'directed Kneser graphs' $\\vec{K}(k,b)$ would allow $b$-tuple $k$-colourings of digraphs to be equivalent to the existence of circular homomorphisms to $\\vec{K}(k,b)$, tying the fractional dichromatic number to circular homomorphism theory. Existence is confirmed for $k=b+1$ via the directed cycle of length $b+1$, but the general case is open."
+  },
+  "started": "2026-09-01T04:06:38Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

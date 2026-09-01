@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "For finite simple graphs, a nontrivial joined-union decomposition exists exactly when the graph has a proper nonsingleton module; this is polynomial-time decidable, while P4 shows that not every graph decomposes.",
+  "would_publish": false,
+  "caveats": "This uses the standard graph-substitution meaning of joined union; infinite graphs and more restrictive decomposition notions are not addressed.",
+  "id": "2401.06062__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.222796,
+  "eur": 0.230771,
+  "elapsed_s": 359.7,
+  "status": "completed",
+  "response_id": "resp_0c7fe85b3b00162a006a964d03063c87d28f38dd5c7da575c2",
+  "when": "2026-09-01T04:02:50Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The fixed-density question remains open, but G(n,p) is a.a.s. normal when np=o(1) or n(1-p)=o(1), whereas p asymptotic to c/n has a Poisson isolated-C5 obstruction and is not a.a.s. normal.",
+  "would_publish": false,
+  "caveats": "If p may vary arbitrarily with n, p=c/n disproves a universal affirmative statement; the intended fixed p in (0,1), including p=1/2, is not resolved.",
+  "id": "1601.01129__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.980832,
+  "eur": 1.015941,
+  "elapsed_s": 1200.2,
+  "status": "completed",
+  "response_id": "resp_0c93529b3885cf4a006a9649d5170087d2a5132aad44041144",
+  "when": "2026-09-01T04:03:17Z"
+}

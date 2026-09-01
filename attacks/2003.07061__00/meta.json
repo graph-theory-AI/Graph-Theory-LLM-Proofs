@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 215,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "2003.07061__00",
+    "title_md": "[The $\\varepsilon$-$t$-Net Problem](https://arxiv.org/abs/2003.07061)",
+    "paper": "The $\u03b5$-$t$-Net Problem",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2003.07061__00/"
+  },
+  "dossier_meta": {
+    "id": "2003.07061__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2003.07061__00/",
+    "arxiv_id": "2003.07061",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "The $\u03b5$-$t$-Net Problem",
+    "catalog_title": "The $\\varepsilon$-$t$-Net Problem",
+    "statement_text": "How small are the smallest $\\varepsilon$-$t$-nets for $H$? Can we compute them efficiently?",
+    "context_text": "Given a finite hypergraph $H=(V,E)$, a positive integer $t$, and $\\varepsilon\\in(t/|V|,1)$, an $\\varepsilon$-$t$-net is a family $S\\subseteq\\binom{V}{t}$ of $t$-element subsets of $V$ such that every hyperedge $e\\in E$ with $|e|\\geq\\varepsilon|V|$ contains some $s\\in S$. The problem generalises the classical $\\varepsilon$-net problem ($t=1$) and the Mnet notion ($t=\\Theta(\\varepsilon|V|)$), and arises naturally in secret sharing and other combinatorial contexts."
+  },
+  "started": "2026-09-01T04:06:43Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 220,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1709.09050__00",
+    "title_md": "[Classification of planar graphs by cop number](https://arxiv.org/abs/1709.09050)",
+    "paper": "Topological directions in Cops and Robbers",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1709.09050__00/"
+  },
+  "dossier_meta": {
+    "id": "1709.09050__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1709.09050__00/",
+    "arxiv_id": "1709.09050",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Topological directions in Cops and Robbers",
+    "catalog_title": "Classification of planar graphs by cop number",
+    "statement_text": "Classify which planar graphs have cop number $i$, for $1 \\leq i \\leq 3$.",
+    "context_text": "By Theorem 1, every connected planar graph has cop number 1, 2, or 3. Cop-win graphs are precisely the dismantlable ones, which may eventually aid in classifying planar cop-win graphs, but a complete classification for all three cop number values remains open."
+  },
+  "started": "2026-09-01T04:03:17Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

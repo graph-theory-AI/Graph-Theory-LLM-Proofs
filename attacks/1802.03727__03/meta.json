@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 219,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1802.03727__03",
+    "title_md": "[Conjecture 1.6](https://arxiv.org/abs/1802.03727)",
+    "paper": "Separation choosability and dense bipartite induced subgraphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1802.03727__03/"
+  },
+  "dossier_meta": {
+    "id": "1802.03727__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1802.03727__03/",
+    "arxiv_id": "1802.03727",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Separation choosability and dense bipartite induced subgraphs",
+    "catalog_title": "Conjecture 1.6",
+    "statement_text": "There exist $d_0$ and $g_0$ such that any graph of girth at least $g_0$ with minimum degree at least $d_0$ contains a bipartite induced subgraph of minimum degree at least $3$.",
+    "context_text": "This is a further variation on Conjecture 1.4 using large girth instead of triangle-freeness. The weaker statement with 3 replaced by 2 (i.e., containing an even hole) is true with $g_0 = 4$ and $d_0 = 3$ by Radovanovi\u0107\u2013Vu\u0161kovi\u0107; detecting bipartite induced subgraphs of minimum degree at least 3 is NP-complete."
+  },
+  "started": "2026-09-01T04:03:17Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

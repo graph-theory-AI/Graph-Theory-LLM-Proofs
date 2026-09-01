@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 212,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2112.02313__00",
+    "title_md": "[Polynomial Kempe sequences for degenerate graphs](https://arxiv.org/abs/2112.02313)",
+    "paper": "Kempe changes in degenerate graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2112.02313__00/"
+  },
+  "dossier_meta": {
+    "id": "2112.02313__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2112.02313__00/",
+    "arxiv_id": "2112.02313",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Kempe changes in degenerate graphs",
+    "catalog_title": "Polynomial Kempe sequences for degenerate graphs",
+    "statement_text": "Can any two $k$-colorings of a $(k-1)$-degenerate graph on $n$ vertices always be connected by a sequence of Kempe changes whose length is polynomial in $n$?",
+    "context_text": "Las Vergnas and Meyniel proved in 1981 that all $k$-colorings of a $d$-degenerate graph are Kempe equivalent when $k > d+1$, but their proof yields a sequence that may be exponential in the number of vertices. Whether a polynomial bound can be achieved is posed as an intriguing open question and is the central motivation for all three main results of the paper."
+  },
+  "started": "2026-09-01T04:08:52Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

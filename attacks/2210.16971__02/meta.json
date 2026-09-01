@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 211,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2210.16971__02",
+    "title_md": "[Equivalence of asymmetric and classical Sidorenko properties](https://arxiv.org/abs/2210.16971)",
+    "paper": "A note on directed analogues of the Sidorenko and forcing conjectures",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.16971__02/"
+  },
+  "dossier_meta": {
+    "id": "2210.16971__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.16971__02/",
+    "arxiv_id": "2210.16971",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "A note on directed analogues of the Sidorenko and forcing conjectures",
+    "catalog_title": "Equivalence of asymmetric and classical Sidorenko properties",
+    "statement_text": "It is conjectured that the asymmetric Sidorenko property and the classical Sidorenko property are equivalent for bipartite graphs.",
+    "context_text": "The asymmetric Sidorenko property is a priori stronger than the classical Sidorenko property. The authors note that essentially all bipartite graphs known to satisfy the classical Sidorenko property are also known to satisfy the asymmetric version, lending credence to the belief that the two properties coincide."
+  },
+  "started": "2026-09-01T04:10:44Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

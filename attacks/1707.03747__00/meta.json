@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 222,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1707.03747__00",
+    "title_md": "[Open Question on Number of Tight Skew Partitions](https://arxiv.org/abs/1707.03747)",
+    "paper": "Colouring perfect graphs with bounded clique number",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1707.03747__00/"
+  },
+  "dossier_meta": {
+    "id": "1707.03747__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1707.03747__00/",
+    "arxiv_id": "1707.03747",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Colouring perfect graphs with bounded clique number",
+    "catalog_title": "Open Question on Number of Tight Skew Partitions",
+    "statement_text": "We do not know how many tight skew partitions there can really be; the authors do not know of a graph with more than linearly many tight skew partitions.",
+    "context_text": "The paper shows there are at most $n^3 \\log n$ tight skew partitions in an $n$-vertex graph (improving the $n^4$ bound from the Kennedy\u2013Reed list), because for every tight skew partition $(A,B)$ the set $B$ appears at least $k_2^2$ times in the Kennedy\u2013Reed output, where $k_2$ is the size of the second-largest anticomponent of $G[B]$. The true maximum is unknown."
+  },
+  "started": "2026-09-01T04:02:51Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

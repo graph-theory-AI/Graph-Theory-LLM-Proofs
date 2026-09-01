@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full conjecture is not resolved here, but it holds for every triangle-free graph of treewidth at most two, while every triangle-free outerplanar graph has fractional chromatic number at most 5/2.",
+  "would_publish": false,
+  "caveats": "The remaining planar case may have treewidth at least three and maximum degree at least five; no literature-priority claim is made for the special-case lemmas.",
+  "id": "1606.06265__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.0717,
+  "eur": 1.110061,
+  "elapsed_s": 1434.2,
+  "status": "completed",
+  "response_id": "resp_07c47a711a7ce47d006a964a3a7e3087d2aee8b4eefedc1af9",
+  "when": "2026-09-01T04:08:52Z"
+}

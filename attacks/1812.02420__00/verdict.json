@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the intended loopless convention, NP-completeness follows for every cyclic target with connected symmetric part and for every two-clone blow-up of a digon-free circular core, including an infinite family outside all cases listed in Theorem 2.17.",
+  "would_publish": false,
+  "caveats": "The general case with disconnected bipartite symmetric part remains open; the proof uses the digon-free case of Theorem 2.17 and the known NP-completeness of 2-dicolourability.",
+  "id": "1812.02420__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.195692,
+  "eur": 1.238492,
+  "elapsed_s": 1356.1,
+  "status": "completed",
+  "response_id": "resp_0cc534d955a6863a006a964939744087d295abda0f8b2ebadb",
+  "when": "2026-09-01T04:03:17Z"
+}

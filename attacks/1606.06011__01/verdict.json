@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The finite-base question is equivalent to bounded order of bridgeless counterexamples, with an explicit bound on every bridge-reduced fibre, but that boundedness remains unproved.",
+  "would_publish": false,
+  "caveats": "Assumes finite connected simple graphs and closure under repeated bridge subdivisions; the decisive bridgeless case remains open.",
+  "id": "1606.06011__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.080088,
+  "eur": 1.11875,
+  "elapsed_s": 1164.9,
+  "status": "completed",
+  "response_id": "resp_06747b831ca2a3d9006a9649e0fd7c87d28051633564440412",
+  "when": "2026-09-01T04:02:53Z"
+}

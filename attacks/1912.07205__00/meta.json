@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 217,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1912.07205__00",
+    "title_md": "[Conjecture 8](https://arxiv.org/abs/1912.07205)",
+    "paper": "The Last Temptation of William T. Tutte",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1912.07205__00/"
+  },
+  "dossier_meta": {
+    "id": "1912.07205__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1912.07205__00/",
+    "arxiv_id": "1912.07205",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "The Last Temptation of William T. Tutte",
+    "catalog_title": "Conjecture 8",
+    "statement_text": "For every planar triangulation whose 4-coloring complex is disconnected, there is a component of even parity and a component of odd parity.",
+    "context_text": "After resolving Tutte's original question by constructing triangulations with arbitrarily many same-parity components, the authors identify this closely related conjecture based on extensive computation. It refines the picture by asserting that disconnected coloring complexes always contain both parities."
+  },
+  "started": "2026-09-01T04:04:09Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

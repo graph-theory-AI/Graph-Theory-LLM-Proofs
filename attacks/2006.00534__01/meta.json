@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 214,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2006.00534__01",
+    "title_md": "[Question 8](https://arxiv.org/abs/2006.00534)",
+    "paper": "Inverse problems for minimal complements and maximal supplements",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2006.00534__01/"
+  },
+  "dossier_meta": {
+    "id": "2006.00534__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2006.00534__01/",
+    "arxiv_id": "2006.00534",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Inverse problems for minimal complements and maximal supplements",
+    "catalog_title": "Question 8",
+    "statement_text": "Is the behavior of $T(n)$ different when $n$ is prime? How much does $T(G)$ depend on the structure of $G$ in addition to the order of $G$?",
+    "context_text": "The best upper bound constructions for $T(n)$ rely on the existence of subgroups of certain orders, so the best known upper bound for $T(p)$ when $p$ is prime is only $O(p^{3/4+\\varepsilon})$, which may not be tight."
+  },
+  "started": "2026-09-01T04:07:57Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

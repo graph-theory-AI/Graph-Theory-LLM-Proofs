@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 218,
+    "score": 3.25,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "1701.05597__00",
+    "title_md": "[Conjecture 1.8](https://arxiv.org/abs/1701.05597)",
+    "paper": "Induced subgraphs of graphs with large chromatic number. VI. Banana tre\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1701.05597__00/"
+  },
+  "dossier_meta": {
+    "id": "1701.05597__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1701.05597__00/",
+    "arxiv_id": "1701.05597",
+    "tier": 3,
+    "score": 3.25,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Induced subgraphs of graphs with large chromatic number. VI. Banana tre\u2026",
+    "catalog_title": "Conjecture 1.8",
+    "statement_text": "Every multigraph is widespread.",
+    "context_text": "Scott [6] conjectured that every multigraph is pervasive in the ideal of all graphs, but this was disproved by a construction in [5]. The authors introduce the notion of 'widespread' and present Conjecture 1.8 as a resuscitated version of Scott's conjecture. They note they are very far from proving it, cannot verify it even for every chandelier, and that all multigraphs proved widespread so far are subdivisions of outerplanar graphs."
+  },
+  "started": "2026-09-01T04:03:24Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the intended O(n) interpretation the conjecture remains open, but permutation-invariant and low-degree algebraic colorings are rigorously ruled out, with a sharp classification for quadratic colorings.",
+  "would_publish": false,
+  "caveats": "Literal equality |H|=Cn is vacuous; the results below concern the intended uniform upper-bound formulation.",
+  "id": "2412.21194__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.339148,
+  "eur": 1.387083,
+  "elapsed_s": 1541.2,
+  "status": "completed",
+  "response_id": "resp_0e7e00e6361e854d006a964886fe8087d28539b23445c5b0d9",
+  "when": "2026-09-01T04:03:24Z"
+}

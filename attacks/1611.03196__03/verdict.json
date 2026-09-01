@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "medium",
+  "one_line": "The conjecture holds with the explicit crude bound c(m)=32(m+1)^3, by combining Carath\u00e9odory reduction with proportional-necklace interpolation between two matchings.",
+  "would_publish": true,
+  "caveats": "The proposed bound m/2 remains open; the proof uses the standard proportional interval-splitting theorem, and novelty has not been independently checked.",
+  "id": "1611.03196__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.120916,
+  "eur": 1.161039,
+  "elapsed_s": 1365.6,
+  "status": "completed",
+  "response_id": "resp_0141effe440b8cb6006a964a47cf4887d2bd57c58dbe6c6328",
+  "when": "2026-09-01T04:07:57Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Any affirmative H must have zero undirected chromatic threshold and a source-forest grading; an explicit acyclic orientation of K_{3,3} fails, while every strictly leveled digraph is affirmative.",
+  "would_publish": false,
+  "caveats": "Assumes \u03c7(D) is the chromatic number of the underlying graph; sufficiency and literature novelty are unresolved.",
+  "id": "2503.20045__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.41092,
+  "eur": 1.461424,
+  "elapsed_s": 1601.1,
+  "status": "completed",
+  "response_id": "resp_07d19d8a8b89c811006a96490d2b0887d2a53589d2ea520fe9",
+  "when": "2026-09-01T04:06:38Z"
+}
