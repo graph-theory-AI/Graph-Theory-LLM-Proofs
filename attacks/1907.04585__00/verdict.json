@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but for every fixed subcubic forest H, MWIS has an exact 2^{O_H(beta)} n^{O_H(1)} algorithm where beta is the vertex-cover number of the graph induced by vertices of degree at least three.",
+  "would_publish": false,
+  "caveats": "The parameter beta can be linear, so unrestricted cubic and dense instances remain uncovered; novelty of this elementary parameterized observation was not literature-checked.",
+  "id": "1907.04585__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.857412,
+  "eur": 0.888103,
+  "elapsed_s": 1273.3,
+  "status": "completed",
+  "response_id": "resp_0aa2ef8fcb6cfe87006a9678e5a39087d289c6fa5e03c510f1",
+  "when": "2026-09-01T07:25:18Z"
+}

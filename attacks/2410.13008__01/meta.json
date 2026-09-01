@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 68,
+    "score": 3.9,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2410.13008__01",
+    "title_md": "[Informal Question (NP-characterization of weightable digraphs)](https://arxiv.org/abs/2410.13008)",
+    "paper": "When all directed cycles have length three",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2410.13008__01/"
+  },
+  "dossier_meta": {
+    "id": "2410.13008__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2410.13008__01/",
+    "arxiv_id": "2410.13008",
+    "tier": 4,
+    "score": 3.9,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "When all directed cycles have length three",
+    "catalog_title": "Informal Question (NP-characterization of weightable digraphs)",
+    "statement_text": "Can we give a construction for all weightable digraphs (i.e., an NP-characterization)?",
+    "context_text": "A digraph $G$ is weightable if one can assign a real weight $w(e)$ to each edge $e$ such that $\\sum_{e\\in E(C)}w(e)=1$ for each directed cycle $C$. The paper shows weightability is characterizable by excluded subdigraphs (giving a co-NP characterization), but an NP-characterization via explicit construction remains open. For strongly 2-connected digraphs, Conjecture 1.2 would provide such a construction."
+  },
+  "started": "2026-09-01T07:28:52Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

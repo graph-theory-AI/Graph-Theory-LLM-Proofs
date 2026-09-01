@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 67,
+    "score": 3.9,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2509.07174__00",
+    "title_md": "[Conjecture 1.2 (Coarse Menger conjecture for surfaces)](https://arxiv.org/abs/2509.07174)",
+    "paper": "Asymptotic structure. VI. Distant paths across a disc",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2509.07174__00/"
+  },
+  "dossier_meta": {
+    "id": "2509.07174__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2509.07174__00/",
+    "arxiv_id": "2509.07174",
+    "tier": 4,
+    "score": 3.9,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Asymptotic structure. VI. Distant paths across a disc",
+    "catalog_title": "Conjecture 1.2 (Coarse Menger conjecture for surfaces)",
+    "statement_text": "Let $\\mathcal{S}$ be a fixed surface. For all integers $k,c\\geq 0$ there exists $\\ell>0$ with the following property. Let $G$ be a graph that embeds on $\\mathcal{S}$ and let $S,T\\subseteq V(G)$. Then either\n\n$\\bullet$ there are $k+1$ paths between $S,T$, pairwise $c$-distant; or\n\n$\\bullet$ there is a set $X\\subseteq V(G)$ with $|X|\\leq k$ such that every path between $S,T$ contains a vertex with distance at most $\\ell$ from some member of $X$.",
+    "context_text": "The original Coarse Menger conjecture (attributed to Albrechtsen, Huynh, Jacobs, Knappe and Wollan, and independently to Georgakopoulos and Papasoglu) was shown to be false for general graphs by the same authors (Nguyen\u2013Scott\u2013Seymour) in [11], with counterexamples that are highly non-planar (unbounded genus). Since the counterexamples rely on non-planarity, the authors propose that a surface-restricted version may still hold."
+  },
+  "started": "2026-09-01T07:29:27Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

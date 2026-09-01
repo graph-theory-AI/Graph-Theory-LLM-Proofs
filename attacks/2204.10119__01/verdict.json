@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "An explicit 28-vertex 4-clique amalgam of two apex graphs is K6-minor-free and has degrees only 6, 7, and 8.",
+  "would_publish": false,
+  "caveats": "This addresses the unrestricted finite-simple-graph statement; the counterexample has a 4-clique separator.",
+  "id": "2204.10119__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.189408,
+  "eur": 1.231983,
+  "elapsed_s": 1509.6,
+  "status": "completed",
+  "response_id": "resp_096480534f0c2eee006a9678ce542487d2b4f3b0191ca3edc3",
+  "when": "2026-09-01T07:28:51Z"
+}

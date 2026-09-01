@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 69,
+    "score": 3.9,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2302.04986__00",
+    "title_md": "[Conjecture 1.8](https://arxiv.org/abs/2302.04986)",
+    "paper": "Hitting all maximum stable sets in $P_5$-free graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.04986__00/"
+  },
+  "dossier_meta": {
+    "id": "2302.04986__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.04986__00/",
+    "arxiv_id": "2302.04986",
+    "tier": 4,
+    "score": 3.9,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Hitting all maximum stable sets in $P_5$-free graphs",
+    "catalog_title": "Conjecture 1.8",
+    "statement_text": "For every forest $H$, there exists a function $f:\\mathbb{N}\\rightarrow\\mathbb{N}$ such that every $H$-free graph $G$ satisfies $\\eta(G)\\leq f(\\omega(G))$.",
+    "context_text": "Proposed as an analogue of the Gy\u00e1rf\u00e1s\u2013Sumner conjecture ($\\chi$-boundedness) for $\\eta$-boundedness: just as $H$-free graphs are conjectured to be $\\chi$-bounded for every forest $H$, the authors conjecture the same for $\\eta$-boundedness. The paper proves this conjecture for an assortment of special forests, including stars and paths $P_t$ with $t\\leq 5$."
+  },
+  "started": "2026-09-01T07:25:19Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

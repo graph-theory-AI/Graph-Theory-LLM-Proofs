@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains unresolved, but a sharp multi-guess theorem for forests yields explicit bounds for bounded feedback-vertex number, while all one-subdivisions have hat guessing number at most 4.",
+  "would_publish": false,
+  "caveats": "The bounds use parameters not controlled by degeneracy, so arbitrary 2-degenerate graphs remain untreated; no claim of literature novelty is made.",
+  "id": "2107.05995__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.236588,
+  "eur": 1.280851,
+  "elapsed_s": 1430.8,
+  "status": "completed",
+  "response_id": "resp_0a2f2b744ebbca03006a967806943087d291be95368557a99b",
+  "when": "2026-09-01T07:24:13Z"
+}
