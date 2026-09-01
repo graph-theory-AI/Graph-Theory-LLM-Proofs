@@ -1,0 +1,15 @@
+{
+  "verdict": "ill_posed",
+  "confidence": "high",
+  "one_line": "As extracted, the question has no determinate truth value because avoidability is defined only for induced path occurrences and no corresponding predicate is specified for non-path graphs.",
+  "would_publish": false,
+  "caveats": "A finite nonempty two-rooted reformulation could be genuine; below I prove only bounded-family obstructions under one explicit model.",
+  "id": "1908.03788__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.799348,
+  "eur": 0.82796,
+  "elapsed_s": 947.6,
+  "status": "completed",
+  "response_id": "resp_01644e589fa8d9c9006a962a0aa85487d2a2259d9096d24533",
+  "when": "2026-09-01T01:43:26Z"
+}

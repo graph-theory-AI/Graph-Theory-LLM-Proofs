@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "For every even k there is a finite simple bipartite 0_k-graph G_k with chi'_k(G_k) at least ceil(7k/6).",
+  "would_publish": true,
+  "caveats": "This uses the standard definition that every nonzero degree of a 0_k-graph is divisible by k, and interprets o(k) uniformly over all G.",
+  "id": "2507.04254__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.62476,
+  "eur": 0.647123,
+  "elapsed_s": 1274.4,
+  "status": "completed",
+  "response_id": "resp_08a13b72fca5728d006a9629d9ed2487d2bbada81e35385b76",
+  "when": "2026-09-01T01:48:04Z"
+}

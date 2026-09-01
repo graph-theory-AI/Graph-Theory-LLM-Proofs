@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 388,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2210.12699__00",
+    "title_md": "[Open problem: closing the gap for $d(s)$](https://arxiv.org/abs/2210.12699)",
+    "paper": "Subdigraphs of prescribed size and outdegree",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.12699__00/"
+  },
+  "dossier_meta": {
+    "id": "2210.12699__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.12699__00/",
+    "arxiv_id": "2210.12699",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Subdigraphs of prescribed size and outdegree",
+    "catalog_title": "Open problem: closing the gap for $d(s)$",
+    "statement_text": "It remains an interesting open problem to close the gap between the lower and upper bounds: $\\Omega(\\log s) < \\frac{s}{2} - d(s) < O(\\sqrt{s\\log s})$, where $d(s)$ denotes the largest integer such that every $2n$-vertex digraph of minimum out-degree at least $s$ contains an $n$-vertex subdigraph of minimum out-degree at least $d(s)$.",
+    "context_text": "After disproving Alon's problem, the authors note that the true asymptotic behaviour of $\\frac{s}{2} - d(s)$ lies somewhere between $\\Omega(\\log s)$ (established by their construction) and $O(\\sqrt{s\\log s})$ (established by Alon's probabilistic argument). The precise asymptotics of $d(s)$ remain open."
+  },
+  "started": "2026-09-01T01:45:03Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

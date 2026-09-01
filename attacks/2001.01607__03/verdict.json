@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full complexity classification remains unresolved here, but proper-subdivision instances collapse exactly to cactus graphs, and both problems admit exact algorithms parameterized by natural deletion sets to the known polynomial subclasses.",
+  "would_publish": false,
+  "caveats": "No polynomial algorithm or NP-hardness reduction is obtained for either full class; the catalog's logarithmic-treewidth remark also requires verification.",
+  "id": "2001.01607__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.03884,
+  "eur": 1.076025,
+  "elapsed_s": 1636.6,
+  "status": "completed",
+  "response_id": "resp_00fbbfaf52dec5c6006a9627bb349c87d2b80867da2a23bf8a",
+  "when": "2026-09-01T01:45:03Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 387,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2207.07775__02",
+    "title_md": "[Conjecture 5.4](https://arxiv.org/abs/2207.07775)",
+    "paper": "Ramsey multiplicity and the Tur\u00e1n coloring",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2207.07775__02/"
+  },
+  "dossier_meta": {
+    "id": "2207.07775__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2207.07775__02/",
+    "arxiv_id": "2207.07775",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Ramsey multiplicity and the Tur\u00e1n coloring",
+    "catalog_title": "Conjecture 5.4",
+    "statement_text": "If $k\\geq 4$ and $t$ is sufficiently large in terms of $k$, then any $(k,t)$-generalized lollipop is a two-color bonbon.",
+    "context_text": "Theorem 1.2 proves that adding $t\\geq(1000kh)^{10}h^{10k}$ pendant edges to a $k$-critical graph $H_0$ with $h$ vertices yields a bonbon, but the proof requires $t$ at least exponentially large in $k$. Moreover, if $H_0=K_k$ then some lower bound on $t$ is necessary since adding $o(k^2/\\log k)$ pendant edges to $K_k$ does not produce a bonbon. The conjecture proposes that sufficiently many pendant edges always suffice for any $k$-critical base graph."
+  },
+  "started": "2026-09-01T01:47:05Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

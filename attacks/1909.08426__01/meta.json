@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 386,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1909.08426__01",
+    "title_md": "[Parameterized MIS Dichotomy](https://arxiv.org/abs/1909.08426)",
+    "paper": "When Maximum Stable Set can be solved in FPT time",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1909.08426__01/"
+  },
+  "dossier_meta": {
+    "id": "1909.08426__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1909.08426__01/",
+    "arxiv_id": "1909.08426",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "When Maximum Stable Set can be solved in FPT time",
+    "catalog_title": "Parameterized MIS Dichotomy",
+    "statement_text": "Is MIS (randomized) FPT or $W[1]$-hard in $H$-free graphs?",
+    "context_text": "This is the parameterized counterpart of the classical MIS dichotomy question. Alekseev's NP-hardness reduction does not transfer to $W[1]$-hardness, leaving a priori more candidate graphs $H$ for which the parameterized status is open. Dabrowski et al. initiated a systematic study of this question."
+  },
+  "started": "2026-09-01T01:48:04Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

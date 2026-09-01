@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "In the bidirected undirected PMC model, pairwise ambiguity has an exact vertex-boundary characterization, and a normalized bipartite-hole parameter \u03b7=o(1) suffices to certify a 1-O(\u03b7) fraction of both types, although this does not yield a full necessary-and-sufficient characterization.",
+  "would_publish": false,
+  "caveats": "The original item is a research direction rather than a formal conjecture; the separator characterization likely overlaps known follow-up work, and efficient algorithms and directed graphs are not addressed.",
+  "id": "1505.05637__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.922452,
+  "eur": 0.955471,
+  "elapsed_s": 1606.1,
+  "status": "completed",
+  "response_id": "resp_0b2dbd3854bff947006a9627b3f2b887d293423f391e56a0c1",
+  "when": "2026-09-01T01:44:25Z"
+}

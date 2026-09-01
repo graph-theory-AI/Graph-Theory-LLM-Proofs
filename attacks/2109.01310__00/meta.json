@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 389,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2109.01310__00",
+    "title_md": "[Conjecture 1.10](https://arxiv.org/abs/2109.01310)",
+    "paper": "Induced subgraphs and tree decompositions III. Three-path-configuration\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2109.01310__00/"
+  },
+  "dossier_meta": {
+    "id": "2109.01310__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2109.01310__00/",
+    "arxiv_id": "2109.01310",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Induced subgraphs and tree decompositions III. Three-path-configuration\u2026",
+    "catalog_title": "Conjecture 1.10",
+    "statement_text": "For all $t \\geq 0$ there exists $c = c(t)$ such that if $G$ is a graph with no $K_t$, no $K_{t,t}$, no subdivision of $W_{t \\times t}$ and no line graph of a subdivision of $W_{t \\times t}$ as induced subgraphs, then $\\mathrm{tw}(G) \\leq c \\log(|V(G)|)$.",
+    "context_text": "The authors propose this as a natural extension of the main results and describe it as a variant of a conjecture of Sintiari and Trotignon [17]. It posits that excluding the four known families responsible for large treewidth (complete graphs, complete bipartite graphs, subdivided walls, line graphs of subdivided walls) as induced subgraphs forces treewidth to be at most logarithmic in the number of vertices."
+  },
+  "started": "2026-09-01T01:44:26Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

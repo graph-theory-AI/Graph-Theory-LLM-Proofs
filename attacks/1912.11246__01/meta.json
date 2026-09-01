@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 385,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1912.11246__01",
+    "title_md": "[Open problem: MIS complexity in even-hole-free graphs](https://arxiv.org/abs/1912.11246)",
+    "paper": "Maximum independent sets in (pyramid, even hole)-free graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1912.11246__01/"
+  },
+  "dossier_meta": {
+    "id": "1912.11246__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1912.11246__01/",
+    "arxiv_id": "1912.11246",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Maximum independent sets in (pyramid, even hole)-free graphs",
+    "catalog_title": "Open problem: MIS complexity in even-hole-free graphs",
+    "statement_text": "The complexity of computing a maximum independent set in an even-hole-free graph is not known.",
+    "context_text": "Stated in the introduction as motivation for the paper's approach. The paper proves a polynomial-time algorithm for the strictly smaller class of (even hole, pyramid)-free graphs, with the hope that understanding the pyramid-free case may shed light on the full even-hole-free class."
+  },
+  "started": "2026-09-01T01:49:35Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
