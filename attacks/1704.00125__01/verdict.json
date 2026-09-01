@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "Bipartite graphs of maximum degree at most 20 form a subgraph-closed class with linear separator lower bounds and exponential expansion, while Maximum Independent Set is exactly polynomial-time solvable.",
+  "would_publish": false,
+  "caveats": "Non-APX-hardness is meant under the standard assumption P != NP; an omitted closure or richness hypothesis in the intended question could evade this counterexample.",
+  "id": "1704.00125__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.392244,
+  "eur": 0.406284,
+  "elapsed_s": 765.5,
+  "status": "completed",
+  "response_id": "resp_075503f12d944f32006a9630ad72ec87d2aad40c6d4a30b749",
+  "when": "2026-09-01T02:08:42Z"
+}

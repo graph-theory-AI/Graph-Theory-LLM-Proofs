@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general problem remains open, but arbitrary hypergraph transversal\u2013matching gaps already occur on split graphs, the degeneracy hierarchy has a sharp threshold at 2, and recognition is undecidable for unrestricted effectively presented classes.",
+  "would_publish": false,
+  "caveats": "The positive 2-degenerate direction is imported from the supplied source; the undecidability result uses an explicit Turing-machine presentation model, and no full structural characterization is obtained.",
+  "id": "2503.05562__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.691084,
+  "eur": 0.715821,
+  "elapsed_s": 758.0,
+  "status": "completed",
+  "response_id": "resp_0a9f327338b6a4ea006a96303366ec87d29f2cecfc86ab0d24",
+  "when": "2026-09-01T02:06:33Z"
+}

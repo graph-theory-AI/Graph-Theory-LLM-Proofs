@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Adding isolated vertices to the forbidden pattern does not change randomized FPT solvability, and gives full parameterized many-one equivalence when the core has connected complement.",
+  "would_publish": false,
+  "caveats": "The reductions are elementary and do not decide the isolate-free cases P7, S_{1,1,3}, or S_{1,2,2}.",
+  "id": "1909.08426__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.652264,
+  "eur": 0.675612,
+  "elapsed_s": 775.7,
+  "status": "completed",
+  "response_id": "resp_08a3ebc13efc206b006a962ed4a77487d2b4ee173319516ce0",
+  "when": "2026-09-01T02:01:00Z"
+}

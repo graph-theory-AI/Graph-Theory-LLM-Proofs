@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 361,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "1609.00314__00",
+    "title_md": "[Conjecture: every forest of lanterns is pervasive](https://arxiv.org/abs/1609.00314)",
+    "paper": "Induced subgraphs of graphs with large chromatic number. V. Chandeliers\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1609.00314__00/"
+  },
+  "dossier_meta": {
+    "id": "1609.00314__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1609.00314__00/",
+    "arxiv_id": "1609.00314",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Induced subgraphs of graphs with large chromatic number. V. Chandeliers\u2026",
+    "catalog_title": "Conjecture: every forest of lanterns is pervasive",
+    "statement_text": "Every forest of lanterns $H$ is pervasive; that is, for all $\\nu, \\ell \\geq 0$ there exists $c$ such that every graph $G$ with $\\omega(G) \\leq \\nu$ and $\\chi(G) > c$ contains an induced subgraph isomorphic to an $(\\geq \\ell)$-subdivision of $H$.",
+    "context_text": "Results of Chalopin, Esperet, Li and Ossona de Mendez (via the Burling/Pawlik graphs) show that every pervasive graph must be a forest of lanterns. The authors state 'perhaps the converse is true, that every forest of lanterns is pervasive', and the abstract notes 'it is not known whether every forest of lanterns is pervasive in the class of all graphs.' The paper proves pervasiveness of all forests of lanterns in every $\\rho$-controlled ideal ($\\rho \\geq 2$) and in the class of string graphs, but the question for the ideal of all graphs remains open."
+  },
+  "started": "2026-09-01T02:04:56Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 363,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "2002.11100__00",
+    "title_md": "[Informal conjecture on the generality of the probabilistic minor strate\u2026](https://arxiv.org/abs/2002.11100)",
+    "paper": "Clique minors in graphs with a forbidden subgraph",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2002.11100__00/"
+  },
+  "dossier_meta": {
+    "id": "2002.11100__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2002.11100__00/",
+    "arxiv_id": "2002.11100",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Clique minors in graphs with a forbidden subgraph",
+    "catalog_title": "Informal conjecture on the generality of the probabilistic minor strategy",
+    "statement_text": "The strategy introduced in this paper, or minor modifications of it, could provide a useful tool for finding clique minors in graphs under other structural restrictions as well.",
+    "context_text": "After showing that the same randomised star-contraction strategy yields both Theorem 1 (for $K_s$-free graphs with bounded independence number) and a short proof of the K\u00fchn\u2013Osthus result for $K_{s,t}$-free graphs, the authors note that the approach performs well in two quite different structural settings."
+  },
+  "started": "2026-09-01T02:03:08Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

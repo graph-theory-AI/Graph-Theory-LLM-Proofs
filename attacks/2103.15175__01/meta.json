@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 358,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2103.15175__01",
+    "title_md": "[Determine the exponential constant in $R_\\ell(H,k)$](https://arxiv.org/abs/2103.15175)",
+    "paper": "Multicolor list Ramsey numbers grow exponentially",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2103.15175__01/"
+  },
+  "dossier_meta": {
+    "id": "2103.15175__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2103.15175__01/",
+    "arxiv_id": "2103.15175",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Multicolor list Ramsey numbers grow exponentially",
+    "catalog_title": "Determine the exponential constant in $R_\\ell(H,k)$",
+    "statement_text": "It would be interesting to determine $\\lim_{k\\to\\infty} R_\\ell(H,k)^{1/k}$, even in just the case $H = K_3$.",
+    "context_text": "Theorems 1 and 2 together give $\\frac{1}{e}\\cdot 2^k \\leq R_\\ell(K_3,k) \\leq (4+o(1))^k$, but the exact exponential constant is unknown. The authors note that their results do not even establish that the limit $\\lim_{k\\to\\infty} R_\\ell(H,k)^{1/k}$ exists."
+  },
+  "started": "2026-09-01T02:06:27Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

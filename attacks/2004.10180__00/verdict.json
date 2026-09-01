@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The problem is equivalent up to a factor of three to the extremal problem for linear 3-graphs of Berge girth at least six, and an explicit moment-curve construction gives a lower bound \u03a9(n^{4/3}), leaving the exponent between 4/3 and 3/2.",
+  "would_publish": false,
+  "caveats": "No n^{3/2-o(1)} construction or fixed power-saving upper bound is obtained; the literature novelty of the 4/3 construction was not checked.",
+  "id": "2004.10180__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.590256,
+  "eur": 1.647179,
+  "elapsed_s": 2465.1,
+  "status": "completed",
+  "response_id": "resp_0dd08113b6dce112006a96287e564c87d2ada0052ec1fcd04f",
+  "when": "2026-09-01T02:02:07Z"
+}

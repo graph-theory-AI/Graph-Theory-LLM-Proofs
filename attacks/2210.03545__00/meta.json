@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 356,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2210.03545__00",
+    "title_md": "[Grid Ramsey Problem (gr(G_{2x2}, K_n))](https://arxiv.org/abs/2210.03545)",
+    "paper": "Hypergraph Ramsey numbers of cliques versus stars",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.03545__00/"
+  },
+  "dossier_meta": {
+    "id": "2210.03545__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.03545__00/",
+    "arxiv_id": "2210.03545",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Hypergraph Ramsey numbers of cliques versus stars",
+    "catalog_title": "Grid Ramsey Problem (gr(G_{2x2}, K_n))",
+    "statement_text": "What is the minimum $N$ such that any 2-edge-coloring of the Cartesian product $K_N \\square K_N$ contains either a red rectangle or a blue $K_n$?",
+    "context_text": "The authors introduce this novel Ramsey problem on grid graphs as a key intermediate tool in the proof of the main result on $r(K^{(3)}_4, S^{(3)}_n)$. The minimum is denoted $\\mathrm{gr}(G_{2\\times 2}, K_n)$ and Theorem 1.3 establishes $2^{c\\log^2 n} \\le \\mathrm{gr}(G_{2\\times 2}, K_n) \\le 2^{c' n^{2/3}\\log n}$, but the exact growth rate remains open. The authors remark the problem may be of independent interest."
+  },
+  "started": "2026-09-01T02:06:43Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

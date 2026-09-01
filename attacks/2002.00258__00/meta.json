@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 368,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2002.00258__00",
+    "title_md": "[Informal Conjecture on Existence of Hoppers for Large Euler Genus](https://arxiv.org/abs/2002.00258)",
+    "paper": "Excluded minors for the Klein Bottle I. Low connectivity case",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2002.00258__00/"
+  },
+  "dossier_meta": {
+    "id": "2002.00258__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2002.00258__00/",
+    "arxiv_id": "2002.00258",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Excluded minors for the Klein Bottle I. Low connectivity case",
+    "catalog_title": "Informal Conjecture on Existence of Hoppers for Large Euler Genus",
+    "statement_text": "Hoppers may show up when the Euler genus is large enough.",
+    "context_text": "Hoppers are a mysterious special class of graphs that arise as building blocks for obstructions of connectivity two for arbitrary Euler genus. The paper proves that hoppers do not exist when the genus is small and the authors are unable to construct any example for larger genus, yet they believe hoppers will eventually appear for sufficiently large genus."
+  },
+  "started": "2026-09-01T02:00:19Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

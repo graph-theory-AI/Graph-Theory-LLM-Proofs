@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains unresolved, but it follows for graphs with at most n t^(2 gamma) triangles whenever epsilon plus gamma is less than 1/26, and every counterexample has a constrained Hall-ratio core.",
+  "would_publish": false,
+  "caveats": "The exact Section 4 quantifiers are unavailable, and the argument does not handle triangle-rich cores.",
+  "id": "1907.12999__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.406376,
+  "eur": 1.456717,
+  "elapsed_s": 1541.0,
+  "status": "completed",
+  "response_id": "resp_06af9a77f977a4d8006a962c5776b487d2a744a2293f25261b",
+  "when": "2026-09-01T02:03:08Z"
+}

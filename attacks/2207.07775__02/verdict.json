@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "For every t, adjoining t leaves to the 4-critical join of K_1 and C_{2t+5} gives a generalized lollipop for which a random coloring has fewer monochromatic copies than the Tur\u00e1n coloring.",
+  "would_publish": false,
+  "caveats": "This uses the supplied definition in which the k-critical core has unrestricted order and may depend on t.",
+  "id": "2207.07775__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.546964,
+  "eur": 0.566542,
+  "elapsed_s": 815.0,
+  "status": "completed",
+  "response_id": "resp_0879b120f4e37f67006a962e99be1c87d2b83c11803a66adcd",
+  "when": "2026-09-01T02:00:40Z"
+}

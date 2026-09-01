@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but it reduces quantitatively to prime graphs and holds with a constant bound for line graphs and proper subdivisions.",
+  "would_publish": false,
+  "caveats": "The arbitrary prime case, where chords destroy a wall model, remains unresolved; standard small-parameter conventions are assumed.",
+  "id": "2109.01310__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.038228,
+  "eur": 1.075391,
+  "elapsed_s": 1098.7,
+  "status": "completed",
+  "response_id": "resp_0089c2fa4488b111006a962dfa308c87d29b2f5abcbe629347",
+  "when": "2026-09-01T02:02:44Z"
+}

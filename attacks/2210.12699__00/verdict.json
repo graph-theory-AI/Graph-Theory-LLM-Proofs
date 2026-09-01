@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A self-contained random regular-tournament construction improves the obstruction to s/2-d(s)=Omega(sqrt(s)), determining the polynomial exponent but leaving a sqrt(log s) factor.",
+  "would_publish": false,
+  "caveats": "The logarithmic factor in the upper bound remains, and possible overlap with the unverified 2024 follow-up has not been checked.",
+  "id": "2210.12699__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.972196,
+  "eur": 1.006996,
+  "elapsed_s": 1194.8,
+  "status": "completed",
+  "response_id": "resp_0aa3e655828dd187006a962e2029d087d2afac5b21e7b78014",
+  "when": "2026-09-01T02:04:58Z"
+}

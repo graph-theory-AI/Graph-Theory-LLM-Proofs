@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 359,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2004.14789__00",
+    "title_md": "[Informal Conjecture (polynomial expansion and bounded twin-width)](https://arxiv.org/abs/2004.14789)",
+    "paper": "Twin-width I: tractable FO model checking",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2004.14789__00/"
+  },
+  "dossier_meta": {
+    "id": "2004.14789__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2004.14789__00/",
+    "arxiv_id": "2004.14789",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Twin-width I: tractable FO model checking",
+    "catalog_title": "Informal Conjecture (polynomial expansion and bounded twin-width)",
+    "statement_text": "All classes of polynomial expansion may also have bounded twin-width.",
+    "context_text": "The authors note that proper minor-closed classes have bounded twin-width, and observe that bounded twin-width is incomparable with bounded degree, bounded expansion, and nowhere denseness. They remark 'As far as we know, all classes of polynomial expansion may also have bounded twin-width,' suggesting this as an open direction. Figure 3 depicts this with a dash-dotted edge indicating possible inclusion."
+  },
+  "started": "2026-09-01T02:05:30Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

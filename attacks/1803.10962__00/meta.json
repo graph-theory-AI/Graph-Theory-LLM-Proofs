@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 365,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1803.10962__00",
+    "title_md": "[Conjecture 3](https://arxiv.org/abs/1803.10962)",
+    "paper": "Single-conflict colouring",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1803.10962__00/"
+  },
+  "dossier_meta": {
+    "id": "1803.10962__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1803.10962__00/",
+    "arxiv_id": "1803.10962",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Single-conflict colouring",
+    "catalog_title": "Conjecture 3",
+    "statement_text": "There exist $C, C' > 0$ such that, for any simple graph $G$ that is embeddable on a surface of Euler genus $g$, if every edge is assigned at most $Ck$ conflicts from $[k]^2$, then $G$ is conflict $k$-colourable, provided $k \\geq C'\\sqrt{g}$.",
+    "context_text": "Theorem 1 gives an upper bound of the form $\\chi_=(G) = O(\\sqrt{g}\\log g)$ in the $\\mu = \\Theta(\\sqrt{g})$ regime, evocative of Heawood's bound. The authors note that $C < 1/2$ is forced by their second instructive example, and that a previous version of the manuscript incorrectly conjectured $C$ could be taken arbitrarily close to 1."
+  },
+  "started": "2026-09-01T02:02:07Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

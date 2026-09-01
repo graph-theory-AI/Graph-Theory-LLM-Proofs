@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured bound holds when the labeled-speed coefficient is strictly below 2 and also for every edge-monotone or coedge-monotone factorial hereditary family.",
+  "would_publish": false,
+  "caveats": "The general case with arbitrary constant in 2^{O(n log n)} remains open; the arguments use labeled speed.",
+  "id": "2201.00328__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.9347,
+  "eur": 0.968157,
+  "elapsed_s": 1289.2,
+  "status": "completed",
+  "response_id": "resp_0faf944af960ea26006a962dbe8d8887d2bad123d1bf46039f",
+  "when": "2026-09-01T02:04:55Z"
+}

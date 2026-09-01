@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 369,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1801.06824__00",
+    "title_md": "[Open Problem: Characterization of parameters satisfying (CC)](https://arxiv.org/abs/1801.06824)",
+    "paper": "On generalized choice and coloring numbers",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1801.06824__00/"
+  },
+  "dossier_meta": {
+    "id": "1801.06824__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1801.06824__00/",
+    "arxiv_id": "1801.06824",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On generalized choice and coloring numbers",
+    "catalog_title": "Open Problem: Characterization of parameters satisfying (CC)",
+    "statement_text": "Characterize the (hereditary, connected) graph parameters $f$ satisfying property (CC): for all integers $p$ and $s$, there exist two integers $p'$ and $s'$ such that $\\mathrm{col}_{f,p'}(G) \\leq s'$ for every graph $G$ satisfying $\\chi^\\ell_{f,p}(G) \\leq s$.",
+    "context_text": "The authors show that the fan parameter does not satisfy (CC) (Lemma 2), and provide two sufficient conditions (via property (CD) and via Lemma 4) covering all parameters previously studied in the literature, but explicitly state they were unable to fully describe the class of parameters satisfying (CC). This leaves the characterization problem open."
+  },
+  "started": "2026-09-01T02:00:13Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

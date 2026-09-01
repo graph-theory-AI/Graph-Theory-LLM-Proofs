@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "No full characterization is obtained, but even a compact box-dimension-zero set meeting every affine line in at most two points can have uniform concentration probability one.",
+  "would_publish": false,
+  "caveats": "The question is open-ended; anti-concentration is interpreted as a bound tending to zero uniformly over the nonzero vectors.",
+  "id": "2106.04894__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.840084,
+  "eur": 0.870155,
+  "elapsed_s": 920.1,
+  "status": "completed",
+  "response_id": "resp_0bb2e4f1e84c1cce006a962f9b03d087d28472bb787828c1e9",
+  "when": "2026-09-01T02:06:42Z"
+}

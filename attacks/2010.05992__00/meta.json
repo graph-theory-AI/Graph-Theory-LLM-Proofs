@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 364,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2010.05992__00",
+    "title_md": "[Near-sunflower analogue of the Erd\u0151s-Rado Sunflower Conjecture](https://arxiv.org/abs/2010.05992)",
+    "paper": "Near-sunflowers and focal families",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2010.05992__00/"
+  },
+  "dossier_meta": {
+    "id": "2010.05992__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2010.05992__00/",
+    "arxiv_id": "2010.05992",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Near-sunflowers and focal families",
+    "catalog_title": "Near-sunflower analogue of the Erd\u0151s-Rado Sunflower Conjecture",
+    "statement_text": "If $\\mathcal{F}$ is a $k$-uniform family of sets containing no near-sunflower of size $r$, then $|\\mathcal{F}| \\leq C^k$, where $C$ is a constant depending only on $r$.",
+    "context_text": "The paper introduces near-sunflowers as a weakening of sunflowers (allowing elements to belong to $0, 1, r-1,$ or $r$ sets in the family) and proposes this bound as a weaker version of the notorious Erd\u0151s-Rado sunflower conjecture. While the paper resolves the Erd\u0151s-Szemer\u00e9di-type question (exponential bound in $n$) for near-sunflowers via Theorem 1.3, the Erd\u0151s-Rado-type question (exponential bound in $k$) is explicitly left open; Section 6 proves the bound only under a stronger condition."
+  },
+  "started": "2026-09-01T02:02:45Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

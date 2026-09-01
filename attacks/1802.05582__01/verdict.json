@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "medium",
+  "one_line": "Under the standard LOCAL-model formulation of Corollary 2.1, a randomized algorithm finds a \u0394-list-coloring in O(log^2 n) rounds, with no polynomial dependence on \u0394.",
+  "would_publish": false,
+  "caveats": "The proof assumes \u0394\u22653, no uncolorable K_{\u0394+1} component, unique IDs, and unbounded LOCAL messages; it does not apply to CONGEST, and novelty has not been literature-checked.",
+  "id": "1802.05582__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.179196,
+  "eur": 1.221405,
+  "elapsed_s": 1499.2,
+  "status": "completed",
+  "response_id": "resp_04fbcf5e84339b9b006a962bd1460087d2b1e6f9f0d78711e6",
+  "when": "2026-09-01T02:00:12Z"
+}

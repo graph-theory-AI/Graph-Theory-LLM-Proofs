@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The converse holds whenever unbounded expansion has uniformly almost-regular witnesses; quantitatively, an average-d graph of maximum degree O(d) has a 1-shallow minor with Hall ratio Omega(sqrt(d)).",
+  "would_publish": false,
+  "caveats": "Arbitrarily irregular dense shallow minors are not covered, so this neither proves nor disproves Problem 8.",
+  "id": "1812.07327__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.40478,
+  "eur": 1.455064,
+  "elapsed_s": 1648.8,
+  "status": "completed",
+  "response_id": "resp_062bac55e882535c006a962cb2040887d2bdb5ed45b128639b",
+  "when": "2026-09-01T02:06:26Z"
+}

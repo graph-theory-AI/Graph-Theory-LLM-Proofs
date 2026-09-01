@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full closure problem remains open, but there is an explicit exponential binding function, a direct quantitative proof when one component is K1 or K2, and a probabilistic lower bound on the degree of any possible polynomial.",
+  "would_publish": false,
+  "caveats": "No case with two general diameter-three trees is resolved; the qualitative K1/K2 cases follow already from the supplied P4 theorem, and the novelty of the lower bound has not been checked.",
+  "id": "2202.09118__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.005172,
+  "eur": 1.041152,
+  "elapsed_s": 1107.7,
+  "status": "completed",
+  "response_id": "resp_0b8a678d63c30a5a006a962f5824f887d28b07fe958e4e71ea",
+  "when": "2026-09-01T02:08:43Z"
+}

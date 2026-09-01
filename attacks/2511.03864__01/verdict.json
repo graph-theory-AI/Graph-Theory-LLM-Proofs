@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The fixed-imtw question remains open, but it has a degree-(k+1) affirmative answer when the global induced-matching number is at most k, while no single polynomial jointly in imtw and induced biclique number can exist.",
+  "would_publish": false,
+  "caveats": "Bounded global induced-matching number is stronger than bounded imtw, and the probabilistic obstruction has imtw growing as Theta(log n).",
+  "id": "2511.03864__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.804784,
+  "eur": 1.869386,
+  "elapsed_s": 2255.8,
+  "status": "completed",
+  "response_id": "resp_0b6106327c449cd4006a9629988eac87d2b97fc0758f14c49a",
+  "when": "2026-09-01T02:03:20Z"
+}

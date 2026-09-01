@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 360,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2103.08698__00",
+    "title_md": "[Informal Conjecture (fractional treewidth-fragility of sublinear-separa\u2026](https://arxiv.org/abs/2103.08698)",
+    "paper": "Approximation metatheorems for classes with bounded expansion",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2103.08698__00/"
+  },
+  "dossier_meta": {
+    "id": "2103.08698__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2103.08698__00/",
+    "arxiv_id": "2103.08698",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Approximation metatheorems for classes with bounded expansion",
+    "catalog_title": "Informal Conjecture (fractional treewidth-fragility of sublinear-separator classes)",
+    "statement_text": "All classes with sublinear separators are fractionally treewidth-fragile.",
+    "context_text": "The author notes that efficiently fractionally treewidth-fragile classes include all hereditary classes with sublinear separators and bounded maximum degree, all proper minor-closed classes, and many geometric graph classes. The author then remarks that it is possible, and has been conjectured by them, that the property extends to all classes with sublinear separators."
+  },
+  "started": "2026-09-01T02:04:59Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

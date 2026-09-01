@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general problem remains open, but MWIS is fixed-parameter tractable in the minimum transversal of an explicitly enumerable family containing every pyramid base, and is polynomial when this parameter is O(log n).",
+  "would_publish": false,
+  "caveats": "The parameter can be linear on connected even-hole-free graphs, so this gives neither a general polynomial algorithm nor an NP-hardness proof.",
+  "id": "1912.11246__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.804564,
+  "eur": 0.833363,
+  "elapsed_s": 1055.0,
+  "status": "completed",
+  "response_id": "resp_029cf9717823efca006a962f2f5ce887d2be67533274bec499",
+  "when": "2026-09-01T02:07:10Z"
+}

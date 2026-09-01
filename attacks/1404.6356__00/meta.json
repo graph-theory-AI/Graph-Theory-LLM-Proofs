@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 366,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1404.6356__00",
+    "title_md": "[4-colorability on Fixed Surfaces (Open Step in Thomassen's Program)](https://arxiv.org/abs/1404.6356)",
+    "paper": "Three-coloring triangle-free graphs on surfaces IV. Bounding face sizes\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1404.6356__00/"
+  },
+  "dossier_meta": {
+    "id": "1404.6356__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1404.6356__00/",
+    "arxiv_id": "1404.6356",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Three-coloring triangle-free graphs on surfaces IV. Bounding face sizes\u2026",
+    "catalog_title": "4-colorability on Fixed Surfaces (Open Step in Thomassen's Program)",
+    "statement_text": "Whether 4-colorability of graphs embedded in a fixed surface can be tested in polynomial time remains open; the authors remark that prospects for its resolution in the near future are not very bright.",
+    "context_text": "After announcing that Theorem 1.3 completes one of two missing steps in Thomassen's polynomial-time colorability program, the authors identify the remaining open step as the analogous question for 4-coloring graphs on a fixed surface."
+  },
+  "started": "2026-09-01T02:01:00Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

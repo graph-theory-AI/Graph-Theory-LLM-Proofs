@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 362,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1903.05363__00",
+    "title_md": "[Optimal degree bounds $D_c$ for small $c$](https://arxiv.org/abs/1903.05363)",
+    "paper": "Bounded maximum degree conjecture holds precisely for $c$-crossing-crit\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1903.05363__00/"
+  },
+  "dossier_meta": {
+    "id": "1903.05363__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1903.05363__00/",
+    "arxiv_id": "1903.05363",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Bounded maximum degree conjecture holds precisely for $c$-crossing-crit\u2026",
+    "catalog_title": "Optimal degree bounds $D_c$ for small $c$",
+    "statement_text": "Determine the optimal values of $D_c$ for each $c \\in \\{2, 3, \\ldots, 12\\}$, where $D_c$ is the smallest integer such that every $c$-crossing-critical graph has maximum degree at most $D_c$.",
+    "context_text": "Theorem 1.1 guarantees the existence of finite bounds $D_c$ for each $c \\leq 12$, but the proof is asymptotic and does not yield explicit values. The paper notes $D_1 = 4$, $D_2 \\geq 8$, and that the optimal $D_2$ should be within reach using existing characterisation results, while the remaining bounds are left to future investigations."
+  },
+  "started": "2026-09-01T02:03:20Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

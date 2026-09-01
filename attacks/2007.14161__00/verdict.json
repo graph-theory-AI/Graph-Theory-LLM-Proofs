@@ -1,0 +1,15 @@
+{
+  "verdict": "ill_posed",
+  "confidence": "high",
+  "one_line": "The modal claim has no definite truth value; under the natural fixed-width, supplied-sequence formulation, a constant-factor MIS approximation is equivalent to a PTAS and its existence remains open.",
+  "would_publish": false,
+  "caveats": "No MIS PTAS or fixed-width hardness is proved; the powering argument assumes a supplied contraction sequence.",
+  "id": "2007.14161__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.440588,
+  "eur": 0.456359,
+  "elapsed_s": 606.0,
+  "status": "completed",
+  "response_id": "resp_076efc6d5e3faeae006a962f554dd887d28dcd8d4938b0c7e6",
+  "when": "2026-09-01T02:00:19Z"
+}
