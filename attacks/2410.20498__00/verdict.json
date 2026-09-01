@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but the limit is shown to exist, Poisson-quasirandom families satisfy the conjectured bound, and all affine-subspace constructions have the strictly smaller asymptotic optimum 0.288788...",
+  "would_publish": false,
+  "caveats": "No argument controls arbitrary high-influence, non-Poisson, nonlinear families.",
+  "id": "2410.20498__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.2184,
+  "eur": 1.262012,
+  "elapsed_s": 1666.7,
+  "status": "completed",
+  "response_id": "resp_09783916a9fb9b2f006a962988e6f487d2adcc72955cc94740",
+  "when": "2026-09-01T01:53:15Z"
+}

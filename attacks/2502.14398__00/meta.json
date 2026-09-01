@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 377,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "partial",
+    "id": "2502.14398__00",
+    "title_md": "[Conjecture 3.4](https://arxiv.org/abs/2502.14398)",
+    "paper": "Circular sorting",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2502.14398__00/"
+  },
+  "dossier_meta": {
+    "id": "2502.14398__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2502.14398__00/",
+    "arxiv_id": "2502.14398",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "balanced",
+    "status": "partial",
+    "paper": "Circular sorting",
+    "catalog_title": "Conjecture 3.4",
+    "statement_text": "$t(n)=n-2$ if and only if $n$ is prime.",
+    "context_text": "The function $t(n)$ denotes the diameter of the swap graph on cyclic permutations when all swaps (not necessarily adjacent) are allowed. Observation 3.1 and Proposition 3.2 together establish that the condition holds whenever $n=2$ or $n$ is an odd prime, providing one direction of the biconditional."
+  },
+  "started": "2026-09-01T01:54:01Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

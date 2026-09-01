@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Thinness survives arbitrary pendant-forest attachments and finitely many apices, proving the conjecture when a bounded apex deletion leaves a uniformly bounded-degree 2-core, while a radius-one lemma isolates the remaining obstruction.",
+  "would_publish": false,
+  "caveats": "This treats ordinary r-neighborhood overlays; no suitable decomposition is obtained for every strongly sublinear-separator class.",
+  "id": "1704.00125__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.089136,
+  "eur": 1.128121,
+  "elapsed_s": 1747.2,
+  "status": "completed",
+  "response_id": "resp_035dcd771fe29803006a962abe928487d29501b06fb87a6e07",
+  "when": "2026-09-01T01:59:45Z"
+}

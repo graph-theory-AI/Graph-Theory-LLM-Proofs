@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 376,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2502.04726__03",
+    "title_md": "[Question 4.3](https://arxiv.org/abs/2502.04726)",
+    "paper": "Lollipops, dense cycles and chords",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2502.04726__03/"
+  },
+  "dossier_meta": {
+    "id": "2502.04726__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2502.04726__03/",
+    "arxiv_id": "2502.04726",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Lollipops, dense cycles and chords",
+    "catalog_title": "Question 4.3",
+    "statement_text": "Is there a constant $c>0$ such that every graph with minimum degree 3 contains a cycle of length $\\ell$ with at least $c\\ell$ chords?",
+    "context_text": "While high minimum degree guarantees cycles with many chords, the authors ask whether minimum degree 3 alone suffices to guarantee a cycle whose chord count is proportional to its length. The disjoint union of copies of $K_4$ shows one cannot simply require many chords without controlling cycle length, motivating the search for a linearly-chorded cycle."
+  },
+  "started": "2026-09-01T01:55:34Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

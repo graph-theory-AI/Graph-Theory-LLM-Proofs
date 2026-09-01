@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An explicit strong oriented-cactus family gives c_b <= 2/3, and the asymptotic constant is exactly 2/3 for strong cactus digraphs and, more generally, for a block-Hamiltonian class.",
+  "would_publish": false,
+  "caveats": "The general lower bound remains 1/3; root-counting conventions change only additive constants, and the elementary 2/3 upper bound may already be implicit in the full source.",
+  "id": "2304.03567__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.274608,
+  "eur": 1.320232,
+  "elapsed_s": 1806.3,
+  "status": "completed",
+  "response_id": "resp_072f63b56f22c7d5006a962911f68c87d2bace80986b4f86b9",
+  "when": "2026-09-01T01:53:36Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 379,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2503.05562__01",
+    "title_md": "[Question 9.1](https://arxiv.org/abs/2503.05562)",
+    "paper": "On graph classes with constant domination-packing ratio",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2503.05562__01/"
+  },
+  "dossier_meta": {
+    "id": "2503.05562__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2503.05562__01/",
+    "arxiv_id": "2503.05562",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "On graph classes with constant domination-packing ratio",
+    "catalog_title": "Question 9.1",
+    "statement_text": "Characterize those graph classes $\\mathcal{G}$ for which there is a constant $c_{\\mathcal{G}}$ such that $\\dfrac{\\gamma(G)}{\\rho(G)}\\leqslant c_{\\mathcal{G}}$ for each $G\\in\\mathcal{G}$.",
+    "context_text": "In the conclusion, after extending both the list of graph classes with bounded $\\gamma/\\rho$ ratio and those with unbounded ratio (notably showing 2-degenerate graphs have bounded ratio), the authors note that Theorem 6.1 on 2-degenerate graphs rules out any characterization purely in terms of sparse graph classes."
+  },
+  "started": "2026-09-01T01:53:55Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

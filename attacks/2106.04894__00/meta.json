@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 382,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2106.04894__00",
+    "title_md": "[Question 1](https://arxiv.org/abs/2106.04894)",
+    "paper": "Geometric and o-minimal Littlewood-Offord problems",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2106.04894__00/"
+  },
+  "dossier_meta": {
+    "id": "2106.04894__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2106.04894__00/",
+    "arxiv_id": "2106.04894",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Geometric and o-minimal Littlewood-Offord problems",
+    "catalog_title": "Question 1",
+    "statement_text": "Assuming only that each $a_i \\neq 0$, what geometric constraints can be imposed on a set $S \\subset \\mathbb{R}^d$ which imply non-trivial uniform upper bounds on $\\Pr(X \\in S)$?",
+    "context_text": "The paper introduces a new generalisation of the Littlewood\u2013Offord problem to $\\mathbb{R}^d$ in which no assumption is made on the sizes of the nonzero vectors $a_1,\\ldots,a_n$, only that they are nonzero. The authors observe that this makes the question much more about the geometry of $S$ than about spatial anti-concentration of $X = a_1\\xi_1 + \\cdots + a_n\\xi_n$, giving it a very different flavour from previous Littlewood\u2013Offord variants."
+  },
+  "started": "2026-09-01T01:51:22Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

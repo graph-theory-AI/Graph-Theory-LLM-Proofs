@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 370,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1604.02317__00",
+    "title_md": "[Informal Conjecture (vertex-disjoint paths, stability number two)](https://arxiv.org/abs/1604.02317)",
+    "paper": "Disjoint paths in unions of tournaments",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1604.02317__00/"
+  },
+  "dossier_meta": {
+    "id": "1604.02317__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1604.02317__00/",
+    "arxiv_id": "1604.02317",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Disjoint paths in unions of tournaments",
+    "catalog_title": "Informal Conjecture (vertex-disjoint paths, stability number two)",
+    "statement_text": "We suspect the $k$ vertex-disjoint paths problem might be NP-complete for digraphs with stability number two.",
+    "context_text": "The authors discuss whether their polynomial-time result for semicomplete digraphs (Theorem 1.2) can be extended to digraphs with bounded stability number. The edge-disjoint version is known to be polynomial-time solvable in this setting, but the vertex-disjoint version remains out of reach. The authors remark that they suspect NP-completeness already at stability number two."
+  },
+  "started": "2026-09-01T01:59:45Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

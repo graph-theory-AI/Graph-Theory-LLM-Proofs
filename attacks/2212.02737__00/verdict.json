@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The literal question is answered by the published array criterion: the H-free class is clean exactly when H-free n-arrays exist for only finitely many n.",
+  "would_publish": false,
+  "caveats": "This is not a direct finite structural classification of the forbidden family, and no new proof of the deep array theorem is given here.",
+  "id": "2212.02737__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.3017,
+  "eur": 0.312499,
+  "elapsed_s": 316.3,
+  "status": "completed",
+  "response_id": "resp_00d07c5b22ffb5d6006a963020c40887d28a3db1ed3e2bfb6e",
+  "when": "2026-09-01T01:58:52Z"
+}

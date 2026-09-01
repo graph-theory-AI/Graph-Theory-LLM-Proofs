@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 375,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1704.00125__01",
+    "title_md": "[Open Problem (Section 1.2): APX-hardness on classes without sublinear s\u2026](https://arxiv.org/abs/1704.00125)",
+    "paper": "Thin graph classes and polynomial-time approximation schemes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1704.00125__01/"
+  },
+  "dossier_meta": {
+    "id": "1704.00125__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1704.00125__01/",
+    "arxiv_id": "1704.00125",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Thin graph classes and polynomial-time approximation schemes",
+    "catalog_title": "Open Problem (Section 1.2): APX-hardness on classes without sublinear separators",
+    "statement_text": "It would be interesting to see whether this intuition can be made precise and for example show that the maximum independent set problem is APX-hard on any subgraph-closed class of graphs that does not have sublinear separators (or at least has exponential expansion).",
+    "context_text": "The paper notes that maximum independent set is APX-hard on bounded-degree graphs, so results cannot extend to classes containing all 3-regular graphs. Classes studied all have strongly sublinear separators; the authors ask whether APX-hardness can be proved for any subgraph-closed class lacking this property."
+  },
+  "started": "2026-09-01T01:55:57Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

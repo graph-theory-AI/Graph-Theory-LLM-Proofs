@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 371,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1811.12650__01",
+    "title_md": "[Informal: Exponent in Theorem 1 not optimal](https://arxiv.org/abs/1811.12650)",
+    "paper": "Frozen $(\u0394+1)$-colourings of bounded degree graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1811.12650__01/"
+  },
+  "dossier_meta": {
+    "id": "1811.12650__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1811.12650__01/",
+    "arxiv_id": "1811.12650",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Frozen $(\u0394+1)$-colourings of bounded degree graphs",
+    "catalog_title": "Informal: Exponent in Theorem 1 not optimal",
+    "statement_text": "The dependence on $\\Delta$ in the exponent of the bound $\\mathbb{P}(\\alpha \\text{ is frozen}) \\leq (6/7)^{n/(\\Delta+1)}$ in Theorem 1 is not best possible.",
+    "context_text": "Theorem 1 gives the upper bound $(6/7)^{n/(\\Delta+1)}$ on the probability a uniform random $(\\Delta+1)$-colouring is frozen. Proposition 4 provides a matching lower bound with exponent $e^{-3\\log(\\Delta)/\\Delta \\cdot n}$, leaving a gap of a $\\log\\Delta$ factor. The authors believe the upper bound can be tightened to close this gap."
+  },
+  "started": "2026-09-01T01:58:57Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

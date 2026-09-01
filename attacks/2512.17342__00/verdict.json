@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "A simple cubic bridgeless planar graph on 38 vertices, obtained as the dual of two suitably colored icosahedra glued along a face, has a disconnected integer nowhere-zero 5-flow reconfiguration graph.",
+  "would_publish": false,
+  "caveats": "This uses the standard integer-flow definition with single simple-cycle moves; the supplied abstract already announces a negative result, so the catalog entry appears stale.",
+  "id": "2512.17342__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.867468,
+  "eur": 0.898519,
+  "elapsed_s": 1583.2,
+  "status": "completed",
+  "response_id": "resp_0262535d64a67607006a962a03e3f087d2b04a6d47d40f96d2",
+  "when": "2026-09-01T01:53:54Z"
+}

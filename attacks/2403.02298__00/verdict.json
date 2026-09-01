@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but a sharp random-orientation criterion reduces the upper bound to a one-scale local-density estimate, and exact bipartite and complexity side results are proved.",
+  "would_publish": false,
+  "caveats": "No triangle-free graph is shown to satisfy the required local-density estimate at the conjectured scale, so the logarithmic gap is not closed.",
+  "id": "2403.02298__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.246828,
+  "eur": 1.291458,
+  "elapsed_s": 1821.2,
+  "status": "completed",
+  "response_id": "resp_0334fe2811645e4e006a96291c092c87d29d9638a827b6f2dd",
+  "when": "2026-09-01T01:54:01Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 380,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2212.02737__00",
+    "title_md": "[Question: finite families yielding clean H-free classes](https://arxiv.org/abs/2212.02737)",
+    "paper": "Induced subgraphs and tree-decompositions VII. Basic obstructions in $H\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2212.02737__00/"
+  },
+  "dossier_meta": {
+    "id": "2212.02737__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2212.02737__00/",
+    "arxiv_id": "2212.02737",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Induced subgraphs and tree-decompositions VII. Basic obstructions in $H\u2026",
+    "catalog_title": "Question: finite families yielding clean H-free classes",
+    "statement_text": "For which finite families $\\mathcal{H}$ of graphs is the class of all $\\mathcal{H}$-free graphs clean?",
+    "context_text": "After proving Theorem 1.5 \u2014 which characterizes all single graphs $H$ for which the class $\\mathcal{F}_H$ of $H$-free graphs is clean (precisely the subdivided star forests) \u2014 the authors pose the next natural step. They observe that any finite set $\\mathcal{H}$ containing a subdivided star forest yields a clean class, but note that the converse fails (e.g., $\\mathcal{H}=\\{H, K_3\\}$ for the unique double star on six vertices is also clean). A full description is deferred to a companion paper [6] by four of the five authors."
+  },
+  "started": "2026-09-01T01:53:36Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

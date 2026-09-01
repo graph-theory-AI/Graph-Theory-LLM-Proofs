@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 384,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "partial",
+    "id": "2007.14161__00",
+    "title_md": "[Informal conjecture on MIS approximability vs. Min Dominating Set](https://arxiv.org/abs/2007.14161)",
+    "paper": "Twin-width III: Max Independent Set, Min Dominating Set, and Coloring",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2007.14161__00/"
+  },
+  "dossier_meta": {
+    "id": "2007.14161__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2007.14161__00/",
+    "arxiv_id": "2007.14161",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "balanced",
+    "status": "partial",
+    "paper": "Twin-width III: Max Independent Set, Min Dominating Set, and Coloring",
+    "catalog_title": "Informal conjecture on MIS approximability vs. Min Dominating Set",
+    "statement_text": "Max Independent Set may have a very different approximability status than Min Dominating Set on bounded twin-width graphs.",
+    "context_text": "Theorem 6 establishes $O(1)$-approximation algorithms for Min Dominating Set and Min $r$-Dominating Set on bounded twin-width graphs, but Max Independent Set (Distance-1 MIS) is explicitly excluded from that theorem. The authors note further that a constant approximation for Max Independent Set on bounded twin-width graphs with arbitrarily large clique number would imply a PTAS, and they give some evidence that MIS sits in a fundamentally different approximability regime."
+  },
+  "started": "2026-09-01T01:50:13Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

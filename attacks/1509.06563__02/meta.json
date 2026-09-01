@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 373,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1509.06563__02",
+    "title_md": "[Problem 1.6](https://arxiv.org/abs/1509.06563)",
+    "paper": "Induced subgraphs of graphs with large chromatic number. IV. Consecutiv\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1509.06563__02/"
+  },
+  "dossier_meta": {
+    "id": "1509.06563__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1509.06563__02/",
+    "arxiv_id": "1509.06563",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Induced subgraphs of graphs with large chromatic number. IV. Consecutiv\u2026",
+    "catalog_title": "Problem 1.6",
+    "statement_text": "Is there an infinite set $F$ of positive integers such that $F$ is constricting and has density $0$?",
+    "context_text": "The authors discuss which infinite sets are constricting, noting that not every infinite set is constricting (not even sets with upper density one), while sets with bounded gaps are 3-constricting. Lower density seems closer to the truth, and the authors conjecture the answer to Problem 1.6 is positive."
+  },
+  "started": "2026-09-01T01:57:55Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

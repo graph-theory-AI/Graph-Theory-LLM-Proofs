@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is not resolved, but the conjectured upper bound is proved with an explicit remainder, the disjoint-union-of-cliques case is determined, and the full conjecture is shown to imply asymptotic Harary\u2013Hill.",
+  "would_publish": false,
+  "caveats": "No matching lower bound is obtained for arbitrary large-order simple graphs; the main upper-bound idea may already be implicit in the source.",
+  "id": "1608.07680__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.18072,
+  "eur": 1.222984,
+  "elapsed_s": 1458.0,
+  "status": "completed",
+  "response_id": "resp_094e7a8658db8227006a962a81242487d2a52c9a2311e54b55",
+  "when": "2026-09-01T01:53:54Z"
+}

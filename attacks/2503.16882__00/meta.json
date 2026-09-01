@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 378,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2503.16882__00",
+    "title_md": "[Conjecture 2](https://arxiv.org/abs/2503.16882)",
+    "paper": "Vertex Partitioning and $p$-Energy of Graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2503.16882__00/"
+  },
+  "dossier_meta": {
+    "id": "2503.16882__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2503.16882__00/",
+    "arxiv_id": "2503.16882",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Vertex Partitioning and $p$-Energy of Graphs",
+    "catalog_title": "Conjecture 2",
+    "statement_text": "For every connected graph $G$ of order $n$ and $p\\geq 2$, $$\\mathcal{E}^{-}_{p}(G)\\geq\\mathcal{E}^{-}_{p}(P_{n}).$$",
+    "context_text": "The paper's authors pose this as the natural negative $p$-energy analogue of Conjecture 1 of Tang, Liu, and Wang. Together, Conjectures 1 and 2 generalize Conjecture 3 of Elphick, Farber, Goldberg, and Wocjan, since at $p=2$ both give the bound $n-1$ by symmetry of the path spectrum. The paper settles this conjecture for $p\\geq 4$ via Theorem 1."
+  },
+  "started": "2026-09-01T01:53:55Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

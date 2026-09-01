@@ -1,0 +1,15 @@
+{
+  "verdict": "ill_posed",
+  "confidence": "high",
+  "one_line": "Under the literal unrestricted definition, m(n,k) has an elementary exact formula, contradicting the quoted n^2/(ek) bound and showing that an H-free hypothesis or some other restriction is missing.",
+  "would_publish": false,
+  "caveats": "This resolves the formulation supplied here, not the undefined parameter intended in the source paper.",
+  "id": "2102.10220__03",
+  "model": "gpt-5.6-sol",
+  "usd": 0.611628,
+  "eur": 0.633521,
+  "elapsed_s": 738.9,
+  "status": "completed",
+  "response_id": "resp_02a30094e76b3db4006a962cb7b26087d291ee0fa9b93f5f52",
+  "when": "2026-09-01T01:51:22Z"
+}

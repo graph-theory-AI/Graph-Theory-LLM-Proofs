@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For the standard weak geodesic game, the extremal value is attained, hyperbolic metrics have the minimum cop number exactly two, and finite covers satisfy useful monotonicity inequalities, but no maximizing metric is identified.",
+  "would_publish": false,
+  "caveats": "Assumes compact connected closed orientable smooth surfaces and the weak arbitrarily-close game; literature claims are taken from the supplied review.",
+  "id": "1710.11281__03",
+  "model": "gpt-5.6-sol",
+  "usd": 0.821276,
+  "eur": 0.850673,
+  "elapsed_s": 983.9,
+  "status": "completed",
+  "response_id": "resp_06580e560f9a0f24006a962b7cf36887d287c055470a6bb662",
+  "when": "2026-09-01T01:50:12Z"
+}

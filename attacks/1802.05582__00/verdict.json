@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "medium",
+  "one_line": "In the intended deterministic LOCAL formulation, a high-degree-component decomposition gives a second algorithm running in O(n/d+polylog n) rounds, which combined with the quoted d-dependent algorithm yields a uniform o(n) bound.",
+  "would_publish": false,
+  "caveats": "This assumes the source's hereditary list-colorable setting and d>=3; the catalog's literal all-d degeneracy paraphrase includes a false two-coloring case.",
+  "id": "1802.05582__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.904156,
+  "eur": 0.93652,
+  "elapsed_s": 1296.9,
+  "status": "completed",
+  "response_id": "resp_07cbc395b6d1a384006a962c1265dc87d2880756b64649d1cf",
+  "when": "2026-09-01T01:57:55Z"
+}

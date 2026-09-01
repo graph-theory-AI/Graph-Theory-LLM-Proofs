@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 372,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1708.09100__00",
+    "title_md": "[Open Question on s((Z/kZ)^n) for fixed k](https://arxiv.org/abs/1708.09100)",
+    "paper": "Erd\u0151s-Ginzburg-Ziv constants by avoiding three-term arithmetic progress\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1708.09100__00/"
+  },
+  "dossier_meta": {
+    "id": "1708.09100__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1708.09100__00/",
+    "arxiv_id": "1708.09100",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Erd\u0151s-Ginzburg-Ziv constants by avoiding three-term arithmetic progress\u2026",
+    "catalog_title": "Open Question on s((Z/kZ)^n) for fixed k",
+    "statement_text": "It remains an interesting question to estimate $s((\\mathbb{Z}/k\\mathbb{Z})^n)$ when $k$ is fixed and $n$ is large.",
+    "context_text": "Alon and Dubiner proved $s((\\mathbb{Z}/k\\mathbb{Z})^n) \\leq (cn\\log n)^n k$ for some absolute constant $c$, showing that for any fixed $n$ the quantity grows linearly in $k$. Elsholtz obtained lower bounds $s((\\mathbb{Z}/k\\mathbb{Z})^n) \\geq 2.08^n$ for odd $k\\geq 3$ and large $n$, but a large gap remains between these bounds and the upper bounds of Corollary 2 for fixed odd $k\\geq 3$ and large $n$."
+  },
+  "started": "2026-09-01T01:58:53Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

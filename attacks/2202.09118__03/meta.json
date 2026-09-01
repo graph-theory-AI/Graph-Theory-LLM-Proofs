@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 383,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2202.09118__03",
+    "title_md": "[Open problem (disjoint union of good trees)](https://arxiv.org/abs/2202.09118)",
+    "paper": "Polynomial bounds for chromatic number VII. Disjoint holes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.09118__03/"
+  },
+  "dossier_meta": {
+    "id": "2202.09118__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2202.09118__03/",
+    "arxiv_id": "2202.09118",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Polynomial bounds for chromatic number VII. Disjoint holes",
+    "catalog_title": "Open problem (disjoint union of good trees)",
+    "statement_text": "It is not known that if trees $H_1$, $H_2$ are good (i.e., the class of $H_i$-free graphs is polynomially $\\chi$-bounded for $i=1,2$), then the disjoint union of $H_1$ and $H_2$ is also good.",
+    "context_text": "Trees of diameter three are good [14], but whether disjoint unions of diameter-three trees are good is unknown. Self-isolation provides a sufficient condition: if $H_1$ and $H_2$ are good forests and one of them is self-isolating, their disjoint union is good."
+  },
+  "started": "2026-09-01T01:50:15Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

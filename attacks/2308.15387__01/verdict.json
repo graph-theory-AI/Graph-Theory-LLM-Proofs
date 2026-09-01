@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general crossover remains open, but it can be determined exactly for at most four colours and in the rainbow regime, where equality is shown not to be monotone in s.",
+  "would_publish": false,
+  "caveats": "Assumes the standard convention that an r-colouring may leave colours unused; the central large-r asymptotic gap is not narrowed.",
+  "id": "2308.15387__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.186164,
+  "eur": 1.228623,
+  "elapsed_s": 1535.1,
+  "status": "completed",
+  "response_id": "resp_0bc2e1a5760a4169006a962958b97487d2a8e5d09dc2178d02",
+  "when": "2026-09-01T01:50:15Z"
+}

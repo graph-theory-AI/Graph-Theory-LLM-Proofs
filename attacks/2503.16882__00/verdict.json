@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "The stated path-comparator inequality fails for G=K_3 and every p>2, since its two sides are 2 and 2^{p/2}, respectively.",
+  "would_publish": false,
+  "caveats": "This disproves the extracted P_n formulation only; it does not resolve the source paper's K_n formulation or its open p=2 case.",
+  "id": "2503.16882__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.184108,
+  "eur": 0.190698,
+  "elapsed_s": 209.8,
+  "status": "completed",
+  "response_id": "resp_08f64f092c15deba006a963034b26087d2aa225d096d707186",
+  "when": "2026-09-01T01:57:25Z"
+}

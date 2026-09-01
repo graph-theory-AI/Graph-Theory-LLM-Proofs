@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but it has an exact transition-quotient formulation and is proved here for claw-free cubic graphs and for a broad even-2-factor class.",
+  "would_publish": false,
+  "caveats": "No argument controls the chromatic number after changing transition choices in general; finite simple graphs are assumed.",
+  "id": "2511.02892__04",
+  "model": "gpt-5.6-sol",
+  "usd": 1.437864,
+  "eur": 1.489332,
+  "elapsed_s": 2000.3,
+  "status": "completed",
+  "response_id": "resp_0e1e2c4b1ddcec16006a9629909e7887d2afba5fed4a044f00",
+  "when": "2026-09-01T01:58:56Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A canonical monadically dependent class of unbounded twin-width is representable by unit segments together with points, and by arbitrary-slope two-length segments, but replacing the points by genuine unit segments remains the essential gap unless the reported 2025 arbitrary-slope theorem is literal.",
+  "would_publish": false,
+  "caveats": "The exact theorem and definitions in arXiv:2512.21896 were not supplied, so its claimed negative result for arbitrary-slope unit segments cannot be referee-verified here.",
+  "id": "2204.00722__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.158928,
+  "eur": 1.200412,
+  "elapsed_s": 1639.6,
+  "status": "completed",
+  "response_id": "resp_0a34b552bf0f0679006a962a2f0bdc87d2934287f70c7a8305",
+  "when": "2026-09-01T01:55:34Z"
+}

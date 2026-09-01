@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 381,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2309.04385__00",
+    "title_md": "[Question 1](https://arxiv.org/abs/2309.04385)",
+    "paper": "Boundary rigidity of 3D CAT(0) cube complexes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2309.04385__00/"
+  },
+  "dossier_meta": {
+    "id": "2309.04385__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2309.04385__00/",
+    "arxiv_id": "2309.04385",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Boundary rigidity of 3D CAT(0) cube complexes",
+    "catalog_title": "Question 1",
+    "statement_text": "Under what conditions is a finite $k$-dimensional cube complex $X \\hookrightarrow \\mathbb{R}^k$ reconstructible up to combinatorial type from its boundary distances?",
+    "context_text": "This question arises as the natural higher-dimensional generalisation of Haslegrave's 2D result (Theorem 1), where a planar quadrangulation with all internal vertices of degree at least 4 is determined by its boundary distances. The paper answers it for $k=3$ via Theorem 2 under the CAT(0) condition, while the cases $k \\geq 4$ are noted to involve non-trivial complications discussed in Section 10."
+  },
+  "started": "2026-09-01T01:53:15Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

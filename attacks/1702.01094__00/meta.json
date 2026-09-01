@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 374,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1702.01094__00",
+    "title_md": "[Question (rainbow hole with $s$ consecutive rainbow vertices)](https://arxiv.org/abs/1702.01094)",
+    "paper": "Induced subgraphs of graphs with large chromatic number. IX. Rainbow pa\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1702.01094__00/"
+  },
+  "dossier_meta": {
+    "id": "1702.01094__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1702.01094__00/",
+    "arxiv_id": "1702.01094",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Induced subgraphs of graphs with large chromatic number. IX. Rainbow pa\u2026",
+    "catalog_title": "Question (rainbow hole with $s$ consecutive rainbow vertices)",
+    "statement_text": "Is it true that for all fixed $s$, $\\kappa$, if $G$ is a graph with $\\omega(G)\\leq\\kappa$ and $\\chi(G)$ sufficiently large, then in every colouring of $G$ there is a hole in which some set of $s$ consecutive vertices is rainbow?",
+    "context_text": "The authors show that the shift graph of triples (coloured by middle elements) rules out a fully rainbow hole and even a hole in which every three consecutive vertices are rainbow. The weaker question of $s$ consecutive rainbow vertices in a hole is left open."
+  },
+  "started": "2026-09-01T01:57:25Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
