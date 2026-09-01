@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 74,
+    "score": 3.85,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2107.05995__00",
+    "title_md": "[Informal Belief on Degeneracy Bound for Hat Guessing Number](https://arxiv.org/abs/2107.05995)",
+    "paper": "On the Hat Guessing Number of Graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2107.05995__00/"
+  },
+  "dossier_meta": {
+    "id": "2107.05995__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2107.05995__00/",
+    "arxiv_id": "2107.05995",
+    "tier": 4,
+    "score": 3.85,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On the Hat Guessing Number of Graphs",
+    "catalog_title": "Informal Belief on Degeneracy Bound for Hat Guessing Number",
+    "statement_text": "It seems plausible that there exists a function $f : \\mathbb{N} \\to \\mathbb{N}$ such that for every $d$-degenerate graph $G$, $\\mathrm{HG}(G) \\leq f(d)$.",
+    "context_text": "The authors remark in the open problems section that such a bounding function seems plausible, noting that it would imply absolute constant bounds on the hat guessing number of planar graphs (which are $5$-degenerate) and a Hadwiger-number bound via degeneracy results."
+  },
+  "started": "2026-09-01T07:00:22Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

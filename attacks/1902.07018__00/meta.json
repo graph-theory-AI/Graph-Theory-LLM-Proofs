@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 75,
+    "score": 3.85,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1902.07018__00",
+    "title_md": "[Open question on $R_\\ell(K_{1,2}, k)$ for odd $k$](https://arxiv.org/abs/1902.07018)",
+    "paper": "List Ramsey numbers",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1902.07018__00/"
+  },
+  "dossier_meta": {
+    "id": "1902.07018__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1902.07018__00/",
+    "arxiv_id": "1902.07018",
+    "tier": 4,
+    "score": 3.85,
+    "lean": "prove",
+    "status": "open",
+    "paper": "List Ramsey numbers",
+    "catalog_title": "Open question on $R_\\ell(K_{1,2}, k)$ for odd $k$",
+    "statement_text": "We do not know whether $R_\\ell(K_{1,2}, k)$ is $k + 1$ or $k + 2$ when $k$ is odd.",
+    "context_text": "For even $k$, the paper establishes $R_\\ell(K_{1,2}, k) = k+1 = R(K_{1,2}, k)$ using the result of H\u00e4ggkvist and Janssen that $\\chi'_\\ell(K_n) = \\chi'(K_n)$ for odd $n$. The case of odd $k$ is equivalent to the List Colouring Conjecture for cliques of even order, which asks whether $\\chi'_\\ell(K_n)$ equals $n$ or $n-1$ for even $n$."
+  },
+  "started": "2026-09-01T06:52:29Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

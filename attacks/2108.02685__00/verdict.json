@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general conjecture remains open, but it holds for unions of copies of K_{d+1} with error 1, for K_{d,d}, and whenever d>=n-3, while sufficiently many identical copies of any regular graph admit an exact solution.",
+  "would_publish": false,
+  "caveats": "Assumes finite simple graphs; novelty of these elementary partial results has not been checked against the full literature.",
+  "id": "2108.02685__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.204072,
+  "eur": 1.247172,
+  "elapsed_s": 1617.1,
+  "status": "completed",
+  "response_id": "resp_03d06399d2f6a140006a96714e6f1487d2ba031e946d97f4b9",
+  "when": "2026-09-01T06:58:39Z"
+}

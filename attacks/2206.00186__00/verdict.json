@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The global guarantee is known to improve asymptotically to density sqrt(2)-1, and the argument below proves the 0.9 target in several structural regimes, but gives neither a proof nor a counterexample in general.",
+  "would_publish": false,
+  "caveats": "The 0.9 target remains open; the structural corollaries use the quoted Hendrey\u2013Norin\u2013Steiner\u2013Turcotte theorem and Gallai's classical critical-graph lemma.",
+  "id": "2206.00186__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.046336,
+  "eur": 1.083789,
+  "elapsed_s": 1180.4,
+  "status": "completed",
+  "response_id": "resp_019fc7fe28d24690006a967191007087d2a64e51cee04f5aaf",
+  "when": "2026-09-01T06:52:29Z"
+}
