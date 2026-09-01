@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 91,
+    "score": 3.75,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2210.09227__00",
+    "title_md": "[Problem 4.1](https://arxiv.org/abs/2210.09227)",
+    "paper": "A multidimensional Ramsey Theorem",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.09227__00/"
+  },
+  "dossier_meta": {
+    "id": "2210.09227__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2210.09227__00/",
+    "arxiv_id": "2210.09227",
+    "tier": 4,
+    "score": 3.75,
+    "lean": "prove",
+    "status": "open",
+    "paper": "A multidimensional Ramsey Theorem",
+    "catalog_title": "Problem 4.1",
+    "statement_text": "Fix $r,d\\geq 2$. Is $R_{2}(2,n)$ superexponential in $n$?",
+    "context_text": "Theorem 1.1 gives a doubly exponential upper bound on the $d$-dimensional Ramsey numbers $R_r(d,n)$, while the best known lower bound is only singly exponential (from a random colouring argument). Closing this gap\u2014determining whether a simple exponential upper bound suffices or the true growth is faster\u2014is identified as a key open problem."
+  },
+  "started": "2026-09-01T06:12:20Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

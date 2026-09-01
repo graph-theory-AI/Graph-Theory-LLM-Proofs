@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 89,
+    "score": 3.75,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1810.06704__01",
+    "title_md": "[Question 1.4](https://arxiv.org/abs/1810.06704)",
+    "paper": "Colouring Graphs with Sparse Neighbourhoods: Bounds and Applications",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1810.06704__01/"
+  },
+  "dossier_meta": {
+    "id": "1810.06704__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1810.06704__01/",
+    "arxiv_id": "1810.06704",
+    "tier": 4,
+    "score": 3.75,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Colouring Graphs with Sparse Neighbourhoods: Bounds and Applications",
+    "catalog_title": "Question 1.4",
+    "statement_text": "Let $G$ be a $\\delta$-sparse graph. What is the largest $\\varepsilon = \\varepsilon(\\delta)$ such that $\\chi(G) \\leq (1-\\varepsilon)(\\Delta+1)$?",
+    "context_text": "This isolates the second step in the King\u2013Reed proof: given neighbourhood sparsity, bound the chromatic number below $\\Delta+1$. Molloy\u2013Reed obtained $\\varepsilon(\\delta)\\approx 0.0238\\delta$ and Bruhn\u2013Joos improved to $\\approx 0.1827\\delta - 0.0778\\delta^{3/2}$; the paper further improves this using an iterative naive colouring procedure."
+  },
+  "started": "2026-09-01T06:16:26Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

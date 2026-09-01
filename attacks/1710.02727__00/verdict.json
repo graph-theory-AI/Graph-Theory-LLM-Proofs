@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is proved for t at most 3 and for several unbounded-treewidth families, and it admits exact finite-minor and separator-density reductions.",
+  "would_publish": false,
+  "caveats": "The unrestricted case t at least 4 remains open; several corollaries likely overlap known consequences of the source paper.",
+  "id": "1710.02727__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.152508,
+  "eur": 1.193762,
+  "elapsed_s": 1482.2,
+  "status": "completed",
+  "response_id": "resp_0c1ccf9a840c42b3006a9666f9dfcc87d298b29f9ab27a60f9",
+  "when": "2026-09-01T06:12:19Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the standard ordinary-critical (equivalently fixed constant-list-critical) interpretation, the optimal guaranteed sparsity is exactly zero whenever 0<alpha<2epsilon<1.",
+  "would_publish": false,
+  "caveats": "The boundary alpha=2epsilon and the main positive regime alpha>2epsilon remain open; choice-criticality in the stronger list-chromatic-number sense is not covered.",
+  "id": "1810.06704__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.043416,
+  "eur": 1.080765,
+  "elapsed_s": 1129.3,
+  "status": "completed",
+  "response_id": "resp_022f250bdb4268e4006a96688c8b3887d282de38ebf2dea609",
+  "when": "2026-09-01T06:13:09Z"
+}

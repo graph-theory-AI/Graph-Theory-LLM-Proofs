@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "For every s at least 3, there are triangle-free graphs of arbitrarily large chromatic number with a stable-set cover for which no s-vertex induced path has the required private-cover property.",
+  "would_publish": true,
+  "caveats": "This assumes the extracted statement has no omitted restriction; the counterexamples are existential via the probabilistic method, and literature priority has not been independently checked.",
+  "id": "1702.01094__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.909696,
+  "eur": 0.942258,
+  "elapsed_s": 1361.2,
+  "status": "completed",
+  "response_id": "resp_0bd6fe1303e04cea006a9668f5683087d29788781bc80039eb",
+  "when": "2026-09-01T06:18:46Z"
+}

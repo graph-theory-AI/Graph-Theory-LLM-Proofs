@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 88,
+    "score": 3.75,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2006.09269__00",
+    "title_md": "[Conjecture 5](https://arxiv.org/abs/2006.09269)",
+    "paper": "A Thomassen-type method for planar graph recoloring",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2006.09269__00/"
+  },
+  "dossier_meta": {
+    "id": "2006.09269__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2006.09269__00/",
+    "arxiv_id": "2006.09269",
+    "tier": 4,
+    "score": 3.75,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "A Thomassen-type method for planar graph recoloring",
+    "catalog_title": "Conjecture 5",
+    "statement_text": "If $G$ is a planar graph of girth at least five on $n$ vertices, then $R_6(G)$ has diameter $O(n)$.",
+    "context_text": "Planar graphs of girth at least five are 2-degenerate and can be colored from lists of size three; combining Lemma 2 with Theorem 1 already shows 7 colors suffice for linear diameter. The authors believe this bound can be improved to 6, and suspect that a variation of their Thomassen-type method can be used to prove the conjecture, though several complications arise."
+  },
+  "started": "2026-09-01T06:18:46Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

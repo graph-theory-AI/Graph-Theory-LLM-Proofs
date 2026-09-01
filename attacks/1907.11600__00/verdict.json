@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For finite simple graphs, stars satisfy the conjectured conclusion, while arbitrarily high-minimum-degree obstructions at edge-connectivity 2m-2 force every possible witness to have f(m) at least 2m-1 for m at least 3.",
+  "would_publish": false,
+  "caveats": "Uses a published modulo-orientation theorem for the upper bound and does not handle nonstar subdivisions or general bounded-leaf trees.",
+  "id": "1907.11600__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.905864,
+  "eur": 0.938289,
+  "elapsed_s": 1152.6,
+  "status": "completed",
+  "response_id": "resp_00aca019549a7b0c006a966939708c87d2b91be7df110adc48",
+  "when": "2026-09-01T06:16:25Z"
+}

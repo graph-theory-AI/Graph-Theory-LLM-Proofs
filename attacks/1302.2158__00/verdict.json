@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "medium",
+  "one_line": "Postle's fixed-surface bound for fixed-list critical girth-five graphs implies the conjecture after singleton lists are replaced by constant-genus three-list forcing gadgets.",
+  "would_publish": false,
+  "caveats": "The required input is the uniform fixed-list L-critical theorem, not merely finiteness of underlying choice-critical graphs.",
+  "id": "1302.2158__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.84986,
+  "eur": 0.880281,
+  "elapsed_s": 1651.8,
+  "status": "completed",
+  "response_id": "resp_0fc7dfb3cd0358a3006a9666b9ad0c87d2bda43f7920a76d31",
+  "when": "2026-09-01T06:14:05Z"
+}

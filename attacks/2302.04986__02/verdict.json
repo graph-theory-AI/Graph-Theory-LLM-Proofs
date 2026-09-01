@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The full conjecture remains open, but one has the sharp bound \u03b7(G)\u2264\u03c9(G)^{log_2 3} for (P5, complement-P5)-free graphs, hence \u03b7(G)\u22643 for P5-free graphs of clique number two, and a square bound for a wider substitution class.",
+  "would_publish": false,
+  "caveats": "Prime imperfect P5-free quotient graphs with stability number at least three remain untreated, and the novelty of the special-case bounds has not been checked.",
+  "id": "2302.04986__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.079488,
+  "eur": 1.118128,
+  "elapsed_s": 1764.8,
+  "status": "completed",
+  "response_id": "resp_0e56f6c31c64ec52006a9665b2060087d2bbfed244c3ddcda3",
+  "when": "2026-09-01T06:11:34Z"
+}
