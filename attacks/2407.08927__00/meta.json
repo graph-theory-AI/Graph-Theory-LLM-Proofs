@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 339,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2407.08927__00",
+    "title_md": "[Open Problem: Polynomial-time MWIS on even-hole-free graphs](https://arxiv.org/abs/2407.08927)",
+    "paper": "Tree Independence Number IV. Even-hole-free Graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2407.08927__00/"
+  },
+  "dossier_meta": {
+    "id": "2407.08927__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2407.08927__00/",
+    "arxiv_id": "2407.08927",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Tree Independence Number IV. Even-hole-free Graphs",
+    "catalog_title": "Open Problem: Polynomial-time MWIS on even-hole-free graphs",
+    "statement_text": "Does there exist a polynomial-time algorithm for the Maximum Weight Independent Set problem on even-hole-free graphs?",
+    "context_text": "On even-hole-free graphs, Maximum Weight Clique is known to be polynomial-time solvable, but the question of whether a polynomial-time algorithm exists for Maximum Weight Independent Set remains open. This is in stark contrast to perfect graphs, for which polynomial-time algorithms have been known since 1981. The present paper gives a quasi-polynomial-time algorithm via a polylogarithmic tree independence number bound, but the polynomial-time question is not resolved."
+  },
+  "started": "2026-09-01T02:24:19Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

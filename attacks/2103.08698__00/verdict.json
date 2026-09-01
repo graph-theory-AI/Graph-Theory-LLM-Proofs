@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Fixed subdivisions of cliques disprove the literal memberwise formulation, but they are excluded by the intended hereditary/all-subgraphs formulation, for which only special cases are proved here.",
+  "would_publish": false,
+  "caveats": "The precise meaning of 'class with sublinear separators' is decisive; the robust hereditary conjecture remains unresolved.",
+  "id": "2103.08698__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.988752,
+  "eur": 1.024144,
+  "elapsed_s": 1107.6,
+  "status": "completed",
+  "response_id": "resp_02aabed174c8adf2006a9632cb4d3c87d2bdfe42800a0fe8b0",
+  "when": "2026-09-01T02:23:26Z"
+}

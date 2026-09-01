@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 340,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2209.09107__01",
+    "title_md": "[Question 6.2](https://arxiv.org/abs/2209.09107)",
+    "paper": "List-avoiding orientations",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2209.09107__01/"
+  },
+  "dossier_meta": {
+    "id": "2209.09107__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2209.09107__01/",
+    "arxiv_id": "2209.09107",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "List-avoiding orientations",
+    "catalog_title": "Question 6.2",
+    "statement_text": "Does there exist a constant $C$ such that every graph $G$ of maximum degree $\\Delta$ has a matching $M$ such that $\\operatorname{AT}(G-M)\\leq\\frac{1}{2}\\Delta+C$?",
+    "context_text": "This question is motivated by results showing that removing a matching from a graph can reduce upper bounds on coloring parameters such as the Alon-Tarsi number. It is noted that $C$ cannot be smaller than $\\frac{1}{2}$, since for any odd $n$ and any maximum matching $M$ in $K_n$, $\\operatorname{AT}(K_n-M)=\\frac{n+1}{2}$. The authors ask specifically about matchings, inspired by Zhu's result on planar graphs and the result of Grytczuk and Zhu."
+  },
+  "started": "2026-09-01T02:23:40Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

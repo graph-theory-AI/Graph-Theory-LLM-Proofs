@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general growth remains open, but I prove the exact first nontrivial value gr(G_{2x2},K_3)=9 and obtain essentially cubic bounds when all blue fibers have bounded chromatic number.",
+  "would_publish": false,
+  "caveats": "No improvement of the quoted general-n asymptotic bounds; the literature novelty of these finite and restricted results was not independently checked.",
+  "id": "2210.03545__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.37524,
+  "eur": 1.424466,
+  "elapsed_s": 1390.7,
+  "status": "completed",
+  "response_id": "resp_0f19fbd8d55e0a88006a963333739c87d297b9128c020e6235",
+  "when": "2026-09-01T02:29:53Z"
+}

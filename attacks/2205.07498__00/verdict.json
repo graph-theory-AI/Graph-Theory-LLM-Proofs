@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The coefficient is exactly 1 for flow-critical graphs whose vertices of degree at least four induce at most 3|A|/2+O(1) edges, including graphs with boundedly many noncubic vertices, while any global obstruction to alpha=1 must have a dense noncubic core.",
+  "would_publish": false,
+  "caveats": "The global interval remains 1 <= alpha <= 5/2 because the density of the noncubic core is not controlled.",
+  "id": "2205.07498__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.073432,
+  "eur": 1.111855,
+  "elapsed_s": 1308.9,
+  "status": "completed",
+  "response_id": "resp_0e76fde31854d06c006a96334ec4a887d2989e9a2a36211af8",
+  "when": "2026-09-01T02:28:59Z"
+}

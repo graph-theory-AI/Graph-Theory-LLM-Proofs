@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conclusion holds for every target graph in bounded-biclique host classes, and any bounded-clique counterexample must have arbitrarily large induced bicliques in each sufficiently high-chromatic induced subgraph.",
+  "would_publish": false,
+  "caveats": "The key input is a known K\u00fchn\u2013Osthus theorem; unrestricted biclique-rich bounded-clique graphs remain untreated.",
+  "id": "1609.00314__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.829348,
+  "eur": 0.859034,
+  "elapsed_s": 1124.1,
+  "status": "completed",
+  "response_id": "resp_0cb5ba67dfc50cfa006a9632c83c1887d2825ff116e4fa1dc5",
+  "when": "2026-09-01T02:23:40Z"
+}

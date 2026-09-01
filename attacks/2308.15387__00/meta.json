@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 341,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2308.15387__00",
+    "title_md": "[Conjecture 4.2](https://arxiv.org/abs/2308.15387)",
+    "paper": "The power of many colours",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.15387__00/"
+  },
+  "dossier_meta": {
+    "id": "2308.15387__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2308.15387__00/",
+    "arxiv_id": "2308.15387",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "The power of many colours",
+    "catalog_title": "Conjecture 4.2",
+    "statement_text": "For any $1\\leq s\\leq\\frac{\\sqrt{r}}{\\log r}$ and $n$ large enough we have $f(n,r,s)=\\frac{s^{2}(\\log r)^{1-o_{r}(1)}}{r}\\cdot n$.",
+    "context_text": "The paper determines $f(n,r,s)$ \u2014 the maximum number of vertices guaranteably connected using up to $s$ colours in any $r$-edge colouring of $K_n$ \u2014 up to a logarithmic factor. The upper and lower bounds in the regime $s\\leq\\sqrt{r}/\\log r$ differ by an absolute constant between 4 and 8 depending on divisibility properties of $r$; this conjecture posits the precise asymptotic behaviour in that regime. The authors note the gap originates in the proof technique and that under appropriate divisibility assumptions the result can be sharpened to within a factor of $2+\\varepsilon$."
+  },
+  "started": "2026-09-01T02:23:27Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

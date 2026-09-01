@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 334,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1704.02367__00",
+    "title_md": "[Open Problem: Regularity-free proof for the ordered removal lemma](https://arxiv.org/abs/1704.02367)",
+    "paper": "Testing hereditary properties of ordered graphs and matrices",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1704.02367__00/"
+  },
+  "dossier_meta": {
+    "id": "1704.02367__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1704.02367__00/",
+    "arxiv_id": "1704.02367",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Testing hereditary properties of ordered graphs and matrices",
+    "catalog_title": "Open Problem: Regularity-free proof for the ordered removal lemma",
+    "statement_text": "It will be interesting to try to obtain a proof for the ordered graph removal lemma that does not go through the strong regularity lemma needed in the current proof.",
+    "context_text": "The proofs of the ordered removal lemmas rely on strong variants of the graph regularity lemma, which impose a wowzer-type (tower-of-towers) dependence between the parameters $\\delta^{-1}$ and $\\varepsilon^{-1}$. Fox gave the first regularity-free proof of the unordered graph removal lemma, though still with tower-type dependence; an analogous approach for the ordered setting remains open."
+  },
+  "started": "2026-09-01T02:29:12Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

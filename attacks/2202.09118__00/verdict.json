@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The question is not a truth-valued conjecture; I give a canonical obstruction normal form, concrete special cases, and a sharp Sigma^0_2 complexity barrier for arbitrary hereditary classes.",
+  "would_publish": false,
+  "caveats": "The obstruction criterion is formal rather than structural, and the complexity results depend on the chosen membership-bit or algorithmic presentation.",
+  "id": "2202.09118__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.894112,
+  "eur": 0.926117,
+  "elapsed_s": 923.9,
+  "status": "completed",
+  "response_id": "resp_036d1c6ce9ca76bc006a963329be9087d29cc486a9b786c5b9",
+  "when": "2026-09-01T02:21:57Z"
+}

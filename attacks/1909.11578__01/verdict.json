@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The unrestricted wording is false for k=2, while for the intended range k\u22653 the conjecture holds for n\u22644 and is reduced for n=5 to families containing a specific balanced cyclic orbit.",
+  "would_publish": false,
+  "caveats": "The general case k\u22653,n\u22655 remains open; symmetry is interpreted as invariance under a transitive coordinate group.",
+  "id": "1909.11578__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.324956,
+  "eur": 1.372383,
+  "elapsed_s": 1417.6,
+  "status": "completed",
+  "response_id": "resp_0688ff56a3aefcda006a9631c9353087d2857ae9f006062ded",
+  "when": "2026-09-01T02:24:18Z"
+}

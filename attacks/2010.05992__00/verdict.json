@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A rooted symmetric-difference lemma yields a sharper factorial upper bound, exponential bounds in two broad intersection regimes, and the exact value for rank two, but not the conjectured general exponential bound.",
+  "would_publish": false,
+  "caveats": "The general upper bound still contains a factor k!, and no claim of literature novelty is made.",
+  "id": "2010.05992__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.141096,
+  "eur": 1.181941,
+  "elapsed_s": 1405.2,
+  "status": "completed",
+  "response_id": "resp_00ca9a25c0a8c869006a96324543c087d28f26dec6968242e1",
+  "when": "2026-09-01T02:26:10Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 335,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1510.06964__00",
+    "title_md": "[Open case: WSK algorithm on the triangular lattice for q=5](https://arxiv.org/abs/1510.06964)",
+    "paper": "On a conjecture of Mohar concerning Kempe equivalence of regular graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1510.06964__00/"
+  },
+  "dossier_meta": {
+    "id": "1510.06964__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1510.06964__00/",
+    "arxiv_id": "1510.06964",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "On a conjecture of Mohar concerning Kempe equivalence of regular graphs",
+    "catalog_title": "Open case: WSK algorithm on the triangular lattice for q=5",
+    "statement_text": "Determine whether the Wang-Swendsen-Koteck\\'{y} algorithm for $q = 5$ colourings of the triangular lattice (with periodic boundary conditions) is valid (i.e., whether the set of $5$-colourings of the triangular lattice is a Kempe class).",
+    "context_text": "Theorem 2.2 establishes that the WSK algorithm on the triangular lattice is valid for $q \\geq 6$ (via Theorem 1.1 and a degeneracy lemma) and invalid for $q \\leq 4$ (Mohar and Salas). The authors explicitly note that $q = 5$ is the single remaining open case."
+  },
+  "started": "2026-09-01T02:29:00Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

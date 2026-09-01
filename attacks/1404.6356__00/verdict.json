@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "There is an exact 2^{O_Sigma(sqrt n)} algorithm in general and an O*(4^{4 gamma+t}) algorithm for graphs with t triangles, but neither yields polynomial time for unrestricted fixed-surface graphs.",
+  "would_publish": false,
+  "caveats": "These are consequences of standard separator and degree-choosability theorems; no unrestricted polynomial algorithm or hardness result is obtained.",
+  "id": "1404.6356__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.89522,
+  "eur": 0.927264,
+  "elapsed_s": 1192.0,
+  "status": "completed",
+  "response_id": "resp_08699e3e3e9ce226006a9631dcb28c87d2b4434679e9d2e71e",
+  "when": "2026-09-01T02:20:52Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general conjecture remains open, but it holds for constant expansion and for universal classes of sufficiently stretched subdivisions, while polynomial expansion always gives an explicit sublinear twin-width bound.",
+  "would_publish": false,
+  "caveats": "The subdivision argument does not cover selectively chosen or highly nonuniform cores, and the general quantitative bound still grows with the number of vertices.",
+  "id": "2004.14789__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.012276,
+  "eur": 1.04851,
+  "elapsed_s": 1422.0,
+  "status": "completed",
+  "response_id": "resp_0d3bab1a7674d2e7006a9632ea9d6c87d29fbffc0cd3536094",
+  "when": "2026-09-01T02:29:12Z"
+}

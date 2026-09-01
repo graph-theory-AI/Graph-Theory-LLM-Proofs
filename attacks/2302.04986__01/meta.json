@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 344,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2302.04986__01",
+    "title_md": "[Conjecture 1.13](https://arxiv.org/abs/2302.04986)",
+    "paper": "Hitting all maximum stable sets in $P_5$-free graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.04986__01/"
+  },
+  "dossier_meta": {
+    "id": "2302.04986__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2302.04986__01/",
+    "arxiv_id": "2302.04986",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Hitting all maximum stable sets in $P_5$-free graphs",
+    "catalog_title": "Conjecture 1.13",
+    "statement_text": "For every integer $t\\geq 6$, the class of $P_{t}$-free graphs is $\\eta$-bounded.",
+    "context_text": "After proving $\\eta$-boundedness for $P_5$-free graphs (Theorem 1.12), the authors note that it remains open whether $P_t$-free graphs are $\\eta$-bounded for $t\\geq 6$, and state this as a conjecture paralleling the known $\\chi$-boundedness of $P_t$-free graphs for all $t$."
+  },
+  "started": "2026-09-01T02:20:52Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

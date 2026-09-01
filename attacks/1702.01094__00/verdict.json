@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is sharp for s at most 3; I also prove the s=4 case for odd-hole-free graphs, give quantitative lower bounds, and derive a separator criterion and fixed-s recognition algorithm.",
+  "would_publish": false,
+  "caveats": "Colouring is interpreted as proper; the unrestricted problem remains open for s at least 4.",
+  "id": "1702.01094__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.371912,
+  "eur": 1.421019,
+  "elapsed_s": 1647.7,
+  "status": "completed",
+  "response_id": "resp_0810eeef0ff83f12006a963105c91487d2a86145610e8f64a2",
+  "when": "2026-09-01T02:24:53Z"
+}

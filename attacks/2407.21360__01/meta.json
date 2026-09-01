@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 337,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2407.21360__01",
+    "title_md": "[Conjecture 8](https://arxiv.org/abs/2407.21360)",
+    "paper": "Clustered Colouring of Graph Products",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2407.21360__01/"
+  },
+  "dossier_meta": {
+    "id": "2407.21360__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2407.21360__01/",
+    "arxiv_id": "2407.21360",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Clustered Colouring of Graph Products",
+    "catalog_title": "Conjecture 8",
+    "statement_text": "There exists a positive integer $t$ such that for infinitely many graphs $H_1, H_2$ with treewidth $t$, every $3$-colouring of $H_1 \\boxtimes H_2$ has clustering $\\Omega(|V(H_1 \\boxtimes H_2)|^{4/7})$.",
+    "context_text": "Theorem 3 gives an upper bound of $O(|V(H_1 \\boxtimes H_2)|^{4/7})$ for 3-colourings of products of two bounded-treewidth graphs with no degree restriction, but only a lower bound of $\\Omega(|V(H_1 \\boxtimes H_2)|^{1/2})$ is proved. The authors conjecture the $4/7$ exponent in the upper bound is asymptotically tight."
+  },
+  "started": "2026-09-01T02:24:54Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

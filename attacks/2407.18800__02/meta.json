@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 338,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2407.18800__02",
+    "title_md": "[Conjecture 4](https://arxiv.org/abs/2407.18800)",
+    "paper": "Towards Characterization of 5-List-Colorability of Toroidal Graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2407.18800__02/"
+  },
+  "dossier_meta": {
+    "id": "2407.18800__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2407.18800__02/",
+    "arxiv_id": "2407.18800",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Towards Characterization of 5-List-Colorability of Toroidal Graphs",
+    "catalog_title": "Conjecture 4",
+    "statement_text": "Every graph drawn on the torus with edge-width at least four is 5-choosable.",
+    "context_text": "This is proposed as an important intermediate step towards Conjecture 3, focusing on toroidal graphs with no non-contractible cycle of length less than four. Postle proved that the edge-width of a graph critical for 5-list coloring is at most logarithmic in its genus, so the conjecture holds when four is replaced by a sufficiently large constant."
+  },
+  "started": "2026-09-01T02:24:31Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

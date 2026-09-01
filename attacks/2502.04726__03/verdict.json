@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general finite problem remains open, but cubic graphs having a 2-factor with at most two cycles always contain a cycle with at least one seventh as many chords as vertices, and asymptotically one quarter as many.",
+  "would_publish": false,
+  "caveats": "Finite simple graphs are assumed; the argument does not handle graphs without a bounded-component 2-factor.",
+  "id": "2502.04726__03",
+  "model": "gpt-5.6-sol",
+  "usd": 1.49392,
+  "eur": 1.547395,
+  "elapsed_s": 1736.4,
+  "status": "completed",
+  "response_id": "resp_040f47132ae0aede006a963096edf487d2be4468929f5612fb",
+  "when": "2026-09-01T02:24:31Z"
+}

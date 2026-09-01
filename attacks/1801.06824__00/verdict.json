@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For clique-bounded parameters, (CC) forces boundedness in terms of the list chromatic number of the complement; this yields an explicit obstruction, an exact co-matching subclass dichotomy, and an undecidability result.",
+  "would_publish": false,
+  "caveats": "No sufficient condition or full characterization is obtained; the construction uses induced-subgraph heredity and the paper's island definition of col.",
+  "id": "1801.06824__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.054312,
+  "eur": 1.092051,
+  "elapsed_s": 1279.5,
+  "status": "completed",
+  "response_id": "resp_0444a02cf03ccc03006a9631ad889487d2ab7d1c8accaef8a8",
+  "when": "2026-09-01T02:21:32Z"
+}

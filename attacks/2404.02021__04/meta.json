@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 342,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2404.02021__04",
+    "title_md": "[Informal conjecture on tripartite off-diagonal Ramsey numbers](https://arxiv.org/abs/2404.02021)",
+    "paper": "On off-diagonal hypergraph Ramsey numbers",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2404.02021__04/"
+  },
+  "dossier_meta": {
+    "id": "2404.02021__04",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2404.02021__04/",
+    "arxiv_id": "2404.02021",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On off-diagonal hypergraph Ramsey numbers",
+    "catalog_title": "Informal conjecture on tripartite off-diagonal Ramsey numbers",
+    "statement_text": "It may be the case that $r(H,K_{n,n,n}^{(3)})\\leq 2^{O_{H}(n\\log n)}$ for all $H$.",
+    "context_text": "The authors note that $r(H,K_{n,n,n}^{(3)})\\leq 2^{O_H(n^2)}$ for all $H$, and using the methods of [5] one can show a stronger bound $2^{O_H(n^{2-\\epsilon})}$ for some $\\epsilon>0$ depending on $H$. They suspect the true bound is $2^{O_H(n\\log n)}$, which would help explain why the threshold $2^{\\Theta(n\\log n)}$ is so prevalent and hard to surpass in constructions for $K_n^{(3)}$."
+  },
+  "started": "2026-09-01T02:21:57Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

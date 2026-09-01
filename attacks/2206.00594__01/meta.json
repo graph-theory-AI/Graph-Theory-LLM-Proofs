@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 343,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "2206.00594__01",
+    "title_md": "[Open Question: bounded twin-width for sparse $\\mathcal{O}_k$-free graphs](https://arxiv.org/abs/2206.00594)",
+    "paper": "Sparse graphs with bounded induced cycle packing number have logarithmi\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2206.00594__01/"
+  },
+  "dossier_meta": {
+    "id": "2206.00594__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2206.00594__01/",
+    "arxiv_id": "2206.00594",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Sparse graphs with bounded induced cycle packing number have logarithmi\u2026",
+    "catalog_title": "Open Question: bounded twin-width for sparse $\\mathcal{O}_k$-free graphs",
+    "statement_text": "Is there a function $f:\\mathbb{N}\\times\\mathbb{N}\\to\\mathbb{N}$ such that every $\\mathcal{O}_{k}$-free graph that does not contain $K_{t,t}$ as a subgraph has twin-width at most $f(t,k)$?",
+    "context_text": "The paper shows that sparse $\\mathcal{O}_k$-free graphs have logarithmic treewidth, but leaves open whether their twin-width is also bounded as a function of $t$ and $k$. The authors note that $\\mathcal{O}_2$-free graphs without $K_{3,3}$ already yield a new family of counterexamples to bounded treewidth from forbidden induced subgraphs alone."
+  },
+  "started": "2026-09-01T02:21:33Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

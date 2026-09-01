@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 336,
+    "score": 2.9,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2501.00567__00",
+    "title_md": "[Conjecture 1.7](https://arxiv.org/abs/2501.00567)",
+    "paper": "Local Shearer bound",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2501.00567__00/"
+  },
+  "dossier_meta": {
+    "id": "2501.00567__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2501.00567__00/",
+    "arxiv_id": "2501.00567",
+    "tier": 3,
+    "score": 2.9,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Local Shearer bound",
+    "catalog_title": "Conjecture 1.7",
+    "statement_text": "Every triangle-free graph $G$ satisfies $\\chi(G)\\leq(1+o(1))\\frac{\\rho(G)}{\\ln\\rho(G)}$.",
+    "context_text": "Motivated by Harris's conjecture [27] that every triangle-free $d$-degenerate graph satisfies $\\chi_f(G)\\leq O(\\frac{d}{\\ln d})$ and by Molloy's bound $(1+o(1))\\frac{\\Delta(G)}{\\ln\\Delta(G)}$ in terms of the maximum degree. Since the spectral radius $\\rho(G)$ is sandwiched between the degeneracy and the maximum degree, Theorem 1.6 of this paper (a new spectral upper bound on $\\chi_f$) is presented as a first step toward interpolating between these two regimes."
+  },
+  "started": "2026-09-01T02:26:10Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
