@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "With the stated requirement that the b_i are integers, the partition V_1={2,4,6}, V_2={1}, V_3={3,5,7} of P_7 is a counterexample.",
+  "would_publish": false,
+  "caveats": "The counterexample relies essentially on integrality; the original conjecture may instead allow real b_i, in which case this does not apply.",
+  "id": "1611.03196__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.164256,
+  "eur": 0.170136,
+  "elapsed_s": 555.9,
+  "status": "completed",
+  "response_id": "resp_0632231751d2be73006a962a8b64a487d2a6c21e8e91f28a55",
+  "when": "2026-09-01T01:39:03Z"
+}

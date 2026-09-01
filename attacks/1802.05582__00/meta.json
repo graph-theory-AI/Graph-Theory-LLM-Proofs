@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 395,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1802.05582__00",
+    "title_md": "[Open problem on sublinear round complexity](https://arxiv.org/abs/1802.05582)",
+    "paper": "Distributed coloring in sparse graphs with fewer colors",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1802.05582__00/"
+  },
+  "dossier_meta": {
+    "id": "1802.05582__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1802.05582__00/",
+    "arxiv_id": "1802.05582",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Distributed coloring in sparse graphs with fewer colors",
+    "catalog_title": "Open problem on sublinear round complexity",
+    "statement_text": "It remains interesting to obtain a bound on the round complexity that is sublinear in $n$ regardless of the value of $d$.",
+    "context_text": "After noting that network decompositions can replace the $O(d^4 \\log^3 n)$ round complexity of Theorem 1.3 by $d^3 2^{O(\\sqrt{\\log n})}$, the authors remark that these alternative bounds are unsatisfying. The problem of achieving a round complexity that is sublinear in $n$ independent of $d$ remains open."
+  },
+  "started": "2026-09-01T01:36:18Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

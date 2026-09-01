@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The intended finite-VC-dimension implication is already refuted by the hereditary class of C4-free bipartite graphs in Theorem 4.3 of the cited source.",
+  "would_publish": false,
+  "caveats": "The inapproximability is conditional on the theorem's standard complexity assumption, and the extracted phrase 'logarithmic lower bound' is formally imprecise.",
+  "id": "1407.5833__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.274952,
+  "eur": 0.284794,
+  "elapsed_s": 370.1,
+  "status": "completed",
+  "response_id": "resp_064682b435138ffb006a962b55aaa887d2b375d5c9cd570a8f",
+  "when": "2026-09-01T01:39:19Z"
+}

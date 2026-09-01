@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The problem is solved below for every s<=4 and for r=2s-1, with general covering-design and linear lower bounds for all s.",
+  "would_publish": false,
+  "caveats": "Isolated vertices are allowed, as is standard for a hypergraph on an r-element ground set; the general case s>=5 remains open, and literature novelty of the small-s results was not checked.",
+  "id": "2308.15387__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.814096,
+  "eur": 1.879031,
+  "elapsed_s": 2026.8,
+  "status": "completed",
+  "response_id": "resp_0092ae95b936981a006a962394353487d2ac29418acf78d416",
+  "when": "2026-09-01T01:33:48Z"
+}

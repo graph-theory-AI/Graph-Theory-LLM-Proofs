@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The complete dichotomy remains unresolved; I prove polynomial-time GI for every residual class at fixed chordal-deletion distance and derive a restrictive C5-layer structure for the (gem,P5)-free case.",
+  "would_publish": false,
+  "caveats": "No residual pair is fully classified, and the post-2021 literature status and novelty were not independently verified.",
+  "id": "1811.12252__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.71358,
+  "eur": 0.739122,
+  "elapsed_s": 993.7,
+  "status": "completed",
+  "response_id": "resp_0ed2b6094a21bb0a006a962773989487d28d7e4493c6eff919",
+  "when": "2026-09-01T01:33:09Z"
+}

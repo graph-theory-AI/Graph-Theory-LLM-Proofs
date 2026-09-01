@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 391,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2004.07457__01",
+    "title_md": "[Conjecture 7](https://arxiv.org/abs/2004.07457)",
+    "paper": "Asymmetric list sizes in bipartite graphs",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2004.07457__01/"
+  },
+  "dossier_meta": {
+    "id": "2004.07457__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2004.07457__01/",
+    "arxiv_id": "2004.07457",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Asymmetric list sizes in bipartite graphs",
+    "catalog_title": "Conjecture 7",
+    "statement_text": "Let the positive integers $\\Delta_A, \\Delta_B, k_A, k_B$ satisfy one of the following.\n(i) Given $\\varepsilon > 0$, we have $\\Delta_A, \\Delta_B \\geq \\Delta_0$ for some $\\Delta_0 = \\Delta_0(\\varepsilon)$, and $k_A \\geq \\Delta_A^\\varepsilon$ and $k_B \\geq \\Delta_B^\\varepsilon$.\n(ii) For some absolute constant $C > 1$, $k_A \\geq C \\log \\Delta_B$ and $k_B \\geq C \\log \\Delta_A$.\n(iii) $\\Delta_A = \\Delta_B = \\Delta$, and, for some absolute constant $C > 0$, $k_B \\geq C(\\Delta/\\log\\Delta)^{1/k_A} \\log\\Delta$ or $k_A \\geq C(\\Delta/\\log\\Delta)^{1/k_B} \\log\\Delta$.\nThen any bipartite graph $G = (V = A \\cup B, E)$ with parts $A$ and $B$ having maximum degrees at most $\\Delta_A$ and $\\Delta_B$, respectively, is $(k_A, k_B)$-choosable.",
+    "context_text": "Motivated by the asymptotic behaviour of $(k_A, k_B)$-choosability for complete bipartite graphs (Theorem 6 and Theorem 16), the authors conjecture three concrete asymmetric analogues of the Krivelevich\u2013Alon conjecture. Condition (i) is weaker than Conjecture 2; conditions (ii) and (iii) are stronger. The paper shows Conjecture 7 holds for complete bipartite graphs (Theorem 15) and provides partial progress in the general case via Theorem 4 and its corollaries."
+  },
+  "started": "2026-09-01T01:39:19Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

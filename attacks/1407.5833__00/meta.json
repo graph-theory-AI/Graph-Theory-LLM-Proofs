@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 398,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1407.5833__00",
+    "title_md": "[VC-Dimension Dichotomy for Identifying Codes (Approximation)](https://arxiv.org/abs/1407.5833)",
+    "paper": "Identifying codes in hereditary classes of graphs and VC-dimension",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1407.5833__00/"
+  },
+  "dossier_meta": {
+    "id": "1407.5833__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1407.5833__00/",
+    "arxiv_id": "1407.5833",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Identifying codes in hereditary classes of graphs and VC-dimension",
+    "catalog_title": "VC-Dimension Dichotomy for Identifying Codes (Approximation)",
+    "statement_text": "For any hereditary class of graphs $\\mathcal{C}$, either (1) the minimum identifying code size has a logarithmic lower bound and Min Id Code is log-APX-hard in $\\mathcal{C}$, or (2) the minimum identifying code size has a polynomial lower bound and Min Id Code admits a constant factor approximation algorithm in $\\mathcal{C}$.",
+    "context_text": "Surveying known results in Table 1, the authors observe that hereditary graph classes appear to split into two regimes according to their VC-dimension: infinite VC-dimension corresponds to a logarithmic lower bound and log-APX-hardness, while finite VC-dimension corresponds to a polynomial lower bound and (conjecturally) constant-factor approximability. The paper aims to shed light on the validity of this dichotomy for all hereditary classes."
+  },
+  "started": "2026-09-01T01:33:09Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

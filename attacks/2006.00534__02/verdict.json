@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "There are infinitely many finite abelian groups with solid non-maximal-supplement sets of size (1+o(1))|G|^{1/4}, so the fourth-root exponent in Theorem 5 is optimal, while its logarithmic factor remains unresolved.",
+  "would_publish": false,
+  "caveats": "This leaves a factor (log |G|)^{1/4} between the known guarantee and the obstruction, and novelty beyond the supplied literature search was not independently checked.",
+  "id": "2006.00534__02",
+  "model": "gpt-5.6-sol",
+  "usd": 0.985008,
+  "eur": 1.020266,
+  "elapsed_s": 1024.3,
+  "status": "completed",
+  "response_id": "resp_0a7ac34b25783e23006a962811b53487d2b7c29e57178a5e2e",
+  "when": "2026-09-01T01:36:17Z"
+}

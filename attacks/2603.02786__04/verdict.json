@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is proved for n at most 2, and a hypergraph edge-colouring argument gives explicit general bounds with normalized constant tending to 4/e, substantially improving the quoted factor 3.",
+  "would_publish": false,
+  "caveats": "The asymptotic constant 1 remains open for n at least 3, and novelty relative to the full source paper has not been independently checked.",
+  "id": "2603.02786__04",
+  "model": "gpt-5.6-sol",
+  "usd": 1.66954,
+  "eur": 1.729301,
+  "elapsed_s": 2110.5,
+  "status": "completed",
+  "response_id": "resp_01b6de4daf05e37c006a96239453b487d2b44a001c9fedccd5",
+  "when": "2026-09-01T01:35:12Z"
+}

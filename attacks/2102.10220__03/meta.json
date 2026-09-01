@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 392,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2102.10220__03",
+    "title_md": "[Open problem on $m(n,k)$ for fixed $k \\geq 2$](https://arxiv.org/abs/2102.10220)",
+    "paper": "Making an $H$-Free Graph $k$-Colorable",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2102.10220__03/"
+  },
+  "dossier_meta": {
+    "id": "2102.10220__03",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2102.10220__03/",
+    "arxiv_id": "2102.10220",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Making an $H$-Free Graph $k$-Colorable",
+    "catalog_title": "Open problem on $m(n,k)$ for fixed $k \\geq 2$",
+    "statement_text": "What is the exact or asymptotic value of $m(n,k)$ for any fixed $k \\geq 2$?",
+    "context_text": "The authors prove $m(n,k) \\leq n^2/(ek)$ (Corollary 2.6) and derive a lower bound from an Erd\u0151s\u2013R\u00e9nyi random graph heuristic that is within 20% of this upper bound for large $k$. They state explicitly: 'We have no idea what the exact or asymptotic value of $m(n,k)$ is for any fixed $k \\geq 2$.'"
+  },
+  "started": "2026-09-01T01:39:03Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

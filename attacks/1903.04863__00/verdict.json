@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The near-linear question remains open, but the example has an explicit Omega(sqrt(N)) construction, while the natural quadratic-graph method cannot exceed exponent one half.",
+  "would_publish": false,
+  "caveats": "Avoidance is interpreted as allowing only x=y=w=z; the broader informal class of coefficient patterns is not resolved.",
+  "id": "1903.04863__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.546136,
+  "eur": 1.60148,
+  "elapsed_s": 1836.1,
+  "status": "completed",
+  "response_id": "resp_07ba9560662c6c40006a962394325887d2a3a1dd85b56ea418",
+  "when": "2026-09-01T01:30:37Z"
+}

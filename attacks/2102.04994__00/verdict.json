@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains unsettled, but it reduces to a sparse-core statement, bounded-substitution-width subfamilies satisfy Erd\u0151s\u2013Hajnal, and Paley-17 substitutions show that any possible exponent is at most log(3)/log(17).",
+  "would_publish": false,
+  "caveats": "The key sparse-core estimate is reduced to but not proved, and no counterexample is obtained.",
+  "id": "2102.04994__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.87584,
+  "eur": 0.907191,
+  "elapsed_s": 1129.7,
+  "status": "completed",
+  "response_id": "resp_091ed0300af3434f006a962847d73487d28654f07141ceb2db",
+  "when": "2026-09-01T01:38:57Z"
+}

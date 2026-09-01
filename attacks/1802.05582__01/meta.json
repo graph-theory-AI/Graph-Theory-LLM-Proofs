@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 396,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1802.05582__01",
+    "title_md": "[Question on randomized list-coloring round complexity](https://arxiv.org/abs/1802.05582)",
+    "paper": "Distributed coloring in sparse graphs with fewer colors",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1802.05582__01/"
+  },
+  "dossier_meta": {
+    "id": "1802.05582__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1802.05582__01/",
+    "arxiv_id": "1802.05582",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Distributed coloring in sparse graphs with fewer colors",
+    "catalog_title": "Question on randomized list-coloring round complexity",
+    "statement_text": "Is it possible to avoid the multiplicative factor polynomial in $\\Delta$ in a randomized version of the distributed $\\Delta$-list-coloring algorithm (Corollary 2.1)?",
+    "context_text": "Panconesi and Srinivasan gave a randomized $\\Delta$-coloring algorithm running in $O(\\log^3 n / \\log \\Delta)$ rounds. The paper's list-coloring extension (Corollary 2.1) achieves $O(\\Delta^2 \\log^3 n)$ rounds deterministically, but it is noted to be unclear whether a randomized variant can similarly remove the polynomial dependence on $\\Delta$."
+  },
+  "started": "2026-09-01T01:35:13Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

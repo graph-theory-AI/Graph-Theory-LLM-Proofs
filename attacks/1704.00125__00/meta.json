@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 399,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1704.00125__00",
+    "title_md": "[Informal Conjecture (Section 1.2): dropping bounded-degree assumption](https://arxiv.org/abs/1704.00125)",
+    "paper": "Thin graph classes and polynomial-time approximation schemes",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1704.00125__00/"
+  },
+  "dossier_meta": {
+    "id": "1704.00125__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1704.00125__00/",
+    "arxiv_id": "1704.00125",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Thin graph classes and polynomial-time approximation schemes",
+    "catalog_title": "Informal Conjecture (Section 1.2): dropping bounded-degree assumption",
+    "statement_text": "It seems plausible that this additional assumption [bounded maximum degree] could be dropped, leading to a much more general result strengthening majority of the algorithms mentioned in the previous subsection.",
+    "context_text": "The paper proves that subgraph-closed graph classes with strongly sublinear separators admit thin systems of overlays under the additional assumption that their maximum degree is bounded. The authors conjecture this extra condition is unnecessary, which would subsume a much wider class of results."
+  },
+  "started": "2026-09-01T01:30:38Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

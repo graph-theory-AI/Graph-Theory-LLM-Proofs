@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 393,
+    "score": 2.85,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "1812.07327__02",
+    "title_md": "[Problem 8](https://arxiv.org/abs/1812.07327)",
+    "paper": "1-subdivisions, fractional chromatic number and Hall ratio",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.07327__02/"
+  },
+  "dossier_meta": {
+    "id": "1812.07327__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.07327__02/",
+    "arxiv_id": "1812.07327",
+    "tier": 3,
+    "score": 2.85,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "1-subdivisions, fractional chromatic number and Hall ratio",
+    "catalog_title": "Problem 8",
+    "statement_text": "Is it true that a class $\\mathcal{C}$ has bounded expansion if and only if there exists a function $f_6 : \\mathbb{N} \\to \\mathbb{N}$ such that for every $r \\in \\mathbb{N}$ and every $G \\in \\mathcal{C} \\mathbin{\\triangledown} r$, $\\rho(G) \\leq f_6(r)$?",
+    "context_text": "Corollary 7 gives an analogous characterisation of bounded expansion via $\\chi_f$ in shallow minors. The forward direction (bounded expansion implies bounded Hall ratio in shallow minors) is clear; the converse argument fails by Theorem 2. Proposition 1 shows a nowhere-dense class with unbounded Hall ratio, but no class with unbounded expansion and bounded Hall ratio in all shallow minors is known."
+  },
+  "started": "2026-09-01T01:38:57Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
