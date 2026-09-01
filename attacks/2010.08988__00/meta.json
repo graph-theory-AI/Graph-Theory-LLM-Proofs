@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 314,
+    "score": 3.0,
+    "tier": 3,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2010.08988__00",
+    "title_md": "[Problem 1.4](https://arxiv.org/abs/2010.08988)",
+    "paper": "Even Circuits in Oriented Matroids",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2010.08988__00/"
+  },
+  "dossier_meta": {
+    "id": "2010.08988__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2010.08988__00/",
+    "arxiv_id": "2010.08988",
+    "tier": 3,
+    "score": 3.0,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Even Circuits in Oriented Matroids",
+    "catalog_title": "Problem 1.4",
+    "statement_text": "Given an oriented matroid $\\vec{M}$, decide whether there exists a directed circuit of even size in $\\vec{M}$.",
+    "context_text": "This is the paper's straight-forward generalisation of the even dicycle problem from digraphs to oriented matroids, and constitutes the central algorithmic motivation of the work. The authors show in Theorem 1.6 that this problem is polynomially equivalent to recognising non-even oriented regular matroids."
+  },
+  "started": "2026-09-01T02:48:36Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

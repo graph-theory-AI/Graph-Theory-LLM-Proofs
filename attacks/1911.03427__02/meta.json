@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 317,
+    "score": 3.0,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1911.03427__02",
+    "title_md": "[Informal Conjecture (Polynomial Quantitative Bound for Complexity 1 Sys\u2026](https://arxiv.org/abs/1911.03427)",
+    "paper": "Induced arithmetic removal: complexity 1 patterns over finite fields",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1911.03427__02/"
+  },
+  "dossier_meta": {
+    "id": "1911.03427__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1911.03427__02/",
+    "arxiv_id": "1911.03427",
+    "tier": 3,
+    "score": 3.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Induced arithmetic removal: complexity 1 patterns over finite fields",
+    "catalog_title": "Informal Conjecture (Polynomial Quantitative Bound for Complexity 1 Systems)",
+    "statement_text": "For complexity 1 systems, the dependence of $\\delta$ on $\\epsilon$ in Definition 1.10 satisfies $\\delta = \\epsilon^{O_A(1)}$, i.e., polynomial dependence.",
+    "context_text": "In Section 1.2, after defining complexity 1 (Definition 1.10), the authors remark that the general dependence of $\\delta$ on $\\epsilon$ is a wide open problem and state conjecturally that polynomial dependence holds. Reference [20] is cited for further discussion of this quantitative question."
+  },
+  "started": "2026-09-01T02:47:18Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

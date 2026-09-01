@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 313,
+    "score": 3.0,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2002.00496__00",
+    "title_md": "[Informal Conjecture on Universal N0 for Bumping a Ladder](https://arxiv.org/abs/2002.00496)",
+    "paper": "Excluding a ladder",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2002.00496__00/"
+  },
+  "dossier_meta": {
+    "id": "2002.00496__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2002.00496__00/",
+    "arxiv_id": "2002.00496",
+    "tier": 3,
+    "score": 3.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Excluding a ladder",
+    "catalog_title": "Informal Conjecture on Universal N0 for Bumping a Ladder",
+    "statement_text": "There exists a constant $N_0$ such that for every $k$, Theorem 2 holds with $N = N_0$. For all we know, this might even be true with $N_0 = 4$.",
+    "context_text": "Theorem 2 (Bumping a ladder) asserts that every 3-connected graph containing a union of $N$ vertex-disjoint copies of $L_k$ as a minor contains $L_{k+1}$ as a minor, but the value of $N$ a priori depends on $k$. The authors remark that while 3-connectivity is necessary (see Figure 1), they believe the dependence of $N$ on $k$ is not."
+  },
+  "started": "2026-09-01T02:49:36Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

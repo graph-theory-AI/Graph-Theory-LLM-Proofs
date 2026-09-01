@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 315,
+    "score": 3.0,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "2009.03418__00",
+    "title_md": "[Conjecture 5](https://arxiv.org/abs/2009.03418)",
+    "paper": "On a conjecture by Anthony Hill",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2009.03418__00/"
+  },
+  "dossier_meta": {
+    "id": "2009.03418__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/2009.03418__00/",
+    "arxiv_id": "2009.03418",
+    "tier": 3,
+    "score": 3.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On a conjecture by Anthony Hill",
+    "catalog_title": "Conjecture 5",
+    "statement_text": "The crossing number of $M_{n,t}$ is equal to $$H(n) - \\frac{1}{2}\\,t(k-1)(k-2),$$ where $k = \\lfloor n/2 \\rfloor$.",
+    "context_text": "Here $M_{n,t}$ denotes the graph obtained from $K_n$ by removing a matching of size $t$, and $k = \\lfloor n/2 \\rfloor$. Corollary 4 shows that geodesic drawings of $M_{n,t}$ built from sets of strength $0$ achieve this crossing count; the existence of many such sets of strength $0$ motivates the conjecture that this value is optimal."
+  },
+  "started": "2026-09-01T02:48:22Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

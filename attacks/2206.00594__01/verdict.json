@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is equivalent to its K_{2,2}-free, and even arbitrarily high-girth, case, and it holds for bounded-chordality graphs and proper subdivisions, but the high-girth core remains unresolved.",
+  "would_publish": false,
+  "caveats": "No twin-width bound or unbounded-twin-width construction is obtained for the C4-free high-girth core.",
+  "id": "2206.00594__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.463828,
+  "eur": 1.516225,
+  "elapsed_s": 1544.7,
+  "status": "completed",
+  "response_id": "resp_022abd1cb01f8b2e006a9636ad8d2c87d2b4e6f15c39478658",
+  "when": "2026-09-01T02:47:18Z"
+}

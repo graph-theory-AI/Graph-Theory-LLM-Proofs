@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured bound holds for every fixed 3-uniform H having a vertex set that meets every edge in exactly one vertex.",
+  "would_publish": false,
+  "caveats": "The tetrahedron K_4^(3) has no such transversal and remains open; the elementary lemma may already be known.",
+  "id": "2404.02021__04",
+  "model": "gpt-5.6-sol",
+  "usd": 1.225036,
+  "eur": 1.268886,
+  "elapsed_s": 1181.1,
+  "status": "completed",
+  "response_id": "resp_097e7c27fb78e314006a9636c61e6c87d291368b143418f534",
+  "when": "2026-09-01T02:41:38Z"
+}

@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 321,
+    "score": 3.0,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1509.06563__00",
+    "title_md": "[Informal Conjecture (generalization of 1.3 to bounded clique number)](https://arxiv.org/abs/1509.06563)",
+    "paper": "Induced subgraphs of graphs with large chromatic number. IV. Consecutiv\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1509.06563__00/"
+  },
+  "dossier_meta": {
+    "id": "1509.06563__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1509.06563__00/",
+    "arxiv_id": "1509.06563",
+    "tier": 3,
+    "score": 3.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Induced subgraphs of graphs with large chromatic number. IV. Consecutiv\u2026",
+    "catalog_title": "Informal Conjecture (generalization of 1.3 to bounded clique number)",
+    "statement_text": "The corresponding result to 1.3 is true for graphs with bounded clique number rather than just triangle-free graphs: for all integers $\\nu > 0$ and $k \\geq 3$ there exists $n$ such that if $G$ has no clique of cardinality $k$ and has chromatic number at least $n$, then for some $t$, $G$ has a hole of length $t+i$ for $1 \\leq i \\leq \\nu$.",
+    "context_text": "Immediately after the statement of the main result (1.3), which establishes $\\nu$ consecutive hole lengths for triangle-free graphs, the authors conjecture the same conclusion holds under the weaker assumption that $G$ has bounded clique number. They note they have made no progress in proving this."
+  },
+  "started": "2026-09-01T02:41:04Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

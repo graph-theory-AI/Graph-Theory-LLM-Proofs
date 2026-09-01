@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The general problem remains open, but chordless even-hole-free graphs are exactly odd cacti and admit linear-time MWIS, while several natural extensions of chordal-graph methods have explicit obstructions.",
+  "would_publish": false,
+  "caveats": "No polynomial algorithm or hardness result is obtained for all even-hole-free graphs.",
+  "id": "2407.08927__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.765204,
+  "eur": 0.792594,
+  "elapsed_s": 1379.2,
+  "status": "completed",
+  "response_id": "resp_08592c2e53c75f65006a9637536c1c87d2bbd8fdc1117d2361",
+  "when": "2026-09-01T02:47:18Z"
+}

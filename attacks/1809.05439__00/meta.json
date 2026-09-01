@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 318,
+    "score": 3.0,
+    "tier": 3,
+    "lean": "disprove",
+    "status": "open",
+    "id": "1809.05439__00",
+    "title_md": "[Informal conjecture on improved color ratio in Theorem 5](https://arxiv.org/abs/1809.05439)",
+    "paper": "Fractional coloring of planar graphs of girth five",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1809.05439__00/"
+  },
+  "dossier_meta": {
+    "id": "1809.05439__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1809.05439__00/",
+    "arxiv_id": "1809.05439",
+    "tier": 3,
+    "score": 3.0,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Fractional coloring of planar graphs of girth five",
+    "catalog_title": "Informal conjecture on improved color ratio in Theorem 5",
+    "statement_text": "It might be possible to improve the ratio of extra colors assigned to the vertex $x$ in Theorem 5 a bit; e.g., it could be true that there exists a coloring by subsets of $\\{1, \\ldots, 9\\}$ such that all vertices get at least three colors and $x$ gets five.",
+    "context_text": "Following Theorem 5, the authors observe that the ratio cannot be improved arbitrarily: when $G$ is the graph obtained from the wheel with five spokes by subdividing each spoke once, $x$ is the hub, and $\\varphi$ is a coloring by subsets of $\\{1,\\ldots,k\\}$ with every vertex receiving at least 3 colors, then $|\\varphi(x)| \\leq \\frac{k}{3} + \\frac{2k}{9}$. They nonetheless suggest a modest improvement may be achievable."
+  },
+  "started": "2026-09-01T02:47:02Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

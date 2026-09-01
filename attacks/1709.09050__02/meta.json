@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 320,
+    "score": 3.0,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1709.09050__02",
+    "title_md": "[Tightness of linear capture time bound for planar graphs](https://arxiv.org/abs/1709.09050)",
+    "paper": "Topological directions in Cops and Robbers",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1709.09050__02/"
+  },
+  "dossier_meta": {
+    "id": "1709.09050__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1709.09050__02/",
+    "arxiv_id": "1709.09050",
+    "tier": 3,
+    "score": 3.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Topological directions in Cops and Robbers",
+    "catalog_title": "Tightness of linear capture time bound for planar graphs",
+    "statement_text": "Is the bound $\\mathrm{capt}_3(G) \\leq 2n$ tight for planar graphs of order $n$? Does there exist a planar graph $G$ of order $n$ with $\\mathrm{capt}(G) > n$?",
+    "context_text": "Theorem 5 establishes $\\mathrm{capt}_3(G) \\leq 2n$ for planar graphs of order $n$, improving the earlier $O(n^2)$ bound of Theorem 4. Whether this linear bound is tight is unknown; even finding a single planar graph with capture time exceeding $n$ remains open."
+  },
+  "started": "2026-09-01T02:41:39Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

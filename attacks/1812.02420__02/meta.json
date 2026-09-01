@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 316,
+    "score": 3.0,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1812.02420__02",
+    "title_md": "[Problem 3.21](https://arxiv.org/abs/1812.02420)",
+    "paper": "On the Complexity of Digraph Colourings and Vertex Arboricity",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.02420__02/"
+  },
+  "dossier_meta": {
+    "id": "1812.02420__02",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1812.02420__02/",
+    "arxiv_id": "1812.02420",
+    "tier": 3,
+    "score": 3.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "On the Complexity of Digraph Colourings and Vertex Arboricity",
+    "catalog_title": "Problem 3.21",
+    "statement_text": "Let $p\\geq 1$ be a fixed real number. Instance: A (multi-)digraph $D$. Decide whether $\\vec{\\chi}_{f}(D)\\leq p$.",
+    "context_text": "This problem asks for the complexity of deciding whether the fractional dichromatic number of a digraph is at most $p$. The paper proves NP-completeness for all real $p>1$ with $p\\neq 2$, mirroring results of Feder et al. for the circular dichromatic number; the case $p=2$ is explicitly left open."
+  },
+  "started": "2026-09-01T02:47:18Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

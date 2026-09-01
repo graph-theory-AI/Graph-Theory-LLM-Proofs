@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 319,
+    "score": 3.0,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1709.09050__01",
+    "title_md": "[Classification of outerplanar graphs by cop number](https://arxiv.org/abs/1709.09050)",
+    "paper": "Topological directions in Cops and Robbers",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1709.09050__01/"
+  },
+  "dossier_meta": {
+    "id": "1709.09050__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1709.09050__01/",
+    "arxiv_id": "1709.09050",
+    "tier": 3,
+    "score": 3.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Topological directions in Cops and Robbers",
+    "catalog_title": "Classification of outerplanar graphs by cop number",
+    "statement_text": "Classify which outerplanar graphs are $1$-cop-win and which are $2$-cop-win.",
+    "context_text": "By Theorem 3, every outerplanar graph has cop number at most 2. The smallest outerplanar graph with cop number 2 is the four cycle, but a full classification of outerplanar graphs by cop number remains open."
+  },
+  "started": "2026-09-01T02:46:36Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

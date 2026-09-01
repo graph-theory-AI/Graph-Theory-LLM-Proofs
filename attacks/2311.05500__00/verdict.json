@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured upper bound remains open, but I prove the constant-order lower bound Omega_d(n^{2-1/d}) for every rational d>1 and give a useful orientation decomposition.",
+  "would_publish": false,
+  "caveats": "This assumes the source definition rho(H)=max e(H[S])/|S|; novelty relative to the journal version has not been checked.",
+  "id": "2311.05500__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.342036,
+  "eur": 1.390074,
+  "elapsed_s": 1733.6,
+  "status": "completed",
+  "response_id": "resp_020bc7a1bcf0a498006a96363f030487d291e21c967c17b4b4",
+  "when": "2026-09-01T02:48:36Z"
+}

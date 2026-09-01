@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 322,
+    "score": 3.0,
+    "tier": 3,
+    "lean": "prove",
+    "status": "open",
+    "id": "1010.2472__00",
+    "title_md": "[Open Problem: polynomial-time 4-colorability on fixed surfaces](https://arxiv.org/abs/1010.2472)",
+    "paper": "Three-coloring triangle-free graphs on surfaces I. Extending a coloring\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1010.2472__00/"
+  },
+  "dossier_meta": {
+    "id": "1010.2472__00",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1010.2472__00/",
+    "arxiv_id": "1010.2472",
+    "tier": 3,
+    "score": 3.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Three-coloring triangle-free graphs on surfaces I. Extending a coloring\u2026",
+    "catalog_title": "Open Problem: polynomial-time 4-colorability on fixed surfaces",
+    "statement_text": "Is there a polynomial-time algorithm for testing 4-colorability of graphs drawn in $\\Sigma$ when $\\Sigma$ is a fixed surface other than the sphere?",
+    "context_text": "The authors note that while 5-colorability on any fixed surface can be decided in polynomial (even linear) time using the finiteness of 6-critical graphs (Theorem 1), the analogous question for 4-colorability is open, and the techniques currently available do not give much hope for a positive resolution in the near future."
+  },
+  "started": "2026-09-01T02:40:39Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

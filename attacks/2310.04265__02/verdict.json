@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture is equivalent to ordinary \u03c7-boundedness of all backedge graphs of width-k tournaments; an exact XOR normal form and a compatible-order special case for twin-width one are proved.",
+  "would_publish": false,
+  "caveats": "No bound is obtained for arbitrary optimal orders, and no counterexample family is constructed.",
+  "id": "2310.04265__02",
+  "model": "gpt-5.6-sol",
+  "usd": 1.346028,
+  "eur": 1.394209,
+  "elapsed_s": 1565.4,
+  "status": "completed",
+  "response_id": "resp_0629c31895d44b57006a9635228a5c87d2b16612de324d07d9",
+  "when": "2026-09-01T02:41:03Z"
+}

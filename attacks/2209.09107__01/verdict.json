@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The question remains open, but any universal constant must satisfy C >= 3/2, this obstruction occurs for arbitrarily large maximum degree and is sharp for subcubic graphs, while bipartite graphs satisfy the bound with C = 1.",
+  "would_publish": false,
+  "caveats": "No uniform upper bound is obtained for arbitrary high-degree non-bipartite graphs; the standard AT normalization with outdegree at most k-1 is used.",
+  "id": "2209.09107__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.313084,
+  "eur": 1.360086,
+  "elapsed_s": 1555.1,
+  "status": "completed",
+  "response_id": "resp_0c80ce3ac3ffc3aa006a96372cb6e887d284839a1b450ef1ae",
+  "when": "2026-09-01T02:49:35Z"
+}

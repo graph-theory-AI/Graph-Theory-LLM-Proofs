@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The converse remains open, but it holds against every host tournament having an ordering whose backedge graph has girth greater than |H|+1, forcing any asymptotic counterexample to have an almost spanning packing of short backedge cycles in every ordering.",
+  "would_publish": false,
+  "caveats": "The high-girth hypothesis concerns the host tournament and is unavailable for a general H-free tournament.",
+  "id": "2202.13977__00",
+  "model": "gpt-5.6-sol",
+  "usd": 1.54426,
+  "eur": 1.599536,
+  "elapsed_s": 1757.9,
+  "status": "completed",
+  "response_id": "resp_0da607c7540ce425006a963449c9e087d29fc61ff5b94efedf",
+  "when": "2026-09-01T02:40:39Z"
+}

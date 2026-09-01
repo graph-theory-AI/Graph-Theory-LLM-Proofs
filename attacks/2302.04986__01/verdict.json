@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains open, but it reduces exactly to a weighted transversal problem on prime P_t-free graphs, with explicit bounds for perfect atoms and triangle-free atoms of bounded induced biclique number.",
+  "would_publish": false,
+  "caveats": "No bound is obtained for general non-perfect prime atoms containing arbitrarily large induced bicliques; literature novelty of the reductions was not checked.",
+  "id": "2302.04986__01",
+  "model": "gpt-5.6-sol",
+  "usd": 1.23046,
+  "eur": 1.274504,
+  "elapsed_s": 1569.4,
+  "status": "completed",
+  "response_id": "resp_0f33bf928d944a46006a9636853bcc87d2a5048e31e3267219",
+  "when": "2026-09-01T02:47:02Z"
+}

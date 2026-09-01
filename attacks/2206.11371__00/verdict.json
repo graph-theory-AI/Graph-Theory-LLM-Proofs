@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A Tur\u00e1n\u2013Plotkin sandwich proves asymptotic equality from above the threshold in a broad regime and gives infinite exact families, while the principal below-threshold interpretation remains unresolved.",
+  "would_publish": false,
+  "caveats": "The words \u201cclose\u201d and \u201cnear\u201d are unquantified; no general comparison is proved when s/r approaches the threshold from below.",
+  "id": "2206.11371__00",
+  "model": "gpt-5.6-sol",
+  "usd": 0.73066,
+  "eur": 0.756814,
+  "elapsed_s": 842.9,
+  "status": "completed",
+  "response_id": "resp_02d43e9ff81281c5006a963941564887d2b5429ad9bd769f72",
+  "when": "2026-09-01T02:46:36Z"
+}
