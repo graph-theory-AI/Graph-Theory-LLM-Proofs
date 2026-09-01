@@ -1,0 +1,33 @@
+{
+  "record": {
+    "rank_hardest": 62,
+    "score": 4.0,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1707.03888__01",
+    "title_md": "[Open question: better additive approximation for $K_{4k_0+1}$-minor-fre\u2026](https://arxiv.org/abs/1707.03888)",
+    "paper": "Additive non-approximability of chromatic number in proper minor-closed\u2026",
+    "source": "arxiv",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1707.03888__01/"
+  },
+  "dossier_meta": {
+    "id": "1707.03888__01",
+    "url": "https://mlelarge.github.io/graph-conjectures/arxiv/1707.03888__01/",
+    "arxiv_id": "1707.03888",
+    "tier": 4,
+    "score": 4.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Additive non-approximability of chromatic number in proper minor-closed\u2026",
+    "catalog_title": "Open question: better additive approximation for $K_{4k_0+1}$-minor-free graphs",
+    "statement_text": "Is there a polynomial-time additive approximation algorithm for the chromatic number of $K_{4k_0+1}$-minor-free graphs with additive error strictly between $k_0/4$ (the lower bound of Corollary 4) and $k_0 - 2$ (the upper bound of Kawarabayashi et al.)?",
+    "context_text": "Kawarabayashi et al. showed the chromatic number of $K_k$-minor-free graphs can be approximated additively up to $k-2$. Corollary 4 of this paper establishes that an additive error of $k_0 - 1$ is NP-hard to achieve, leaving a gap of roughly a factor of 4 between the best known algorithm and the hardness bound."
+  },
+  "started": "2026-09-01T08:27:58Z",
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

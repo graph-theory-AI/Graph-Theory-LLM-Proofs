@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for every translation-invariant bipartite digraph over a finite abelian group, including all abelian circulant-type examples.",
+  "would_publish": false,
+  "caveats": "The argument uses translation invariance essentially and gives no proof for arbitrary bipartite digraphs.",
+  "id": "1809.08324__01",
+  "model": "gpt-5.6-sol",
+  "usd": 0.538488,
+  "eur": 0.557763,
+  "elapsed_s": 1441.2,
+  "status": "completed",
+  "response_id": "resp_0add131ce4a3d991006a9686ed5fd087d29118cd2b222ea321",
+  "when": "2026-09-01T08:27:58Z"
+}
