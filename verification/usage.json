@@ -1,0 +1,1080 @@
+{
+  "1601.01886__00": {
+    "_file": "abc0a690bbeff1eda.output",
+    "assistant_turns": 119,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 410900,
+      "cache_read_input_tokens": 12388351,
+      "input_tokens": 238,
+      "output_tokens": 45144
+    },
+    "id": "1601.01886__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 12799489,
+    "total_output_tokens": 45144
+  },
+  "1610.00239__00": {
+    "_file": "add83894b90e47f7b.output",
+    "assistant_turns": 43,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 190641,
+      "cache_read_input_tokens": 2263595,
+      "input_tokens": 86,
+      "output_tokens": 37405
+    },
+    "id": "1610.00239__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2454322,
+    "total_output_tokens": 37405
+  },
+  "1611.03196__00": {
+    "_file": "a0afe8082eee1a928.output",
+    "assistant_turns": 40,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 120030,
+      "cache_read_input_tokens": 1718619,
+      "input_tokens": 80,
+      "output_tokens": 16941
+    },
+    "id": "1611.03196__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1838729,
+    "total_output_tokens": 16941
+  },
+  "1611.03196__03": {
+    "_file": "a685fd52e9ee1cf79.output",
+    "assistant_turns": 45,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 154790,
+      "cache_read_input_tokens": 2402603,
+      "input_tokens": 90,
+      "output_tokens": 38780
+    },
+    "id": "1611.03196__03",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2557483,
+    "total_output_tokens": 38780
+  },
+  "1702.01094__01": {
+    "_file": "ac3d3a50ee0cca62f.output",
+    "assistant_turns": 44,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 149246,
+      "cache_read_input_tokens": 1977519,
+      "input_tokens": 88,
+      "output_tokens": 19502
+    },
+    "id": "1702.01094__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2126853,
+    "total_output_tokens": 19502
+  },
+  "1704.00125__01": {
+    "_file": "aae55f2de3af27c9a.output",
+    "assistant_turns": 39,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 120941,
+      "cache_read_input_tokens": 1784079,
+      "input_tokens": 78,
+      "output_tokens": 38560
+    },
+    "id": "1704.00125__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1905098,
+    "total_output_tokens": 38560
+  },
+  "1708.02370__00": {
+    "_file": "a40f10fed6b9c4764.output",
+    "assistant_turns": 51,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 87546,
+      "cache_read_input_tokens": 1998206,
+      "input_tokens": 102,
+      "output_tokens": 15873
+    },
+    "id": "1708.02370__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2085854,
+    "total_output_tokens": 15873
+  },
+  "1708.08486__01": {
+    "_file": "a45a92c1b642eb59a.output",
+    "assistant_turns": 43,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 131451,
+      "cache_read_input_tokens": 1797271,
+      "input_tokens": 86,
+      "output_tokens": 21912
+    },
+    "id": "1708.08486__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1928808,
+    "total_output_tokens": 21912
+  },
+  "1709.09050__01": {
+    "_file": "ab73464e067dac08f.output",
+    "assistant_turns": 50,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 108332,
+      "cache_read_input_tokens": 2078019,
+      "input_tokens": 100,
+      "output_tokens": 9655
+    },
+    "id": "1709.09050__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2186451,
+    "total_output_tokens": 9655
+  },
+  "1710.10663__00": {
+    "_file": "a9947b69d4a4d55ec.output",
+    "assistant_turns": 27,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 88779,
+      "cache_read_input_tokens": 949790,
+      "input_tokens": 54,
+      "output_tokens": 14488
+    },
+    "id": "1710.10663__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1038623,
+    "total_output_tokens": 14488
+  },
+  "1710.11281__02": {
+    "_file": "a004712e455ae0b5b.output",
+    "assistant_turns": 29,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 106396,
+      "cache_read_input_tokens": 1101723,
+      "input_tokens": 58,
+      "output_tokens": 1472
+    },
+    "id": "1710.11281__02",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1208177,
+    "total_output_tokens": 1472
+  },
+  "1802.03727__00": {
+    "_file": "a11a772a005ec430b.output",
+    "assistant_turns": 53,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 175538,
+      "cache_read_input_tokens": 3264830,
+      "input_tokens": 106,
+      "output_tokens": 10156
+    },
+    "id": "1802.03727__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3440474,
+    "total_output_tokens": 10156
+  },
+  "1802.05582__00": {
+    "_file": "ac6e63a2d4a794d89.output",
+    "assistant_turns": 37,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 136668,
+      "cache_read_input_tokens": 1832634,
+      "input_tokens": 74,
+      "output_tokens": 30018
+    },
+    "id": "1802.05582__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1969376,
+    "total_output_tokens": 30018
+  },
+  "1802.05582__01": {
+    "_file": "a51df172b3f877c52.output",
+    "assistant_turns": 58,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 208245,
+      "cache_read_input_tokens": 3751632,
+      "input_tokens": 116,
+      "output_tokens": 24038
+    },
+    "id": "1802.05582__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3959993,
+    "total_output_tokens": 24038
+  },
+  "1806.09726__00": {
+    "_file": "a8498375d83a83835.output",
+    "assistant_turns": 21,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 108742,
+      "cache_read_input_tokens": 770977,
+      "input_tokens": 42,
+      "output_tokens": 10142
+    },
+    "id": "1806.09726__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 879761,
+    "total_output_tokens": 10142
+  },
+  "1809.05439__00": {
+    "_file": "a2072bafa6215a277.output",
+    "assistant_turns": 46,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 271104,
+      "cache_read_input_tokens": 2100696,
+      "input_tokens": 92,
+      "output_tokens": 26064
+    },
+    "id": "1809.05439__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2371892,
+    "total_output_tokens": 26064
+  },
+  "1811.08750__00": {
+    "_file": "aacdb7a92309a034c.output",
+    "assistant_turns": 38,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 199207,
+      "cache_read_input_tokens": 2079731,
+      "input_tokens": 76,
+      "output_tokens": 2975
+    },
+    "id": "1811.08750__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2279014,
+    "total_output_tokens": 2975
+  },
+  "1811.12650__00": {
+    "_file": "aaec6ad0fc9d7a7f6.output",
+    "assistant_turns": 31,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 158546,
+      "cache_read_input_tokens": 1448775,
+      "input_tokens": 62,
+      "output_tokens": 19493
+    },
+    "id": "1811.12650__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1607383,
+    "total_output_tokens": 19493
+  },
+  "1812.02420__02": {
+    "_file": "aeb9c43e1afa8e06b.output",
+    "assistant_turns": 43,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 160281,
+      "cache_read_input_tokens": 2267334,
+      "input_tokens": 86,
+      "output_tokens": 13823
+    },
+    "id": "1812.02420__02",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2427701,
+    "total_output_tokens": 13823
+  },
+  "1812.02420__03": {
+    "_file": "aa0bb9fb79adeabe3.output",
+    "assistant_turns": 36,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 134443,
+      "cache_read_input_tokens": 1784468,
+      "input_tokens": 72,
+      "output_tokens": 27105
+    },
+    "id": "1812.02420__03",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1918983,
+    "total_output_tokens": 27105
+  },
+  "1902.06473__00": {
+    "_file": "a348c1ca9ac0f3e24.output",
+    "assistant_turns": 57,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 267394,
+      "cache_read_input_tokens": 4584032,
+      "input_tokens": 114,
+      "output_tokens": 49943
+    },
+    "id": "1902.06473__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 4851540,
+    "total_output_tokens": 49943
+  },
+  "1902.10878__00": {
+    "_file": "a0d817a458a69bd36.output",
+    "assistant_turns": 33,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 136111,
+      "cache_read_input_tokens": 1424095,
+      "input_tokens": 66,
+      "output_tokens": 17920
+    },
+    "id": "1902.10878__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1560272,
+    "total_output_tokens": 17920
+  },
+  "1902.10878__01": {
+    "_file": "aeb49e0ba6032a50d.output",
+    "assistant_turns": 50,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 223114,
+      "cache_read_input_tokens": 3052835,
+      "input_tokens": 100,
+      "output_tokens": 28874
+    },
+    "id": "1902.10878__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3276049,
+    "total_output_tokens": 28874
+  },
+  "1904.12273__01": {
+    "_file": "aaf9ea3ab6c158eec.output",
+    "assistant_turns": 55,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 170904,
+      "cache_read_input_tokens": 3552470,
+      "input_tokens": 110,
+      "output_tokens": 56191
+    },
+    "id": "1904.12273__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3723484,
+    "total_output_tokens": 56191
+  },
+  "1907.06019__00": {
+    "_file": "ad402385dc7b60d21.output",
+    "assistant_turns": 44,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 165936,
+      "cache_read_input_tokens": 2197489,
+      "input_tokens": 88,
+      "output_tokens": 14715
+    },
+    "id": "1907.06019__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2363513,
+    "total_output_tokens": 14715
+  },
+  "1907.06019__01": {
+    "_file": "a98f0d5ce1190ed6b.output",
+    "assistant_turns": 42,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 178652,
+      "cache_read_input_tokens": 2656857,
+      "input_tokens": 84,
+      "output_tokens": 4690
+    },
+    "id": "1907.06019__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2835593,
+    "total_output_tokens": 4690
+  },
+  "1909.11578__02": {
+    "_file": "a5b565f16f05d6304.output",
+    "assistant_turns": 104,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 481090,
+      "cache_read_input_tokens": 9756388,
+      "input_tokens": 208,
+      "output_tokens": 21028
+    },
+    "id": "1909.11578__02",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 10237686,
+    "total_output_tokens": 21028
+  },
+  "2001.09679__00": {
+    "_file": "aa0961b7ea55f3f72.output",
+    "assistant_turns": 37,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 210589,
+      "cache_read_input_tokens": 2278606,
+      "input_tokens": 74,
+      "output_tokens": 7188
+    },
+    "id": "2001.09679__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2489269,
+    "total_output_tokens": 7188
+  },
+  "2004.07214__00": {
+    "_file": "ae0517e651057a690.output",
+    "assistant_turns": 63,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 239020,
+      "cache_read_input_tokens": 4866662,
+      "input_tokens": 126,
+      "output_tokens": 2490
+    },
+    "id": "2004.07214__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 5105808,
+    "total_output_tokens": 2490
+  },
+  "2004.07457__01": {
+    "_file": "a853d5741243d90bd.output",
+    "assistant_turns": 37,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 156013,
+      "cache_read_input_tokens": 1898534,
+      "input_tokens": 74,
+      "output_tokens": 26093
+    },
+    "id": "2004.07457__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2054621,
+    "total_output_tokens": 26093
+  },
+  "2005.09767__00": {
+    "_file": "a2b84dcac3a8d603b.output",
+    "assistant_turns": 54,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 201650,
+      "cache_read_input_tokens": 3245213,
+      "input_tokens": 108,
+      "output_tokens": 19334
+    },
+    "id": "2005.09767__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3446971,
+    "total_output_tokens": 19334
+  },
+  "2008.03587__01": {
+    "_file": "ab49fc5c52d6fa1c0.output",
+    "assistant_turns": 33,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 106546,
+      "cache_read_input_tokens": 1299441,
+      "input_tokens": 66,
+      "output_tokens": 6401
+    },
+    "id": "2008.03587__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1406053,
+    "total_output_tokens": 6401
+  },
+  "2009.03418__00": {
+    "_file": "a8289fce56d999f95.output",
+    "assistant_turns": 41,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 183022,
+      "cache_read_input_tokens": 2372284,
+      "input_tokens": 82,
+      "output_tokens": 17056
+    },
+    "id": "2009.03418__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2555388,
+    "total_output_tokens": 17056
+  },
+  "2009.12189__00": {
+    "_file": "aabef700bde200765.output",
+    "assistant_turns": 63,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 205235,
+      "cache_read_input_tokens": 3976850,
+      "input_tokens": 126,
+      "output_tokens": 2463
+    },
+    "id": "2009.12189__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 4182211,
+    "total_output_tokens": 2463
+  },
+  "2103.15175__00": {
+    "_file": "afa89a0216b77679a.output",
+    "assistant_turns": 55,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 175631,
+      "cache_read_input_tokens": 3049118,
+      "input_tokens": 110,
+      "output_tokens": 624
+    },
+    "id": "2103.15175__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3224859,
+    "total_output_tokens": 624
+  },
+  "2106.14762__00": {
+    "_file": "aa3f3a5dc84180cfe.output",
+    "assistant_turns": 35,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 113044,
+      "cache_read_input_tokens": 1537372,
+      "input_tokens": 70,
+      "output_tokens": 9108
+    },
+    "id": "2106.14762__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1650486,
+    "total_output_tokens": 9108
+  },
+  "2108.00991__00": {
+    "_file": "a6133ad9c7192cf98.output",
+    "assistant_turns": 37,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 134156,
+      "cache_read_input_tokens": 1568408,
+      "input_tokens": 74,
+      "output_tokens": 16861
+    },
+    "id": "2108.00991__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1702638,
+    "total_output_tokens": 16861
+  },
+  "2111.00532__00": {
+    "_file": "aefbaaf083b0ec5ed.output",
+    "assistant_turns": 28,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 91597,
+      "cache_read_input_tokens": 983811,
+      "input_tokens": 56,
+      "output_tokens": 13081
+    },
+    "id": "2111.00532__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1075464,
+    "total_output_tokens": 13081
+  },
+  "2111.00532__01": {
+    "_file": "a718ea4901ec1bc71.output",
+    "assistant_turns": 29,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 123467,
+      "cache_read_input_tokens": 1255228,
+      "input_tokens": 58,
+      "output_tokens": 15168
+    },
+    "id": "2111.00532__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1378753,
+    "total_output_tokens": 15168
+  },
+  "2204.10119__01": {
+    "_file": "ac0b794fc490736ae.output",
+    "assistant_turns": 55,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 154935,
+      "cache_read_input_tokens": 3044243,
+      "input_tokens": 110,
+      "output_tokens": 17210
+    },
+    "id": "2204.10119__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3199288,
+    "total_output_tokens": 17210
+  },
+  "2204.12330__00": {
+    "_file": "aa8dd575ed436dc18.output",
+    "assistant_turns": 51,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 191455,
+      "cache_read_input_tokens": 3079687,
+      "input_tokens": 102,
+      "output_tokens": 20375
+    },
+    "id": "2204.12330__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3271244,
+    "total_output_tokens": 20375
+  },
+  "2207.07775__02": {
+    "_file": "abfb19eecce7db78a.output",
+    "assistant_turns": 32,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 123434,
+      "cache_read_input_tokens": 1285483,
+      "input_tokens": 64,
+      "output_tokens": 11059
+    },
+    "id": "2207.07775__02",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1408981,
+    "total_output_tokens": 11059
+  },
+  "2208.06858__01": {
+    "_file": "a9ede8d39300aed2b.output",
+    "assistant_turns": 51,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 199165,
+      "cache_read_input_tokens": 2824870,
+      "input_tokens": 102,
+      "output_tokens": 26319
+    },
+    "id": "2208.06858__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3024137,
+    "total_output_tokens": 26319
+  },
+  "2208.10074__00": {
+    "_file": "a7e87e9ddff4d4392.output",
+    "assistant_turns": 34,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 78611,
+      "cache_read_input_tokens": 1361280,
+      "input_tokens": 68,
+      "output_tokens": 11737
+    },
+    "id": "2208.10074__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1439959,
+    "total_output_tokens": 11737
+  },
+  "2209.09107__00": {
+    "_file": "a0c57a7d8e0fbc4ca.output",
+    "assistant_turns": 29,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 96087,
+      "cache_read_input_tokens": 1043888,
+      "input_tokens": 58,
+      "output_tokens": 2297
+    },
+    "id": "2209.09107__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1140033,
+    "total_output_tokens": 2297
+  },
+  "2211.01032__00": {
+    "_file": "a4ef74755802692c6.output",
+    "assistant_turns": 38,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 126626,
+      "cache_read_input_tokens": 1656162,
+      "input_tokens": 76,
+      "output_tokens": 18595
+    },
+    "id": "2211.01032__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1782864,
+    "total_output_tokens": 18595
+  },
+  "2211.01032__01": {
+    "_file": "aa583954b5a463ec2.output",
+    "assistant_turns": 36,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 102994,
+      "cache_read_input_tokens": 1435317,
+      "input_tokens": 72,
+      "output_tokens": 5622
+    },
+    "id": "2211.01032__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1538383,
+    "total_output_tokens": 5622
+  },
+  "2211.01032__02": {
+    "_file": "a46a4050f194c7ab6.output",
+    "assistant_turns": 57,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 262940,
+      "cache_read_input_tokens": 4015733,
+      "input_tokens": 114,
+      "output_tokens": 48061
+    },
+    "id": "2211.01032__02",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 4278787,
+    "total_output_tokens": 48061
+  },
+  "2304.03567__04": {
+    "_file": "a11332c4037fbc2a1.output",
+    "assistant_turns": 60,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 326832,
+      "cache_read_input_tokens": 3080124,
+      "input_tokens": 120,
+      "output_tokens": 7118
+    },
+    "id": "2304.03567__04",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3407076,
+    "total_output_tokens": 7118
+  },
+  "2306.04710__01": {
+    "_file": "a667b1f55eac9138c.output",
+    "assistant_turns": 44,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 160327,
+      "cache_read_input_tokens": 2242366,
+      "input_tokens": 88,
+      "output_tokens": 3865
+    },
+    "id": "2306.04710__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2402781,
+    "total_output_tokens": 3865
+  },
+  "2307.15048__00": {
+    "_file": "a9a39039372a245ce.output",
+    "assistant_turns": 26,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 71667,
+      "cache_read_input_tokens": 890434,
+      "input_tokens": 52,
+      "output_tokens": 2143
+    },
+    "id": "2307.15048__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 962153,
+    "total_output_tokens": 2143
+  },
+  "2307.15512__00": {
+    "_file": "a845a7af9e1bbca49.output",
+    "assistant_turns": 56,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 217914,
+      "cache_read_input_tokens": 3749909,
+      "input_tokens": 112,
+      "output_tokens": 1410
+    },
+    "id": "2307.15512__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3967935,
+    "total_output_tokens": 1410
+  },
+  "2308.15387__00": {
+    "_file": "a21781c8c4bac3ee6.output",
+    "assistant_turns": 35,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 159416,
+      "cache_read_input_tokens": 1563304,
+      "input_tokens": 70,
+      "output_tokens": 12595
+    },
+    "id": "2308.15387__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1722790,
+    "total_output_tokens": 12595
+  },
+  "2308.15721__00": {
+    "_file": "a25efe5d933c2c7a7.output",
+    "assistant_turns": 26,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 80340,
+      "cache_read_input_tokens": 912385,
+      "input_tokens": 52,
+      "output_tokens": 2884
+    },
+    "id": "2308.15721__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 992777,
+    "total_output_tokens": 2884
+  },
+  "2310.04265__09": {
+    "_file": "a127a92a2420e74ae.output",
+    "assistant_turns": 70,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 314621,
+      "cache_read_input_tokens": 3329343,
+      "input_tokens": 140,
+      "output_tokens": 8810
+    },
+    "id": "2310.04265__09",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3644104,
+    "total_output_tokens": 8810
+  },
+  "2310.04265__11": {
+    "_file": "a9707942dc31b2351.output",
+    "assistant_turns": 55,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 180544,
+      "cache_read_input_tokens": 3050902,
+      "input_tokens": 110,
+      "output_tokens": 2742
+    },
+    "id": "2310.04265__11",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3231556,
+    "total_output_tokens": 2742
+  },
+  "2312.13061__01": {
+    "_file": "ae443989595eefdb8.output",
+    "assistant_turns": 64,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 221084,
+      "cache_read_input_tokens": 4664510,
+      "input_tokens": 128,
+      "output_tokens": 4042
+    },
+    "id": "2312.13061__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 4885722,
+    "total_output_tokens": 4042
+  },
+  "2401.00299__02": {
+    "_file": "aa9c0dfc50485fc51.output",
+    "assistant_turns": 56,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 208328,
+      "cache_read_input_tokens": 3254914,
+      "input_tokens": 112,
+      "output_tokens": 4274
+    },
+    "id": "2401.00299__02",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3463354,
+    "total_output_tokens": 4274
+  },
+  "2405.03455__00": {
+    "_file": "a9809b777a13c1788.output",
+    "assistant_turns": 52,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 259808,
+      "cache_read_input_tokens": 3665722,
+      "input_tokens": 104,
+      "output_tokens": 17123
+    },
+    "id": "2405.03455__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3925634,
+    "total_output_tokens": 17123
+  },
+  "2405.14795__00": {
+    "_file": "afbcd88a51276e739.output",
+    "assistant_turns": 41,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 216055,
+      "cache_read_input_tokens": 3070122,
+      "input_tokens": 82,
+      "output_tokens": 342
+    },
+    "id": "2405.14795__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3286259,
+    "total_output_tokens": 342
+  },
+  "2408.02400__00": {
+    "_file": "ade322d6171074b5d.output",
+    "assistant_turns": 72,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 159658,
+      "cache_read_input_tokens": 3860732,
+      "input_tokens": 144,
+      "output_tokens": 28003
+    },
+    "id": "2408.02400__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 4020534,
+    "total_output_tokens": 28003
+  },
+  "2409.18220__00": {
+    "_file": "a60069fa5942d8aec.output",
+    "assistant_turns": 42,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 146569,
+      "cache_read_input_tokens": 1973102,
+      "input_tokens": 84,
+      "output_tokens": 1882
+    },
+    "id": "2409.18220__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2119755,
+    "total_output_tokens": 1882
+  },
+  "2410.13008__00": {
+    "_file": "a8888a2d21e632a52.output",
+    "assistant_turns": 44,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 150342,
+      "cache_read_input_tokens": 2130330,
+      "input_tokens": 88,
+      "output_tokens": 6781
+    },
+    "id": "2410.13008__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2280760,
+    "total_output_tokens": 6781
+  },
+  "2503.16882__00": {
+    "_file": "a40136b6f912a0a7f.output",
+    "assistant_turns": 36,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 100421,
+      "cache_read_input_tokens": 1325888,
+      "input_tokens": 72,
+      "output_tokens": 8005
+    },
+    "id": "2503.16882__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1426381,
+    "total_output_tokens": 8005
+  },
+  "2503.23191__00": {
+    "_file": "ae44c358fafe1bcee.output",
+    "assistant_turns": 31,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 105742,
+      "cache_read_input_tokens": 1193255,
+      "input_tokens": 62,
+      "output_tokens": 1102
+    },
+    "id": "2503.23191__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1299059,
+    "total_output_tokens": 1102
+  },
+  "2505.24100__00": {
+    "_file": "adc3001c32358953a.output",
+    "assistant_turns": 93,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 635894,
+      "cache_read_input_tokens": 5605488,
+      "input_tokens": 186,
+      "output_tokens": 10930
+    },
+    "id": "2505.24100__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 6241568,
+    "total_output_tokens": 10930
+  },
+  "2505.24100__01": {
+    "_file": "abb71ad1b7da74331.output",
+    "assistant_turns": 53,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 146795,
+      "cache_read_input_tokens": 2675761,
+      "input_tokens": 106,
+      "output_tokens": 11822
+    },
+    "id": "2505.24100__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2822662,
+    "total_output_tokens": 11822
+  },
+  "2506.07264__01": {
+    "_file": "af62fbe8ea085c7ae.output",
+    "assistant_turns": 45,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 113013,
+      "cache_read_input_tokens": 1852343,
+      "input_tokens": 90,
+      "output_tokens": 5549
+    },
+    "id": "2506.07264__01",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1965446,
+    "total_output_tokens": 5549
+  },
+  "2507.04254__00": {
+    "_file": "aa87b10b925353039.output",
+    "assistant_turns": 43,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 86601,
+      "cache_read_input_tokens": 2001324,
+      "input_tokens": 86,
+      "output_tokens": 3665
+    },
+    "id": "2507.04254__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2088011,
+    "total_output_tokens": 3665
+  },
+  "2508.08870__00": {
+    "_file": "acc95758124211f1f.output",
+    "assistant_turns": 42,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 161573,
+      "cache_read_input_tokens": 1897518,
+      "input_tokens": 84,
+      "output_tokens": 5011
+    },
+    "id": "2508.08870__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2059175,
+    "total_output_tokens": 5011
+  },
+  "2511.02892__03": {
+    "_file": "a8fb9d7c75b3905f1.output",
+    "assistant_turns": 46,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 110924,
+      "cache_read_input_tokens": 1889977,
+      "input_tokens": 92,
+      "output_tokens": 6382
+    },
+    "id": "2511.02892__03",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2000993,
+    "total_output_tokens": 6382
+  },
+  "2512.10438__00": {
+    "_file": "ae91c870af41fdffc.output",
+    "assistant_turns": 37,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 161126,
+      "cache_read_input_tokens": 1711481,
+      "input_tokens": 74,
+      "output_tokens": 8715
+    },
+    "id": "2512.10438__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1872681,
+    "total_output_tokens": 8715
+  },
+  "2512.17232__00": {
+    "_file": "ac7dbc69700c94896.output",
+    "assistant_turns": 47,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 186313,
+      "cache_read_input_tokens": 2402776,
+      "input_tokens": 94,
+      "output_tokens": 12223
+    },
+    "id": "2512.17232__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2589183,
+    "total_output_tokens": 12223
+  },
+  "2512.17342__00": {
+    "_file": "a208358214f758c24.output",
+    "assistant_turns": 41,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 143707,
+      "cache_read_input_tokens": 2295102,
+      "input_tokens": 82,
+      "output_tokens": 23545
+    },
+    "id": "2512.17342__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 2438891,
+    "total_output_tokens": 23545
+  },
+  "2602.16333__00": {
+    "_file": "ab0aed4e21a44ae76.output",
+    "assistant_turns": 57,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 225943,
+      "cache_read_input_tokens": 4164565,
+      "input_tokens": 114,
+      "output_tokens": 15313
+    },
+    "id": "2602.16333__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 4390622,
+    "total_output_tokens": 15313
+  },
+  "2603.02786__03": {
+    "_file": "acd2909d8d6b83491.output",
+    "assistant_turns": 44,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 251178,
+      "cache_read_input_tokens": 2993988,
+      "input_tokens": 88,
+      "output_tokens": 18410
+    },
+    "id": "2603.02786__03",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 3245254,
+    "total_output_tokens": 18410
+  },
+  "2604.09449__00": {
+    "_file": "a0c9114423b27c5eb.output",
+    "assistant_turns": 34,
+    "billed_tokens": {
+      "cache_creation_input_tokens": 143746,
+      "cache_read_input_tokens": 1463736,
+      "input_tokens": 68,
+      "output_tokens": 3149
+    },
+    "id": "2604.09449__00",
+    "model": "claude-fable-5",
+    "total_input_tokens_incl_cache": 1607550,
+    "total_output_tokens": 3149
+  }
+}

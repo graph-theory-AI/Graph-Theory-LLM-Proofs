@@ -1,0 +1,618 @@
+[
+  {
+    "id": "1601.01886__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "For every k >= 1, an explicit tree has pathwidth k and minimum part-counting path-partition height 2k, so the factor 2 is sharp.",
+    "caveats": "This uses the usual quotient-tree definition; if height counts quotient edges, the exact sharp value is 2k-1 rather than 2k."
+  },
+  {
+    "id": "1610.00239__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "A Gaussian quotient map, together with a localized Gaussian-width estimate for an absolute convex hull, gives the target dimension and uniformly bounded output norms.",
+    "caveats": "Absolute constants absorb the floor; the proof uses the standard Gordon Gaussian min-max lemma, stated explicitly below."
+  },
+  {
+    "id": "1611.03196__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "With the stated requirement that the b_i are integers, the partition V_1={2,4,6}, V_2={1}, V_3={3,5,7} of P_7 is a counterexample.",
+    "caveats": "The counterexample relies essentially on integrality; the original conjecture may instead allow real b_i, in which case this does not apply."
+  },
+  {
+    "id": "1611.03196__03",
+    "verdict": "proved",
+    "confidence": "medium",
+    "would_publish": true,
+    "one_line": "The conjecture holds with the explicit crude bound c(m)=32(m+1)^3, by combining Carath\u00e9odory reduction with proportional-necklace interpolation between two matchings.",
+    "caveats": "The proposed bound m/2 remains open; the proof uses the standard proportional interval-splitting theorem, and novelty has not been independently checked."
+  },
+  {
+    "id": "1702.01094__01",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "For every s at least 3, there are triangle-free graphs of arbitrarily large chromatic number with a stable-set cover for which no s-vertex induced path has the required private-cover property.",
+    "caveats": "This assumes the extracted statement has no omitted restriction; the counterexamples are existential via the probabilistic method, and literature priority has not been independently checked."
+  },
+  {
+    "id": "1704.00125__01",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "Bipartite graphs of maximum degree at most 20 form a subgraph-closed class with linear separator lower bounds and exponential expansion, while Maximum Independent Set is exactly polynomial-time solvable.",
+    "caveats": "Non-APX-hardness is meant under the standard assumption P != NP; an omitted closure or richness hypothesis in the intended question could evade this counterexample."
+  },
+  {
+    "id": "1708.02370__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "As literally stated, the conjecture fails for H = 2K_1, since td(H) = 1 but \u03c7*(M_H) = 1 > 0.",
+    "caveats": "This exploits a disconnected edgeless excluded minor; the likely intended connected or td(H) at least 2 version remains open."
+  },
+  {
+    "id": "1708.08486__01",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "Literally including p=2, the claim fails because n_2(alpha, alpha^3/2) is Theta(log(1/alpha)), not a tower of height Theta(log log(1/alpha)).",
+    "caveats": "If the source has a standing odd-prime convention, only the catalog wording is refuted; the cases 3, 5, 7, 11, 13, and 17 remain open."
+  },
+  {
+    "id": "1709.09050__01",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "A finite connected outerplanar graph is 1-cop-win exactly when it is chordal\u2014equivalently, when every block on at least three vertices is maximal outerplanar\u2014and otherwise its cop number is 2.",
+    "caveats": "This uses the standard finite visible game with passing and the given two-cop upper bound; publication priority was not independently checked."
+  },
+  {
+    "id": "1710.10663__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "Under the standard additive-gap definition, the case L=2 has maxcode_2(\u03b5)=1/(4\u03b5)+O(1), whereas the displayed formula gives c_2=1.",
+    "caveats": "This almost certainly identifies a transcription error in the catalog constant; the correspondingly corrected conjecture for even L\u22654 remains open."
+  },
+  {
+    "id": "1710.11281__02",
+    "verdict": "disproved",
+    "confidence": "medium",
+    "would_publish": false,
+    "one_line": "Under the literal equal-speed continuous-time interpretation, a sufficiently small round sphere is caught trivially within radius 1/2, while an antipodal delayed-shadowing strategy keeps the robber a fixed positive distance from one cop forever.",
+    "caveats": "This addresses the same-team, unnormalized continuous-time formulation; a normalized or turn-based version may remain open."
+  },
+  {
+    "id": "1802.03727__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "The bipartite logarithmic lower bound transfers to all graphs by combining an affine-function obstruction for high chromatic number with a dense induced bipartite core in the low-chromatic case.",
+    "caveats": "This uses the standard edgewise definition of separation and the quoted bipartite Theorem 1.2; literature priority has not been independently checked."
+  },
+  {
+    "id": "1802.05582__00",
+    "verdict": "proved",
+    "confidence": "medium",
+    "would_publish": false,
+    "one_line": "In the intended deterministic LOCAL formulation, a high-degree-component decomposition gives a second algorithm running in O(n/d+polylog n) rounds, which combined with the quoted d-dependent algorithm yields a uniform o(n) bound.",
+    "caveats": "This assumes the source's hereditary list-colorable setting and d>=3; the catalog's literal all-d degeneracy paraphrase includes a false two-coloring case."
+  },
+  {
+    "id": "1802.05582__01",
+    "verdict": "proved",
+    "confidence": "medium",
+    "would_publish": false,
+    "one_line": "Under the standard LOCAL-model formulation of Corollary 2.1, a randomized algorithm finds a \u0394-list-coloring in O(log^2 n) rounds, with no polynomial dependence on \u0394.",
+    "caveats": "The proof assumes \u0394\u22653, no uncolorable K_{\u0394+1} component, unique IDs, and unbounded LOCAL messages; it does not apply to CONGEST, and novelty has not been literature-checked."
+  },
+  {
+    "id": "1806.09726__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "Part (b) is false as written: for fixed m=4 the online random Ramsey number is Theta(n^2), not n^(8/3+o(1)).",
+    "caveats": "Part (a) is untouched; if the intended statement takes m to infinity and permits an additive O(1) in the exponent, this fixed-m counterexample does not apply."
+  },
+  {
+    "id": "1809.05439__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "Under Theorem 5's triangle-free-planar quantifiers, a 23-vertex graph formed from two subdivided 5-wheels gives an explicit counterexample.",
+    "caveats": "The counterexample has 4-cycles, so it does not resolve a stronger variant restricted to girth at least five."
+  },
+  {
+    "id": "1811.08750__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "As written, T=K1 and F={K2} satisfy the blow-up hypothesis, but ex(G,K1,{K2})=n is exactly computable.",
+    "caveats": "The counterexample uses an edgeless target; if e(T)>0 is a standing assumption omitted by the catalog, the full claim remains open, though the consecutive-clique case is proved below."
+  },
+  {
+    "id": "1811.12650__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "For every connected noncomplete n-vertex graph, the frozen proportion among its (\u0394+1)-colourings is at most 4/(n+4), so \u0394=o(n) is unnecessary in the intended asymptotic conclusion.",
+    "caveats": "The complete graphs K_n defeat a literal all-graphs formulation; connectedness is essential, and the argument gives no quantitative mixing-time bound."
+  },
+  {
+    "id": "1812.02420__02",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "For digraphs allowing digons, the p=2 problem is NP-complete via a two-layer construction in which matching digons force every weight-2 fractional colouring to encode an ordinary acyclic 2-colouring.",
+    "caveats": "The reduction uses antiparallel pairs; it does not settle a variant restricted to oriented digraphs."
+  },
+  {
+    "id": "1812.02420__03",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "For positive integers, such a digraph exists exactly when b is at most 2 or k is at most b+1; in particular, (k,b)=(5,3) is impossible.",
+    "caveats": "Assumes loopless digraphs may contain digons; literature priority has not been independently checked."
+  },
+  {
+    "id": "1902.06473__00",
+    "verdict": "proved",
+    "confidence": "medium",
+    "would_publish": false,
+    "one_line": "Under normalized Lebesgue averaging on the chain polytope, QLB(P) lies between ln e(P) and (ln 2)^{-1}ln e(P), and hence between LB(P)/2 and LB(P)/ln 2.",
+    "caveats": "The catalog omits the law used in QH(P), and the source conjecture is corrupted; the proof applies to uniform chain-polytope averaging, equivalently to the extension-gap formula derived below."
+  },
+  {
+    "id": "1902.10878__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "For (x,y)=(2/5,1/4), an explicit 5-5-4 tripartite graph gives \u03c6(x,y)=2/5, while every proposed ceiling expression is at least 1/2.",
+    "caveats": "This addresses exactly the one-sided definition of \u03c6 quoted in the question; a biconstrained variant would be a different problem."
+  },
+  {
+    "id": "1902.10878__01",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "An explicit family gives \u03c8(2/7,5/7) \u2264 23/28 < 6/7 = \u03c8(5/7,2/7).",
+    "caveats": "The exact value of \u03c8(2/7,5/7) is not determined, and the separate exact-degree symmetry question remains open."
+  },
+  {
+    "id": "1904.12273__01",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "For every fixed long-hole threshold at least seven, a four-vertex C-major set admits no bounded catching path, although C is the unique long odd hole.",
+    "caveats": "This uses the standard definition of C-major and interprets bounded as depending only on the long-hole threshold; omitted source-paper hypotheses could alter the conclusion."
+  },
+  {
+    "id": "1907.06019__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "For n > 2r, the equality case of EKR makes the initial monomials a star, and a rigidity lemma forces the resulting graph map to be exterior multiplication by one vector.",
+    "caveats": "This proves the strict range over the stated real field; the characterization is false at n = 2r, and publication priority has not been independently checked."
+  },
+  {
+    "id": "1907.06019__01",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "Every extremal mutually annihilating pair consists of two full exterior stars generated by the same one-dimensional subspace of V.",
+    "caveats": "The established inequality in Theorem 2.4 is used as input; the boundary cases and literature priority are not addressed."
+  },
+  {
+    "id": "1909.11578__02",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "A cyclically invariant family defined by comparing the longest cyclic runs inside a support and its complement is intersecting and has only polynomially small density.",
+    "caveats": "This uses the source definition of symmetry as invariance under a transitive coordinate group; the construction is not invariant under the full symmetric group."
+  },
+  {
+    "id": "2001.09679__00",
+    "verdict": "proved",
+    "confidence": "medium",
+    "would_publish": true,
+    "one_line": "A two-dimensional grid thickening of bounded-degree expanders attains expansion exponent 1/(2\u03b5)-1 while retaining separator exponent 1-\u03b5, closing Dvo\u0159\u00e1k's gap.",
+    "caveats": "The construction and proof are new and unrefereed; literature priority has not been independently checked."
+  },
+  {
+    "id": "2004.07214__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "A linear extension of an S_t-free poset gives its incomparability graph linear mim-width at most t-1, and bounded linear mim-width admits a polynomial-time minimal-dominating-set extension oracle, hence polynomial-delay enumeration.",
+    "caveats": "This assumes S_t is the standard example poset; the argument is self-contained, but novelty and overlap with existing mim-width metatheorems were not externally checked."
+  },
+  {
+    "id": "2004.07457__01",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "As literally stated, clause (ii) admits \u0394_A=\u0394_B=k_A=k_B=1, but K_2 with identical singleton lists is not (1,1)-choosable.",
+    "caveats": "This only exposes a small-degree/log(1)=0 defect; the intended sufficiently-large-degree conjecture remains open."
+  },
+  {
+    "id": "2005.09767__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "A finite-field support bound settles the order-7 case, while a CRT decomposition and three explicit families of flows give at least 3^{n/12} admissible Z_6-flows.",
+    "caveats": "Uses the established existence theorem for groups of order at least 6 and Theorem 1.9 for orders at least 8; novelty and degenerate one-vertex conventions should be checked."
+  },
+  {
+    "id": "2008.03587__01",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "For G = K\u2082, every augmented subdivision G\u2032\u2096 has zombie number at most 2 = z(G) + 1, so the displayed strict inequality never holds.",
+    "caveats": "This addresses the literal inequality > z(G)+1; the likely intended one-unit increase is a different question."
+  },
+  {
+    "id": "2009.03418__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "For n=7, cr(M_{7,1})=6, whereas the proposed formula gives 8; in fact the values for t=1,2,3 are 6,4,3 rather than 8,7,6.",
+    "caveats": "This concerns the ordinary topological crossing number stated; an intended restriction to even n or to geodesic drawings would be a different conjecture."
+  },
+  {
+    "id": "2009.12189__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "The planar dual of Tutte's 46-vertex non-Hamiltonian cubic polyhedral graph is a 25-vertex triangulation with fractional vertex-arboricity at least 88/43>2.",
+    "caveats": "This uses the standard LP definition of fractional vertex-arboricity and the classical verified non-Hamiltonicity of the explicit Tutte graph; publication priority has not been checked."
+  },
+  {
+    "id": "2103.15175__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "A greedy assignment of an s-label to every vertex\u2013color pair separates each edge in one of its k listed colors whenever n is at most s^k.",
+    "caveats": "This assumes the standard edge-list definition of list Ramsey number with k distinct colors in each list."
+  },
+  {
+    "id": "2106.14762__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "A direct size-biased run-profile calculation gives interior density e^(y-1) in every block of runs sorted by its first entry, hence no dependence on x.",
+    "caveats": "The proof is probabilistic-combinatorial rather than bijective; novelty and the intended scope of \u201cdirect\u201d have not been independently verified."
+  },
+  {
+    "id": "2108.00991__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "Explicit colorings of K_{r(P_k)} beat the conjectured count for every even k at least 4 and every odd k at least 5.",
+    "caveats": "This uses the standard convention of non-induced unlabelled copies of the k-vertex path; the exact value of m(P_k) remains undetermined."
+  },
+  {
+    "id": "2111.00532__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "For the literal statement, there is always an anticomplete pair of size at least floor(sqrt(W)), so c=1/2 and epsilon=1/2 suffice.",
+    "caveats": "This uses the standard convention that the width is min_i |B_i|; the reported open status suggests that a stronger requirement may be missing from the extracted statement."
+  },
+  {
+    "id": "2111.00532__01",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "Under the standard fixed-position meaning of an ordered transversal copy, every finite ordered graph H has the requested property, with exponent c=1/(|H|-1).",
+    "caveats": "The catalog statement is probably missing a stronger requirement, since the literal formulation has the elementary proof below."
+  },
+  {
+    "id": "2204.10119__01",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "An explicit 28-vertex 4-clique amalgam of two apex graphs is K6-minor-free and has degrees only 6, 7, and 8.",
+    "caveats": "This addresses the unrestricted finite-simple-graph statement; the counterexample has a 4-clique separator."
+  },
+  {
+    "id": "2204.12330__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "The proposed group of finitely supported permutations is a witness, because it is elementwise tame under a coset-convex order while its alternating subgroups force arbitrarily large translation grids under every order.",
+    "caveats": "This uses the source paper's proved equivalence between permutation-width boundedness and exclusion of interval grids; constants are nonoptimal and literature priority is unchecked."
+  },
+  {
+    "id": "2207.07775__02",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "For every t, adjoining t leaves to the 4-critical join of K_1 and C_{2t+5} gives a generalized lollipop for which a random coloring has fewer monochromatic copies than the Tur\u00e1n coloring.",
+    "caveats": "This uses the supplied definition in which the k-critical core has unrestricted order and may depend on t."
+  },
+  {
+    "id": "2208.06858__01",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "A block-tribes construction gives balanced monotone strategies with success probability arbitrarily close to 1/2 for every number of players, so in fact p_monotone(t)=1/2.",
+    "caveats": "The construction uses an enormous but finite number of hats and applies to the standard supremum-over-n, fiber-containment definition; it does not apply to the intersecting variant."
+  },
+  {
+    "id": "2208.10074__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "The literal tree-depth formulation is false: square grids force the tree-depth factor to be \u03a9(log log n) when the clique factor has size O(\u221an).",
+    "caveats": "The supplied source abstract states bounded tree-width, not bounded tree-depth; the actual tree-width conjecture is not addressed here."
+  },
+  {
+    "id": "2209.09107__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "Every Eulerian graph with an odd number of edges, in particular the triangle, is a counterexample.",
+    "caveats": "This concerns the displayed inequality without an outer floor and uses the standard definition of an Alon-Tarsi orientation."
+  },
+  {
+    "id": "2211.01032__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "For the unconditioned model as stated, taking p=(log n)/(3n) makes isolated K2 components alone contribute asymptotically n^(1/3)log(n)/6 faces, far more than log(pn^2).",
+    "caveats": "This refutes the unrestricted catalog wording, not a version conditioned on connectivity or restricted to the connected regime."
+  },
+  {
+    "id": "2211.01032__01",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "For p(n)=1/n, a graph in G(n,p) has linearly many isolated K_2 components a.a.s., each of which forces one face in every componentwise random embedding.",
+    "caveats": "This refutes the catalog statement under the canonical componentwise definition; a version conditioned on connectedness or concerning one distinguished component is different."
+  },
+  {
+    "id": "2211.01032__02",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "For simple graphs, deferred exposure of the random rotations gives an O(log n) upper bound, while weighted simple facial cycles give a matching Omega(log n) lower bound.",
+    "caveats": "The proof assumes finite loopless simple graphs; the corresponding multigraph statement is false."
+  },
+  {
+    "id": "2304.03567__04",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "A cyclic chain of directed three-way diamonds on 3m vertices has m vertex pairs such that any ordering forward-connects at most one of them.",
+    "caveats": "This disproves the statement exactly as extracted; the source definition should be checked for an omitted qualification."
+  },
+  {
+    "id": "2306.04710__01",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "For every m,m' and every orientation F of K_{1,4}, the pair is not dichromatically finite: suitable locally transitive orientations of L(K_{n,n}) are claw-free, directed-triangle-free, and have dichromatic number \u03a9(\u221an).",
+    "caveats": "This uses the standard induced-subdigraph meaning of F-free and the cyclic-composition definition of Delta; the supplied 2026 preprint title may overlap, so novelty is not asserted."
+  },
+  {
+    "id": "2307.15048__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "The stated range includes p=1, for which G(n,1-p)=G(n,0) is edgeless and has correspondence chromatic number 1, not \u0398(n/log n).",
+    "caveats": "This only refutes the literal endpoint-inclusive formulation; the intended conjecture for 0<p<1 remains open."
+  },
+  {
+    "id": "2307.15512__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "A clique-plus-sparse-random-core construction gives k = Theta(sqrt(n)) and c(H) = Omega(n^(1/4) log n), exceeding sqrt(n/k) by a logarithmic factor.",
+    "caveats": "This uses the standard vertex-move game, in which c(H) equals the cop number of the 2-section; any additional source-specific restriction would need checking."
+  },
+  {
+    "id": "2308.15387__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "A binary vector-space difference colouring gives f(n,r,s) at most 2^s n/(r+1) when r=2^d-1, contradicting the proposed logarithmic factor already for s=1 and even for some s tending to infinity.",
+    "caveats": "This refutes the statement exactly as supplied; a version with a lower restriction on s or a missing min{2^s,...} term is not resolved here."
+  },
+  {
+    "id": "2308.15721__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "For H=K_{1,3}, the odd-H-minor-free graphs have maximum degree at most 2, so their defective chromatic number is 1 but their clustered chromatic number is 2, whereas overline{td}(H)-1=1.",
+    "caveats": "This refutes the catalog's reconstructed clustered equality; an intended conjecture concerning only defective chromatic number is not refuted."
+  },
+  {
+    "id": "2310.04265__09",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "For every n at least 3, an explicit circulant tournament on 2n+1 vertices is 3-clique-critical, giving unbounded minimal witnesses already for k=3.",
+    "caveats": "The proof is self-contained under the stated definition; literature priority beyond the supplied sources has not been checked."
+  },
+  {
+    "id": "2310.04265__11",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "A hereditary class whose members all satisfy directed clique number and dichromatic number at most two has a substitution closure containing digraphs of directed clique number two and arbitrarily large dichromatic number.",
+    "caveats": "This uses the standard definitions for finite loopless digraphs and iterated substitution; the construction is oriented and the base class is hereditary."
+  },
+  {
+    "id": "2312.13061__01",
+    "verdict": "disproved",
+    "confidence": "medium",
+    "would_publish": false,
+    "one_line": "For \u2113=6, a threefold-subdivided grid with a length-three boundary ear gives counterexamples for every d, using the viable precoloring (1,2,3,4,3,2).",
+    "caveats": "The excerpt omits the formal definition of viable; the argument uses the signed weak-dual balance definition from the arXiv source."
+  },
+  {
+    "id": "2401.00299__02",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "A four-layer product construction converts the published lower bound for singleton-and-square partitions of Q_{d-2} into the conjectured number of all-square partitions of Q_d.",
+    "caveats": "This establishes the conjectured logarithmic asymptotic, not a second-order exponential constant, and uses Proposition 1.10 of the source paper."
+  },
+  {
+    "id": "2405.03455__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "An alteration argument gives ES_l(n) <= ceil(l(4 ES_n(n))^((n-1)/(n-2))), so the source bound yields a uniform linear-in-l upper bound matching the lower bound in its l-dependence.",
+    "caveats": "The subexponential gap in n remains, and I have not independently checked whether this transfer argument already appears elsewhere."
+  },
+  {
+    "id": "2405.14795__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "For every fixed m, the first-moment quantity (n!)^(m-1)((r)_m/r^m)^(n choose 2) also gives the sufficient condition, yielding the required single integer threshold.",
+    "caveats": "The argument assumes fixed m and independent uniform edge colors; it does not classify the permitted exceptional case r=r0 or growing m."
+  },
+  {
+    "id": "2408.02400__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "A 13-vertex circulant-complement seed has (omega,zeta,chi)=(4,4,7), and iterated Mycielski constructions raise zeta and chi together by one while preserving clique number.",
+    "caveats": "The proof is self-contained; only literature priority has not been independently checked."
+  },
+  {
+    "id": "2409.18220__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "On the inherited range n >= 4, K_4 has square energy 3 < 16/5, so the stated 4n/5 bound is false.",
+    "caveats": "This only refutes the literal n >= 4 formulation; the natural repair n >= 5, or an asymptotic interpretation, remains unresolved."
+  },
+  {
+    "id": "2410.13008__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "A 12-vertex strongly 2-connected oriented graph has a crossing drawing in the annulus with every directed cycle of winding one, but two equally oriented forced facial triangles preclude any such crossing-free drawing.",
+    "caveats": "This uses signed winding number and the standard definition that deleting any one vertex leaves a strongly connected digraph."
+  },
+  {
+    "id": "2503.16882__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "The stated path-comparator inequality fails for G=K_3 and every p>2, since its two sides are 2 and 2^{p/2}, respectively.",
+    "caveats": "This disproves the extracted P_n formulation only; it does not resolve the source paper's K_n formulation or its open p=2 case."
+  },
+  {
+    "id": "2503.23191__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "For every even k at least 4, the balanced blow-up of a directed triangle omits a non-antidirected k-edge path.",
+    "caveats": "This uses the standard definition that an antidirected path has alternating arc directions, equivalently no directed two-edge subpath."
+  },
+  {
+    "id": "2505.24100__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "For every t at least 6, the Cartesian product G=K_{t-1} square C_{2t-3} is induced-C_{2t-2}-free and every non-edge is the pair of ends of an induced P_{2t-2}.",
+    "caveats": "This interprets the undefined H as C_{2t-2}; it proves only the edge-addition half and makes no literature-priority claim."
+  },
+  {
+    "id": "2505.24100__01",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "Line graphs of cubic hypohamiltonian graphs give examples on exactly 3(t-1) vertices for all sufficiently large t, while the finitely many remaining values are absorbed into the constant term of a linear polynomial.",
+    "caveats": "The proof uses the established spectrum theorem that simple cubic hypohamiltonian graphs exist at every even order at least 26, and Theorem 1.6 of the source paper for t\u226413."
+  },
+  {
+    "id": "2506.07264__01",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "An exact phase-integral formula derived from the matching-polynomial decomposition of the characteristic polynomial determines the sign of s+(G)-s-(G).",
+    "caveats": "This uses the standard convention that a unicyclic graph is connected; publication priority was not independently checked."
+  },
+  {
+    "id": "2507.04254__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "For every even k there is a finite simple bipartite 0_k-graph G_k with chi'_k(G_k) at least ceil(7k/6).",
+    "caveats": "This uses the standard definition that every nonzero degree of a 0_k-graph is divisible by k, and interprets o(k) uniformly over all G."
+  },
+  {
+    "id": "2508.08870__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "Two parallel arithmetic progressions already give noncollinear planar sets of n points with at most (3/2+o(1))n distinct distances in every norm.",
+    "caveats": "This treats d-dimensional as meaning only affine span d, exactly as in the quoted statement; an omitted general-position hypothesis would change the problem."
+  },
+  {
+    "id": "2511.02892__03",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "As written, the triangular prism is a diamond-free claw-free cubic graph with strong chromatic index 9, not 6.",
+    "caveats": "If T(G) is restricted to simple cubic base graphs, that narrower conjecture is not refuted; the two stated formulations are then not equivalent."
+  },
+  {
+    "id": "2512.10438__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "Yes: for q=6 and N=9 there is a non-transitive coloring with longest color-avoiding path on 7 vertices, whereas f_{6,5}(9)=8.",
+    "caveats": "The example is non-transitive but not strongly connected; it answers the statement as written, which imposes no strong-connectivity condition."
+  },
+  {
+    "id": "2512.17232__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "A 16-vertex graph with four induced terminal-to-terminal paths has anti-complete packing number 1 but requires two closed-neighbourhood centers to destroy all (X,Y)-paths.",
+    "caveats": "This uses the extracted definition; the counterexample still works with disjoint stable terminal sets and with induced or terminal-clean (X,Y)-paths."
+  },
+  {
+    "id": "2512.17342__00",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "A simple cubic bridgeless planar graph on 38 vertices, obtained as the dual of two suitably colored icosahedra glued along a face, has a disconnected integer nowhere-zero 5-flow reconfiguration graph.",
+    "caveats": "This uses the standard integer-flow definition with single simple-cycle moves; the supplied abstract already announces a negative result, so the catalog entry appears stale."
+  },
+  {
+    "id": "2602.16333__00",
+    "verdict": "proved",
+    "confidence": "high",
+    "would_publish": true,
+    "one_line": "For every m at least 3, a strongly connected 2-outregular Cayley digraph on A4 x Z_m has order 12m and circumference at most 11m, so epsilon = 1/12 works.",
+    "caveats": "The proof is self-contained, but priority beyond the supplied literature review has not been independently checked."
+  },
+  {
+    "id": "2603.02786__03",
+    "verdict": "disproved",
+    "confidence": "high",
+    "would_publish": false,
+    "one_line": "Integer-translate packings satisfy M_k(n) >= (6619/10800-o(1))nk^2/ln k when k=o(n), contradicting the conjectured constant 1/2.",
+    "caveats": "This uses the intended definition in which all translations are integral; only the first regime is needed for the disproof."
+  },
+  {
+    "id": "2604.09449__00",
+    "verdict": "disproved",
+    "confidence": "medium",
+    "would_publish": false,
+    "one_line": "For the standard unnormalised \u21131 representative discrepancy, the signing h(x_i y_j)=s_j e_i on K_{k,k} forces f_h(M)=k for every perfect matching.",
+    "caveats": "The prompt omits the definition of f_h; the counterexample is conclusive if f_h is the unnormalised centred \u21131 error described by the catalog."
+  }
+]
