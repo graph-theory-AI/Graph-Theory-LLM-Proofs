@@ -147,5 +147,5 @@ for tag, Pr in [(1, P1r), (2, P2r)]:
 print("each side minus its apex vertex is planar: OK (Lemma 1 applies to both)")
 
 G2 = nx.relabel_nodes(G, {v: (v if isinstance(v, str) else f"{v[0]}_{v[1]}") for v in G.nodes})
-nx.write_edgelist(G2, "/Users/viennot/dev/Graph-Theory-LLM-Proofs/verification/scripts/2204.10119__01/G28.edgelist", data=False)
+nx.write_edgelist(G2, "verification/scripts/2204.10119__01/G28.edgelist", data=False)
 print("ALL DETERMINISTIC CHECKS PASSED; G written to G28.edgelist")

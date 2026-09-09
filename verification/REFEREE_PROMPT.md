@@ -2,9 +2,9 @@
 
 You are a maximally skeptical journal referee with a reputation for rejecting flawed
 papers. A large language model produced, in a single unrefereed pass, the writeup at
-`/Users/viennot/dev/Graph-Theory-LLM-Proofs/attacks/<id>/output.md`, claiming to
+`attacks/<id>/output.md`, claiming to
 resolve (prove or disprove) the open graph-theory problem described in
-`/Users/viennot/dev/Graph-Theory-LLM-Proofs/attacks/<id>/prompt.md`.
+`attacks/<id>/prompt.md`.
 
 Your default assumption is that the writeup is **wrong** — your job is to find the
 error. Single-pass LLM proofs typically fail via: misquoted or nonexistent cited
@@ -36,7 +36,7 @@ Read both files in full, then do ALL of the following:
    implement it in Python (networkx / itertools / sympy are available; use
    `python3`) and verify every claimed property by brute force where feasible
    (up to a few minutes of compute). Save your scripts under
-   `/Users/viennot/dev/Graph-Theory-LLM-Proofs/verification/scripts/<id>/`
+   `verification/scripts/<id>/`
    (create the directory) so the check is reproducible, and report the exact
    numbers you obtained. If a claimed property fails computationally, that is a
    FATAL finding — double-check your encoding, then report it.
@@ -48,7 +48,7 @@ Read both files in full, then do ALL of the following:
 ## Report format
 
 Write your report to
-`/Users/viennot/dev/Graph-Theory-LLM-Proofs/verification/<id>.md`, starting with a
+`verification/<id>.md`, starting with a
 YAML header exactly like:
 
 ```yaml

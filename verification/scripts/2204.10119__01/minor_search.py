@@ -116,7 +116,7 @@ def search(G, name, restarts=400, iters=4000):
 
 # ---- load target graphs ----
 G = nx.read_edgelist(
-    "/Users/viennot/dev/Graph-Theory-LLM-Proofs/verification/scripts/2204.10119__01/G28.edgelist")
+    "verification/scripts/2204.10119__01/G28.edgelist")
 assert G.number_of_nodes() == 28 and G.number_of_edges() == 88
 side1 = [v for v in G.nodes if v.endswith("_1") or v.startswith("m_")]
 P = G.subgraph(side1).copy()
