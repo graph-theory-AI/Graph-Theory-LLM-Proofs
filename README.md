@@ -1,17 +1,22 @@
-# Graph-Theory-Auto
+# Graph Theory LLM Proofs
 
-Unrefereed [GPT-5.6 Sol](https://openai.com) attempts at the open graph-theory
-problems catalogued by Marc Lelarge at
-[mlelarge.github.io/graph-conjectures](https://mlelarge.github.io/graph-conjectures).
+AI-assisted attempts at the open graph-theory problems catalogued by Marc
+Lelarge and Laurent Viennot at
+[graph-theory-ai.github.io/graph-conjectures](https://graph-theory-ai.github.io/graph-conjectures).
 
-Each record gets one max-effort, `reasoning.mode=pro` Responses call. The
-model must either prove the claim, give an explicit counterexample, record a
-precise partial result, or say it failed. **Labels in this repository are the
-model's own verdicts.** They are not refereed, and a `proved` / `disproved`
-row is not a theorem. Ultra / 64-subagent runs were not used.
+For each problem, [GPT-5.6 Sol](https://openai.com) is asked to look for a
+proof, a counterexample, or a meaningful partial result. It may also report
+that it could not make progress. These outputs are research artifacts, not
+established mathematics: a `proved` or `disproved` label is the model's own
+assessment.
 
-Headline numbers live in [RESULTS.md](RESULTS.md) (regenerated from
-`attacks/*/verdict.json`).
+A [Claude Fable](https://www.anthropic.com/claude/fable) was
+asked to act as an adversarial reviewer: look for errors, check cited sources, and reproduce computational
+claims where possible. This is not human peer review, but its classification
+is the status used in this repository. The reports, methodology, and
+reproducible checks are in [`verification/`](verification/).
+
+For an overview of the campaign, see [RESULTS.md](RESULTS.md).
 
 ## Method
 
@@ -20,7 +25,12 @@ Headline numbers live in [RESULTS.md](RESULTS.md) (regenerated from
   [catalog extraction fixes](https://github.com/mlelarge/graph-conjectures/pull/3).
   Open Problem Garden entries were not attacked.
 - **Prompt.** Catalog page + extracted statement JSON + arXiv abstract.
-- **Model.** `gpt-5.6-sol`, effort `max`, `mode=pro`, `max_output_tokens=128000`.
+- **Attack model.** [GPT-5.6 Sol](https://openai.com), one Responses API call
+  per record with effort `max`, `reasoning.mode=pro`, and
+  `max_output_tokens=128000`.
+- **Review model.** The 77 claimed proofs/counterexamples were adversarially
+  reviewed with [Claude Fable](https://www.anthropic.com/claude/fable); see
+  [`verification/`](verification/) for the review protocol and reports.
 - **Budget.** Hard euro cap in `attacks/spend.json`, with a per-call USD
   reserve so parallel jobs cannot overspend. Pricing is the Sol promo schedule
   through 2026-11-21 ($4 / $0.40 cached / $20 per 1M tokens; reasoning bills as
@@ -39,6 +49,7 @@ attack.py          # queue / run / sweep / summary
 catalog/           # snapshot of the Lelarge catalog (not authored here)
 attacks/<id>/      # one directory per attempted record
 RESULTS.md         # generated index of verdicts
+verification/      # adversarial reviews of claimed proofs/counterexamples
 scripts/           # commit loop and campaign ops
 ```
 
@@ -58,9 +69,18 @@ python attack.py run --id ID      # one record, e.g. 2402.10782__01
 python attack.py sweep --jobs 24 --hours 16
 ```
 
+## Acknowledgements
+
+The ChatGPT-based attack campaign used API access provided by the Lamarr
+Institute for Machine Learning and Artificial Intelligence.
+
+<p align="center">
+  <img src="assets/lamarr-logo-2023-negative.svg" alt="Lamarr Institute for Machine Learning and Artificial Intelligence" width="300">
+</p>
+
 ## License
 
 Code is [MIT](LICENSE). Catalog JSON/Markdown under `catalog/` is copied from
-[mlelarge/graph-conjectures](https://github.com/mlelarge/graph-conjectures);
+[graph-theory-ai/graph-conjectures](https://graph-theory-ai.github.io/graph-conjectures/);
 see that repository for its data license. Model outputs in `attacks/` are
 provided as research artifacts, not as verified mathematics.
