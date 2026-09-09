@@ -43,8 +43,8 @@ _PRINT_LOCK = threading.Lock()
 _CATALOG_INDEX: dict[str, dict] | None = None
 
 MODEL = "gpt-5.6-sol"
-SITE_ARXIV = "https://mlelarge.github.io/graph-conjectures/arxiv/{id}/"
-SITE_OPG = "https://mlelarge.github.io/graph-conjectures/op/{slug}/"
+SITE_ARXIV = "https://graph-theory-ai.github.io/graph-conjectures/arxiv/{id}/"
+SITE_OPG = "https://graph-theory-ai.github.io/graph-conjectures/op/{slug}/"
 ARXIV_ABS = "https://arxiv.org/abs/{arxiv_id}"
 ARXIV_HTML = "https://arxiv.org/html/{arxiv_id}"
 
@@ -971,7 +971,7 @@ Auto-generated from `attacks/*/verdict.json` by `python attack.py summary`.
 not a theorem. `would_publish` is the model's own claim that it would submit
 the writeup to a journal.
 
-Catalog: [mlelarge/graph-conjectures](https://mlelarge.github.io/graph-conjectures).
+Catalog: [mlelarge/graph-conjectures](https://graph-theory-ai.github.io/graph-conjectures).
 Model: `{MODEL}`, reasoning effort `max`, `mode=pro`. Ultra / 64-subagent
 runs were not used.
 
