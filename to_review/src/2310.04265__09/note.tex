@@ -1,0 +1,184 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\cl}{\overrightarrow{\omega}}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Cay}{\operatorname{Cay}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2310.04265\_\_09 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{An infinite family of $3$-$\cl$-critical tournaments\\ and a negative answer to Question~5.9 of Aboulker, Aubian, Charbit and Lopes}
+\author{Machine-generated note (see provenance box)}
+\date{9 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
+\small
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2310.04265\_\_09}; original writeup in \texttt{attacks/2310.04265\_\_09/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the source paper, and verified the claims by exhaustive search for $7$--$15$ vertices, by SAT solving up to $61$ vertices and structurally up to $121$ vertices; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, the exact value $\cl(T_n-v)=2$ (needed for the word ``critical'' in the source paper's sense, and noted as missing by the referee) was added, and context on related work was added. No other mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+\end{tcolorbox}
+
+\begin{abstract}
+The clique number $\cl(T)$ of a tournament $T$, introduced by Aboulker, Aubian, Charbit and Lopes, is the minimum over all linear orderings of $V(T)$ of the clique number of the backedge graph. They asked (Question~5.9) whether there is a function $\ell$ such that every tournament $T$ with $\cl(T)\ge k$ contains a subtournament on at most $\ell(k)$ vertices with clique number at least $k$. We answer this negatively, already for $k=3$: for every $n\ge3$ the circulant tournament $T_n=\Cay(\Z_{2n+1},\{1,\dots,n-1,n+1\})$ satisfies $\cl(T_n)=3$ while every proper subtournament has clique number at most~$2$. The family $(T_n)_{n\ge3}$ also establishes the case $k=3$ of their Conjecture~5.10 on the existence of infinitely many $k$-$\cl$-critical tournaments.
+\end{abstract}
+
+\section{Introduction}
+
+Let $D$ be a digraph and $\prec$ a linear ordering of $V(D)$. The \emph{backedge graph} $D^\prec$ is the undirected graph on $V(D)$ in which $uv$ is an edge whenever $u\prec v$ and $vu$ is an arc of $D$ (the arc goes ``backwards'' with respect to $\prec$). Aboulker, Aubian, Charbit and Lopes \cite{AACL23} define the \emph{clique number} of $D$ as
+\[
+ \cl(D)=\min_{\prec}\ \omega(D^\prec),
+\]
+the minimum over all orderings of the clique number of the backedge graph, and study the classes of tournaments whose dichromatic number is bounded by a function of $\cl$. In the concluding section of \cite{AACL23} they ask whether a large clique number is always certified by a bounded-size subtournament:
+
+\begin{question}[{\cite[Question~5.9]{AACL23}}]\label{q:59}
+Is there a function $\ell$ such that, for every tournament $T$ and every $k$, if $\cl(T)\ge k$ then $T$ has a subtournament $A$ with $|A|\le\ell(k)$ and $\cl(A)\ge k$?
+\end{question}
+
+This strengthens their Conjecture~5.8, which allows the hypothesis $\cl(T)\ge f(k)$ for a second function $f$; that weaker statement was recently proved by Crew, Fan, Koerts, Moore and Spirkl \cite[Corollary~7]{CFKMS26}. The authors of \cite{AACL23} also note that \cref{q:59} would be answered negatively by their Conjecture~5.10, which asserts that for every $k$ there are infinitely many \emph{$k$-$\cl$-critical} tournaments, i.e.\ tournaments $T$ with $\cl(T)=k$ and $\cl(T-v)=k-1$ for every vertex $v$. (Since appending $v$ at the end of an optimal ordering of $T-v$ raises the clique number of the backedge graph by at most one, $\cl(T-v)\ge\cl(T)-1$ always holds, so ``critical'' is equivalent to $\cl(T-v)<\cl(T)$ for all $v$.) Only the trivial critical tournaments were known: the single vertex for $k=1$ and the directed triangle for $k=2$.
+
+We give an explicit infinite family of $3$-$\cl$-critical tournaments. Throughout, $\Cay(\Z_q,S)$ for $S\subseteq\Z_q\setminus\{0\}$ with $S\cap(-S)=\emptyset$ and $S\cup(-S)=\Z_q\setminus\{0\}$ denotes the circulant tournament on $\Z_q$ with arcs $x\to y$ whenever $y-x\in S$.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+For every integer $n\ge3$ let $q=2n+1$ and
+\[
+ T_n=\Cay\bigl(\Z_{q},\ S_n\bigr),\qquad S_n=\{1,2,\dots,n-1,\,n+1\}.
+\]
+Then $T_n$ is a tournament on $2n+1$ vertices with $\cl(T_n)=3$ and $\cl(T_n-v)=2$ for every vertex $v$. Consequently every proper subtournament of $T_n$ has clique number at most~$2$, and $T_n$ is $3$-$\cl$-critical.
+\end{restatable}
+
+\begin{corollary}\label{cor:59}
+The answer to \cref{q:59} is negative: no function $\ell$ exists, and $k=3$ already fails. Conjecture~5.10 of \cite{AACL23} holds for $k=3$.
+\end{corollary}
+\begin{proof}
+If $\ell$ existed, choose $n\ge3$ with $2n+1>\ell(3)$. By \cref{thm:main}, $\cl(T_n)=3$ but every subtournament $A\subsetneq T_n$ has $\cl(A)\le2$, so the only subtournament with clique number at least $3$ is $T_n$ itself, of order $2n+1>\ell(3)$. The second statement is immediate from \cref{thm:main}.
+\end{proof}
+
+\begin{proofidea}
+$T_n$ is the standard rotational tournament $\Cay(\Z_{2n+1},\{1,\dots,n\})$ with the connection element $n$ replaced by $n+1$. Three short arguments do the work.
+(i)~\emph{Lower bound.} If every vertex of a tournament dominates a directed triangle, then in any ordering the last vertex $v$ together with a backedge of that triangle forms a triangle of the backedge graph; in $T_n$ every $x$ dominates the directed triangle $\{x+1,x+2,x+n+1\}$.
+(ii)~\emph{Upper bound.} In the natural ordering $0\prec1\prec\dots\prec2n$, the pair $i<j$ is a backedge iff $j-i\in\{n\}\cup\{n+2,\dots,2n\}$. Two consecutive gaps of a triangle would then each be at least $n$ and sum to at most $2n$, forcing the triangle $\{0,n,2n\}$; so this backedge graph has exactly one triangle and no $K_4$.
+(iii)~\emph{Criticality.} Deleting the vertex $0$ from the natural ordering deletes the unique triangle, so $\cl(T_n-0)\le2$; vertex-transitivity transfers this to every $v$, and monotonicity of $\cl$ under taking subtournaments to every proper subtournament. The lower bound $\cl(T_n-v)\ge2$ holds because $T_n-v$ contains a directed triangle.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{Two general observations}
+
+\begin{restatable}{lemma}{lemmono}\label{lem:mono}
+If $A$ is a subtournament of $T$ then $\cl(A)\le\cl(T)$. Moreover $\cl(T)\ge2$ whenever $T$ contains a directed triangle.
+\end{restatable}
+\begin{proofidea}
+Restricting an ordering of $T$ to $V(A)$ gives the induced subgraph of the backedge graph on $V(A)$. A directed triangle is not transitive, so under any ordering one of its arcs is a backedge.\fullproofref{pf:mono}
+\end{proofidea}
+
+\begin{restatable}[Last-vertex lemma]{lemma}{lemlast}\label{lem:last}
+Let $T$ be a tournament in which every vertex $v$ has three out-neighbours inducing a directed triangle. Then $\cl(T)\ge3$.
+\end{restatable}
+\begin{proofidea}
+Let $v$ be the last vertex of an arbitrary ordering; all arcs $v\to a$ are backedges, and the directed triangle in $N^+(v)$ contributes one more backedge $ab$, so $\{v,a,b\}$ is a triangle of the backedge graph.\fullproofref{pf:last}
+\end{proofidea}
+
+\section{Remarks}
+
+\begin{remark}[Small cases and sharpness]
+$T_3=\Cay(\Z_7,\{1,2,4\})$ is the Paley tournament on $7$ vertices. The referee's exhaustive search over all orderings confirms $\cl(T_n)=3$ and $\cl(T_n-0)=2$ for $n=3,\dots,7$, and an independent SAT encoding confirms both for $n=3,\dots,30$, i.e.\ up to $61$ vertices (\cref{app:referee}). The family shows that no bound $\ell(3)$ exists; it says nothing about $k\ge4$, for which Conjecture~5.10 remains open.
+\end{remark}
+
+\begin{remark}[Relation to complexity]
+Aubian \cite{Aubian24} proved that deciding $\cl(T)\le k$ is NP-complete for every fixed $k\ge3$. A positive answer to \cref{q:59} would place ``$\cl(T)\le3$'' in P (test all $O(|V|^{\ell(4)})$ subsets of size at most $\ell(4)$), so a negative answer was expected unless P\,$=$\,NP. \Cref{thm:main} gives an unconditional negative answer by an explicit family.
+\end{remark}
+
+\begin{remark}[Novelty]
+The referee's literature search (\cref{app:referee}) found no publication containing this family or any unconditional negative answer to \cref{q:59}; version~2 of \cite{AACL23} (June 2026) does not record a resolution. This has not been checked by a human.
+\end{remark}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:mono}
+\lemmono*
+\begin{proof}
+Let $\prec$ be an ordering of $V(T)$ with $\omega(T^\prec)=\cl(T)$ and let $\prec_A$ be its restriction to $V(A)$. For $u,v\in V(A)$, $uv\in E(A^{\prec_A})$ iff $u\prec v$ and $vu\in A(T)$ iff $uv\in E(T^\prec)$; so $A^{\prec_A}$ is the subgraph of $T^\prec$ induced by $V(A)$, and $\cl(A)\le\omega(A^{\prec_A})\le\omega(T^\prec)=\cl(T)$.
+
+If $a\to b\to c\to a$ is a directed triangle of $T$ and $\prec$ is any ordering, the three vertices appear in some order, say $x\prec y\prec z$ with $\{x,y,z\}=\{a,b,c\}$; the arcs of the triangle form a directed cycle, so they cannot all go forward (from the $\prec$-smaller to the $\prec$-larger vertex), and any backward arc gives an edge of $T^\prec$. Hence $\omega(T^\prec)\ge2$ for every $\prec$.
+\end{proof}
+
+\phantomsection\label{pf:last}
+\lemlast*
+\begin{proof}
+Let $\prec$ be an arbitrary ordering of $V(T)$ and let $v$ be its last vertex. By hypothesis there are $a,b,c\in N^+(v)$ with $a\to b\to c\to a$. Since $v$ is last, $a,b,c\prec v$, and since $v\to a$, $v\to b$, $v\to c$ are arcs, the pairs $av,bv,cv$ are edges of $T^\prec$. As in the proof of \cref{lem:mono}, at least one arc of the directed triangle is a backedge, say (after renaming) $ab\in E(T^\prec)$. Then $\{a,b,v\}$ is a triangle in $T^\prec$, so $\omega(T^\prec)\ge3$. This holds for every $\prec$, hence $\cl(T)\ge3$.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+Fix $n\ge3$, $q=2n+1$, and work in $\Z_q$. Recall $S_n=\{1,\dots,n-1\}\cup\{n+1\}$.
+
+\emph{$T_n$ is a tournament.} We have $-S_n=\{q-1,\dots,q-n+1\}\cup\{q-n-1\}=\{n+2,\dots,2n\}\cup\{n\}$. Thus $S_n\cap(-S_n)=\emptyset$ and $S_n\cup(-S_n)=\{1,\dots,2n\}=\Z_q\setminus\{0\}$, so for distinct $x,y$ exactly one of $y-x\in S_n$, $x-y\in S_n$ holds: exactly one of the arcs $x\to y$, $y\to x$ is present. Translations $x\mapsto x+t$ are automorphisms of $T_n$, since arcs depend only on differences.
+
+\emph{Lower bound $\cl(T_n)\ge3$.} Let $x\in\Z_q$. The differences $1,2,n+1$ lie in $S_n$ (here $n\ge3$ ensures $2\le n-1$), so $x\to x+1$, $x\to x+2$, $x\to x+n+1$. Moreover $(x+2)-(x+1)=1\in S_n$, $(x+n+1)-(x+2)=n-1\in S_n$, and $(x+1)-(x+n+1)=-n\equiv n+1\in S_n$; so $x+1\to x+2\to x+n+1\to x+1$ is a directed triangle in $N^+(x)$. \Cref{lem:last} gives $\cl(T_n)\ge3$.
+
+\emph{Upper bound $\cl(T_n)\le3$.} Consider the natural ordering $0\prec1\prec\dots\prec2n$ and let $0\le i<j\le2n$, $d=j-i\in\{1,\dots,2n\}$. The pair $ij$ is an edge of the backedge graph iff $j\to i$, i.e.\ iff $i-j\equiv q-d\in S_n$, i.e.\ iff $q-d\in\{1,\dots,n-1\}\cup\{n+1\}$, i.e.\ iff
+\[
+ d\in D_n:=\{n+2,\dots,2n\}\cup\{n\}.
+\]
+Suppose $i<j<k$ form a triangle of the backedge graph and put $a=j-i$, $b=k-j$. Then $a,b\in D_n$, so $a,b\ge n$, while $a+b=k-i\le2n$. Hence $a=b=n$, $k=i+2n\le2n$ forces $i=0$, and $(i,j,k)=(0,n,2n)$. Conversely the differences among $0,n,2n$ are $n,n,2n\in D_n$, so $\{0,n,2n\}$ is a triangle. Therefore the backedge graph of the natural ordering has exactly one triangle and in particular no $K_4$, so $\omega(T_n^\prec)=3$ and $\cl(T_n)\le3$. Together with the lower bound, $\cl(T_n)=3$.
+
+\emph{$\cl(T_n-v)=2$ for every $v$.} Restricting the natural ordering to $V(T_n)\setminus\{0\}$ gives, by the proof of \cref{lem:mono}, the backedge graph induced on $\{1,\dots,2n\}$, which is triangle-free because the unique triangle $\{0,n,2n\}$ contains $0$. Hence $\cl(T_n-0)\le2$. For an arbitrary vertex $v$, the translation $x\mapsto x+v$ is an isomorphism from $T_n-0$ to $T_n-v$, so $\cl(T_n-v)\le2$. Finally $T_n-v$ contains a directed triangle: by the lower-bound paragraph, $\{v+1,v+2,v+n+1\}$ induces one and avoids $v$. By \cref{lem:mono}, $\cl(T_n-v)\ge2$.
+
+\emph{Proper subtournaments.} If $A\subsetneq T_n$, pick $v\in V(T_n)\setminus V(A)$; then $A$ is a subtournament of $T_n-v$ and \cref{lem:mono} gives $\cl(A)\le\cl(T_n-v)=2$. So $T_n$ is $3$-$\cl$-critical.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) on the \emph{original} writeup. Its step numbers refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification/scripts/2310.04265\_\_09/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{AACL23} P.~Aboulker, G.~Aubian, P.~Charbit and R.~Lopes, Clique number of tournaments, arXiv:2310.04265 (2023; v2 June 2026).
+\bibitem{Aubian24} G.~Aubian, Computing the clique number of tournaments, arXiv:2401.07776 (2024).
+\bibitem{CFKMS26} L.~Crew, Y.~Fan, H.~Koerts, B.~Moore and S.~Spirkl, arXiv:2602.09863 (2026), Corollary~7.
+\end{thebibliography}
+
+\end{document}

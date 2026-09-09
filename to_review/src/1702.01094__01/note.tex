@@ -1,0 +1,245 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\cA}{\mathcal A}
+\newcommand{\E}{\mathbb E}
+
+\DeclareMathOperator{\girth}{girth}
+\DeclareMathOperator{\oddgirth}{odd\text{-}girth}
+\DeclareMathOperator{\Bin}{Bin}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 1702.01094\_\_01 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{Uniquely covered induced paths in triangle-free graphs:\\ a negative answer to a question of Scott and Seymour}
+\author{Machine-generated note (see provenance box)}
+\date{9 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
+\small
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{1702.01094\_\_01}; original writeup in \texttt{attacks/1702.01094\_\_01/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, confirmed the question verbatim against the TeX source of the paper, and verified the deterministic core (\cref{lem:upset}) by exhaustive enumeration on eight graphs, including a $100$-vertex subdivided Petersen graph, as well as every inequality of the probabilistic part numerically; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, and the referee's remarks on interpretation and on what remains open were added as \cref{sec:remarks}. No mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+\end{tcolorbox}
+
+\begin{abstract}
+Scott and Seymour asked whether, for a triangle-free graph $G$ of very large chromatic number and an arbitrary family $\cA$ of stable sets covering $V(G)$ (not necessarily pairwise disjoint), there must be an $s$-vertex induced path $P$ each of whose vertices $v$ is \emph{uniquely covered}, i.e.\ $X\cap V(P)=\{v\}$ for some $X\in\cA$. The partition case is their rainbow-path theorem. We show that the general question has a negative answer for every $s\ge3$: for every $C$ there is a connected triangle-free graph $G$ with $\chi(G)>C$ and a stable-set cover $\cA$ of $V(G)$ such that no path of $G$ with at least three vertices, induced or not, has all its vertices uniquely covered. The cover consists of the principal upsets of a partial order obtained by orienting the distance-two graph of $G$ along a proper colouring; its members are stable as soon as the odd girth of $G$ is large compared with the number of colours. Graphs of large girth, bounded degree and large chromatic number supply the hypothesis.
+\end{abstract}
+
+\section{Introduction}
+
+All graphs are finite and simple. A set of vertices is \emph{stable} if no two of its elements are adjacent. A \emph{stable-set cover} of a graph $G$ is a family $\cA$ of stable subsets of $V(G)$ with $\bigcup\cA=V(G)$; the members need not be disjoint. For a set $P\subseteq V(G)$ and $v\in P$, a member $X\in\cA$ is \emph{private for $v$ on $P$} if $X\cap P=\{v\}$, and we say that $P$ has the \emph{private-cover property} (with respect to $\cA$) if every $v\in P$ has a private member on $P$.
+
+If $\cA$ is a partition of $V(G)$ into stable sets, i.e.\ a proper colouring, then an induced path has the private-cover property exactly when its vertices receive pairwise distinct colours, that is, when it is a \emph{rainbow} induced path. The main theorem of the ninth paper of the series of Scott and Seymour on induced subgraphs of graphs with large chromatic number \cite{SS17} is that for every $s$, every triangle-free graph of sufficiently large chromatic number contains, for every proper colouring, an $s$-vertex rainbow induced path. In the conclusion of that paper they ask whether the partition hypothesis can be dropped:
+
+\begin{question}[{\cite[Conclusion]{SS17}}]\label{q:ss}
+Let $G$ be a triangle-free graph with very large chromatic number, and let $\cA$ be a set of stable subsets (not necessarily pairwise disjoint) of $V(G)$ with union $V(G)$. Does there necessarily exist an $s$-vertex induced path $P$ of $G$ such that for each $v\in V(P)$, some $X\in\cA$ satisfies $X\cap V(P)=\{v\}$?
+\end{question}
+
+The natural reading is: for each fixed $s$, is there a threshold on $\chi(G)$ beyond which such a path always exists? We show that the answer is no for every $s\ge3$, and that the failure is as strong as possible.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+For every integer $s\ge3$ and every $C$, there is a finite connected triangle-free graph $G$ with $\chi(G)>C$ and a family $\cA$ of stable subsets of $V(G)$ with union $V(G)$, such that no $s$-vertex induced path $P$ of $G$ satisfies
+\[
+ \forall v\in V(P)\ \ \exists X\in\cA:\quad X\cap V(P)=\{v\}.
+\]
+In fact one $G$ and one $\cA$ serve for all $s\ge3$ simultaneously: no path of $G$ with at least three vertices, induced or not, has the private-cover property.
+\end{restatable}
+
+\begin{corollary}\label{cor:answer}
+\Cref{q:ss} has a negative answer for every $s\ge3$. For $s\in\{1,2\}$ the answer is trivially positive: every vertex lies in some member of $\cA$, and for an edge $uv$ every member containing $u$ excludes $v$ and vice versa. Thus $s=3$ is exactly the threshold.
+\end{corollary}
+
+\begin{proofidea}
+Two independent ingredients. \emph{(i) A deterministic obstruction} (\cref{lem:upset}). Let $D(G)$ be the graph on $V(G)$ in which two distinct vertices are adjacent when they have a common neighbour in $G$. Properly colour $D(G)$ with $q$ colours, orient each edge of $D(G)$ from the smaller to the larger colour, and let $\preceq$ be the resulting partial order. Take $\cA$ to be the family of principal upsets $A_x=\{y:x\preceq y\}$. If the odd girth of $G$ exceeds $4q-3$, each $A_x$ is stable: two adjacent vertices $y,z\in A_x$ would close an odd walk of length at most $4q-3$ through $x$. Whenever $u,w$ have a common neighbour they are comparable, say $u\preceq w$, and then every member containing $u$ contains $w$; so on any path $p_1p_2p_3\cdots$ one of $p_1,p_3$ has no private member. \emph{(ii) Graphs satisfying the hypothesis} (\cref{lem:erdos}). A random graph $G(n,d/n)$, after deleting the vertices of degree above $2d$ and one vertex from each cycle of length at most $20d^2$, has maximum degree at most $2d$, girth above $20d^2$ and chromatic number above $d/(14\log d)$. Its distance-two graph has maximum degree below $4d^2$, so $q\le4d^2$ colours suffice and $20d^2>4q-3$.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{The deterministic obstruction}
+
+For a graph $G$ let $D(G)$ be the graph with vertex set $V(G)$ in which two distinct vertices are adjacent if and only if they have a common neighbour in $G$. The \emph{odd girth} of $G$ is the length of a shortest odd cycle ($\infty$ if $G$ is bipartite).
+
+\begin{restatable}[Nested-upset covers]{lemma}{lemupset}\label{lem:upset}
+Suppose that $D(G)$ has a proper colouring with $q$ colours and that the odd girth of $G$ is greater than $4q-3$. Then $G$ has a stable-set cover $\cA$ with the following property: whenever $u,w$ have a common neighbour in $G$, one of them, say $u$, satisfies
+\[
+ u\in X\in\cA\ \Longrightarrow\ w\in X .
+\]
+Consequently no path in $G$ with at least three vertices has the private-cover property with respect to $\cA$.
+\end{restatable}
+\begin{proofidea}
+Orient the edges of $D(G)$ towards the larger colour; colours strictly increase along directed paths, so the reflexive transitive closure $\preceq$ is a partial order and directed paths have at most $q-1$ edges. Each edge of $D(G)$ expands to a walk of length $2$ in $G$, so two adjacent vertices of a principal upset $A_x$ would give an odd closed walk of length at most $2(q-1)+2(q-1)+1=4q-3$ in $G$, hence an odd cycle of at most that length. The domination property is transitivity of $\preceq$, and on a path $p_1p_2p_3\cdots$ the vertices $p_1,p_3$ share the neighbour $p_2$.\fullproofref{pf:upset}
+\end{proofidea}
+
+\section{Graphs with large girth, bounded degree and large chromatic number}
+
+\begin{restatable}{lemma}{lemerdos}\label{lem:erdos}
+For all sufficiently large integers $d$ there is a finite connected graph $G$ with
+\[
+ \Delta(G)\le2d,\qquad \girth(G)>20d^2,\qquad \chi(G)>\frac{d}{14\log d}.
+\]
+\end{restatable}
+\begin{proofidea}
+This is Erdős's argument \cite{Erdos59} with an added degree cap. In $R\sim G(n,p)$ with $p=d/n$, $g=20d^2$ and $n\ge16gd^g$: the expected number of cycles of length at most $g$ is at most $gd^g\le n/16$; the expected number of vertices of degree above $2d$ is at most $(e/4)^dn\le n/16$; and a union bound over $r$-sets with $r=\lceil6n\log d/d\rceil$ gives $\Pr(\alpha(R)\ge r)<1/4$. So with positive probability fewer than $n/4$ short cycles, fewer than $n/4$ high-degree vertices, and $\alpha(R)<r$. Deleting one vertex per short cycle and all high-degree vertices leaves more than $n/2$ vertices, and $\chi\ge|V|/\alpha$ gives the bound.\fullproofref{pf:erdos}
+\end{proofidea}
+
+\begin{proof}[Proof of \cref{thm:main}]\phantomsection\label{pf:main}
+Let $d$ be large enough for \cref{lem:erdos} and let $G$ be the graph it provides. Since $\girth(G)>20d^2>3$, $G$ is triangle-free, and $\chi(G)>d/(14\log d)$, which tends to infinity with $d$; choose $d$ so that this exceeds $C$.
+
+Two distinct vertices $u,w$ are adjacent in $D(G)$ only if $w$ is a neighbour of a neighbour of $u$, so
+\[
+ \Delta(D(G))\le\sum_{v\in N(u)}(\deg v-1)\le\Delta(G)(\Delta(G)-1)\le2d(2d-1),
+\]
+and a greedy colouring shows that $D(G)$ has a proper colouring with $q\le2d(2d-1)+1\le4d^2$ colours. On the other hand
+\[
+ \oddgirth(G)\ge\girth(G)>20d^2\ge16d^2>4q-3.
+\]
+\Cref{lem:upset} therefore gives a stable-set cover $\cA$ of $V(G)$ under which no path with at least three vertices, in particular no $s$-vertex induced path for any $s\ge3$, has the private-cover property.
+\end{proof}
+
+\begin{proof}[Proof of \cref{cor:answer}]
+The negative answer for $s\ge3$ is \cref{thm:main}. For $s=1$, a vertex $v$ lies in some $X\in\cA$ and $X\cap\{v\}=\{v\}$. For $s=2$, if $uv\in E(G)$ and $X\in\cA$ contains $u$ then $v\notin X$ since $X$ is stable, so $X\cap\{u,v\}=\{u\}$; symmetrically for $v$.
+\end{proof}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[Interpretation]
+The referee confirmed the wording of \cref{q:ss} against the TeX source of \cite{SS17}, including the clause ``(not necessarily pairwise disjoint)'', which is the whole content of the question: the partition case is the paper's main theorem and is true. The cover $\cA$ of \cref{lem:upset} is far from a partition (its members are nested along chains of $\preceq$ of length up to $q$), so \cref{thm:main} is consistent with that theorem and answers precisely the question asked.
+\end{remark}
+
+\begin{remark}[Strength of the refutation]
+A single cover blocks every path with at least three vertices, induced or not, in graphs of arbitrarily large girth and chromatic number. So neither fixing $s$ (beyond $s\le2$), nor imposing a girth condition on $G$, rescues the question. What remains open are restricted variants: covers of bounded multiplicity (each vertex in a bounded number of members), or covers with a bounded nesting depth.
+\end{remark}
+
+\begin{remark}[Existential construction]
+The graphs of \cref{lem:erdos} come from the probabilistic method and are astronomically large ($n\ge16\cdot20d^2\cdot d^{20d^2}$); no explicit family is given. Any triangle-free graphs of large chromatic number, bounded maximum degree $\Delta$ and odd girth above $4\Delta(\Delta-1)+1$ would do equally well in \cref{lem:upset}.
+\end{remark}
+
+\begin{remark}[Computational checks]
+The referee implemented \cref{lem:upset} exactly as stated (DSATUR colouring of $D(G)$, colour-increasing orientation, principal upsets) and checked it on eight graphs satisfying the odd-girth hypothesis, among them $C_{13},C_{17},C_{21},C_{25}$, a $100$-vertex subdivision of the Petersen graph and a random $40$-vertex tree: every $A_x$ was stable, the union was $V(G)$, the domination property held on every edge of $D(G)$, and every induced path with $3$ to $6$ vertices failed the private-cover property, while all paths with $1$ or $2$ vertices passed. A control run with a proper-colouring partition produced rainbow induced paths wherever $\chi\ge3$. The inequalities of \cref{lem:erdos} were checked numerically for $d\in\{9,12,20,50,100,1000\}$. See \cref{app:referee}.
+\end{remark}
+
+\begin{remark}[Related work and novelty]
+The proper-colouring special case is the subject of the rainbow-path conjecture of Aravind; Duron and Raymond \cite{DR26} recently improved the length of the guaranteed rainbow induced path in triangle-free graphs, but do not consider covers by overlapping stable sets. The referee's search found no prior resolution of \cref{q:ss} in either direction; the construction is simple enough that independent earlier discovery is conceivable, and a human priority check is advised.
+\end{remark}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:upset}
+\lemupset*
+\begin{proof}
+Fix a proper colouring $\varphi\colon V(G)\to\{1,\dots,q\}$ of $D(G)$. Orient every edge $uw$ of $D(G)$ from the endpoint of smaller colour to the endpoint of larger colour; since $\varphi$ is proper the colours differ, so this is well defined. Let $\preceq$ be the reflexive transitive closure of this orientation. Because $\varphi$ strictly increases along every directed edge, the orientation is acyclic, $\preceq$ is a partial order, and every directed path in $D(G)$ has at most $q-1$ edges (its vertices carry strictly increasing colours from $\{1,\dots,q\}$).
+
+For $x\in V(G)$ let $A_x=\{y\in V(G):x\preceq y\}$ be the principal upset of $x$.
+
+\emph{Each $A_x$ is stable in $G$.} Suppose $y,z\in A_x$ with $yz\in E(G)$; in particular $y\ne z$. There are directed paths in $D(G)$ from $x$ to $y$ and from $x$ to $z$, of lengths $a,b\le q-1$ respectively. Every edge of $D(G)$ joins two vertices with a common neighbour in $G$ and can therefore be replaced by a walk of length $2$ in $G$; this yields walks in $G$ from $x$ to $y$ and from $x$ to $z$ of lengths $2a$ and $2b$. Traverse the first walk backwards from $y$ to $x$, then the second from $x$ to $z$, then the edge $zy$. This is a closed walk in $G$ of odd length
+\[
+ 2a+2b+1\le4q-3 .
+\]
+Every closed walk of odd length contains an odd cycle of at most the same length, contradicting the hypothesis that the odd girth of $G$ exceeds $4q-3$. (The degenerate case $a=b=0$ would force $y=z=x$, contradicting $y\ne z$.) Hence $A_x$ is stable.
+
+\emph{$\cA=\{A_x:x\in V(G)\}$ is a cover.} $x\in A_x$ by reflexivity.
+
+\emph{Domination.} Let $u,w$ have a common neighbour in $G$. Then $uw\in E(D(G))$ and the orientation contains $u\to w$ or $w\to u$; say $u\to w$, so $u\preceq w$. If $u\in A_x$ then $x\preceq u\preceq w$, so $w\in A_x$. As every member of $\cA$ is some $A_x$, every member containing $u$ contains $w$.
+
+\emph{No path with at least three vertices has the private-cover property.} Let $P=p_1p_2\cdots p_s$ with $s\ge3$ be a path in $G$. The distinct vertices $p_1,p_3$ have the common neighbour $p_2$. If $p_1\preceq p_3$, every member of $\cA$ containing $p_1$ also contains $p_3$, so no $X\in\cA$ satisfies $X\cap V(P)=\{p_1\}$. If $p_3\preceq p_1$, the same holds for $p_3$. Either way $P$ fails the private-cover property. The argument does not use that $P$ is induced.
+\end{proof}
+
+\phantomsection\label{pf:erdos}
+\lemerdos*
+\begin{proof}
+Fix a sufficiently large integer $d$, put $g=20d^2$, and choose $n$ sufficiently large, in particular $n\ge16gd^g$. Let $R\sim G(n,p)$ with $p=d/n$. We show that three events hold simultaneously with positive probability.
+
+\emph{Few short cycles.} Let $Y$ be the number of cycles of $R$ of length between $3$ and $g$. For each $\ell$ the number of potential $\ell$-cycles is $(n)_\ell/(2\ell)$, where $(n)_\ell=n(n-1)\cdots(n-\ell+1)\le n^\ell$, so
+\[
+ \E[\#C_\ell]=\frac{(n)_\ell}{2\ell}p^\ell\le\frac{d^\ell}{2\ell}\le d^\ell,
+ \qquad
+ \E Y\le\sum_{\ell=3}^{g}d^\ell\le gd^g\le\frac n{16}.
+\]
+By Markov's inequality, $\Pr(Y\ge n/4)\le1/4$.
+
+\emph{Few vertices of degree greater than $2d$.} Let $Z$ be the number of vertices of $R$ of degree greater than $2d$. The degree of a fixed vertex is $\Bin(n-1,d/n)$, which is stochastically dominated by $\Bin(n,d/n)$, a binomial variable of mean exactly $d$. The standard Chernoff bound $\Pr(X\ge2\mu)\le(e/4)^{\mu}$ for a binomial $X$ of mean $\mu$ gives
+\[
+ \Pr(\deg_R(v)>2d)\le\Bigl(\frac e4\Bigr)^{d}\le\frac1{16}
+\]
+for all sufficiently large $d$ (indeed for $d\ge9$). Hence $\E Z\le n/16$ and, by Markov's inequality, $\Pr(Z\ge n/4)\le1/4$.
+
+\emph{Small independence number.} Put $r=\lceil6n\log d/d\rceil$. A union bound over all $r$-subsets, together with $\binom nr\le(en/r)^r$ and $1-p\le e^{-p}$, gives
+\[
+ \Pr(\alpha(R)\ge r)\le\binom nr(1-p)^{\binom r2}
+ \le\exp\Bigl(r\log\frac{en}{r}-\frac{p\,r(r-1)}2\Bigr).
+\]
+For sufficiently large $d$ and $n$,
+\[
+ r\le\frac{7n\log d}{d},\qquad r-1\ge\frac{5n\log d}{d},\qquad \log\frac{en}{r}\le\log d ,
+\]
+the last because $en/r\le ed/(6\log d)\le d$ once $6\log d\ge e$. Hence the exponent is at most
+\[
+ \frac{7n(\log d)^2}{d}-\frac dn\cdot\frac12\cdot\frac{6n\log d}{d}\cdot\frac{5n\log d}{d}
+ =\frac{7n(\log d)^2}{d}-\frac{15n(\log d)^2}{d}
+ =-\frac{8n(\log d)^2}{d},
+\]
+which tends to $-\infty$ as $n\to\infty$. So, after increasing $n$ if necessary, $\Pr(\alpha(R)\ge r)<1/4$.
+
+\emph{Conclusion.} Since $1/4+1/4+1/4<1$, with positive probability $Y<n/4$, $Z<n/4$ and $\alpha(R)<r$; fix such an $R$. Delete every vertex of degree greater than $2d$, and delete one vertex from every cycle of length at most $g$. At most $Y+Z<n/2$ vertices are deleted; let $G$ be the resulting graph. Then $|V(G)|>n/2$, every vertex of $G$ has degree at most $2d$ (degrees do not increase under deletion), and $G$ has no cycle of length at most $g$, i.e.\ $\girth(G)>g=20d^2$. The independence number is monotone under vertex deletion, so
+\[
+ \alpha(G)\le\alpha(R)<r\le\frac{7n\log d}{d},
+ \qquad\text{hence}\qquad
+ \chi(G)\ge\frac{|V(G)|}{\alpha(G)}>\frac{n/2}{7n\log d/d}=\frac{d}{14\log d}.
+\]
+Finally, the chromatic number of a graph is the maximum over its components; replacing $G$ by a component of maximum chromatic number keeps all three properties and makes $G$ connected.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) on the \emph{original} writeup. Its step numbers refer to that writeup, not to this note (the writeup's Lemma~1 and Lemma~2 are \cref{lem:upset} and \cref{lem:erdos} here). The scripts it mentions are in \texttt{verification/scripts/1702.01094\_\_01/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{SS17} A.~Scott and P.~Seymour, Induced subgraphs of graphs with large chromatic number. IX. Rainbow paths, arXiv:1702.01094 (2017).
+\bibitem{DR26} J.~Duron and J.-F.~Raymond, Towards a conjecture on long induced rainbow paths in triangle-free graphs, arXiv:2601.00602 (2026).
+\bibitem{Erdos59} P.~Erdős, Graph theory and probability, \emph{Canad. J. Math.} 11 (1959) 34--38.
+\end{thebibliography}
+
+\end{document}

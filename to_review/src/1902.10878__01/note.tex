@@ -1,0 +1,301 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\NB}{N_B}
+\newcommand{\NA}{N_A}
+\newcommand{\NC}{N_C}
+\newcommand{\Z}{\mathbb Z}
+\DeclareMathOperator{\reach}{R}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 1902.10878\_\_01 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{The biconstrained function $\psi$ of Chudnovsky, Hompe, Scott, Seymour and Spirkl is not symmetric:\\ $\psi(2/7,5/7)\le 23/28<6/7=\psi(5/7,2/7)$}
+\author{Machine-generated note (see provenance box)}
+\date{9 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
+\small
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The constructions and proofs were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{1902.10878\_\_01}; original writeup in \texttt{attacks/1902.10878\_\_01/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) checked the definitions against the arXiv v3 TeX source of the paper, re-derived every step of the rigidity argument, rebuilt the $42$-vertex certificate independently from the prose and verified it exactly (together with the $q=9,11$ members of the family and the cyclic constructions for $q=3,\dots,13$), and machine-checked the parity obstruction by exhaustive enumeration of all matchings of $K_q$ for $q\le13$; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, the $q=7$ certificate was written out as explicit tables (\cref{tab:cert}), and \cref{sec:remarks} adds context taken from the referee's report (consistency with the theorems of the source paper, the role of $q\ge7$, scope). No mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+\end{tcolorbox}
+
+\begin{abstract}
+For $x,y\in(0,1]$, Chudnovsky, Hompe, Scott, Seymour and Spirkl define $\psi(x,y)$ as the largest $z$ such that in every graph with an $(x,y)$-biconstrained tripartition $(A,B,C)$ some vertex of $C$ is joined by two-edge paths to at least $z|A|$ vertices of $A$. They prove that the one-sided analogue $\phi$ is symmetric, $\phi(x,y)=\phi(y,x)$, and ask whether the same holds for $\psi$. We show that it does not: for every odd $q\ge7$,
+\[
+ \psi\Bigl(\frac2q,\frac{q-2}q\Bigr)\ \le\ 1-\frac{2(q-2)}{q(q+1)}\ <\ 1-\frac1q\ =\ \psi\Bigl(\frac{q-2}q,\frac2q\Bigr).
+\]
+The value $\psi((q-2)/q,2/q)=1-1/q$ is determined exactly by a rigidity argument ending in a parity obstruction; the upper bound on $\psi(2/q,(q-2)/q)$ comes from an explicit triple with $|A|=q(q+1)/2$ and $|B|=|C|=q$. For $q=7$ this is a $42$-vertex graph with $\psi(2/7,5/7)\le23/28<24/28=\psi(5/7,2/7)$.
+\end{abstract}
+
+\section{Introduction}
+
+All graphs are finite and simple. Following \cite{CHSSS}, a \emph{tripartition} of a graph $G$ is a partition $(A,B,C)$ of $V(G)$ into three nonempty stable sets such that there are no edges between $A$ and $C$. For $x,y\in(0,1]$ the tripartition is \emph{$(x,y)$-constrained} if every vertex of $A$ has at least $x|B|$ neighbours in $B$ and every vertex of $B$ has at least $y|C|$ neighbours in $C$, and it is \emph{$(x,y)$-biconstrained} if in addition every vertex of $B$ has at least $x|A|$ neighbours in $A$ and every vertex of $C$ has at least $y|B|$ neighbours in $B$. In symbols, writing $N_X(v)$ for the set of neighbours of $v$ in $X$, the four biconstrained conditions read
+\begin{equation}\label{eq:bic}
+\begin{aligned}
+ |\NB(a)|&\ge x|B|\ \ (a\in A),&\qquad |\NA(b)|&\ge x|A|\ \ (b\in B),\\
+ |\NC(b)|&\ge y|C|\ \ (b\in B),&\qquad |\NB(c)|&\ge y|B|\ \ (c\in C).
+\end{aligned}
+\end{equation}
+For $c\in C$ let $N^2_A(c)$ be the set of vertices of $A$ at distance exactly two from $c$; since the parts are stable and there are no $A$--$C$ edges, this is
+\[
+ N^2_A(c)=\reach(c):=\{a\in A:\ \NB(a)\cap\NB(c)\ne\varnothing\}.
+\]
+The paper defines $\phi(x,y)$ as the maximum $z$ such that every $(x,y)$-constrained tripartition has a vertex $c\in C$ with $|N^2_A(c)|\ge z|A|$, and $\psi(x,y)$ in the same way for $(x,y)$-biconstrained tripartitions (the maximum exists, \cite[Theorem~2.1]{CHSSS}); equivalently
+\begin{equation}\label{eq:psi}
+ \psi(x,y)=\inf_{(G,A,B,C)}\ \max_{c\in C}\frac{|\reach(c)|}{|A|},
+\end{equation}
+the infimum over all $(x,y)$-biconstrained tripartitions. Theorem~2.3 of \cite{CHSSS} states that $\phi(x,y)=\phi(y,x)$ for all $x,y\in(0,1]$, proved by a linear-programming argument. Immediately afterwards the authors write: ``we have not been able to prove an analogue of [Theorem~2.3] for the biconstrained case, or for the exact case, although we have no counterexample for either one.'' The catalog records this as:
+
+\begin{question}[{\cite{CHSSS}, remark after Theorem~2.3}]\label{q:sym}
+Does $\psi(x,y)=\psi(y,x)$ hold for all $x,y\in(0,1]$?
+\end{question}
+
+We answer this negatively.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+For every odd integer $q\ge7$,
+\[
+ \psi\Bigl(\frac2q,\frac{q-2}q\Bigr)\ \le\ 1-\frac{2(q-2)}{q(q+1)}\ <\ 1-\frac1q\ =\ \psi\Bigl(\frac{q-2}q,\frac2q\Bigr).
+\]
+\end{restatable}
+
+\begin{corollary}\label{cor:main}
+$\psi(2/7,5/7)\le\frac{23}{28}<\frac{24}{28}=\frac67=\psi(5/7,2/7)$. In particular the answer to \cref{q:sym} is negative.
+\end{corollary}
+\begin{proof}
+Take $q=7$ in \cref{thm:main}: $1-\frac{2\cdot5}{7\cdot8}=1-\frac{10}{56}=\frac{23}{28}$ and $1-\frac17=\frac{24}{28}$.
+\end{proof}
+
+\Cref{thm:main} combines two statements, proved in \cref{sec:lemma,sec:construction}: the exact value $\psi((q-2)/q,2/q)=1-1/q$ for all odd $q\ge3$ (\cref{lem:exact}), and the upper bound $\psi(2/q,(q-2)/q)\le1-2(q-2)/(q(q+1))$ for odd $q\ge7$ (\cref{prop:upper}). The theorem follows because
+\begin{equation}\label{eq:gap}
+ \frac{2(q-2)}{q(q+1)}-\frac1q=\frac{2q-4-(q+1)}{q(q+1)}=\frac{q-5}{q(q+1)}>0\qquad(q>5).
+\end{equation}
+
+\begin{proofidea}
+Both values are governed by the same rigidity: if $a\in A$ is \emph{not} reached by $c\in C$, then $\NB(a)$ and $\NB(c)$ are disjoint, and when $x+y=1$ the degree conditions force $\NB(a)=B\setminus\NB(c)$ with both degrees tight. For $(x,y)=((q-2)/q,2/q)$ this rigidity propagates: if every $c$ missed more than $|A|/q$ vertices, the $B$-neighbourhoods $S_i$ of $C$-vertices would each carry exactly a $2/q$ fraction of $C$, and the $B$-side degree bound would force these $S_i$ to be pairwise disjoint, so that $m$ of them cover $C$ exactly, giving $2m=q$, which is impossible for odd $q$. A cyclic construction on $3q$ vertices shows $1-1/q$ is attained. For $(x,y)=(2/q,(q-2)/q)$ the roles flip: now $A$-vertices have tiny neighbourhoods $S_i$ of size two, and there is no parity obstruction to choosing $m=(q+3)/2$ two-element sets $S_i$ in a $q$-set $B$ that ``cover'' $B$ with the right multiplicities (disjoint pairs plus a triangle). Giving each $S_i$ a block of $q-2$ $A$-vertices, adding three $A$-vertices complete to $B$ to lift the $B$-side degrees, and letting each $C$-vertex miss exactly one $S_i$ produces a triple in which every $C$-vertex misses exactly $q-2$ of the $q(q+1)/2$ vertices of $A$.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{The exact value of \texorpdfstring{$\psi((q-2)/q,\,2/q)$}{psi((q-2)/q, 2/q)}}\label{sec:lemma}
+
+\begin{restatable}{lemma}{lemexact}\label{lem:exact}
+For every odd integer $q\ge3$, $\displaystyle\psi\Bigl(\frac{q-2}q,\frac2q\Bigr)=1-\frac1q$.
+\end{restatable}
+
+\begin{proofidea}
+\emph{Lower bound.} Suppose every $c\in C$ reaches fewer than $\frac{q-1}q|A|$ vertices. For an unreached pair $(a,c)$, disjointness of $\NB(a),\NB(c)$ and $|\NB(a)|+|\NB(c)|\ge|B|$ force $\NB(a)=B\setminus\NB(c)$ and $|\NB(c)|=\frac2q|B|$. Counting $B$--$C$ edges then forces $|\NC(b)|=\frac2q|C|$ for every $b$. Group $C$ by its $B$-neighbourhoods $S_1,\dots,S_m$, with fractions $\beta_i$ of $C$, and let $A_i$ be the $A$-vertices with neighbourhood $B\setminus S_i$, with fractions $\alpha_i>1/q$ of $A$. For $b\in B$, the indices $i$ with $b\in S_i$ have $\sum\beta_i=2/q$ and, because $b$ has at most $\frac2q|A|$ non-neighbours in $A$, $\sum\alpha_i\le2/q$; hence each $b$ lies in exactly one $S_i$, each $\beta_i=2/q$, and $1=\sum\beta_i=2m/q$, contradicting the parity of $q$.
+\emph{Upper bound.} On $A=B=C=\Z_q$ let $\NB(c_i)=\{b_i,b_{i+1}\}$ and $\NB(a_i)=B\setminus\{b_i,b_{i+1}\}$; each $c_i$ misses exactly $a_i$.\fullproofref{pf:exact}
+\end{proofidea}
+
+\section{The construction for \texorpdfstring{$\psi(2/q,\,(q-2)/q)$}{psi(2/q, (q-2)/q)}}\label{sec:construction}
+
+Let $q\ge7$ be odd and put
+\[
+ h=\frac{q-3}2\ (\ge2),\qquad m=h+3=\frac{q+3}2 .
+\]
+Let $B$ consist of $h$ pairwise disjoint pairs $P_1,\dots,P_h$ together with three further vertices $r_{12},r_{13},r_{23}$, so $|B|=2h+3=q$. Define $m$ distinct two-element subsets of $B$:
+\[
+ S_i=P_i\quad(1\le i\le h),\qquad S_{h+1}=\{r_{12},r_{13}\},\quad S_{h+2}=\{r_{12},r_{23}\},\quad S_{h+3}=\{r_{13},r_{23}\}.
+\]
+\begin{itemize}[nosep]
+\item $A$: for each $i\in\{1,\dots,m\}$ a set $A_i$ of $q-2$ vertices, each with $\NB(a)=S_i$; and a set $U$ of three vertices, each with $\NB(u)=B$. Thus $|A|=m(q-2)+3=q(q+1)/2$.
+\item $C$: for each $1\le i\le h$ two vertices \emph{of type $i$}, and for each $i\in\{h+1,h+2,h+3\}$ one vertex of type $i$; a vertex $c$ of type $i$ has $\NB(c)=B\setminus S_i$. Thus $|C|=2h+3=q$.
+\end{itemize}
+The graph $G_q$ has vertex set $A\cup B\cup C$ and exactly the $A$--$B$ and $B$--$C$ edges just described; so $(A,B,C)$ is a tripartition (three nonempty stable sets, no $A$--$C$ edges).
+
+\begin{restatable}{proposition}{propupper}\label{prop:upper}
+For every odd $q\ge7$, $(A,B,C)$ is a $(2/q,(q-2)/q)$-biconstrained tripartition of $G_q$ with $|A|=q(q+1)/2$, $|B|=|C|=q$, and every $c\in C$ satisfies $|A\setminus\reach(c)|=q-2$. Consequently
+\[
+ \psi\Bigl(\frac2q,\frac{q-2}q\Bigr)\le1-\frac{q-2}{q(q+1)/2}=1-\frac{2(q-2)}{q(q+1)}.
+\]
+\end{restatable}
+
+\begin{proofidea}
+Degrees: $A_i$-vertices have $2=\frac2q|B|$ neighbours in $B$; a vertex of a pair $P_i$ is adjacent to $A_i\cup U$, i.e.\ to $q+1=\frac2q|A|$ vertices; each $r_{jk}$ lies in two of the last three $S_i$ and has $2(q-2)+3\ge q+1$; every $c$ has $q-2=\frac{q-2}q|B|$ neighbours in $B$; every $b$ is omitted by exactly two $C$-vertices, hence has $q-2=\frac{q-2}q|C|$ neighbours in $C$. Reach: a $c$ of type $i$ misses $A_i$ (whose neighbourhood is $S_i$) and reaches every $A_j$, $j\ne i$ (the distinct two-sets satisfy $S_j\not\subseteq S_i$) and $U$.\fullproofref{pf:upper}
+\end{proofidea}
+
+\paragraph{The certificate for $q=7$.}
+Here $h=2$, $m=5$, $|A|=28$, $|B|=|C|=7$. Write $B=\{1,\dots,7\}$ with $P_1=\{1,2\}$, $P_2=\{3,4\}$, $r_{12}=5$, $r_{13}=6$, $r_{23}=7$, so
+\[
+ S_1=\{1,2\},\quad S_2=\{3,4\},\quad S_3=\{5,6\},\quad S_4=\{5,7\},\quad S_5=\{6,7\}.
+\]
+\Cref{tab:cert} lists every vertex of $A$ and $C$ with its neighbourhood in $B$; there are no other edges. Every $C$-vertex misses exactly the five $A$-vertices of its own type and reaches the other $23$, so $\psi(2/7,5/7)\le23/28$.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+part & vertices & $\NB(\cdot)$ & count\\
+\midrule
+$A$ & $a_{1,1},\dots,a_{1,5}$ & $\{1,2\}$ & 5\\
+    & $a_{2,1},\dots,a_{2,5}$ & $\{3,4\}$ & 5\\
+    & $a_{3,1},\dots,a_{3,5}$ & $\{5,6\}$ & 5\\
+    & $a_{4,1},\dots,a_{4,5}$ & $\{5,7\}$ & 5\\
+    & $a_{5,1},\dots,a_{5,5}$ & $\{6,7\}$ & 5\\
+    & $u_1,u_2,u_3$ & $\{1,2,3,4,5,6,7\}$ & 3\\
+\midrule
+$C$ & $c_1,c_1'$ & $\{3,4,5,6,7\}$ & 2\\
+    & $c_2,c_2'$ & $\{1,2,5,6,7\}$ & 2\\
+    & $c_3$ & $\{1,2,3,4,7\}$ & 1\\
+    & $c_4$ & $\{1,2,3,4,6\}$ & 1\\
+    & $c_5$ & $\{1,2,3,4,5\}$ & 1\\
+\bottomrule
+\end{tabular}
+\caption{The $42$-vertex $(2/7,5/7)$-biconstrained triple, $B=\{1,\dots,7\}$. Degree check: each $a_{i,j}$ has $2=\frac27\cdot7$ neighbours in $B$; each $b\in\{1,2,3,4\}$ has $5+3=8=\frac27\cdot28$ neighbours in $A$ and each $b\in\{5,6,7\}$ has $10+3=13$; each $c$ has $5=\frac57\cdot7$ neighbours in $B$; each $b$ is missing from exactly two rows of the $C$ block, so has $5=\frac57\cdot7$ neighbours in $C$. Reach check: $c$ of type $i$ has a common $B$-neighbour with every $A$-vertex except the five with neighbourhood $S_i$.}
+\label{tab:cert}
+\end{table}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[Why $q\ge7$]
+By \eqref{eq:gap} the two bounds of \cref{thm:main} differ by $(q-5)/(q(q+1))$, which vanishes at $q=5$ and is negative at $q=3$. At $q=3$ both sides equal $2/3$, in agreement with the values $\psi(1/3,2/3)=\psi(2/3,1/3)=2/3$ that follow from the source paper's Theorems~2.2 and the ``$2+3$'' bounds (as the referee notes); the construction of \cref{sec:construction} needs $h\ge2$ anyway, i.e.\ $q\ge7$.
+\end{remark}
+
+\begin{remark}[Consistency with the source paper]
+The referee (\cref{app:referee}) checked the two values against every result of \cite{CHSSS}. The trivial bounds $\max(x,y)\le\psi(x,y)\le(\lceil kx\rceil+\lceil ky\rceil-1)/k$ give, with $k=7$, $\psi\in[5/7,6/7]$ for both $(5/7,2/7)$ and $(2/7,5/7)$; the value $6/7$ attains the upper bound, and $23/28$ lies strictly inside. The paper's Theorem giving $\psi(x,y)\ge3/4$ for $x\ge1/4$, $y>2/3$ yields $\psi(2/7,5/7)\ge3/4=21/28$, so $\psi(2/7,5/7)\in[21/28,23/28]$; its exact value is not determined here. The paper's partial symmetry result (Theorem~10.2: $\psi(x,y)=x$ iff $\psi(y,x)=x$) is not contradicted, since neither value equals $\max(x,y)$.
+\end{remark}
+
+\begin{remark}[Scope]
+The symmetry $\phi(x,y)=\phi(y,x)$ (Theorem~2.3 of \cite{CHSSS}) is unaffected. The construction uses vertices of $A$ complete to $B$, so it says nothing about the paper's \emph{exact} variant (every degree condition holding with equality), whose symmetry question remains open.
+\end{remark}
+
+\begin{remark}[Computational checks]
+The referee rebuilt both constructions from the prose and verified, with exact rational arithmetic, all degree conditions and all second neighbourhoods for $q=7,9,11$ (every $c$ reaches $23/28$, $38/45$, $57/66$ of $A$) and for the cyclic construction for $q=3,\dots,13$; it also verified the finite core of the parity step by enumerating all matchings of $K_q$, $q\le13$. Scripts: \texttt{verification/scripts/1902.10878\_\_01/}.
+\end{remark}
+
+\begin{remark}[Novelty]
+The referee's literature search (September 2026) found no resolution of \cref{q:sym}; the published version of \cite{CHSSS} still lists it as open, and the exact value $\psi((q-2)/q,2/q)=1-1/q$ does not appear there. This has not been checked by a human.
+\end{remark}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:exact}
+\lemexact*
+\begin{proof}
+Fix odd $q\ge3$ and write $x=(q-2)/q$, $y=2/q$, so $x+y=1$.
+
+\emph{Lower bound.} Let $(A,B,C)$ be an $(x,y)$-biconstrained tripartition of a graph $G$, and suppose for a contradiction that
+\begin{equation}\label{eq:hyp}
+ |\reach(c)|<\frac{q-1}q|A|\qquad\text{for every }c\in C.
+\end{equation}
+Then every $c\in C$ has more than $|A|/q>0$ vertices of $A$ outside $\reach(c)$. Let $a\notin\reach(c)$. Then $\NB(a)\cap\NB(c)=\varnothing$, so by \eqref{eq:bic}
+\[
+ |B|\ \ge\ |\NB(a)|+|\NB(c)|\ \ge\ \frac{q-2}q|B|+\frac2q|B|\ =\ |B|.
+\]
+Equality holds throughout, hence
+\begin{equation}\label{eq:rigid}
+ |\NB(a)|=\frac{q-2}q|B|,\qquad |\NB(c)|=\frac2q|B|,\qquad \NB(a)=B\setminus\NB(c)\qquad\text{whenever }a\notin\reach(c).
+\end{equation}
+Since every $c$ has some unreached $a$, \eqref{eq:rigid} gives $|\NB(c)|=\frac2q|B|$ for every $c\in C$, so $e(B,C)=\sum_{c\in C}|\NB(c)|=\frac2q|B||C|$. On the other hand $e(B,C)=\sum_{b\in B}|\NC(b)|$ with every term at least $\frac2q|C|$ by \eqref{eq:bic}; equality of the totals forces
+\begin{equation}\label{eq:NC}
+ |\NC(b)|=\frac2q|C|\qquad\text{for every }b\in B.
+\end{equation}
+Let $S_1,\dots,S_m$ be the distinct sets occurring as $\NB(c)$, $c\in C$, and put
+\[
+ C_i=\{c\in C:\NB(c)=S_i\},\quad \beta_i=\frac{|C_i|}{|C|},\qquad A_i=\{a\in A:\NB(a)=B\setminus S_i\},\quad \alpha_i=\frac{|A_i|}{|A|}.
+\]
+Then $\beta_i>0$, $\sum_i\beta_i=1$, and the sets $A_i$ are pairwise disjoint because the $S_i$ are distinct. For $c\in C_i$ we claim $A\setminus\reach(c)=A_i$: if $a\notin\reach(c)$ then $\NB(a)=B\setminus S_i$ by \eqref{eq:rigid}, so $a\in A_i$; conversely if $a\in A_i$ then $\NB(a)\cap S_i=\varnothing$, so $a\notin\reach(c)$. Hence \eqref{eq:hyp} gives
+\begin{equation}\label{eq:alpha}
+ \alpha_i>\frac1q\qquad(1\le i\le m).
+\end{equation}
+For $b\in B$ let $I(b)=\{i:b\in S_i\}$. Since $\NC(b)=\bigcup_{i\in I(b)}C_i$ (a disjoint union), \eqref{eq:NC} gives
+\begin{equation}\label{eq:beta}
+ \sum_{i\in I(b)}\beta_i=\frac2q,
+\end{equation}
+in particular $I(b)\ne\varnothing$. If $i\in I(b)$, every $a\in A_i$ has $\NB(a)=B\setminus S_i\not\ni b$, so $A_i$ is entirely non-adjacent to $b$. By \eqref{eq:bic}, $b$ has at least $\frac{q-2}q|A|$ neighbours in $A$, hence at most $\frac2q|A|$ non-neighbours, and since the $A_i$ are disjoint,
+\begin{equation}\label{eq:alphasum}
+ \sum_{i\in I(b)}\alpha_i\le\frac2q .
+\end{equation}
+By \eqref{eq:alpha}, two terms of this sum would already exceed $2/q$; so $|I(b)|=1$ for every $b\in B$, and if $I(b)=\{i\}$ then \eqref{eq:beta} gives $\beta_i=2/q$. Every index $i$ occurs in this way: $S_i=\NB(c)$ for some $c$ has size $\frac2q|B|>0$, and any $b\in S_i$ has $I(b)=\{i\}$. Therefore $\beta_i=2/q$ for all $i$ and
+\[
+ 1=\sum_{i=1}^m\beta_i=\frac{2m}q,
+\]
+i.e.\ $q=2m$, contradicting that $q$ is odd. Hence some $c\in C$ has $|\reach(c)|\ge\frac{q-1}q|A|$, and by \eqref{eq:psi} $\psi(x,y)\ge1-\frac1q$.
+
+\emph{Upper bound.} Let $A=\{a_i:i\in\Z_q\}$, $B=\{b_i:i\in\Z_q\}$, $C=\{c_i:i\in\Z_q\}$, put $S_i=\{b_i,b_{i+1}\}$ (indices modulo $q$; $b_i\ne b_{i+1}$ as $q\ge3$), and let the graph have exactly the edges given by
+\[
+ \NB(a_i)=B\setminus S_i,\qquad \NB(c_i)=S_i\qquad(i\in\Z_q).
+\]
+This is a tripartition. Each $a_i$ has $q-2=x|B|$ neighbours in $B$; $b_j$ lies in $S_j$ and $S_{j-1}$ only, so it is non-adjacent to exactly $a_j,a_{j-1}$ and has $q-2=x|A|$ neighbours in $A$; each $c_i$ has $2=y|B|$ neighbours in $B$; and $b_j$ has exactly the two neighbours $c_j,c_{j-1}$ in $C$, i.e.\ $2=y|C|$. So the triple is $(x,y)$-biconstrained. The vertex $c_i$ does not reach $a_i$, since $\NB(a_i)\cap S_i=\varnothing$. For $j\ne i$ the two-element sets $S_i\ne S_j$ satisfy $S_i\setminus S_j\ne\varnothing$, so $\NB(c_i)\cap\NB(a_j)=S_i\setminus S_j\ne\varnothing$ and $c_i$ reaches $a_j$. Hence every $c_i$ reaches exactly $q-1$ vertices of $A$, and $\psi(x,y)\le1-\frac1q$.
+\end{proof}
+
+\phantomsection\label{pf:upper}
+\propupper*
+\begin{proof}
+Throughout, $x=2/q$ and $y=(q-2)/q$. First, $|B|=2h+3=q$ and $|C|=2h+3=q$ by construction, and
+\[
+ |A|=m(q-2)+3=\frac{(q+3)(q-2)}2+3=\frac{q^2+q-6}2+3=\frac{q(q+1)}2 .
+\]
+The sets $S_1,\dots,S_m$ are pairwise distinct two-element subsets of $B$: the pairs $P_i$ are disjoint from each other and from $\{r_{12},r_{13},r_{23}\}$, and the three sets $S_{h+1},S_{h+2},S_{h+3}$ are the three two-subsets of $\{r_{12},r_{13},r_{23}\}$.
+
+\emph{$A$--$B$ conditions.} A vertex $a\in A_i$ has $|\NB(a)|=|S_i|=2=\frac2q|B|=x|B|$; a vertex $u\in U$ has $|\NB(u)|=q\ge x|B|$. A vertex $b\in P_i$ belongs to $S_i$ and to no other $S_j$, so $\NA(b)=A_i\cup U$ and $|\NA(b)|=(q-2)+3=q+1=\frac2q\cdot\frac{q(q+1)}2=x|A|$. A vertex $r_{jk}$ belongs to exactly two of $S_{h+1},S_{h+2},S_{h+3}$ (namely those containing $r_{jk}$) and to no $P_i$, so $|\NA(r_{jk})|=2(q-2)+3=2q-1\ge q+1=x|A|$.
+
+\emph{$B$--$C$ conditions.} A vertex $c$ of type $i$ has $|\NB(c)|=|B\setminus S_i|=q-2=\frac{q-2}q|B|=y|B|$. A vertex $b\in B$ is non-adjacent to $c$ exactly when $b\in S_{\text{type}(c)}$. If $b\in P_i$, this happens exactly for the two vertices of type $i$; if $b=r_{jk}$, it happens for the two types among $h+1,h+2,h+3$ whose set contains $r_{jk}$, each of which occurs once. So every $b$ is non-adjacent to exactly two vertices of $C$ and $|\NC(b)|=q-2=y|C|$. Thus $(A,B,C)$ is $(x,y)$-biconstrained.
+
+\emph{Second neighbourhoods.} Let $c$ have type $i$, so $\NB(c)=B\setminus S_i$. A vertex $a\in A_i$ has $\NB(a)=S_i$, disjoint from $\NB(c)$, so $a\notin\reach(c)$. For $j\ne i$, $S_j\ne S_i$ are two-element sets, so $S_j\setminus S_i\ne\varnothing$, i.e.\ every $a\in A_j$ has a common neighbour with $c$ in $B\setminus S_i$; and every $u\in U$ is adjacent to all of $B\setminus S_i\ne\varnothing$. Hence $A\setminus\reach(c)=A_i$ and $|A\setminus\reach(c)|=q-2$, for every $c\in C$. Every $c$ therefore reaches the fraction
+\[
+ \frac{|A|-(q-2)}{|A|}=1-\frac{q-2}{q(q+1)/2}=1-\frac{2(q-2)}{q(q+1)}
+\]
+of $A$, and \eqref{eq:psi} gives the stated upper bound on $\psi(x,y)$.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+Let $q\ge7$ be odd. \Cref{prop:upper} gives $\psi(2/q,(q-2)/q)\le1-\frac{2(q-2)}{q(q+1)}$ and \cref{lem:exact} gives $\psi((q-2)/q,2/q)=1-\frac1q$. By \eqref{eq:gap}, $\frac{2(q-2)}{q(q+1)}>\frac1q$ for $q>5$, so $1-\frac{2(q-2)}{q(q+1)}<1-\frac1q$.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) on the \emph{original} writeup. Its step numbers refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification/scripts/1902.10878\_\_01/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{CHSSS} M.~Chudnovsky, P.~Hompe, A.~Scott, P.~Seymour and S.~Spirkl, Concatenating bipartite graphs, \emph{Electron. J. Combin.} 29(2) (2022), P2.47; arXiv:1902.10878.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,225 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\fdc}{\vec{\chi}_{f}}
+\newcommand{\dic}{\vec{\chi}}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\FDC}{\mathrm{FDC}}
+\newcommand{\NP}{\mathrm{NP}}
+\DeclareMathOperator{\supp}{supp}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 1812.02420\_\_02 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{Deciding whether the fractional dichromatic number\\ of a digraph is at most $2$ is NP-complete}
+\author{Machine-generated note (see provenance box)}
+\date{9 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
+\small
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The reduction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{1812.02420\_\_02}; original writeup in \texttt{attacks/1812.02420\_\_02/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) re-derived every step, downloaded the source paper's \LaTeX{} source to confirm the problem statement, the LP definition and the digon convention, confirmed the external hardness result of Bokal et al., and verified the reduction by exact LP computation on $125$ instances (including the digon-free Paley tournament $ST_7$ and the bidirected $K_3$); its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, and three clarifications supplied by the referee's report were added as remarks (the empty instance, attainment of the LP optimum, and the fact that the source paper itself proves NP membership). No mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+\end{tcolorbox}
+
+\begin{abstract}
+The fractional dichromatic number $\fdc(D)$ of a digraph $D$ is the optimum of the linear programme covering the vertices by acyclic vertex sets. Hochstättler, Schröder and Steiner proved that deciding $\fdc(D)\le p$ is NP-complete for every real $p>1$ with $p\ne2$, and left the case $p=2$ open (Problem~3.21). We show that the case $p=2$ is NP-complete as well, for digraphs in which antiparallel arcs (digons) are allowed, as in the source paper. The reduction is from the NP-complete problem of deciding whether a digraph is $2$-dicolourable (Bokal, Fijavž, Juvan, Kayll and Mohar): take two disjoint copies of $D$ and join the two copies of each vertex by a digon. A fractional colouring of weight $2$ is then forced to use only acyclic sets containing exactly one copy of every vertex, and such a set is precisely an acyclic $2$-colouring of $D$.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+We follow the conventions of Hochstättler, Schröder and Steiner \cite{HSS20}: digraphs are finite and loopless, but parallel and antiparallel arcs are allowed, and a pair of antiparallel arcs is a directed cycle of length two, a \emph{digon}. A set $A\subseteq V(D)$ is \emph{acyclic} if the induced subdigraph $D[A]$ has no directed cycle; $\cA(D)$ denotes the family of acyclic vertex sets. The \emph{dichromatic number} $\dic(D)$ is the least $k$ such that $V(D)$ can be partitioned into $k$ acyclic sets, and the \emph{fractional dichromatic number} $\fdc(D)$ is the optimum of the linear programme
+\begin{equation}\label{eq:LP}
+\begin{aligned}
+\min\quad&\sum_{A\in\cA(D)}x_A\\
+\text{subject to}\quad&\sum_{A\in\cA(D),\ v\in A}x_A\ \ge\ 1\qquad\text{for every }v\in V(D),\\
+&x_A\ \ge\ 0\qquad\text{for every }A\in\cA(D).
+\end{aligned}
+\end{equation}
+A feasible solution of \eqref{eq:LP} is a \emph{fractional acyclic colouring} and its objective value its \emph{weight}; since \eqref{eq:LP} is a finite feasible linear programme bounded below, its optimum is attained, so $\fdc(D)\le p$ if and only if some fractional acyclic colouring has weight at most $p$.
+
+Bokal, Fijavž, Juvan, Kayll and Mohar \cite{BFJKM04} proved that deciding $\dic(D)\le2$ is NP-complete. Hochstättler, Schröder and Steiner studied the analogous threshold problems for fractional parameters:
+
+\begin{problem}[{\cite[Problem~3.21]{HSS20}}]\label{prob:321}
+Let $p\ge1$ be a fixed real number. Instance: a (multi-)digraph $D$. Decide whether $\fdc(D)\le p$.
+\end{problem}
+
+They proved that this problem is in NP for every $p\ge1$ \cite[Observation~3.15]{HSS20} and NP-complete for every real $p>1$ with $p\ne2$ \cite[Theorem~3.20]{HSS20}: for $p>2$ by a reduction from the fractional chromatic number of undirected graphs, and for $1<p<2$ by a splitting operation that maps every threshold $q>1$ into $(1,2)$. Neither technique reaches $p=2$, and their concluding remarks state that they ``cannot rule out the possibility that there is some clever way to algorithmically decide whether a given digraph has fractional dichromatic number at most~$2$'', while conjecturing NP-completeness ``using other techniques''. We confirm that prediction.
+
+Let $\FDC(2)$ denote \cref{prob:321} with $p=2$.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+$\FDC(2)$ is NP-complete. NP-hardness holds already for digraphs whose vertex set is arranged in two layers, each inducing a copy of the same digraph, with the two copies of every vertex joined by a digon and no other arcs between the layers.
+\end{restatable}
+
+\begin{corollary}\label{cor:all-p}
+Deciding $\fdc(D)\le p$ for (multi-)digraphs is NP-complete for every real $p>1$.
+\end{corollary}
+\begin{proof}
+Combine \cref{thm:main} with \cite[Theorem~3.20]{HSS20}, which covers every $p>1$ with $p\ne2$.
+\end{proof}
+
+\begin{proofidea}
+Membership in NP is standard (an optimal basic solution of \eqref{eq:LP} has at most $|V|$ nonzero entries of polynomial bit size) and is in any case \cite[Observation~3.15]{HSS20}. For hardness, given a nonempty digraph $D$ build $R(D)$ from two disjoint copies $D\times\{0\}$, $D\times\{1\}$ of $D$ by adding the digon between $(v,0)$ and $(v,1)$ for every $v$. An acyclic set of $R(D)$ contains at most one end of each digon, so summing the two covering constraints of a digon shows that a fractional acyclic colouring of weight at most $2$ has weight exactly $2$ and every set in its support meets every digon in exactly one vertex (\cref{lem:forcing}). Such a set selects one copy of each vertex; the vertices selected in layer $0$ and in layer $1$ induce acyclic subdigraphs of $D$ and partition $V(D)$, so $\dic(D)\le2$. Conversely an acyclic $2$-colouring $(C_0,C_1)$ of $D$ gives the two complementary acyclic sets $(C_0\times\{0\})\cup(C_1\times\{1\})$ and $(C_0\times\{1\})\cup(C_1\times\{0\})$, which with weight $1$ each form a fractional colouring of weight $2$ (\cref{prop:equiv}). Hence $\fdc(R(D))\le2$ iff $\dic(D)\le2$, and \cite{BFJKM04} finishes.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{The reduction}\label{sec:reduction}
+
+\begin{definition}[The digraph $R(D)$]\label{def:R}
+Let $D$ be a digraph. The digraph $H=R(D)$ has vertex set $V(D)\times\{0,1\}$; write $v_i=(v,i)$. Its arcs are
+\begin{itemize}[nosep]
+\item $u_iv_i$ for every arc $uv\in A(D)$ and each $i\in\{0,1\}$ (so each \emph{layer} $V(D)\times\{i\}$ induces a copy of $D$), and
+\item $v_0v_1$ and $v_1v_0$ for every $v\in V(D)$ (the \emph{matching digons}).
+\end{itemize}
+There are no other arcs; in particular the only arcs between the two layers are the matching digons. $R(D)$ has $2|V(D)|$ vertices and $2|A(D)|+2|V(D)|$ arcs, and is computable from $D$ in polynomial time.
+\end{definition}
+
+\begin{restatable}[Forcing lemma]{lemma}{lemforcing}\label{lem:forcing}
+Let $D$ be a nonempty digraph, $H=R(D)$, and let $(x_A)_{A\in\cA(H)}$ be a fractional acyclic colouring of $H$ of weight $W=\sum_Ax_A\le2$. Then $W=2$, and every $A\in\cA(H)$ with $x_A>0$ satisfies $|A\cap\{v_0,v_1\}|=1$ for every $v\in V(D)$.
+\end{restatable}
+\begin{proofidea}
+No acyclic set contains both ends of a digon. Adding the covering constraints at $v_0$ and $v_1$ gives $2\le\sum_Ax_A|A\cap\{v_0,v_1\}|\le\sum_Ax_A=W\le2$, so all inequalities are equalities, and the nonnegative terms $x_A(1-|A\cap\{v_0,v_1\}|)$ must all vanish.\fullproofref{pf:forcing}
+\end{proofidea}
+
+\begin{restatable}{proposition}{propequiv}\label{prop:equiv}
+For every nonempty digraph $D$,
+\[
+ \fdc(R(D))\le2\quad\Longleftrightarrow\quad\dic(D)\le2 .
+\]
+\end{restatable}
+\begin{proofidea}
+($\Rightarrow$) Take any support set $A$ of a fractional colouring of weight at most $2$; by \cref{lem:forcing} the sets $C_i=\{v:v_i\in A\}$ partition $V(D)$, and the copy of $D[C_i]$ in layer $i$ is an induced subdigraph of the acyclic $H[A]$. ($\Leftarrow$) Given an acyclic partition $(C_0,C_1)$, the sets $A=(C_0\times\{0\})\cup(C_1\times\{1\})$ and $B=V(H)\setminus A$ each contain one end of every matching digon and induce disjoint unions of copies of $D[C_0]$ and $D[C_1]$ in different layers, hence are acyclic; weights $x_A=x_B=1$ cover every vertex.\fullproofref{pf:equiv}
+\end{proofidea}
+
+\begin{restatable}[Membership in NP]{lemma}{lemnp}\label{lem:np}
+$\FDC(2)\in\NP$.
+\end{restatable}
+\begin{proofidea}
+The LP \eqref{eq:LP} has a $0/1$ constraint matrix; an optimal basic feasible solution has at most $N=|V(H)|$ positive variables, with rational values of $O(N\log N)$ bits by Cramer's rule and Hadamard's bound. The certificate lists these sets and weights, and acyclicity, coverage and total weight are checked in polynomial time. (This is also \cite[Observation~3.15]{HSS20}.)\fullproofref{pf:np}
+\end{proofidea}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[Digons are essential]\label{rem:digons}
+The proof uses the antiparallel pair $v_0v_1$, $v_1v_0$ in an essential way: it is what prevents an acyclic set from containing both copies of a vertex. \Cref{thm:main} therefore settles \cref{prob:321} as stated (its instances are multidigraphs, and \cite{HSS20} explicitly treats a digon as a directed $2$-cycle), but it does not settle the variant in which the input is required to be an oriented graph (digon-free). That variant remains open.
+\end{remark}
+
+\begin{remark}[Degenerate instances]\label{rem:empty}
+\Cref{lem:forcing} and \cref{prop:equiv} assume $V(D)\ne\emptyset$, as the original writeup does. The empty digraph is a trivial yes-instance of both problems, so the reduction $D\mapsto R(D)$ is correct on all inputs. Since digraphs are loopless, every singleton is acyclic and \eqref{eq:LP} is always feasible.
+\end{remark}
+
+\begin{remark}[Why the earlier techniques stop short of $p=2$]
+As the referee's report observes (\cref{app:referee}), the hardness proof of \cite{HSS20} for $p>2$ reduces from ``$\chi_f(G)\le p$'' for undirected graphs, which is polynomial at $p=2$ (bipartiteness), while the proof for $1<p<2$ pushes thresholds $q>1$ through an $\ell$-split to $\ell q/((\ell-1)q+1)<2$. Neither reaches exactly $2$. The present reduction instead starts from the NP-completeness of $2$-dicolourability \cite{BFJKM04}.
+\end{remark}
+
+\begin{remark}[Computational check]
+The referee verified \cref{prop:equiv} by brute force (enumeration of all acyclic subsets of $R(D)$ and exact solution of \eqref{eq:LP}) on $125$ instances: the directed triangle ($\fdc(R(C_3))=2$), the bidirected $K_3$ ($\fdc=3$), a single digon, a single vertex, the digon-free Paley tournament $ST_7$ with $\dic=3$ ($\fdc(R(ST_7))=7/3$), and $120$ random digraphs on at most $6$ vertices. In every yes-instance every optimal support set met each matching digon in exactly one vertex, as \cref{lem:forcing} predicts. Script: \texttt{verification/scripts/1812.02420\_\_02/check\_reduction.py}.
+\end{remark}
+
+\begin{remark}[Novelty]
+The referee's literature search found no resolution of the $p=2$ case after \cite{HSS20}; the catalogue's own review (May 2026) found none either. The argument is short, which makes an unindexed prior appearance conceivable. This has not been checked by a human.
+\end{remark}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:forcing}
+\lemforcing*
+\begin{proof}
+Fix $v\in V(D)$. The vertices $v_0,v_1$ form a digon in $H$, so no acyclic set contains both, i.e.\ $|A\cap\{v_0,v_1\}|\le1$ for every $A\in\cA(H)$. Adding the covering constraints of \eqref{eq:LP} at $v_0$ and at $v_1$,
+\[
+ 2\ \le\ \sum_{A\ni v_0}x_A+\sum_{A\ni v_1}x_A\ =\ \sum_{A\in\cA(H)}x_A\,|A\cap\{v_0,v_1\}|\ \le\ \sum_{A\in\cA(H)}x_A\ =\ W\ \le\ 2 .
+\]
+Hence all inequalities are equalities; in particular $W=2$ and
+\[
+ \sum_{A\in\cA(H)}x_A\bigl(1-|A\cap\{v_0,v_1\}|\bigr)=0 .
+\]
+Every summand is nonnegative, since $x_A\ge0$ and $|A\cap\{v_0,v_1\}|\le1$. Therefore each summand is zero, and for every $A$ with $x_A>0$ we get $|A\cap\{v_0,v_1\}|=1$. As $v$ was arbitrary, the claim follows.
+\end{proof}
+
+\phantomsection\label{pf:equiv}
+\propequiv*
+\begin{proof}
+Write $H=R(D)$.
+
+\emph{Forward implication.} Assume $\fdc(H)\le2$. Since the optimum of \eqref{eq:LP} is attained, there is a fractional acyclic colouring $(x_A)$ of $H$ of weight at most $2$, and it has a support set $A$ with $x_A>0$ (the weight is at least $1$ because $D$ is nonempty and some vertex must be covered). By \cref{lem:forcing}, $A$ contains exactly one of $v_0,v_1$ for every $v\in V(D)$, so the sets
+\[
+ C_i=\{v\in V(D): v_i\in A\},\qquad i\in\{0,1\},
+\]
+partition $V(D)$. For each $i$, the vertex set $C_i\times\{i\}\subseteq A$ induces in $H$ a copy of $D[C_i]$ (layer $i$ induces a copy of $D$), and this copy is an induced subdigraph of $H[A]$. Since $A$ is acyclic, $H[A]$ has no directed cycle, hence neither do its induced subdigraphs, and $D[C_0]$, $D[C_1]$ are acyclic. Thus $(C_0,C_1)$ is a partition of $V(D)$ into two acyclic sets and $\dic(D)\le2$.
+
+\emph{Reverse implication.} Assume $V(D)=C_0\sqcup C_1$ with $D[C_0]$ and $D[C_1]$ acyclic. Put
+\[
+ A=(C_0\times\{0\})\cup(C_1\times\{1\}),\qquad B=(C_0\times\{1\})\cup(C_1\times\{0\})=V(H)\setminus A .
+\]
+Each matching digon $\{v_0,v_1\}$ has one end in $A$ and one in $B$, so neither $H[A]$ nor $H[B]$ contains a matching arc; as the matching digons are the only arcs between the layers, $H[A]$ has no arcs between $C_0\times\{0\}$ and $C_1\times\{1\}$. Hence
+\[
+ H[A]\ \cong\ D[C_0]\sqcup D[C_1],
+\]
+the two terms lying in different layers, and $H[A]$ is acyclic. Exchanging the roles of the layers, $H[B]\cong D[C_1]\sqcup D[C_0]$ is acyclic as well. Setting $x_A=x_B=1$ and $x_{A'}=0$ for all other acyclic sets gives every vertex of $H$ coverage exactly $1$ (each vertex lies in exactly one of $A,B$) with total weight $2$. Hence $\fdc(H)\le2$.
+\end{proof}
+
+\phantomsection\label{pf:np}
+\lemnp*
+\begin{proof}
+Let $H$ be an instance with $N=|V(H)|$ vertices. The LP \eqref{eq:LP} for $H$ has $N$ covering constraints, so an optimal basic feasible solution has at most $N$ positive variables. The constraint matrix has entries in $\{0,1\}$, so by Cramer's rule the coordinates of a basic solution are ratios of determinants of $N\times N$ $0/1$-matrices, whose absolute values are at most $N^{N/2}$ by Hadamard's inequality; numerators and denominators therefore have $O(N\log N)$ bits. A certificate for a yes-instance lists at most $N$ vertex sets together with their rational weights. The verifier checks in polynomial time that each listed set induces an acyclic subdigraph of $H$, that every vertex receives total weight at least $1$, and that the total weight is at most $2$. Hence $\FDC(2)\in\NP$.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+By \cref{lem:np}, $\FDC(2)\in\NP$. For hardness, the map $D\mapsto R(D)$ of \cref{def:R} is computable in polynomial time, and by \cref{prop:equiv} (together with \cref{rem:empty} for the empty digraph) it maps yes-instances of ``$\dic(D)\le2$'' to yes-instances of $\FDC(2)$ and no-instances to no-instances. Since deciding $\dic(D)\le2$ is NP-complete \cite{BFJKM04}, this is a polynomial-time many-one reduction and $\FDC(2)$ is NP-hard. The digraphs $R(D)$ have exactly the two-layer structure described in the statement.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) on the \emph{original} writeup. Its step numbers refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification/scripts/1812.02420\_\_02/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{BFJKM04} D.~Bokal, G.~Fijavž, M.~Juvan, P.~M.~Kayll and B.~Mohar, The circular chromatic number of a digraph, \emph{J. Graph Theory} 46 (2004) 227--240.
+\bibitem{HSS20} W.~Hochstättler, F.~Schröder and R.~Steiner, On the complexity of digraph colourings and vertex arboricity, \emph{Discrete Math. Theor. Comput. Sci.} 22:1 (2020); arXiv:1812.02420.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,272 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prob}{\Pr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Bin}{Bin}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cW}{\mathcal W}
+\newcommand{\pmon}{p_{\mathrm{monotone}}}
+\newcommand{\pint}{p_{\mathrm{intersecting}}}
+\newcommand{\pdict}{p_{\mathrm{dict}}}
+\newcommand{\Om}{\Omega}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2208.06858\_\_01 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{The monotone relaxation of Levine's hat problem has success probability $\tfrac12$ for every number of players\\[1ex] \large A disproof of Conjecture~2.2 of Alon, Friedgut, Kalai and Kindler}
+\author{Machine-generated note (see provenance box)}
+\date{9 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
+\small
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2208.06858\_\_01}; original writeup in \texttt{attacks/2208.06858\_\_01/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the definitions against the source paper, verified the balancing lemma exhaustively on all $168$ monotone families of $\{0,1\}^4$, verified the whole construction end-to-end in exact rational arithmetic for $t=2$ and one or two hats per tribe, and evaluated the concentration bounds exactly for tribe counts up to $N\sim10^{60}$; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, and one clarification supplied by the referee was added as \cref{lem:limit} (the source paper defines $\pmon(t)$ as a limit in the stack length $n$, the writeup argued with a supremum; the two agree because $\pmon(t,n)$ is nondecreasing in $n$). No other mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+\end{tcolorbox}
+
+\begin{abstract}
+In Levine's hat problem, $t$ players each wear a stack of $n$ hats, independently coloured black or white with probability $\tfrac12$; each player sees every stack but her own and must point to a black hat on her own head, and the players win only if all succeed. Alon, Friedgut, Kalai and Kindler introduced the relaxation in which a player may, instead of a single hat, name any \emph{balanced monotone} family of colourings of her own stack, and conjectured (Conjecture~2.2 of arXiv:2208.06858) that the optimal success probability $\pmon(t)$ of this relaxed game tends to $0$ as $t\to\infty$. We show that $\pmon(t)=\tfrac12$ for every $t\ge1$. The construction partitions each stack into $N$ tribes of $m$ hats; the players aim at the event that some tribe is entirely black across all players, and each player rounds the conditional fibre of that event to a balanced monotone family. A second-moment bound shows the conditional probabilities concentrate around $\tfrac12$, so the loss in the rounding is $O(t\,2^{-m/2})$.
+\end{abstract}
+
+\section{Introduction}
+
+\paragraph{The game and its relaxations.}
+Fix integers $t\ge1$ (players) and $n\ge1$ (hats per player). Write $\Om_n=\{0,1\}^n$ with the uniform probability measure $\mu$; a point $x_i\in\Om_n$ is the colouring of player $i$'s stack ($1$ = black), and $x=(x_1,\dots,x_t)\in\Om_n^t$ is uniformly distributed. For a set $\cW$ of ``admissible'' subsets of $\Om_n$, a \emph{strategy} is a $t$-tuple of functions $f_i:\Om_n^{t-1}\to\cW$, and its \emph{winning set} is
+\[
+ W=\{x\in\Om_n^t:\ x_i\in f_i(x_{-i})\text{ for all }i\},
+\]
+where $x_{-i}$ denotes the stacks of all players other than $i$ \cite[Section~2]{AFKK}. The value of the game is $p(t,n)=\max\mu(W)$ over all strategies and $p(t)=\lim_{n\to\infty}p(t,n)$. Three choices of $\cW$ are considered in \cite{AFKK}: dictator families (``point to hat $j$''), giving Levine's original game and $\pdict$; intersecting families, giving $\pint$; and \emph{balanced monotone families}, giving $\pmon$. Here a family $\cA\subseteq\Om_n$ is \emph{monotone} if $x\in\cA$ and $y\ge x$ coordinatewise imply $y\in\cA$, and \emph{balanced} if $|\cA|=2^{n-1}$. Since a dictator family is intersecting and an intersecting family of size $2^{n-1}$ is balanced monotone,
+\[
+ \pmon(t,n)\ \ge\ \pint(t,n)\ \ge\ \pdict(t,n).
+\]
+Levine's conjecture (Conjecture~1.1 of \cite{AFKK}) is $\pdict(t)\to0$; \cite{AFKK} proves that $\pdict(t)$ is strictly decreasing in $t$, and states two progressively stronger conjectures.
+
+\begin{conjecture}[{\cite[Conjecture~2.1]{AFKK}}]\label{conj:21}
+$\pint(t)$ tends to $0$ as $t$ grows.
+\end{conjecture}
+
+\begin{conjecture}[{\cite[Conjecture~2.2]{AFKK}}]\label{conj:22}
+$\pmon(t)$ tends to $0$ as $t$ grows.
+\end{conjecture}
+
+Throughout, $\cM_n$ denotes the set of balanced monotone families in $\Om_n$, so a monotone strategy is a tuple $f_i:\Om_n^{t-1}\to\cM_n$; equivalently, $W\subseteq\Om_n^t$ is the winning set of a monotone strategy iff every $i$-fibre $\{x_i:(x_1,\dots,x_t)\in W\}$, for every fixed $x_{-i}$, is contained in some member of $\cM_n$ (and $W$ can then be enlarged to the set where equality holds).
+
+\paragraph{Result.}
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+For every integer $t\ge1$,
+\[
+ \pmon(t)=\frac12 .
+\]
+More precisely, $\pmon(t,n)\le\frac12$ for all $n$, and for every $t\ge2$ and $m\ge1$ there are $n$ and a monotone strategy with $n$ hats per player whose success probability is at least
+\[
+ \frac12-\sqrt2\,t\,2^{-m/2}-\frac t2\,2^{-mt}.
+\]
+\end{restatable}
+
+\begin{corollary}\label{cor:22}
+\Cref{conj:22} is false. \Cref{conj:21} and Levine's Conjecture~1.1 are not affected.
+\end{corollary}
+\begin{proof}
+$\pmon(t)=\frac12\not\to0$. The balanced monotone families used in the proof of \cref{thm:main} are in general not intersecting (\cref{rem:scope}), so nothing follows for $\pint$ or $\pdict$.
+\end{proof}
+
+\begin{proofidea}
+The upper bound is trivial: whatever player $i$ sees, she names a set of measure exactly $\frac12$ for her own independent stack, so she alone succeeds with probability $\frac12$. For the lower bound, split each stack into $N$ \emph{tribes} of $m$ hats and let $C$ be the monotone event ``some tribe is all-black for all $t$ players''; $N$ is chosen so that $\Prob(C)\approx\frac12$. Given $x_{-i}$, the $i$-fibre of $C$ is again monotone, with conditional measure $Q_i=1-(1-2^{-m})^{M_i}$ where $M_i\sim\Bin(N,2^{-m(t-1)})$ counts the tribes that are all-black for the other players. A product-variance bound gives $\Var(Q_i)\le2\cdot2^{-m}$, so $Q_i$ concentrates at its mean $\Prob(C)$. Each player rounds her fibre to a nested balanced monotone family (\cref{lem:balance}); by a union bound the rounding loses at most $\sum_i\E|Q_i-\frac12|=O(t\,2^{-m/2})$ of success probability (\cref{lem:sync}). Letting $m\to\infty$ gives $\pmon(t)\ge\frac12$.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{Two general lemmas}
+
+\begin{restatable}[Balancing a monotone family]{lemma}{lembalance}\label{lem:balance}
+Let $\cF\subseteq\Om_n$ be monotone. There is a balanced monotone family $\cA\in\cM_n$ with $\cF\subseteq\cA$ if $|\cF|\le2^{n-1}$ and $\cA\subseteq\cF$ if $|\cF|\ge2^{n-1}$; in either case $\mu(\cF\triangle\cA)=\bigl|\mu(\cF)-\frac12\bigr|$. With a fixed tie-breaking order on $\Om_n$ the construction is deterministic, i.e.\ $\cA$ is a function of $\cF$.
+\end{restatable}
+\begin{proofidea}
+If $\cF$ is too small, repeatedly add an inclusion-maximal element of the complement; if too large, repeatedly remove an inclusion-minimal element of $\cF$. Both operations preserve monotonicity and change the size by one.\fullproofref{pf:balance}
+\end{proofidea}
+
+\begin{restatable}[Synchronisation]{lemma}{lemsync}\label{lem:sync}
+Let $C\subseteq\Om_n^t$ be monotone (as a subset of $\{0,1\}^{nt}$). For each player $i$ and each $x_{-i}$ let $\cF_i(x_{-i})=\{x_i:(x_1,\dots,x_t)\in C\}$ be the $i$-fibre of $C$, $q_i(x_{-i})=\mu(\cF_i(x_{-i}))$, and let $\cA_i(x_{-i})\in\cM_n$ be the balanced monotone family obtained from $\cF_i(x_{-i})$ by \cref{lem:balance}. Then $f_i=\cA_i$ is a monotone strategy, and its winning set $E=\bigcap_iE_i$, $E_i=\{x:x_i\in\cA_i(x_{-i})\}$, satisfies
+\begin{equation}\label{eq:sync}
+ \Prob(E)\ \ge\ \Prob(C)-\sum_{i=1}^t\E\Bigl|q_i(X_{-i})-\frac12\Bigr| .
+\end{equation}
+\end{restatable}
+\begin{proofidea}
+Each fibre of a monotone set is monotone, so \cref{lem:balance} applies. Conditionally on $x_{-i}$, the set $C\setminus E_i$ has measure $(q_i-\frac12)_+$ by nestedness; then $\Prob(E)\ge\Prob(C)-\sum_i\Prob(C\setminus E_i)$.\fullproofref{pf:sync}
+\end{proofidea}
+
+\section{The block-tribes construction}\label{sec:tribes}
+
+Fix $t\ge2$ and $m\ge1$, and put
+\begin{equation}\label{eq:params}
+ u=2^{-m},\qquad s=u^t=2^{-mt},\qquad N=\Bigl\lceil\frac{\log2}{-\log(1-s)}\Bigr\rceil,\qquad n=mN .
+\end{equation}
+Each player's $n$ hats are partitioned into $N$ tribes of $m$ hats; write $X_{i,a,b}\in\{0,1\}$ for the colour of hat $b\in[m]$ of tribe $a\in[N]$ of player $i\in[t]$. Let
+\[
+ C=\bigl\{\exists a\in[N]\ \ \forall i\in[t]\ \forall b\in[m]:\ X_{i,a,b}=1\bigr\}
+\]
+be the event that some tribe is entirely black across all players. $C$ is monotone.
+
+\begin{restatable}[Properties of $C$]{lemma}{lemtribes}\label{lem:tribes}
+With the notation of \eqref{eq:params} and $c:=\Prob(C)$:
+\begin{enumerate}[label=(\alph*),nosep]
+\item $c=1-(1-s)^N$ and $\ \frac12\le c<\frac12+\frac s2$.
+\item For each player $i$, conditionally on $X_{-i}$, the $i$-fibre of $C$ has measure $Q_i=1-(1-u)^{M_i}$, where $M_i\sim\Bin(N,r)$ with $r=u^{t-1}$ is the number of tribes whose $m(t-1)$ hats of the other players are all black. Moreover $\E Q_i=c$.
+\item $\Var(Q_i)\le Nsu\le2u$.
+\item $\E\bigl|Q_i-\frac12\bigr|\le\sqrt{2u}+\frac s2$.
+\end{enumerate}
+\end{restatable}
+\begin{proofidea}
+(a) The $N$ tribe events are independent of probability $s$; the two inequalities are the definition of $N$ as a ceiling. (b) Given the others' hats, $C$ happens iff one of the $M_i$ eligible tribes is all-black for player $i$; $\E Q_i=1-(1-ru)^N$ and $ru=s$. (c) $1-Q_i$ is a product of $N$ independent factors in $\{1,1-u\}$; the variance of a product of independent $[0,1]$-valued variables is at most the sum of the variances, which is $Nr(1-r)u^2\le Nsu$, and $Ns\le\log2+s<2$ by the choice of $N$. (d) Cauchy--Schwarz plus (a).\fullproofref{pf:tribes}
+\end{proofidea}
+
+\begin{restatable}[Limit versus supremum]{lemma}{lemlimit}\label{lem:limit}
+$\pmon(t,n)$ is nondecreasing in $n$ and at most $\frac12$; hence $\pmon(t)=\lim_n\pmon(t,n)=\sup_n\pmon(t,n)$.
+\end{restatable}
+\begin{proofidea}
+Append an ignored hat: $\cA\mapsto\cA\times\{0,1\}$ maps $\cM_n$ into $\cM_{n+1}$ and preserves the winning set's measure. The upper bound is the trivial one-player bound.\fullproofref{pf:limit}
+\end{proofidea}
+
+\section{Remarks}
+
+\begin{remark}[Size of the stacks]
+The construction uses $n=mN$ hats with $N\approx(\log2)/s=(\log2)\,2^{mt}$, so $n$ is enormous, and doubly exponential in $t$ if $m$ grows with $t$ (for instance $m=\lceil6\log_2(t+1)\rceil$ makes the bound of \cref{thm:main} equal to $\frac12-O(t^{-2})$). This is legitimate: $\pmon(t)$ is defined as the limit in $n$ for fixed $t$, and it is consistent with the remark in \cite{AFKK} that $p(t,n)\to0$ as $t\to\infty$ for each \emph{fixed} $n$.
+\end{remark}
+
+\begin{remark}[Scope]\label{rem:scope}
+The families produced by \cref{lem:balance} from the fibres of $C$ are balanced and monotone but in general not intersecting: two members of the completed family may have disjoint supports. Hence the argument says nothing about $\pint$ or $\pdict$; Conjectures~1.1 and~2.1 of \cite{AFKK} remain open.
+\end{remark}
+
+\begin{remark}[Computational checks]
+The referee (\cref{app:referee}) verified \cref{lem:balance} exhaustively on all $168$ monotone families of $\{0,1\}^4$; verified the whole construction for $t=2$, $m=1$ ($N=3$, $64$ outcomes) in exact rational arithmetic, obtaining $\Prob(C)=37/64$, $\Prob(E_1)=\Prob(E_2)=\frac12$ exactly and success probability $19/64$ against the bound $11/64$ from \eqref{eq:sync}; and evaluated $c$, $\E Q_i$, $\Var(Q_i)$ and $\E|Q_i-\frac12|$ exactly for $t\in\{2,3,4,10\}$ and $m\le20$, where the rigorous lower bound $c-t\,\E|Q_i-\frac12|$ on the success probability reaches $0.4994$ for $t=2$ and $0.4968$ for $t=10$ at $m=20$.
+\end{remark}
+
+\begin{remark}[Novelty and related work]
+The referee's search found no earlier resolution of \cref{conj:22}. Heilman and Tamuz \cite{HT25} give a Fourier-analytic upper bound for two players in the original game and do not treat the monotone relaxation. A recent analysis of a continuous-stack relaxation \cite{Cont25} finds value exactly $\frac12$ for that different relaxation, an independent echo of the phenomenon here. None of this has been checked by a human.
+\end{remark}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:balance}
+\lembalance*
+\begin{proof}
+Suppose $|\cF|<2^{n-1}$. The complement $\Om_n\setminus\cF$ is nonempty and downward closed (if $y\notin\cF$ and $x\le y$ then $x\notin\cF$, since $x\in\cF$ would force $y\in\cF$). Let $z$ be an inclusion-maximal element of $\Om_n\setminus\cF$ (the first such in the tie-breaking order) and put $\cF'=\cF\cup\{z\}$. Then $\cF'$ is monotone: if $x\in\cF'$ and $y\ge x$, either $x\in\cF$ and $y\in\cF$, or $x=z$ and then $y\ge z$ with $y\ne z$ gives $y\in\cF$ by maximality of $z$ in the complement, while $y=z\in\cF'$. Repeating $2^{n-1}-|\cF|$ times yields a monotone $\cA\supseteq\cF$ with $|\cA|=2^{n-1}$, and $\mu(\cF\triangle\cA)=\mu(\cA)-\mu(\cF)=\frac12-\mu(\cF)$.
+
+Suppose $|\cF|>2^{n-1}$. Let $z$ be an inclusion-minimal element of $\cF$ and put $\cF'=\cF\setminus\{z\}$. Then $\cF'$ is monotone: if $x\in\cF'$ and $y\ge x$ then $y\in\cF$, and $y=z$ would give $z\ge x$ with $x\in\cF$, $x\ne z$, contradicting minimality of $z$. Repeating $|\cF|-2^{n-1}$ times yields a monotone $\cA\subseteq\cF$ with $|\cA|=2^{n-1}$ and $\mu(\cF\triangle\cA)=\mu(\cF)-\frac12$. If $|\cF|=2^{n-1}$ take $\cA=\cF$. Note $2^{n-1}$ is an integer for $n\ge1$, so exact balance is attainable. Choosing at each step the first admissible element in the fixed order makes $\cA$ a function of $\cF$.
+\end{proof}
+
+\phantomsection\label{pf:sync}
+\lemsync*
+\begin{proof}
+If $(x_1,\dots,x_t)\in C$ and $x_i'\ge x_i$, then $(x_1,\dots,x_i',\dots,x_t)\ge(x_1,\dots,x_t)$ coordinatewise, so it lies in $C$; hence each fibre $\cF_i(x_{-i})$ is monotone and \cref{lem:balance} applies, producing $\cA_i(x_{-i})\in\cM_n$ as a function of $x_{-i}$. So $(f_i)_i=(\cA_i)_i$ is a monotone strategy with winning set $E=\bigcap_iE_i$.
+
+Fix $i$ and condition on $x_{-i}$; then $x_i$ is uniform on $\Om_n$. The set $\{x_i:x\in C\setminus E_i\}=\cF_i(x_{-i})\setminus\cA_i(x_{-i})$. If $q_i(x_{-i})\le\frac12$ then $\cF_i\subseteq\cA_i$ and this set is empty; if $q_i(x_{-i})>\frac12$ then $\cA_i\subseteq\cF_i$ and it has measure $\mu(\cF_i)-\mu(\cA_i)=q_i(x_{-i})-\frac12$. Thus
+\[
+ \Prob(C\setminus E_i\mid x_{-i})=\Bigl(q_i(x_{-i})-\frac12\Bigr)_+\le\Bigl|q_i(x_{-i})-\frac12\Bigr|,
+\]
+and taking expectations, $\Prob(C\setminus E_i)\le\E|q_i(X_{-i})-\frac12|$. Finally, $C\setminus E\subseteq\bigcup_i(C\setminus E_i)$, so by the union bound
+\[
+ \Prob(E)\ge\Prob(C\cap E)=\Prob(C)-\Prob(C\setminus E)\ge\Prob(C)-\sum_{i=1}^t\Prob(C\setminus E_i),
+\]
+which is \eqref{eq:sync}.
+\end{proof}
+
+\phantomsection\label{pf:tribes}
+\lemtribes*
+\begin{proof}
+(a) For $a\in[N]$ let $T_a$ be the event that all $mt$ hats of tribe $a$ are black. The $T_a$ depend on disjoint sets of hats, so they are independent, each of probability $2^{-mt}=s$, and $C=\bigcup_aT_a$ gives $c=1-(1-s)^N$. Put $\lambda=\log2/(-\log(1-s))>0$, so $N=\lceil\lambda\rceil$. From $N\ge\lambda$, $(1-s)^N\le(1-s)^\lambda=\frac12$, i.e.\ $c\ge\frac12$. From $N<\lambda+1$, $(1-s)^N>(1-s)^{\lambda+1}=\frac12(1-s)$, i.e.\ $c<\frac12+\frac s2$.
+
+(b) Fix $i$ and condition on $X_{-i}$. Call tribe $a$ \emph{eligible} if $X_{j,a,b}=1$ for all $j\ne i$ and all $b\in[m]$; eligibility of the $N$ tribes is determined by disjoint sets of $m(t-1)$ hats, so the number $M_i$ of eligible tribes is $\Bin(N,r)$ with $r=2^{-m(t-1)}=u^{t-1}$. Given $X_{-i}$, the event $C$ holds iff for some eligible tribe $a$ all of player $i$'s hats in tribe $a$ are black; the $i$-fibre of $C$ is thus the set of $x_i\in\Om_n$ having some eligible tribe all-black, a monotone family whose measure is $Q_i=1-(1-u)^{M_i}$ (the $M_i$ eligible tribes involve disjoint sets of $m$ hats of player $i$, each all-black with probability $u$). By independence of the tribes, $\E Q_i=1-\E[(1-u)^{M_i}]=1-\prod_{a=1}^N\E[Y_a]$ with $Y_a=1-u$ if tribe $a$ is eligible and $Y_a=1$ otherwise, so $\E Y_a=1-ru$ and $\E Q_i=1-(1-ru)^N=1-(1-s)^N=c$, using $ru=u^t=s$.
+
+(c) With $Y_a$ as in (b), $Z_i:=1-Q_i=\prod_{a=1}^NY_a$ with $Y_1,\dots,Y_N$ independent and $0\le Y_a\le1$. For independent random variables $Y_a\in[0,1]$,
+\[
+ \Var\Bigl(\prod_{a=1}^NY_a\Bigr)=\prod_{a=1}^N\E[Y_a^2]-\prod_{a=1}^N(\E Y_a)^2
+ =\sum_{a=1}^N\Bigl(\prod_{b<a}(\E Y_b)^2\Bigr)\bigl(\E[Y_a^2]-(\E Y_a)^2\bigr)\Bigl(\prod_{b>a}\E[Y_b^2]\Bigr)\le\sum_{a=1}^N\Var(Y_a),
+\]
+since every factor in the two products is in $[0,1]$. Here $Y_a$ takes the value $1-u$ with probability $r$ and $1$ with probability $1-r$, so $\Var(Y_a)=r(1-r)u^2\le ru^2=su$. Hence $\Var(Q_i)=\Var(Z_i)\le Nsu$. Finally, $-\log(1-s)\ge s$ gives $\lambda\le\log2/s$, so $Ns<(\lambda+1)s\le\log2+s<2$ (as $s\le\frac14$), and $\Var(Q_i)\le2u$.
+
+(d) By the triangle inequality, Cauchy--Schwarz, (b), (c) and (a),
+\[
+ \E\Bigl|Q_i-\frac12\Bigr|\le\E|Q_i-c|+\Bigl|c-\frac12\Bigr|\le\sqrt{\Var(Q_i)}+\Bigl|c-\frac12\Bigr|\le\sqrt{2u}+\frac s2. \qedhere
+\]
+\end{proof}
+
+\phantomsection\label{pf:limit}
+\lemlimit*
+\begin{proof}
+\emph{Upper bound.} Let $(f_i)$ be any monotone strategy with $n$ hats and winning set $W\subseteq E_1=\{x:x_1\in f_1(x_{-1})\}$. Since $x_1$ is independent of $x_{-1}$ and $\mu(f_1(x_{-1}))=\frac12$ for every $x_{-1}$, $\Prob(E_1)=\E_{x_{-1}}[\mu(f_1(x_{-1}))]=\frac12$, so $\mu(W)\le\frac12$ and $\pmon(t,n)\le\frac12$.
+
+\emph{Monotonicity in $n$.} Given a monotone strategy $(f_i)$ with $n$ hats, define a strategy with $n+1$ hats by $f_i'(x_{-i}')=f_i(x_{-i})\times\{0,1\}$, where $x_{-i}$ is obtained from $x'_{-i}$ by deleting the last hat of every stack. If $\cA\in\cM_n$ then $\cA\times\{0,1\}$ is monotone and has $2\cdot2^{n-1}=2^n$ elements, so it lies in $\cM_{n+1}$. The winning set of $(f_i')$ is $W\times\{0,1\}^t$ (the last hats are ignored), of measure $\mu(W)$. Hence $\pmon(t,n+1)\ge\pmon(t,n)$. A bounded nondecreasing sequence converges to its supremum.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+The upper bound $\pmon(t,n)\le\frac12$ for all $n$ is \cref{lem:limit}, and gives $\pmon(t)\le\frac12$. For $t=1$ any balanced family wins with probability exactly $\frac12$, so $\pmon(1)=\frac12$.
+
+Let $t\ge2$ and $m\ge1$, and take $u,s,N,n$ and the event $C$ as in \cref{sec:tribes}. Apply \cref{lem:sync} to $C$: for each player $i$ and each $x_{-i}$, the fibre $\cF_i(x_{-i})$ has measure $q_i(x_{-i})=Q_i$ in the notation of \cref{lem:tribes}(b), and $\cA_i(x_{-i})$ is its balanced monotone completion (enlarged if $Q_i\le\frac12$, shrunk if $Q_i>\frac12$). This is a deterministic monotone strategy with $n=mN$ hats per player, and by \eqref{eq:sync} and \cref{lem:tribes}(a),(d) its success probability satisfies
+\[
+ \Prob(E)\ \ge\ c-\sum_{i=1}^t\E\Bigl|Q_i-\frac12\Bigr|\ \ge\ \frac12-t\Bigl(\sqrt{2u}+\frac s2\Bigr)
+ =\frac12-\sqrt2\,t\,2^{-m/2}-\frac t2\,2^{-mt}.
+\]
+This is the quantitative statement. Hence $\pmon(t,mN)\ge\frac12-\sqrt2\,t\,2^{-m/2}-\frac t2\,2^{-mt}$, and by \cref{lem:limit} $\pmon(t)=\sup_n\pmon(t,n)\ge\frac12-\sqrt2\,t\,2^{-m/2}-\frac t2\,2^{-mt}$ for every $m$. Letting $m\to\infty$ gives $\pmon(t)\ge\frac12$, and with the upper bound, $\pmon(t)=\frac12$.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) on the \emph{original} writeup. Its step numbers refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification/scripts/2208.06858\_\_01/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{AFKK} N.~Alon, E.~Friedgut, G.~Kalai and G.~Kindler, The success probability in Levine's hat problem, and independent sets in graphs, arXiv:2208.06858 (v2, 2023).
+\bibitem{HT25} S.~Heilman and O.~Tamuz, A Fourier approach to Levine's hat puzzle, arXiv:2503.09042 (2025).
+\bibitem{Cont25} An analytical framework for the Levine hats problem, arXiv:2508.01737 (2025).
+\end{thebibliography}
+
+\end{document}

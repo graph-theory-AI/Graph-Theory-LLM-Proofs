@@ -1,0 +1,245 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\dK}{\vec{K}}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\N}{\mathbb N}
+\newcommand{\kb}{\binom{[k]}{b}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 1812.02420\_\_03 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{Directed Kneser graphs with the acyclicity--intersection property\\ exist only for $b\le2$ or $k\le b+1$\\[1ex] \large A complete answer to Problem~5.40 of Hochstättler, Schröder and Steiner}
+\author{Machine-generated note (see provenance box)}
+\date{9 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
+\small
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The classification and its proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{1812.02420\_\_03}; original writeup in \texttt{attacks/1812.02420\_\_03/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, confirmed the problem statement and the digraph conventions verbatim against the source paper, verified the three positive constructions exhaustively over all subfamilies (up to $2^{21}-1$ families for $b=2$, $k=7$), and confirmed the key impossibility $(k,b)=(5,3)$ by an independent finite computation not relying on the structural lemma; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, and three clarifications taken from the referee's report were added and are marked as such (the reason the closed walk in \cref{lem:min} lies on a proper subset, the second cyclic order in the $b=2$ triangle, and the remarks on parallel arcs and on $b=0$). No other mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+\end{tcolorbox}
+
+\begin{abstract}
+Hochstättler, Schröder and Steiner asked (Problem~5.40 of \emph{On the complexity of digraph colourings and vertex arboricity}) whether for all $k\ge b$ there is a digraph $\dK(k,b)$ on the vertex set $\binom{[k]}{b}$ such that the subdigraph induced by a family of $b$-sets is acyclic if and only if the family has a common element. Such ``directed Kneser graphs'' would make $b$-tuple $k$-colourings of digraphs equivalent to circular homomorphisms. We show that, in the source paper's convention (loopless digraphs, antiparallel arcs allowed, a digon being a directed cycle), $\dK(k,b)$ exists if and only if $b\le2$ or $k\le b+1$. In particular no $\dK(5,3)$ exists, so the answer to Problem~5.40 is negative in general. The negative part rests on a structural lemma: an inclusion-minimal family with empty intersection must induce exactly a directed Hamilton cycle; two overlapping minimal edge covers of $K_{b+2}$ then force incompatible induced graphs.
+\end{abstract}
+
+\section{Introduction}
+
+Throughout, digraphs are finite and loopless, and antiparallel arcs are allowed; a pair of antiparallel arcs (a \emph{digon}) is a directed cycle of length two, so a digraph containing a digon is not acyclic. These are exactly the conventions of the source paper \cite{HSS20}, which states that its digraphs are loopless but may have anti-parallel arcs and calls a digon a directed cycle of length two. For a digraph $D$ and $\cF\subseteq V(D)$ we write $D[\cF]$ for the induced subdigraph, and $[k]=\{1,\dots,k\}$.
+
+In their study of fractional and $b$-tuple colourings of digraphs, Hochstättler, Schröder and Steiner pose the following problem.
+
+\begin{problem}[{\cite[Problem~5.40]{HSS20}}]\label{prob:540}
+For given $k,b\in\N$ with $k\ge b$, is there a directed graph $\dK(k,b)$ with vertex set $\kb$ such that the following holds? The subdigraph of $\dK(k,b)$ induced by any $\{B_1,\dots,B_l\}\subseteq\kb$ is acyclic if and only if $\bigcap_{i=1}^{l}B_i\ne\varnothing$.
+\end{problem}
+
+Such directed Kneser graphs would allow $b$-tuple $k$-colourings of digraphs to be characterised by circular homomorphisms to $\dK(k,b)$, tying the fractional dichromatic number to circular homomorphism theory. The source paper confirms the case $k=b+1$: the directed cycle of length $b+1$ whose vertices are the sets $[b+1]\setminus\{i\}$ has the required property. We call a digraph $D$ on $\kb$ \emph{admissible for $(k,b)$} if for every nonempty $\cF\subseteq\kb$,
+\begin{equation}\label{eq:property}
+ D[\cF]\ \text{is acyclic}\quad\Longleftrightarrow\quad\bigcap_{B\in\cF}B\ne\varnothing.
+\end{equation}
+All integers $k\ge b$ below are positive.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+For positive integers $k\ge b$, a digraph admissible for $(k,b)$ exists if and only if
+\[
+ b\le2\qquad\text{or}\qquad k\le b+1 .
+\]
+\end{restatable}
+
+\begin{corollary}\label{cor:answer}
+The answer to \cref{prob:540} is negative in general: for every $b\ge3$ an admissible digraph exists only for $k\in\{b,b+1\}$. The smallest pair without an admissible digraph is $(k,b)=(5,3)$.
+\end{corollary}
+\begin{proof}
+Immediate from \cref{thm:main}: for $b\ge3$ and $k\ge b+2$ no admissible digraph exists, and $(5,3)$ is the lexicographically smallest such pair with $k\ge b$.
+\end{proof}
+
+\begin{proofidea}
+\emph{Negative part.} If $\cM$ is an inclusion-minimal family with empty intersection and $|\cM|\ge3$, then $D[\cM]$ must contain a directed cycle, the cycle must use every vertex of $\cM$ (a shorter cycle would sit on a proper subfamily, which has nonempty intersection and so must induce an acyclic digraph), and there can be no further arc (a chord or a reversed arc would again close a directed cycle on a proper subfamily). So $D[\cM]$ is exactly a directed Hamilton cycle and its underlying graph a chordless cycle (\cref{lem:min}). For $k=b+2$ the $b$-sets are complements of edges of $K_{b+2}$ and empty intersection means being an edge cover. A full star at a vertex $v$ is a minimal cover with $b+1\ge4$ edges, so it induces a chordless $C_{b+1}$; pick two nonadjacent cycle vertices $B_{vp},B_{vq}$ and replace the edges $vp,vq$ by $pq$: this is a minimal cover with $b$ edges, inducing a chordless $C_{b}$. Removing $B_{vp},B_{vq}$ from the first cycle leaves $b-3$ edges, removing $B_{pq}$ from the second leaves a path with $b-2$ edges, yet both are the same induced graph (\cref{prop:neg}). Larger $k$ reduce to $k=b+2$ by restricting to $\binom{U}{b}$ for a $(b+2)$-set $U$.
+\emph{Positive part.} For $k=b$ a single vertex works and for $k=b+1$ the directed $(b+1)$-cycle; for $b=1$ the complete bidirected digraph; for $b=2$ put digons between disjoint pairs and orient intersecting pairs $\{x,a\},\{x,c\}$ by the cyclic order read from $x$, so that a common element yields a transitive tournament while an empty intersection yields a digon or a directed triangle (\cref{prop:pos}).\fullproofref{pf:main}
+\end{proofidea}
+
+\section{Minimal empty-intersection families}
+
+\begin{restatable}[Structural lemma]{lemma}{lemmin}\label{lem:min}
+Let $D$ be admissible for $(k,b)$ and let $\cM\subseteq\kb$ be inclusion-minimal subject to $\bigcap_{B\in\cM}B=\varnothing$. If $|\cM|\ge3$, then the arcs of $D[\cM]$ are exactly the arcs of a directed Hamilton cycle of $\cM$. Consequently, in the undirected graph $H$ on $\kb$ in which two vertices are adjacent whenever some arc of $D$ joins them, $H[\cM]$ is a chordless cycle of length $|\cM|$.
+\end{restatable}
+\begin{proofidea}
+$D[\cM]$ is not acyclic, so it contains a directed cycle $C$; every proper subfamily of $\cM$ has nonempty intersection and induces an acyclic digraph, so $C$ spans $\cM$. An extra arc $X\to Y$ together with the cycle path from $Y$ to $X$, or a reversed cycle arc together with its partner, forms a directed cycle on a proper subfamily, again impossible.\fullproofref{pf:min}
+\end{proofidea}
+
+\section{Nonexistence for \texorpdfstring{$b\ge3$ and $k\ge b+2$}{b>=3 and k>=b+2}}
+
+\begin{restatable}{proposition}{propneg}\label{prop:neg}
+If $b\ge3$ and $k\ge b+2$, then no digraph is admissible for $(k,b)$.
+\end{restatable}
+\begin{proofidea}
+Reduce to $k=n:=b+2$ by restriction. Identify each $b$-set with the complementary edge $e$ of $K_n$, $B_e=[n]\setminus e$; then a family has empty intersection iff the corresponding edges cover $[n]$. The star $\cS_v$ at a vertex $v$ and the family $\cT=\{vx:x\notin\{v,p,q\}\}\cup\{pq\}$ are inclusion-minimal edge covers of sizes $n-1$ and $n-2$; by \cref{lem:min} they induce chordless cycles $C_{n-1}$ and $C_{n-2}$ in $H$. Choosing $B_{vp},B_{vq}$ nonadjacent on the first cycle (possible as $n-1\ge4$), the common subfamily $\cR=\cS_v\setminus\{vp,vq\}$ induces $n-5$ edges according to the first cycle and $n-4$ according to the second.\fullproofref{pf:neg}
+\end{proofidea}
+
+\begin{remark}[The case $(5,3)$]
+For $(k,b)=(5,3)$ the argument reads: the star at $1$ is a minimal $4$-edge cover of $K_5$ and must induce a chordless $C_4$; two opposite vertices of that $C_4$ correspond to edges $1p,1q$, and replacing them by $pq$ gives a minimal $3$-edge cover, which would have to induce a triangle, contradicting the absence of the chord in the $C_4$. The referee verified this instance by a second, independent finite argument that does not use \cref{lem:min}: after imposing the constraints of \eqref{eq:property} on the four vertices of the star family, exactly $6$ of the $2^{12}$ digraphs survive, all directed Hamilton $4$-cycles, and each leads to an empty-intersection triple that is forced to be acyclic (\cref{app:referee}).
+\end{remark}
+
+\section{Existence for \texorpdfstring{$b\le2$ or $k\le b+1$}{b<=2 or k<=b+1}}
+
+\begin{restatable}{proposition}{proppos}\label{prop:pos}
+An admissible digraph exists in each of the following cases.
+\begin{enumerate}[label=(\alph*),nosep]
+\item $k=b$: the edgeless digraph on the single vertex $[k]$.
+\item $k=b+1$: the directed cycle $B_1\to B_2\to\dots\to B_k\to B_1$ on $B_i=[k]\setminus\{i\}$.
+\item $b=1$: the complete bidirected digraph on the singletons $\{i\}$, $i\in[k]$.
+\item $b=2$, any $k\ge2$: fix a cyclic order on $[k]$ and, for $x\in[k]$, let $<_x$ be the linear order on $[k]\setminus\{x\}$ obtained by reading the cyclic order starting immediately after $x$. Put both arcs between disjoint $2$-sets, and for $A=\{x,a\}$, $B=\{x,c\}$ with $a\ne c$ put the single arc $A\to B$ iff $a<_x c$.
+\end{enumerate}
+\end{restatable}
+\begin{proofidea}
+(a) and (b): $\bigcap_{i\in I}B_i=[k]\setminus I$ is empty only for $I=[k]$, and every proper induced subdigraph of a directed cycle is acyclic. (c): distinct singletons have empty intersection and every pair of vertices carries a digon. (d): a family with common element $x$ is a set of vertices $\{x,a\}$ whose arcs all increase in $<_x$, hence a transitive tournament; a family with empty intersection either contains two disjoint sets (a digon) or is pairwise intersecting without a common element, in which case it contains $\{x,a\},\{x,c\},\{a,c\}$, and these form a directed triangle in either cyclic order of $x,a,c$.\fullproofref{pf:pos}
+\end{proofidea}
+
+\section{Remarks}
+
+\begin{remark}[Conventions]
+The classification lives in the source paper's convention that antiparallel arcs are allowed and a digon is a directed cycle. This is not a strawman reading: if digons were forbidden, two disjoint $b$-sets could never induce a non-acyclic two-vertex digraph, so the problem would fail trivially whenever $k\ge2b$, and the authors' own confirmed case $b=1$, $k=2$ is the digon. The source paper also allows parallel arcs; the writeup works with simple digraphs (digons allowed). As the referee notes, this is without loss of generality, since arc multiplicities never affect the acyclicity of an induced subdigraph, and \cref{lem:min} is then literally correct (a parallel duplicate of a cycle arc is not excluded by its proof, but only the underlying graph $H$ is used afterwards).
+\end{remark}
+
+\begin{remark}[Degenerate parameters]
+\Cref{thm:main} is stated for positive integers. If $\N$ were read as containing $0$, the pair $(k,0)$ would fail trivially: the single vertex $\varnothing$ has empty intersection but a one-vertex loopless digraph is acyclic. For the empty subfamily the usual conventions $\bigcap_\varnothing=[k]$ and ``the empty digraph is acyclic'' agree, so \eqref{eq:property} may equivalently be required for all subfamilies.
+\end{remark}
+
+\begin{remark}[Computational checks]
+The referee's scripts (\texttt{verification/scripts/1812.02420\_\_03/}) verified \eqref{eq:property} over every nonempty subfamily for the constructions of \cref{prop:pos}: the directed cycle for $b=1,\dots,5$, the bidirected complete digraph for $k\le5$, and the $b=2$ construction for $k=2,\dots,7$ (for $k=7$ all $2^{21}-1=2\,097\,151$ families). They also confirmed the edge-cover correspondence and the minimality of $\cS_v$ and $\cT$ for $n=5,6,7$, and enumerated the inclusion-minimal empty-intersection families of $\binom{[5]}{3}$ ($30$ of size $3$ and $5$ of size $4$, exactly the minimal edge covers of $K_5$). No violation was found.
+\end{remark}
+
+\begin{remark}[Consequences and novelty]
+The intended application in \cite{HSS20} was to express $b$-tuple $k$-colourings of digraphs as circular homomorphisms to $\dK(k,b)$; \cref{thm:main} shows that this cannot be set up in the proposed form for any $b\ge3$ and $k\ge b+2$. The referee's search found no prior construction or refutation of these digraphs; the related papers \cite{Kneser23,Kneser25} study dichromatic numbers of Kneser-type digraphs with canonical orientations, not the intersection--acyclicity property. This has not been checked by a human.
+\end{remark}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:min}
+\lemmin*
+\begin{proof}
+Since $\bigcap_{B\in\cM}B=\varnothing$, property \eqref{eq:property} says that $D[\cM]$ is not acyclic, so it contains a directed cycle $C$ (possibly of length two). Let $\cM'=V(C)$. If $\cM'\subsetneq\cM$, then $D[\cM']$ contains $C$ and is not acyclic, so by \eqref{eq:property} $\bigcap_{B\in\cM'}B=\varnothing$, contradicting the inclusion-minimality of $\cM$. Hence $C$ uses every vertex of $\cM$: it is a directed Hamilton cycle $v_1\to v_2\to\dots\to v_m\to v_1$ of $\cM$, $m=|\cM|\ge3$.
+
+We show that $D[\cM]$ has no further arc. Suppose $X\to Y$ is an arc of $D[\cM]$ that is not one of the $m$ cycle arcs. Since $D$ is loopless, $X\ne Y$, and since $X\to Y$ is not a cycle arc, $Y$ is not the successor of $X$ on $C$. Follow $C$ forward from $Y$ until $X$ and then use $X\to Y$: this is a directed cycle whose vertex set omits the successor of $X$ on $C$ (and every vertex strictly between $X$ and $Y$ in the forward direction), hence lies on a proper subfamily $\cM''\subsetneq\cM$. [Clarification added from the referee's report: this is why the subfamily is proper.] Then $D[\cM'']$ is not acyclic while $\bigcap_{B\in\cM''}B\ne\varnothing$ by minimality of $\cM$, contradicting \eqref{eq:property}. This covers in particular the reverse $v_{i+1}\to v_i$ of a cycle arc: it forms with $v_i\to v_{i+1}$ a digon on the two-element subfamily $\{v_i,v_{i+1}\}$, which is proper because $m\ge3$.
+
+Hence the arc set of $D[\cM]$ is exactly that of $C$. Two vertices of $\cM$ are then adjacent in $H$ iff they are consecutive on $C$, so $H[\cM]$ is a chordless cycle of length $m$.
+\end{proof}
+
+\phantomsection\label{pf:neg}
+\propneg*
+\begin{proof}
+\emph{Reduction to $k=b+2$.} Suppose $D$ is admissible for $(k,b)$ with $k>b+2$. Choose $U\subseteq[k]$ with $|U|=b+2$ and consider $D'=D[\binom{U}{b}]$. For $\cF\subseteq\binom Ub$ we have $D'[\cF]=D[\cF]$ and the intersection of $\cF$ is the same whether computed in $U$ or in $[k]$, so $D'$ satisfies \eqref{eq:property} for every nonempty $\cF\subseteq\binom Ub$. Relabelling $U$ as $[b+2]$ makes $D'$ admissible for $(b+2,b)$. It therefore suffices to show that no digraph is admissible for $(n,b)$ with $n=b+2$ and $b\ge3$.
+
+\emph{Edge covers.} Every $b$-subset of $[n]$ is the complement of a unique $2$-subset, i.e.\ of a unique edge of the complete graph $K_n$ on $[n]$. For an edge $e$ write $B_e=[n]\setminus e$; this is a bijection between $E(K_n)$ and $\binom{[n]}{b}$. For a set $\cE$ of edges,
+\[
+ \bigcap_{e\in\cE}B_e=[n]\setminus\bigcup_{e\in\cE}e,
+\]
+so $\{B_e:e\in\cE\}$ has empty intersection iff every vertex of $[n]$ lies on some edge of $\cE$, i.e.\ iff $\cE$ is an edge cover of $K_n$. Inclusion-minimal empty-intersection families thus correspond to inclusion-minimal edge covers. Assume, for a contradiction, that $D$ is admissible for $(n,b)$ and let $H$ be its underlying graph as in \cref{lem:min}; we identify a vertex $B_e$ of $H$ with the edge $e$.
+
+\emph{The star.} Fix $v\in[n]$ and let $\cS_v=\{vx:x\in[n]\setminus\{v\}\}$, the set of $n-1$ edges at $v$. It is an edge cover ($v$ is covered by any of its edges, and $x\ne v$ by $vx$), and it is inclusion-minimal, since deleting $vx$ leaves $x$ uncovered. Its size is $n-1=b+1\ge4\ge3$, so \cref{lem:min} applies: $H[\cS_v]$ is a chordless cycle $C_{n-1}$. As $n-1\ge4$, this cycle has two nonadjacent vertices; call them $B_{vp}$ and $B_{vq}$, with $p,q\in[n]\setminus\{v\}$ distinct.
+
+\emph{The modified cover.} Let $\cT=\{vx:x\in[n]\setminus\{v,p,q\}\}\cup\{pq\}$. It has $(n-3)+1=n-2$ edges. It is an edge cover: $p$ and $q$ are covered by $pq$, every $x\notin\{v,p,q\}$ by $vx$, and $v$ by any edge $vx$ with $x\notin\{v,p,q\}$, which exists because $n-3=b-1\ge2$. It is inclusion-minimal: deleting $vx$ leaves $x$ uncovered, and deleting $pq$ leaves both $p$ and $q$ uncovered. Its size is $n-2=b\ge3$, so by \cref{lem:min} $H[\cT]$ is a chordless cycle $C_{n-2}$.
+
+\emph{The clash.} Let $\cR=\cS_v\setminus\{vp,vq\}=\{vx:x\notin\{v,p,q\}\}=\cT\setminus\{pq\}$, a set of $n-3$ vertices of $H$ contained in both $\cS_v$ and $\cT$. Since induced subgraphs of induced subgraphs are induced subgraphs, $H[\cR]$ is obtained both from $H[\cS_v]$ by deleting $B_{vp},B_{vq}$ and from $H[\cT]$ by deleting $B_{pq}$.
+\begin{enumerate}[nosep]
+\item $H[\cS_v]\cong C_{n-1}$ and $B_{vp},B_{vq}$ are nonadjacent on it. Deleting two nonadjacent vertices of a cycle removes four distinct edges, so $H[\cR]$ has $(n-1)-4=n-5$ edges.
+\item $H[\cT]\cong C_{n-2}$. Deleting one vertex of a cycle leaves a path on $n-3$ vertices, so $H[\cR]$ has $(n-2)-2=n-4$ edges.
+\end{enumerate}
+The same graph cannot have both $n-5$ and $n-4$ edges. This contradiction shows that no digraph is admissible for $(b+2,b)$ when $b\ge3$, and by the reduction none for $(k,b)$ with $k\ge b+2$, $b\ge3$.
+\end{proof}
+
+\phantomsection\label{pf:pos}
+\proppos*
+\begin{proof}
+In each case we verify \eqref{eq:property} for every nonempty family $\cF$ of vertices.
+
+\emph{(a) $k=b$.} The only vertex is $[k]$, and the only nonempty family is $\{[k]\}$, whose intersection $[k]$ is nonempty since $k=b\ge1$. A single loopless vertex is acyclic. So \eqref{eq:property} holds.
+
+\emph{(b) $k=b+1$.} The vertices are $B_i=[k]\setminus\{i\}$, $i\in[k]$, and for $\varnothing\ne I\subseteq[k]$,
+\[
+ \bigcap_{i\in I}B_i=[k]\setminus I,
+\]
+which is empty iff $I=[k]$. The digraph is the directed cycle $B_1\to B_2\to\dots\to B_k\to B_1$. Its only directed cycle is the whole cycle, so $D[\{B_i:i\in I\}]$ is acyclic iff $I\ne[k]$ iff the intersection is nonempty. (For $k=2$ the cycle is the digon $B_1\leftrightarrows B_2$, which is consistent with the conventions.)
+
+\emph{(c) $b=1$.} The vertices are the singletons $\{i\}$, $i\in[k]$. Two distinct singletons are disjoint, so a family of singletons has nonempty intersection iff it consists of a single vertex. In the complete bidirected digraph every induced subdigraph on at least two vertices contains a digon, hence is not acyclic, while a single vertex is acyclic. So \eqref{eq:property} holds.
+
+\emph{(d) $b=2$.} The digraph is well defined: two distinct intersecting $2$-sets $A\ne B$ have exactly one common element $x$, so the rule assigns exactly one arc to the pair $\{A,B\}$ (namely from the set whose other element is $<_x$-smaller), and disjoint pairs receive a digon.
+
+First let $\cF$ have a common element $x$. Then every member of $\cF$ has the form $\{x,a\}$ with $a\in[k]\setminus\{x\}$, distinct members have distinct $a$, and for two members $\{x,a\},\{x,c\}$ the unique arc between them goes from $\{x,a\}$ to $\{x,c\}$ iff $a<_x c$. Thus $D[\cF]$ is the transitive tournament of the linear order $<_x$ restricted to $\{a:\{x,a\}\in\cF\}$, which is acyclic (a directed cycle would contain an arc decreasing in $<_x$).
+
+Now let $\cF$ have empty intersection. If $\cF$ contains two disjoint members $A,B$, then $D[\cF]$ contains the digon $A\leftrightarrows B$ and is not acyclic. Otherwise $\cF$ is pairwise intersecting. It has at least two members (a single member has nonempty intersection), say $\{x,a\}$ and $\{x,c\}$ with common element $x$ and $a\ne c$. Since $x$ is not a common element of $\cF$, some member $F\in\cF$ does not contain $x$; as $F$ meets $\{x,a\}$ and $\{x,c\}$, it contains $a$ and $c$, so $F=\{a,c\}$. Thus $\{x,a\},\{x,c\},\{a,c\}\in\cF$. We show these three vertices induce a directed triangle. The elements $x,a,c$ are distinct; read the cyclic order starting from $x$.
+\begin{itemize}[nosep]
+\item If $a$ comes before $c$, i.e.\ $a<_x c$, then $\{x,a\}\to\{x,c\}$. Reading from $c$, the next elements among $\{x,a\}$ are $x$ then $a$, so $x<_c a$ and $\{x,c\}\to\{a,c\}$. Reading from $a$, $c$ comes before $x$, so $c<_a x$ and $\{a,c\}\to\{x,a\}$. Hence $\{x,a\}\to\{x,c\}\to\{a,c\}\to\{x,a\}$ is a directed $3$-cycle.
+\item If $c$ comes before $a$, exchanging the roles of $a$ and $c$ in the previous item gives the directed $3$-cycle $\{x,c\}\to\{x,a\}\to\{a,c\}\to\{x,c\}$. [Clarification added from the referee's report, which checked both cyclic orders; the writeup treats the first.]
+\end{itemize}
+In all cases $D[\cF]$ is not acyclic. Hence \eqref{eq:property} holds for every $k\ge2$ when $b=2$.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+Let $k\ge b\ge1$. If $b\le2$, an admissible digraph exists by \cref{prop:pos}(c) for $b=1$ and by \cref{prop:pos}(d) for $b=2$ (note $k\ge b=2$). If $k\le b+1$, one exists by \cref{prop:pos}(a) for $k=b$ and \cref{prop:pos}(b) for $k=b+1$. In the remaining case $b\ge3$ and $k\ge b+2$, \cref{prop:neg} shows that none exists. The three cases are exhaustive, which proves the equivalence.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) on the \emph{original} writeup. Its step numbers refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification/scripts/1812.02420\_\_03/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{HSS20} W.~Hochstättler, F.~Schröder and R.~Steiner, On the complexity of digraph colourings and vertex arboricity, \emph{Discrete Math.\ Theor.\ Comput.\ Sci.} 22:1 (2020); arXiv:1812.02420.
+\bibitem{Kneser23} Colouring complete multipartite and Kneser-type digraphs, arXiv:2309.16565 (2023).
+\bibitem{Kneser25} On the dichromatic number of generalized Kneser and Johnson digraphs, arXiv:2511.12553 (2025).
+\end{thebibliography}
+
+\end{document}

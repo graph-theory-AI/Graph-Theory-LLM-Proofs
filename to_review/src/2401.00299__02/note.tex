@@ -1,0 +1,208 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\cP}{\mathcal P}
+\newcommand{\Q}{Q}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2401.00299\_\_02 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{The number of partitions of the hypercube into squares:\\ the asymptotic conjectured by Alon, Balogh and Potapov}
+\author{Machine-generated note (see provenance box)}
+\date{9 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
+\small
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The argument was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2401.00299\_\_02}; original writeup in \texttt{attacks/2401.00299\_\_02/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the two cited propositions verbatim against all three arXiv versions of the source paper, and machine-verified the construction: all $30^4=810{,}000$ lifted $4$-tuples at $m=4$ give distinct valid square partitions of $Q_6$, and exhaustive censuses gave $f_2(2),\dots,f_2(5)=1,3,30,4380$. Its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}. No mathematical content was changed. Three clarifications taken from the referee's report are added as remarks and marked as such: the equivalence of the writeup's asymptotic with the source paper's $N^{1\pm o(1)}$ formulation (\cref{rem:equiv}), the version-dependence of the proposition numbering (\cref{rem:numbering}), and the exact numbers of the machine checks (\cref{rem:comp}).
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+\end{tcolorbox}
+
+\begin{abstract}
+Let $f_2(d)$ be the number of partitions of the vertex set of the hypercube $Q_d$ into $2$-dimensional subcubes. Alon, Balogh and Potapov asked for the asymptotic behaviour of $f_2(d)$ and conjectured that it obeys the same bound as their Proposition~1.10 for partitions into singletons and squares, namely $f_2(d)=N^{1\pm o(1)}$ with $N=(d/e)^{2^{d-1}}$, equivalently $\log f_2(d)=(1+o(1))\,2^{d-1}\log d$. We prove this. The upper bound is their Proposition~1.6. For the lower bound, a pigeonhole argument selects a common singleton set $L$ for many singleton-and-square partitions of $Q_{d-2}$; placing four such partitions on the four layers of $Q_{d-2}\times Q_2$ and replacing the four aligned copies of each singleton by one vertical square yields $f_2(d)\ge\bigl(f_{0,2}(d-2)/2^{2^{d-2}}\bigr)^4$, and the pigeonhole loss is negligible against the main term.
+\end{abstract}
+
+\section{Introduction}
+
+Let $Q_d=\{0,1\}^d$ be the $d$-dimensional hypercube. A \emph{($k$-dimensional) subcube} of $Q_d$ is a set of the form $\{x\in Q_d: x_i=c_i \text{ for } i\notin F\}$ for a set $F\subseteq[d]$ of $k$ free coordinates and fixed values $c_i\in\{0,1\}$; for $k=2$ we also say \emph{square}. Following Alon, Balogh and Potapov \cite{ABP}, for $S\subseteq\{0,1,\dots,d\}$ let $f_S(d)$ be the number of partitions of $Q_d$ into subcubes whose dimensions all lie in $S$; we write $f_2(d)=f_{\{2\}}(d)$ and $f_{0,2}(d)=f_{\{0,2\}}(d)$, so that $f_2$ counts partitions into squares and $f_{0,2}$ counts partitions into singletons and squares. As in \cite{ABP}, put
+\[
+ n=2^{d-1},\qquad N=N_d=\Bigl(\frac de\Bigr)^{n}.
+\]
+All logarithms are in a fixed base.
+
+Two results of \cite{ABP} are used. Proposition~1.6 there gives, for the total number $f(d)$ of partitions into subcubes of any dimensions,
+\begin{equation}\label{eq:upper}
+ f_2(d)\ \le\ f(d)\ \le\ (d+1)^{2^{d-1}},
+\end{equation}
+and Proposition~1.10 there (Proposition~1.7 with $r=2$ in arXiv version~3, see \cref{rem:numbering}) states $f_{0,2}(m)=N_m^{1+o(1)}$; its proof gives in particular
+\begin{equation}\label{eq:f02}
+ \log f_{0,2}(m)\ \ge\ (1-o(1))\,2^{m-1}\log m .
+\end{equation}
+After these results the authors write: ``It is natural to ask what happens if only $2$-dimensional subcubes are allowed to be in a partition. We believe that the same bound as in Proposition~[1.10] holds.''
+
+\begin{problem}[{\cite[Problem 1.11 in arXiv v1/v2; Problem 1.9 in the published version]{ABP}}]\label{prob}
+Determine the asymptotic behaviour of the number $f_2(d)$.
+\end{problem}
+
+We prove the conjectured asymptotic.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+\[
+ \log f_2(d)=(1+o(1))\,2^{d-1}\log d\qquad(d\to\infty),
+\]
+equivalently $f_2(d)=d^{(1+o(1))2^{d-1}}$.
+\end{restatable}
+
+\begin{remark}[Equivalence with the source paper's formulation; from the referee's report]\label{rem:equiv}
+Since $N^{1\pm o(1)}=\exp\bigl((1\pm o(1))\,n(\log d-\log e)\bigr)$ and $\log e/\log d\to0$, the statement $f_2(d)=d^{(1\pm o(1))n}$ is identical to $f_2(d)=N^{1\pm o(1)}$: the constant-per-vertex factor $e^{-n}$ is absorbed by the $o(1)$ in the exponent in both directions. Thus \cref{thm:main} is exactly the bound of Proposition~1.10 of \cite{ABP} transferred to $f_2$, at the precision at which that proposition is stated. Finer, second-order factors of the form $c^{\,2^{d-1}}$ are not determined by \cref{thm:main}; see \cref{rem:open}.
+\end{remark}
+
+\begin{proofidea}
+The upper bound is \eqref{eq:upper}. For the lower bound, set $m=d-2$. Among the $f_{0,2}(m)$ singleton-and-square partitions of $Q_m$, at most $2^{2^m}$ different singleton sets $L\subseteq Q_m$ occur, so some $L$ is the singleton set of at least $f_{0,2}(m)/2^{2^m}$ of them (\cref{lem:lift}). Identify $Q_{m+2}=Q_m\times Q_2$, put one such partition on each of the four layers $Q_m\times\{z\}$, keep its squares, and replace the four aligned singletons $(x,z)$, $z\in Q_2$, for each $x\in L$, by the vertical square $\{x\}\times Q_2$. The result is a square partition of $Q_{m+2}$, and the four layer partitions can be read off from it, so $f_2(m+2)\ge\bigl(f_{0,2}(m)/2^{2^m}\bigr)^4$. Taking logarithms and using \eqref{eq:f02}, the pigeonhole loss $2^{d}\log2$ is $O(2^d)$ while the main term is of order $2^d\log d$.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{The lifting lemma}
+
+For a partition $\cP$ of $Q_m$ into singletons and squares, let
+\[
+ L(\cP)=\{x\in Q_m:\ \{x\}\text{ is a part of }\cP\}
+\]
+be its \emph{singleton set}.
+
+\begin{restatable}[Lifting lemma]{lemma}{lemlift}\label{lem:lift}
+For every $m\ge1$,
+\[
+ f_2(m+2)\ \ge\ \Bigl(\frac{f_{0,2}(m)}{2^{2^m}}\Bigr)^{4}.
+\]
+\end{restatable}
+
+\begin{proofidea}
+Pigeonhole on singleton sets gives $L\subseteq Q_m$ with $a_L\ge f_{0,2}(m)/2^{2^m}$ partitions having $L(\cP)=L$. Any ordered $4$-tuple $(\cP_z)_{z\in Q_2}$ of them is lifted to the square partition of $Q_m\times Q_2$ consisting of the squares $C\times\{z\}$ for $C$ a square of $\cP_z$ and the vertical squares $\{x\}\times Q_2$ for $x\in L$. The vertical squares are exactly the parts with free coordinates $m+1,m+2$, so $L$ is recovered, and the horizontal squares in layer $z$ recover $\cP_z$; hence the lifting is injective and $f_2(m+2)\ge a_L^4$.\fullproofref{pf:lift}
+\end{proofidea}
+
+\section{Remarks}
+
+\begin{remark}[An elementary upper bound]\label{rem:elementary}
+The writeup also records a self-contained upper bound that suffices for \cref{thm:main}, so that only the lower bound genuinely depends on \cite{ABP}. Put $n=2^{d-1}$, the number of even-weight vertices. Every square of $Q_d$ contains exactly two even-weight vertices (antipodal in the square), so a square partition has $2^d/4=n/2$ squares, and each square is determined by its smaller even-weight vertex (in a fixed ordering) together with its pair of free coordinates. This is an injection of the set of square partitions into a set of size at most
+\[
+ \binom{n}{n/2}\binom d2^{\,n/2}\ \le\ 2^n d^{\,n}\ =\ \exp\bigl(n\log d+O(n)\bigr),
+\]
+which gives $\limsup_{d\to\infty}\log f_2(d)/(2^{d-1}\log d)\le1$ directly.
+\end{remark}
+
+\begin{remark}[What remains open]\label{rem:open}
+\Cref{thm:main} determines the leading term $2^{d-1}\log d$ of $\log f_2(d)$. It does not determine a possible second-order factor of the form $c^{\,2^{d-1}}$; \cref{lem:lift} loses exactly such a factor ($2^{-2^{d}}$) through the pigeonhole step, and \eqref{eq:f02} is itself only stated up to $N_m^{o(1)}$. The referee notes that the authors of \cite{ABP} were also interested in this finer question, which under a maximalist reading of ``determine the asymptotic behaviour'' stays open.
+\end{remark}
+
+\begin{remark}[Numbering of the cited propositions; from the referee's report]\label{rem:numbering}
+The referee compared the TeX sources of arXiv versions 1, 2 and 3 of \cite{ABP}. The lower bound \eqref{eq:f02} is Proposition~1.10 (environment \texttt{zero2}) in v1 and v2, with proof $f_{0,2}(m)\ge\binom m2^{(1/2-\delta)2^{m-1}}$ for every fixed $\delta>0$; in v3 it is subsumed into Proposition~1.7, stated for every fixed $r\ge2$, whose case $r=2$ is the identical bound. The upper bound $f(d)\le(d+1)^n$ is Proposition~1.6 in v2 and v3 (in v1 it is Theorem~1.6 with the weaker bound $(5e)^nN$, still sufficient here). The proof of \eqref{eq:f02} in \cite{ABP} rests on a nibble-type counting theorem of Asratian and Kuzjurin \cite{AK}, which neither the writeup nor the referee re-proved.
+\end{remark}
+
+\begin{remark}[Computational checks; from the referee's report]\label{rem:comp}
+Exhaustive exact-cover enumeration gave $f_{0,2}(1),\dots,f_{0,2}(4)=1,2,10,339$ and $f_2(2),\dots,f_2(5)=1,3,30,4380$; every enumerated square partition of $Q_d$ has $2^d/4$ parts and $f_2(d)\le(d+1)^{2^{d-1}}$ holds at every computed value. For $m=3$ the best singleton set is $L=\emptyset$ with $a_L=3$, and all $3^4=81$ lifted objects are valid, pairwise distinct square partitions of $Q_5$ appearing in the census; for $m=4$ the best $L$ is again $\emptyset$ with $a_L=30$, and all $30^4=810{,}000$ lifted objects are valid, pairwise distinct square partitions of $Q_6$, so $f_2(6)\ge810{,}000$. At these sizes the right-hand side of \cref{lem:lift} is below $1$, as expected: the pigeonhole cost only becomes negligible asymptotically.
+\end{remark}
+
+\begin{remark}[Novelty]
+The referee's search (\cref{app:referee}) found no publication of this observation and no resolution of \cref{prob} among the papers citing \cite{ABP}; the nearest related works (partitions of $\mathbb Z_q^n$ into subcubes of dimension $n-m$; partitions of $\mathbb F_2^m$ into $2$-dimensional affine subspaces) concern different families. This has not been checked by a human.
+\end{remark}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:lift}
+\lemlift*
+\begin{proof}
+For $L\subseteq Q_m$ let $a_L$ be the number of partitions $\cP$ of $Q_m$ into singletons and squares with $L(\cP)=L$. There are at most $2^{2^m}$ subsets $L$ of $Q_m$, and $\sum_{L\subseteq Q_m}a_L=f_{0,2}(m)$, so some $L$ satisfies
+\begin{equation}\label{eq:pigeon}
+ a_L\ \ge\ \frac{f_{0,2}(m)}{2^{2^m}} .
+\end{equation}
+Fix such an $L$ and identify $Q_{m+2}$ with $Q_m\times Q_2$, the last two coordinates forming the $Q_2$ factor. Let $(\cP_z)_{z\in Q_2}$ be an ordered $4$-tuple of partitions counted by $a_L$, so that $L(\cP_z)=L$ for all four $z$. Define a family $\Phi(\cP_z)_{z}$ of subsets of $Q_m\times Q_2$ as follows:
+\begin{enumerate}[nosep]
+\item for every $z\in Q_2$ and every square $C$ of $\cP_z$, the set $C\times\{z\}$;
+\item for every $x\in L$, the set $\{x\}\times Q_2$.
+\end{enumerate}
+Each set of type~1 is a square of $Q_{m+2}$ (its two free coordinates are those of $C$, in $[m]$), and each set of type~2 is a square of $Q_{m+2}$ (free coordinates $m+1$ and $m+2$).
+
+\emph{The family is a partition.} Let $(x,z)\in Q_m\times Q_2$. If $x\notin L$, then $x$ is not a singleton of $\cP_z$, so it lies in a unique square $C$ of $\cP_z$, and $(x,z)$ lies in $C\times\{z\}$; it lies in no other set of type~1 (the squares of $\cP_z$ are disjoint, and sets $C'\times\{z'\}$ with $z'\ne z$ miss the layer $z$) and in no set of type~2 (as $x\notin L$). If $x\in L$, then $(x,z)$ lies in $\{x\}\times Q_2$, in no other set of type~2, and in no set of type~1, because $x$ is a singleton of $\cP_z$ and hence in no square of $\cP_z$. So every vertex lies in exactly one set of the family.
+
+\emph{The map is injective.} Given the partition $\Phi(\cP_z)_z$, the parts whose free coordinates are $\{m+1,m+2\}$ are exactly the sets of type~2, which recover $L$. For each $z\in Q_2$, the parts contained in the layer $Q_m\times\{z\}$ are exactly the sets $C\times\{z\}$ with $C$ a square of $\cP_z$, which recover the squares of $\cP_z$; together with the singletons $\{x\}$, $x\in L$, these are all parts of $\cP_z$. Hence distinct $4$-tuples give distinct square partitions of $Q_{m+2}$, and
+\[
+ f_2(m+2)\ \ge\ a_L^4 .
+\]
+Combining with \eqref{eq:pigeon} gives the lemma.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+\emph{Lower bound.} Let $d\ge3$ and $m=d-2$. By \cref{lem:lift} and \eqref{eq:f02},
+\begin{align*}
+ \log f_2(d)&\ \ge\ 4\bigl(\log f_{0,2}(d-2)-2^{d-2}\log2\bigr)\\
+ &\ \ge\ 4(1-o(1))\,2^{d-3}\log(d-2)-2^{d}\log2\\
+ &\ =\ (1-o(1))\,2^{d-1}\log d,
+\end{align*}
+where the last equality uses $\log(d-2)/\log d\to1$ and the fact that the pigeonhole loss $2^d\log2$ is $O(2^d)$, whereas $2^{d-1}\log d$ is of order $2^d\log d$. Hence
+\begin{equation}\label{eq:liminf}
+ \liminf_{d\to\infty}\frac{\log f_2(d)}{2^{d-1}\log d}\ \ge\ 1 .
+\end{equation}
+
+\emph{Upper bound.} By \eqref{eq:upper}, $\log f_2(d)\le2^{d-1}\log(d+1)=(1+o(1))\,2^{d-1}\log d$, so
+\begin{equation}\label{eq:limsup}
+ \limsup_{d\to\infty}\frac{\log f_2(d)}{2^{d-1}\log d}\ \le\ 1 .
+\end{equation}
+(\Cref{rem:elementary} gives an independent proof of \eqref{eq:limsup}.)
+
+Together, \eqref{eq:liminf} and \eqref{eq:limsup} give $\log f_2(d)=(1+o(1))\,2^{d-1}\log d$, i.e.\ $f_2(d)=d^{(1+o(1))2^{d-1}}$.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-03) on the \emph{original} writeup. Its step numbers (S1--S9) refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification/scripts/2401.00299\_\_02/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{ABP} N.~Alon, J.~Balogh and V.~N.~Potapov, Partitioning the hypercube into smaller hypercubes, \emph{Illinois J. Math.} 69 (2025) 109--122; arXiv:2401.00299.
+\bibitem{AK} A.~S.~Asratian and N.~N.~Kuzjurin, On the number of nearly perfect matchings in almost regular uniform hypergraphs, \emph{Discrete Math.} 207 (1999) 1--8.
+\end{thebibliography}
+
+\end{document}

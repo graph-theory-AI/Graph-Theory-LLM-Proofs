@@ -1,0 +1,195 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\Ln}{\operatorname{L}}
+\newcommand{\cart}{\mathbin{\mdlgwhtsquare}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2505.24100\_\_01 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{Linear-size deletion-saturated graphs for even cycles\\ from line graphs of cubic hypohamiltonian graphs}
+\author{Machine-generated note (see provenance box)}
+\date{9 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
+\small
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2505.24100\_\_01}; original writeup in \texttt{attacks/2505.24100\_\_01/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the cited sources, and verified the construction by exhaustive computation on the line graphs of the Petersen graph and of the flower snarks $J_5$ and $J_7$, and the two small-case graphs of Observation~1.5 of the source paper; its verdict was \textsc{minor\_gaps}, the single defect being a citation slip for $t=3,4$. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}. Repairs, all taken from the referee's report and re-checked against the source paper \cite{FHHS25}: (i)~the small cases $t=3,4$ are now covered by Observation~1.5 of \cite{FHHS25} instead of Theorem~1.6, which is stated only for $t\ge5$ (\cref{prop:small}); (ii)~the parity of $m=2t-2$, used implicitly, is made explicit; (iii)~the concurrent paper of Choi \cite{Choi26}, which independently implies the yes/no answer to Question~1.8, is reported (\cref{sec:intro}, \cref{rem:choi}); (iv)~the referee's observation that the additive constant can be made small is recorded as a remark. The text was reorganised with full proofs in \cref{app:proofs}. No other mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+\end{tcolorbox}
+
+\begin{abstract}
+Fan, Hajebi, Hajebi and Spirkl proved that for every $t\ge5$ there is a graph with at least one edge that is $C_{2t-2}$-free but in which deleting any edge creates an induced $C_{2t-2}$; their construction has doubly exponential size in $t$, and they asked (Question~1.8) whether polynomial size is possible. We observe that the line graph of any simple cubic hypohamiltonian graph on $m$ vertices has exactly this property for $C_m$, with $3m/2$ vertices. Since cubic hypohamiltonian graphs exist for every even $m\ge26$ (Goedgebeur and Zamfirescu), this gives, for every $t\ge14$, such a graph on exactly $3t-3$ vertices; the finitely many smaller $t$ are covered by the source paper itself. Hence Question~1.8 has an affirmative answer with a linear polynomial. The construction handles edge deletion only, as the question asks, not edge addition.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+All graphs are finite and simple. A graph $G$ is \emph{$H$-free} if no induced subgraph of $G$ is isomorphic to $H$. Following \cite{FHHS25}, $G$ is \emph{$H$-induced-saturated} if $G$ is $H$-free, $G-e$ has an induced subgraph isomorphic to $H$ for every $e\in E(G)$, and $G+e$ has an induced subgraph isomorphic to $H$ for every $e\in E(\overline G)$. For $t\ge3$, $C_t$ denotes the $t$-vertex cycle.
+
+Which graphs $H$ admit $H$-induced-saturated graphs is open in general; for cycles, the odd case is settled and \cite{FHHS25} records (Observation~1.5) that the icosahedron is $C_4$-induced-saturated, the Cartesian product $C_5\cart C_5$ is $C_6$-induced-saturated, and the dodecahedron is $C_8$-induced-saturated, with a computer-found $28$-vertex $C_{10}$-induced-saturated graph. For longer even cycles the authors prove ``half'' of induced saturation:
+
+\begin{theorem}[{\cite[Theorem~1.6]{FHHS25}}]\label{thm:fhhs}
+For every integer $t\ge5$, there is a graph $G_t$ with $E(G_t)\ne\emptyset$ such that $G_t$ is $C_{2t-2}$-free but $G_t-e$ has an induced subgraph isomorphic to $C_{2t-2}$ for every $e\in E(G_t)$.
+\end{theorem}
+
+Their $G_t$ has doubly exponential size in $t$, and they write that they ``do not even know a rationale for expecting the number of vertices of $G_t$ to be more than linear in $t$'', asking:
+
+\begin{question}[{\cite[Question~1.8]{FHHS25}}]\label{q:18}
+Does there exist a polynomial $f$ such that for every $t\ge3$, there is a graph $G$ on at most $f(t)$ vertices with $E(G)\ne\emptyset$, such that $G$ is $H$-free but $G-e$ has an induced subgraph isomorphic to $C_{2t-2}$ for every $e\in E(G)$?
+\end{question}
+(Here $H=C_{2t-2}$, as in the surrounding text of \cite{FHHS25}.) To have a name for the property in question, call a graph $G$ \emph{$C_m$-deletion-saturated} if $E(G)\ne\emptyset$, $G$ is $C_m$-free, and $G-e$ has an induced $C_m$ for every $e\in E(G)$. Every $C_m$-induced-saturated graph is $C_m$-deletion-saturated; the converse fails (see \cite[Figure~3]{FHHS25}).
+
+Recall that a graph $F$ is \emph{hypohamiltonian} if $F$ has no Hamiltonian cycle but $F-v$ has one for every vertex $v$, and that the \emph{line graph} $\Ln(F)$ has vertex set $E(F)$, two edges of $F$ being adjacent in $\Ln(F)$ when they share an endpoint.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+Let $m\ge4$ and let $F$ be a simple cubic hypohamiltonian graph on $m$ vertices. Then $\Ln(F)$ is $C_m$-deletion-saturated and has $3m/2$ vertices. In particular, for every $t\ge14$ there is a $C_{2t-2}$-deletion-saturated graph on exactly $3t-3$ vertices.
+\end{restatable}
+
+\begin{restatable}[Small cases]{proposition}{propsmall}\label{prop:small}
+For every $3\le t\le13$ there is a $C_{2t-2}$-deletion-saturated graph $A_t$.
+\end{restatable}
+
+\begin{corollary}\label{cor:18}
+\Cref{q:18} has an affirmative answer with a linear polynomial: with $C=\max\{|V(A_t)|:3\le t\le13\}$, a finite absolute constant, for every $t\ge3$ there is a $C_{2t-2}$-deletion-saturated graph on at most $f(t)=3t+C$ vertices.
+\end{corollary}
+\begin{proof}
+For $3\le t\le13$ use $A_t$ from \cref{prop:small}, of order at most $C\le3t+C$. For $t\ge14$ use the graph of \cref{thm:main}, of order $3t-3\le3t+C$.
+\end{proof}
+
+\begin{proofidea}
+For $\ell\ge4$, induced $\ell$-cycles of a line graph $\Ln(F)$ correspond exactly to $\ell$-cycles of $F$ (\cref{lem:line}). A hypohamiltonian $F$ on $m$ vertices has no $m$-cycle, so $\Ln(F)$ has no induced $C_m$. An edge $e$ of $\Ln(F)$ is a pair of edges $ca$, $cb$ of $F$ at a common vertex $c$; if $cd$ is the third edge at $c$, a Hamiltonian cycle $Q$ of $F-d$ must pass through $c$ using $ca$ and $cb$ consecutively, so in $\Ln(F)$ the $m$ vertices $E(Q)\cup\{cd\}$ induce a $C_m$ with the single chord $e$, and deleting $e$ leaves an induced $C_m$ (\cref{lem:constr}). Cubic hypohamiltonian graphs exist for every even order $m\ge26$ \cite{GZ18}; with $m=2t-2$ this covers all $t\ge14$. The cases $3\le t\le13$ are supplied by \cite{FHHS25} itself: Observation~1.5 for $t=3,4$ and \cref{thm:fhhs} for $5\le t\le13$.\fullproofref{pf:main}
+\end{proofidea}
+
+\paragraph{Concurrent work.}
+After the writeup was produced, the referee's literature search found that Choi \cite{Choi26} (arXiv, 25~August 2026) constructs a $C_{2q+2}$-induced-saturated graph on $8q$ vertices for every $q\ge3$. Since induced saturation implies deletion saturation, Choi's result also answers \cref{q:18} affirmatively, with $8t-16$ vertices for $t\ge5$. The construction here is different (line graphs of hypohamiltonian graphs, no block structure), is self-contained apart from the existence of cubic hypohamiltonian graphs, gives deletion saturation only, and is smaller: $3t-3<8t-16$ for every $t\ge4$. See \cref{rem:choi}.
+
+\section{The two lemmas}
+
+\begin{restatable}[Induced cycles in line graphs]{lemma}{lemline}\label{lem:line}
+Let $F$ be a simple graph and $\ell\ge4$. Then $\Ln(F)$ has an induced cycle of length $\ell$ if and only if $F$ has a cycle of length $\ell$.
+\end{restatable}
+\begin{proofidea}
+The edges of an $\ell$-cycle of $F$ induce a $C_\ell$ in $\Ln(F)$, since consecutive edges share a vertex and non-consecutive ones are disjoint. Conversely, if $e_1,\dots,e_\ell$ induce a $C_\ell$ in $\Ln(F)$, let $v_i$ be the common vertex of $e_i$ and $e_{i+1}$; if $v_{i-1}=v_i$ then $e_{i-1}$ and $e_{i+1}$ would be adjacent in $\Ln(F)$ though non-consecutive (here $\ell\ge4$ is used), so $e_i=v_{i-1}v_i$, and the $v_i$ are distinct for the same reason; thus $v_1\cdots v_\ell v_1$ is a cycle of $F$.\fullproofref{pf:line}
+\end{proofidea}
+
+\begin{restatable}[The construction]{lemma}{lemconstr}\label{lem:constr}
+Let $m\ge4$ and let $F$ be a simple cubic hypohamiltonian graph on $m$ vertices. Then $G=\Ln(F)$ satisfies: $G$ is $C_m$-free; $G-e$ contains an induced $C_m$ for every $e\in E(G)$; and $|V(G)|=3m/2$.
+\end{restatable}
+\begin{proofidea}
+$C_m$-freeness is \cref{lem:line} plus non-Hamiltonicity. For the deletion property, write $e=xy$ with $x=ca$, $y=cb$ edges of $F$ at $c$, and $z=cd$ the third edge at $c$; take a Hamiltonian cycle $Q$ of $F-d$. In $F-d$ the vertex $c$ has degree exactly $2$, so $Q$ uses $x$ and $y$ consecutively. The set $S=E(Q)\cup\{z\}$ has $m$ elements; $E(Q)$ induces a $C_{m-1}$ in $\Ln(F)$, and $z$ is adjacent within $S$ exactly to $x$ and $y$. So $\Ln(F)[S]$ is a $C_m$ with the unique chord $e$, and $(\Ln(F)-e)[S]\cong C_m$. The order is $|E(F)|=3m/2$ by the handshake lemma.\fullproofref{pf:constr}
+\end{proofidea}
+
+\section{Remarks}
+
+\begin{remark}[Parity]
+$m=2t-2$ is even, so $3m/2=3t-3$ is an integer and a cubic graph on $m$ vertices can exist; \cref{thm:main} is stated for even $m$ only because cubic graphs of odd order do not exist. This was implicit in the writeup.
+\end{remark}
+
+\begin{remark}[The additive constant]\label{rem:constant}
+The proof of \cref{cor:18} bounds $C$ by the orders of the graphs supplied by \cite{FHHS25} for $t\le13$; via \cref{thm:fhhs} these are doubly exponential in the fixed values $t\le13$, so $C$ is finite but enormous. This is irrelevant to the truth of the corollary, and the referee notes that $C$ can be made small: cubic hypohamiltonian graphs also exist at $m\in\{10,18,20,22\}$ \cite{GZ18}, covering $t\in\{6,10,11,12\}$ with $3t-3$ vertices; Observation~1.5 of \cite{FHHS25} covers $t\in\{3,4,5\}$ with at most $25$ vertices and its computer-verified $28$-vertex graph covers $t=6$; only $t\in\{7,8,9,13\}$ then need \cref{thm:fhhs}. The writeup did not optimise this and did not need to.
+\end{remark}
+
+\begin{remark}[Deletion only]
+The construction resolves exactly what \cref{q:18} asks, edge deletion. In general $\Ln(F)$ is not $C_m$-induced-saturated: adding a non-edge need not create an induced $C_m$. This limitation is stated in the writeup and is not over-claimed.
+\end{remark}
+
+\begin{remark}[Concurrent literature]\label{rem:choi}
+Choi \cite{Choi26} proves that $C_{2q+2}$-induced-saturated graphs exist for every $q\ge3$, on $8q$ vertices, by a construction that uses neither line graphs nor hypohamiltonian graphs and does not mention \cref{q:18} or the size of the graphs as a goal. Because full induced saturation implies deletion saturation, the affirmative answer to \cref{q:18} is now also an immediate corollary of \cite{Choi26}, with a linear bound. The referee's report records this and notes that, depending on one's convention for near-simultaneous subsuming work, the yes/no answer could be classified as already known; the specific $3(t-1)$-vertex deletion-only construction appears to be new and is smaller than Choi's for every $t\ge4$.
+\end{remark}
+
+\begin{remark}[Computational checks]
+The referee verified \cref{lem:line} exhaustively on $30$ random graphs, and \cref{lem:constr} end to end on the line graphs of the Petersen graph ($m=10$, $15$ vertices, $30$ edge deletions), the flower snark $J_5$ ($m=20$, $30$ vertices, $60$ deletions) and the flower snark $J_7$ ($m=28$, $42$ vertices, $84$ deletions), re-proving hypohamiltonicity by brute force and enumerating all chordless cycles; it also verified by exhaustive chordless-cycle enumeration that the icosahedron is $C_4$-deletion-saturated and $C_5\cart C_5$ is $C_6$-deletion-saturated. No claimed property failed (\cref{app:referee}).
+\end{remark}
+
+\begin{remark}[Novelty]
+The referee found no earlier publication containing this construction; the source paper \cite{FHHS25} does not mention hypohamiltonian graphs. See \cref{rem:choi} for the concurrent result of Choi. None of this has been checked by a human.
+\end{remark}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:line}
+\lemline*
+\begin{proof}
+Suppose $e_1,\dots,e_\ell$ are the edges of a cycle of $F$, in cyclic order. Consecutive edges share an endpoint, so they are adjacent in $\Ln(F)$; non-consecutive edges of a cycle are vertex-disjoint, so they are non-adjacent in $\Ln(F)$. Hence $\{e_1,\dots,e_\ell\}$ induces a $C_\ell$ in $\Ln(F)$.
+
+Conversely, suppose $e_1,\dots,e_\ell$ induce a $C_\ell$ in $\Ln(F)$, indices modulo $\ell$, with $e_i$ adjacent to $e_{i\pm1}$ only. Since $F$ is simple, two distinct adjacent edges of $F$ share exactly one vertex; let $v_i$ be the common vertex of $e_i$ and $e_{i+1}$. We claim $v_{i-1}\ne v_i$. Otherwise $e_{i-1}$ and $e_{i+1}$ both contain $v_i$, hence are adjacent in $\Ln(F)$; but they are distinct and non-consecutive on the cycle (this is where $\ell\ge4$ is needed), a contradiction. Thus $e_i$ contains the two distinct vertices $v_{i-1}$ and $v_i$, i.e.\ $e_i=v_{i-1}v_i$. Next, the vertices $v_1,\dots,v_\ell$ are pairwise distinct: if $v_i=v_j$ with $i\ne j$, then each of $e_i,e_{i+1}$ meets each of $e_j,e_{j+1}$ at that vertex, and among these four edges some two are non-consecutive on the cycle (for $j=i+1$ take $e_i$ and $e_{i+2}$, distinct since $\ell\ge4$), giving an adjacency in $\Ln(F)$ that the induced $C_\ell$ forbids. Hence $v_1v_2\cdots v_\ell v_1$ is a cycle of length $\ell$ in $F$.
+\end{proof}
+
+\phantomsection\label{pf:constr}
+\lemconstr*
+\begin{proof}
+\emph{$C_m$-freeness.} A cycle of length $m$ in the $m$-vertex graph $F$ would be a Hamiltonian cycle, which $F$ does not have. By \cref{lem:line} (applicable since $m\ge4$), $\Ln(F)$ has no induced $C_m$.
+
+\emph{Deletion property.} Let $e$ be an edge of $\Ln(F)$. Its ends are two edges of $F$ sharing exactly one vertex $c$ (as $F$ is simple); write them $x=ca$ and $y=cb$ with $a\ne b$. Since $F$ is cubic, $c$ has exactly one further incident edge $z=cd$, and $d\notin\{a,b,c\}$. As $F$ is hypohamiltonian, $F-d$ has a Hamiltonian cycle $Q$. In $F-d$ the vertex $c$ has degree exactly $2$, its incident edges being $x$ and $y$; a Hamiltonian cycle passes through $c$ using two of its incident edges, so $Q$ contains both $x$ and $y$, consecutively.
+
+Put $S=E(Q)\cup\{z\}\subseteq V(\Ln(F))$. Since $Q$ has $m-1$ edges and $z\notin E(Q)$ (because $z$ is incident with $d\notin V(Q)$), $|S|=m$. By \cref{lem:line} (forward direction, length $m-1\ge3$), $E(Q)$ induces a cycle $C_{m-1}$ in $\Ln(F)$, on which $x$ and $y$ are consecutive since they share $c$. Within $S$, the vertex $z$ is adjacent exactly to $x$ and $y$: it meets $x$ and $y$ at $c$; no edge of $Q$ is incident with $d$; and $x,y$ are the only edges of $Q$ incident with $c$. Hence $\Ln(F)[S]$ is a $C_{m-1}$ together with a vertex $z$ joined to the two ends $x,y$ of the cycle edge $xy=e$; equivalently, it is an $m$-cycle $x\,z\,y\,\cdots\,x$ with the single chord $e$. Therefore $(\Ln(F)-e)[S]\cong C_m$, i.e.\ $\Ln(F)-e$ contains an induced $C_m$.
+
+\emph{Order.} By the handshake lemma, $|V(\Ln(F))|=|E(F)|=3m/2$.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+The first statement is \cref{lem:constr} together with $E(\Ln(F))\ne\emptyset$ (a cubic graph on $m\ge4$ vertices has adjacent edges). For the second, let $t\ge14$ and $m=2t-2\ge26$, an even number. Goedgebeur and Zamfirescu \cite[Theorem~3.6]{GZ18} prove that a hypohamiltonian snark of order $n$ exists if and only if $n\in\{10,18,20,22\}$ or $n\ge26$ is even; snarks are simple cubic graphs, so there is a simple cubic hypohamiltonian graph $F_m$ on $m$ vertices. By the first statement, $\Ln(F_m)$ is $C_{2t-2}$-deletion-saturated with $3m/2=3t-3$ vertices.
+\end{proof}
+
+\propsmall*
+\begin{proof}
+For $5\le t\le13$, \cref{thm:fhhs} (Theorem~1.6 of \cite{FHHS25}, valid for all $t\ge5$) provides $A_t=G_t$. For $t=3$ and $t=4$, Theorem~1.6 does not apply (the original writeup cited it for these two values; this is the citation slip repaired here). Instead, Observation~1.5 of \cite{FHHS25} states that the icosahedron is $C_4$-induced-saturated and that $C_5\cart C_5$ is $C_6$-induced-saturated. An $H$-induced-saturated graph is by definition $H$-free, with $G-e$ containing an induced $H$ for every edge $e$, and it has edges (the icosahedron has $30$, $C_5\cart C_5$ has $50$); so it is $H$-deletion-saturated. Take $A_3$ the icosahedron ($2t-2=4$) and $A_4=C_5\cart C_5$ ($2t-2=6$). The referee verified both deletion properties by exhaustive computation (\cref{app:referee}).
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-03) on the \emph{original} writeup. Its step numbers refer to that writeup, not to this note; the item it labels GAP (step~8, the $t=3,4$ citation) is repaired in \cref{prop:small}. The scripts it mentions are in \texttt{verification/scripts/2505.24100\_\_01/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{Choi26} I.~Choi, Induced-saturated graphs exist for even cycles, arXiv:2608.24202 (25 August 2026).
+\bibitem{FHHS25} X.~Fan, S.~Hajebi, S.~Hajebi and S.~Spirkl, Halfway to induced saturation for even cycles, arXiv:2505.24100 (2025; v2 June 2025).
+\bibitem{GZ18} J.~Goedgebeur and C.~T.~Zamfirescu, On hypohamiltonian snarks and a theorem of Fiorini, \emph{Ars Mathematica Contemporanea}; arXiv:1608.07164.
+\end{thebibliography}
+
+\end{document}

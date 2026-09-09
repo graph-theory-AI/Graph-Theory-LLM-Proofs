@@ -1,0 +1,187 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Rl}{R_{\ell}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2103.15175\_\_00 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{The list Ramsey number of the family of graphs\\ with chromatic number greater than $s$ equals $s^k+1$}
+\author{Machine-generated note (see provenance box)}
+\date{9 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
+\small
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The proof was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2103.15175\_\_00}; original writeup in \texttt{attacks/2103.15175\_\_00/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the definitions against the source paper and against the paper of Alon, Bucić, Kalvari, Kuperwasser and Szabó, and verified the theorem exhaustively for $s=k=2$ (all $97{,}191$ list assignments on $K_4$ up to colour isomorphism, and all $1024$ colourings of $K_5$ with constant lists) and the greedy construction on adversarial and random instances up to $27$ vertices; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, definitions were spelled out, and context on the source paper and on the referee's remarks was added as \cref{sec:remarks}. No mathematical content was changed; the two degenerate-case observations in \cref{rem:degenerate} are taken from the referee's report.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+\end{tcolorbox}
+
+\begin{abstract}
+The list Ramsey number $\Rl(\cH,k)$ of a family $\cH$ of graphs is the least $n$ for which some assignment of $k$-element colour lists to the edges of $K_n$ forces every colouring from the lists to contain a monochromatic member of $\cH$. Fox, He, Luo and Xu proved $\frac1e s^k\le\Rl(\cH_s,k)\le s^k+1$ for the family $\cH_s$ of graphs with chromatic number greater than $s$, and conjectured that the upper bound is the truth. We prove the conjecture: $\Rl(\cH_s,k)=s^k+1$ for all $s\ge2$ and $k\ge1$. The new ingredient is a one-paragraph greedy argument: on at most $s^k$ vertices, one can assign to every vertex and every colour a label in $[s]$ so that each edge is separated, in one of its listed colours, by the labels of its ends; colouring each edge with such a colour makes every colour class properly $s$-coloured.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+For a positive integer $m$ write $[m]=\{1,\dots,m\}$. A \emph{$k$-list assignment} on a graph $K_n$ is a map $L$ from $E(K_n)$ to the $k$-element subsets of a set of colours (in the literature, $L:E(K_n)\to\binom{\N}{k}$). An \emph{$L$-colouring} is a map $\varphi:E(K_n)\to\N$ with $\varphi(e)\in L(e)$ for every edge $e$; its \emph{colour classes} are the spanning subgraphs $G_c$ formed by the edges of colour $c$. A \emph{monochromatic copy} of a graph $H$ is a subgraph of some $G_c$ isomorphic to $H$.
+
+List Ramsey numbers were introduced by Alon, Bucić, Kalvari, Kuperwasser and Szabó \cite{ABKKS21}. For a family $\cH$ of graphs, following Fox, He, Luo and Xu \cite[Section~3.1]{FHLX21},
+\begin{align*}
+ \Rl(\cH,k)=\min\bigl\{\,n:\ &\text{there is a $k$-list assignment $L$ on $K_n$ such that every}\\
+ &\text{$L$-colouring of $K_n$ contains a monochromatic copy of some $H\in\cH$}\,\bigr\}.
+\end{align*}
+Such an $L$ is called \emph{forcing}. Taking all lists equal to $[k]$ shows $\Rl(\cH,k)\le R(\cH,k)$, the classical $k$-colour Ramsey number of the family.
+
+For $s\ge2$ let $\cH_s$ be the family of all finite graphs with chromatic number greater than $s$. The classical value $R(\cH_s,k)=s^k+1$ goes back to Erdős, McEliece and Taylor (see \cite{FHLX21}). Fox, He, Luo and Xu prove \cite[Theorem~8]{FHLX21}
+\[
+ \tfrac1e\,s^k\ \le\ \Rl(\cH_s,k)\ \le\ s^k+1
+\]
+and write: ``We conjecture that the upper bound in Theorem~8 is the truth.'' In the words of the problem catalogue:
+
+\begin{conjecture}[{\cite[Section~3.1]{FHLX21}}]\label{conj}
+For $s\ge2$, if $\cH_s$ is the family of graphs with chromatic number greater than $s$, then $\Rl(\cH_s,k)=s^k+1$.
+\end{conjecture}
+
+We prove \cref{conj} for all $s\ge2$ and $k\ge1$.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+Let $s\ge2$ and $k\ge1$. Then $\Rl(\cH_s,k)=s^k+1$. More precisely:
+\begin{enumerate}[label=(\roman*),nosep]
+\item for every $n\le s^k$ and every $k$-list assignment $L$ on $K_n$ there is an $L$-colouring of $K_n$ all of whose colour classes have chromatic number at most $s$, so $\Rl(\cH_s,k)>s^k$;
+\item the constant list assignment $L(e)=[k]$ on $K_{s^k+1}$ is forcing, so $\Rl(\cH_s,k)\le s^k+1$.
+\end{enumerate}
+\end{restatable}
+
+\begin{proofidea}
+Part (ii) is the classical product-colouring argument: if all $k$ colour classes were properly $s$-colourable, the $k$-tuple of colours of a vertex would be an injection of $s^k+1$ vertices into $[s]^k$. Part (i) rests on the \emph{separation lemma} (\cref{lem:sep}): for $n\le s^k$ vertices and any $k$-lists, there are labellings $f_c:V\to[s]$, one per colour $c$, such that every pair $uv$ is separated ($f_c(u)\ne f_c(v)$) in at least one colour $c\in L(uv)$. Colouring each edge with such a colour makes $f_c$ a proper $s$-colouring of the class $G_c$, so no class contains a graph of chromatic number greater than $s$. The lemma is proved greedily, one vertex at a time: when the $j$-th vertex receives its whole vector of labels $(f_c(v_j))_c\in[s]^{\cC}$, each earlier vertex $v_i$ rules out exactly $s^{|\cC|-k}$ vectors (those agreeing with $v_i$ on the $k$ coordinates of $L(v_iv_j)$), and $(j-1)s^{|\cC|-k}\le(s^k-1)s^{|\cC|-k}<s^{|\cC|}$, so a good vector remains.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{The separation lemma}\label{sec:sep}
+
+\begin{restatable}[Separation lemma]{lemma}{lemsep}\label{lem:sep}
+Let $s\ge2$, $k\ge1$, let $V$ be a set of $n\le s^k$ vertices, and let each pair $uv\in\binom V2$ be assigned a $k$-element set $L(uv)$ of colours. Put $\cC=\bigcup_{uv}L(uv)$. Then there are maps $f_c:V\to[s]$, $c\in\cC$, such that for all distinct $u,v\in V$ some $c\in L(uv)$ satisfies $f_c(u)\ne f_c(v)$.
+\end{restatable}
+
+\begin{proofidea}
+Order $V=\{v_1,\dots,v_n\}$ and choose the vectors $x_j=(f_c(v_j))_{c\in\cC}\in[s]^{\cC}$ successively. At step $j$ the ``bad'' vectors for an earlier vertex $v_i$ are those agreeing with $x_i$ on the $k$ coordinates in $L(v_iv_j)$; there are $s^{|\cC|-k}$ of them. The union of the $j-1$ bad sets has at most $(s^k-1)s^{|\cC|-k}<s^{|\cC|}$ elements, so some $x_j$ avoids them all. Vectors are never changed later, so separations persist.\fullproofref{pf:sep}
+\end{proofidea}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[Why the lossless bound]
+Fox, He, Luo and Xu obtain their lower bound $\frac1es^k$ from a random-homomorphism argument in which independent maps $\phi_c:V\to V(G)$ are chosen for all colours at once and all $\binom n2$ edge events must succeed simultaneously; the Lovász Local Lemma then costs the factor $e$. The argument above instead exposes the vertices one at a time and chooses each vertex's entire colour vector at once, so the union bound runs only over the $j-1$ earlier vertices, and for the target $K_s$ the failure event in a given colour is exactly label equality, of probability $1/s$. This is the referee's explanation (\cref{app:referee}) of why the sequential bound is lossless for the chromatic family.
+\end{remark}
+
+\begin{remark}[Interpretation and list convention]
+The proof uses that each list consists of $k$ \emph{distinct} colours, i.e.\ $L(e)\in\binom{\N}{k}$, which is the definition in both \cite{ABKKS21} and \cite{FHLX21}; the referee confirmed both definitions verbatim. Under a multiset convention the count $|B_i|=s^{q-k}$ in the proof of \cref{lem:sep} would change. The quantifier structure of $\Rl$ (least $n$ admitting \emph{some} forcing assignment) is exactly what part~(i) of \cref{thm:main} refutes for $n=s^k$: no assignment on $K_{s^k}$ is forcing.
+\end{remark}
+
+\begin{remark}[Degenerate cases]\label{rem:degenerate}
+For $n\le1$ there are no pairs and \cref{lem:sep} is vacuous; whenever $n\ge2$ there is at least one edge, so $q=|\cC|\ge k$ and the exponent $q-k$ is non-negative. Isolated vertices in a colour class do not affect its chromatic number. In part~(ii), the class $G_i$ with $\chi(G_i)>s$ is itself a member of $\cH_s$, since $\cH_s$ consists of \emph{all} graphs of chromatic number greater than $s$. (These observations are the referee's.)
+\end{remark}
+
+\begin{remark}[Computational checks]
+The referee's scripts (\texttt{verification/scripts/2103.15175\_\_00/}) verify, independently of the greedy argument, that every one of the $97{,}191$ colour-isomorphism classes of $2$-list assignments on $E(K_4)$ admits a colouring from the lists with both colour classes bipartite, and that none of the $1024$ colourings of $E(K_5)$ from the constant list $\{1,2\}$ has both classes bipartite; hence $\Rl(\cH_2,2)=5=2^2+1$. The greedy of \cref{lem:sep} was also run for $(s,k)\in\{(2,2),(2,3),(3,2),(2,4),(3,3),(5,2)\}$ on $s^k$ vertices, on the adversarial constant-list assignment and on $3200$ random assignments, and never got stuck.
+\end{remark}
+
+\begin{remark}[Novelty]
+The argument is one page of elementary counting, which is striking given that the authors of \cite{FHLX21} posed the conjecture together with a Local-Lemma proof of the bound weaker by a factor $e$. The referee scrutinised the proof specifically for this reason and found no flaw, but notes that the simplicity raises the prior that the argument is folklore or exists unpublished. Its searches (arXiv full text, Semantic Scholar citations of \cite{FHLX21}, web searches for a resolution, September 2026) found no written source; only two papers cite \cite{FHLX21}, neither on this question. This has not been checked by a human.
+\end{remark}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:sep}
+\lemsep*
+\begin{proof}
+Write $V=\{v_1,\dots,v_n\}$ and $q=|\cC|$. We choose successively vectors
+\[
+ x_j=(f_c(v_j))_{c\in\cC}\in[s]^{\cC},\qquad j=1,\dots,n,
+\]
+where $x_1$ is arbitrary. Suppose $x_1,\dots,x_{j-1}$ have been chosen, so that $f_c(v_i)$ is defined for all $c\in\cC$ and $i<j$. For each $i<j$ let
+\[
+ B_i=\bigl\{x\in[s]^{\cC}:\ x_c=f_c(v_i)\ \text{for every }c\in L(v_iv_j)\bigr\}.
+\]
+Thus $B_i$ is exactly the set of choices of $x_j$ that fail to separate $v_i$ from $v_j$ in every colour listed on the pair $v_iv_j$: $x_j\notin B_i$ if and only if some $c\in L(v_iv_j)$ has $f_c(v_j)\ne f_c(v_i)$.
+
+Because $L(v_iv_j)$ consists of $k$ distinct colours, $B_i$ fixes exactly $k$ of the $q$ coordinates and leaves the remaining $q-k$ free, so $|B_i|=s^{q-k}$. Since $j\le n\le s^k$,
+\[
+ \Bigl|\bigcup_{i<j}B_i\Bigr|\ \le\ (j-1)\,s^{q-k}\ \le\ (s^k-1)\,s^{q-k}\ =\ s^q-s^{q-k}\ <\ s^q\ =\ \bigl|[s]^{\cC}\bigr|.
+\]
+Hence some vector $x_j\in[s]^{\cC}$ lies outside every $B_i$, $i<j$; choose it. Then $v_j$ is separated from each earlier vertex $v_i$ in at least one colour of $L(v_iv_j)$. Vectors already chosen are never modified, so this separation persists to the end. After step $n$ every pair $\{v_i,v_j\}$ with $i<j$ has been separated at step $j$, and each $f_c$ is a total map $V\to[s]$.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+\emph{(i) Lower bound.} Let $n\le s^k$ and let $L$ be a $k$-list assignment on $K_n$, with vertex set $V$. Apply \cref{lem:sep} to obtain maps $f_c:V\to[s]$, $c\in\cC=\bigcup_eL(e)$. For each edge $uv$ choose a colour
+\[
+ \varphi(uv)\in L(uv)\qquad\text{with}\qquad f_{\varphi(uv)}(u)\ne f_{\varphi(uv)}(v),
+\]
+which exists by the lemma. Then $\varphi$ is an $L$-colouring of $K_n$. For a colour $c$, every edge $uv$ of the colour class $G_c$ satisfies $f_c(u)\ne f_c(v)$, so $f_c$ is a proper $s$-colouring of $G_c$ and $\chi(G_c)\le s$. Every subgraph of $G_c$ has chromatic number at most $\chi(G_c)\le s$, so $G_c$ contains no copy of a graph with chromatic number greater than $s$: the colouring $\varphi$ has no monochromatic member of $\cH_s$. As $L$ was arbitrary, no $k$-list assignment on $K_{s^k}$ (or on fewer vertices) is forcing, and therefore $\Rl(\cH_s,k)>s^k$.
+
+\emph{(ii) Upper bound.} On $K_{s^k+1}$ give every edge the list $L(e)=[k]$, and let $\varphi$ be any $L$-colouring, with colour classes $G_1,\dots,G_k$. Suppose for contradiction that $\chi(G_i)\le s$ for every $i\in[k]$, and choose proper colourings $g_i:V(K_{s^k+1})\to[s]$ of the $G_i$. Define
+\[
+ g(v)=\bigl(g_1(v),\dots,g_k(v)\bigr)\in[s]^k.
+\]
+If $u\ne v$, the edge $uv$ has some colour $i=\varphi(uv)$, so $uv\in E(G_i)$ and properness of $g_i$ gives $g_i(u)\ne g_i(v)$; hence $g(u)\ne g(v)$ and $g$ is injective. This is impossible, since $|V(K_{s^k+1})|=s^k+1>s^k=|[s]^k|$. Therefore some class $G_i$ has $\chi(G_i)>s$, i.e.\ $G_i$ is a monochromatic member of $\cH_s$. Since $\varphi$ was arbitrary, the constant assignment is forcing and $\Rl(\cH_s,k)\le s^k+1$.
+
+Combining (i) and (ii), $\Rl(\cH_s,k)=s^k+1$.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02/03) on the \emph{original} writeup. Its step numbers refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification/scripts/2103.15175\_\_00/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{ABKKS21} N.~Alon, M.~Bucić, T.~Kalvari, E.~Kuperwasser and T.~Szabó, List Ramsey numbers, \emph{J. Graph Theory} 96 (2021) 109--128.
+\bibitem{FHLX21} J.~Fox, X.~He, S.~Luo and M.~W.~Xu, Multicolor list Ramsey numbers grow exponentially, arXiv:2103.15175 (2021; v2 January 2022).
+\end{thebibliography}
+
+\end{document}

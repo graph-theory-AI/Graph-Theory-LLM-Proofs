@@ -15,3 +15,6 @@ attacks/spend.lock
 attacks/night-sweep.lock
 attacks/inflight-recover.json
 *.log
+
+# LaTeX build dirs (to_review PDFs are kept)
+.build/

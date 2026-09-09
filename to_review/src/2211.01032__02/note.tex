@@ -1,0 +1,330 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\E}{\mathbb E}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\tr}{tr}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\Flight}{F_{\mathrm{light}}}
+\newcommand{\Fheavy}{F_{\mathrm{heavy,short}}}
+\newcommand{\Flong}{F_{\mathrm{long}}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2211.01032\_\_02 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{The expected number of faces of a random embedding\\ of a dense simple graph is $\Theta(\log n)$}
+\author{Machine-generated note (see provenance box)}
+\date{9 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
+\small
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The argument was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2211.01032\_\_02}; original writeup in \texttt{attacks/2211.01032\_\_02/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the source paper's \TeX{} source, verified the exposure lemma, the facial-cycle probability and the light-face bound \emph{exactly} by enumerating all rotation systems of $K_5$ and of the octahedron, and ran Monte Carlo experiments up to $n=800$; its verdict was \textsc{minor\_gaps}: no substantive error, but a one-unit miscount in one intermediate display, implicit large-$n$ thresholds, an unstated connectivity convention, and one unused inequality. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}, repairing exactly those four points: the count of admissible darts in the heavy-face bound is corrected to $d_u-\lfloor\theta d_u\rfloor-1$ (\cref{lem:heavy}; the downstream bound $2/\delta$ is unchanged); the theorem is stated for $n\ge n_0(c)$ and the thresholds used are listed (\cref{rem:thresholds}); the connectivity convention is discussed (\cref{rem:connected}); and the unused inequality is dropped. The text was reorganised with full proofs in \cref{app:proofs}. No other mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+\end{tcolorbox}
+
+\begin{abstract}
+A random embedding of a graph $G$ is obtained by choosing, independently and uniformly at each vertex, a cyclic order of the incident edge-ends; let $F(G)$ be the resulting number of faces. Campion Loth, Halasz, Masařík, Mohar and Šámal conjectured (Conjecture~9.3 of arXiv:2211.01032) that every graph on $n$ vertices with minimum degree $\Omega(n)$ has $\E F(G)=\Theta(\log n)$. We prove this for simple graphs: for every $c>0$ and every simple graph $G$ on $n\ge n_0(c)$ vertices with $\delta(G)\ge cn$,
+\[
+ \tfrac12\log n-O_c(1)\ \le\ \E F(G)\ \le\ \bigl(2/c^2+o_c(1)\bigr)\log n .
+\]
+The upper bound exposes the random rotations along a face and splits faces into light, heavy-and-short, and long; the lower bound counts faces bounded by vertex-simple cycles through a spectral estimate. For $K_n$ the upper bound specialises to $(2+o(1))\log n$. We also observe that the statement is false for multigraphs, so the simple-graph reading is the intended one.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+\paragraph{Random embeddings.}
+Let $G=(V,E)$ be a finite graph, $n=|V|$, $m=|E|$ and $\delta=\delta(G)$ its minimum degree. Every edge consists of two \emph{darts} (edge-ends), one based at each endpoint; let $D$ be the set of $N:=2m$ darts, $d_v$ the degree of $v$, and $\iota\colon D\to D$ the involution exchanging the two darts of every edge. A \emph{rotation system} is a permutation $\rho=\prod_{v\in V}\rho_v$ of $D$ in which each $\rho_v$ is a cyclic permutation ($d_v$-cycle) of the darts based at $v$. It determines a cellular embedding of $G$ in an orientable surface whose faces are the cycles of the \emph{facial permutation} $\Phi=\rho\iota$ (the composition convention is immaterial for the number of cycles). The \emph{random embedding} of $G$ chooses each $\rho_v$ uniformly and independently among the $(d_v-1)!$ cyclic permutations, and $F(G)$ denotes the number of faces, i.e.\ the number of cycles of $\Phi$.
+
+Campion Loth, Halasz, Masařík, Mohar and Šámal \cite{CHMMS} proved $\tfrac12\ln n-2<\E F(K_n)\le3.65\ln n$ (for large $n$) and, observing that all known examples with $\E F=\Theta(n)$ have bounded degree, posed in their Section~9 (``Open Problems''):
+
+\begin{conjecture}[{\cite[Conjecture~9.3]{CHMMS}}]\label{conj:93}
+Let $G$ be a graph on $n$ vertices with minimum vertex degree $\Omega(n)$. Then $G$ satisfies $\E[F]=\Theta(\log(n))$.
+\end{conjecture}
+
+\paragraph{Conventions.}
+The paper \cite{CHMMS} says ``multigraph'' when multigraphs are meant and states that it is ``mostly interested in simple graphs''; the referee confirmed this against the \TeX{} source (\cref{app:referee}). We read \cref{conj:93} for finite simple graphs. This is the only tenable reading: \cref{prop:multi} below shows that for multigraphs the statement fails badly. All logarithms are natural; $H_N=\sum_{i\le N}1/i$ is the harmonic number.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+For every $c>0$ there are $n_0(c)$, a constant $A_c$ and a function $\varepsilon_c(n)\to0$ such that every simple graph $G$ on $n\ge n_0(c)$ vertices with $\delta(G)\ge cn$ satisfies
+\[
+ \tfrac12\log n-A_c\ \le\ \E F(G)\ \le\ \Bigl(\frac2{c^2}+\varepsilon_c(n)\Bigr)\log n .
+\]
+More precisely, with $\theta=(\log n)^{-1/2}$, $T=\lfloor\theta\delta^2/100\rfloor$ and $\gamma=\tfrac12\ln(25/e)$, the upper bound
+\begin{equation}\label{eq:precise}
+ \E F(G)\ \le\ \frac{N\,H_N}{(1-\theta)^2\delta^2}+\frac NT+Nn\,e^{-\gamma\theta\delta}
+\end{equation}
+holds for every simple graph with $\delta\ge2$, $\theta\delta\ge2$ and $(\tfrac12-\theta)\delta\ge1$. In particular $\E F(K_n)\le(2+o(1))\log n$.
+\end{restatable}
+
+\begin{corollary}
+\Cref{conj:93} holds for simple graphs, with $\Theta$-constants depending on the constant $c$ in the hypothesis $\delta(G)\ge cn$.
+\end{corollary}
+
+\begin{proofidea}
+\emph{Upper bound.} Follow the facial orbit of a fixed dart $a$, revealing values of the random rotations only when they are queried. Until the face closes every queried input is new, so each step is a uniform choice among the not-yet-excluded darts at the current vertex (\cref{lem:exposure}). Call a face \emph{light} if it uses at most a $\theta$-fraction of the darts at every vertex. Closing a light face of any length $\ell$ requires two specific choices, each of probability at most $1/((1-\theta)\delta)$, so $\Pr(L(a)=\ell,\text{light})\le((1-\theta)\delta)^{-2}$ uniformly in $\ell$ (\cref{lem:light}); with the rooting identity $F=\sum_a1/L(a)$ this gives $\E\Flight\le NH_N/((1-\theta)^2\delta^2)$. Heavy faces of length at most $T$ are exponentially unlikely because a vertex must be selected $\Omega(\theta\delta)$ times at probability $\le2/\delta$ each (\cref{lem:heavy}), and there are at most $N/T$ faces longer than $T$. \emph{Lower bound.} A rooted oriented simple $\ell$-cycle is facial with probability exactly $\prod_i(d_{v_i}-1)^{-1}$ (\cref{lem:cycleprob}). Summing over cycles is a trace of a power of the normalised adjacency matrix $S=D^{-1/2}AD^{-1/2}$, up to the mass of non-simple closed walks, which is $O(\ell^2n/\delta^2)$ (\cref{lem:walks}). Pairing $\tr S^{2k}+\tr S^{2k+1}\ge2$ (the eigenvalue $1$) and summing $k$ up to $\Theta(\delta/\sqrt n)$ gives $\tfrac12\log n-O_c(1)$ (\cref{lem:pairing}).\fullproofref{pf:main}
+\end{proofidea}
+
+\section{The exposure lemma}\label{sec:exposure}
+
+\begin{restatable}[Deferred decisions]{lemma}{lemexposure}\label{lem:exposure}
+Let $\pi$ be a uniformly random cyclic permutation of a $d$-element set. Suppose $k\le d-2$ values of $\pi$ have been exposed and the exposed arcs are extendible to a $d$-cycle. If $x$ is a point whose image is not yet exposed, then conditionally on the exposed values, $\pi(x)$ is uniform among $d-k-1$ admissible points.
+\end{restatable}
+\begin{proofidea}
+The exposed arcs form $d-k$ vertex-disjoint directed paths (isolated points allowed); $x$ is the end of one of them, and $\pi(x)$ can be the start of any of the other $d-k-1$ paths. Each choice leaves $d-k-1$ paths to be closed into a cycle, in $(d-k-2)!$ ways, so all choices are equiprobable.\fullproofref{pf:exposure}
+\end{proofidea}
+
+While the facial orbit $a,\Phi(a),\Phi^2(a),\dots$ of a dart $a$ is followed, the inputs $\iota(\Phi^t(a))$ queried from the rotations are pairwise distinct until the orbit closes, because the darts of an orbit are distinct before the first return. Hence \cref{lem:exposure} applies at every step of the exploration of one face. Simplicity of $G$ enters through one fact: among the darts based at a vertex $v$, at most one leads to any prescribed neighbour $w$.
+
+\section{Upper bound}\label{sec:upper}
+
+Throughout this section $G$ is simple, $\theta=(\log n)^{-1/2}$, and we assume
+\begin{equation}\label{eq:thresholds}
+ \delta\ge2,\qquad \theta\delta\ge2,\qquad (\tfrac12-\theta)\delta\ge1
+\end{equation}
+(all of which hold for $n\ge n_0(c)$ when $\delta\ge cn$). For a face $C$ and a vertex $v$ let $r_C(v)$ be the number of darts of $C$ based at $v$ (the number of \emph{transitions} of $C$ at $v$), so $|C|=\sum_vr_C(v)$. The face $C$ is \emph{light} if $r_C(v)\le\theta d_v$ for every $v$, and \emph{heavy} otherwise. For a dart $a$ let $C(a)$ be its face and $L(a)=|C(a)|$ its length.
+
+\begin{restatable}[Light faces]{lemma}{lemlight}\label{lem:light}
+For every dart $a$ and every $\ell\ge3$,
+\[
+ \Pr\bigl(L(a)=\ell\text{ and }C(a)\text{ is light}\bigr)\ \le\ \frac1{(1-\theta)^2\delta^2}.
+\]
+Moreover, no face has length $1$ or $2$, and $\displaystyle\E\Flight\le\frac{N\,H_N}{(1-\theta)^2\delta^2}$, where $\Flight$ is the number of light faces.
+\end{restatable}
+\begin{proofidea}
+Decompose according to the history of the first $\ell-2$ steps of the orbit. For the face to close at length $\ell$, the penultimate choice (at a vertex $v$) must pick the unique dart leading to the base $s$ of $a$, and the last choice (at $s$) must pick $a$ itself. If the closed face is light, at most $r_C(v)-1\le\theta d_v-1$ values of $\rho_v$ were exposed before the penultimate step, so by \cref{lem:exposure} it is a uniform choice among at least $d_v-r_C(v)\ge(1-\theta)\delta$ darts; likewise at $s$. The rooting identity $F=\sum_{a\in D}1/L(a)$ and $\sum_{\ell\le N}1/\ell\le H_N$ finish.\fullproofref{pf:light}
+\end{proofidea}
+
+\begin{restatable}[Heavy faces are long]{lemma}{lemheavy}\label{lem:heavy}
+Let $T=\lfloor\theta\delta^2/100\rfloor$ and $\gamma=\tfrac12\ln(25/e)>0$. For every dart $a$,
+\[
+ \Pr\bigl(C(a)\text{ is heavy and }L(a)\le T\bigr)\ \le\ n\,e^{-\gamma\theta\delta},
+\]
+and consequently $\E\Fheavy\le Nn\,e^{-\gamma\theta\delta}$, where $\Fheavy$ is the number of heavy faces of length at most $T$.
+\end{restatable}
+\begin{proofidea}
+Explore the orbit of $a$ and stop as soon as some vertex $v$ has been queried $\lfloor\theta d_v\rfloor+1$ times. Before the stopping time, a query at $u$ has at most $\lfloor\theta d_u\rfloor$ exposed values, so by \cref{lem:exposure} it is uniform over at least $d_u-\lfloor\theta d_u\rfloor-1\ge\delta/2$ darts (this is the corrected count; the original writeup omitted the $-1$), of which at most one leads to a prescribed vertex $w$: the next vertex is $w$ with conditional probability at most $2/\delta$. A heavy face of length $\le T$ forces some $w$ to be selected at least $K_w=\lfloor\theta d_w\rfloor\ge\theta\delta/2$ times within $T$ steps, which has probability at most $\binom T{K_w}(2/\delta)^{K_w}\le(e/25)^{K_w}\le e^{-\gamma\theta\delta}$; take a union bound over $w$.\fullproofref{pf:heavy}
+\end{proofidea}
+
+\begin{lemma}[Few long faces]\label{lem:long}
+Deterministically, the number $\Flong$ of faces of length greater than $T$ is at most $N/T$.
+\end{lemma}
+\begin{proof}
+The faces partition the $N$ darts.
+\end{proof}
+
+\section{Lower bound}\label{sec:lower}
+
+Let $A$ be the adjacency matrix of $G$, $D=\operatorname{diag}(d_v)$, $S=D^{-1/2}AD^{-1/2}$ and $P=D^{-1}A$. Let $X_\ell$ be the number of faces whose boundary is a vertex-simple cycle of length $\ell$.
+
+\begin{restatable}[Facial simple cycles]{lemma}{lemcycleprob}\label{lem:cycleprob}
+For every rooted oriented simple cycle $(v_0,v_1,\dots,v_{\ell-1},v_0)$ of $G$ with $\ell\ge3$, the probability that it is a facial cycle is exactly $\prod_{i=0}^{\ell-1}(d_{v_i}-1)^{-1}$. Consequently
+\[
+ \E X_\ell\ \ge\ \frac{W_\ell}{\ell},\qquad W_\ell:=\sum_{\substack{v_0\cdots v_{\ell-1}v_0\text{ closed walk}\\ v_0,\dots,v_{\ell-1}\text{ distinct}}}\ \prod_{i=0}^{\ell-1}\frac1{d_{v_i}}.
+\]
+\end{restatable}
+\begin{proofidea}
+The cycle is facial iff at every $v_i$ the rotation $\rho_{v_i}$ sends the dart towards $v_{i-1}$ to the dart towards $v_{i+1}$; these are two distinct darts (the cycle is simple), the successor of a fixed dart in a uniform $d$-cycle is uniform over the other $d-1$ darts, and the rotations are independent. Each such face is counted by $\ell$ rooted oriented cycles, and $1/(d-1)\ge1/d$.\fullproofref{pf:cycleprob}
+\end{proofidea}
+
+\begin{restatable}[Non-simple closed walks]{lemma}{lemwalks}\label{lem:walks}
+$\tr S^\ell=\sum\prod_{i=0}^{\ell-1}d_{v_i}^{-1}$, the sum over all rooted closed walks $v_0v_1\cdots v_{\ell-1}v_0$ of length $\ell$, and for every $\ell\ge3$
+\[
+ W_\ell\ \ge\ \tr S^\ell-B_\ell,\qquad B_\ell:=\binom\ell2\frac n{\delta^2}.
+\]
+\end{restatable}
+\begin{proofidea}
+$(S^r)_{vv}=P^r(v,v)\le\max_uP(u,v)\le1/\delta$ for $r\ge1$, using simplicity. A closed walk with $v_i=v_j$ ($i<j$) splits at that vertex into two closed walks, so the weight of such walks is $\sum_v(S^r)_{vv}(S^{\ell-r})_{vv}\le n/\delta^2$; a union bound over the $\binom\ell2$ pairs of positions gives the claim.\fullproofref{pf:walks}
+\end{proofidea}
+
+\begin{restatable}[Pairing even and odd lengths]{lemma}{lempairing}\label{lem:pairing}
+For every $k\ge1$, $\tr S^{2k}+\tr S^{2k+1}\ge2$, and $\dfrac{\tr S^{2k}}{2k}+\dfrac{\tr S^{2k+1}}{2k+1}\ge\dfrac2{2k+1}$.
+\end{restatable}
+\begin{proofidea}
+The eigenvalues of $S$ lie in $[-1,1]$, so every term $\lambda_j^{2k}(1+\lambda_j)$ is nonnegative, and each connected component contributes an eigenvalue $1$ with term $2$. Since $\tr S^{2k}\ge0$, the weighted sum is at least $(\tr S^{2k}+\tr S^{2k+1})/(2k+1)$.\fullproofref{pf:pairing}
+\end{proofidea}
+
+\section{The multigraph reading is false}\label{sec:multi}
+
+\begin{restatable}{proposition}{propmulti}\label{prop:multi}
+For every even $n$ there is a connected multigraph on $n$ vertices with minimum degree at least $n$ for which every rotation system has at least $n/2+1$ faces. Hence \cref{conj:93} fails for multigraphs.
+\end{restatable}
+\begin{proofidea}
+Chain $k=n/2$ dipoles (two vertices joined by $M=n$ parallel edges) by single bridge edges. A dipole with $M$ edges has $F=M-2g$ faces in any orientable embedding, hence $F\ge2$ as $M$ is even; a bridge merges exactly two faces into one, so the chain has $F\ge2k-(k-1)=k+1$.\fullproofref{pf:multi}
+\end{proofidea}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[Thresholds]\label{rem:thresholds}
+The proof uses only the following consequences of $\delta\ge cn$ and $n\ge n_0(c)$, with $\theta=(\log n)^{-1/2}$: $\delta\ge2$ (no faces of length $\le2$); $(\tfrac12-\theta)\delta\ge1$ (so that $d_u-\lfloor\theta d_u\rfloor-1\ge\delta/2$ in \cref{lem:heavy}, and $\lfloor\theta d_u\rfloor\le d_u-2$ so that \cref{lem:exposure} applies); $\theta\delta\ge2$ (so that $K_w=\lfloor\theta d_w\rfloor\ge\theta\delta/2$); $T\ge\theta\delta^2/200$; and $K=\lfloor\delta/(4\sqrt n)\rfloor\ge2$ in the lower bound. The original writeup left these implicit. Since the statement is a $\Theta(\log n)$ statement, restricting to $n\ge n_0(c)$ is harmless.
+\end{remark}
+
+\begin{remark}[Connectivity]\label{rem:connected}
+The source paper defines random embeddings for connected graphs; a graph with $\delta\ge cn$ may have up to $\lfloor1/c\rfloor$ components. Both bounds hold verbatim for disconnected $G$, with $F$ the total number of faces over the components: the upper bound is proved dart by dart and never uses connectivity, and in the lower bound every component contributes an eigenvalue $1$ of $S$, which is all that \cref{lem:pairing} needs (it only uses that at least one such eigenvalue exists). So \cref{thm:main} covers both the connected and the general reading.
+\end{remark}
+
+\begin{remark}[Dependence on $c$]
+The upper constant $2/c^2$ blows up as $c\to0$; this is inherent in the hypothesis $\delta=\Omega(n)$ and consistent with the conjecture's $\Theta$. For $K_n$, $N/\delta^2=n/(n-1)$ and \eqref{eq:precise} gives $\E F(K_n)\le(2+o(1))\log n$. The referee observed that this matches the constant in the Mauk--Stahl conjecture $\E F(K_n)=2\ln n+O(1)$ restated in \cite[Section~9]{CHMMS}, and improves the constant $3.65$ of \cite[Theorem~1.8]{CHMMS}; likewise for dense $G(n,p)$, where $N/\delta^2\approx1/p$, \eqref{eq:precise} gives $O_p(\log n)$. We record these as consequences the referee noted, not as independently checked claims.
+\end{remark}
+
+\begin{remark}[Computational checks by the referee]
+By enumerating all $7776$ rotation systems of $K_5$ and all $46656$ of the octahedron, the referee verified exactly the rooting identity, the facial-cycle probability of \cref{lem:cycleprob} ($1/27,1/81,1/243$), the bound of \cref{lem:light} (which is exactly tight for $\theta=1/4$ on $K_5$) and the inequality $\E X_\ell\ge(\tr S^\ell-B_\ell)/\ell$; \cref{lem:exposure} was verified on all $120$ cyclic permutations of six points; Monte Carlo on $K_n$ up to $n=800$ gave $\E F(K_n)\approx2\ln n-0.9$, below the upper bound $2\ln n+O(\sqrt{\log n})$ and far above the lower bound $\tfrac12\ln n$; and the dipole chain of \cref{prop:multi} was checked exactly. Scripts: \texttt{verification/scripts/2211.01032\_\_02/}.
+\end{remark}
+
+\begin{remark}[Novelty and a caveat]
+The referee's search found no resolution of \cref{conj:93} in the literature. It also noted that a four-page elementary argument improving the constants of a long SODA paper is a reason for caution, and recommended an independent expert pass before the conjecture is treated as resolved; we repeat that recommendation. Nothing here has been checked by a human.
+\end{remark}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:exposure}
+\lemexposure*
+\begin{proof}
+Condition on the $k$ exposed values. They form a set of arcs $y\mapsto\pi(y)$ which, being part of a single $d$-cycle, consists of vertex-disjoint directed paths; counting isolated points as paths of length $0$, there are exactly $d-k$ such paths. The point $x$ is the terminal point of one of them, say $Q$ (possibly $Q=\{x\}$). A $d$-cycle extending the exposed arcs is obtained by arranging the $d-k$ paths in a cyclic order and joining the end of each path to the start of the next; distinct cyclic orders give distinct cycles and every extension arises this way, so there are $(d-k-1)!$ extensions, all equally likely under the uniform distribution on $d$-cycles. The image $\pi(x)$ is the start of the path following $Q$ in the cyclic order; it can be any of the other $d-k-1$ paths (there is at least one since $k\le d-2$), and for each choice the remaining $d-k-1$ blocks can be cyclically ordered in $(d-k-2)!$ ways. Hence each of the $d-k-1$ admissible values of $\pi(x)$ has conditional probability $(d-k-2)!/(d-k-1)!=1/(d-k-1)$.
+\end{proof}
+
+\phantomsection\label{pf:light}
+\lemlight*
+\begin{proof}
+\emph{No short faces.} A face of length $1$ is a dart $a$ with $\rho(\iota(a))=a$, which requires $\iota(a)$ and $a$ to be based at the same vertex, i.e.\ a loop. A face of length $2$ consists of darts $a$ (based at $u$, towards $v$) and $b=\rho_v(\iota(a))$ with $\rho(\iota(b))=a$; the latter forces $\iota(b)$ to be based at $u$, so $b$ is a dart from $v$ to $u$, and in a simple graph $b=\iota(a)$. Then $\rho_v(\iota(a))=\iota(a)$ is a fixed point of the $d_v$-cycle $\rho_v$, impossible for $d_v\ge2$.
+
+\emph{The probability bound.} Fix $a$, based at $s$, and $\ell\ge3$. Expose the orbit $x_0=a$, $x_{t+1}=\rho(\iota(x_t))$ step by step; by the remark after \cref{lem:exposure}, every step until the orbit closes queries a fresh input of the relevant rotation, so \cref{lem:exposure} applies (the number of exposed values at a vertex $v$ before a query at $v$ equals the number of earlier transitions of the orbit at $v$). Let $h$ range over the possible histories $(x_0,\dots,x_{\ell-2})$ of the first $\ell-2$ steps in which the orbit has not yet closed. Given $h$, the orbit closes at length exactly $\ell$ only if the next two steps are forced: with $v$ the vertex at which $\iota(x_{\ell-2})$ is based, the query at $v$ must return the dart $x_{\ell-1}$ from $v$ to $s$ (there is at most one such dart, as $G$ is simple; and $v\ne s$, since $v=s$ would make $x_{\ell-2}$ a loop), and then the query at $s$ must return $x_\ell=a$. Thus given $h$ the face $C$ obtained on closing is determined, and so is whether it is light. Let $\mathcal H$ be the set of histories $h$ for which this face is light and both forced darts exist. Then
+\[
+ \Pr(L(a)=\ell,\ C(a)\text{ light})=\sum_{h\in\mathcal H}\Pr(h)\,\Pr(x_{\ell-1}\text{ forced}\mid h)\,\Pr(x_\ell=a\mid h,x_{\ell-1}).
+\]
+Fix $h\in\mathcal H$ with its light face $C$. The transitions of $C$ at $v$ are its darts based at $v$; the forced dart $x_{\ell-1}$ is one of them, so at most $r_C(v)-1\le\lfloor\theta d_v\rfloor-1\le d_v-2$ values of $\rho_v$ have been exposed before the query at $v$, and by \cref{lem:exposure} the query is uniform over at least $d_v-(r_C(v)-1)-1=d_v-r_C(v)\ge(1-\theta)d_v\ge(1-\theta)\delta$ admissible darts. Hence $\Pr(x_{\ell-1}\text{ forced}\mid h)\le1/((1-\theta)\delta)$ (and $=0$ if the forced dart is inadmissible). Likewise the darts of $C$ based at $s$ include $a$ itself, which is produced by the final query, so before the final query at most $r_C(s)-1$ values of $\rho_s$ have been exposed, and $\Pr(x_\ell=a\mid h,x_{\ell-1})\le1/((1-\theta)\delta)$. Summing over $h\in\mathcal H$ and using $\sum_h\Pr(h)\le1$ gives the bound.
+
+\emph{Expectation.} Every face of length $\ell$ contains exactly $\ell$ darts, so $F=\sum_{a\in D}1/L(a)$ and $\Flight=\sum_{a\in D}\ind[C(a)\text{ light}]/L(a)$. As $3\le L(a)\le N$,
+\[
+ \E\Flight=\sum_{a\in D}\sum_{\ell=3}^{N}\frac1\ell\Pr(L(a)=\ell,\ C(a)\text{ light})\le\frac{N}{(1-\theta)^2\delta^2}\sum_{\ell=3}^N\frac1\ell\le\frac{N\,H_N}{(1-\theta)^2\delta^2}.\qedhere
+\]
+\end{proof}
+
+\phantomsection\label{pf:heavy}
+\lemheavy*
+\begin{proof}
+Fix $a$ and explore its orbit as above. Let $\tau$ be the first step at which some vertex $v$ has been queried $\lfloor\theta d_v\rfloor+1$ times (the query at the base of $a$ producing $a$ itself is not counted as a query). Consider a query at a vertex $u$ made at a step $t\le\tau$. Before it, at most $\lfloor\theta d_u\rfloor$ values of $\rho_u$ were exposed (if the count were larger, $\tau$ would have occurred earlier), and $\lfloor\theta d_u\rfloor\le d_u-2$ by \eqref{eq:thresholds}. By \cref{lem:exposure} the query is uniform over at least
+\[
+ d_u-\lfloor\theta d_u\rfloor-1\ \ge\ (1-\theta)d_u-1\ \ge\ (1-\theta)\delta-1\ \ge\ \frac\delta2
+\]
+admissible darts, where the last step is $(\tfrac12-\theta)\delta\ge1$ from \eqref{eq:thresholds}. (The original writeup wrote $d_u-\lfloor\theta d_u\rfloor$ here, overcounting by one; the conclusion below is unaffected.) Since $G$ is simple, at most one admissible dart leads to any prescribed vertex $w$, so for every $w$ and every step $t\le\tau$,
+\begin{equation}\label{eq:twodelta}
+ \Pr(\text{the query at step }t\text{ selects }w\mid\text{past})\ \le\ \frac2\delta .
+\end{equation}
+
+Suppose $C(a)$ is heavy and $L(a)\le T$. Then some vertex $w$ has $r_{C}(w)\ge\lfloor\theta d_w\rfloor+1$ transitions, so $\tau\le L(a)\le T$ occurs, at some vertex $w^*$ that was queried $\lfloor\theta d_{w^*}\rfloor+1$ times within the first $T$ steps. At most one of these queries is the initial one (if $w^*$ is the base of $a$), so $w^*$ was \emph{selected} (chosen as the head of the dart returned by a query) at least $K_{w^*}:=\lfloor\theta d_{w^*}\rfloor$ times at steps $\le\tau$. For a fixed vertex $w$ and a fixed set of $K_w$ steps, iterating \eqref{eq:twodelta} shows that the probability that all these steps select $w$ (and are $\le\tau$) is at most $(2/\delta)^{K_w}$; a union bound over the $\binom T{K_w}$ sets of steps gives
+\[
+ \Pr(w\text{ is selected at least }K_w\text{ times at steps}\le\min\{\tau,T\})\le\binom T{K_w}\Bigl(\frac2\delta\Bigr)^{K_w}\le\Bigl(\frac{2eT}{\delta K_w}\Bigr)^{K_w}.
+\]
+By \eqref{eq:thresholds}, $K_w\ge\theta d_w-1\ge\theta\delta-1\ge\theta\delta/2$, and $T\le\theta\delta^2/100$, so $2eT/(\delta K_w)\le2e\cdot\frac{\theta\delta^2/100}{\delta\cdot\theta\delta/2}=e/25<1$. Hence the probability is at most $(e/25)^{K_w}\le(e/25)^{\theta\delta/2}=e^{-\gamma\theta\delta}$ with $\gamma=\tfrac12\ln(25/e)$. (If $K_w>T$ the probability is $0$.) A union bound over the $n$ vertices $w$ gives $\Pr(C(a)\text{ heavy},L(a)\le T)\le ne^{-\gamma\theta\delta}$. Finally $\Fheavy=\sum_a\ind[C(a)\text{ heavy},L(a)\le T]/L(a)\le\sum_a\ind[C(a)\text{ heavy},L(a)\le T]$, so $\E\Fheavy\le Nne^{-\gamma\theta\delta}$.
+\end{proof}
+
+\phantomsection\label{pf:cycleprob}
+\lemcycleprob*
+\begin{proof}
+Let $a_i$ be the dart from $v_i$ to $v_{i+1}$ (indices modulo $\ell$); these darts exist and are distinct since the $v_i$ are distinct and consecutive ones adjacent. The cycle is facial iff $\Phi(a_i)=a_{i+1}$ for all $i$, i.e.\ $\rho_{v_{i+1}}(\iota(a_i))=a_{i+1}$: the rotation at $v_{i+1}$ sends the dart towards $v_i$ to the dart towards $v_{i+2}$. These two darts are distinct because $v_i\ne v_{i+2}$ (as $\ell\ge3$). For a uniformly random $d$-cycle the successor of a fixed point is uniform over the other $d-1$ points, so the condition at $v_{i+1}$ has probability $1/(d_{v_{i+1}}-1)$; the $\ell$ conditions concern the $\ell$ distinct vertices $v_0,\dots,v_{\ell-1}$, whose rotations are independent. Hence the probability is $\prod_i(d_{v_i}-1)^{-1}$.
+
+A face whose boundary is a vertex-simple $\ell$-cycle traverses its darts in a definite cyclic direction, so it corresponds to exactly $\ell$ rooted oriented simple cycles (the choice of the root). Therefore
+\[
+ \E X_\ell=\frac1\ell\sum_{(v_0,\dots,v_{\ell-1})}\prod_i\frac1{d_{v_i}-1}\ \ge\ \frac1\ell\sum_{(v_0,\dots,v_{\ell-1})}\prod_i\frac1{d_{v_i}}=\frac{W_\ell}\ell,
+\]
+the sums running over rooted oriented simple $\ell$-cycles, which are exactly the closed walks of length $\ell$ with distinct $v_0,\dots,v_{\ell-1}$.
+\end{proof}
+
+\phantomsection\label{pf:walks}
+\lemwalks*
+\begin{proof}
+$S_{uv}=A_{uv}/\sqrt{d_ud_v}$, so $(S^\ell)_{v_0v_0}=\sum_{v_1,\dots,v_{\ell-1}}\prod_{i}A_{v_iv_{i+1}}/\sqrt{d_{v_i}d_{v_{i+1}}}$ (indices mod $\ell$), and each vertex position $v_i$ appears in exactly two square roots, giving the factor $1/d_{v_i}$; summing over $v_0$ gives the formula for $\tr S^\ell$. Since $S=D^{1/2}PD^{-1/2}$, $(S^r)_{vv}=P^r(v,v)$, and for $r\ge1$
+\[
+ P^r(v,v)=\sum_uP^{r-1}(v,u)P(u,v)\le\max_uP(u,v)\le\frac1\delta,
+\]
+because $P^{r-1}$ is row-stochastic and $P(u,v)=A_{uv}/d_u\le1/\delta$ in a simple graph (for $r=1$, $P(v,v)=0$).
+
+Fix positions $0\le i<j\le\ell-1$ and let $r=j-i$. A closed walk $v_0\cdots v_{\ell-1}v_0$ with $v_i=v_j=:v$ splits into the closed walk $v_iv_{i+1}\cdots v_j$ of length $r$ at $v$ and the closed walk $v_jv_{j+1}\cdots v_{\ell-1}v_0\cdots v_i$ of length $\ell-r$ at $v$, and its weight $\prod_{t=0}^{\ell-1}d_{v_t}^{-1}$ is the product of the weights of the two pieces (positions $i,\dots,j-1$ and $j,\dots,\ell-1,0,\dots,i-1$). Hence the total weight of closed walks with $v_i=v_j$ is $\sum_v(S^r)_{vv}(S^{\ell-r})_{vv}\le n/\delta^2$; if $r=1$ or $\ell-r=1$ it is $0$, as $G$ has no loops. Every closed walk with a repeated vertex among $v_0,\dots,v_{\ell-1}$ has $v_i=v_j$ for some pair, and all weights are nonnegative, so the weight of non-simple closed walks is at most $\binom\ell2n/\delta^2=B_\ell$, and $W_\ell\ge\tr S^\ell-B_\ell$.
+\end{proof}
+
+\phantomsection\label{pf:pairing}
+\lempairing*
+\begin{proof}
+$S$ is symmetric and similar to the row-stochastic matrix $P$, so its eigenvalues $\lambda_j$ are real and lie in $[-1,1]$. For each connected component $H$ of $G$, the vector $D^{1/2}\ind_H$ satisfies $S D^{1/2}\ind_H=D^{-1/2}A\ind_H=D^{1/2}\ind_H$, so $1$ is an eigenvalue (with multiplicity at least the number of components). Then $\tr S^{2k}+\tr S^{2k+1}=\sum_j\lambda_j^{2k}(1+\lambda_j)$, every term is nonnegative, and the eigenvalue $1$ contributes $2$; hence the sum is at least $2$. For the second claim, $\tr S^{2k}=\sum_j\lambda_j^{2k}\ge0$ gives $\tr S^{2k}/(2k)\ge\tr S^{2k}/(2k+1)$, so the left side is at least $(\tr S^{2k}+\tr S^{2k+1})/(2k+1)\ge2/(2k+1)$.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+Let $G$ be simple with $\delta\ge cn$ and $n\ge n_0(c)$, where $n_0(c)$ is large enough that \eqref{eq:thresholds} holds, that $T\ge\theta\delta^2/200$, and that $K:=\lfloor\delta/(4\sqrt n)\rfloor\ge2$.
+
+\emph{Upper bound.} Every face is light, or heavy of length at most $T$, or of length greater than $T$, so $F\le\Flight+\Fheavy+\Flong$. \Cref{lem:light,lem:heavy,lem:long} give \eqref{eq:precise}:
+\[
+ \E F(G)\le\frac{NH_N}{(1-\theta)^2\delta^2}+\frac NT+Nne^{-\gamma\theta\delta}.
+\]
+Now $N=2m\le n^2$, $H_N\le\ln N+1\le2\log n+1$, and $N/\delta^2\le n^2/(cn)^2=1/c^2$, so the first term is at most $(1-\theta)^{-2}(2\log n+1)/c^2=(2/c^2)\log n\,(1+O(\theta))+O(1/c^2)$. Next $N/T\le200n^2/(\theta c^2n^2)=200\sqrt{\log n}/c^2=o(\log n)$. Finally $Nne^{-\gamma\theta\delta}\le n^3\exp(-\gamma cn/\sqrt{\log n})=o(1)$. Hence $\E F(G)\le(2/c^2+\varepsilon_c(n))\log n$ with $\varepsilon_c(n)\to0$ depending only on $c$ and $n$. For $K_n$, $N/\delta^2=n(n-1)/(n-1)^2=n/(n-1)$, and the same computation gives $\E F(K_n)\le(2+o(1))\log n$.
+
+\emph{Lower bound.} Faces bounded by simple cycles of different lengths are distinct, and $2K+1\le\delta/(2\sqrt n)+1\le n$, so $F\ge\sum_{k=2}^K(X_{2k}+X_{2k+1})$. By \cref{lem:cycleprob,lem:walks},
+\[
+ \E F(G)\ \ge\ \sum_{k=2}^K\Bigl(\frac{\tr S^{2k}}{2k}+\frac{\tr S^{2k+1}}{2k+1}\Bigr)-\sum_{k=2}^K\Bigl(\frac{B_{2k}}{2k}+\frac{B_{2k+1}}{2k+1}\Bigr).
+\]
+By \cref{lem:pairing} the first sum is at least $\sum_{k=2}^K\frac2{2k+1}\ge\sum_{k=2}^K\frac1{k+1}\ge\ln(K+2)-\ln 3\ge\log K-2$. For the error sum, $B_\ell/\ell=(\ell-1)n/(2\delta^2)$, so $B_{2k}/(2k)+B_{2k+1}/(2k+1)=(4k-1)n/(2\delta^2)<2kn/\delta^2$, and $\sum_{k=2}^K2k\le K^2+K\le2K^2$; since $K\le\delta/(4\sqrt n)$, the error sum is at most $2nK^2/\delta^2\le1/8$. Hence $\E F(G)\ge\log K-3$. Finally $K\ge\delta/(4\sqrt n)-1\ge c\sqrt n/4-1\ge c\sqrt n/8$ for $n\ge n_0(c)$, so $\log K\ge\tfrac12\log n+\log(c/8)$ and $\E F(G)\ge\tfrac12\log n-A_c$ with $A_c=3-\log(c/8)$.
+\end{proof}
+
+\phantomsection\label{pf:multi}
+\propmulti*
+\begin{proof}
+Let $n=2k$ and $M=n$. Take $k$ disjoint dipoles $Q_1,\dots,Q_k$, each consisting of two vertices joined by $M$ parallel edges, and add the $k-1$ bridge edges $e_i$ joining a vertex of $Q_i$ to a vertex of $Q_{i+1}$. The resulting multigraph $G$ is connected, has $n$ vertices, and every vertex has degree $M$ or $M+1$ or $M+2$, so $\delta(G)\ge n$.
+
+A rotation system of a graph with $V$ vertices, $E$ edges and $F$ faces defines an orientable embedding of genus $g$ with $V-E+F=2-2g$. For a dipole, $V=2$, $E=M$, so $F=M-2g$; as $M$ is even, $F$ is even, and $F\ge1$ gives $F\ge2$. Now let $\rho$ be any rotation system of $G$. Removing a bridge $e$ from an embedded connected graph disconnects it, and the two darts of $e$ lie on a single face (a face traversing a bridge must traverse it in both directions, since the bridge separates the graph); deleting $e$ (i.e.\ removing its two darts from the rotations) turns that face into one face of each of the two components and leaves all other faces unchanged. Hence $F(G,\rho)=F(G-e,\rho|_{G-e})-1$. Applying this to the $k-1$ bridges in turn, $F(G,\rho)=\sum_{i=1}^kF(Q_i,\rho|_{Q_i})-(k-1)\ge2k-(k-1)=k+1=n/2+1$. So $\E F(G)\ge n/2+1=\Omega(n)$, not $O(\log n)$.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) on the \emph{original} writeup. Its section and equation numbers refer to that writeup, not to this note; the four items it lists as defects are the ones repaired here (see the provenance box). The scripts it mentions are in \texttt{verification/scripts/2211.01032\_\_02/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{CHMMS} J.~Campion Loth, K.~Halasz, T.~Masařík, B.~Mohar and R.~Šámal, Random embeddings of graphs: the expected number of faces in most graphs is logarithmic, arXiv:2211.01032 (v3, 2025); extended abstract in \emph{Proc. SODA 2024}.
+\end{thebibliography}
+
+\end{document}

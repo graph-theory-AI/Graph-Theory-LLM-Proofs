@@ -1,0 +1,231 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\ES}{\mathit{ES}}
+\newcommand{\E}{\mathbb E}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2405.03455\_\_00 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{Big line or big convex polygon:\\ the dependence on $\ell$ is uniformly linear}
+\author{Machine-generated note (see provenance box)}
+\date{9 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
+\small
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The argument was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2405.03455\_\_00}; original writeup in \texttt{attacks/2405.03455\_\_00/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every identity and inequality by hand and re-checked them symbolically and numerically (all $n\le 20000$ and $n=10^5,10^6$ for the asymptotic step), fetched the TeX source of the source paper to confirm the two theorems used and the exact wording of the open problem, and read the only citing paper (Furukawa, arXiv:2501.03645), which proves a strictly weaker bound; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}; the constant $C_0'$ of the writeup is explained as the rescaling of $C_0$ by the base of the logarithm; and the referee's clarifications (the explicit handling of the ceiling, the edge cases $\ell=3$ and $k=n=3$, the numerical value of the constant, the comparison with Furukawa's bound) were added as remarks. No mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+\end{tcolorbox}
+
+\begin{abstract}
+Let $\ES_\ell(n)$ be the least $N$ such that every $N$-point set in the plane contains $\ell$ collinear points or $n$ points in convex position. Conlon, Fox, He, Mubayi, Suk and Verstraete proved $(3\ell-1)2^{n-5}<\ES_\ell(n)<\ell^2\,2^{n+C\sqrt{n\log n}}$ for all $\ell,n\ge3$ and asked for the correct dependence on $\ell$. We show that there is an absolute constant $C_1$ with
+\[
+ \ES_\ell(n)\le \ell\,2^{\,n+C_1\sqrt{n\log n}}\qquad(\ell,n\ge3),
+\]
+so that $\ES_\ell(n)/\ell$ lies between $2^n/12$ and $2^{n+C_1\sqrt{n\log n}}$ uniformly in both parameters: the dependence on $\ell$ is linear. The proof is a two-step bootstrap. An elementary alteration lemma extracts from any $N$-point set with fewer than $\ell$ collinear points a subset of size $\frac14(N/\ell)^{(k-2)/(k-1)}$ with no $k$ collinear points; applied with $k=n$ and combined with the diagonal case $\ES_n(n)$ of the known upper bound, the exponent loss $(n-1)/(n-2)$ costs only a factor absorbed by the subexponential term.
+\end{abstract}
+
+\section{Introduction}
+
+For integers $\ell,n\ge3$ let $\ES_\ell(n)$ denote the minimum $N$ such that every set of $N$ points in the plane contains either $\ell$ collinear points or $n$ points in convex position (the vertices of a convex $n$-gon). For $\ell=3$ this is the classical Erdős--Szekeres number $\ES(n)$. Conlon, Fox, He, Mubayi, Suk and Verstraete \cite{CFHMSV} proved that there is a constant $C>0$ such that for all $\ell,n\ge3$
+\begin{equation}\label{eq:source}
+ (3\ell-1)\,2^{n-5}+1\ \le\ \ES_\ell(n)\ \le\ \ell^2\,2^{\,n+C\sqrt{n\log n}}
+\end{equation}
+(their Theorems~1.2 and~1.1, respectively), and at the end of their introduction they write:
+
+\begin{problem}[{\cite{CFHMSV}}]\label{prob}
+``It remains an interesting open problem to determine the correct dependence of $\ES_\ell(n)$ on $\ell$.''
+\end{problem}
+
+The lower bound in \eqref{eq:source} is linear in $\ell$ and the upper bound quadratic. In the regime where $n$ is fixed and $\ell\to\infty$ the same paper's cups--caps theorem gives $\ES_\ell(n)=O(\ell)$, but the joint dependence was open. We show that the upper bound can be made linear in $\ell$ uniformly, with no restriction on the relative sizes of $\ell$ and $n$.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+There is an absolute constant $C_1>0$ such that for all integers $\ell,n\ge3$
+\[
+ \ES_\ell(n)\ \le\ \ell\,2^{\,n+C_1\sqrt{n\log n}}.
+\]
+Together with the lower bound in \eqref{eq:source} this gives, for all $\ell,n\ge3$,
+\[
+ \frac1{12}\,\ell\,2^{n}\ <\ \ES_\ell(n)\ \le\ \ell\,2^{\,n+C_1\sqrt{n\log n}}.
+\]
+\end{restatable}
+
+Thus the dependence on $\ell$ is uniformly linear; the remaining gap, a factor $12\cdot 2^{C_1\sqrt{n\log n}}$, depends on $n$ alone and is the same gap that remains open for the classical Erdős--Szekeres number itself (see \cref{rem:open}).
+
+\begin{proofidea}
+The whole argument is a transfer from the diagonal case. An alteration lemma (\cref{lem:alt}) shows that an $N$-point set with fewer than $\ell$ collinear points contains a subset of size at least $\frac14(N/\ell)^{(k-2)/(k-1)}$ with no $k$ collinear points; the point is that the collinear $k$-subsets form a $k$-uniform hypergraph with fewer than $N^2\ell^{k-2}$ edges, because every pair of points determines a line and a line with $s<\ell$ points carries only $\binom s2\ell^{k-2}$ or fewer such $k$-subsets. Feeding a set with no $k$ collinear points and at least $\ES_k(n)$ points into the definition of $\ES_k(n)$ produces $n$ points in convex position, which yields the transfer inequality $\ES_\ell(n)\le\lceil\ell(4\ES_k(n))^{(k-1)/(k-2)}\rceil$ (\cref{thm:transfer}). Choosing $k=n$ and inserting the source's bound $\ES_n(n)<n^2 2^{n+C_0\sqrt{n\log n}}$, the exponent $(n-1)/(n-2)=1+1/(n-2)$ multiplies the exponent $n+O(\sqrt{n\log n})$ by a factor whose excess $1/(n-2)$ contributes only $O(1)$, so everything beyond $\ell\,2^n$ is absorbed into $2^{O(\sqrt{n\log n})}$.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{The transfer inequality}
+
+\begin{restatable}[Alteration lemma]{lemma}{lemalt}\label{lem:alt}
+Let $P$ be a set of $N$ points in the plane with fewer than $\ell$ points on every line, and let $k\ge3$ be an integer. Then $P$ contains a subset $Q$ with no $k$ collinear points and
+\[
+ |Q|\ \ge\ \frac14\Bigl(\frac N\ell\Bigr)^{(k-2)/(k-1)}.
+\]
+\end{restatable}
+\begin{proofidea}
+Let $H$ be the $k$-uniform hypergraph on $P$ whose edges are the collinear $k$-subsets, with $e$ edges. Since every pair of points lies on a unique line and each line carries at most $\ell-1$ points, $e<N^2\ell^{k-2}$. If $e<N/2$, deleting one point per edge leaves more than $N/2$ points. Otherwise keep each point independently with probability $p=(N/2e)^{1/(k-1)}$, so that the expected number of kept points minus the expected number of surviving edges is exactly $pN/2$; delete one point from each surviving edge. In both cases the independent set obtained has the claimed size.\fullproofref{pf:alt}
+\end{proofidea}
+
+\begin{restatable}[Transfer inequality]{theorem}{thmtransfer}\label{thm:transfer}
+For all integers $k,\ell,n\ge3$,
+\[
+ \ES_\ell(n)\ \le\ \Bigl\lceil\,\ell\,\bigl(4\,\ES_k(n)\bigr)^{(k-1)/(k-2)}\Bigr\rceil .
+\]
+\end{restatable}
+\begin{proofidea}
+Let $M=\ES_k(n)$ and $N=\lceil\ell(4M)^{(k-1)/(k-2)}\rceil$. An $N$-point set without $\ell$ collinear points contains, by \cref{lem:alt}, a subset $Q$ with no $k$ collinear points and $|Q|\ge M$; by the definition of $\ES_k(n)$, $Q$ contains $n$ points in convex position.\fullproofref{pf:transfer}
+\end{proofidea}
+
+\section{Remarks}
+
+\begin{remark}[What remains open]\label{rem:open}
+The argument does not narrow the factor $2^{O(\sqrt{n\log n})}$ between the lower and upper bounds as functions of $n$; it removes the extra factor $\ell$ from the upper bound of \cite{CFHMSV} without worsening the $n$-dependence beyond the absolute constant in the subexponential term. Read maximally strictly, ``determine the correct dependence on $\ell$'' might ask for the exact coefficient of $\ell$ for each $n$; that reading subsumes the classical Erdős--Szekeres problem ($2^{n-2}+1$ versus $2^{n+O(\sqrt{n\log n})}$) and is not addressed.
+\end{remark}
+
+\begin{remark}[Constants and the ceiling]\label{rem:const}
+The referee (\cref{app:referee}) made the last step quantitative: writing the source bound as $\ES_n(n)<n^2 2^{n+C_0'\sqrt{n\log_2 n}}$, the argument of the ceiling in \cref{thm:transfer} with $k=n$ is at least $12$, so $\lceil x\rceil\le\frac{13}{12}x$ there, and the inequality $\frac{n-1}{n-2}\log_2\bigl(4n^2 2^{n+C_0'\sqrt{n\log_2 n}}\bigr)+\log_2\frac{13}{12}\le n+C_1\sqrt{n\log_2 n}$ holds for all $n\ge3$ with, for instance, $C_1=12.18$ when $C_0'=3$ (the worst case being $n=3$). The constant $\frac1{12}$ in the lower bound is tight only at $\ell=3$ and is inherited from the construction of \cite{CFHMSV}.
+\end{remark}
+
+\begin{remark}[Edge cases]
+For $\ell=3$ no line contains $k\ge3$ points, the hypergraph in \cref{lem:alt} is empty and the lemma is vacuous but true. For $k=n=3$ one has $\ES_3(3)=3$ and the transfer inequality gives $\ES_\ell(3)\le144\,\ell$, wasteful but correct against the true value $\ES_\ell(3)=\ell$. The strict inequality $\frac1{12}\ell 2^n<\ES_\ell(n)$ at $\ell=3$ uses the ``$+1$'' in the lower bound of \eqref{eq:source}.
+\end{remark}
+
+\begin{remark}[Related work and novelty]
+The only paper citing \cite{CFHMSV} found by the referee is Furukawa \cite{Furukawa25}, who proves $\ES_\ell(n)\le(\ell-3)\binom{\ES(n)-1}{2}+\ES(n)$, i.e.\ roughly $\ell\,4^{n+O(\sqrt{n\log n})}$, by a maximal-general-position-subset argument, and remarks that this is weaker than \eqref{eq:source} unless $\ell$ is much larger than $n$. The bound of \cref{thm:main} is stronger than both. The alteration lemma is a standard hypergraph independence bound; its case $k=3$ is the classical step of the general-position subset selection literature (e.g.\ Payne and Wood \cite{PW13}). The bootstrap through the diagonal value $\ES_n(n)$, which is what makes the exponent loss harmless, was not found in the literature; given that the six authors of \cite{CFHMSV} left the question open and that the argument is short, the referee explicitly recommends a folklore check. Correctness does not depend on novelty.
+\end{remark}
+
+\begin{remark}[Computational checks]
+The referee verified symbolically the binomial identity and the two algebraic identities in the proof of \cref{lem:alt} for $3\le k\le14$, the inequality $2^{-1-1/(k-1)}\ge\frac14$ for $k<1000$, the arithmetic of \cref{thm:transfer} on a grid of $(k,M,\ell)$, and the asymptotic step of \cref{thm:main} for all $3\le n\le20000$ and $n=10^5,10^6$; it also stress-tested \cref{lem:alt} on thirty concrete point sets (grids, unions of lines, clustered and random sets). Scripts are in \texttt{verification/scripts/2405.03455\_\_00/}.
+\end{remark}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:alt}
+\lemalt*
+\begin{proof}
+Form the $k$-uniform hypergraph $H$ on vertex set $P$ whose edges are the collinear $k$-subsets of $P$, and let $e=e(H)$. An independent set of $H$ is exactly a subset of $P$ with no $k$ collinear points.
+
+\emph{Counting edges.} For every line $L$ containing at least $k$ points of $P$ put $s_L=|P\cap L|$; by hypothesis $s_L\le\ell-1$. Every collinear $k$-subset lies on exactly one line, so $e=\sum_L\binom{s_L}{k}$. For $s\ge k$,
+\[
+ \binom sk=\binom s2\,\frac{\binom{s-2}{k-2}}{\binom k2}\ \le\ \binom s2\,\ell^{k-2},
+\]
+since $\binom{s-2}{k-2}\le(s-2)^{k-2}\le\ell^{k-2}$ and $\binom k2\ge1$. Every pair of distinct points of $P$ lies on a unique line, so $\sum_L\binom{s_L}2\le\binom N2$. Hence
+\begin{equation}\label{eq:e}
+ e\ \le\ \ell^{k-2}\sum_L\binom{s_L}2\ \le\ \ell^{k-2}\binom N2\ <\ N^2\ell^{k-2}.
+\end{equation}
+Put $a=(k-2)/(k-1)\in(0,1)$.
+
+\emph{Case $e<N/2$.} Delete one vertex from each edge. At most $e<N/2$ vertices are deleted, so an independent set of size greater than $N/2$ remains, and $N/2>N/4\ge\frac14(N/\ell)^a$ because $(N/\ell)^a\le N^a\le N$.
+
+\emph{Case $e\ge N/2$.} Put $p=(N/2e)^{1/(k-1)}$, so $0<p\le1$. Choose each vertex of $P$ independently with probability $p$; let $X$ be the number of chosen vertices and $Y$ the number of edges all of whose $k$ vertices are chosen. Then $\E X=pN$ and $\E Y=p^ke$, and since $p^{k-1}e=N/2$,
+\[
+ \E[X-Y]=pN-p^ke=pN-p\cdot\frac N2=\frac{pN}2 .
+\]
+Hence some outcome has $X-Y\ge pN/2$. In that outcome delete one chosen vertex from each of the $Y$ edges contained in the chosen set; this destroys every such edge and leaves an independent set of size at least $X-Y\ge pN/2$. By \eqref{eq:e},
+\[
+ \frac{pN}2=\frac N2\Bigl(\frac N{2e}\Bigr)^{1/(k-1)}
+ \ \ge\ \frac N2\Bigl(\frac1{2N\ell^{k-2}}\Bigr)^{1/(k-1)}
+ =2^{-1-1/(k-1)}\Bigl(\frac N\ell\Bigr)^{(k-2)/(k-1)}
+ \ \ge\ \frac14\Bigl(\frac N\ell\Bigr)^{(k-2)/(k-1)},
+\]
+where the middle equality is the identity $N\cdot N^{-1/(k-1)}=N^{(k-2)/(k-1)}$ together with $\ell^{-(k-2)/(k-1)}$, and the last inequality is $1+1/(k-1)\le2$ for $k\ge2$ (for $k=3$ the factor is $2^{-3/2}\approx0.354>\frac14$). This proves the lemma.
+\end{proof}
+
+\phantomsection\label{pf:transfer}
+\thmtransfer*
+\begin{proof}
+Let $M=\ES_k(n)$, $r=(k-1)/(k-2)$ and $N=\lceil\ell(4M)^r\rceil$. Let $P$ be any set of $N$ points in the plane. If $P$ contains $\ell$ collinear points there is nothing to prove. Otherwise every line contains fewer than $\ell$ points of $P$, and \cref{lem:alt} gives $Q\subseteq P$ with no $k$ collinear points and
+\[
+ |Q|\ \ge\ \frac14\Bigl(\frac N\ell\Bigr)^{1/r}\ \ge\ \frac14\bigl((4M)^r\bigr)^{1/r}=M,
+\]
+using $N/\ell\ge(4M)^r$. By the definition of $M=\ES_k(n)$, every $M$-point subset of $Q$ contains $k$ collinear points or $n$ points in convex position; the first alternative is impossible inside $Q$, so $Q$, and hence $P$, contains $n$ points in convex position. Therefore every $N$-point set contains $\ell$ collinear points or $n$ points in convex position, i.e.\ $\ES_\ell(n)\le N$.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+Apply \cref{thm:transfer} with $k=n$:
+\begin{equation}\label{eq:kn}
+ \ES_\ell(n)\ \le\ \Bigl\lceil\,\ell\,\bigl(4\,\ES_n(n)\bigr)^{(n-1)/(n-2)}\Bigr\rceil .
+\end{equation}
+Theorem~1.1 of \cite{CFHMSV} holds for all pairs $\ell,n\ge3$; taking both parameters equal to $n$ gives an absolute constant $C_0$ with
+\begin{equation}\label{eq:diag}
+ \ES_n(n)\ <\ n^2\,2^{\,n+C_0\sqrt{n\log n}} .
+\end{equation}
+Let $C_0'$ be $C_0$ rescaled so that $2^{C_0\sqrt{n\log n}}=2^{C_0'\sqrt{n\log_2 n}}$ (i.e.\ $C_0'=C_0\sqrt{\ln 2}$ if $\log$ in \eqref{eq:diag} is the natural logarithm), and let $r=(n-1)/(n-2)=1+1/(n-2)$. Taking base-$2$ logarithms in \eqref{eq:diag},
+\begin{align*}
+ \log_2\bigl(4\ES_n(n)\bigr)^r
+ &\le r\bigl(n+2\log_2n+2+C_0'\sqrt{n\log_2n}\bigr)\\
+ &= n+C_0'\sqrt{n\log_2n}+2\log_2n+2+\frac{n+C_0'\sqrt{n\log_2n}+2\log_2n+2}{n-2}.
+\end{align*}
+For $n\ge3$ every term after the leading $n$ is $O(\sqrt{n\log n})$ with an absolute implied constant: $2\log_2n+2=O(\sqrt{n\log n})$, and the last fraction is at most $\frac{n}{n-2}+\frac{C_0'\sqrt{n\log_2 n}+2\log_2n+2}{n-2}\le 3+O(\sqrt{n\log n})$, while $\sqrt{n\log_2n}\ge\sqrt{3\log_23}>2$ for $n\ge3$ so constants are absorbed as well. The ceiling in \eqref{eq:kn} changes the bound by a factor at most $\frac{13}{12}$ (its argument is at least $\ell\cdot4\ES_n(n)\ge12$; cf.\ \cref{rem:const}), which is likewise absorbed. Hence there is an absolute $C_1$ with
+\[
+ \ES_\ell(n)\ \le\ \ell\,2^{\,n+C_1\sqrt{n\log n}}\qquad(\ell,n\ge3).
+\]
+
+For the lower bound, Theorem~1.2 of \cite{CFHMSV} gives $\ES_\ell(n)\ge(3\ell-1)2^{n-5}+1>(3\ell-1)2^{n-5}$, and
+\[
+ (3\ell-1)2^{n-5}-\frac1{12}\ell\,2^n=\frac{2^n(\ell-3)}{96}\ \ge\ 0\qquad(\ell\ge3),
+\]
+so $\ES_\ell(n)>\frac1{12}\ell\,2^n$. Combining the two bounds proves the theorem.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02/03) on the \emph{original} writeup. Its step numbers (S1--S17) refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification/scripts/2405.03455\_\_00/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{CFHMSV} D.~Conlon, J.~Fox, X.~He, D.~Mubayi, A.~Suk and J.~Verstraete, Big line or big convex polygon, \emph{Comput. Geom.} 131 (2026) 102218; arXiv:2405.03455.
+\bibitem{Furukawa25} K.~Furukawa, Big convex polytopes or rich hyperplanes, arXiv:2501.03645 (2025).
+\bibitem{PW13} M.~S.~Payne and D.~R.~Wood, On the general position subset selection problem, \emph{SIAM J. Discrete Math.} 27 (2013) 1727--1733; arXiv:1208.5289.
+\end{thebibliography}
+
+\end{document}

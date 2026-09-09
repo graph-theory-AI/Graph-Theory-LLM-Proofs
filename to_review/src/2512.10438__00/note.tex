@@ -1,0 +1,234 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\col}{\chi}
+\newcommand{\pth}{p}
+\newcommand{\lv}{\ell}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2512.10438\_\_00 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{A non-transitive $6$-edge-coloured tournament on $9$ vertices\\ with a shorter longest colour-avoiding path than any transitive one:\\ an answer to Problem~5.1 of Fox, Sudakov and Wigderson}
+\author{Machine-generated note (see provenance box)}
+\date{9 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
+\small
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2512.10438\_\_00}; original writeup in \texttt{attacks/2512.10438\_\_00/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, compared the problem statement and definitions verbatim with the source paper, re-encoded the tournament and brute-forced all its directed paths, and verified the transitive benchmark $f_{6,5}(9)=8$ exhaustively over all $6^8$ colourings of the consecutive edges; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, the colouring was tabulated edge by edge (the writeup left the ``remaining'' edges to colour~$1$ implicitly), and two clarifications taken from the referee's report were added and are marked as such (the count of $21$ eight-vertex paths, and why the unspecified edge colours are irrelevant). No mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+\end{tcolorbox}
+
+\begin{abstract}
+Fox, Sudakov and Wigderson study, for a $q$-edge-coloured tournament on $N$ vertices, the longest directed path whose edges miss at least one colour, and denote by $f_{q,q-1}(N)$ the minimum length (in vertices) of such a path over all $q$-edge-colourings of the transitive $N$-vertex tournament. Their Problem~5.1 asks whether, for some $q\ge4$ and $N$, a \emph{non-transitive} $q$-edge-coloured tournament on $N$ vertices can have a strictly shorter longest colour-avoiding path than $f_{q,q-1}(N)$. We answer this affirmatively with $(q,N)=(6,9)$: we show $f_{6,5}(9)=8$ and exhibit a $6$-edge-coloured tournament on $9$ vertices containing one directed triangle whose longest colour-avoiding path has $7$ vertices.
+\end{abstract}
+
+\section{Introduction}
+
+Throughout, following \cite{FSW25}, the \emph{length} of a directed path is the number of vertices it comprises. Let $T$ be a tournament and $\col$ a colouring of its edges with $q$ colours (not necessarily all used). A directed path is \emph{colour-avoiding} if its edges use at most $q-1$ of the $q$ colours, i.e.\ miss at least one colour. Write $\pth(\col)$ for the maximum length of a colour-avoiding directed path. Following \cite{FSW25} let $g_{q,q-1}(N)$ be the minimum of $\pth(\col)$ over all $q$-edge-coloured $N$-vertex tournaments, and
+\[
+ f_{q,q-1}(N)=\min_{\col}\ \pth(\col),
+\]
+the minimum over all $q$-edge-colourings $\col$ of the \emph{transitive} tournament on $N$ vertices. Trivially $g_{q,q-1}(N)\le f_{q,q-1}(N)$. For $q=3$ the inequality can be strict, by a construction of Hamaker and Stein discussed in \cite{FSW25}; for $q\ge4$ the authors show (their Proposition~1.5) that the vector-sequence constructions which produce such examples cannot work, and they ask:
+
+\begin{problem}[{\cite[Problem~5.1]{FSW25}}]\label{prob:51}
+For some integers $q\ge4$ and $N$, does there exist a non-transitive $q$-edge-coloured $N$-vertex tournament whose longest colour-avoiding path has strictly fewer than $f_{q,q-1}(N)$ vertices?
+\end{problem}
+
+The authors write that they do not expect $f_{q,q-1}(N)=g_{q,q-1}(N)$ in general, so an affirmative answer is the anticipated direction. We give one.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+$f_{6,5}(9)=8$, and there is a $6$-edge-coloured non-transitive tournament $T$ on $9$ vertices, described explicitly in \cref{sec:construction}, whose longest colour-avoiding directed path has exactly $7$ vertices.
+\end{restatable}
+
+\begin{corollary}\label{cor:51}
+\Cref{prob:51} has an affirmative answer, with $(q,N)=(6,9)$: the tournament $T$ of \cref{thm:main} satisfies $\pth(T)=7<8=f_{6,5}(9)$.
+\end{corollary}
+\begin{proof}
+Immediate from \cref{thm:main}, since $T$ is non-transitive (it contains a directed triangle).
+\end{proof}
+
+\begin{proofidea}
+\Cref{thm:main} is the conjunction of \cref{lem:benchmark} ($f_{6,5}(9)=8$) and \cref{lem:construction} ($\pth(T)=7$). For the benchmark, the $8$-vertex paths of the transitive tournament $v_1\prec\dots\prec v_9$ are the nine vertex-deleted increasing sequences; if none of them were colour-avoiding, a counting argument on the word of colours of the eight consecutive edges $v_iv_{i+1}$ would force four colours to occur exactly once, at pairwise non-consecutive interior positions, which is impossible in six positions. For the construction, $T$ consists of a transitive triple $L$, a directed triangle $C$ and a transitive triple $R$ with all edges pointing $L\to C\to R$ and $L\to R$; every $8$-vertex path visits the blocks in this order, and the colouring is arranged so that each of the $21$ such paths uses all six colours, while the $7$-vertex path $\lv_1\lv_2\lv_3x_0x_1x_2r_1$ avoids colour~$4$.
+\end{proofidea}
+
+\section{The transitive benchmark}\label{sec:benchmark}
+
+\begin{restatable}{lemma}{lembench}\label{lem:benchmark}
+$f_{6,5}(9)=8$.
+\end{restatable}
+\begin{proofidea}
+\emph{Lower bound.} Let $v_1,\dots,v_9$ be the transitive order and $a_i=\col(v_iv_{i+1})$. If no $8$-vertex path is colour-avoiding, then $a_1\cdots a_7$ and $a_2\cdots a_8$ each contain all six colours, so at least four colours occur exactly once in $a_1\cdots a_8$ (\emph{singleton positions}); positions $1$ and $8$ cannot be singleton, and two singleton positions cannot be consecutive (deleting the vertex between them removes both colours and adds a single chord, which can restore at most one). Four pairwise non-consecutive positions do not fit in $\{2,\dots,7\}$.
+\emph{Upper bound.} Colour the consecutive edges $1,2,3,4,5,6,1,2$; the unique $9$-vertex path uses all six colours.\fullproofref{pf:benchmark}
+\end{proofidea}
+
+\section{The construction}\label{sec:construction}
+
+Let the vertex set be $L\cup C\cup R$ with
+\[
+ L=\{\lv_1,\lv_2,\lv_3\},\qquad C=\{x_0,x_1,x_2\},\qquad R=\{r_1,r_2,r_3\},
+\]
+indices of the $x_i$ being read modulo~$3$. Orient $L$ transitively as $\lv_1\to\lv_2\to\lv_3$, $R$ transitively as $r_1\to r_2\to r_3$, $C$ as the directed triangle $x_0\to x_1\to x_2\to x_0$, and every edge between blocks from $L$ to $C$, from $C$ to $R$, and from $L$ to $R$. This is a tournament on $9$ vertices, non-transitive because $C$ is a directed triangle.
+
+Put $d_0=2$, $d_1=5$, $d_2=6$ (indices modulo~$3$) and $D=\{d_0,d_1,d_2\}=\{2,5,6\}$. The colouring $\col$ is given in \cref{tab:colouring}; in words: $\col(\lv_1\lv_2)=1$, $\col(\lv_2\lv_3)=\col(\lv_1\lv_3)=3$, $\col(r_1r_2)=\col(r_1r_3)=4$, $\col(r_2r_3)=1$, $\col(x_ix_{i+1})=d_i$, $\col(\lv_3x_i)=d_{i-1}$, $\col(x_ir_1)=d_i$, $\col(\lv_2x_i)=3$, $\col(x_ir_2)=4$ for all $i\in\Z/3\Z$, and every remaining edge (the three edges $\lv_1x_i$, the three edges $x_ir_3$, and the nine edges from $L$ to $R$) has colour~$1$. All six colours occur.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+edges & colour & comment\\
+\midrule
+$\lv_1\lv_2$ & $1$ & \\
+$\lv_2\lv_3$, $\lv_1\lv_3$ & $3$ & \\
+$r_1r_2$, $r_1r_3$ & $4$ & \\
+$r_2r_3$ & $1$ & \\
+$x_0x_1$, $x_1x_2$, $x_2x_0$ & $2$, $5$, $6$ & $\col(x_ix_{i+1})=d_i$\\
+$\lv_3x_0$, $\lv_3x_1$, $\lv_3x_2$ & $6$, $2$, $5$ & $\col(\lv_3x_i)=d_{i-1}$\\
+$x_0r_1$, $x_1r_1$, $x_2r_1$ & $2$, $5$, $6$ & $\col(x_ir_1)=d_i$\\
+$\lv_2x_0$, $\lv_2x_1$, $\lv_2x_2$ & $3$ & \\
+$x_0r_2$, $x_1r_2$, $x_2r_2$ & $4$ & \\
+$\lv_1x_0$, $\lv_1x_1$, $\lv_1x_2$ & $1$ & not used by any path on $\ge8$ vertices\\
+$x_0r_3$, $x_1r_3$, $x_2r_3$ & $1$ & not used by any path on $\ge8$ vertices\\
+$\lv_ar_b$ ($a,b\in\{1,2,3\}$) & $1$ & not used by any path on $\ge8$ vertices\\
+\bottomrule
+\end{tabular}
+\caption{The $6$-edge-colouring $\col$ of $T$; all $36$ edges are listed (orientation: $\lv$'s $\to$ $x$'s $\to$ $r$'s, $\lv_1\to\lv_2\to\lv_3$, $r_1\to r_2\to r_3$, $x_0\to x_1\to x_2\to x_0$).}
+\label{tab:colouring}
+\end{table}
+
+\begin{restatable}{lemma}{lemconstr}\label{lem:construction}
+Every directed path of $T$ on $8$ or more vertices uses all six colours, and the path $\lv_1\lv_2\lv_3x_0x_1x_2r_1$ has edge colours $1,3,6,2,5,6$. Hence $\pth(T)=7$.
+\end{restatable}
+\begin{proofidea}
+Since all inter-block edges point $L\to C\to R$, an $8$-vertex path omits exactly one vertex and visits $L$, $C$, $R$ in this order, the $L$- and $R$-parts in their transitive order and the $C$-part as a cyclic rotation $x_i,x_{i+1},x_{i+2}$ or as a single edge $x_ix_{i+1}$. With boundary vertices $\lv_3$ and $r_1$ present, the entry edge, the triangle edges and the exit edge carry the colours $d_{i-1},d_i,d_{i+1},d_{i+2}$ (or $d_{i-1},d_i,d_{i+1}$), covering $D$; a case analysis over the omitted vertex shows that the colours $1,3,4$ are always present too, using the chords $\lv_1\lv_3$, $r_1r_3$ and the alternative boundary edges $\lv_2x_i$, $x_ir_2$ when $\lv_2$, $r_2$, $\lv_3$ or $r_1$ is omitted. A $9$-vertex path contains an $8$-vertex subpath.\fullproofref{pf:construction}
+\end{proofidea}
+
+\begin{proof}[Proof of \cref{thm:main}]
+Combine \cref{lem:benchmark} and \cref{lem:construction}.
+\end{proof}
+
+\section{Remarks}
+
+\begin{remark}[What is and is not answered]
+\Cref{prob:51} asks for \emph{some} $(q,N)$, and is resolved by the single instance $(6,9)$ with a gap of one vertex. The asymptotic question the authors of \cite{FSW25} also care about, whether $g_{q,q-1}(N)$ is asymptotically smaller than $f_{q,q-1}(N)$ for $q\ge4$ (for $q=3$ the gap is a power of $N$), is not addressed.
+\end{remark}
+
+\begin{remark}[Connectivity]
+$T$ is non-transitive but not strongly connected: its strong components are $\lv_1,\lv_2,\lv_3,\{x_0,x_1,x_2\},r_1,r_2,r_3$ in this order. \Cref{prob:51} imposes no connectivity requirement.
+\end{remark}
+
+\begin{remark}[No conflict with Proposition~1.5 of the source paper]
+Proposition~1.5 of \cite{FSW25} concerns the vector setting ($(q-1)$-comparable sets versus $(q-1)$-increasing sequences) and rules out vector-based constructions for $q\ge4$; the implication in \cite{FSW25} from vector constructions to tournament bounds is one-directional, so a direct tournament construction such as $T$ is not constrained by it. (Observation taken from the referee's report, \cref{app:referee}.)
+\end{remark}
+
+\begin{remark}[The unspecified edges]
+The edges assigned colour~$1$ ``by default'' in \cref{tab:colouring} never lie on a directed path with $8$ or more vertices: such a path uses only the edges listed in the case analysis of \cref{lem:construction}. So the conclusion $\pth(T)\le7$ is independent of how they are coloured; the referee's enumeration of all $21$ eight-vertex paths confirms this (\cref{app:referee}). The value $\pth(T)=7$ was checked by exhaustive search over all directed paths of $T$ with the colouring exactly as tabulated.
+\end{remark}
+
+\begin{remark}[Computational verification]
+The referee (\cref{app:referee}) re-encoded $T$ and found: $36$ edges, one per pair; a directed triangle; all six colours used; exactly $21$ directed paths on $8$ vertices, each using all six colours; longest colour-avoiding path of $7$ vertices. Independently, for the benchmark it checked all $6^8=1\,679\,616$ colour words of the consecutive edges of the transitive $9$-vertex tournament against a chord-independent criterion implying the existence of a colour-avoiding $8$-vertex path, with no failures.
+\end{remark}
+
+\begin{remark}[Novelty]
+The referee's literature search (September 2026) found no follow-up to \cite{FSW25} resolving \cref{prob:51} for $q\ge4$ and no prior occurrence of this example. This has not been checked by a human.
+\end{remark}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:benchmark}
+\lembench*
+\begin{proof}
+\emph{Lower bound $f_{6,5}(9)\ge8$.} Let $v_1,\dots,v_9$ be the vertices of the transitive tournament in transitive order ($v_i\to v_j$ for $i<j$), let $\col$ be any $6$-edge-colouring, and put $a_i=\col(v_iv_{i+1})$ for $1\le i\le8$. In a transitive tournament every directed path on a set of $8$ vertices is the increasing order of that set, so the $8$-vertex paths are exactly the nine paths obtained by deleting one vertex from $v_1v_2\cdots v_9$. Suppose, for a contradiction, that none of them is colour-avoiding, i.e.\ each uses all six colours.
+
+Deleting $v_9$ gives the path $v_1\cdots v_8$ with edge colours $a_1\cdots a_7$; deleting $v_1$ gives $v_2\cdots v_9$ with colours $a_2\cdots a_8$. Both words contain all six colours, hence so does $a_1\cdots a_8$. Call a position $i\in\{1,\dots,8\}$ a \emph{singleton position} if the colour $a_i$ occurs exactly once in the word $a_1\cdots a_8$. If $r$ colours occur exactly once, the other $6-r$ colours occur at least twice, so $8\ge r+2(6-r)=12-r$ and $r\ge4$: there are at least four singleton positions.
+
+Position $1$ is not singleton: otherwise the path $v_2\cdots v_9$, whose colours are $a_2\cdots a_8$, misses the colour $a_1$. Symmetrically position $8$ is not singleton.
+
+Two singleton positions $i$ and $i+1$ cannot both be singleton. Indeed, then $a_i\ne a_{i+1}$ (each occurs once) and $1\le i\le7$; delete $v_{i+1}$. The resulting $8$-vertex path $v_1\cdots v_iv_{i+2}\cdots v_9$ uses the edges of colours $a_j$, $j\notin\{i,i+1\}$, together with the single chord $v_iv_{i+2}$. The colours $a_i$ and $a_{i+1}$ occur nowhere else in $a_1\cdots a_8$, and the one chord carries one colour, so at least one of $a_i,a_{i+1}$ is missing from this path, a contradiction.
+
+Hence at least four singleton positions lie in $\{2,\dots,7\}$ and are pairwise non-consecutive. But a set of pairwise non-consecutive integers in an interval of six consecutive integers has at most three elements. This contradiction shows that every $6$-edge-colouring of the transitive $9$-vertex tournament has a colour-avoiding path on $8$ vertices, i.e.\ $f_{6,5}(9)\ge8$.
+
+\emph{Upper bound $f_{6,5}(9)\le8$.} Colour the eight consecutive edges $v_1v_2,\dots,v_8v_9$ with $1,2,3,4,5,6,1,2$ respectively and the remaining edges arbitrarily. The only directed path on $9$ vertices of a transitive tournament is $v_1\cdots v_9$, and its edges use all six colours, so it is not colour-avoiding. Hence $\pth(\col)\le8$ for this colouring and $f_{6,5}(9)\le8$.
+\end{proof}
+
+\phantomsection\label{pf:construction}
+\lemconstr*
+\begin{proof}
+\emph{Structure of long paths.} Every edge between different blocks points from $L$ to $C$, from $C$ to $R$, or from $L$ to $R$. Hence a directed path visits vertices of $L$ first, then vertices of $C$, then vertices of $R$ (some of these groups possibly empty). Within $L$ and within $R$ the order is the transitive one; within $C$, a path through all three vertices is a cyclic rotation $x_i,x_{i+1},x_{i+2}$ for some $i\in\Z/3\Z$, and a path through exactly two vertices $x_j,x_{j+1}$ traverses the edge $x_j\to x_{j+1}$ (the vertex $x_{j+2}$ being omitted). A directed path on $8$ vertices therefore omits exactly one of the nine vertices, and is determined by the omitted vertex together with, if all of $C$ is present, the rotation $i$. (There are thus $3+6\cdot3=21$ such paths; this count is the referee's, \cref{app:referee}, and is not needed below.)
+
+\emph{The colours of $D$.} Suppose an $8$-vertex path contains $\lv_3$, all of $C$ in the order $x_i,x_{i+1},x_{i+2}$, and $r_1$. Its four edges $\lv_3x_i$, $x_ix_{i+1}$, $x_{i+1}x_{i+2}$, $x_{i+2}r_1$ have colours $d_{i-1},d_i,d_{i+1},d_{i+2}$, which include all three residues, i.e.\ all of $D=\{2,5,6\}$. If instead the omitted vertex is $x_j\in C$, the path contains $\lv_3,x_{j+1},x_{j+2},r_1$ consecutively; writing $i=j+1$, the edges $\lv_3x_i$, $x_ix_{i+1}$, $x_{i+1}r_1$ have colours $d_{i-1},d_i,d_{i+1}$, again all of $D$.
+
+\emph{The colours $1,3,4$, and $D$ in the remaining cases.} We go through the nine possible omitted vertices.
+\begin{itemize}[nosep]
+\item $x_j$ omitted ($j\in\Z/3\Z$): the path is $\lv_1\lv_2\lv_3x_{j+1}x_{j+2}r_1r_2r_3$. The $L$-part contributes $\col(\lv_1\lv_2)=1$, $\col(\lv_2\lv_3)=3$; the $R$-part contributes $\col(r_1r_2)=4$, $\col(r_2r_3)=1$; $D$ is covered by the previous paragraph.
+\item $\lv_1$ omitted: $\lv_2\lv_3x_ix_{i+1}x_{i+2}r_1r_2r_3$. Colour $3$ from $\lv_2\lv_3$; $4$ and $1$ from $r_1r_2$, $r_2r_3$; $D$ from the previous paragraph.
+\item $\lv_2$ omitted: $\lv_1\lv_3x_ix_{i+1}x_{i+2}r_1r_2r_3$. The chord $\lv_1\lv_3$ has colour $3$; $R$ gives $4,1$; $D$ as before.
+\item $\lv_3$ omitted: $\lv_1\lv_2x_ix_{i+1}x_{i+2}r_1r_2r_3$. Colour $1$ from $\lv_1\lv_2$, colour $3$ from the new boundary edge $\lv_2x_i$, colours $4,1$ from $R$. The edges $x_ix_{i+1}$, $x_{i+1}x_{i+2}$, $x_{i+2}r_1$ have colours $d_i,d_{i+1},d_{i+2}$, all of $D$.
+\item $r_1$ omitted: $\lv_1\lv_2\lv_3x_ix_{i+1}x_{i+2}r_2r_3$. $L$ gives $1,3$; the new boundary edge $x_{i+2}r_2$ has colour $4$; $r_2r_3$ has colour $1$. The edges $\lv_3x_i$, $x_ix_{i+1}$, $x_{i+1}x_{i+2}$ have colours $d_{i-1},d_i,d_{i+1}$, all of $D$.
+\item $r_2$ omitted: $\lv_1\lv_2\lv_3x_ix_{i+1}x_{i+2}r_1r_3$. $L$ gives $1,3$; the chord $r_1r_3$ has colour $4$; $D$ from the previous paragraph.
+\item $r_3$ omitted: $\lv_1\lv_2\lv_3x_ix_{i+1}x_{i+2}r_1r_2$. $L$ gives $1,3$; $r_1r_2$ has colour $4$; $D$ from the previous paragraph.
+\end{itemize}
+In every case the path uses $\{1,3,4\}\cup D=\{1,2,3,4,5,6\}$. A directed path on $9$ vertices contains a directed path on $8$ vertices (its first eight vertices), whose edge colours form a subset of its own; so it too uses all six colours. Hence no directed path on $8$ or more vertices is colour-avoiding, and $\pth(T)\le7$.
+
+\emph{The witness.} The path $\lv_1\to\lv_2\to\lv_3\to x_0\to x_1\to x_2\to r_1$ is a directed path on $7$ vertices with edge colours
+\begin{align*}
+ &\col(\lv_1\lv_2)=1,\qquad \col(\lv_2\lv_3)=3,\qquad \col(\lv_3x_0)=d_2=6,\\
+ &\col(x_0x_1)=d_0=2,\qquad \col(x_1x_2)=d_1=5,\qquad \col(x_2r_1)=d_2=6,
+\end{align*}
+which avoid colour~$4$. Hence $\pth(T)\ge7$, and $\pth(T)=7$.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02/03) on the \emph{original} writeup. Its step labels (S0, L1--L7, C1--C8) refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification/scripts/2512.10438\_\_00/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{FSW25} J.~Fox, B.~Sudakov and Y.~Wigderson, Color-avoiding directed paths in tournaments, arXiv:2512.10438 (2025; v2 January 2026).
+\end{thebibliography}
+
+\end{document}

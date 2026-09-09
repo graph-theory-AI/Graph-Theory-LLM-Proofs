@@ -1,0 +1,406 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{Claim}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\sep}{\operatorname{sep}}
+\newcommand{\eg}{\operatorname{eg}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\polylog}{\operatorname{polylog}}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\DeclareMathOperator{\supp}{supp}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2001.09679\_\_00 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{Sublinear separators and expansion:\\ the exact value of Dvořák's exponent $b_\varepsilon$}
+\author{Machine-generated note (see provenance box)}
+\date{9 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
+\small
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2001.09679\_\_00}; original writeup in \texttt{attacks/2001.09679\_\_00/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the source paper, and brute-forced the finite structural claims on a concrete instance; its verdict was \textsc{minor\_gaps}, with two presentational gaps (the definition of $b_\varepsilon$, and a one-sentence padding remark). Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the two gaps were repaired (\cref{sec:beps} and \cref{prop:exact}), a reference for the expander input was added, and the text was reorganised, with full proofs moved to \cref{app:proofs}. No mathematical content beyond these repairs was added.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+\end{tcolorbox}
+
+\begin{abstract}
+For a hereditary class $\cG$ of graphs let $s_{\cG}(n)$ be the largest size of a minimum balanced separator over graphs of $\cG$ with at most $n$ vertices, and let $\nabla_{\cG}(r)$ be the largest density of an $r$-shallow minor of a graph in $\cG$. Dvořák (2020) defined $b_\varepsilon$ as the supremum of the exponents $b$ such that every hereditary class with $s_{\cG}(n)=\Theta(n^{1-\varepsilon})$ has $\nabla_{\cG}(r)=\Omega(r^{b})$, proved $\frac1{2\varepsilon}-1\le b_\varepsilon\le\frac1{2\varepsilon}-\frac12$ for $0<\varepsilon<\frac12$, and asked which bound is tight. We construct, for every $0<\varepsilon<\frac12$, a monotone class $\cC_\varepsilon$ with $s_{\cC_\varepsilon}(n)=\Theta(n^{1-\varepsilon})$ and $\nabla_{\cC_\varepsilon}(r)=O(r^{1/(2\varepsilon)-1})$. Hence $b_\varepsilon=\frac1{2\varepsilon}-1$, the lower bound is tight, and $b_\varepsilon$ is continuous at $\varepsilon=\frac12$. The class consists of bounded-degree expanders whose vertices are replaced by $\Theta(L)\times\Theta(L)$ grids and whose edges are replaced by matchings of length~$L$ between boundary intervals of the grids.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+All graphs are finite and simple. For an $n$-vertex graph $G$, a set $Z\subseteq V(G)$ is a \emph{balanced separator} if every component of $G-Z$ has at most $2n/3$ vertices, and $\sep(G)$ denotes the minimum size of a balanced separator. For a class $\cG$ of graphs,
+\[
+ s_{\cG}(n)=\max\{\sep(G): G\in\cG,\ |V(G)|\le n\}.
+\]
+An \emph{$r$-shallow minor} of $G$ is a graph obtained from a subgraph of $G$ by contracting pairwise vertex-disjoint connected subgraphs, each of radius at most $r$; the \emph{density} of a graph $H$ is $|E(H)|/|V(H)|$. Write $\nabla_r(G)$ for the maximum density of an $r$-shallow minor of $G$ and
+\[
+ \nabla_{\cG}(r)=\sup\{\nabla_r(G):G\in\cG\}.
+\]
+A class is \emph{hereditary} if it is closed under induced subgraphs and \emph{monotone} if it is closed under subgraphs. These are exactly the conventions of Dvořák's note \cite{Dvorak20}.
+
+Classes with sublinear separators and classes with polynomial expansion are closely related. Plotkin, Rao and Smith \cite{PRS94} showed that $s_{\cG}(n)=\Omega(n^{1-\varepsilon})$ forces $\nabla_{\cG}(r)=\Omega\bigl(r^{1/(2\varepsilon)-1}/\polylog r\bigr)$ \cite[Corollary~2]{Dvorak20}, and conversely Dvořák and Norin \cite{DN16} and Esperet and Raymond \cite{ER18} showed that $s_{\cG}(n)=\Theta(n^{1-\varepsilon})$ for a hereditary class forces $\nabla_{\cG}(r)=O(r^{1/\varepsilon-1}\polylog r)$ \cite[Theorem~5]{Dvorak20}. To quantify the gap between the two exponents, Dvořák introduced, for $0<\varepsilon\le1$,
+\begin{equation}\label{eq:beps}
+ b_\varepsilon=\sup\bigl\{\,b\in\R:\ \text{every hereditary class }\cG\text{ with }s_{\cG}(n)=\Theta(n^{1-\varepsilon})\text{ satisfies }\nabla_{\cG}(r)=\Omega(r^{b})\,\bigr\},
+\end{equation}
+and proved \cite[Corollary~6, Lemmas~10 and~12]{Dvorak20}
+\begin{equation}\label{eq:dvorak}
+ \frac1{2\varepsilon}-1\ \le\ b_\varepsilon\ \le\ \frac1{2\varepsilon}-\frac12\quad(0<\varepsilon<\tfrac12),\qquad b_\varepsilon=0\quad(\tfrac12\le\varepsilon\le1).
+\end{equation}
+The upper bound comes from $\lceil m^{\varepsilon/(1-\varepsilon)}\rceil$-fold subdivisions of $3$-regular expanders. In his concluding remarks Dvořák writes that it is unclear whether the upper or the lower bound can be improved, observes that $b_{1/2}=0$ matches the lower bound, and raises the possibility that this is a ``dimension~2 artifact'' with $b_\varepsilon$ discontinuous at $\varepsilon=\frac12$. We show that the lower bound is the truth.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+For every $0<\varepsilon<\frac12$ there is a monotone class $\cC_\varepsilon$ of graphs with
+\[
+ s_{\cC_\varepsilon}(n)=\Theta(n^{1-\varepsilon})\qquad\text{and}\qquad \nabla_{\cC_\varepsilon}(r)=O\bigl(r^{1/(2\varepsilon)-1}\bigr).
+\]
+\end{restatable}
+
+\begin{corollary}\label{cor:beps}
+For $0<\varepsilon<\frac12$, $b_\varepsilon=\frac1{2\varepsilon}-1$. Consequently $\varepsilon\mapsto b_\varepsilon$ is continuous on $(0,1]$, in particular at $\varepsilon=\frac12$. The same value is attained by Dvořák's variant $b'_\varepsilon$, defined as in \eqref{eq:beps} with $\Theta(n^{1-\varepsilon})$ replaced by $\Omega(n^{1-\varepsilon})$.
+\end{corollary}
+
+\begin{proofidea}
+\Cref{cor:beps} is a two-line deduction from \cref{thm:main} and Dvořák's Corollary~2; it is carried out in \cref{sec:beps}. For \cref{thm:main}, the classes $\cC_\varepsilon$ are built from bounded-degree expanders $H$ in which every vertex is replaced by a $(40L+1)\times(40L+1)$ grid (a \emph{block}) and every edge by a perfect matching between two boundary intervals of length $L$ (\emph{ports}) of the corresponding blocks. In Dvořák's subdivided expanders, insulating two branch points by distance $L$ costs $L$ vertices; here it costs $L^2$ vertices, and this is exactly where the extra $\frac12$ in the exponent comes from. Three properties are proved. (i)~The whole graph inherits the isoperimetry of $H$ at scale $1/L$, so with $g$ blocks its separators have size $\Theta(gL)$. (ii)~Every subgraph on $n$ vertices has a separator of size $O(n/L+\sqrt n)$: deleting, in every block and for each port, the cheapest of $L$ disjoint crosscuts that cut the port off leaves only planar components, to which the planar separator theorem applies. (iii)~Shallow minors of radius $r<14L$ have bounded density, because their branch sets live in at most two adjacent blocks and a bounded number of blocks embed in a surface of bounded genus, while all minors have density $O(\sqrt g)$ because the whole graph has Euler genus $O(g)$. Choosing $g=\Theta(L^{1/\varepsilon-2})$ balances (i)--(iii).
+\end{proofidea}
+
+\section{The construction}\label{sec:construction}
+
+\paragraph{Blocks and ports.}
+Fix an integer $L\ge1$ and let $Q_L$ be the square grid $P_{40L+1}\,\mathbin{\mdlgwhtsquare}\,P_{40L+1}$, with vertices $(i,j)$, $0\le i,j\le 40L$; it has $M_L:=(40L+1)^2$ vertices. Its four \emph{ports} $P_1,\dots,P_4$ are the sets of $L$ consecutive boundary vertices centred on the four sides, e.g.\ $P_1=\{(0,j): 20L-\lfloor L/2\rfloor\le j<20L-\lfloor L/2\rfloor+L\}$ on the bottom side. Distinct ports are at grid distance at least $39L\ge 30L$ from each other.
+
+\paragraph{Expanders.}
+Bollobás \cite{Bollobas88} proved that for every fixed $d\ge3$ there is a constant $c_d>0$ such that a uniformly random $d$-regular graph on $g$ vertices asymptotically almost surely (as $g\to\infty$) has isoperimetric number $\min_{0<|U|\le g/2}|\delta(U)|/|U|$ at least $c_d$. Since $4$-regular graphs on $g$ vertices exist for every $g\ge5$, there are $g_0$ and an absolute constant $\alpha>0$ (any $\alpha<c_4$) such that for every $g\ge g_0$ some $4$-regular graph $H_g$ on $g$ vertices satisfies
+\begin{equation}\label{eq:expander}
+ |\delta_{H_g}(U)|\ \ge\ \alpha\min\{|U|,\,g-|U|\}\qquad(U\subseteq V(H_g)),
+\end{equation}
+where $\delta_H(U)$ is the set of edges of $H$ with exactly one end in $U$. Fix such a family once and for all.
+
+\paragraph{The graph $X(g,L)$.}
+For $g\ge g_0$ and $L\ge1$, take a disjoint copy $Q_v$ of $Q_L$ for every $v\in V(H_g)$ and assign its four ports bijectively to the four edges at $v$. For every edge $uv\in E(H_g)$ join the port of $Q_u$ assigned to $uv$ to the port of $Q_v$ assigned to $uv$ by an \emph{order-preserving} perfect matching (the $i$-th vertex of one port, in the boundary order, to the $i$-th vertex of the other). The resulting graph is $X(g,L)$. It has
+\begin{equation}\label{eq:N}
+ N:=|V(X(g,L))|=g\,M_L=\Theta(gL^2)
+\end{equation}
+vertices and maximum degree at most $5$ (grid degree at most $4$, plus at most one matching edge). For $S\subseteq V(X)$ we write $\partial_X S$ for the set of edges of $X$ with exactly one end in $S$, and $\partial_Q A$ for the analogous set inside a block.
+
+\begin{lemma}\label{lem:genus}
+$X(g,L)$ embeds in a surface of Euler genus at most $g+1$. Consequently every minor of $X(g,L)$ has density $O(\sqrt g)$.
+\end{lemma}
+\begin{proofidea}
+Draw each block in a disk and each matching inside a band joining the two boundary intervals; the resulting surface is the thickening of $H_g$, which has $g$ disks and $2g$ bands, so its Euler genus is at most $g+1$. A simple graph embedded in a surface of Euler genus $\gamma$ has density $O(\sqrt{\gamma+1})$, by Euler's formula for many vertices and by $|E|\le\binom{|V|}2$ for few vertices; minors inherit the surface.\fullproofref{pf:genus}
+\end{proofidea}
+
+\section{Three properties of $X(g,L)$}\label{sec:properties}
+
+Throughout, $c_1,c_2,\dots$ denote absolute positive constants. For $A\subseteq V(Q_L)$ let $\mu(A)=\min\{|A|,M_L-|A|\}$, and say that $A$ has \emph{state} $1$ if $|A|\ge M_L/2$ and state $0$ otherwise. For a port $P_i$ let $D_i(A)$ be the number of vertices of $P_i$ whose membership in $A$ disagrees with the state of $A$.
+
+\begin{restatable}[The block]{lemma}{lemblock}\label{lem:block}
+There are absolute constants $c_1,C_1>0$ such that for every $L\ge1$ and every $A\subseteq V(Q_L)$:
+\begin{enumerate}[label=(\alph*),nosep]
+\item $|\partial_Q A|\ \ge\ c_1\,\mu(A)/L$;
+\item $D_i(A)\ \le\ |\partial_QA|+\mu(A)/L\ \le\ C_1|\partial_Q A|$ for each port $P_i$;
+\item for each port $P_i$ there are $L$ pairwise vertex-disjoint paths $C_i(1),\dots,C_i(L)$ in $Q_L$ (\emph{crosscuts}), each separating $P_i$ from the other three ports; writing $R_i$ (the \emph{collar} of $P_i$) for the union of $C_i(L)$ and the set of vertices it cuts off from the other ports, the four collars $R_1,\dots,R_4$ are pairwise disjoint.
+\end{enumerate}
+\end{restatable}
+\begin{proofidea}
+(a) is the edge-isoperimetric inequality of the square grid, with $c_1=1/41$: if no row and no column is entirely inside the smaller side, every row and every column meeting it contributes a boundary edge, and a set of size $\mu$ meets at least $\sqrt\mu\ge\mu/(40L+1)$ rows or columns; if a full row and a full column are inside one side, the same argument applies to the other side. (b): from each disagreeing port vertex draw the perpendicular grid path of $L$ vertices into the grid; these paths are disjoint, and each either contains a boundary edge or consists of $L$ vertices on the minority side. (c): the $k$-th crosscut is the U-shaped path at distance $k$ around the port; the collars have depth $L$ and width $3L$ and lie far from the corners and from each other.\fullproofref{pf:block}
+\end{proofidea}
+
+\begin{restatable}[Isoperimetry of $X$]{lemma}{lemiso}\label{lem:iso}
+There is an absolute $c_2>0$ such that for all $g\ge g_0$, $L\ge1$ and $S\subseteq V(X(g,L))$,
+\[
+ |\partial_X S|\ \ge\ \frac{c_2}{L}\min\{|S|,\,N-|S|\}.
+\]
+\end{restatable}
+\begin{proofidea}
+Let $U$ be the set of blocks in which $S$ has state $1$. Across each edge of $\delta_{H_g}(U)$ run $L$ matching edges; each of them is either in $\partial_XS$ or has a disagreeing endpoint in one of its two blocks, and \cref{lem:block}(b) bounds the number of disagreeing port vertices by $C_1$ times the boundary inside the block. Summing, $L|\delta_{H_g}(U)|\le(1+4C_1)|\partial_XS|$. Also $\sum_v\mu(S\cap V(Q_v))\le (L/c_1)|\partial_XS|$ by \cref{lem:block}(a). Since $|S|$ differs from $M_L|U|$ by at most $\sum_v\mu(S\cap V(Q_v))$, the expander inequality \eqref{eq:expander} for $U$ and $M_L=\Theta(L^2)$ give the claim.\fullproofref{pf:iso}
+\end{proofidea}
+
+\begin{restatable}{corollary}{corsep}\label{cor:sep}
+$\sep(X(g,L))\ \ge\ c_3\,N/L=\Omega(gL)$.
+\end{restatable}
+\begin{proofidea}
+If a balanced separator $Z$ has fewer than $N/6$ vertices, some union $A$ of components of $X-Z$ has $N/6\le|A|\le N/2$; all edges leaving $A$ end in $Z$, so $5|Z|\ge|\partial_XA|\ge c_2N/(6L)$.\fullproofref{pf:sep}
+\end{proofidea}
+
+\begin{restatable}[Hereditary separators]{lemma}{lemhered}\label{lem:hered}
+Every subgraph $F$ of $X(g,L)$ with $n$ vertices has a balanced separator of size at most $4n/L+c_4\sqrt n$.
+\end{restatable}
+\begin{proofidea}
+In each block and for each port choose, among the $L$ disjoint crosscuts of \cref{lem:block}(c), one containing the fewest vertices of $F$; the chosen crosscuts contain at most $4n/L$ vertices of $F$ in total. After deleting them every component of $F$ lies either in the part of a block outside its collars, or in two collars joined by one matching; both are planar. If some component still has more than $2n/3$ vertices, add a planar separator of it.\fullproofref{pf:hered}
+\end{proofidea}
+
+\begin{restatable}[Shallow minors below the block scale]{lemma}{lemshallow}\label{lem:shallow}
+There is an absolute $C_5$ such that for all $g\ge g_0$, $L\ge1$ and $0\le r<14L$, every $r$-shallow minor $J$ of $X(g,L)$ satisfies $|E(J)|\le C_5|V(J)|$.
+\end{restatable}
+\begin{proofidea}
+Any path between two distinct ports of one block, or between two non-adjacent blocks, has length at least $30L$. Hence a branch set of radius $r<14L$ lies in at most two adjacent blocks, and adjacent branch sets have centres in the same or in adjacent blocks. Orient $J$ arbitrarily and charge each edge to the block $v$ containing the centre of its tail. The edges charged to $v$, together with their ends, form a minor of the subgraph of $X$ induced by the at most $17$ blocks within $H_g$-distance $2$ of $v$, which embeds in a surface of bounded genus and therefore has bounded density by \cref{lem:genus}. Each vertex of $J$ is an end of edges charged to at most $5$ blocks.\fullproofref{pf:shallow}
+\end{proofidea}
+
+\begin{corollary}\label{cor:nabla}
+For all $g\ge g_0$, $L\ge1$ and $r\ge0$,
+\[
+ \nabla_r(X(g,L))\le\begin{cases} C_5 & \text{if } r<14L,\\ C_6\sqrt g & \text{for all } r,\end{cases}
+\]
+with absolute constants $C_5,C_6$.
+\end{corollary}
+\begin{proof}
+The first line is \cref{lem:shallow}; the second is \cref{lem:genus}, since an $r$-shallow minor is a minor.
+\end{proof}
+
+\section{Proof of the main theorem}\label{sec:proof-main}
+
+Fix $0<\varepsilon<\frac12$ and put
+\begin{equation}\label{eq:p}
+ p=\frac1\varepsilon-2>0 .
+\end{equation}
+For every $L\ge L_0$, where $L_0$ is large enough that $\lceil L_0^p\rceil\ge g_0$, let $g_L=\lceil L^p\rceil$ and $X_L=X(g_L,L)$. Let $\cC_\varepsilon$ be the class of all subgraphs of all the graphs $X_L$, $L\ge L_0$; it is monotone by definition. By \eqref{eq:N} and \eqref{eq:p},
+\begin{equation}\label{eq:NL}
+ N_L:=|V(X_L)|=\lceil L^p\rceil(40L+1)^2=\Theta(L^{p+2})=\Theta(L^{1/\varepsilon}),
+\end{equation}
+$N_L$ is strictly increasing in $L$, and $N_{L+1}/N_L\to1$.
+
+\paragraph{Separators: lower bound.}
+By \cref{cor:sep}, \eqref{eq:NL} and $(p+1)/(p+2)=1-\varepsilon$,
+\begin{equation}\label{eq:sepXL}
+ \sep(X_L)=\Omega(g_LL)=\Omega(L^{p+1})=\Omega\bigl(N_L^{(p+1)/(p+2)}\bigr)=\Omega(N_L^{1-\varepsilon}).
+\end{equation}
+Given $n\ge N_{L_0}$ let $L$ be maximal with $N_L\le n$. Then $X_L\in\cC_\varepsilon$ has at most $n$ vertices and $n<N_{L+1}=(1+o(1))N_L$, so $s_{\cC_\varepsilon}(n)\ge\sep(X_L)=\Omega(n^{1-\varepsilon})$.
+
+\paragraph{Separators: upper bound.}
+Let $F\in\cC_\varepsilon$ have $n$ vertices, say $F\subseteq X_L$. Then $n\le N_L=O(L^{1/\varepsilon})$, i.e.\ $n^{\varepsilon}=O(L)$, so $n/L=O(n^{1-\varepsilon})$; and $\sqrt n\le n^{1-\varepsilon}$ because $\varepsilon\le\frac12$. \Cref{lem:hered} gives $\sep(F)\le 4n/L+c_4\sqrt n=O(n^{1-\varepsilon})$, with a constant independent of $L$. Hence $s_{\cC_\varepsilon}(n)=O(n^{1-\varepsilon})$, and altogether
+\begin{equation}\label{eq:s}
+ s_{\cC_\varepsilon}(n)=\Theta(n^{1-\varepsilon}).
+\end{equation}
+
+\paragraph{Expansion.}
+An $r$-shallow minor of a subgraph of $X_L$ is an $r$-shallow minor of $X_L$. By \cref{cor:nabla}, if $L>r/14$ its density is at most $C_5$, and if $L\le r/14$ its density is at most $C_6\sqrt{g_L}=C_6\sqrt{\lceil L^p\rceil}\le C_7\,(r/14)^{p/2}$. Since $p/2=\frac1{2\varepsilon}-1$,
+\begin{equation}\label{eq:nabla}
+ \nabla_{\cC_\varepsilon}(r)=O\bigl(r^{p/2}\bigr)=O\bigl(r^{1/(2\varepsilon)-1}\bigr).
+\end{equation}
+Equations \eqref{eq:s} and \eqref{eq:nabla} prove \cref{thm:main}.\qed
+
+\section{The value of \texorpdfstring{$b_\varepsilon$}{b\_eps}}\label{sec:beps}
+
+\begin{proof}[Proof of \cref{cor:beps}]
+Let $B$ be the set of real numbers $b$ such that every hereditary class $\cG$ with $s_{\cG}(n)=\Theta(n^{1-\varepsilon})$ satisfies $\nabla_{\cG}(r)=\Omega(r^b)$, so that $b_\varepsilon=\sup B$.
+
+\emph{Upper bound.} Let $b>\frac1{2\varepsilon}-1$. The class $\cC_\varepsilon$ of \cref{thm:main} is monotone, hence hereditary, and satisfies $s_{\cC_\varepsilon}(n)=\Theta(n^{1-\varepsilon})$. Since $\nabla_{\cC_\varepsilon}(r)=O(r^{1/(2\varepsilon)-1})$ and $r^{1/(2\varepsilon)-1}/r^{b}\to0$, the relation $\nabla_{\cC_\varepsilon}(r)=\Omega(r^{b})$ fails, so $b\notin B$. Thus every element of $B$ is at most $\frac1{2\varepsilon}-1$ and $b_\varepsilon\le\frac1{2\varepsilon}-1$.
+
+\emph{Lower bound.} Let $b<\frac1{2\varepsilon}-1$ and let $\cG$ be a hereditary class with $s_{\cG}(n)=\Theta(n^{1-\varepsilon})$. In particular $s_{\cG}(n)=\Omega(n^{1-\varepsilon})$, and Dvořák's Corollary~2 \cite{Dvorak20} gives $\nabla_{\cG}(r)=\Omega\bigl(r^{1/(2\varepsilon)-1}/\polylog r\bigr)=\Omega(r^{b})$, the polylogarithmic loss being absorbed by the strict inequality. Hence $b\in B$ and $b_\varepsilon\ge\frac1{2\varepsilon}-1$.
+
+Therefore $b_\varepsilon=\frac1{2\varepsilon}-1$ on $(0,\frac12)$. As $\frac1{2\varepsilon}-1\to0$ when $\varepsilon\to\frac12^-$ and $b_\varepsilon=0$ on $[\frac12,1]$ by \eqref{eq:dvorak}, $b_\varepsilon$ is continuous at $\frac12$ (and trivially elsewhere).
+
+For the variant $b'_\varepsilon$, Dvořák observes $\max\{\frac1{2\varepsilon}-1,0\}\le b'_\varepsilon\le b_\varepsilon$ \cite[concluding remarks]{Dvorak20}; combined with $b_\varepsilon=\frac1{2\varepsilon}-1$ this gives $b'_\varepsilon=\frac1{2\varepsilon}-1$.
+\end{proof}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[Comparison with Dvořák's construction]
+Dvořák's upper bound $b_\varepsilon\le\frac1{2\varepsilon}-\frac12$ uses subdivided cubic expanders: a vertex set of size $m$ with separators $\Theta(m^{1-\varepsilon})$ is obtained by subdividing each edge $\Theta(m^{\varepsilon/(1-\varepsilon)})$ times, and a shallow minor of radius $r$ can already contract whole subdivided edges once $r$ exceeds the subdivision length. In $X(g,L)$ the insulating distance $L$ between ports costs $L^2$ vertices per block instead of $L$ per edge, so the radius at which minors start to see the expander is $\Theta(L)=\Theta(N^{\varepsilon})$ rather than $\Theta(N^{\varepsilon/(1-\varepsilon)})$, while the separator size stays $\Theta(N^{1-\varepsilon})$. This is consistent with Dvořák's remark that $b_{1/2}=0$ (planar-like behaviour) might be a ``dimension~2'' phenomenon: two-dimensional blocks are exactly what is needed to make the phenomenon persist for all $\varepsilon<\frac12$.
+\end{remark}
+
+\begin{restatable}[Exact-order convention]{proposition}{propexact}\label{prop:exact}
+Define $\tilde s_{\cG}(n)=\max\{\sep(G):G\in\cG,\ |V(G)|=n\}$. Let $\cC'_\varepsilon=\{F\sqcup I_k: F\in\cC_\varepsilon,\ k\ge0\}$, where $I_k$ is the edgeless graph on $k$ vertices. Then $\cC'_\varepsilon$ is monotone, $\nabla_{\cC'_\varepsilon}=\nabla_{\cC_\varepsilon}$, and $\tilde s_{\cC'_\varepsilon}(n)=\Theta(n^{1-\varepsilon})$.
+\end{restatable}
+\begin{proofidea}
+Dvořák's $s_{\cG}$ is defined with $|V(G)|\le n$, so this proposition is not needed for \cref{cor:beps}; it shows the result is insensitive to the convention. Isolated vertices do not change shallow-minor densities or separators, and for a given $n$ the graph $X_L\sqcup I_{n-N_L}$ with $N_L\le n<N_{L+1}$ has $n=(1+o(1))N_L$ vertices; the argument of \cref{cor:sep} tolerates the slightly weaker balance condition $\frac23n\le0.7N_L$.\fullproofref{pf:exact}
+\end{proofidea}
+
+\begin{remark}[Constants]
+All constants are absolute except where they visibly depend on $\varepsilon$ through $p$. The thresholds ``$L\ge L_0$'' and ``$r<14L$'' are explicit; the referee's computations on the instance $g=6$, $L=3$ (\cref{app:referee}) found the locality claims of \cref{lem:shallow} to hold with a large margin (balls of radius up to $19L$ meet at most two blocks).
+\end{remark}
+
+\begin{remark}[Novelty]
+The referee's search (\cref{app:referee}) found no work resolving the question; the only citing papers concern other topics. This has not been checked by a human.
+\end{remark}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:genus}
+\begin{proof}[Proof of \cref{lem:genus}]
+For each $v\in V(H_g)$ draw $Q_v$ in a closed disk $\Delta_v$ so that the boundary cycle of the grid lies on the boundary circle. For each edge $uv$ attach a band (a copy of $[0,1]\times[0,1]$) to $\partial\Delta_u$ along the boundary interval spanned by the port of $Q_u$ assigned to $uv$ and to $\partial\Delta_v$ along the corresponding interval; draw the $L$ matching edges as disjoint straight segments across the band, which is possible because the matching is order-preserving. The union $\Sigma_0$ of the $g$ disks and $2g$ bands (recall $|E(H_g)|=4g/2=2g$) is a compact surface with boundary, and $X(g,L)$ is drawn in it without crossings. Its Euler characteristic is $\chi(\Sigma_0)=g-2g=-g$ (each band attached along two intervals lowers $\chi$ by one). Capping each of the $\beta\ge1$ boundary circles with a disk yields a closed surface $\Sigma$ with $\chi(\Sigma)=-g+\beta\ge1-g$, hence Euler genus $\eg(\Sigma)=2-\chi(\Sigma)\le g+1$.
+
+Now let $J$ be a simple graph embedded in a surface of Euler genus $\gamma$, with $q=|V(J)|\ge3$ vertices. Euler's formula gives $|E(J)|\le3q-6+3\gamma$. If $q\ge\sqrt{\gamma+1}$ then $|E(J)|/q\le3+3\gamma/q\le3+3\sqrt{\gamma+1}$; otherwise $|E(J)|/q\le(q-1)/2<\sqrt{\gamma+1}/2$. For $q\le2$ the density is at most $\frac12$. Hence the density is at most $3+3\sqrt{\gamma+1}=O(\sqrt{\gamma+1})$. A minor of a graph embedded in $\Sigma$ embeds in $\Sigma$ (delete, and contract edges within the drawing), so every minor of $X(g,L)$ has density at most $3+3\sqrt{g+2}=O(\sqrt g)$.
+\end{proof}
+
+\phantomsection\label{pf:block}
+\lemblock*
+\begin{proof}
+Write $m=40L+1$ for the side of the grid and $M=m^2$.
+
+\emph{(a)} We show $|\partial_QA|\ge\mu(A)/m$, so $c_1=1/41$ works. Since $\partial_QA=\partial_Q(V\setminus A)$ and $\mu(A)=\mu(V\setminus A)$, we may assume $|A|\le M/2$, so $\mu(A)=|A|$. Call a row or column \emph{$A$-full} if all its vertices are in $A$.
+
+\emph{Case 1: no row and no column is $A$-full.} Every row that meets $A$ contains a vertex of $A$ and a vertex not in $A$, hence (rows are paths) two consecutive vertices, one in $A$ and one not: an edge of $\partial_QA$ lying in that row. Distinct rows give distinct edges, so $|\partial_QA|\ge\rho$, the number of rows meeting $A$; likewise $|\partial_QA|\ge\kappa$, the number of columns meeting $A$. As $A$ lies in the $\rho\times\kappa$ sub-array of those rows and columns, $|A|\le\rho\kappa\le\max\{\rho,\kappa\}^2$, so $|\partial_QA|\ge\sqrt{|A|}\ge|A|/m$ because $|A|\le M=m^2$.
+
+\emph{Case 2: some row is $A$-full but no column is.} Then every column meets $A$ and is not $A$-full, so as above every column contributes a boundary edge and $|\partial_QA|\ge m\ge|A|/m$. The case of an $A$-full column and no $A$-full row is symmetric.
+
+\emph{Case 3: some row and some column are $A$-full.} Put $B=V\setminus A$; then $|B|\ge M/2\ge|A|$. No row is $B$-full (it meets the $A$-full column) and no column is $B$-full. Applying Case~1 to $B$ gives $|\partial_QA|=|\partial_QB|\ge\sqrt{|B|}\ge|B|/m\ge|A|/m$.
+
+\emph{(b)} By symmetry let $P_i$ be the bottom port, $P_i=\{(0,j):a\le j<a+L\}$. Suppose first that $A$ has state~$1$, so the disagreeing port vertices are those of $P_i\setminus A$ and $\mu(A)=|V\setminus A|$. For each $(0,j)\in P_i\setminus A$ consider the vertical path $\pi_j=(0,j),(1,j),\dots,(L-1,j)$ of $L$ vertices (it exists since $L-1\le40L$). The paths $\pi_j$ are pairwise vertex-disjoint. If $\pi_j$ meets $A$, then since its first vertex is not in $A$, some edge of $\pi_j$ has exactly one end in $A$, i.e.\ belongs to $\partial_QA$; distinct paths give distinct edges. If $\pi_j$ does not meet $A$, its $L$ vertices lie in $V\setminus A$, and the paths being disjoint, there are at most $|V\setminus A|/L$ such $j$. Hence $D_i(A)=|P_i\setminus A|\le|\partial_QA|+\mu(A)/L$. If $A$ has state~$0$, apply the same argument to $V\setminus A$, which has state~$1$ (if $|A|<M/2$ then $|V\setminus A|>M/2$), the same boundary, the same $\mu$, and the same disagreeing vertices. Finally $\mu(A)/L\le|\partial_QA|/c_1$ by (a), so $C_1=1+1/c_1=42$ works.
+
+\emph{(c)} Again let $P_i=\{(0,j):a\le j<a+L\}$ with $a=20L-\lfloor L/2\rfloor$, so $a\ge 19L$ and $a+L-1\le 21L$. For $1\le k\le L$ let $C_i(k)$ be the path
+\[
+ (0,a-k),(1,a-k),\dots,(k,a-k),\ (k,a-k+1),\dots,(k,a+L-1+k),\ (k-1,a+L-1+k),\dots,(0,a+L-1+k),
+\]
+a U-shape using column $a-k$ and column $a+L-1+k$ in rows $0,\dots,k$ and row $k$ in columns $a-k,\dots,a+L-1+k$. All these vertices exist since $a-L\ge18L\ge0$ and $a+2L-1\le22L\le40L$. For $k\ne k'$ the paths are disjoint: they use different columns for their vertical parts and different rows for their horizontal parts, and a vertical part of $C_i(k)$ (rows $\le k$, column $a-k$ or $a+L-1+k$) meets the horizontal part of $C_i(k')$ (row $k'$, columns $a-k',\dots,a+L-1+k'$) only if $k'\le k$ and $a-k'\le a-k$, i.e.\ $k'\ge k$, so $k=k'$; the symmetric case is identical. Let $R_i(k)$ be the set of vertices $(x,y)$ with $x<k$ and $a-k<y<a+L-1+k$. Then $P_i\subseteq R_i(1)\subseteq R_i(k)$, and every grid edge with one end in $R_i(k)$ has its other end in $R_i(k)\cup C_i(k)$: a neighbour of $(x,y)\in R_i(k)$ outside $R_i(k)$ has $x=k$ (then it is on row $k$ within the column range, in $C_i(k)$) or $y\in\{a-k,a+L-1+k\}$ with $x<k$ (then it is on a vertical part of $C_i(k)$); $x<0$ is impossible. Hence every path from $P_i$ to a vertex outside $R_i(k)\cup C_i(k)$ passes through $C_i(k)$. The collar $R_i=R_i(L)\cup C_i(L)$ is contained in rows $0,\dots,L$ and columns $a-L,\dots,a+2L-1\subseteq[18L,22L]$; the other three ports are on the other three sides, at rows $\ge 20L-\lfloor L/2\rfloor>L$ or at columns $\le0$ or $\ge40L$ outside $[18L,22L]$, so they lie outside $R_i$ and each $C_i(k)$ separates $P_i$ from them. By symmetry the collar of the left port lies in columns $0,\dots,L$ and rows in $[18L,22L]$, and similarly for the other two; since $L<18L$, the four collars are pairwise disjoint.
+\end{proof}
+
+\phantomsection\label{pf:iso}
+\lemiso*
+\begin{proof}
+For $v\in V(H_g)$ let $S_v=S\cap V(Q_v)$, $s_v=|S_v|$, $\mu_v=\mu(S_v)$, and let $b_v$ be the number of edges of $\partial_XS$ that lie inside $Q_v$; the edges of $\partial_XS$ are either inside some block or matching edges, so
+\begin{equation}\label{eq:bsum}
+ \sum_v b_v+\#\{\text{matching edges in }\partial_XS\}=|\partial_XS|.
+\end{equation}
+By \cref{lem:block}(a) applied in $Q_v$, $b_v=|\partial_QS_v|\ge c_1\mu_v/L$, hence
+\begin{equation}\label{eq:musum}
+ \sum_v\mu_v\le\frac{L}{c_1}\sum_vb_v\le\frac{L}{c_1}|\partial_XS|.
+\end{equation}
+Let $U=\{v:s_v\ge M_L/2\}$ be the set of blocks in which $S_v$ has state~$1$. Consider an edge $uv\in\delta_{H_g}(U)$ with $u\in U$, $v\notin U$, and the $L$ matching edges $pp'$ between the corresponding ports, $p\in Q_u$, $p'\in Q_v$. If $pp'\notin\partial_XS$ then either $p,p'\in S$, in which case $p'\in S_v$ disagrees with the state~$0$ of $S_v$, or $p,p'\notin S$, in which case $p\notin S_u$ disagrees with the state~$1$ of $S_u$. Hence, with $c_{uv}$ the number of matching edges of this interface in $\partial_XS$ and using \cref{lem:block}(b),
+\[
+ L\le c_{uv}+D(S_u)+D(S_v)\le c_{uv}+C_1(b_u+b_v),
+\]
+where $D(\cdot)$ refers to the relevant port. Summing over $uv\in\delta_{H_g}(U)$, each block has four ports so each $b_v$ appears at most four times, and by \eqref{eq:bsum}
+\begin{equation}\label{eq:Ldelta}
+ L\,|\delta_{H_g}(U)|\le\sum_{uv\in\delta(U)}c_{uv}+4C_1\sum_vb_v\le(1+4C_1)|\partial_XS|.
+\end{equation}
+Now $|S|=\sum_{v\in U}(M_L-\mu_v)+\sum_{v\notin U}\mu_v$, so $\bigl||S|-M_L|U|\bigr|\le\sum_v\mu_v$, and likewise $\bigl|(N-|S|)-M_L(g-|U|)\bigr|\le\sum_v\mu_v$. Therefore, using \eqref{eq:expander}, \eqref{eq:Ldelta}, \eqref{eq:musum} and $M_L=(40L+1)^2\le 1681L^2$,
+\begin{align*}
+ \min\{|S|,N-|S|\}&\le M_L\min\{|U|,g-|U|\}+\sum_v\mu_v
+ \le\frac{M_L}{\alpha}|\delta_{H_g}(U)|+\sum_v\mu_v\\
+ &\le\Bigl(\frac{1681(1+4C_1)}{\alpha}+\frac1{c_1}\Bigr)L\,|\partial_XS|.
+\end{align*}
+This is the claim with $c_2=\bigl(1681(1+4C_1)/\alpha+1/c_1\bigr)^{-1}$.
+\end{proof}
+
+\phantomsection\label{pf:sep}
+\corsep*
+\begin{proof}
+Let $Z$ be a balanced separator of $X=X(g,L)$. If $|Z|\ge N/6$ we are done (with $c_3\le1/6$, as $L\ge1$). Otherwise the components of $X-Z$ have at most $2N/3$ vertices each and more than $5N/6$ vertices in total. If some component $K$ has $|K|\ge N/2$, let $A$ be the union of the other components: $|A|>5N/6-2N/3=N/6$ and $|A|\le N-|K|\le N/2$. If some component $K$ has $N/6\le|K|<N/2$, let $A=K$. Otherwise all components have fewer than $N/6$ vertices; add them one at a time until the total first reaches $N/6$, obtaining $A$ with $N/6\le|A|<N/3$. In all cases $A$ is a union of components of $X-Z$ with $N/6\le|A|\le N/2$, so $\min\{|A|,N-|A|\}\ge N/6$, and every edge leaving $A$ ends in $Z$. Since $X$ has maximum degree at most $5$, \cref{lem:iso} gives $5|Z|\ge|\partial_XA|\ge c_2N/(6L)$, i.e.\ $|Z|\ge c_2N/(30L)$. Hence $c_3=\min\{1/6,c_2/30\}$ works, and $N/L=gM_L/L=\Omega(gL)$.
+\end{proof}
+
+\phantomsection\label{pf:hered}
+\lemhered*
+\begin{proof}
+Let $F\subseteq X(g,L)$ with $n=|V(F)|$ and $n_v=|V(F)\cap V(Q_v)|$. For each block $Q_v$ and each of its ports $P_i$, the $L$ crosscuts $C_i(1),\dots,C_i(L)$ of \cref{lem:block}(c) are pairwise disjoint subsets of $V(Q_v)$, so one of them, $C_{v,i}$, satisfies $|V(F)\cap C_{v,i}|\le n_v/L$. Let $Z=\bigcup_{v,i}\bigl(V(F)\cap C_{v,i}\bigr)$; then $|Z|\le\sum_v4n_v/L=4n/L$.
+
+Consider a component $K$ of $F-Z$. Inside a block $Q_v$, the vertices of $K$ avoid the four chosen crosscuts, so each vertex of $K\cap V(Q_v)$ lies either in the inner region $R_{v,i}$ enclosed by $P_i$ and $C_{v,i}$ for some $i$ (call it the collar interior of port $i$), or in the \emph{core} $V(Q_v)\setminus\bigcup_i(R_{v,i}\cup C_{v,i})$. By \cref{lem:block}(c), no edge of $Q_v$ joins a collar interior to the core or to another collar interior, and the only edges of $X$ leaving $Q_v$ are matching edges at the ports, which lie in the collar interiors. Consequently, if $K$ contains a core vertex of $Q_v$ then $K$ is contained in the core of $Q_v$, a subgraph of a planar grid. Otherwise $K$ is contained in collar interiors; a collar interior of $Q_v$ at port $i$ is joined by matching edges only to the collar interior of the neighbouring block at the matched port, and the matched collar interior is separated from the rest of its block by its own crosscut. Hence $K$ is contained in the union of two matched collar interiors and the matching between them. This graph is planar: draw the two collars in two disjoint disks with the ports on the boundaries and the matching edges as disjoint segments in a band joining them, as in the proof of \cref{lem:genus}; a disk with one band attached is a disk, i.e.\ the sphere with a hole. So every component of $F-Z$ is planar.
+
+If every component of $F-Z$ has at most $2n/3$ vertices, $Z$ is a balanced separator of $F$ of size at most $4n/L$. Otherwise exactly one component $K$ has more than $2n/3$ vertices (two such components would exceed $n$). By the planar separator theorem of Lipton and Tarjan \cite{LT79}, $K$ has a set $Y$ of at most $c_4\sqrt{|K|}\le c_4\sqrt n$ vertices such that every component of $K-Y$ has at most $\frac23|K|\le\frac23n$ vertices. Every component of $F-(Z\cup Y)$ is either a component of $F-Z$ other than $K$, of size at most $n-|K|<n/3$, or a component of $K-Y$. Thus $Z\cup Y$ is a balanced separator of $F$ of size at most $4n/L+c_4\sqrt n$.
+\end{proof}
+
+\phantomsection\label{pf:shallow}
+\lemshallow*
+\begin{proof}
+Write $X=X(g,L)$ and $H=H_g$. For a vertex $z\in V(X)$ let $\beta(z)\in V(H)$ denote the block containing it. We first establish two distance facts.
+
+\begin{claim}\label{cl:ports}
+(i) If $P\neq P'$ are distinct ports of the same block $Q_u$, then $\dist_X(P,P')\ge30L$. (ii) If $u,w\in V(H)$ are distinct and non-adjacent, then $\dist_X(V(Q_u),V(Q_w))\ge30L$.
+\end{claim}
+\begin{proof}[Proof of the claim]
+Let $\pi$ be a shortest path between the two sets in question, chosen among shortest paths to minimise the number of matching edges used, and let $u=w_0,w_1,\dots,w_t$ be the sequence of blocks it visits (consecutive terms distinct, each change of block along a matching edge). We claim $w_{i+1}\ne w_{i-1}$ for all $i$. Indeed, if $w_{i+1}=w_{i-1}$, then $\pi$ enters $Q_{w_i}$ from $Q_{w_{i-1}}$ along a matching edge $qq'$ and later returns along a matching edge $\tilde q'\tilde q$ with $\tilde q\in Q_{w_{i-1}}$; because $H$ is simple there is only one edge $w_{i-1}w_i$, so $q,\tilde q$ lie in the same port $P$ of $Q_{w_{i-1}}$ and $q',\tilde q'$ in the matched port $P'$. The excursion from $q$ to $\tilde q$ has length at least $2+\dist_{Q_{w_i}}(q',\tilde q')=2+\dist_{Q_{w_{i-1}}}(q,\tilde q)$, because the matching is order-preserving and both ports are straight segments of the grid boundary, along which grid distance equals the difference of positions. Replacing the excursion by the path along $P$ from $q$ to $\tilde q$ gives a strictly shorter walk between the same endpoints, contradicting minimality. Hence there is no backtracking.
+
+(i) If $t=0$, $\pi$ stays in $Q_u$ and has length at least $\dist_{Q_u}(P,P')\ge39L\ge30L$. If $t\ge1$, then $\pi$ ends in $Q_u=Q_{w_t}$, so $t\ge2$ (as $w_1\ne w_0$), and $w_1$ is an intermediate block entered from $w_0$ and left towards $w_2\ne w_0$; the entering and leaving matching edges belong to different edges of $H$ at $w_1$, hence to distinct ports of $Q_{w_1}$, and the segment of $\pi$ inside $Q_{w_1}$ between them has length at least $39L\ge30L$.
+
+(ii) Here $w_t=w$ with $w\ne u$ non-adjacent, so $t\ge2$, and the same argument applied to the intermediate block $w_1$ gives length at least $30L$.
+\end{proof}
+
+Now let $J$ be an $r$-shallow minor of $X$ with $r<14L$, with branch sets $B_x$ ($x\in V(J)$), pairwise disjoint connected subgraphs of $X$ of radius at most $r$; choose centres $c_x\in V(B_x)$ with every vertex of $B_x$ at distance at most $r$ from $c_x$ (in $B_x$, hence in $X$), and put $\beta(x)=\beta(c_x)$.
+
+\begin{claim}\label{cl:local}
+(a) $V(B_x)\subseteq V(Q_{\beta(x)})\cup V(Q_{w})$ for some $w\in N_H(\beta(x))$.
+(b) If $xy\in E(J)$ then $\beta(y)\in N_H[\beta(x)]$.
+(c) If $xy\in E(J)$ and $\beta(x)=v$, then $V(B_x)\cup V(B_y)\subseteq\bigcup\{V(Q_w): w\in N^2_H[v]\}$, where $N^2_H[v]$ is the set of vertices at $H$-distance at most $2$ from $v$.
+\end{claim}
+\begin{proof}[Proof of the claim]
+(a) Let $z\in V(B_x)$ with $\beta(z)\ne\beta(x)$, and let $\pi$ be a shortest $c_x$--$z$ path in $X$, of length at most $r<14L<30L$, chosen to minimise the number of matching edges. By \cref{cl:ports}(ii), $\beta(z)\in N_H(\beta(x))$. By the no-backtracking property established in the proof of \cref{cl:ports}, the block sequence of $\pi$ is $\beta(x),w_1,\dots,w_t=\beta(z)$ without backtracking, and $t\ge2$ would produce a segment of length at least $30L$ inside $Q_{w_1}$; so $t=1$ and $\pi$ leaves $Q_{\beta(x)}$ exactly once, through the port $P_{w_1}$ assigned to the edge $\beta(x)w_1$. If $z'\in V(B_x)$ is another vertex with $\beta(z')=w'\notin\{\beta(x),w_1\}$, the corresponding path leaves $Q_{\beta(x)}$ through the port $P_{w'}\ne P_{w_1}$, and the concatenation of the two paths through $c_x$ shows $\dist_X(P_{w_1},P_{w'})\le2r<28L<30L$, contradicting \cref{cl:ports}(i).
+
+(b) An edge of $J$ between $x$ and $y$ comes from an edge of $X$ between $B_x$ and $B_y$, so $\dist_X(c_x,c_y)\le2r+1<28L+1\le30L$ (as $L\ge1$). By \cref{cl:ports}(ii), $\beta(y)\in N_H[\beta(x)]$.
+
+(c) By (a), $B_x$ lies in $Q_v$ and possibly one block adjacent to $v$; by (b) $\beta(y)\in N_H[v]$, and by (a) $B_y$ lies in $Q_{\beta(y)}$ and possibly one block adjacent to $\beta(y)$, all of which are within $H$-distance $2$ of $v$.
+\end{proof}
+
+Orient the edges of $J$ arbitrarily. For $v\in V(H)$ let $E_v$ be the set of oriented edges of $J$ whose tail $x$ has $\beta(x)=v$, and let $W_v$ be the set of ends (tails and heads) of the edges in $E_v$. Then $\sum_v|E_v|=|E(J)|$. Let $X_v$ be the subgraph of $X$ induced by $\bigcup\{V(Q_w):w\in N^2_H[v]\}$; as $H$ is $4$-regular, $|N^2_H[v]|\le1+4+12=17$. By \cref{cl:local}(c), for every $x\in W_v$ the branch set $B_x$ is a connected subgraph of $X_v$ (all its vertices, hence all its edges, lie in $X_v$), and every edge of $E_v$ is realised by an edge of $X_v$ between two such branch sets. Hence the graph $(W_v,E_v)$ is a minor of $X_v$. The graph $X_v$ embeds in the surface obtained from at most $17$ disks and the bands corresponding to edges of $H$ within $N^2_H[v]$, at most $17\cdot4/2=34$ bands, exactly as in the proof of \cref{lem:genus}; its Euler genus is therefore at most $35$, and by the density bound in that proof $|E_v|\le(3+3\sqrt{36})|W_v|=21|W_v|$.
+
+Finally, a vertex $x\in V(J)$ belongs to $W_v$ only if $x$ is the tail of an edge in $E_v$, in which case $v=\beta(x)$, or the head of an edge $yx\in E_v$, in which case $v=\beta(y)\in N_H[\beta(x)]$ by \cref{cl:local}(b). Thus $x$ lies in $W_v$ for at most $|N_H[\beta(x)]|=5$ blocks $v$, and
+\[
+ |E(J)|=\sum_v|E_v|\le21\sum_v|W_v|\le105\,|V(J)|.
+\]
+So $C_5=105$ works.
+\end{proof}
+
+\phantomsection\label{pf:exact}
+\propexact*
+\begin{proof}
+\emph{Monotone.} A subgraph of $F\sqcup I_k$ is $F'\sqcup I_{k'}$ where $F'$ is a subgraph of $F$ (a vertex of $F$ that becomes isolated may be counted in the second part), and $F'\in\cC_\varepsilon$ since $\cC_\varepsilon$ is monotone.
+
+\emph{Expansion.} Branch sets of a minor model are connected, so an isolated vertex can only be a branch set on its own, incident with no edge of the minor. Hence an $r$-shallow minor of $F\sqcup I_k$ is $J\sqcup I_{k'}$ with $J$ an $r$-shallow minor of $F$ (possibly empty), and its density is at most that of $J$. Therefore $\nabla_{\cC'_\varepsilon}(r)=\nabla_{\cC_\varepsilon}(r)$ for every $r$.
+
+\emph{Upper bound.} Let $G=F\sqcup I_k$ have $n\ge2$ vertices and let $Z$ be a minimum balanced separator of $F$. Every component of $G-Z$ is a component of $F-Z$, of order at most $\frac23|V(F)|\le\frac23n$, or a single isolated vertex. So $Z$ is a balanced separator of $G$ and $\sep(G)\le\sep(F)=O(|V(F)|^{1-\varepsilon})=O(n^{1-\varepsilon})$ by \eqref{eq:s}.
+
+\emph{Lower bound.} Let $n\ge N_{L_0}$, let $L$ be maximal with $N_L\le n$, put $k=n-N_L<N_{L+1}-N_L$ and $G_n=X_L\sqcup I_k\in\cC'_\varepsilon$. Since $N_{L+1}/N_L\to1$ we have $n=(1+o(1))N_L$, so for all $n$ large enough $\frac23n\le0.7N_L$. Let $Z$ be a balanced separator of $G_n$ and $Z'=Z\cap V(X_L)$. Every component of $X_L-Z'$ is a component of $G_n-Z$, hence has at most $0.7N_L$ vertices. If $|Z'|\ge N_L/6$ we are done. Otherwise $X_L-Z'$ has more than $\frac56N_L$ vertices, and as in the proof of \cref{cor:sep} there is a union $A$ of components of $X_L-Z'$ with $N_L/6\le|A|\le0.7N_L$: if some component has at least $N_L/6$ vertices take it alone (it has at most $0.7N_L$); otherwise add components of order $<N_L/6$ one at a time until the total first reaches $N_L/6$, when it is below $N_L/3$. Then $\min\{|A|,N_L-|A|\}\ge\min\{N_L/6,0.3N_L\}=N_L/6$, every edge of $X_L$ leaving $A$ ends in $Z'$, and \cref{lem:iso} gives $5|Z'|\ge|\partial_XA|\ge c_2N_L/(6L)$. Hence
+\[
+ |Z|\ge|Z'|\ge\frac{c_2N_L}{30L}=\Omega(g_LL)=\Omega(N_L^{1-\varepsilon})=\Omega(n^{1-\varepsilon})
+\]
+by \eqref{eq:sepXL} and $n=(1+o(1))N_L$. Together with the upper bound, $\tilde s_{\cC'_\varepsilon}(n)=\Theta(n^{1-\varepsilon})$; the finitely many $n<N_{L_0}$ are irrelevant to a $\Theta$ statement. Thus \cref{thm:main}, and with it \cref{cor:beps}, hold for $\cC'_\varepsilon$ under the exact-order convention as well.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) on the \emph{original} writeup. Its step numbers (S1--S20) refer to that writeup, not to this note; the two items it labels GAP are the ones repaired in \cref{sec:beps} and \cref{prop:exact}. The scripts it mentions are in \texttt{verification/scripts/2001.09679\_\_00/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{Bollobas88} B.~Bollobás, The isoperimetric number of random regular graphs, \emph{European J. Combin.} 9 (1988) 241--244.
+\bibitem{Dvorak20} Z.~Dvořák, A note on sublinear separators and expansion, \emph{European J. Combin.} 93 (2021) 103273; arXiv:2001.09679.
+\bibitem{DN16} Z.~Dvořák and S.~Norin, Strongly sublinear separators and polynomial expansion, \emph{SIAM J. Discrete Math.} 30 (2016) 1095--1101.
+\bibitem{ER18} L.~Esperet and J.-F.~Raymond, Polynomial expansion and sublinear separators, \emph{European J. Combin.} 69 (2018) 49--53.
+\bibitem{LT79} R.~J.~Lipton and R.~E.~Tarjan, A separator theorem for planar graphs, \emph{SIAM J. Appl. Math.} 36 (1979) 177--189.
+\bibitem{PRS94} S.~Plotkin, S.~Rao and W.~D.~Smith, Shallow excluded minors and improved graph decompositions, in: \emph{Proc. 5th ACM--SIAM SODA} (1994) 462--470.
+\end{thebibliography}
+
+\end{document}

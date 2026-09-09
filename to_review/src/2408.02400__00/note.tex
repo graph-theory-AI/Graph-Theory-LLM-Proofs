@@ -1,0 +1,242 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\myc}{\mu}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\Fb}{\overline F}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2408.02400\_\_00 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{Graphs with clique number four whose chromatic number\\ exceeds the cochromatic number by exactly three:\\ an affirmative answer to Problem~1.5 of Steiner}
+\author{Machine-generated note (see provenance box)}
+\date{9 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
+\small
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2408.02400\_\_00}; original writeup in \texttt{attacks/2408.02400\_\_00/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02/03) re-derived every step, checked Problem~1.5 and Theorem~1.4 verbatim against the source paper, verified all parameters of the $13$-vertex seed by exhaustive computation, tested the Mycielskian lemma on all $1099$ labelled graphs with at most $5$ vertices and on random larger graphs, and verified the $k=5$ instance ($27$ vertices) end-to-end by brute force; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised, with statements and proof ideas in the main text and full proofs in \cref{app:proofs}; the standard upper bound $\chi(\myc(H))\le\chi(H)+1$, which the writeup invoked as a ``standard identity'' without proof, is now spelled out; and context from the referee's report was added as remarks. No mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+\end{tcolorbox}
+
+\begin{abstract}
+The cochromatic number $\zeta(G)$ of a graph $G$ is the least number of parts in a partition of $V(G)$ into cliques and independent sets. Steiner (arXiv:2408.02400) disproved a 1988 conjecture of Erdős, Gimbel and Straight by exhibiting infinitely many graphs with $\omega(G)<5$, $\zeta(G)=4$ and $\chi(G)=7$, and asked (Problem~1.5) whether for every $k\ge5$ there is a graph $G_k$ with $\omega(G_k)<5$, $\zeta(G_k)=k$ and $\chi(G_k)=k+3$. We answer this affirmatively. The complement $G$ of the circulant graph $C_{13}(1,5)$ has $(\omega,\zeta,\chi)=(4,4,7)$ and admits an optimal cochromatic partition with an independent part; a lemma shows that the Mycielskian raises the cochromatic number by exactly one under this hypothesis and preserves the hypothesis, while it is classical that it raises the chromatic number by one and preserves the clique number. Hence the iterated Mycielskians $G_k=\myc^{k-4}(G)$, of order $14\cdot2^{k-4}-1$, satisfy $\omega(G_k)=4$, $\zeta(G_k)=k$ and $\chi(G_k)=k+3$ for every $k\ge4$.
+\end{abstract}
+
+\section{Introduction}
+
+All graphs are finite and simple. A set of vertices is \emph{homogeneous} if it is a clique or an independent set. A \emph{cochromatic partition} of $G$ is a partition of $V(G)$ into homogeneous sets, and the \emph{cochromatic number} $\zeta(G)$ is the least number of parts of such a partition. We write $\omega,\alpha,\chi$ for the clique, independence and chromatic numbers. Clearly $\zeta(G)\le\chi(G)$.
+
+Erdős, Gimbel and Straight conjectured in 1988 that every graph $G$ with $\omega(G)<5$ and $\zeta(G)>3$ satisfies $\chi(G)\le\zeta(G)+2$ (Conjecture~1.2 in \cite{Steiner24}). Steiner \cite{Steiner24} disproved this: his Theorem~1.4 gives infinitely many graphs $G$ with $\omega(G)<5$, $\zeta(G)=4$ and $\chi(G)=7$. He then asked whether the gap of three persists for every value of the cochromatic number.
+
+\begin{problem}[{\cite[Problem~1.5]{Steiner24}}]\label{prob:15}
+Let $k\ge5$. Is there a graph $G_k$ with $\omega(G_k)<5$, $\zeta(G_k)=k$ and $\chi(G_k)=\zeta(G_k)+3$?
+\end{problem}
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+For every integer $k\ge4$ there is a graph $G_k$ on $14\cdot2^{k-4}-1$ vertices with
+\[
+\omega(G_k)=4,\qquad \zeta(G_k)=k,\qquad \chi(G_k)=k+3 .
+\]
+Explicitly, $G_4$ is the complement of the circulant graph $C_{13}(1,5)$ and $G_{k+1}=\myc(G_k)$ is the Mycielskian of $G_k$.
+\end{restatable}
+
+\begin{corollary}\label{cor:15}
+The answer to \cref{prob:15} is affirmative for every $k\ge5$.
+\end{corollary}
+\begin{proof}
+Take $G_k$ from \cref{thm:main}: $\omega(G_k)=4<5$, $\zeta(G_k)=k$ and $\chi(G_k)=k+3=\zeta(G_k)+3$.
+\end{proof}
+
+\begin{proofidea}
+Two ingredients. (i)~A $13$-vertex \emph{seed}: the complement $G$ of the circulant graph $F=C_{13}(1,5)$. The graph $F$ is triangle-free and has independence number $4$, so $\omega(G)=4$ and $\alpha(G)=2$; hence $\chi(G)\ge\lceil13/2\rceil=7$ and $\zeta(G)\ge\lceil13/4\rceil=4$, and explicit partitions show both bounds are attained, the optimal cochromatic partition having an independent part $\{8,9\}$. (ii)~A \emph{cochromatic Mycielski lemma}: $\zeta(\myc(H))\ge\zeta(H)+1$ always, with equality whenever $H$ has an optimal cochromatic partition containing an independent part, and this property is inherited by $\myc(H)$. Together with the classical facts $\chi(\myc(H))=\chi(H)+1$ and $\omega(\myc(H))=\max\{\omega(H),2\}$, iterating the Mycielskian from the seed raises $\zeta$ and $\chi$ in lockstep and keeps $\omega=4$. The proof is carried out in \cref{sec:main}.
+\end{proofidea}
+
+\section{The Mycielskian and the cochromatic number}\label{sec:myc}
+
+For a graph $H$, the \emph{Mycielskian} $\myc(H)$ has vertex set $V^0\cup V^1\cup\{r\}$, where $V^0=\{v^0:v\in V(H)\}$ (the \emph{old layer}), $V^1=\{v^1:v\in V(H)\}$ (the \emph{first layer}) and $r$ is the \emph{root}; its edges are
+\begin{itemize}[nosep]
+\item $u^0v^0$ for every $uv\in E(H)$;
+\item $u^0v^1$ and $u^1v^0$ for every $uv\in E(H)$;
+\item $rv^1$ for every $v\in V(H)$;
+\end{itemize}
+and no others. Thus $V^0$ induces a copy of $H$, the first layer $V^1$ is independent, $r$ is adjacent to all of $V^1$ and to nothing in $V^0$, and $v^0$ is never adjacent to $v^1$. For $S\subseteq V(H)$ we write $S^0=\{v^0:v\in S\}$ and $S^1=\{v^1:v\in S\}$.
+
+\begin{restatable}[Cochromatic Mycielski lemma]{lemma}{lemcoch}\label{lem:coch}
+For every graph $H$,
+\[
+\zeta(\myc(H))\ \ge\ \zeta(H)+1 .
+\]
+If $H$ has a minimum cochromatic partition containing an independent part, then $\zeta(\myc(H))=\zeta(H)+1$, and $\myc(H)$ again has a minimum cochromatic partition containing an independent part.
+\end{restatable}
+\begin{proofidea}
+Let $\cP$ be a cochromatic partition of $\myc(H)$ into $q$ parts and $C$ the part containing $r$. If $C$ is a clique it lies in $\{r\}\cup V^1$ and misses $V^0$, so the other $q-1$ parts restricted to $V^0\cong H$ form a cochromatic partition of $H$. If $C$ is independent, then $C=\{r\}\cup S^0$ for an independent $S\subseteq V(H)$; for each other part $D$ let $D^*$ consist of the $v$ with $v^0\in D$ together with the $v\in S$ with $v^1\in D$. These $q-1$ sets partition $V(H)$ and each is homogeneous, because a first-layer vertex $v^1$ has the same old-layer neighbours as $v^0$, a clique $D$ contains at most one first-layer vertex, and two substituted vertices of $S$ are nonadjacent. Either way $\zeta(H)\le q-1$. For equality, lift a minimum partition $I,P_2,\dots,P_{\zeta(H)}$ of $H$ with $I$ independent to $\{r\}\cup I^0,\ P_2^0,\dots,P_{\zeta(H)}^0,\ V^1$; both $\{r\}\cup I^0$ and $V^1$ are independent.\fullproofref{pf:coch}
+\end{proofidea}
+
+\begin{restatable}[Mycielski \cite{Mycielski55}]{lemma}{lemclassic}\label{lem:classic}
+For every graph $H$, $\chi(\myc(H))=\chi(H)+1$ and $\omega(\myc(H))=\max\{\omega(H),2\}$.
+\end{restatable}
+\begin{proofidea}
+These are the classical properties of the Mycielskian. Upper bound on $\chi$: give $v^0,v^1$ the colour of $v$ and $r$ a new colour. Lower bound: in a proper $q$-colouring of $\myc(H)$ with $r$ coloured $q$, no first-layer vertex has colour $q$; recolour each $v$ whose $v^0$ has colour $q$ by the colour of $v^1$. A clique of $\myc(H)$ through $r$ has at most two vertices, and a clique avoiding $r$ contains at most one first-layer vertex $v^1$ and not $v^0$, so replacing $v^1$ by $v^0$ gives a clique of $H$ of the same size.\fullproofref{pf:classic}
+\end{proofidea}
+
+\section{The seed}\label{sec:seed}
+
+Let $F$ be the circulant graph on $\Z_{13}$ with
+\[
+xy\in E(F)\iff x-y\equiv\pm1\ \text{or}\ \pm5\pmod{13},
+\]
+i.e.\ $F=C_{13}(1,5)$, a $4$-regular graph on $13$ vertices, and let $G=\Fb$ be its complement. For $x,y\in\Z_{13}$ the \emph{cyclic distance} is the element of $\{0,1,\dots,6\}$ congruent to $\pm(x-y)$; two distinct vertices are adjacent in $F$ exactly when their cyclic distance is $1$ or $5$, and adjacent in $G$ exactly when it is $2$, $3$, $4$ or $6$.
+
+\begin{restatable}[The seed]{proposition}{propseed}\label{prop:seed}
+The graph $G=\overline{C_{13}(1,5)}$ satisfies
+\[
+\omega(G)=4,\qquad\alpha(G)=2,\qquad\chi(G)=7,\qquad\zeta(G)=4,
+\]
+and the partition
+\[
+A=\{0,2,4,6\},\quad B=\{1,5,7,11\},\quad C=\{3,10,12\},\quad I=\{8,9\}
+\]
+of $\Z_{13}$ is a cochromatic partition of $G$ into four parts in which $A,B,C$ are cliques and $I$ is independent. A proper $7$-colouring of $G$ is given by the classes $\{0,1\},\{2,3\},\{4,5\},\{6,7\},\{8,9\},\{10,11\},\{12\}$.
+\end{restatable}
+\begin{proofidea}
+$F$ is triangle-free because no two distinct elements of $\{\pm1,\pm5\}$ differ by an element of $\{\pm1,\pm5\}$; and $\alpha(F)=4$: $\{0,2,4,6\}$ is independent, while five independent vertices would have five cyclic gaps, each at least $2$, summing to $13$, and in each of the three possible gap patterns two chosen vertices are at cyclic distance $5$. Complementation gives $\omega(G)=4$, $\alpha(G)=2$, whence $\chi(G)\ge\lceil13/2\rceil=7$ and $\zeta(G)\ge\lceil13/4\rceil=4$; the displayed colouring and partition attain these bounds.\fullproofref{pf:seed}
+\end{proofidea}
+
+\section{Proof of the main theorem}\label{sec:main}
+
+\begin{proof}[Proof of \cref{thm:main}]
+Let $G_4=G=\overline{C_{13}(1,5)}$ and $G_{k+1}=\myc(G_k)$ for $k\ge4$, so that $G_k=\myc^{k-4}(G)$. Since $|V(\myc(H))|=2|V(H)|+1$ and $|V(G_4)|=13=14\cdot2^0-1$, induction gives $|V(G_k)|=14\cdot2^{k-4}-1$.
+
+We prove by induction on $k\ge4$ that $\omega(G_k)=4$, $\zeta(G_k)=k$, $\chi(G_k)=k+3$, and that $G_k$ has a minimum cochromatic partition containing an independent part. For $k=4$ this is \cref{prop:seed}. Assume it for $k$. By \cref{lem:coch}, applied to $H=G_k$ (which has a minimum cochromatic partition with an independent part), $\zeta(G_{k+1})=\zeta(G_k)+1=k+1$ and $G_{k+1}$ again has a minimum cochromatic partition with an independent part. By \cref{lem:classic}, $\chi(G_{k+1})=\chi(G_k)+1=k+4$ and $\omega(G_{k+1})=\max\{\omega(G_k),2\}=4$. This completes the induction.
+\end{proof}
+
+\section{Remarks}
+
+\begin{remark}[The case $k=4$]
+The seed itself has $(\omega,\zeta,\chi)=(4,4,7)$. This is not new: Steiner's Theorem~1.4 \cite{Steiner24} already provides infinitely many such graphs (via an $11$-vertex gadget of two joined $5$-cycles rather than a circulant). The new content is the propagation to every $k\ge5$, which is what \cref{prob:15} asks for.
+\end{remark}
+
+\begin{remark}[Where the independent part is needed]
+The inequality $\zeta(\myc(H))\ge\zeta(H)+1$ of \cref{lem:coch} holds for every $H$, but equality uses the existence of a minimum cochromatic partition with an independent part. Without it one would only obtain $\zeta(G_k)\ge k$, which does not pin down $\chi(G_k)-\zeta(G_k)$. The hypothesis holds for the seed (the part $I=\{8,9\}$) and is shown to persist under $\myc$, so no gap arises.
+\end{remark}
+
+\begin{remark}[Computational checks]
+The referee (\cref{app:referee}) verified by exhaustive computation that $\omega(F)=2$, $\alpha(F)=4$, $\omega(G)=4$, $\alpha(G)=2$, $\chi(G)=7$ and $\zeta(G)=4$, and that the displayed colouring and cochromatic partition are valid; that both assertions of \cref{lem:coch} hold for all $1099$ labelled graphs on at most $5$ vertices and for $95$ random graphs on $6$--$8$ vertices; and, independently of \cref{lem:coch}, that $\myc(G)$ on $27$ vertices has $\omega=4$, $\zeta=5$, $\chi=8$. For $\myc^2(G)$ on $55$ vertices it confirmed $\omega=4$ directly; the exact values $\zeta=6$, $\chi=9$ there rest on the lemmas. Scripts: \texttt{verification/scripts/2408.02400\_\_00/}.
+\end{remark}
+
+\begin{remark}[Novelty]
+The referee's search found only two papers citing \cite{Steiner24}, both on the Erdős--Gimbel random-graph question, and no resolution of \cref{prob:15}; the catalog review of May 2026 found none either. This has not been checked by a human.
+\end{remark}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:coch}
+\lemcoch*
+\begin{proof}
+Let $\cP$ be a cochromatic partition of $\myc(H)$ into $q$ parts, and let $C\in\cP$ be the part containing the root $r$. We show $\zeta(H)\le q-1$; since $\cP$ was arbitrary, this gives $\zeta(\myc(H))\ge\zeta(H)+1$.
+
+\emph{Case 1: $C$ is a clique.} Every vertex of $C\setminus\{r\}$ is adjacent to $r$, so $C\subseteq\{r\}\cup V^1$; and since $V^1$ is independent, $C$ contains at most one first-layer vertex and no old-layer vertex. Hence the $q-1$ parts of $\cP\setminus\{C\}$ cover $V^0$. The restriction of a clique or an independent set to $V^0$ is a clique or an independent set of the induced subgraph $\myc(H)[V^0]\cong H$. Discarding empty restrictions, we obtain a cochromatic partition of $H$ into at most $q-1$ parts, so $\zeta(H)\le q-1$.
+
+\emph{Case 2: $C$ is independent.} Since $r$ is adjacent to every vertex of $V^1$, $C\cap V^1=\emptyset$, so $C=\{r\}\cup S^0$ for some $S\subseteq V(H)$; as $S^0$ is independent and $V^0$ induces $H$, the set $S$ is independent in $H$. For every part $D\in\cP\setminus\{C\}$ define
+\[
+D^*=\{v\in V(H): v^0\in D\}\ \cup\ \{v\in S: v^1\in D\}.
+\]
+\emph{The sets $D^*$ partition $V(H)$.} Let $v\in V(H)$. If $v\notin S$, then $v^0\notin C$, so $v^0$ lies in exactly one part $D\ne C$, and $v$ belongs to $D^*$ through its first clause; $v$ cannot belong to any $D'^*$ through the second clause because $v\notin S$. If $v\in S$, then $v^0\in C$, so $v$ is in no $D^*$ through the first clause, while $v^1\notin C$ lies in exactly one part $D\ne C$, and $v\in D^*$ through the second clause. Thus each $v$ lies in exactly one $D^*$.
+
+\emph{Each $D^*$ is homogeneous.} Let $D\in\cP\setminus\{C\}$ and let $u,v\in D^*$ be distinct. Note first that if $v\in S$ with $v^1\in D$ then $v^0\notin D$ (because $v^0\in C$), so each $v\in D^*$ enters through exactly one of the two clauses, and we call $v$ \emph{old} if $v^0\in D$ and \emph{substituted} if $v\in S$ and $v^1\in D$.
+\begin{itemize}[nosep]
+\item If $D$ is independent: two old vertices $u,v$ have $u^0,v^0\in D$ nonadjacent, so $uv\notin E(H)$. An old $u$ and a substituted $v$ have $u^0,v^1\in D$ nonadjacent; since $u^0v^1\in E(\myc(H))$ iff $uv\in E(H)$, we get $uv\notin E(H)$. Two substituted vertices lie in $S$, which is independent. So $D^*$ is independent in $H$.
+\item If $D$ is a clique: $r\notin D$, and $D$ contains at most one first-layer vertex (as $V^1$ is independent), hence at most one substituted vertex. Two old vertices $u,v$ have $u^0v^0\in E(\myc(H))$, so $uv\in E(H)$. An old $u$ and the substituted $v$ have $u^0v^1\in E(\myc(H))$, so $uv\in E(H)$ (and $u\ne v$ because $v^0\notin D$). So $D^*$ is a clique in $H$.
+\end{itemize}
+Discarding empty sets, $\{D^*:D\in\cP\setminus\{C\}\}$ is a cochromatic partition of $H$ into at most $q-1$ parts, so $\zeta(H)\le q-1$.
+
+\emph{Equality and persistence.} Suppose $I,P_2,\dots,P_{\zeta(H)}$ is a minimum cochromatic partition of $H$ with $I$ independent. Consider
+\[
+\{r\}\cup I^0,\quad P_2^0,\ \dots,\ P_{\zeta(H)}^0,\quad V^1 .
+\]
+These sets partition $V(\myc(H))$. The set $\{r\}\cup I^0$ is independent, since $I^0$ is independent and $r$ has no neighbour in $V^0$; each $P_i^0$ is a clique or independent set because $V^0$ induces $H$; and $V^1$ is independent. So this is a cochromatic partition of $\myc(H)$ into $\zeta(H)+1$ parts, whence $\zeta(\myc(H))\le\zeta(H)+1$. Combined with the lower bound, $\zeta(\myc(H))=\zeta(H)+1$, the displayed partition is minimum, and it contains the independent parts $\{r\}\cup I^0$ and $V^1$.
+\end{proof}
+
+\phantomsection\label{pf:classic}
+\lemclassic*
+\begin{proof}
+\emph{Upper bound on $\chi$.} Given a proper $\chi(H)$-colouring $c$ of $H$, colour $v^0$ and $v^1$ with $c(v)$ and give $r$ a new colour. Edges $u^0v^0$ and $u^0v^1$ join vertices with colours $c(u)\ne c(v)$, and edges $rv^1$ join the new colour to an old one. So $\chi(\myc(H))\le\chi(H)+1$.
+
+\emph{Lower bound on $\chi$.} Let $c$ be a proper colouring of $\myc(H)$ with colours $1,\dots,q$, renamed so that $c(r)=q$. No first-layer vertex has colour $q$, since all of $V^1$ is adjacent to $r$. Define $c'$ on $V(H)$ by $c'(v)=c(v^0)$ if $c(v^0)\ne q$ and $c'(v)=c(v^1)$ if $c(v^0)=q$; then $c'$ uses only colours $1,\dots,q-1$. Let $uv\in E(H)$. If neither endpoint is recoloured, $c'(u)=c(u^0)\ne c(v^0)=c'(v)$ because $u^0v^0$ is an edge. If exactly one is recoloured, say $c(v^0)=q$, then $c'(v)=c(v^1)\ne c(u^0)=c'(u)$ because $u^0v^1$ is an edge. Both cannot be recoloured, since $u^0,v^0$ are adjacent and cannot both have colour $q$. Hence $c'$ is a proper $(q-1)$-colouring of $H$ and $\chi(H)\le\chi(\myc(H))-1$.
+
+\emph{Clique number.} A clique of $\myc(H)$ containing $r$ lies in $\{r\}\cup V^1$ and, $V^1$ being independent, has at most two vertices. Let $K$ be a clique avoiding $r$. It contains at most one first-layer vertex, say $v^1$ (if any), and then $v^0\notin K$ since $v^0v^1\notin E(\myc(H))$. Replacing $v^1$ by $v^0$ yields a set $K'\subseteq V^0$ of the same size, which is a clique because $u^0v^1\in E(\myc(H))$ iff $uv\in E(H)$ iff $u^0v^0\in E(\myc(H))$; thus $|K|\le\omega(H)$. Conversely, every clique of $H$ lifts to $V^0$, and $\{r,v^1\}$ is a clique of size $2$. Hence $\omega(\myc(H))=\max\{\omega(H),2\}$.
+\end{proof}
+
+\phantomsection\label{pf:seed}
+\propseed*
+\begin{proof}
+Put $D=\{\pm1,\pm5\}=\{1,5,8,12\}\subseteq\Z_{13}$, so that $xy\in E(F)$ iff $x-y\in D$.
+
+\emph{$F$ is triangle-free.} The differences of two distinct elements of $D$ are, up to sign, $5-1=4$, $8-1=7\equiv-6$, $12-1=11\equiv-2$, $8-5=3$, $12-5=7\equiv-6$, $12-8=4$; so they lie in $\{\pm2,\pm3,\pm4,\pm6\}$, which is disjoint from $D$. Translations are automorphisms of $F$, so a triangle could be translated to contain $0$; its other two vertices would be distinct $a,b\in D$ with $a-b\in D$, which is impossible. Hence $\omega(F)=2$ (and $F$ has edges).
+
+\emph{$\alpha(F)=4$.} The set $\{0,2,4,6\}$ has pairwise cyclic distances $2,4,6$, none equal to $1$ or $5$, so it is independent and $\alpha(F)\ge4$. Suppose $F$ had an independent set of five vertices. Listing them in cyclic order around $\Z_{13}$ gives five cyclic gaps $g_1,\dots,g_5\ge1$ with $\sum g_i=13$, and $g_i\ge2$ since vertices at cyclic distance $1$ are adjacent. The multisets of five integers $\ge2$ with sum $13$ are exactly $\{5,2,2,2,2\}$, $\{4,3,2,2,2\}$ and $\{3,3,3,2,2\}$. Two cyclically consecutive gaps summing to $5$ mean two chosen vertices at cyclic distance $5$, which are adjacent; a single gap $5$ likewise. In the first pattern there is a gap of $5$. In the second, the unique gap $3$ has two cyclic neighbours among $\{4,2,2,2\}$, at most one of which is the $4$, so it is adjacent to a $2$. In the third, if no $3$ were adjacent to a $2$, the two $2$'s and the three $3$'s would each form a union of arcs of the $5$-cycle of gaps with no edge between the two classes, which is impossible in a connected cycle. In every case we obtain two adjacent chosen vertices, a contradiction. Hence $\alpha(F)=4$.
+
+\emph{Parameters of $G$.} Complementation exchanges cliques and independent sets, so $\omega(G)=\alpha(F)=4$ and $\alpha(G)=\omega(F)=2$.
+
+\emph{$\chi(G)=7$.} Every colour class of a proper colouring of $G$ is independent, hence of size at most $2$, so $\chi(G)\ge\lceil13/2\rceil=7$. Each of $\{0,1\},\{2,3\},\{4,5\},\{6,7\},\{8,9\},\{10,11\}$ is a pair at cyclic distance $1$, i.e.\ an edge of $F$ and a non-edge of $G$, and $\{12\}$ is a singleton; so the displayed classes form a proper $7$-colouring of $G$, and $\chi(G)=7$.
+
+\emph{$\zeta(G)=4$.} Every homogeneous set of $G$ has size at most $\max\{\omega(G),\alpha(G)\}=4$, so $\zeta(G)\ge\lceil13/4\rceil=4$. The sets $A,B,C,I$ partition $\Z_{13}$. Inside $A=\{0,2,4,6\}$ the cyclic distances are $2,4,6,2,4,2$; inside $B=\{1,5,7,11\}$ they are $4,6,3,2,6,4$ (from $5-1$, $7-1$, $11-1\equiv-3$, $7-5$, $11-5$, $11-7$); inside $C=\{3,10,12\}$ they are $6,4,2$ (from $10-3\equiv-6$, $12-3\equiv-4$, $12-10$). None equals $1$ or $5$, so $A,B,C$ are independent in $F$, i.e.\ cliques in $G$. The vertices $8,9$ are at cyclic distance $1$, adjacent in $F$, so $I=\{8,9\}$ is independent in $G$. Thus $A,B,C,I$ is a cochromatic partition of $G$ into four parts with an independent part, and $\zeta(G)=4$.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02/03) on the \emph{original} writeup. Its step numbers refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification/scripts/2408.02400\_\_00/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{Mycielski55} J.~Mycielski, Sur le coloriage des graphes, \emph{Colloq. Math.} 3 (1955) 161--162.
+\bibitem{Steiner24} R.~Steiner, On the difference between the chromatic and cochromatic number, arXiv:2408.02400 (2024; v2).
+\end{thebibliography}
+
+\end{document}

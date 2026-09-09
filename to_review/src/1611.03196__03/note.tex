@@ -1,0 +1,309 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\symdiff}{\mathbin{\triangle}}
+\newcommand{\ind}[1]{\mathbf 1_{\{#1\}}}
+\DeclareMathOperator{\conv}{conv}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 1611.03196\_\_03 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{Fair representation by matchings in bipartite graphs:\\ Conjecture~1.15 of Aharoni, Alon, Berger, Chudnovsky, Kotlar, Loebl and Ziv\\ holds with $c(m)=32(m+1)^3$}
+\author{Machine-generated note (see provenance box)}
+\date{9 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
+\small
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The proof was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{1611.03196\_\_03}; original writeup in \texttt{attacks/1611.03196\_\_03/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the conjecture verbatim against the arXiv source and the Stromquist--Woodall reference, and machine-tested the combinatorial core of the interpolation lemma on $4000$ random instances, the statement itself by brute force on $587$ small instances, and the whole pipeline end to end on bipartite circulant graphs; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, the interval-splitting theorem is now cited precisely, and steps that the writeup stated in one line (the rounding error, the transition count, the induction) are spelled out exactly as the referee re-derived them. Two observations of the referee are recorded as remarks and marked as such (\cref{rem:slack,rem:edgecases}). No mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+\end{tcolorbox}
+
+\begin{abstract}
+Aharoni, Alon, Berger, Chudnovsky, Kotlar, Loebl and Ziv conjectured (Conjecture~1.15 of arXiv:1611.03196) that for every $m$ there is a constant $c(m)$ such that, for every bipartite graph $G$ with maximum degree $\Delta$ and arbitrary edge sets $E_1,\dots,E_m\subseteq E(G)$, there is a matching $S$ with $|S|\ge|E(G)|/\Delta-c(m)$ and $|S\cap E_i|\le\lceil|E_i|/\Delta\rceil$ for all $i$. We prove the conjecture with the explicit, unoptimised constant $c(m)=32(m+1)^3$. The proof writes the target vector $(|E(G)|/\Delta,|E_1|/\Delta,\dots,|E_m|/\Delta)$ as a convex combination of the statistics of at most $m+2$ matchings (Kőnig plus Carathéodory) and then shows, using the Stromquist--Woodall interval-splitting theorem on the alternating cycles of two matchings, that a convex combination of two matchings' statistics can be realised by a single matching up to an additive error $32(m+1)$. The authors' suggested sharp value $c(m)=m/2$ remains open.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+All graphs are finite. For a graph $G$ let $\Delta(G)$ be its maximum degree; a \emph{matching} is a set of pairwise disjoint edges. In their study of fair representation, Aharoni, Alon, Berger, Chudnovsky, Kotlar, Loebl and Ziv \cite{AABCKLZ} observe that ``over-representation'' statements fail when the sets $E_i$ do not partition $E(G)$, and propose the following under-representation formulation.
+
+\begin{conjecture}[{\cite[Conjecture~1.15]{AABCKLZ}}]\label{conj:115}
+For every $m$ there exists a number $c(m)$ for which the following is true: if $G$ is a bipartite graph and $E_1,\dots,E_m$ are any sets of edges, then there exists a matching $S$ in $G$ of size at least $\frac{|E(G)|}{\Delta(G)}-c(m)$ such that $|S\cap E_i|\le\bigl\lceil\frac{|E_i|}{\Delta(G)}\bigr\rceil$ for all $i\le m$.
+\end{conjecture}
+
+The sets $E_i$ are arbitrary subsets of $E(G)$: no disjointness is assumed. The authors suggest that $c(m)=m/2$ may suffice. We prove the conjecture with an explicit constant.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+For every $m\ge1$, \cref{conj:115} holds with
+\[
+ c(m)=32(m+1)^3 .
+\]
+That is, if $G$ is a bipartite graph with $D=\Delta(G)\ge1$ and $E_1,\dots,E_m\subseteq E(G)$, then $G$ has a matching $S$ with
+\[
+ |S|\ \ge\ \frac{|E(G)|}{D}-32(m+1)^3
+ \qquad\text{and}\qquad
+ |S\cap E_i|\ \le\ \Bigl\lceil\frac{|E_i|}{D}\Bigr\rceil\quad(1\le i\le m).
+\]
+\end{restatable}
+
+The constant is deliberately not optimised; see \cref{rem:constant}.
+
+\begin{proofidea}
+Attach to a matching $M$ its \emph{statistic vector} $z(M)=(|M|,|M\cap E_1|,\dots,|M\cap E_m|)\in\R^{m+1}$. By Kőnig's line-colouring theorem $E(G)$ is the disjoint union of $D$ matchings, so the target $p=(|E(G)|/D,|E_1|/D,\dots,|E_m|/D)$ is the average of their statistic vectors; by Carathéodory's theorem $p$ is a convex combination of the statistic vectors of at most $m+2$ matchings (\cref{lem:reduction}). The heart of the argument is an \emph{interpolation lemma} (\cref{lem:interp}): for two matchings $A,B$ and $\theta\in[0,1]$ there is a matching $C$ whose statistics are, coordinate by coordinate, within $32(m+1)$ of $\theta z(A)+(1-\theta)z(B)$, the size from below and the counts $|C\cap E_i|$ from above. It is proved by extending $A,B$ to perfect matchings, splitting their alternating cycles into unit cells $(a_j,b_j)$, choosing by the Stromquist--Woodall theorem a union of few intervals of cells carrying exactly a $\theta$-share of every statistic, taking the $A$-edges on those cells and the $B$-edges elsewhere, and deleting one edge at each of the few places where the choice switches. Iterating the interpolation along the convex combination accumulates an error at most $32(m+1)^2$ (\cref{lem:iterate}); finally at most $32(m+1)^2$ edges per set $E_i$ are deleted to turn the upper bounds $|E_i|/D+32(m+1)^2$ into the exact ceilings, losing $32(m+1)^3$ in total.
+\end{proofidea}
+
+\section{Two ingredients}\label{sec:tools}
+
+\subsection{Proportional interval splitting}
+
+The only external ingredient is the following consequence of the theorem of Stromquist and Woodall \cite{SW85}: for $r$ nonatomic probability measures on $[0,1]$ and any $\theta\in[0,1]$ there is a union of at most $r$ intervals that has measure exactly $\theta$ for each of them. We use it in the following weaker form (non-probability measures are normalised, zero measures impose no condition, and any compact interval is rescaled to $[0,1]$).
+
+\begin{lemma}[Stromquist--Woodall, weak form]\label{lem:SW}
+Let $\nu_1,\dots,\nu_r$ be nonatomic finite nonnegative measures on a compact interval $I$ and let $0\le\theta\le1$. There is a set $X\subseteq I$ which is a union of at most $2r$ intervals such that
+\[
+ \nu_j(X)=\theta\,\nu_j(I)\qquad(1\le j\le r).
+\]
+\end{lemma}
+
+We apply it only to measures with piecewise-constant densities. The bound $2r$ is what the writeup uses; the theorem gives $r$.
+
+\subsection{Interpolating two matchings}
+
+For a bipartite graph $H$, a \emph{labelling} assigns to each edge $e$ a vector $w(e)=(w_0(e),\dots,w_{d-1}(e))\in\{0,1\}^d$; for a set $M$ of edges write $w_\ell(M)=\sum_{e\in M}w_\ell(e)$.
+
+\begin{restatable}[Interpolation lemma]{lemma}{leminterp}\label{lem:interp}
+Let $H$ be a bipartite graph with a labelling $w:E(H)\to\{0,1\}^d$, let $A,B$ be matchings in $H$ and $0\le\theta\le1$. There is a matching $C$ in $H$ such that
+\[
+ w_0(C)\ \ge\ \theta w_0(A)+(1-\theta)w_0(B)-32d
+\]
+and, for $1\le j<d$,
+\[
+ w_j(C)\ \le\ \theta w_j(A)+(1-\theta)w_j(B)+32d .
+\]
+\end{restatable}
+
+\begin{proofidea}
+Extend $A$ and $B$ by dummy vertices and zero-labelled dummy edges to perfect matchings $A^*,B^*$ of one balanced bipartite graph. Their symmetric difference is a disjoint union of even alternating cycles $a_1b_1a_2b_2\cdots a_sb_s$ ($a_j\in A^*$, $b_j\in B^*$); call $(a_j,b_j)$ a \emph{cell} and lay all cells out as unit subintervals of one interval. The $2d$ measures ``label $\ell$ of $a_j$'' and ``label $\ell$ of $b_j$'' spread uniformly over cell $j$ are nonatomic, so \cref{lem:SW} gives a union $X$ of at most $4d$ intervals carrying exactly a $\theta$-share of each. Let $J$ be the set of cells whose midpoint lies in $X$; at most $8d$ cells are cut by the boundary of $X$, so the $A$-edges of $J$ carry a $\theta$-share of every label up to $8d$, and the $B$-edges outside $J$ a $(1-\theta)$-share up to $8d$. Select $a_j$ for $j\in J$, $b_j$ for $j\notin J$, and all common edges; this set has the right statistics up to $16d$ but fails to be a matching exactly where a selected $b_{j-1}$ meets a selected $a_j$. The indicator of $J$ switches at most $8d$ times along the line and at most $16d$ times cyclically, so deleting $a_j$ at every such switch removes at most $16d$ edges and yields a matching; discarding dummies costs nothing since they carry label $0$.\fullproofref{pf:interp}
+\end{proofidea}
+
+\section{Proof of the main theorem}\label{sec:proof}
+
+Fix $G$, $D=\Delta(G)\ge1$ and $E_1,\dots,E_m\subseteq E(G)$ as in \cref{thm:main}. Put
+\[
+ d=m+1,\qquad z(M)=\bigl(|M|,\ |M\cap E_1|,\dots,|M\cap E_m|\bigr)\in\R^d
+\]
+for every matching $M$ of $G$, and label the edges of $G$ by
+\begin{equation}\label{eq:labels}
+ w_0(e)=1,\qquad w_i(e)=\ind{e\in E_i}\quad(1\le i\le m),
+\end{equation}
+so that $w_\ell(M)$ is the $\ell$-th coordinate of $z(M)$ for every matching $M$ and $0\le\ell\le m$.
+
+\begin{restatable}[Reduction to $m+2$ matchings]{lemma}{lemreduction}\label{lem:reduction}
+There are matchings $M_1,\dots,M_k$ of $G$ with $k\le d+1=m+2$ and positive reals $\lambda_1,\dots,\lambda_k$ with $\sum_j\lambda_j=1$ such that
+\begin{equation}\label{eq:caratheodory}
+ p:=\Bigl(\frac{|E(G)|}{D},\frac{|E_1|}{D},\dots,\frac{|E_m|}{D}\Bigr)=\sum_{j=1}^k\lambda_j\,z(M_j).
+\end{equation}
+\end{restatable}
+\begin{proofidea}
+Kőnig's line-colouring theorem partitions $E(G)$ into $D$ matchings, whose statistic vectors average to $p$; Carathéodory's theorem in $\R^d$ selects at most $d+1$ of them.\fullproofref{pf:reduction}
+\end{proofidea}
+
+\begin{restatable}[Iterated interpolation]{lemma}{lemiterate}\label{lem:iterate}
+With $M_1,\dots,M_k$ and $\lambda_1,\dots,\lambda_k$ as in \cref{lem:reduction}, there is a matching $C$ of $G$ with
+\begin{equation}\label{eq:C}
+ |C|\ \ge\ \frac{|E(G)|}{D}-32d^2
+ \qquad\text{and}\qquad
+ |C\cap E_i|\ \le\ \frac{|E_i|}{D}+32d^2\quad(1\le i\le m).
+\end{equation}
+\end{restatable}
+\begin{proofidea}
+Let $\Lambda_j=\lambda_1+\dots+\lambda_j$ and $p_j=\Lambda_j^{-1}\sum_{\ell\le j}\lambda_\ell z(M_\ell)$. Start with $C_1=M_1$ and obtain $C_j$ from $C_{j-1}$ and $M_j$ by \cref{lem:interp} with $\theta=\Lambda_{j-1}/\Lambda_j$ and the labels \eqref{eq:labels}. Since $p_j=\theta p_{j-1}+(1-\theta)z(M_j)$ and $\theta\le1$, the error after $j$ steps is at most $(j-1)\cdot32d$; as $k-1\le d$ and $p_k=p$, this gives \eqref{eq:C}.\fullproofref{pf:iterate}
+\end{proofidea}
+
+\begin{proof}[Proof of \cref{thm:main}]
+Let $C$ be the matching of \cref{lem:iterate}, and put $q_i=\lceil|E_i|/D\rceil$ and $B=32d^2$. By \eqref{eq:C} and $|E_i|/D\le q_i$,
+\[
+ |C\cap E_i|-q_i\ \le\ B\qquad(1\le i\le m).
+\]
+Process $i=1,\dots,m$ in turn: while the current matching contains more than $q_i$ edges of $E_i$, delete an arbitrary edge of $E_i$ from it. A subset of a matching is a matching; deletions never increase any count $|\cdot\cap E_{i'}|$, so the bound $|\cdot\cap E_{i'}|\le q_{i'}$ obtained for earlier $i'<i$ persists (this is why overlapping sets $E_i$ cause no difficulty); and at most $B$ edges are deleted while processing $i$, hence at most $mB$ in total. The resulting matching $S$ satisfies $|S\cap E_i|\le q_i=\lceil|E_i|/D\rceil$ for every $i$, and by \eqref{eq:C}
+\[
+ |S|\ \ge\ |C|-mB\ \ge\ \frac{|E(G)|}{D}-B-mB=\frac{|E(G)|}{D}-32d^2(m+1)=\frac{|E(G)|}{D}-32(m+1)^3 .
+\qedhere
+\]
+\end{proof}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[The constant]\label{rem:constant}
+The value $32(m+1)^3$ is very crude and no attempt was made to optimise it. The proof gives $16d$ rather than $32d$ for the upper bounds in \cref{lem:interp}, and \cref{lem:SW} holds with $r$ intervals instead of $2r$; neither improvement was used. The authors' suggested value $c(m)=m/2$ \cite{AABCKLZ} is not approached by this argument and remains open. The referee's brute-force search over $587$ small instances (\cref{app:referee}) found a maximum deficit $|E(G)|/D-\max|S|$ of $\frac12$, consistent with $c(m)=m/2$.
+\end{remark}
+
+\begin{remark}[Slack recorded by the referee]\label{rem:slack}
+The referee notes two places where the writeup states a weaker bound than it proves: \cref{lem:interp} asserts $+32d$ for the coordinates $j\ge1$ where the proof yields $+16d$, and \cref{lem:SW} is stated with $2r$ intervals where Stromquist--Woodall give $r$. Both are deliberate weakenings, not errors; we keep the writeup's statements.
+\end{remark}
+
+\begin{remark}[Conventions and edge cases]\label{rem:edgecases}
+The referee records that $D=\Delta(G)\ge1$ is assumed (for an edgeless graph the quotient $|E(G)|/\Delta(G)$ is undefined and the conjecture is vacuous), and that the $E_i$ are sets of edges of $G$ (allowing non-edges in $E_i$ would only weaken the claim). The argument works verbatim for bipartite multigraphs, since Kőnig's line-colouring theorem holds for them. The proof is non-constructive at exactly one point, the topological existence statement of \cref{lem:SW}; existence is all the conjecture asks for.
+\end{remark}
+
+\begin{remark}[Computational checks]\label{rem:computation}
+The referee (\cref{app:referee}) implemented the dummy extension, the cell decomposition, the selection and the conflict repair of \cref{lem:interp} and verified on $4000$ random bipartite instances that the repaired selection is always a matching, that the number of deletions is at most $16d$ for interval-structured $J$, and that the pre-repair statistic identity holds; it also ran the whole pipeline of \cref{sec:proof} on bipartite circulant graphs with exact rational Carathéodory reduction (always $k\le m+2$), observing worst per-step interpolation errors of $8$ against the allowed $32d\ge64$ and all ceilings satisfied. The one step code cannot certify is the exactness of the Stromquist--Woodall split, which the script replaced by a numerical search.
+\end{remark}
+
+\begin{remark}[Novelty]\label{rem:novelty}
+The referee's searches found no resolution of \cref{conj:115} in the literature. The closest work it located is Othman and Berger \cite{OB24}, which treats perfect matchings of $K_{n,n}$ under partitions with a two-sided fairness measure and reports an unpublished 2014 result for $K_{n,n}$ with partitions; this is strictly narrower than \cref{conj:115} (complete bipartite graphs only, partitions only). The interpolation-between-matchings idea is folklore-adjacent, so an unindexed prior proof cannot be excluded. This has not been checked by a human.
+\end{remark}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:interp}
+\leminterp*
+\begin{proof}
+Let $L\cup R$ be the bipartition of $H$, $|L|=p$, $|R|=q$.
+
+\emph{Dummy extension.} Add $q$ new (\emph{dummy}) vertices to the left side and $p$ dummy vertices to the right side, and add every edge between a dummy vertex and a vertex of the opposite side. The resulting bipartite graph $H^*$ has $p+q$ vertices on each side. Give every added edge the label $0\in\{0,1\}^d$, so that $w_\ell(M)$ is unchanged for every $M\subseteq E(H)$. Every matching $M$ of $H$ extends to a perfect matching $M^*$ of $H^*$: match the $p-|M|$ unmatched original left vertices to distinct dummy right vertices (there are $p$ of them), match the $q-|M|$ unmatched original right vertices to distinct dummy left vertices (there are $q$), and match the remaining $|M|$ dummy right vertices bijectively to the remaining $|M|$ dummy left vertices. Do this for $A$ and $B$, obtaining perfect matchings $A^*,B^*$ of $H^*$ with $w_\ell(A^*)=w_\ell(A)$ and $w_\ell(B^*)=w_\ell(B)$ for all $\ell$.
+
+\emph{Cells.} In $A^*\symdiff B^*$ every vertex has degree $0$ or $2$ (one edge of each perfect matching), so the nontrivial components are cycles alternating between $A^*$ and $B^*$, hence even. On each such cycle write the edges in cyclic order as $a_1,b_1,a_2,b_2,\dots,a_s,b_s$ with $a_j\in A^*$, $b_j\in B^*$; thus $a_j$ shares one end with $b_j$ and its other end with $b_{j-1}$ (indices modulo $s$ within the cycle), and these are the only incidences among the edges of the cycle. Call $(a_j,b_j)$ the $j$-th \emph{cell} of the cycle. Fix an order of the cycles, concatenate their cell lists into one list of $n$ cells, and let cell number $j$ ($1\le j\le n$) correspond to the unit interval $[j-1,j]\subseteq I:=[0,n]$.
+
+\emph{Splitting.} For $0\le\ell<d$ define measures $\nu^A_\ell,\nu^B_\ell$ on $I$ by giving the interval of cell $j$ constant density $w_\ell(a_j)$, respectively $w_\ell(b_j)$. These $2d$ measures are finite, nonnegative and nonatomic, and $\nu^A_\ell(I)=\sum_jw_\ell(a_j)$, $\nu^B_\ell(I)=\sum_jw_\ell(b_j)$. By \cref{lem:SW} with $r=2d$ there is a set $X\subseteq I$, a union of at most $4d$ intervals, with
+\[
+ \nu^A_\ell(X)=\theta\,\nu^A_\ell(I),\qquad \nu^B_\ell(X)=\theta\,\nu^B_\ell(I)\qquad(0\le\ell<d).
+\]
+$X$ has at most $8d$ boundary points.
+
+\emph{Rounding to whole cells.} Let $J$ be the set of cells whose midpoint $j-\frac12$ lies in $X$. A cell whose interval contains no boundary point of $X$ in its interior is either contained in $X$ (then it lies in $J$ and contributes its full mass to $\nu^A_\ell(X)$) or disjoint from the interior of $X$ (then it is not in $J$ and contributes nothing). A cell cut by a boundary point contributes at most its total mass $w_\ell(a_j)\le1$ to either side. Since at most $8d$ cells are cut,
+\begin{equation}\label{eq:roundA}
+ \Bigl|\sum_{j\in J}w_\ell(a_j)-\theta\sum_{j}w_\ell(a_j)\Bigr|=\Bigl|\sum_{j\in J}w_\ell(a_j)-\nu^A_\ell(X)\Bigr|\le8d,
+\end{equation}
+and in the same way
+\begin{equation}\label{eq:roundB}
+ \Bigl|\sum_{j\in J}w_\ell(b_j)-\theta\sum_{j}w_\ell(b_j)\Bigr|\le8d .
+\end{equation}
+
+\emph{Selection.} Let
+\[
+ T=(A^*\cap B^*)\ \cup\ \{a_j:j\in J\}\ \cup\ \{b_j:j\notin J\}.
+\]
+Then $w_\ell(T)=w_\ell(A^*\cap B^*)+\sum_{j\in J}w_\ell(a_j)+\sum_{j\notin J}w_\ell(b_j)$, while
+\[
+ \theta w_\ell(A^*)+(1-\theta)w_\ell(B^*)=w_\ell(A^*\cap B^*)+\theta\sum_jw_\ell(a_j)+(1-\theta)\sum_jw_\ell(b_j).
+\]
+Subtracting, and using $\sum_{j\notin J}w_\ell(b_j)-(1-\theta)\sum_jw_\ell(b_j)=-\bigl(\sum_{j\in J}w_\ell(b_j)-\theta\sum_jw_\ell(b_j)\bigr)$, the bounds \eqref{eq:roundA} and \eqref{eq:roundB} give
+\begin{equation}\label{eq:preRepair}
+ \bigl|w_\ell(T)-\bigl(\theta w_\ell(A^*)+(1-\theta)w_\ell(B^*)\bigr)\bigr|\le16d\qquad(0\le\ell<d).
+\end{equation}
+
+\emph{Conflicts.} Vertices on edges of $A^*\cap B^*$ lie on no cycle, so they are covered exactly once by $T$. A vertex on a cycle is the common end of $a_j$ and $b_j$ for some $j$, or of $b_{j-1}$ and $a_j$. In the first case it is covered exactly once, since exactly one of $a_j,b_j$ is selected. In the second case it is covered twice if and only if $b_{j-1}$ and $a_j$ are both selected, i.e.\ $j-1\notin J$ and $j\in J$ (cyclically within the cycle); call such a $j$ an \emph{up-transition}. Delete $a_j$ from $T$ for every up-transition $j$. Afterwards every vertex is covered at most once (the other end of a deleted $a_j$ is the common end with $b_j$, which is not selected), so the result $T'$ is a matching of $H^*$.
+
+\emph{Counting deletions.} Read the indicator of $J$ along the linear order of the $n$ cells. If it differs on consecutive cells $j,j+1$, the midpoints $j-\frac12$ and $j+\frac12$ lie on different sides of $X$, so $X$ has a boundary point in the open interval $(j-\frac12,j+\frac12)$; these intervals are disjoint for distinct $j$, hence the indicator changes at most $8d$ times along the line. Within one cycle, the cyclic changes are its internal changes (those between consecutive cells of the cycle in the linear order) plus possibly one change between its last and first cell; the number of cyclic changes of a cyclic $0/1$ sequence is even, so a wrap-around change can only occur if the cycle has at least one internal change. Hence the total number of cyclic changes is at most twice the number of internal changes, i.e.\ at most $16d$. Every up-transition is a cyclic change, so at most $16d$ edges are deleted.
+
+\emph{Conclusion.} Let $C=T'\cap E(H)$, a matching of $H$. Dummy edges carry label $0$, so $w_\ell(C)=w_\ell(T')$ for all $\ell$. Each deleted edge decreases $w_\ell$ by at most $1$, and deletions never increase any $w_\ell$. Therefore, by \eqref{eq:preRepair} and $w_\ell(A^*)=w_\ell(A)$, $w_\ell(B^*)=w_\ell(B)$,
+\[
+ w_j(C)\le w_j(T)\le\theta w_j(A)+(1-\theta)w_j(B)+16d\le\theta w_j(A)+(1-\theta)w_j(B)+32d\qquad(1\le j<d),
+\]
+and
+\[
+ w_0(C)\ge w_0(T)-16d\ge\theta w_0(A)+(1-\theta)w_0(B)-16d-16d=\theta w_0(A)+(1-\theta)w_0(B)-32d .
+\qedhere
+\]
+\end{proof}
+
+\phantomsection\label{pf:reduction}
+\lemreduction*
+\begin{proof}
+By Kőnig's line-colouring theorem, the edge set of the bipartite graph $G$ can be partitioned into $D=\Delta(G)$ matchings $M'_1,\dots,M'_D$. Since the $M'_j$ partition $E(G)$, we have $\sum_{j=1}^D|M'_j|=|E(G)|$ and $\sum_{j=1}^D|M'_j\cap E_i|=|E_i|$ for each $i$, i.e.
+\[
+ p=\frac1D\sum_{j=1}^Dz(M'_j).
+\]
+Thus $p$ lies in the convex hull of the finite set $\{z(M'_1),\dots,z(M'_D)\}\subseteq\R^d$. By Carathéodory's theorem, $p$ is a convex combination of at most $d+1$ of these points; discarding zero coefficients we obtain matchings $M_1,\dots,M_k$, $k\le d+1=m+2$, and positive $\lambda_1,\dots,\lambda_k$ with $\sum_j\lambda_j=1$ satisfying \eqref{eq:caratheodory}.
+\end{proof}
+
+\phantomsection\label{pf:iterate}
+\lemiterate*
+\begin{proof}
+For $1\le j\le k$ let $\Lambda_j=\sum_{\ell=1}^j\lambda_\ell$ (so $\Lambda_k=1$ and $\Lambda_j>0$) and
+\[
+ p_j=\frac1{\Lambda_j}\sum_{\ell=1}^j\lambda_\ell\,z(M_\ell),
+\]
+so that $p_1=z(M_1)$ and $p_k=p$ by \eqref{eq:caratheodory}. For $j\ge2$ put $\theta_j=\Lambda_{j-1}/\Lambda_j\in(0,1)$; then $1-\theta_j=\lambda_j/\Lambda_j$ and
+\begin{equation}\label{eq:pj}
+ p_j=\theta_j\,p_{j-1}+(1-\theta_j)\,z(M_j).
+\end{equation}
+Define matchings $C_1,\dots,C_k$ of $G$ by $C_1=M_1$ and, for $j\ge2$, by applying \cref{lem:interp} to $H=G$ with the labelling \eqref{eq:labels} (so $d=m+1$), $A=C_{j-1}$, $B=M_j$ and $\theta=\theta_j$; let $C_j$ be the matching it produces. We claim that for $1\le j\le k$ and $1\le i\le m$,
+\begin{equation}\label{eq:induction}
+ |C_j|\ \ge\ (p_j)_0-(j-1)\,32d,\qquad |C_j\cap E_i|\ \le\ (p_j)_i+(j-1)\,32d .
+\end{equation}
+For $j=1$ both hold with equality since $z(C_1)=p_1$. Let $j\ge2$ and assume \eqref{eq:induction} for $j-1$. With the labels \eqref{eq:labels}, $w_0(M)=|M|$ and $w_i(M)=|M\cap E_i|$, so \cref{lem:interp}, the induction hypothesis, $\theta_j\le1$ and \eqref{eq:pj} give
+\begin{align*}
+ |C_j|&\ge\theta_j|C_{j-1}|+(1-\theta_j)|M_j|-32d\\
+ &\ge\theta_j\bigl((p_{j-1})_0-(j-2)32d\bigr)+(1-\theta_j)\,z(M_j)_0-32d
+ \ \ge\ (p_j)_0-(j-1)\,32d,
+\end{align*}
+and likewise
+\begin{align*}
+ |C_j\cap E_i|&\le\theta_j|C_{j-1}\cap E_i|+(1-\theta_j)|M_j\cap E_i|+32d\\
+ &\le\theta_j\bigl((p_{j-1})_i+(j-2)32d\bigr)+(1-\theta_j)\,z(M_j)_i+32d
+ \ \le\ (p_j)_i+(j-1)\,32d .
+\end{align*}
+This proves \eqref{eq:induction}. Taking $j=k$, using $p_k=p$ and $k-1\le d$ (from \cref{lem:reduction}), the matching $C=C_k$ satisfies
+\[
+ |C|\ge\frac{|E(G)|}{D}-d\cdot32d=\frac{|E(G)|}{D}-32d^2,\qquad
+ |C\cap E_i|\le\frac{|E_i|}{D}+32d^2 ,
+\]
+which is \eqref{eq:C}.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) on the \emph{original} writeup. Its step numbers refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification/scripts/1611.03196\_\_03/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{AABCKLZ} R.~Aharoni, N.~Alon, E.~Berger, M.~Chudnovsky, D.~Kotlar, M.~Loebl and R.~Ziv, Fair representation by independent sets, arXiv:1611.03196 (2016), Conjecture~1.15 (numbering of arXiv v1).
+\bibitem{OB24} A.~Othman and E.~Berger, Almost fair perfect matchings in complete bipartite graphs, \emph{Discrete Math.} 347 (2024).
+\bibitem{SW85} W.~Stromquist and D.~R.~Woodall, Sets on which several measures agree, \emph{J. Math. Anal. Appl.} 108 (1985) 241--248.
+\end{thebibliography}
+
+\end{document}

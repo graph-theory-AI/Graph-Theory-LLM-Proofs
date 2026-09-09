@@ -1,0 +1,366 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\F}{{\mathbb F}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\Nf}{N}
+\DeclareMathOperator{\supp}{supp}
+\newcommand{\pos}[1]{(#1)_{+}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2005.09767\_\_00 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{Exponentially many $f$-avoiding flows for groups of order $6$ and $7$:\\ Conjecture~1.10 of DeVos, Langhede, Mohar and Šámal}
+\author{Machine-generated note (see provenance box)}
+\date{9 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
+\small
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The proof was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2005.09767\_\_00}; original writeup in \texttt{attacks/2005.09767\_\_00/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) re-derived every step, checked Theorem~1.9, Conjecture~1.10 and the Jaeger--Linial--Payan--Tarsi input against the source, verified the support bound exhaustively for small parameters, enumerated complete flow spaces on ten $3$-edge-connected graphs (with loops and parallel edges) minimising over all $f$ where feasible, and implemented the three $\Z_6$ families literally; every check passed. Its verdict was \textsc{minor\_gaps}: one repairable gap (the uniform constant for $|\Gamma|\ge8$ on graphs with at most $3$ vertices, \cref{sec:large}), a missing attribution (\cref{lem:AF}), and a degenerate-convention remark. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}. Three repairs were made, each declared where it occurs: (i)~\cref{sec:large} derives an explicit uniform constant for $|\Gamma|\ge8$ from the source's Theorem~1.9 for $n\ge4$ and handles $n\le3$ by a two-line parallel-edge argument (the writeup asserted the constant without this case analysis); (ii)~the support bound is attributed to Alon and Füredi and the Eulerian lift is labelled folklore; (iii)~the one-vertex convention is stated and discussed (\cref{rem:degenerate}). The main constants $7^{1/4}$ and $3^{1/12}$ and all proofs of the $\Z_7$ and $\Z_6$ cases are as in the writeup; full proofs are in \cref{app:proofs}.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+\end{tcolorbox}
+
+\begin{abstract}
+An oriented graph $G=(V,E)$ is $\Gamma$-connected if for every $f\colon E\to\Gamma$ there is a $\Gamma$-flow $\phi$ with $\phi(e)\ne f(e)$ for all $e$. Jaeger, Linial, Payan and Tarsi proved that every $3$-edge-connected oriented graph is $\Gamma$-connected whenever $|\Gamma|\ge6$. DeVos, Langhede, Mohar and Šámal showed that for $|\Gamma|\ge8$ there are exponentially many such flows and conjectured (Conjecture~1.10) that this holds for all $|\Gamma|\ge6$, the cases $\Z_6$ and $\Z_7$ being open. We prove the conjecture. For $\Z_7$ the number of $f$-avoiding flows is at least $7^{n/4+1}$, by applying the Alon--Füredi bound on the support of a polynomial over a finite grid to the product of the $m$ linear forms $\phi(e)-f(e)$ on the $r$-dimensional flow space. For $\Z_6\cong\F_2\times\F_3$ the number is at least $3^{n/12+2/3}$: after normalising by one avoiding flow, the forbidden values split into three classes, and three explicit families of admissible flows (binary flows vanishing on one class, ternary flows avoiding one class, and unit-valued lifts of binary flows vanishing on the third) cannot all be small. Together with the source paper's theorem for $|\Gamma|\ge8$, this gives the conjecture with the explicit constant $c=2^{-1/4}(3/2)^{1/2}\approx1.03$.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+Throughout, following the source paper \cite{DLMS20}, graphs may have loops and parallel edges. An \emph{oriented graph} $G=(V,E)$ is a graph with a fixed orientation of each edge; we write $n=|V|$, $m=|E|$, and, when $G$ is connected, $r=m-n+1$ for its cycle rank. For an abelian group $\Gamma$, a \emph{$\Gamma$-flow} is a map $\phi\colon E\to\Gamma$ satisfying Kirchhoff's law at every vertex (the sum of the values on outgoing edges equals the sum on incoming edges; a loop contributes equally to both sides and is unconstrained). For $f\colon E\to\Gamma$ let
+\[
+ \Nf_\Gamma(G,f)=\bigl|\{\phi\colon E\to\Gamma:\ \phi\text{ is a flow and }\phi(e)\ne f(e)\text{ for every }e\in E\}\bigr|
+\]
+be the number of \emph{$f$-avoiding} flows. Following the convention of the writeup, a $3$-edge-connected graph is understood to have at least two vertices (see \cref{rem:degenerate}); such a graph is connected and has minimum degree at least $3$, so
+\begin{equation}\label{eq:m32n}
+ m\ \ge\ \tfrac32 n .
+\end{equation}
+
+\begin{definition}[{\cite[Definition~1.8]{DLMS20}}]
+Let $G=(V,E)$ be an oriented graph and $\Gamma$ an abelian group. $G$ is \emph{$\Gamma$-connected} if for every $f\colon E\to\Gamma$ there is a flow $\phi\colon E\to\Gamma$ with $\phi(e)\ne f(e)$ for every $e\in E$, i.e.\ if $\Nf_\Gamma(G,f)\ge1$ for all $f$.
+\end{definition}
+
+\begin{theorem}[Jaeger, Linial, Payan, Tarsi {\cite{JLPT92}}; quoted in {\cite{DLMS20}}]\label{thm:JLPT}
+Every oriented $3$-edge-connected graph is $\Gamma$-connected whenever $|\Gamma|\ge6$.
+\end{theorem}
+
+DeVos, Langhede, Mohar and Šámal count such flows. Their Theorem~1.9 reads verbatim:
+
+\begin{theorem}[{\cite[Theorem~1.9]{DLMS20}}]\label{thm:19}
+Let $G=(V,E)$ be an oriented $3$-edge-connected graph with $\ell=|E|-|V|$ and let $\Gamma$ be an abelian group with $|\Gamma|=k\ge6$. For every $f\colon E\to\Gamma$ we have
+\[
+ \Nf_\Gamma(G,f)\ \ge\ \begin{cases}\tfrac12\bigl(\tfrac{k-6}{2}\bigr)^{\ell} & \text{if $k$ is odd},\\[2pt] \tfrac12\bigl(\tfrac{k-4}{2}\bigr)^{\ell} & \text{if $k$ is even}.\end{cases}
+\]
+\end{theorem}
+
+For $k\ge8$ this is exponential in $\ell$, but for $k\in\{6,7\}$ it only yields existence. The authors write that they believe this to be a shortcoming of their techniques, and conjecture:
+
+\begin{conjecture}[{\cite[Conjecture~1.10]{DLMS20}}]\label{conj:110}
+There exists a fixed constant $c>1$ so that the following holds. For every $3$-edge-connected oriented graph $G=(V,E)$ of order $n$, every abelian group $\Gamma$ with $|\Gamma|\ge6$, and every $f\colon E\to\Gamma$, there exist at least $c^n$ flows $\phi\colon E\to\Gamma$ with $\phi(e)\ne f(e)$ for every $e\in E$.
+\end{conjecture}
+
+They note that \cref{thm:19} settles the conjecture for all abelian groups except $\Z_6$ and $\Z_7$, that for $\Z_7$ they have no interesting lower bound, and they prove a superpolynomial bound $2^{\sqrt{\ell}/\log\ell}$ for $\Z_6$ when $\ell\ge11$ (their Theorem~1.11). Since every abelian group of order $6$ is $\Z_6$ and every group of order $7$ is $\Z_7$, the two missing cases are exactly these groups.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+Let $G=(V,E)$ be a $3$-edge-connected oriented graph with $n\ge2$ vertices and $m$ edges, and let $f\colon E\to\Gamma$.
+\begin{enumerate}[label=(\roman*),nosep]
+\item If $\Gamma=\Z_7$ then $\Nf_{\Z_7}(G,f)\ \ge\ 7^{\,5m/6-n+1}\ \ge\ 7^{\,n/4+1}$.
+\item If $\Gamma=\Z_6$ then $\Nf_{\Z_6}(G,f)\ \ge\ 3^{(3m-4n+4)/6}\ \ge\ 3^{\,n/12+2/3}$.
+\item If $|\Gamma|\ge8$ then $\Nf_\Gamma(G,f)\ \ge\ \tfrac12(3/2)^{n/2}$ when $n\ge4$, and $\Nf_\Gamma(G,f)\ge|\Gamma|-2\ge6$ when $n\in\{2,3\}$.
+\end{enumerate}
+Consequently $\Nf_\Gamma(G,f)\ge c^n$ for every abelian group $\Gamma$ with $|\Gamma|\ge6$, with the absolute constant
+\[
+ c\ =\ \min\bigl\{\,7^{1/4},\ 3^{1/12},\ 2^{-1/4}(3/2)^{1/2}\bigr\}\ =\ 2^{-1/4}(3/2)^{1/2}\ \approx\ 1.0299 .
+\]
+\end{restatable}
+
+\begin{corollary}\label{cor:conj}
+\cref{conj:110} holds.
+\end{corollary}
+\begin{proof}
+Immediate from \cref{thm:main}, since every abelian group of order $6$ or $7$ is cyclic and the case $|\Gamma|\ge8$ is part~(iii).
+\end{proof}
+
+\begin{proofidea}
+\emph{(i)} The $\F_7$-flows form an $r$-dimensional vector space, $r=m-n+1$. The $f$-avoiding flows are exactly the non-zeros of the polynomial $P=\prod_{e\in E}(L_e-f(e))$ of degree $m$ in $r$ variables, where $L_e$ is the coordinate function ``value on $e$''. $P$ is not identically zero as a function by \cref{thm:JLPT}, and the Alon--Füredi bound (\cref{lem:AF}) says a non-zero function of degree $d$ on $\F_q^{\,r}$ has at least $q^{\,r-d/(q-1)}$ non-zeros. With $q=7$, $d=m$ and \eqref{eq:m32n} this gives $7^{5m/6-n+1}\ge7^{n/4+1}$.
+\emph{(ii)} Fix one avoiding flow $\phi_0$ (\cref{thm:JLPT}) and translate: the problem becomes counting flows $\psi$ with $\psi(e)\ne t(e):=f(e)-\phi_0(e)$, where $t$ is nowhere zero. Write $\Z_6\cong\F_2\times\F_3$ and sort the edges by the value of $t$ into three classes $A$ ($t=3$), $B$ ($t\in\{2,4\}$), $C$ ($t\in\{1,5\}$) of sizes $a+b+c=m$. Binary flows vanishing on $A$, ternary flows avoiding $t$ on $B$ (counted by \cref{lem:AF} over $\F_3$), and unit-valued lifts of binary flows vanishing on $C$ (\cref{lem:lift}) are three families of admissible flows of sizes at least $2^{\pos{r-a}}$, $3^{\pos{2r-b}/2}$ and $2^{\pos{r-c}}$. Their exponents sum to at least $4r-m$, so one of them is at least $3^{(4r-m)/6}=3^{(3m-4n+4)/6}\ge3^{n/12+2/3}$.
+\emph{(iii)} For $|\Gamma|\ge8$ the base in \cref{thm:19} is at least $3/2$ and $\ell=m-n\ge n/2$, so $\Nf\ge\frac12(3/2)^{n/2}$, which exceeds $1$ exactly when $n\ge4$ and then dominates $c^n$. A $3$-edge-connected graph with $n\le3$ has two parallel edges; adding $t\in\Gamma$ around that $2$-cycle to one avoiding flow produces $|\Gamma|$ distinct flows of which at most two are not avoiding.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{Two tools}\label{sec:tools}
+
+\begin{restatable}[Alon--Füredi support bound]{lemma}{lemAF}\label{lem:AF}
+Let $q$ be a prime power and let $P\in\F_q[X_1,\dots,X_r]$ induce a non-zero function on $\F_q^{\,r}$, with $\deg P\le d$. Then
+\[
+ \bigl|\{x\in\F_q^{\,r}: P(x)\ne0\}\bigr|\ \ge\ q^{\,\pos{r-d/(q-1)}},\qquad\text{where }\pos{z}=\max\{z,0\}.
+\]
+\end{restatable}
+\begin{proofidea}
+\emph{Attribution (added in the rewrite).} This is the bound of Alon and Füredi \cite[Theorem~5]{AF93} on the number of non-zeros of a polynomial on a grid, in the special case of the full grid $\F_q^{\,r}$; see Bishnoi, Clark, Potukuchi and Schmitt \cite{BCPS18} for the general ``footprint'' form. The writeup's self-contained proof is kept: reduce $P$ modulo $X_i^{\,q}-X_i$ to a polynomial $R$ of the same function with all partial degrees $\le q-1$; by induction on $r$, expanding in the last variable and using that a univariate polynomial of degree $a_r$ has at least $q-a_r$ non-zeros, $|\supp R|\ge\prod_i(q-a_i)$ for some $0\le a_i\le q-1$ with $\sum a_i\le\deg R\le d$; finally $q-a\ge q^{1-a/(q-1)}$ by concavity of $\log$.\fullproofref{pf:AF}
+\end{proofidea}
+
+\begin{restatable}[Unit-valued lifts, folklore]{lemma}{lemlift}\label{lem:lift}
+For every $\F_2$-flow $x$ on an oriented graph $G$ there is an $\F_3$-flow $y$ with $\supp y=\supp x$.
+\end{restatable}
+\begin{proofidea}
+The support of a binary flow is an even subgraph (every vertex has even degree in it, loops counting twice). Give each component an Eulerian circuit and set $y(e)=\pm1$ according to whether the circuit traverses $e$ along or against its orientation, $y=0$ off the support. This is an integer circulation, hence an $\F_3$-flow, with the required support.\fullproofref{pf:lift}
+\end{proofidea}
+
+\section{The group \texorpdfstring{$\Z_7$}{Z7}}\label{sec:z7}
+
+\begin{restatable}{proposition}{propseven}\label{prop:z7}
+For every $3$-edge-connected oriented graph $G$ on $n\ge2$ vertices and $m$ edges and every $f\colon E\to\Z_7$,
+\[
+ \Nf_{\Z_7}(G,f)\ \ge\ 7^{\,r-m/6}\ =\ 7^{\,5m/6-n+1}\ \ge\ 7^{\,n/4+1}\ \ge\ (7^{1/4})^{n}.
+\]
+\end{restatable}
+\begin{proofidea}
+Parametrise the $r$-dimensional $\F_7$-flow space by $\F_7^{\,r}$ and let $L_e$ be the linear coordinate ``value on $e$''. The polynomial $P=\prod_e(L_e-f(e))$ has degree $m$ and is non-zero at some point by \cref{thm:JLPT}; \cref{lem:AF} with $q=7$ gives $7^{r-m/6}$ non-zeros, each an $f$-avoiding flow. Then $r-m/6=5m/6-n+1\ge n/4+1$ by \eqref{eq:m32n}.\fullproofref{pf:z7}
+\end{proofidea}
+
+\section{The group \texorpdfstring{$\Z_6$}{Z6}}\label{sec:z6}
+
+Fix a $3$-edge-connected oriented $G$ on $n\ge2$ vertices, $f\colon E\to\Z_6$, and one $f$-avoiding flow $\phi_0$, which exists by \cref{thm:JLPT}. Translation by $\phi_0$ is a bijection between $f$-avoiding flows and flows $\psi$ with
+\begin{equation}\label{eq:t}
+ \psi(e)\ne t(e)\quad(e\in E),\qquad t(e):=f(e)-\phi_0(e)\ne0 .
+\end{equation}
+Identify $\Z_6\cong\F_2\times\F_3$ by the Chinese remainder theorem, so a $\Z_6$-flow is a pair $(x,y)$ of an $\F_2$-flow and an $\F_3$-flow, and write $t(e)=(t_2(e),t_3(e))$. The five non-zero elements of $\Z_6$ fall into three classes, and so do the edges:
+\begin{equation}\label{eq:ABC}
+\begin{aligned}
+ A&=\{e: t(e)=(1,0)\}   &&\text{(i.e.\ $t(e)=3$)},\\
+ B&=\{e: t(e)=(0,\pm1)\} &&\text{(i.e.\ $t(e)\in\{2,4\}$)},\\
+ C&=\{e: t(e)=(1,\pm1)\} &&\text{(i.e.\ $t(e)\in\{1,5\}$)},
+\end{aligned}
+\end{equation}
+with $a=|A|$, $b=|B|$, $c=|C|$, $a+b+c=m$.
+
+\begin{restatable}[Three families]{lemma}{lemfam}\label{lem:fam}
+With the notation above, the number of flows $\psi$ satisfying \eqref{eq:t} is at least each of
+\[
+ 2^{\pos{r-a}},\qquad 3^{\pos{2r-b}/2},\qquad 2^{\pos{r-c}} .
+\]
+\end{restatable}
+\begin{proofidea}
+\emph{Family~1:} $\psi=(x,0)$ with $x$ a binary flow vanishing on $A$; the only non-zero value is $3$, which differs from $t$ on $B\cup C$ (non-zero $\F_3$-part) and is never taken on $A$. The binary flows vanishing on $A$ form a subspace of dimension $\ge r-a$.
+\emph{Family~2:} $\psi=(0,y)$ with $y$ a ternary flow satisfying $y(e)\ne t_3(e)$ on $B$; on $A\cup C$ the $\F_2$-part already differs. Apply \cref{lem:AF} over $\F_3$ to $\prod_{e\in B}(L_e-t_3(e))$, degree $b$, non-zero at $y=0$.
+\emph{Family~3:} take a binary flow $x$ vanishing on $C$ and its lift $y$ from \cref{lem:lift}; then $(x,y)$ takes only the unit values $1,5$ on its support, which avoid the non-units $t\in\{2,3,4\}$ on $A\cup B$, and is $0$ on $C$ where $t\ne0$. Distinct $x$ give distinct $\psi$.\fullproofref{pf:fam}
+\end{proofidea}
+
+\begin{restatable}{proposition}{propsix}\label{prop:z6}
+For every $3$-edge-connected oriented graph $G$ on $n\ge2$ vertices and $m$ edges and every $f\colon E\to\Z_6$,
+\[
+ \Nf_{\Z_6}(G,f)\ \ge\ 3^{(4r-m)/6}\ =\ 3^{(3m-4n+4)/6}\ \ge\ 3^{\,n/12+2/3}\ \ge\ (3^{1/12})^{n}.
+\]
+\end{restatable}
+\begin{proofidea}
+Put $d_A=\pos{r-a}$, $d_B=\pos{2r-b}$, $d_C=\pos{r-c}$. Then $d_A+d_B+d_C\ge4r-m$, so $\max\{d_A,d_B,d_C\}\ge(4r-m)/3$, and since $2^{d}\ge3^{d/2}$ each family of \cref{lem:fam} has size at least $3^{d/2}$ for its own $d$. Substituting $r=m-n+1$ and \eqref{eq:m32n} gives the bound.\fullproofref{pf:z6}
+\end{proofidea}
+
+\section{Groups of order at least \texorpdfstring{$8$}{8}: a uniform constant}\label{sec:large}
+
+\begin{tcolorbox}[colback=blue!4,colframe=blue!40,boxrule=0.4pt,arc=2pt]
+\small\textbf{Repair (added in the rewrite).} The writeup let $c_{\ge8}>1$ be ``the uniform constant furnished by Theorem~1.9 of the source for groups of order at least~$8$''. As the referee observed, \cref{thm:19} alone does not furnish one: for $n\le3$ its bound can be $\le1$ (two vertices joined by three parallel edges have $\ell=1$, and for $k=8$ the bound is $\frac12\cdot2=1$). This section supplies the missing case analysis. The source paper's own statement that Theorem~1.9 ``shows the conjecture is true for all abelian groups except $\Z_6$ and $\Z_7$'' has the same small-$n$ slack, so the gap was inherited rather than introduced.
+\end{tcolorbox}
+
+\begin{restatable}[Parallel edges in small graphs]{lemma}{lempar}\label{lem:par}
+A $3$-edge-connected graph with $n\in\{2,3\}$ vertices has two parallel (non-loop) edges $e_1,e_2$ joining the same pair of vertices.
+\end{restatable}
+\begin{proofidea}
+For $n=2$ every non-loop edge joins the two vertices and the single cut has at least three of them. For $n=3$ the three singleton cuts have at least three edges each and every non-loop edge lies in exactly two of them, so there are at least five non-loop edges on three vertex pairs.\fullproofref{pf:par}
+\end{proofidea}
+
+\begin{restatable}[Shifting along a $2$-cycle]{lemma}{lemshift}\label{lem:shift}
+Let $G$ be an oriented graph with two parallel edges $e_1,e_2$ between $u$ and $v$, let $\Gamma$ be an abelian group, $f\colon E\to\Gamma$, and let $\phi_0$ be an $f$-avoiding $\Gamma$-flow. Then $\Nf_\Gamma(G,f)\ge|\Gamma|-2$.
+\end{restatable}
+\begin{proofidea}
+Let $\chi$ be the signed indicator of the closed walk $u\xrightarrow{e_1}v\xrightarrow{e_2}u$ ($\chi(e_i)=\pm1$ according to orientation, $0$ elsewhere); it is a flow. The flows $\phi_t=\phi_0+t\chi$, $t\in\Gamma$, are pairwise distinct and agree with $\phi_0$ off $\{e_1,e_2\}$; for each $i$, $\phi_t(e_i)=f(e_i)$ for exactly one $t$. So at least $|\Gamma|-2$ of them are $f$-avoiding.\fullproofref{pf:shift}
+\end{proofidea}
+
+\begin{restatable}{proposition}{proplarge}\label{prop:large}
+Let $G$ be a $3$-edge-connected oriented graph on $n\ge2$ vertices, $\Gamma$ an abelian group with $|\Gamma|\ge8$, and $f\colon E\to\Gamma$. Then
+\[
+ \Nf_\Gamma(G,f)\ \ge\ \begin{cases}\tfrac12(3/2)^{n/2} & \text{if } n\ge4,\\ |\Gamma|-2\ \ge\ 6 & \text{if } n\in\{2,3\},\end{cases}
+\qquad\text{and in all cases}\qquad \Nf_\Gamma(G,f)\ \ge\ \bigl(2^{-1/4}(3/2)^{1/2}\bigr)^{n}.
+\]
+\end{restatable}
+\begin{proofidea}
+For $k=|\Gamma|\ge8$ the base in \cref{thm:19} is $(k-4)/2\ge2$ ($k$ even) or $(k-6)/2\ge3/2$ ($k$ odd), so $\Nf\ge\frac12(3/2)^{\ell}$ with $\ell=m-n\ge n/2$ by \eqref{eq:m32n}. For $n\ge4$, $\frac12(3/2)^{n/2}\ge2^{-n/4}(3/2)^{n/2}$ because $2^{-1}\ge2^{-n/4}$. For $n\in\{2,3\}$ use \cref{lem:par,lem:shift} with $\phi_0$ from \cref{thm:JLPT}: $\Nf\ge|\Gamma|-2\ge6>1.03^{3}$.\fullproofref{pf:large}
+\end{proofidea}
+
+\section{Proof of the main theorem}\label{sec:proof}
+
+\begin{proof}[Proof of \cref{thm:main}]
+Parts (i), (ii) and (iii) are \cref{prop:z7}, \cref{prop:z6} and \cref{prop:large}. For the final statement let $c=2^{-1/4}(3/2)^{1/2}$; numerically $c\approx0.8409\cdot1.2247\approx1.0299$, while $7^{1/4}\approx1.6266$ and $3^{1/12}\approx1.0959$, so $c=\min\{7^{1/4},3^{1/12},c\}$. If $|\Gamma|=7$ then $\Gamma\cong\Z_7$ and $\Nf\ge(7^{1/4})^n\ge c^n$ by (i); if $|\Gamma|=6$ then $\Gamma\cong\Z_6$ (the only abelian group of order $6$) and $\Nf\ge(3^{1/12})^n\ge c^n$ by (ii); if $|\Gamma|\ge8$ then $\Nf\ge c^n$ by (iii). Group connectivity depends on $\Gamma$ only up to isomorphism, so this covers all abelian groups with $|\Gamma|\ge6$.
+\end{proof}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[Degenerate convention]\label{rem:degenerate}
+The edgeless graph on one vertex is vacuously $3$-edge-connected under a literal reading, has exactly one flow (the empty map), and would falsify \cref{conj:110} for every $c>1$ ($1<c^1$). The standard convention in this setting, used by the writeup and adopted here, is that $3$-edge-connected graphs have at least two vertices; the source paper's Theorem~1.9 is likewise only meaningful under it (for the one-vertex graph its bound is $\frac12$). Loops and parallel edges are allowed throughout, as in the source, and the proofs use nothing that excludes them: loops are free coordinates of the flow space and are handled by \cref{lem:lift} trivially.
+\end{remark}
+
+\begin{remark}[What is new]
+\cref{lem:AF} is the Alon--Füredi theorem and \cref{lem:lift} is folklore; \cref{thm:JLPT,thm:19} are quoted. The new content is the application of \cref{lem:AF} to the flow polynomial for $\Z_7$ (\cref{prop:z7}) and the three-family argument for $\Z_6$ (\cref{prop:z6}). Both are short and elementary. The referee's report flags this as a reason for caution: the tools were available to the authors of \cite{DLMS20}, who instead obtained only a superpolynomial bound for $\Z_6$, and a six-year-old expert conjecture being settled by a five-line argument is a base-rate warning even when no error is found. Independent expert review is advised.
+\end{remark}
+
+\begin{remark}[Computational checks by the referee]
+The referee (\cref{app:referee}) verified \cref{lem:AF} exhaustively over all reduced polynomials for $(q,r)\in\{(2,2),(2,3),(3,2)\}$ and on $350{,}000$ random instances for $q\le7$, with the bound attained in tight cases; enumerated the complete $\Z_k$-flow space on ten $3$-edge-connected graphs (including multigraphs and a graph with a loop) and minimised $\Nf$ over \emph{all} $f$ on eight graph/group pairs, finding the bounds of \cref{prop:z7,prop:z6} satisfied with margin (e.g.\ for the triple edge over $\Z_7$, $\min_f\Nf=30\ge7^{3/2}\approx18.5$); and implemented the three families of \cref{lem:fam} literally, asserting member-by-member admissibility and the claimed sizes on the same graphs. No violation was found.
+\end{remark}
+
+\begin{remark}[Novelty]
+The referee's literature search found only two papers citing \cite{DLMS20}, neither resolving \cref{conj:110}, and no polynomial-method attack on group connectivity. This has not been checked by a human.
+\end{remark}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:AF}
+\lemAF*
+\begin{proof}
+Since $x^{q}=x$ for all $x\in\F_q$, reducing $P$ modulo the polynomials $X_i^{\,q}-X_i$ yields $R\in\F_q[X_1,\dots,X_r]$ inducing the same function as $P$, with $\deg_{X_i}R\le q-1$ for each $i$ and $\deg R\le\deg P\le d$ (reduction never increases total degree). As the function is non-zero, $R\ne0$.
+
+\emph{Claim.} There are integers $0\le a_i\le q-1$ with $\sum_ia_i\le\deg R$ such that $|\supp R|\ge\prod_{i=1}^r(q-a_i)$. We argue by induction on $r$. For $r=0$, $R$ is a non-zero constant and the claim is trivial. For $r\ge1$ write $R=\sum_{j=0}^{a_r}R_j(X_1,\dots,X_{r-1})X_r^{\,j}$ with $R_{a_r}\ne0$ and $a_r\le q-1$; then $\deg R_{a_r}\le\deg R-a_r$. For every $x'\in\F_q^{\,r-1}$ with $R_{a_r}(x')\ne0$, the univariate polynomial $R(x',X_r)$ has degree exactly $a_r$, hence at most $a_r$ roots, hence at least $q-a_r$ non-zeros. By induction applied to $R_{a_r}$ there are $a_1,\dots,a_{r-1}$ with $\sum_{i<r}a_i\le\deg R_{a_r}\le\deg R-a_r$ and $|\supp R_{a_r}|\ge\prod_{i<r}(q-a_i)$. Hence $|\supp R|\ge(q-a_r)\prod_{i<r}(q-a_i)$ with $\sum_{i\le r}a_i\le\deg R$.
+
+For $0\le a\le q-1$ the function $a\mapsto\log(q-a)$ is concave on $[0,q-1]$, takes the value $\log q$ at $a=0$ and $0$ at $a=q-1$, hence lies above the chord: $\log(q-a)\ge(1-a/(q-1))\log q$, i.e.\ $q-a\ge q^{1-a/(q-1)}$. Therefore
+\[
+ |\supp R|\ \ge\ \prod_{i}q^{1-a_i/(q-1)}\ =\ q^{\,r-\sum_ia_i/(q-1)}\ \ge\ q^{\,r-d/(q-1)}.
+\]
+If $r-d/(q-1)<0$ the claimed bound is $q^0=1$, which holds because $R\ne0$ as a function.
+\end{proof}
+
+\phantomsection\label{pf:lift}
+\lemlift*
+\begin{proof}
+Let $S=\supp x$. Kirchhoff's law over $\F_2$ at a vertex $v$ says that the number of non-loop edges of $S$ incident with $v$ is even (a loop contributes $x(e)$ to both sides and cancels). Thus in the subgraph $(V,S)$ every vertex has even degree, loops counting twice, so each component of $(V,S)$ has an Eulerian circuit. Traverse each such circuit and define $y(e)=+1$ if the circuit traverses $e$ in the direction of its orientation in $G$, $y(e)=-1$ if against, and $y(e)=0$ for $e\notin S$ (a loop is traversed once, in one of the two directions). Along a closed walk every vertex is entered as often as it is left, so $y$ is an integer circulation: at every vertex the sum of $y$ over outgoing edges equals the sum over incoming edges. Reducing modulo $3$ gives an $\F_3$-flow, and $\supp y=S$ since $\pm1\ne0$ in $\F_3$.
+\end{proof}
+
+\phantomsection\label{pf:z7}
+\propseven*
+\begin{proof}
+$G$ is connected (it is $3$-edge-connected with $n\ge2$), so the $\F_7$-flows on $G$ form a vector space of dimension $r=m-n+1$ (the cycle space; loops are free coordinates and are counted in $m$). Fix a linear isomorphism $\F_7^{\,r}\to\{\F_7\text{-flows}\}$, $X\mapsto\phi_X$, and for each edge $e$ let $L_e(X)=\phi_X(e)$, a linear form in $X$. Put
+\[
+ P(X)=\prod_{e\in E}\bigl(L_e(X)-f(e)\bigr)\in\F_7[X_1,\dots,X_r],\qquad\deg P\le m .
+\]
+Then $P(X)\ne0$ if and only if $\phi_X(e)\ne f(e)$ for every $e$, i.e.\ iff $\phi_X$ is $f$-avoiding, and $X\mapsto\phi_X$ is a bijection, so $\Nf_{\Z_7}(G,f)=|\{X:P(X)\ne0\}|$. By \cref{thm:JLPT} some $f$-avoiding flow exists, so $P$ is non-zero as a function. \Cref{lem:AF} with $q=7$ and $d=m$ gives
+\[
+ \Nf_{\Z_7}(G,f)\ \ge\ 7^{\,r-m/6}=7^{\,m-n+1-m/6}=7^{\,5m/6-n+1}.
+\]
+The exponent is increasing in $m$, and $m\ge\frac32n$ by \eqref{eq:m32n}, so $5m/6-n+1\ge\frac54n-n+1=n/4+1>0$ (in particular the positive part in \cref{lem:AF} is not active). Finally $7^{n/4+1}\ge7^{n/4}=(7^{1/4})^n$.
+\end{proof}
+
+\phantomsection\label{pf:fam}
+\lemfam*
+\begin{proof}
+Throughout, a pair $(x,y)$ with $x$ an $\F_2$-flow and $y$ an $\F_3$-flow is a $\Z_6$-flow under $\Z_6\cong\F_2\times\F_3$, and it satisfies \eqref{eq:t} iff $(x(e),y(e))\ne(t_2(e),t_3(e))$ for every $e$. Recall from \eqref{eq:ABC}: on $A$, $t=(1,0)$; on $B$, $t=(0,\pm1)$; on $C$, $t=(1,\pm1)$.
+
+\emph{Family~1.} Let $x$ be an $\F_2$-flow with $x(e)=0$ for all $e\in A$, and $\psi=(x,0)$. On $e\in A$: $\psi(e)=(0,0)\ne(1,0)=t(e)$. On $e\in B\cup C$: the second coordinate of $\psi(e)$ is $0$ while $t_3(e)=\pm1\ne0$. So $\psi$ satisfies \eqref{eq:t}. The $\F_2$-flows form an $r$-dimensional space and the $a$ linear conditions $x(e)=0$ ($e\in A$) have rank at most $a$, so there are at least $2^{\max\{r-a,0\}}=2^{\pos{r-a}}$ such $x$, giving as many distinct $\psi$.
+
+\emph{Family~2.} Let $y$ be an $\F_3$-flow with $y(e)\ne t_3(e)$ for all $e\in B$, and $\psi=(0,y)$. On $A\cup C$: the first coordinate of $\psi(e)$ is $0$ while $t_2(e)=1$. On $B$: $\psi(e)=(0,y(e))\ne(0,t_3(e))$ by choice. So $\psi$ satisfies \eqref{eq:t}. Parametrise the $r$-dimensional $\F_3$-flow space by $\F_3^{\,r}$ with coordinate forms $L_e$ and consider $Q=\prod_{e\in B}(L_e-t_3(e))$, of degree $b$; $Q(0)=\prod_{e\in B}(-t_3(e))\ne0$ since $t_3\ne0$ on $B$. By \cref{lem:AF} with $q=3$, $d=b$, the number of admissible $y$ is at least $3^{\pos{r-b/2}}=3^{\pos{2r-b}/2}$.
+
+\emph{Family~3.} Let $x$ be an $\F_2$-flow with $x(e)=0$ for all $e\in C$, and let $y$ be the $\F_3$-flow of \cref{lem:lift} with $\supp y=\supp x$; put $\psi=(x,y)$. For $e\in\supp x$, $\psi(e)=(1,\pm1)$, i.e.\ $\psi(e)\in\{1,5\}$ is a unit of $\Z_6$; for $e\notin\supp x$, $\psi(e)=0$. On $e\in C$: $x(e)=0$, so $\psi(e)=0\ne t(e)$. On $e\in A\cup B$: $t(e)\in\{2,3,4\}$ is a non-unit and non-zero, so neither a unit nor $0$ equals it. So $\psi$ satisfies \eqref{eq:t}. Distinct $x$ give distinct $\psi$ (they differ in the first coordinate), and as in Family~1 there are at least $2^{\pos{r-c}}$ admissible $x$.
+\end{proof}
+
+\phantomsection\label{pf:z6}
+\propsix*
+\begin{proof}
+Translation by $\phi_0$ shows $\Nf_{\Z_6}(G,f)$ equals the number of flows satisfying \eqref{eq:t}, so by \cref{lem:fam}
+\[
+ \Nf_{\Z_6}(G,f)\ \ge\ \max\bigl\{2^{d_A},\ 3^{d_B/2},\ 2^{d_C}\bigr\},\qquad d_A=\pos{r-a},\ d_B=\pos{2r-b},\ d_C=\pos{r-c}.
+\]
+Since $\pos{z}\ge z$ and $a+b+c=m$,
+\[
+ d_A+d_B+d_C\ \ge\ (r-a)+(2r-b)+(r-c)\ =\ 4r-m,
+\]
+so $d^\ast:=\max\{d_A,d_B,d_C\}\ge(4r-m)/3$. As $2^{d}\ge3^{d/2}$ for $d\ge0$ (because $4\ge3$), each of the three lower bounds is at least $3^{d/2}$ for its own $d$, hence $\Nf_{\Z_6}(G,f)\ge3^{d^\ast/2}\ge3^{(4r-m)/6}$. Substituting $r=m-n+1$ gives $4r-m=3m-4n+4$, and by \eqref{eq:m32n} $3m-4n+4\ge\frac92n-4n+4=\frac n2+4>0$. Therefore
+\[
+ \Nf_{\Z_6}(G,f)\ \ge\ 3^{(3m-4n+4)/6}\ \ge\ 3^{\,n/12+2/3}\ \ge\ (3^{1/12})^{n}. \qedhere
+\]
+\end{proof}
+
+\phantomsection\label{pf:par}
+\lempar*
+\begin{proof}
+Loops lie in no edge cut, so only non-loop edges matter for edge-connectivity. If $n=2$, every non-loop edge joins the two vertices $u,v$, and the cut $\{u\}\mid\{v\}$ contains at least three of them; any two are parallel. If $n=3$ with vertices $u,v,w$, each of the cuts $\{u\}\mid\{v,w\}$, $\{v\}\mid\{u,w\}$, $\{w\}\mid\{u,v\}$ contains at least three non-loop edges, and each non-loop edge lies in exactly two of these three cuts; hence $2m'\ge9$ for the number $m'$ of non-loop edges, so $m'\ge5$. Five edges on the three pairs $\{u,v\},\{u,w\},\{v,w\}$ include two on the same pair.
+\end{proof}
+
+\phantomsection\label{pf:shift}
+\lemshift*
+\begin{proof}
+Define $\chi\colon E\to\Z$ by $\chi(e_1)=+1$ if $e_1$ is oriented from $u$ to $v$ and $-1$ otherwise, $\chi(e_2)=-1$ if $e_2$ is oriented from $u$ to $v$ and $+1$ otherwise, and $\chi(e)=0$ for all other edges. Then $\chi$ is a circulation: at $u$ the net outflow contributed by $e_1$ is $+1$ and by $e_2$ is $-1$ (in both orientation cases), and symmetrically at $v$; all other vertices are untouched. For $t\in\Gamma$ put $\phi_t=\phi_0+t\chi$ (i.e.\ $\phi_t(e)=\phi_0(e)+\chi(e)t$). Each $\phi_t$ is a $\Gamma$-flow, being the sum of a flow and $t$ times a circulation. The map $t\mapsto\phi_t(e_1)=\phi_0(e_1)\pm t$ is a bijection $\Gamma\to\Gamma$, so the $\phi_t$ are pairwise distinct, and $\phi_t(e_1)=f(e_1)$ for exactly one $t$; likewise $\phi_t(e_2)=f(e_2)$ for exactly one $t$. For $e\notin\{e_1,e_2\}$, $\phi_t(e)=\phi_0(e)\ne f(e)$. Hence at least $|\Gamma|-2$ of the flows $\phi_t$ are $f$-avoiding.
+\end{proof}
+
+\phantomsection\label{pf:large}
+\proplarge*
+\begin{proof}
+Let $k=|\Gamma|\ge8$ and $\ell=m-n$, so $\ell\ge n/2$ by \eqref{eq:m32n}, and $\ell\ge1$ since $n\ge2$.
+
+\emph{Case $n\ge4$.} If $k$ is even then $k\ge8$ and $(k-4)/2\ge2\ge3/2$; if $k$ is odd then $k\ge9$ and $(k-6)/2\ge3/2$. In both cases \cref{thm:19} gives $\Nf_\Gamma(G,f)\ge\frac12(3/2)^{\ell}\ge\frac12(3/2)^{n/2}$. For $n\ge4$ we have $2^{-1}\ge2^{-n/4}$, hence
+\[
+ \tfrac12(3/2)^{n/2}\ \ge\ 2^{-n/4}(3/2)^{n/2}\ =\ \bigl(2^{-1/4}(3/2)^{1/2}\bigr)^{n}.
+\]
+(For $n\le3$ the bound $\frac12(3/2)^{n/2}$ is at most $\frac12(3/2)^{3/2}<1$, which is why this case needs a separate argument.)
+
+\emph{Case $n\in\{2,3\}$.} By \cref{thm:JLPT} there is an $f$-avoiding flow $\phi_0$, and by \cref{lem:par} $G$ has two parallel edges. \Cref{lem:shift} gives $\Nf_\Gamma(G,f)\ge|\Gamma|-2\ge6$, and $6>(1.03)^3>(2^{-1/4}(3/2)^{1/2})^{n}$ for $n\le3$ since $2^{-1/4}(3/2)^{1/2}<1.03$.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+See \cref{sec:proof}; parts (i)--(iii) are \cref{prop:z7,prop:z6,prop:large}, proved above.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) on the \emph{original} writeup. Its step numbers refer to that writeup, not to this note; its step~12 is the gap repaired in \cref{sec:large}. The scripts it mentions are in \texttt{verification/scripts/2005.09767\_\_00/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{AF93} N.~Alon and Z.~Füredi, Covering the cube by affine hyperplanes, \emph{European J. Combin.} 14 (1993) 79--83.
+\bibitem{BCPS18} A.~Bishnoi, P.~L.~Clark, A.~Potukuchi and J.~R.~Schmitt, On zeros of a polynomial in a finite grid, \emph{Combin. Probab. Comput.} 27 (2018); arXiv:1508.06020.
+\bibitem{DLMS20} M.~DeVos, R.~Langhede, B.~Mohar and R.~Šámal, Many flows in the group connectivity setting, arXiv:2005.09767 (2020).
+\bibitem{JLPT92} F.~Jaeger, N.~Linial, C.~Payan and M.~Tarsi, Group connectivity of graphs --- a nonhomogeneous analogue of nowhere-zero flow properties, \emph{J. Combin. Theory Ser. B} 56 (1992) 165--182.
+\end{thebibliography}
+
+\end{document}
