@@ -43,7 +43,7 @@
 
 \title{An infinite family of $3$-$\cl$-critical tournaments\\ and a negative answer to Question~5.9 of Aboulker, Aubian, Charbit and Lopes}
 \author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
-\date{9 September 2026}
+\date{10 September 2026}
 
 \begin{document}
 \maketitle
@@ -54,11 +54,13 @@ The mathematics in this note was produced without human intervention, in three s
 (1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2310.04265\_\_09}; original writeup in \texttt{attacks/2310.04265\_\_09/output.md}).
 (2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the source paper, and verified the claims by exhaustive search for $7$--$15$ vertices, by SAT solving up to $61$ vertices and structurally up to $121$ vertices; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
 (3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, the exact value $\cl(T_n-v)=2$ (needed for the word ``critical'' in the source paper's sense, and noted as missing by the referee) was added, and context on related work was added. No other mathematical content was changed.
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+On 2026-09-10, the related-work discussion was updated following a report from Samuel Coulomb. The mathematical proof and the original referee report were left unchanged.
+\textbf{No human mathematician has checked this argument.} We circulate this proof for human review, not as a claim to a new resolution. Its overlap with published work is described below.
 \end{tcolorbox}
 
 \begin{abstract}
 The clique number $\cl(T)$ of a tournament $T$, introduced by Aboulker, Aubian, Charbit and Lopes, is the minimum over all linear orderings of $V(T)$ of the clique number of the backedge graph. They asked (Question~5.9) whether there is a function $\ell$ such that every tournament $T$ with $\cl(T)\ge k$ contains a subtournament on at most $\ell(k)$ vertices with clique number at least $k$. We answer this negatively, already for $k=3$: for every $n\ge3$ the circulant tournament $T_n=\Cay(\Z_{2n+1},\{1,\dots,n-1,n+1\})$ satisfies $\cl(T_n)=3$ while every proper subtournament has clique number at most~$2$. The family $(T_n)_{n\ge3}$ also establishes the case $k=3$ of their Conjecture~5.10 on the existence of infinitely many $k$-$\cl$-critical tournaments.
+The same family and criticality result appear in Aubian and Coulomb \cite[6.1]{AC26}. We retain this note as a self-contained account of a machine-generated proof of that result.
 \end{abstract}
 
 \section{Introduction}
@@ -73,7 +75,7 @@ the minimum over all orderings of the clique number of the backedge graph, and s
 Is there a function $\ell$ such that, for every tournament $T$ and every $k$, if $\cl(T)\ge k$ then $T$ has a subtournament $A$ with $|A|\le\ell(k)$ and $\cl(A)\ge k$?
 \end{question}
 
-This strengthens their Conjecture~5.8, which allows the hypothesis $\cl(T)\ge f(k)$ for a second function $f$; that weaker statement was recently proved by Crew, Fan, Koerts, Moore and Spirkl \cite[Corollary~7]{CFKMS26}. The authors of \cite{AACL23} also note that \cref{q:59} would be answered negatively by their Conjecture~5.10, which asserts that for every $k$ there are infinitely many \emph{$k$-$\cl$-critical} tournaments, i.e.\ tournaments $T$ with $\cl(T)=k$ and $\cl(T-v)=k-1$ for every vertex $v$. (Since appending $v$ at the end of an optimal ordering of $T-v$ raises the clique number of the backedge graph by at most one, $\cl(T-v)\ge\cl(T)-1$ always holds, so ``critical'' is equivalent to $\cl(T-v)<\cl(T)$ for all $v$.) Only the trivial critical tournaments were known: the single vertex for $k=1$ and the directed triangle for $k=2$.
+This strengthens their Conjecture~5.8, which allows the hypothesis $\cl(T)\ge f(k)$ for a second function $f$; that weaker statement was recently proved by Crew, Fan, Koerts, Moore and Spirkl \cite[Corollary~7]{CFKMS26}. The authors of \cite{AACL23} also note that \cref{q:59} would be answered negatively by their Conjecture~5.10, which asserts that for every $k\ge3$ there are infinitely many \emph{$k$-$\cl$-critical} tournaments, i.e.\ tournaments $T$ with $\cl(T)=k$ and $\cl(T-v)=k-1$ for every vertex $v$. (Since appending $v$ at the end of an optimal ordering of $T-v$ raises the clique number of the backedge graph by at most one, $\cl(T-v)\ge\cl(T)-1$ always holds, so ``critical'' is equivalent to $\cl(T-v)<\cl(T)$ for all $v$.) The trivial critical tournaments are the single vertex for $k=1$ and the directed triangle for $k=2$. Chen and Wang \cite[Theorem~1.1]{CW26} have now proved Conjecture~5.10 for every $k\ge3$.
 
 We give an explicit infinite family of $3$-$\cl$-critical tournaments. Throughout, $\Cay(\Z_q,S)$ for $S\subseteq\Z_q\setminus\{0\}$ with $S\cap(-S)=\emptyset$ and $S\cup(-S)=\Z_q\setminus\{0\}$ denotes the circulant tournament on $\Z_q$ with arcs $x\to y$ whenever $y-x\in S$.
 
@@ -118,15 +120,19 @@ Let $v$ be the last vertex of an arbitrary ordering; all arcs $v\to a$ are backe
 \section{Remarks}
 
 \begin{remark}[Small cases and sharpness]
-$T_3=\Cay(\Z_7,\{1,2,4\})$ is the Paley tournament on $7$ vertices. The referee's exhaustive search over all orderings confirms $\cl(T_n)=3$ and $\cl(T_n-0)=2$ for $n=3,\dots,7$, and an independent SAT encoding confirms both for $n=3,\dots,30$, i.e.\ up to $61$ vertices (\cref{app:referee}). The family shows that no bound $\ell(3)$ exists; it says nothing about $k\ge4$, for which Conjecture~5.10 remains open.
+$T_3=\Cay(\Z_7,\{1,2,4\})$ is the Paley tournament on $7$ vertices. The referee's exhaustive search over all orderings confirms $\cl(T_n)=3$ and $\cl(T_n-0)=2$ for $n=3,\dots,7$, and an independent SAT encoding confirms both for $n=3,\dots,30$, i.e.\ up to $61$ vertices (\cref{app:referee}). The family shows that no bound $\ell(3)$ exists. This construction does not address $k\ge4$, but those cases are covered by Chen and Wang \cite[Theorem~1.1]{CW26}.
 \end{remark}
 
 \begin{remark}[Relation to complexity]
 Aubian \cite{Aubian24} proved that deciding $\cl(T)\le k$ is NP-complete for every fixed $k\ge3$. A positive answer to \cref{q:59} would place ``$\cl(T)\le3$'' in P (test all $O(|V|^{\ell(4)})$ subsets of size at most $\ell(4)$), so a negative answer was expected unless P\,$=$\,NP. \Cref{thm:main} gives an unconditional negative answer by an explicit family.
 \end{remark}
 
-\begin{remark}[Novelty]
-The referee's literature search (\cref{app:referee}) found no publication containing this family or any unconditional negative answer to \cref{q:59}; version~2 of \cite{AACL23} (June 2026) does not record a resolution. This has not been checked by a human.
+\begin{remark}[Related work and status, 10 September 2026]
+We thank Samuel Coulomb for drawing our attention to recent work relevant to this note. The same circulant family constructed here, together with its $3$-$\cl$-criticality, appears in Aubian and Coulomb \cite[6.1]{AC26}. Their result therefore also gives a negative answer to \cref{q:59}. More generally, Chen and Wang \cite[Theorem~1.1]{CW26} establish the existence of infinitely many $k$-$\cl$-critical tournaments for every $k\ge3$, settling Conjecture~5.10 of \cite{AACL23}.
+
+Accordingly, this note should be read as a self-contained account of a machine-generated proof of a result also established in the literature, rather than as a claim to a new resolution. The earlier novelty discussion and the statement that the cases $k\ge4$ remain open are superseded by these references. The original referee report in \cref{app:referee} is retained unchanged as a historical record.
+
+The provenance recorded in this note dates the original generation to 1 September 2026, before the 7 September submission of Aubian and Coulomb's preprint. These dates document our workflow. They do not establish priority or independent discovery. The mathematical argument presented here still awaits human review.
 \end{remark}
 
 \appendix
@@ -176,9 +182,13 @@ Suppose $i<j<k$ form a triangle of the backedge graph and put $a=j-i$, $b=k-j$. 
 \input{.build/referee.tex}
 
 \begin{thebibliography}{9}
+\small
+\setlength{\itemsep}{2pt}
 \bibitem{AACL23} P.~Aboulker, G.~Aubian, P.~Charbit and R.~Lopes, Clique number of tournaments, arXiv:2310.04265 (2023; v2 June 2026).
 \bibitem{Aubian24} G.~Aubian, Computing the clique number of tournaments, arXiv:2401.07776 (2024).
 \bibitem{CFKMS26} L.~Crew, Y.~Fan, H.~Koerts, B.~Moore and S.~Spirkl, arXiv:2602.09863 (2026), Corollary~7.
+\bibitem{AC26} G.~Aubian and S.~Coulomb, Clique Number of Tournaments II, \href{https://arxiv.org/abs/2609.07481}{arXiv:2609.07481} (2026), result~6.1. Submitted 7 September 2026.
+\bibitem{CW26} G.~Chen and S.~Wang, Cayley Tournaments Simultaneously Critical for the Clique and Dichromatic Numbers, \href{https://arxiv.org/abs/2609.08658}{arXiv:2609.08658} (2026), Theorem~1.1.
 \end{thebibliography}
 
 \end{document}
