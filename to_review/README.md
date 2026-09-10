@@ -4,7 +4,8 @@ Claimed resolutions of open problems from the catalog that (a) the attacking mod
 itself flagged as `would_publish: true`, and (b) survived the adversarial referee pass
 in `../verification/` with verdict **CONFIRMED** (12) or **MINOR_GAPS** (4,
 correct modulo routine repairable details), and were not found to be already in the
-literature. Total: 16.
+literature during that review. Total: 16. Later literature updates below
+do not change the recorded referee verdicts.
 
 Two kinds of PDF, distinguished by the file-name suffix:
 
@@ -22,6 +23,22 @@ Sources are in `src/<id>/` (`note.tex` where a note exists). Regenerate everythi
 
 **Caveat.** Nothing here has been checked by a human mathematician. "CONFIRMED" is the
 verdict of an LLM referee, and novelty was checked only against the indexed literature.
+
+## Literature updates
+
+**2026-09-10: `2310.04265__09` overlaps with published work.** Samuel Coulomb
+drew our attention to recent results. The same circulant family and its
+clique-number criticality appear in [Aubian and Coulomb, result 6.1](https://arxiv.org/html/2609.07481#S6).
+The general critical-tournament conjecture is settled by
+[Chen and Wang, Theorem 1.1](https://arxiv.org/html/2609.08658).
+The note is retained as an account of a machine-generated proof, not as a claim to
+a new resolution. Its recorded generation date is 2026-09-01; the Aubian-Coulomb
+preprint was submitted on 2026-09-07. These dates do not establish priority or
+independent discovery. The note's related-work discussion has been updated, while
+the original proof and referee report are preserved. This update does not assess
+the novelty of the other notes.
+
+## Notes
 
 | id | problem | source paper | claim | referee | format | pdf |
 |:--|:--|:--|:--|:--|:--|:--|
