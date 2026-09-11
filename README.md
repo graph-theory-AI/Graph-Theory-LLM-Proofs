@@ -1,5 +1,7 @@
 # Graph Theory LLM Proofs
 
+[![DOI](https://zenodo.org/badge/1351775966.svg)](https://doi.org/10.5281/zenodo.22706596)
+
 AI-assisted attempts at the open graph-theory problems catalogued by Marc
 Lelarge and Laurent Viennot at
 [graph-theory-ai.github.io/graph-conjectures](https://graph-theory-ai.github.io/graph-conjectures).
@@ -147,6 +149,7 @@ A single call is capped at 128k output tokens (~$2.56 of output at promo
 rates). The preflight reserve is a conservative **$3.50** because `mode=pro`
 can do extra internal work.
 
+
 ## Layout
 
 ```
@@ -173,6 +176,25 @@ python attack.py queue            # easiest-first leftover queue
 python attack.py run --id ID      # one record, e.g. 2402.10782__01
 python attack.py sweep --jobs 24 --hours 16
 ```
+
+## How to cite
+
+If you use these results, please cite this repository:
+
+```bibtex
+@dataset{lelarge2026aiassisted,
+  author    = {Marc Lelarge and Emanuele Natale and Édouard Oyallon and
+               Aurora Rossi and Laurent Viennot},
+  title     = {AI-Assisted Proofs for Open Problems in Graph Theory},
+  year      = {2026},
+  version   = {1.0.0},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.22706597},
+  url       = {https://doi.org/10.5281/zenodo.22706597}
+}
+```
+
+Machine-readable citation metadata are available in [`CITATION.cff`](CITATION.cff).
 
 ## Acknowledgements
 

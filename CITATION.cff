@@ -3,7 +3,9 @@ message: "If you use these results, please cite it using the metadata below."
 
 title: "AI-Assisted Proofs for Open Problems in Graph Theory"
 type: dataset
-
+version: 1.0.0
+date-released: 2026-09-11
+doi: 10.5281/zenodo.22706597
 
 authors:
   - family-names: Lelarge
