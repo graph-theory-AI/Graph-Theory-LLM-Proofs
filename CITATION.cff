@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use these results, please cite it using the metadata below."
+
+title: "AI-Assisted Proofs for Open Problems in Graph Theory"
+type: dataset
+
+
+authors:
+  - family-names: Lelarge
+    given-names: Marc
+    orcid: "https://orcid.org/0009-0004-4973-7449"
+  - family-names: Natale
+    given-names: Emanuele
+    orcid: "https://orcid.org/0000-0002-8755-3892"
+  - family-names: Oyallon
+    given-names: Édouard
+    orcid: "https://orcid.org/0000-0002-4826-7527"
+  - family-names: Rossi
+    given-names: Aurora
+    orcid: "https://orcid.org/0009-0001-3302-0468"
+  - family-names: Viennot
+    given-names: Laurent
+    orcid: "https://orcid.org/0000-0003-3657-6979"
+
+abstract: >-
+  A collection of AI-assisted research on open graph-theory problems, seeking
+  to prove, disprove, or make partial progress. Candidate results were generated
+  with GPT-5.6 Sol, and claimed proofs and counterexamples were subjected to
+  adversarial review with Claude Fable 5.
+
+repository-code: "https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs"
+url: "https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs"
+license: MIT
+
+keywords:
+  - graph theory
+  - automated theorem proving
+  - large language models
+  - AI-assisted mathematics
+  - mathematical conjectures
