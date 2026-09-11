@@ -124,8 +124,13 @@ The model completed 633 attacks. Claude Fable reviewed the 77 cases in which GPT
 | `FATAL_ERROR` | The claim contains an irreparable error or fails a computational check. |
 | `ALREADY_KNOWN` | The result appears correct, but was already established in the literature. |
 
+## Details
 
-## Method
+The sections below describe the methodology, repository structure, and setup
+required to reproduce and inspect the campaign.
+
+<details>
+<summary><strong>Method</strong></summary>
 
 - **Queue.** Easiest-first open/partial arXiv records from Lelarge's difficulty
   ranking, plus six questions restored after
@@ -149,8 +154,10 @@ A single call is capped at 128k output tokens (~$2.56 of output at promo
 rates). The preflight reserve is a conservative **$3.50** because `mode=pro`
 can do extra internal work.
 
+</details>
 
-## Layout
+<details>
+<summary><strong>Layout</strong></summary>
 
 ```
 attack.py          # queue / run / sweep / summary
@@ -161,7 +168,10 @@ verification/      # adversarial reviews of claimed proofs/counterexamples
 scripts/           # commit loop and campaign ops
 ```
 
-## Setup
+</details>
+
+<details>
+<summary><strong>Setup</strong></summary>
 
 ```bash
 uv venv
@@ -176,6 +186,8 @@ python attack.py queue            # easiest-first leftover queue
 python attack.py run --id ID      # one record, e.g. 2402.10782__01
 python attack.py sweep --jobs 24 --hours 16
 ```
+
+</details>
 
 ## How to cite
 
