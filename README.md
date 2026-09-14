@@ -39,37 +39,31 @@ These 16 notes survived the LLM referee pass with `CONFIRMED` or
 Independent review is welcome; full provenance and referee reports are included
 in each PDF.
 
+If you would like to review one of these notes, please
+[contact us by opening an issue](https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs/issues/new) or by email at `emanuele.natale@inria.fr`.
+
 | Problem | Claim | LLM referee | PDF |
 |:--|:--|:--|:--|
-| [1611.03196__03](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.03196__03/) — Conjecture 1.15 | proved | CONFIRMED | [note](to_review/1611.03196__03__fair-representation-matchings-bipartite-c-of-m-bound__note.pdf) |
-| [1702.01094__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1702.01094__01/) — uniquely-covered vertices in an induced path | disproved | CONFIRMED | [note](to_review/1702.01094__01__stable-set-covers-no-privately-covered-induced-path__note.pdf) |
-| [1812.02420__02](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1812.02420__02/) — Problem 3.21 | proved | CONFIRMED | [note](to_review/1812.02420__02__fractional-dichromatic-number-2-NP-complete__note.pdf) |
-| [1812.02420__03](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1812.02420__03/) — Problem 5.40 | disproved | CONFIRMED | [note](to_review/1812.02420__03__directed-Kneser-graphs-acyclic-iff-intersecting__note.pdf) |
-| [1902.10878__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1902.10878__01/) — symmetry of $\psi$ | disproved | CONFIRMED | [note](to_review/1902.10878__01__concatenating-bipartite-graphs-psi-not-symmetric__note.pdf) |
-| [2103.15175__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2103.15175__00/) — conjecture on $R_\ell(\mathcal{H}_s,k)$ | proved | CONFIRMED | [note](to_review/2103.15175__00__multicolor-list-Ramsey-number-equals-s-to-the-k-plus-1__note.pdf) |
-| [2208.06858__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2208.06858__01/) — Conjecture 2.2 | disproved | CONFIRMED | [note](to_review/2208.06858__01__Levine-hat-problem-monotone-strategies-reach-one-half__note.pdf) |
-| [2310.04265__09](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2310.04265__09/) — Question 5.9 | disproved | CONFIRMED | [note](to_review/2310.04265__09__3-critical-tournaments-clique-number-question-5.9__note.pdf) |
-| [2401.00299__02](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2401.00299__02/) — Problem 1.9 | proved | CONFIRMED | [note](to_review/2401.00299__02__hypercube-partitions-into-squares-asymptotics__note.pdf) |
-| [2405.03455__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2405.03455__00/) — Open Problem (Introduction) | proved | CONFIRMED | [note](to_review/2405.03455__00__Erdos-Szekeres-big-line-or-big-convex-polygon-linear-in-l__note.pdf) |
-| [2408.02400__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2408.02400__00/) — Problem 1.5 | proved | CONFIRMED | [note](to_review/2408.02400__00__chromatic-minus-cochromatic-number-Mycielski-construction__note.pdf) |
-| [2512.10438__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2512.10438__00/) — Problem 5.1 | proved | CONFIRMED | [note](to_review/2512.10438__00__color-avoiding-paths-tournaments-q6-N9-example__note.pdf) |
-| [2001.09679__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2001.09679__00/) — exact value of $b_\varepsilon$ | proved | MINOR_GAPS | [note](to_review/2001.09679__00__sublinear-separators-expansion-exponent-Dvorak-b-eps__note.pdf) |
-| [2005.09767__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2005.09767__00/) — Conjecture 1.10 | proved | MINOR_GAPS | [note](to_review/2005.09767__00__group-connectivity-exponentially-many-flows-Z6-Z7__note.pdf) |
-| [2211.01032__02](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2211.01032__02/) — Conjecture 9.3 | proved | MINOR_GAPS | [note](to_review/2211.01032__02__random-embeddings-expected-faces-Theta-log-n__note.pdf) |
-| [2505.24100__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2505.24100__01/) — Question 1.8 | proved | MINOR_GAPS | [note](to_review/2505.24100__01__induced-saturation-even-cycles-line-graphs-hypohamiltonian__note.pdf) |
+| [Fair representation by matchings in bipartite graphs](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.03196__03/) (`1611.03196__03`) | proved | CONFIRMED | [note](to_review/1611.03196__03__fair-representation-matchings-bipartite-c-of-m-bound__note.pdf) |
+| [Stable-set covers with no privately covered induced path](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1702.01094__01/) (`1702.01094__01`) | disproved | CONFIRMED | [note](to_review/1702.01094__01__stable-set-covers-no-privately-covered-induced-path__note.pdf) |
+| [NP-completeness of fractional dichromatic number at threshold 2](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1812.02420__02/) (`1812.02420__02`) | proved | CONFIRMED | [note](to_review/1812.02420__02__fractional-dichromatic-number-2-NP-complete__note.pdf) |
+| [Directed Kneser graphs: acyclic sets versus intersecting families](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1812.02420__03/) (`1812.02420__03`) | disproved | CONFIRMED | [note](to_review/1812.02420__03__directed-Kneser-graphs-acyclic-iff-intersecting__note.pdf) |
+| [Asymmetry of $\psi$ for biconstrained bipartite graphs](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1902.10878__01/) (`1902.10878__01`) | disproved | CONFIRMED | [note](to_review/1902.10878__01__concatenating-bipartite-graphs-psi-not-symmetric__note.pdf) |
+| [Exact multicolour list-Ramsey number $R_\ell(\mathcal H_s,k)=s^k+1$](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2103.15175__00/) (`2103.15175__00`) | proved | CONFIRMED | [note](to_review/2103.15175__00__multicolor-list-Ramsey-number-equals-s-to-the-k-plus-1__note.pdf) |
+| [Monotone strategies in Levine's hat problem attain probability $1/2$](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2208.06858__01/) (`2208.06858__01`) | disproved | CONFIRMED | [note](to_review/2208.06858__01__Levine-hat-problem-monotone-strategies-reach-one-half__note.pdf) |
+| [Unbounded-order 3-critical tournaments](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2310.04265__09/) (`2310.04265__09`) | disproved | CONFIRMED | [note](to_review/2310.04265__09__3-critical-tournaments-clique-number-question-5.9__note.pdf) |
+| [Asymptotics of hypercube partitions into squares](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2401.00299__02/) (`2401.00299__02`) | proved | CONFIRMED | [note](to_review/2401.00299__02__hypercube-partitions-into-squares-asymptotics__note.pdf) |
+| [Erdős–Szekeres bounds linear in the collinearity parameter](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2405.03455__00/) (`2405.03455__00`) | proved | CONFIRMED | [note](to_review/2405.03455__00__Erdos-Szekeres-big-line-or-big-convex-polygon-linear-in-l__note.pdf) |
+| [Chromatic–cochromatic gap three below clique number five](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2408.02400__00/) (`2408.02400__00`) | proved | CONFIRMED | [note](to_review/2408.02400__00__chromatic-minus-cochromatic-number-Mycielski-construction__note.pdf) |
+| [A non-transitive six-colouring with short colour-avoiding paths](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2512.10438__00/) (`2512.10438__00`) | proved | CONFIRMED | [note](to_review/2512.10438__00__color-avoiding-paths-tournaments-q6-N9-example__note.pdf) |
+| [Sharp expansion exponent for classes with sublinear separators](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2001.09679__00/) (`2001.09679__00`) | proved | MINOR_GAPS | [note](to_review/2001.09679__00__sublinear-separators-expansion-exponent-Dvorak-b-eps__note.pdf) |
+| [Exponentially many nowhere-zero flows over $\mathbb Z_6$ and $\mathbb Z_7$](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2005.09767__00/) (`2005.09767__00`) | proved | MINOR_GAPS | [note](to_review/2005.09767__00__group-connectivity-exponentially-many-flows-Z6-Z7__note.pdf) |
+| [Expected faces in random graph embeddings grow as $\Theta(\log n)$](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2211.01032__02/) (`2211.01032__02`) | proved | MINOR_GAPS | [note](to_review/2211.01032__02__random-embeddings-expected-faces-Theta-log-n__note.pdf) |
+| [Induced saturation of even cycles via hypohamiltonian line graphs](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2505.24100__01/) (`2505.24100__01`) | proved | MINOR_GAPS | [note](to_review/2505.24100__01__induced-saturation-even-cycles-line-graphs-hypohamiltonian__note.pdf) |
 
 See [`to_review/README.md`](to_review/README.md) for source-paper links,
 generation details, and literature updates.
 
-### Review-status definitions
-
-| Review status | Meaning |
-| --- | --- |
-| `CONFIRMED` | Every step was found valid, sources were checked, the interpretation was judged fair, and any finite construction was computationally verified where applicable. |
-| `MINOR_GAPS` | The main result appears correct, but routine, repairable details remain. |
-| `MAJOR_GAP` | A substantial gap remains. It may be repairable, but the current write-up does not resolve it. |
-| `FATAL_ERROR` | The claim contains an irreparable error or fails a computational check. |
-| `ALREADY_KNOWN` | The result appears correct, but was already established in the literature. |
 
 ## Details
 
