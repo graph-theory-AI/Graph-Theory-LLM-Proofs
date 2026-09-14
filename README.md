@@ -32,87 +32,34 @@ The model completed 633 attacks. Claude Fable reviewed the 77 cases in which GPT
 | ill_posed | 23 | not reviewed |
 | unknown | 37 | not reviewed |
 
-### Claims reviewed by Claude Fable (77)
+### PDFs for human review
 
-| id | GPT-5.6 Sol verdict | Claude Fable review |
-| --- | --- | --- |
-| [1601.01886__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1601.01886__00/) | `proved` | [CONFIRMED](verification/1601.01886__00.md) |
-| [1610.00239__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1610.00239__00/) | `proved` | [ALREADY_KNOWN](verification/1610.00239__00.md) |
-| [1611.03196__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.03196__00/) | `disproved` | [FATAL_ERROR](verification/1611.03196__00.md) |
-| [1611.03196__03](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.03196__03/) | `proved` | [CONFIRMED](verification/1611.03196__03.md) |
-| [1702.01094__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1702.01094__01/) | `disproved` | [CONFIRMED](verification/1702.01094__01.md) |
-| [1704.00125__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1704.00125__01/) | `disproved` | [CONFIRMED](verification/1704.00125__01.md) |
-| [1708.02370__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1708.02370__00/) | `disproved` | [FATAL_ERROR](verification/1708.02370__00.md) |
-| [1708.08486__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1708.08486__01/) | `disproved` | [FATAL_ERROR](verification/1708.08486__01.md) |
-| [1709.09050__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1709.09050__01/) | `proved` | [ALREADY_KNOWN](verification/1709.09050__01.md) |
-| [1710.10663__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1710.10663__00/) | `disproved` | [FATAL_ERROR](verification/1710.10663__00.md) |
-| [1710.11281__02](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1710.11281__02/) | `disproved` | [MAJOR_GAP](verification/1710.11281__02.md) |
-| [1802.03727__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1802.03727__00/) | `proved` | [ALREADY_KNOWN](verification/1802.03727__00.md) |
-| [1802.05582__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1802.05582__00/) | `proved` | [MINOR_GAPS](verification/1802.05582__00.md) |
-| [1802.05582__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1802.05582__01/) | `proved` | [MINOR_GAPS](verification/1802.05582__01.md) |
-| [1806.09726__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1806.09726__00/) | `disproved` | [FATAL_ERROR](verification/1806.09726__00.md) |
-| [1809.05439__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1809.05439__00/) | `disproved` | [CONFIRMED](verification/1809.05439__00.md) |
-| [1811.08750__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1811.08750__00/) | `disproved` | [MAJOR_GAP](verification/1811.08750__00.md) |
-| [1811.12650__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1811.12650__00/) | `proved` | [MINOR_GAPS](verification/1811.12650__00.md) |
-| [1812.02420__02](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1812.02420__02/) | `proved` | [CONFIRMED](verification/1812.02420__02.md) |
-| [1812.02420__03](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1812.02420__03/) | `disproved` | [CONFIRMED](verification/1812.02420__03.md) |
-| [1902.06473__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1902.06473__00/) | `proved` | [CONFIRMED](verification/1902.06473__00.md) |
-| [1902.10878__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1902.10878__00/) | `disproved` | [ALREADY_KNOWN](verification/1902.10878__00.md) |
-| [1902.10878__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1902.10878__01/) | `disproved` | [CONFIRMED](verification/1902.10878__01.md) |
-| [1904.12273__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1904.12273__01/) | `disproved` | [CONFIRMED](verification/1904.12273__01.md) |
-| [1907.06019__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1907.06019__00/) | `proved` | [ALREADY_KNOWN](verification/1907.06019__00.md) |
-| [1907.06019__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1907.06019__01/) | `proved` | [CONFIRMED](verification/1907.06019__01.md) |
-| [1909.11578__02](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1909.11578__02/) | `disproved` | [ALREADY_KNOWN](verification/1909.11578__02.md) |
-| [2001.09679__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2001.09679__00/) | `proved` | [MINOR_GAPS](verification/2001.09679__00.md) |
-| [2004.07214__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2004.07214__00/) | `proved` | [ALREADY_KNOWN](verification/2004.07214__00.md) |
-| [2004.07457__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2004.07457__01/) | `disproved` | [FATAL_ERROR](verification/2004.07457__01.md) |
-| [2005.09767__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2005.09767__00/) | `proved` | [MINOR_GAPS](verification/2005.09767__00.md) |
-| [2008.03587__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2008.03587__01/) | `disproved` | [FATAL_ERROR](verification/2008.03587__01.md) |
-| [2009.03418__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2009.03418__00/) | `disproved` | [MAJOR_GAP](verification/2009.03418__00.md) |
-| [2009.12189__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2009.12189__00/) | `disproved` | [ALREADY_KNOWN](verification/2009.12189__00.md) |
-| [2103.15175__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2103.15175__00/) | `proved` | [CONFIRMED](verification/2103.15175__00.md) |
-| [2106.14762__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2106.14762__00/) | `proved` | [MINOR_GAPS](verification/2106.14762__00.md) |
-| [2108.00991__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2108.00991__00/) | `disproved` | [ALREADY_KNOWN](verification/2108.00991__00.md) |
-| [2111.00532__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2111.00532__00/) | `proved` | [ALREADY_KNOWN](verification/2111.00532__00.md) |
-| [2111.00532__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2111.00532__01/) | `proved` | [ALREADY_KNOWN](verification/2111.00532__01.md) |
-| [2204.10119__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2204.10119__01/) | `disproved` | [CONFIRMED](verification/2204.10119__01.md) |
-| [2204.12330__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2204.12330__00/) | `proved` | [ALREADY_KNOWN](verification/2204.12330__00.md) |
-| [2207.07775__02](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2207.07775__02/) | `disproved` | [FATAL_ERROR](verification/2207.07775__02.md) |
-| [2208.06858__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2208.06858__01/) | `disproved` | [CONFIRMED](verification/2208.06858__01.md) |
-| [2208.10074__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2208.10074__00/) | `disproved` | [ALREADY_KNOWN](verification/2208.10074__00.md) |
-| [2209.09107__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2209.09107__00/) | `disproved` | [CONFIRMED](verification/2209.09107__00.md) |
-| [2211.01032__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2211.01032__00/) | `disproved` | [FATAL_ERROR](verification/2211.01032__00.md) |
-| [2211.01032__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2211.01032__01/) | `disproved` | [FATAL_ERROR](verification/2211.01032__01.md) |
-| [2211.01032__02](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2211.01032__02/) | `proved` | [MINOR_GAPS](verification/2211.01032__02.md) |
-| [2304.03567__04](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2304.03567__04/) | `disproved` | [CONFIRMED](verification/2304.03567__04.md) |
-| [2306.04710__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2306.04710__01/) | `proved` | [ALREADY_KNOWN](verification/2306.04710__01.md) |
-| [2307.15048__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2307.15048__00/) | `disproved` | [FATAL_ERROR](verification/2307.15048__00.md) |
-| [2307.15512__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2307.15512__00/) | `disproved` | [CONFIRMED](verification/2307.15512__00.md) |
-| [2308.15387__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2308.15387__00/) | `disproved` | [ALREADY_KNOWN](verification/2308.15387__00.md) |
-| [2308.15721__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2308.15721__00/) | `disproved` | [FATAL_ERROR](verification/2308.15721__00.md) |
-| [2310.04265__09](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2310.04265__09/) | `disproved` | [CONFIRMED](verification/2310.04265__09.md) |
-| [2310.04265__11](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2310.04265__11/) | `disproved` | [CONFIRMED](verification/2310.04265__11.md) |
-| [2312.13061__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2312.13061__01/) | `disproved` | [MINOR_GAPS](verification/2312.13061__01.md) |
-| [2401.00299__02](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2401.00299__02/) | `proved` | [CONFIRMED](verification/2401.00299__02.md) |
-| [2405.03455__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2405.03455__00/) | `proved` | [CONFIRMED](verification/2405.03455__00.md) |
-| [2405.14795__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2405.14795__00/) | `proved` | [ALREADY_KNOWN](verification/2405.14795__00.md) |
-| [2408.02400__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2408.02400__00/) | `proved` | [CONFIRMED](verification/2408.02400__00.md) |
-| [2409.18220__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2409.18220__00/) | `disproved` | [FATAL_ERROR](verification/2409.18220__00.md) |
-| [2410.13008__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2410.13008__00/) | `disproved` | [ALREADY_KNOWN](verification/2410.13008__00.md) |
-| [2503.16882__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2503.16882__00/) | `disproved` | [FATAL_ERROR](verification/2503.16882__00.md) |
-| [2503.23191__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2503.23191__00/) | `disproved` | [ALREADY_KNOWN](verification/2503.23191__00.md) |
-| [2505.24100__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2505.24100__00/) | `proved` | [ALREADY_KNOWN](verification/2505.24100__00.md) |
-| [2505.24100__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2505.24100__01/) | `proved` | [MINOR_GAPS](verification/2505.24100__01.md) |
-| [2506.07264__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2506.07264__01/) | `proved` | [ALREADY_KNOWN](verification/2506.07264__01.md) |
-| [2507.04254__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2507.04254__00/) | `disproved` | [ALREADY_KNOWN](verification/2507.04254__00.md) |
-| [2508.08870__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2508.08870__00/) | `disproved` | [CONFIRMED](verification/2508.08870__00.md) |
-| [2511.02892__03](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2511.02892__03/) | `disproved` | [ALREADY_KNOWN](verification/2511.02892__03.md) |
-| [2512.10438__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2512.10438__00/) | `proved` | [CONFIRMED](verification/2512.10438__00.md) |
-| [2512.17232__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2512.17232__00/) | `disproved` | [ALREADY_KNOWN](verification/2512.17232__00.md) |
-| [2512.17342__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2512.17342__00/) | `disproved` | [ALREADY_KNOWN](verification/2512.17342__00.md) |
-| [2602.16333__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2602.16333__00/) | `proved` | [ALREADY_KNOWN](verification/2602.16333__00.md) |
-| [2603.02786__03](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2603.02786__03/) | `disproved` | [CONFIRMED](verification/2603.02786__03.md) |
-| [2604.09449__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2604.09449__00/) | `disproved` | [ALREADY_KNOWN](verification/2604.09449__00.md) |
+These 16 notes survived the LLM referee pass with `CONFIRMED` or
+`MINOR_GAPS`, but have not yet been reviewed by a human mathematician.
+Independent review is welcome; full provenance and referee reports are included
+in each PDF.
+
+| Problem | Claim | LLM referee | PDF |
+|:--|:--|:--|:--|
+| [1611.03196__03](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.03196__03/) — Conjecture 1.15 | proved | CONFIRMED | [note](to_review/1611.03196__03__fair-representation-matchings-bipartite-c-of-m-bound__note.pdf) |
+| [1702.01094__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1702.01094__01/) — uniquely-covered vertices in an induced path | disproved | CONFIRMED | [note](to_review/1702.01094__01__stable-set-covers-no-privately-covered-induced-path__note.pdf) |
+| [1812.02420__02](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1812.02420__02/) — Problem 3.21 | proved | CONFIRMED | [note](to_review/1812.02420__02__fractional-dichromatic-number-2-NP-complete__note.pdf) |
+| [1812.02420__03](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1812.02420__03/) — Problem 5.40 | disproved | CONFIRMED | [note](to_review/1812.02420__03__directed-Kneser-graphs-acyclic-iff-intersecting__note.pdf) |
+| [1902.10878__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1902.10878__01/) — symmetry of $\psi$ | disproved | CONFIRMED | [note](to_review/1902.10878__01__concatenating-bipartite-graphs-psi-not-symmetric__note.pdf) |
+| [2103.15175__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2103.15175__00/) — conjecture on $R_\ell(\mathcal{H}_s,k)$ | proved | CONFIRMED | [note](to_review/2103.15175__00__multicolor-list-Ramsey-number-equals-s-to-the-k-plus-1__note.pdf) |
+| [2208.06858__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2208.06858__01/) — Conjecture 2.2 | disproved | CONFIRMED | [note](to_review/2208.06858__01__Levine-hat-problem-monotone-strategies-reach-one-half__note.pdf) |
+| [2310.04265__09](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2310.04265__09/) — Question 5.9 | disproved | CONFIRMED | [note](to_review/2310.04265__09__3-critical-tournaments-clique-number-question-5.9__note.pdf) |
+| [2401.00299__02](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2401.00299__02/) — Problem 1.9 | proved | CONFIRMED | [note](to_review/2401.00299__02__hypercube-partitions-into-squares-asymptotics__note.pdf) |
+| [2405.03455__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2405.03455__00/) — Open Problem (Introduction) | proved | CONFIRMED | [note](to_review/2405.03455__00__Erdos-Szekeres-big-line-or-big-convex-polygon-linear-in-l__note.pdf) |
+| [2408.02400__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2408.02400__00/) — Problem 1.5 | proved | CONFIRMED | [note](to_review/2408.02400__00__chromatic-minus-cochromatic-number-Mycielski-construction__note.pdf) |
+| [2512.10438__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2512.10438__00/) — Problem 5.1 | proved | CONFIRMED | [note](to_review/2512.10438__00__color-avoiding-paths-tournaments-q6-N9-example__note.pdf) |
+| [2001.09679__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2001.09679__00/) — exact value of $b_\varepsilon$ | proved | MINOR_GAPS | [note](to_review/2001.09679__00__sublinear-separators-expansion-exponent-Dvorak-b-eps__note.pdf) |
+| [2005.09767__00](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2005.09767__00/) — Conjecture 1.10 | proved | MINOR_GAPS | [note](to_review/2005.09767__00__group-connectivity-exponentially-many-flows-Z6-Z7__note.pdf) |
+| [2211.01032__02](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2211.01032__02/) — Conjecture 9.3 | proved | MINOR_GAPS | [note](to_review/2211.01032__02__random-embeddings-expected-faces-Theta-log-n__note.pdf) |
+| [2505.24100__01](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2505.24100__01/) — Question 1.8 | proved | MINOR_GAPS | [note](to_review/2505.24100__01__induced-saturation-even-cycles-line-graphs-hypohamiltonian__note.pdf) |
+
+See [`to_review/README.md`](to_review/README.md) for source-paper links,
+generation details, and literature updates.
 
 ### Review-status definitions
 
