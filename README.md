@@ -40,7 +40,7 @@ Independent review is welcome; full provenance and referee reports are included
 in each PDF.
 
 If you would like to review one of these notes, please
-[contact us by opening an issue](https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs/issues/new) or by email at `emanuele.natale@inria.fr`.
+[contact us by opening an issue](https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs/issues/new) or by email at `emanuele.natale🐌inria.fr`.
 
 | Problem | Claim | LLM referee | PDF |
 |:--|:--|:--|:--|
