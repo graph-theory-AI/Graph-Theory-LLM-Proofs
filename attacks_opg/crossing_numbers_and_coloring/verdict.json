@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the conjecture for triangle-free graphs and for graphs whose vertex-cover number is at most their chromatic number, but not for arbitrary graphs.",
+  "would_publish": false,
+  "caveats": "These are self-contained special-case arguments; novelty is not claimed, and the unrestricted conjecture remains unresolved.",
+  "id": "crossing_numbers_and_coloring",
+  "model": "gpt-6-astra",
+  "usd": 0.939725,
+  "eur": 0.973362,
+  "elapsed_s": 729.6,
+  "status": "completed",
+  "response_id": "resp_02c0f8c4e0a9adac006aaae3a3a4a887d2879aaca49e7fcd8f",
+  "when": "2026-09-16T18:57:01Z"
+}

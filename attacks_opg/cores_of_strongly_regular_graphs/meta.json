@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "cores_of_strongly_regular_graphs",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Cores of strongly regular graphs",
+    "paper": "http://www.openproblemgarden.org/op/cores_of_strongly_regular_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/cores_of_strongly_regular_graphs/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Algebraic Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "cores_of_strongly_regular_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/cores_of_strongly_regular_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/cores_of_strongly_regular_graphs",
+    "catalog_title": "Cores of strongly regular graphs",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2008-06-16",
+    "authors": "Cameron, Peter J., Kazanidis, Priscila A.",
+    "subject": "Graph Theory \u00bb Algebraic Graph Theory",
+    "statement_text": "Question Does every strongly regular graph have either itself or a complete graph as a core ?",
+    "context_text": "If true, this curious question indicates a very interesting property of strongly regular graphs. While on the surface, there would appear to be no particular reason for it to hold, it has already been verified for a number of interesting classes of graphs. Cameron and Kazanidis [CK] showed that it holds for rank-3 graphs, while Godsil and Royle [GR] have showed that it holds for point graphs of generalized quadrangles, block graphs of Steiner systems and orthogonal arrays with sufficiently many points, and for all strongly regular graphs on at most 36 vertices.",
+    "references_text": "- *[CK] P. J. Cameron and P. A. Kazanidis, Cores of symmetric graphs, J. Australian Math. Soc., to appear.\n- [GR] C. Godsil and G.F. Royle, Cores of Geometric Graphs"
+  },
+  "started": "2026-09-16T18:43:15Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

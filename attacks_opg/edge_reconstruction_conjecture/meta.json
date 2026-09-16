@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "edge_reconstruction_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Edge Reconstruction Conjecture",
+    "paper": "http://www.openproblemgarden.org/op/edge_reconstruction_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/edge_reconstruction_conjecture/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "edge_reconstruction_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/edge_reconstruction_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/edge_reconstruction_conjecture",
+    "catalog_title": "Edge Reconstruction Conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2008-05-23",
+    "authors": "Harary, Frank",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture Every simple graph with at least 4 edges is reconstructible from it's edge deleted subgraphs",
+    "context_text": "It is known that if a graph is vertex reconstructible then it is edge reconstructible.",
+    "references_text": "- J.A.Bondy, A graph reconstruction manual, Surveys in Combinatorics, LMS-Lecture Note Series 166(1991)"
+  },
+  "started": "2026-09-16T18:48:28Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

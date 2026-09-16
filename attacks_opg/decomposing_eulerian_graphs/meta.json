@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "decomposing_eulerian_graphs",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Decomposing eulerian graphs",
+    "paper": "http://www.openproblemgarden.org/op/decomposing_eulerian_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_eulerian_graphs/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Cycles"
+  },
+  "dossier_meta": {
+    "id": "decomposing_eulerian_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_eulerian_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/decomposing_eulerian_graphs",
+    "catalog_title": "Decomposing eulerian graphs",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-03-07",
+    "authors": "",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Cycles",
+    "statement_text": "Conjecture If $ G $ is a 6- edge-connected Eulerian graph and $ P $ is a 2-transition system for $ G $ , then $ (G,P) $ has a compaible decomposition.",
+    "context_text": "Definition: Let $ G $ be an Eulerian graph and for every vertex $ v $ , let $ P(v) $ be a partition of the edges incident with $ v $ . We call $ P $ a transition system . If every member of $ P(v) $ has size at most $ k $ (for every $ v $ ), then we call $ P $ a $ k $ - transition sytem . A compatible decomposition of $ (G,P) $ is a list of edge-disjoint cycles $ C_1,\\ldots,C_n $ with union $ G $ so that every $ C_i $ contains at most one edge from every member of $ P(v) $ . Let $ G $ be a graph and let $ G' $ be the graph obtained from $ G $ by replacing each edge $ e $ of G by two edges $ e',e'' $ in parallel. Let $ P $ be the 2-transition system of $ G $ with $ {e',e''} \\in P(v) $ whenever $ e' $ and $ e'' $ are incident with $ v $ . Now, $ G' $ is an Eulerian graph and every compatible decomposition of $ (G',P) $ gives a cycle double cover of $ G $ . Since the cycle double cover conjecture can be reduced to graphs which are 3-edge-connected, the above conjecture would imply the cycle double cover conjecture. We define a transition system $ P $ to be admissable if every member of $ P(v) $ contains no more than half of the edges in any edge-cut. It is easy to see that if there is a compatible decomposition of $ (G,P) $ , then $ P $ must be admissable. The converse of this is not true; There is an admissable 2-transition system of the graph $ K_5 $ which does not admit a compatible decomposition. Recently, G. Fan and C.Q. Zhang [FZ] have proved that $ (G,P) $ does have a compatible decomposition whenever $ P $ is admissable and $ G $ has no $ K_5 $ minor. This result imporoved upon an earlier theorem of Fleischner and Frank [FF]. Very recently, I have proved a weak version of the above conjecture, by showing that $ (G,P) $ also has a compatible decomposition when P is a 2-transition system and G is 80-edge-connected. I'd quite like to see an improvement on this bound. Here is a related conjecture. Conjecture (Sabidussi) Let $ W $ be an Euler tour of the graph $ G $ . If $ G $ has no vertex of degree two, then there is a cycle decomposition of $ G $ , say $ F $ , so that no two consecutive edges of $ W $ are in a common circuit of $ F $ . If $ W $ is given by $ v_1,e_1,v_2,e_2,...,e_{m-1},v_m $ then we may form a 2-transition system $ P $ by putting $ \\{e_{i-1},e_i\\} $ in $ P(v_i) $ for every $ i $ (working modulo $ m $ ). Now a compatible decomposition of $ (G,P) $ is precisely a cycle decomposition of $ G $ satisfying the above conjecture. Thus, Sabidussi's conjecture is equivalent to the assertion that $ (G,P) $ has a compatible decomposition whenever $ G $ has no vertex of degree two and $ P $ is a 2-transition system which comes from an Euler tour. Let $ G $ be a directed Eulerian graph and for every vertex $ v $ , let $ P(v) $ be a partition of the edges incident with $ v $ into pairs so that every in-edge is paired with an out-edge. We define a compatible decomposition to be a decomposition of $ G $ into directed circuits so that every directed circuit contains at most one edge from every member of $ P(v) $ . Our current techniques don't seem to shed any light on the problem of finding compatible decompositions for Eulerian digraphs. Next I pose a very basic question which is still open. Problem (DeVos) Does there exist a fixed integer $ k $ such that $ (G,P) $ has a compatible decomposition whenever $ G $ is a $ k $ -edge-connected directed Eulerian graph and $ P $ is a 2-transition system?",
+    "references_text": ""
+  },
+  "started": "2026-09-16T18:46:45Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

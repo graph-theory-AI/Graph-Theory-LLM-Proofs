@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The stated inequality is the established Goldberg\u2013Seymour theorem; the original OpenProblemGarden discussion is outdated.",
+  "would_publish": false,
+  "caveats": "This is a status correction and equivalence argument, not a new proof; the supplied publication metadata is not independently checked here.",
+  "id": "goldbergs_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.159195,
+  "eur": 0.164893,
+  "elapsed_s": 137.1,
+  "status": "completed",
+  "response_id": "resp_04190d5b1eb2c171006aaae4f1cf5887d2a449972aca9d3e07",
+  "when": "2026-09-16T18:52:42Z"
+}

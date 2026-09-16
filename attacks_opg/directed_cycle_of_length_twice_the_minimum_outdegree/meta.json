@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "directed_cycle_of_length_twice_the_minimum_outdegree",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Directed path of length twice the minimum outdegree",
+    "paper": "http://www.openproblemgarden.org/op/directed_cycle_of_length_twice_the_minimum_outdegree",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/directed_cycle_of_length_twice_the_minimum_outdegree/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "directed_cycle_of_length_twice_the_minimum_outdegree",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/directed_cycle_of_length_twice_the_minimum_outdegree/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/directed_cycle_of_length_twice_the_minimum_outdegree",
+    "catalog_title": "Directed path of length twice the minimum outdegree",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2013-02-28",
+    "authors": "Thomass\u00e9, St\u00e9phan",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "Conjecture Every oriented graph with minimum outdegree $ k $ contains a directed path of length $ 2k $ .",
+    "context_text": "In fact, Thomass\u00e9 made the following stronger conjecture which implies the celebrated Cacetta-H\u00e4ggkvist Conjecture . Conjecture Every digraph with minimum outdegree $ k $ and directed girth $ g $ , contains a directed path of length $ (g-1)k $ . This conjecture holds easily when $ g=2 $ . For $ g=3 $ it is the above conjecture which is still open.",
+    "references_text": "- *[S] Blair D. Sullivan: A Summary of Problems and Results related to the Caccetta-Haggkvist Conjecture"
+  },
+  "started": "2026-09-16T18:47:29Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

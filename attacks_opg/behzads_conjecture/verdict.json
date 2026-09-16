@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The \u0394+2 bound holds even for total list colouring when \u0394\u22659 and mad(G)<16\u0394/(2\u0394+9), by a self-contained reducibility and discharging argument.",
+  "would_publish": false,
+  "caveats": "No claim of novelty; the sparsity hypothesis is substantial, and the unrestricted conjecture is not settled.",
+  "id": "behzads_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.866315,
+  "eur": 0.897325,
+  "elapsed_s": 753.9,
+  "status": "completed",
+  "response_id": "resp_095c28fdad041cd0006aaae137111c87d297541b2edffff7e8",
+  "when": "2026-09-16T18:47:04Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every 4-edge-connected graph with at most ten odd-degree vertices has a nowhere-zero 3-flow, but the unrestricted conjecture is not resolved.",
+  "would_publish": false,
+  "caveats": "Uses the classical splitting-off theorem; no novelty or improvement over previously known special cases is claimed.",
+  "id": "3_flow_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.943515,
+  "eur": 0.977288,
+  "elapsed_s": 873.1,
+  "status": "completed",
+  "response_id": "resp_0fb6aac957896f21006aaae05461e887d280e4621a099a5913",
+  "when": "2026-09-16T18:45:17Z"
+}

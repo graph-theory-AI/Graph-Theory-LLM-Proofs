@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A quantitative reversal argument proves the conjecture for cyclic compositions of transitive tournaments, including tournaments with three cyclically ordered transitive modules.",
+  "would_publish": false,
+  "caveats": "This is a self-contained special case, with no novelty claim; the catalog's reported general disproof is not independently verified here.",
+  "id": "adams_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.900875,
+  "eur": 0.933122,
+  "elapsed_s": 835.0,
+  "status": "completed",
+  "response_id": "resp_02e3aaf6b4462a6f006aaae0d22bfc87d2bb8706910d50810d",
+  "when": "2026-09-16T18:46:44Z"
+}

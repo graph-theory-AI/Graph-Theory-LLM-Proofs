@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "erdos_faber_lovasz_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Erd\u0151s\u2013Faber\u2013Lov\u00e1sz conjecture",
+    "paper": "http://www.openproblemgarden.org/op/erdos_faber_lovasz_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/erdos_faber_lovasz_conjecture/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "erdos_faber_lovasz_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/erdos_faber_lovasz_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/erdos_faber_lovasz_conjecture",
+    "catalog_title": "Erd\u0151s\u2013Faber\u2013Lov\u00e1sz conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2013-08-22",
+    "authors": "Erdos, Paul, Faber, Vance, Lovasz, Laszlo",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Conjecture If $ G $ is a simple graph which is the union of $ k $ pairwise edge-disjoint complete graphs, each of which has $ k $ vertices, then the chromatic number of $ G $ is $ k $ .",
+    "context_text": "From [Erd81]: \"Faber, Lov\u00e1sz and I made this harmless looking conjecture at a party in Boulder Colorado in September 1972. Its diff\u001eculty was realised only slowly. I now off\u001ber 500 dollars for a proof or disproof. (Not long ago I only offered 50; the increase is not due to inflation but to the fact that I now think the problem is very diff\u001ecult. Perhaps I am wrong.)\" The conjecture can be equivalently formulated in terms of seating assignments or hypergraph colouring; see Wikipedia or Doug West's Webpage .",
+    "references_text": "- [Erd81] P. Erd\u0151s. On the combinatorial problems which I would most like to see solved. Combinatorica, 1(1):25\u201342, 1981."
+  },
+  "started": "2026-09-16T18:48:30Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

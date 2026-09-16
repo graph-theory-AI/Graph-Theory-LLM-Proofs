@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every graph with maximum average degree less than 10/3 is acyclically 5-choosable, but the unrestricted planar conjecture is not resolved here.",
+  "would_publish": false,
+  "caveats": "The sparse-graph result below is proved self-containedly; no claim of novelty is made, and its literature status has not been checked.",
+  "id": "acyclic_list_colouring_of_planar_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.22849,
+  "eur": 1.272464,
+  "elapsed_s": 1108.2,
+  "status": "completed",
+  "response_id": "resp_0a0f2500cc63ad93006aaae0a9395487d294560d9dbc8b682f",
+  "when": "2026-09-16T18:50:37Z"
+}

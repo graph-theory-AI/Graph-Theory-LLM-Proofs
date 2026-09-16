@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "graphs_with_a_forbidden_induced_tree_are_chi_bounded",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Graphs with a forbidden induced tree are chi-bounded",
+    "paper": "http://www.openproblemgarden.org/op/graphs_with_a_forbidden_induced_tree_are_chi_bounded",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/graphs_with_a_forbidden_induced_tree_are_chi_bounded/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "graphs_with_a_forbidden_induced_tree_are_chi_bounded",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/graphs_with_a_forbidden_induced_tree_are_chi_bounded/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/graphs_with_a_forbidden_induced_tree_are_chi_bounded",
+    "catalog_title": "Graphs with a forbidden induced tree are chi-bounded",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2009-05-16",
+    "authors": "Gyarfas, Andras",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Say that a family $ {\\mathcal F} $ of graphs is $ \\chi $ - bounded if there exists a function $ f: {\\mathbb N} \\rightarrow {\\mathbb N} $ so that every $ G \\in {\\mathcal F} $ satisfies $ \\chi(G) \\le f (\\omega(G)) $ . Conjecture For every fixed tree $ T $ , the family of graphs with no induced subgraph isomorphic to $ T $ is $ \\chi $ -bounded.",
+    "context_text": "This deep conjecture remains open despite considerable effort. Note that the conjecture would be false were the graph $ T $ to be permitted to contain a cycle, since then the class would admit graphs of high girth (where $ \\omega = 2 $ ) and high chromatic number. It is an easy exercise to prove this conjecture in the special case when $ T $ is either a path or a star, but things get difficult from here. Kierstead and Penrice solved the special case when $ T $ has radius 2, and Kierstead and Zhu solved the special case when $ T $ has radius 3 and has the property that every vertex incident with the center vertex has degree 2. Scott proved that the class of graphs which exclude all subdivisions of a fixed tree $ T $ as induced subgraphs are $ \\chi $ -bounded. It follows from this that Gyarfas's conjecture also holds for subdivisions of stars.",
+    "references_text": ""
+  },
+  "started": "2026-09-16T18:52:42Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

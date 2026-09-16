@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A switching argument gives |C| <= floor((3k^2-2k)/4) and k >= 5 for any counterexample, where k counts the components outside C.",
+  "would_publish": false,
+  "caveats": "The full conjecture is not resolved; the novelty of this self-contained bound has not been checked.",
+  "id": "chords_of_longest_cycles",
+  "model": "gpt-6-astra",
+  "usd": 0.8114,
+  "eur": 0.840444,
+  "elapsed_s": 853.6,
+  "status": "completed",
+  "response_id": "resp_0e09ea0c92ebf8c3006aaae2cd41dc87d2a2b4c0c5174c0349",
+  "when": "2026-09-16T18:55:30Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the conjecture up to eleven vertices, using an eight-odd-vertex flow bound and a ten-odd-vertex special case.",
+  "would_publish": false,
+  "caveats": "Special cases only; no novelty is claimed, and the general conjecture is not resolved.",
+  "id": "4_flow_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.103725,
+  "eur": 1.143233,
+  "elapsed_s": 991.0,
+  "status": "completed",
+  "response_id": "resp_08a047b2dd404658006aaae08e75f487d29f4501b136c2b2c7",
+  "when": "2026-09-16T18:48:13Z"
+}

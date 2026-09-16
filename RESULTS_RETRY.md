@@ -12,8 +12,8 @@ runs were not used.
 ## Counts
 
 Finished attacks with a verdict: **0**.
-Spend (promo ledger × prepaid FX): **€129.99** billed USD
-**$125.49** / budget €600
+Spend (promo ledger × prepaid FX): **€147.56** billed USD
+**$142.46** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
@@ -42,11 +42,11 @@ Spend (promo ledger × prepaid FX): **€129.99** billed USD
 
 ## Coverage
 
-The sweep queue is the easiest-first open/partial arXiv ranking (628
+The sweep queue is the easiest-first open/partial arXiv ranking (644
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **628** (plus 0 skipped without a model call).
+Queue records not yet attacked: **644** (plus 0 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
@@ -196,7 +196,9 @@ Queue records not yet attacked: **628** (plus 0 skipped without a model call).
 | [`triangle_packing_vs_triangle_edge_transversal`](https://graph-theory-ai.github.io/graph-conjectures/op/triangle_packing_vs_triangle_edge_transversal/) | 2 | 2.0 | http://www.openproblemgarden.org/op/triangle_packing_vs_triangle_edge_transversal |
 | [`turans_problem_for_hypergraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/turans_problem_for_hypergraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/turans_problem_for_hypergraphs |
 | [`unit_vector_flows`](https://graph-theory-ai.github.io/graph-conjectures/op/unit_vector_flows/) | 2 | 2.0 | http://www.openproblemgarden.org/op/unit_vector_flows |
+| [`universal_steiner_triple_systems`](https://graph-theory-ai.github.io/graph-conjectures/op/universal_steiner_triple_systems/) | 2 | 2.0 | http://www.openproblemgarden.org/op/universal_steiner_triple_systems |
 | [`weak_pentagon_problem`](https://graph-theory-ai.github.io/graph-conjectures/op/weak_pentagon_problem/) | 2 | 2.0 | http://www.openproblemgarden.org/op/weak_pentagon_problem |
+| [`weighted_colouring_of_hexagonal_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/weighted_colouring_of_hexagonal_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/weighted_colouring_of_hexagonal_graphs |
 | [`2004.07214__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2004.07214__01/) | 2 | 2.05 | Enumerating minimal dominating sets in the (in)comparability graphs of … |
 | [`2109.09205__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2109.09205__01/) | 2 | 2.05 | Ramsey goodness of books revisited |
 | [`2111.07147__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2111.07147__00/) | 2 | 2.05 | Weak diameter coloring of graphs on surfaces |
@@ -429,9 +431,23 @@ Queue records not yet attacked: **628** (plus 0 skipped without a model call).
 | [`2010.08988__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2010.08988__00/) | 3 | 3.0 | Even Circuits in Oriented Matroids |
 | [`2204.10119__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2204.10119__00/) | 3 | 3.0 | Bipartite graphs with no $K_6$ minor |
 | [`2401.00359__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2401.00359__02/) | 3 | 3.0 | Ramsey and Turán numbers of sparse hypergraphs |
+| [`3_decomposition_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/3_decomposition_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/3_decomposition_conjecture |
 | [`3_edge_coloring_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/3_edge_coloring_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/3_edge_coloring_conjecture |
+| [`3_flow_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/3_flow_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/3_flow_conjecture |
+| [`4_flow_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/4_flow_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/4_flow_conjecture |
 | [`57_regular_moore_graph`](https://graph-theory-ai.github.io/graph-conjectures/op/57_regular_moore_graph/) | 3 | 3.0 | http://www.openproblemgarden.org/op/57_regular_moore_graph |
+| [`acyclic_list_colouring_of_planar_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/acyclic_list_colouring_of_planar_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/acyclic_list_colouring_of_planar_graphs |
+| [`adams_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/adams_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/adams_conjecture |
+| [`are_almost_all_graphs_determined_by_their_spectrum`](https://graph-theory-ai.github.io/graph-conjectures/op/are_almost_all_graphs_determined_by_their_spectrum/) | 3 | 3.0 | http://www.openproblemgarden.org/op/are_almost_all_graphs_determined_by_their_spectrum |
+| [`are_different_notions_of_the_crossing_number_the_same`](https://graph-theory-ai.github.io/graph-conjectures/op/are_different_notions_of_the_crossing_number_the_same/) | 3 | 3.0 | http://www.openproblemgarden.org/op/are_different_notions_of_the_crossing_number_the_same |
+| [`barnettes_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/barnettes_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/barnettes_conjecture |
+| [`behzads_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/behzads_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/behzads_conjecture |
+| [`bouchets_6_flow_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/bouchets_6_flow_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/bouchets_6_flow_conjecture |
+| [`characterizing_aleph_0_aleph_1_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/characterizing_aleph_0_aleph_1_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/characterizing_aleph_0_aleph_1_graphs |
+| [`chords_of_longest_cycles`](https://graph-theory-ai.github.io/graph-conjectures/op/chords_of_longest_cycles/) | 3 | 3.0 | http://www.openproblemgarden.org/op/chords_of_longest_cycles |
 | [`coloring_and_immersion`](https://graph-theory-ai.github.io/graph-conjectures/op/coloring_and_immersion/) | 3 | 3.0 | http://www.openproblemgarden.org/op/coloring_and_immersion |
+| [`consecutive_non_orientable_embedding_obstructions`](https://graph-theory-ai.github.io/graph-conjectures/op/consecutive_non_orientable_embedding_obstructions/) | 3 | 3.0 | http://www.openproblemgarden.org/op/consecutive_non_orientable_embedding_obstructions |
+| [`crossing_numbers_and_coloring`](https://graph-theory-ai.github.io/graph-conjectures/op/crossing_numbers_and_coloring/) | 3 | 3.0 | http://www.openproblemgarden.org/op/crossing_numbers_and_coloring |
 | [`hamiltonicity_of_cayley_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonicity_of_cayley_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/hamiltonicity_of_cayley_graphs |
 | [`monochromatic_vertex_colorings_inherited_from_perfect_matchings`](https://graph-theory-ai.github.io/graph-conjectures/op/monochromatic_vertex_colorings_inherited_from_perfect_matchings/) | 3 | 3.0 | http://www.openproblemgarden.org/op/monochromatic_vertex_colorings_inherited_from_perfect_matchings |
 | [`seymours_second_neighbourhood_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/seymours_second_neighbourhood_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/seymours_second_neighbourhood_conjecture |
@@ -679,4 +695,4 @@ Queue records not yet attacked: **628** (plus 0 skipped without a model call).
 | [`2210.09227__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.09227__00/) | 4 | 3.75 | A multidimensional Ramsey Theorem |
 | [`2404.02021__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2404.02021__02/) | 4 | 3.85 | On off-diagonal hypergraph Ramsey numbers |
 
-Generated 2026-09-16T18:42:40Z.
+Generated 2026-09-16T18:57:42Z.

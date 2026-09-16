@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "degenerate_colorings_of_planar_graphs",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Degenerate colorings of planar graphs",
+    "paper": "http://www.openproblemgarden.org/op/degenerate_colorings_of_planar_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/degenerate_colorings_of_planar_graphs/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Coloring"
+  },
+  "dossier_meta": {
+    "id": "degenerate_colorings_of_planar_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/degenerate_colorings_of_planar_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/degenerate_colorings_of_planar_graphs",
+    "catalog_title": "Degenerate colorings of planar graphs",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2008-05-21",
+    "authors": "Borodin, Oleg V.",
+    "subject": "Graph Theory \u00bb Topological Graph Theory \u00bb Coloring",
+    "statement_text": "A graph $ G $ is $ k $ - degenerate if every subgraph of $ G $ has a vertex of degree $ \\le k $ . Conjecture Every simple planar graph has a 5-coloring so that for $ 1 \\le k \\le 4 $ , the union of any $ k $ color classes induces a $ (k-1) $ -degenerate graph.",
+    "context_text": "An acyclic coloring of a graph $ G $ is a proper coloring with the added property that the union of any two color classes induces a forest. Grunbaum famously conjectured that every simple planar graph has an acyclic 5-coloring. Following a sequence of partial results, Borodin [B] resolved this conjecture with an impressive and detailed argument. In the same paper, Borodin made the above conjecture, which, if true, would give a stronger result (as forests are precisely the 1-degenerate graphs). A degenerate coloring of a graph $ G $ is a proper coloring with the added property that the union of any $ k $ color classes induces a $ (k-1) $ -degenerate graph. A planar graph of minimum degree 5 cannot have a degenerate 5-coloring, but if the above conjecture holds, something just short of this is true. Rautenbach [R] proved that every planar graph has a degenerate 18-coloring, and recently, Mohar, Spacepan, and Zhu showed that every planar graph has a degenerate 9-coloring.",
+    "references_text": "- *[B] O. V. Borodin, A proof of B. Gr\u00fcnbaum's conjecture on the acyclic -colorability of planar graphs. Dokl. Akad. Nauk SSSR 231 (1976), no. 1, 18--20. MathSciNet\n- [R] D. Rautenbach, A conjecture of Borodin and a coloring of Gr\u00fcnbaum. Fifth Cracow Conference on Graph Theory USTRON '06, 187--194 Electron. Notes Discrete Math., 24, Elsevier, Amsterdam, 2006."
+  },
+  "started": "2026-09-16T18:47:05Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

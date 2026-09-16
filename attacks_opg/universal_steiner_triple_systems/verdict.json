@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An explicit infinite family of non-projective, non-affine Steiner triple systems has maximal binary and ternary incidence ranks but fails to color a fixed 16-vertex simple cubic graph.",
+  "would_publish": false,
+  "caveats": "This does not characterize all universal systems, and novelty relative to the intransitive-system constructions mentioned in the question has not been verified.",
+  "id": "universal_steiner_triple_systems",
+  "model": "gpt-6-astra",
+  "usd": 1.31385,
+  "eur": 1.360879,
+  "elapsed_s": 1140.6,
+  "status": "completed",
+  "response_id": "resp_0e0e72dc082d800f006aaadf9bdac487d2985131cd5e03d90b",
+  "when": "2026-09-16T18:46:40Z"
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "consecutive_non_orientable_embedding_obstructions",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Consecutive non-orientable embedding obstructions",
+    "paper": "http://www.openproblemgarden.org/op/consecutive_non_orientable_embedding_obstructions",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/consecutive_non_orientable_embedding_obstructions/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Genus"
+  },
+  "dossier_meta": {
+    "id": "consecutive_non_orientable_embedding_obstructions",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/consecutive_non_orientable_embedding_obstructions/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/consecutive_non_orientable_embedding_obstructions",
+    "catalog_title": "Consecutive non-orientable embedding obstructions",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-03-27",
+    "authors": "",
+    "subject": "Graph Theory \u00bb Topological Graph Theory \u00bb Genus",
+    "statement_text": "Conjecture Is there a graph $ G $ that is a minor-minimal obstruction for two non-orientable surfaces?",
+    "context_text": "",
+    "references_text": ""
+  },
+  "started": "2026-09-16T18:42:54Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

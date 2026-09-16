@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I rule out overlap involving the projective plane and derive degree, girth, edge-count, and Euler-genus restrictions on any common obstruction.",
+  "would_publish": false,
+  "caveats": "Existence for higher non-orientable surfaces is not settled here; no claim of novelty for these restrictions.",
+  "id": "consecutive_non_orientable_embedding_obstructions",
+  "model": "gpt-6-astra",
+  "usd": 1.093735,
+  "eur": 1.132885,
+  "elapsed_s": 870.5,
+  "status": "completed",
+  "response_id": "resp_011612ea7d98b241006aaae32e8aac87d283b661b951f0e297",
+  "when": "2026-09-16T18:57:24Z"
+}

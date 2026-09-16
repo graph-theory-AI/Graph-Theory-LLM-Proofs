@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A constructive forest-completion criterion proves Hamiltonicity whenever one face-color class contains at most two nonquadrilateral faces.",
+  "would_publish": false,
+  "caveats": "This does not settle the general conjecture; novelty is not claimed, and the argument does not rely on the supplied literature review.",
+  "id": "barnettes_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.76349,
+  "eur": 0.790819,
+  "elapsed_s": 797.6,
+  "status": "completed",
+  "response_id": "resp_01e263229b85a18a006aaae123941887d2b5ff271c6df28e5f",
+  "when": "2026-09-16T18:47:29Z"
+}

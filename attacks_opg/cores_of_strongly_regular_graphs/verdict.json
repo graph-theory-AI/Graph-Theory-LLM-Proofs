@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "Yes: the primitive case satisfies the stronger isomorphism-or-clique-image dichotomy, and the imprimitive cases have complete cores.",
+  "would_publish": false,
+  "caveats": "This is a self-contained exposition of the known resolution reported in the supplied catalog, not a claim of novelty.",
+  "id": "cores_of_strongly_regular_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.54571,
+  "eur": 0.565244,
+  "elapsed_s": 401.9,
+  "status": "completed",
+  "response_id": "resp_02f99edd69ef071a006aaae3437b8487d2bf649191081a77a1",
+  "when": "2026-09-16T18:49:57Z"
+}

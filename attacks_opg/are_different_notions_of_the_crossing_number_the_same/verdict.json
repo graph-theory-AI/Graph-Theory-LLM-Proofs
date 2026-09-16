@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Equality holds if some pair-crossing-optimal drawing has a crossing graph whose connected components are split graphs; the general conjecture is not resolved.",
+  "would_publish": false,
+  "caveats": "A self-contained structural special case and drawing-dependent bound; novelty is not claimed.",
+  "id": "are_different_notions_of_the_crossing_number_the_same",
+  "model": "gpt-6-astra",
+  "usd": 0.932835,
+  "eur": 0.966226,
+  "elapsed_s": 863.7,
+  "status": "completed",
+  "response_id": "resp_07c89a11d6053c31006aaae11ee3a887d2803e43902fcb63a8",
+  "when": "2026-09-16T18:48:30Z"
+}
