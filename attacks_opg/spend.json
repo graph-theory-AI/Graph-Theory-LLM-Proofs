@@ -1,0 +1,24 @@
+{
+  "budget_eur": 600.0,
+  "eur_per_usd": 1.0357947977479733,
+  "usd_per_eur": 0.965442192,
+  "fx_as_of": "2026-08-31-openai-prepaid",
+  "safety_margin_eur": 5.0,
+  "conservative_max_usd_per_call": 8.0,
+  "spent_usd": 0.0,
+  "spent_eur": 0.0,
+  "reserved_usd": 24.0,
+  "in_flight": 3,
+  "n_calls": 0,
+  "n_attacks": 0,
+  "stopped": false,
+  "stop_reason": null,
+  "budget_history": [
+    {
+      "when": "2026-09-16T00:00:00Z",
+      "from_eur": 0.0,
+      "to_eur": 600.0,
+      "note": "Third prepaid wallet (EUR 600) for the gpt-6-astra sweep over the 227-problem OpenProblemGarden corpus. Separate from attacks/spend.json (arXiv/Sol campaign). FX carried over from the second wallet."
+    }
+  ]
+}

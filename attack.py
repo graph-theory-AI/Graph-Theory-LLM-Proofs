@@ -43,21 +43,42 @@ _PRINT_LOCK = threading.Lock()
 _CATALOG_INDEX: dict[str, dict] | None = None
 
 MODEL = "gpt-5.6-sol"
+CORPUS = "arxiv"
+SERVICE_TIER = "default"
 SITE_ARXIV = "https://graph-theory-ai.github.io/graph-conjectures/arxiv/{id}/"
 SITE_OPG = "https://graph-theory-ai.github.io/graph-conjectures/op/{slug}/"
 ARXIV_ABS = "https://arxiv.org/abs/{arxiv_id}"
 ARXIV_HTML = "https://arxiv.org/html/{arxiv_id}"
 
-# Promo rates through 2026-11-21 (OpenAI). Reasoning tokens bill as output.
-PRICE = {
-    "input": 4.00 / 1_000_000,
-    "cached_input": 0.40 / 1_000_000,
-    "output": 20.00 / 1_000_000,
-    "long_input": 8.00 / 1_000_000,
-    "long_cached": 0.80 / 1_000_000,
-    "long_output": 30.00 / 1_000_000,
-    "long_threshold": 272_000,
+# USD per token. Reasoning tokens bill as output. Long tier applies to the whole
+# request once the prompt exceeds `long_threshold` tokens.
+MODEL_PRICES = {
+    # gpt-5.6-sol promo rates through 2026-11-21.
+    "gpt-5.6-sol": {
+        "input": 4.00 / 1_000_000,
+        "cached_input": 0.40 / 1_000_000,
+        "output": 20.00 / 1_000_000,
+        "long_input": 8.00 / 1_000_000,
+        "long_cached": 0.80 / 1_000_000,
+        "long_output": 30.00 / 1_000_000,
+        "long_threshold": 272_000,
+    },
+    # developers.openai.com/api/docs/pricing, checked 2026-09-16.
+    "gpt-6-astra": {
+        "input": 10.00 / 1_000_000,
+        "cached_input": 1.00 / 1_000_000,
+        "output": 50.00 / 1_000_000,
+        "long_input": 20.00 / 1_000_000,
+        "long_cached": 2.00 / 1_000_000,
+        "long_output": 75.00 / 1_000_000,
+        "long_threshold": 272_000,
+    },
 }
+
+# Multiplies every rate. Batch and flex are half price, fast/priority double.
+TIER_MULTIPLIER = {"default": 1.0, "flex": 0.5, "batch": 0.5, "priority": 2.0}
+
+PRICE = MODEL_PRICES[MODEL]
 
 INSTRUCTIONS = """\
 You are a research mathematician attacking an open graph-theory conjecture.
@@ -216,17 +237,21 @@ def remaining(spend: dict) -> dict:
     }
 
 
+def tier_mult() -> float:
+    return TIER_MULTIPLIER.get(SERVICE_TIER, 1.0)
+
+
 def price_usd(input_tokens: int, output_tokens: int, cached_tokens: int = 0) -> float:
+    mult = tier_mult()
     long_ctx = input_tokens > PRICE["long_threshold"]
+    uncached = max(input_tokens - cached_tokens, 0)
     if long_ctx:
-        uncached = max(input_tokens - cached_tokens, 0)
-        return (
+        return mult * (
             uncached * PRICE["long_input"]
             + cached_tokens * PRICE["long_cached"]
             + output_tokens * PRICE["long_output"]
         )
-    uncached = max(input_tokens - cached_tokens, 0)
-    return (
+    return mult * (
         uncached * PRICE["input"]
         + cached_tokens * PRICE["cached_input"]
         + output_tokens * PRICE["output"]
@@ -379,6 +404,55 @@ def catalog_index() -> dict[str, dict]:
     return out
 
 
+_OPG_ROWS: list[dict] | None = None
+
+
+def opg_index() -> dict[str, dict]:
+    """Map OpenProblemGarden slugs to their catalog/problems.json records."""
+    data = json.loads((CATALOG / "problems.json").read_text())
+    return {rec["slug"]: rec for rec in data}
+
+
+def opg_records() -> list[dict]:
+    """OpenProblemGarden rows, easiest-looking first.
+
+    OPG has no difficulty ranking, so we order by the two proxies it does carry:
+    problems flagged accessible to undergraduates first, then by ascending
+    importance stars (Low, Medium, High, Outstanding), then by slug. The order
+    only matters if the budget runs out before the corpus does.
+    """
+    global _OPG_ROWS
+    if _OPG_ROWS is not None:
+        return _OPG_ROWS
+    rows = []
+    for rec in opg_index().values():
+        imp = rec.get("importance") or {}
+        subj = rec.get("subject_path") or []
+        rows.append(
+            {
+                "id": rec["slug"],
+                "tier": imp.get("stars"),
+                "score": float(imp.get("stars") or 0),
+                "lean": None,
+                "status": "open",
+                "title_md": rec.get("title") or rec["slug"],
+                "paper": rec.get("canonical_url") or "",
+                "source": "opg",
+                "url": SITE_OPG.format(slug=rec["slug"]),
+                "importance": imp.get("label"),
+                "undergrad": bool(rec.get("accessible_to_undergrads")),
+                "subject": subj[-1]["label"] if subj else "",
+            }
+        )
+    rows.sort(key=lambda r: (not r["undergrad"], r["score"], r["id"]))
+    _OPG_ROWS = rows
+    return rows
+
+
+def corpus_records() -> list[dict]:
+    return opg_records() if CORPUS == "opg" else parse_ranking()
+
+
 def attacked_ids() -> set[str]:
     done = set()
     if not ATTACKS.exists():
@@ -417,7 +491,7 @@ def is_busy(path: Path) -> bool:
 def claim_next() -> dict | None:
     """Pick the next easiest complete record and mark it claimed."""
     with SpendLock():
-        for rec in parse_ranking():
+        for rec in corpus_records():
             dest = ATTACKS / rec["id"]
             if dest.exists() and is_busy(dest):
                 continue
@@ -431,20 +505,64 @@ def claim_next() -> dict | None:
 
 
 def cmd_queue(args: argparse.Namespace) -> None:
-    rows = parse_ranking()
-    QUEUE_PATH.write_text(json.dumps(rows, indent=2) + "\n")
+    rows = corpus_records()
+    if CORPUS != "opg":
+        QUEUE_PATH.write_text(json.dumps(rows, indent=2) + "\n")
     done = attacked_ids()
     pending = [r for r in rows if r["id"] not in done]
     n = args.n or 15
-    print(f"{len(rows)} open/partial arXiv records; {len(done)} attacked; {len(pending)} pending")
-    print(f"easiest {n}:")
+    label = "OpenProblemGarden" if CORPUS == "opg" else "open/partial arXiv"
+    print(f"{len(rows)} {label} records; {len(done)} attacked; {len(pending)} pending")
+    print(f"first {n}:")
     for r in pending[:n]:
-        print(
-            f"  tier {r['tier']}  {r['score']:.2f}  {r['status']:8}  {r['id']:22}  {r['paper'][:60]}"
-        )
+        if CORPUS == "opg":
+            flag = "ugrad" if r.get("undergrad") else "     "
+            print(f"  {r.get('importance') or '?':11} {flag}  {r['id'][:58]:58}  {r.get('subject') or ''}")
+        else:
+            print(
+                f"  tier {r['tier']}  {r['score']:.2f}  {r['status']:8}  {r['id']:22}  {r['paper'][:60]}"
+            )
+
+
+def fetch_opg_dossier(rec: dict) -> dict:
+    page_url = rec["url"]
+    try:
+        page_text = html_to_text(http_get(page_url))
+    except Exception as exc:  # noqa: BLE001
+        page_text = f"(failed to fetch {page_url}: {exc})"
+    cat = opg_index().get(rec["id"]) or {}
+    refs = []
+    for ref in (cat.get("references") or [])[:20]:
+        line = html_to_text(ref.get("raw_html") or "").strip()
+        if line:
+            refs.append(f"- {line}")
+    return {
+        "id": rec["id"],
+        "url": page_url,
+        "source": "opg",
+        "arxiv_id": None,
+        "page_text": page_text[:20000],
+        "abstract": "",
+        "tier": rec.get("tier"),
+        "score": rec.get("score"),
+        "lean": None,
+        "status": rec.get("status"),
+        "paper": cat.get("canonical_url") or "",
+        "catalog_title": cat.get("title") or rec.get("title_md") or "",
+        "importance": (cat.get("importance") or {}).get("raw")
+        or (cat.get("importance") or {}).get("label"),
+        "posted": cat.get("posted_at"),
+        "authors": ", ".join(a.get("label", "") for a in (cat.get("authors") or [])),
+        "subject": " » ".join(x.get("label", "") for x in (cat.get("subject_path") or [])),
+        "statement_text": (cat.get("statement_text") or "")[:8000],
+        "context_text": (cat.get("discussion_text") or "")[:6000],
+        "references_text": "\n".join(refs)[:4000],
+    }
 
 
 def fetch_dossier(rec: dict) -> dict:
+    if rec.get("source") == "opg" or CORPUS == "opg":
+        return fetch_opg_dossier(rec)
     page_url = rec["url"]
     try:
         page_html = http_get(page_url)
@@ -482,7 +600,35 @@ def fetch_dossier(rec: dict) -> dict:
     }
 
 
+def build_opg_prompt(d: dict) -> str:
+    parts = [
+        "Attack the following open graph-theory problem.",
+        "",
+        f"Catalog id: {d['id']}",
+        f"Source: OpenProblemGarden (importance: {d.get('importance') or 'unknown'})",
+        f"Subject: {d.get('subject') or 'Graph Theory'}",
+        f"Catalog page: {d['url']}",
+        f"Original entry: {d.get('paper')}",
+    ]
+    if d.get("authors"):
+        parts.append(f"Problem attributed to: {d['authors']} (posted {d.get('posted')})")
+    parts += [
+        "",
+        "=== Problem statement (OpenProblemGarden) ===",
+        f"Title: {d.get('catalog_title') or ''}",
+        d.get("statement_text") or "(no statement text in the catalog JSON)",
+    ]
+    if d.get("context_text"):
+        parts += ["", "=== Discussion / context (OpenProblemGarden) ===", d["context_text"]]
+    if d.get("references_text"):
+        parts += ["", "=== References listed by OpenProblemGarden ===", d["references_text"]]
+    parts += ["", "=== Catalog page (statement + literature review) ===", d["page_text"]]
+    return "\n".join(parts) + "\n"
+
+
 def build_prompt(dossier: dict) -> str:
+    if dossier.get("source") == "opg":
+        return build_opg_prompt(dossier)
     extracted = ""
     stmt = (dossier.get("statement_text") or "").strip()
     if stmt:
@@ -586,6 +732,8 @@ def call_sol(prompt: str, max_output_tokens: int, timeout_s: int):
         reasoning={"effort": "max", "mode": "pro", "summary": "auto"},
         store=True,
     )
+    if SERVICE_TIER != "default":
+        kwargs["service_tier"] = SERVICE_TIER
     last_exc: Exception | None = None
     for attempt in range(8):
         try:
@@ -643,7 +791,7 @@ def cmd_spend(_: argparse.Namespace) -> None:
 
 
 def select_records(args: argparse.Namespace) -> list[dict]:
-    rows = parse_ranking()
+    rows = corpus_records()
     by_id = {r["id"]: r for r in rows}
     done = attacked_ids()
     if args.id:
@@ -735,6 +883,8 @@ def attack_one(rec: dict, max_out: int, timeout_s: int, force: bool = False) -> 
                     },
                     "started": utc_now(),
                     "model": MODEL,
+                    "service_tier": SERVICE_TIER,
+                    "corpus": CORPUS,
                     "reasoning": {"effort": "max", "mode": "pro"},
                 },
                 indent=2,
@@ -885,9 +1035,9 @@ def collect_verdicts() -> list[dict]:
 def write_results_md(rows: list[dict] | None = None) -> Path:
     """Write RESULTS.md from on-disk verdicts. Safe to run during a sweep."""
     rows = rows if rows is not None else collect_verdicts()
-    rank = {r["id"]: r for r in parse_ranking()}
+    rank = {r["id"]: r for r in corpus_records()}
     done = attacked_ids()
-    pending = [r for r in parse_ranking() if r["id"] not in done]
+    pending = [r for r in corpus_records() if r["id"] not in done]
     counts: dict[str, int] = {}
     publish: dict[str, int] = {}
     for row in rows:
@@ -1048,21 +1198,54 @@ def cmd_sweep(args: argparse.Namespace) -> None:
         print("DONE")
 
 
+def configure(args: argparse.Namespace) -> None:
+    """Apply the global --corpus/--model/--service-tier options.
+
+    The OPG campaign keeps its own output directory, budget and ledger so it
+    cannot disturb the arXiv/Sol artifacts already in `attacks/`.
+    """
+    global CORPUS, MODEL, PRICE, SERVICE_TIER
+    global ATTACKS, SPEND_PATH, LEDGER_PATH, LOCK_PATH, RESULTS_PATH
+    CORPUS = getattr(args, "corpus", None) or "arxiv"
+    MODEL = getattr(args, "model", None) or (
+        "gpt-6-astra" if CORPUS == "opg" else "gpt-5.6-sol"
+    )
+    if MODEL not in MODEL_PRICES:
+        raise SystemExit(f"no price table for model {MODEL!r}; add one to MODEL_PRICES")
+    PRICE = MODEL_PRICES[MODEL]
+    SERVICE_TIER = getattr(args, "service_tier", None) or "default"
+    if SERVICE_TIER not in TIER_MULTIPLIER:
+        raise SystemExit(f"unknown service tier {SERVICE_TIER!r}")
+    if CORPUS == "opg":
+        ATTACKS = ROOT / "attacks_opg"
+        RESULTS_PATH = ROOT / "RESULTS_OPG.md"
+        ATTACKS.mkdir(exist_ok=True)
+    SPEND_PATH = ATTACKS / "spend.json"
+    LEDGER_PATH = ATTACKS / "ledger.jsonl"
+    LOCK_PATH = ATTACKS / "spend.lock"
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
+    common = argparse.ArgumentParser(add_help=False)
+    common.add_argument("--corpus", choices=["arxiv", "opg"], default="arxiv",
+                        help="arxiv ranking (default) or the OpenProblemGarden catalog")
+    common.add_argument("--model", help="override the model (default: sol for arxiv, astra for opg)")
+    common.add_argument("--service-tier", choices=sorted(TIER_MULTIPLIER), default="default",
+                        help="flex and batch bill at half rate; priority at double")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
-    p_spend = sub.add_parser("spend", help="print remaining budget")
+    p_spend = sub.add_parser("spend", parents=[common], help="print remaining budget")
     p_spend.set_defaults(func=cmd_spend)
 
-    p_q = sub.add_parser("queue", help="rebuild easiest-first queue")
+    p_q = sub.add_parser("queue", parents=[common], help="rebuild easiest-first queue")
     p_q.add_argument("-n", type=int, default=15)
     p_q.set_defaults(func=cmd_queue)
 
-    p_sum = sub.add_parser("summary", help="write RESULTS.md from on-disk verdicts")
+    p_sum = sub.add_parser("summary", parents=[common], help="write RESULTS.md from on-disk verdicts")
     p_sum.set_defaults(func=cmd_summary)
 
-    p_run = sub.add_parser("run", help="attack one or more conjectures")
+    p_run = sub.add_parser("run", parents=[common], help="attack one or more conjectures")
     p_run.add_argument("--id", help="catalog id, e.g. 2402.10782__01")
     p_run.add_argument("--next", action="store_true", help="next unattacked easiest record")
     p_run.add_argument("--limit", type=int, help="max number of new attacks this invocation")
@@ -1070,7 +1253,7 @@ def main() -> None:
     p_run.add_argument("--timeout", type=int, default=10_800, help="seconds")
     p_run.set_defaults(func=cmd_run)
 
-    p_sw = sub.add_parser("sweep", help="parallel attacks until budget or time is gone")
+    p_sw = sub.add_parser("sweep", parents=[common], help="parallel attacks until budget or time is gone")
     p_sw.add_argument("--jobs", type=int, default=24, help="concurrent Sol calls")
     p_sw.add_argument("--hours", type=float, default=5.0, help="wall-clock cap")
     p_sw.add_argument("--max-output-tokens", type=int, default=128_000)
@@ -1078,6 +1261,7 @@ def main() -> None:
     p_sw.set_defaults(func=cmd_sweep)
 
     args = ap.parse_args()
+    configure(args)
     args.func(args)
 
 

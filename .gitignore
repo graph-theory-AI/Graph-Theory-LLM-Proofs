@@ -18,3 +18,8 @@ attacks/inflight-recover.json
 
 # LaTeX build dirs (to_review PDFs are kept)
 .build/
+attacks_opg/**/raw.json
+attacks_opg/**/encrypted_reasoning.json
+attacks_opg/**/claimed.json
+attacks_opg/spend.lock
+attacks_opg/*.log
