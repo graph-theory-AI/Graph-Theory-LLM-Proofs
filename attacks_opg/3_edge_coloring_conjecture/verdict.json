@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every cycle of length at most nine in a 3-edge-colorable cubic graph contains a removable edge, so any counterexample must have girth at least ten and at least 62 vertices.",
+  "would_publish": false,
+  "caveats": "The general high-girth case is not settled, and no novelty claim is made for this partial result.",
+  "id": "3_edge_coloring_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.863085,
+  "eur": 0.893979,
+  "elapsed_s": 921.5,
+  "status": "completed",
+  "response_id": "resp_0e97cbc00e2addac006aaac7cc582487d29c49dd5f7b3f5e78",
+  "when": "2026-09-16T17:01:25Z"
+}

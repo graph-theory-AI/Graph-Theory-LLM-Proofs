@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "arc_disjoint_strongly_connected_spanning_subdigraphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Arc-disjoint strongly connected spanning subdigraphs",
+    "paper": "http://www.openproblemgarden.org/op/arc_disjoint_strongly_connected_spanning_subdigraphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/arc_disjoint_strongly_connected_spanning_subdigraphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "arc_disjoint_strongly_connected_spanning_subdigraphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/arc_disjoint_strongly_connected_spanning_subdigraphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/arc_disjoint_strongly_connected_spanning_subdigraphs",
+    "catalog_title": "Arc-disjoint strongly connected spanning subdigraphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-02",
+    "authors": "Bang-Jensen, Joergen, Yeo, Anders",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture There exists an ineteger $ k $ so that every $ k $ -arc-connected digraph contains a pair of arc-disjoint strongly connected spanning subdigraphs?",
+    "context_text": "Bang-Jensen and Yeo [BY] proved the conjecture for several classes like tournaments. There is stronger conjecture for tournaments . Yeo (See [BG, Theorem 13.10.1]) showed that it is NP-complete to decide whether a 2-regular digraph has two arc-disjoint strongly connected spanning subdigraphs. A similar question can be asked about arc-disjoint out-branching and in-branching . Several related problems are mentioned in the survey of Bang-Jensen and Kriesell [BK].",
+    "references_text": "- [BG] J. Bang-Jensen, G. Gutin, Digraphs: Theory, Algorithms and Applications, 2nd. ed., Springer Verlag (2009).\n- [BK] J. Bang-Jensen, M. Kriesell, Disjoint sub(di)graphs in digraphs, Electronic Notes in Discrete Mathematics 34 (2009), 179-183.\n- *[BY] J. Bang-Jensen, A. Yeo, Decomposing k-arc-strong tournaments into strong spanning subdigraphs, Combinatorica 24 (2004), 331-349."
+  },
+  "started": "2026-09-16T17:09:01Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

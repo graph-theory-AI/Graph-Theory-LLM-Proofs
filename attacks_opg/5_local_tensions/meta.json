@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "5_local_tensions",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "5-local-tensions",
+    "paper": "http://www.openproblemgarden.org/op/5_local_tensions",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/5_local_tensions/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Coloring"
+  },
+  "dossier_meta": {
+    "id": "5_local_tensions",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/5_local_tensions/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/5_local_tensions",
+    "catalog_title": "5-local-tensions",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-06-22",
+    "authors": "DeVos, Matt",
+    "subject": "Graph Theory \u00bb Topological Graph Theory \u00bb Coloring",
+    "statement_text": "Conjecture There exists a fixed constant $ c $ (probably $ c=4 $ suffices) so that every embedded (loopless) graph with edge-width $ \\ge c $ has a 5-local-tension.",
+    "context_text": "The edge-width of an embedded graph is the length of the shortest non-contractible cycle. Definition Let $ G $ be a directed graph, let $ \\Gamma $ be an abelian group, and let $ \\phi : E(G) \\rightarrow \\Gamma $ . Define the height of a walk $ W $ to be the sum of $ \\phi $ on the forward edges of $ W $ minus the sum of $ \\phi $ on the backward edges of $ W $ (edges are counted according to multiplicity). We call $ \\phi $ a tension if the height of every closed walk is zero, and if $ G $ is an embedded graph, we call $ \\phi $ a local-tension if the height of every closed walk which forms a contractible curve is zero. If in addition, $ \\Gamma = {\\mathbb Z} $ and $ 0 < \\phi(e) < k $ for some $ k \\in {\\mathbb Z} $ , we say that $ \\phi $ is a $ k $ - tension or a $ k $ - local-tension . If we reverse an edge $ e $ and replace $ \\phi(e) $ by $ -\\phi(e) $ , this preserves the properties of tension or local-tension. Accordingly, we say that an undirected graph (embedded graph) $ G $ has a $ k $ -tension ( $ k $ -local-tension) if some and thus every orientation of it admits such a map. Proposition A graph has a $ k $ -tension if and only if it is $ k $ -colorable. Proof To see the \"if\" direction, let $ f : V(G) \\rightarrow \\{0,\\ldots,k-1\\} $ be a coloring, orient the edges of $ G $ arbitrarily, and defining $ \\phi : E(G) \\rightarrow {\\mathbb Z} $ by the rule $ \\phi(uv) = f(v) - f(u) $ . It is straightforward to check that $ \\phi $ is a $ k $ -tension. For the \"only if\" direction, let $ \\phi : E(G) \\rightarrow {\\mathbb Z} $ be a $ k $ -tension. Now choose a point $ u \\in V(G) $ and define the map $ f : V(G) \\rightarrow {\\mathbb Z}_k $ by the rule that $ f(v) $ is the height of some (and thus every) walk from $ u $ to $ v $ modulo $ k $ . Again, it is straightforward to check that this defines a proper $ k $ -coloring. For graphs on orientable surfaces, local-tensions are dual to flows. More precisely, if $ G $ and $ G^* $ are dual graphs embedded in an orientable surface, then $ G $ has a $ k $ -local-tension if and only if $ G^* $ has a nowhere-zero $ k $ -flow. On non-orientable surfaces, there is a duality between $ k $ -local-tensions in $ G $ and nowhere-zero $ k $ -flows in a bidirected $ G^* $ . Based on this duality we have a couple of conjectures. The first follows from Tutte's 5-flow conjecture , the second from Bouchet's 6-flow conjecture . Conjecture (Tutte) Every loopless graph embedded in an orientable surface has a 5-local-tension. Conjecture (Bouchet) Every loopless graph embedded in any surface has a 6-local-tension. So although, graphs on surfaces may have high chromatic number, thanks to some partial results toward the above conjectures, we know that they always have small local-tensions. For orientable surfaces, there is a famous Conjecture of Grunbaum which is equivalent to the following. Conjecture (Grunbaum) If $ G $ is a simple loopless graph embedded in an orientable surface with edge-width $ \\ge 3 $ , then $ G $ has a 4-local-tension. On non-orientable surfaces, it is known that there are graphs of arbitrarily high edge-width which do not admit 4-local-tensions (see [DGMVZ]). However, it remains open whether sufficiently high edge-width forces the existence of a 5-local-tension. Indeed, as suggested by the conjecture at the start of this page, it may be that edge-width at least 4 is enough. Edge-width 3 does not suffice since the embedding of $ K_6 $ in the projective plane does not admit a 5-local-tension.",
+    "references_text": "- *[DGMVZ] M. DeVos, L. Goddyn, B. Mohar, D. Vertigan, and X. Zhu, Coloring-flow duality of embedded graphs. Trans. Amer. Math. Soc. 357 (2005), no. 10 MathSciNet"
+  },
+  "started": "2026-09-16T16:59:58Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

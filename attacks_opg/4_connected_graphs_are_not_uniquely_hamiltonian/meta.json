@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "4_connected_graphs_are_not_uniquely_hamiltonian",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "4-connected graphs are not uniquely hamiltonian",
+    "paper": "http://www.openproblemgarden.org/op/4_connected_graphs_are_not_uniquely_hamiltonian",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/4_connected_graphs_are_not_uniquely_hamiltonian/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Cycles"
+  },
+  "dossier_meta": {
+    "id": "4_connected_graphs_are_not_uniquely_hamiltonian",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/4_connected_graphs_are_not_uniquely_hamiltonian/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/4_connected_graphs_are_not_uniquely_hamiltonian",
+    "catalog_title": "4-connected graphs are not uniquely hamiltonian",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-11",
+    "authors": "Fleischner, Herbert",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Cycles",
+    "statement_text": "Conjecture Every $ 4 $ -connected graph with a Hamilton cycle has a second Hamilton cycle.",
+    "context_text": "",
+    "references_text": "- *[F] H. Fleischner, Uniquely Hamiltonian graphs of minimum degree four,, J. Graph Theory, to appear."
+  },
+  "started": "2026-09-16T16:59:38Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

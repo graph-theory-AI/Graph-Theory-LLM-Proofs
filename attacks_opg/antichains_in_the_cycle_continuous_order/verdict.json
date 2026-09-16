@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The supplied catalog records \u0160\u00e1mal\u2019s affirmative solution, strengthened to an embedding of every countable poset into the cycle-continuous quasi-order.",
+  "would_publish": false,
+  "caveats": "This uses the published resolution identified in the supplied catalog; its nontrivial construction is not independently checked or reproduced here.",
+  "id": "antichains_in_the_cycle_continuous_order",
+  "model": "gpt-6-astra",
+  "usd": 0.194575,
+  "eur": 0.20154,
+  "elapsed_s": 168.5,
+  "status": "completed",
+  "response_id": "resp_0364d293970c5b71006aaacb5cfdd487d28fd1bb4d09be877d",
+  "when": "2026-09-16T17:04:05Z"
+}

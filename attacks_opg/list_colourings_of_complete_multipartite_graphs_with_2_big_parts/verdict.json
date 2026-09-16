@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I characterize all pairs with phi(a,b) at most 1 and give an explicit general square-root lower bound, but do not determine phi for general pairs.",
+  "would_publish": false,
+  "caveats": "Novelty relative to existing work is unverified; no matching general upper bound is established.",
+  "id": "list_colourings_of_complete_multipartite_graphs_with_2_big_parts",
+  "model": "gpt-6-astra",
+  "usd": 1.4703,
+  "eur": 1.522929,
+  "elapsed_s": 1132.8,
+  "status": "completed",
+  "response_id": "resp_0675773f89370389006aaac6f1baec87d2bb841d0aaf54b72d",
+  "when": "2026-09-16T17:01:16Z"
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "a_generalization_of_vizings_theorem",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "A generalization of Vizing's Theorem?",
+    "paper": "http://www.openproblemgarden.org/op/a_generalization_of_vizings_theorem",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/a_generalization_of_vizings_theorem/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Edge coloring"
+  },
+  "dossier_meta": {
+    "id": "a_generalization_of_vizings_theorem",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/a_generalization_of_vizings_theorem/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/a_generalization_of_vizings_theorem",
+    "catalog_title": "A generalization of Vizing's Theorem?",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-04-11",
+    "authors": "Rosenfeld, Moshe",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Edge coloring",
+    "statement_text": "Conjecture Let $ H $ be a simple $ d $ - uniform hypergraph, and assume that every set of $ d-1 $ points is contained in at most $ r $ edges. Then there exists an $ r+d-1 $ -edge-coloring so that any two edges which share $ d-1 $ vertices have distinct colors.",
+    "context_text": "Vizing's Theorem is equivalent to the above statement for $ d=2 $ . For higher dimensions, this problem looks difficult since the main tool used in the proof of Vizing's theorem (Kempe chains) do not appear to work.",
+    "references_text": ""
+  },
+  "started": "2026-09-16T16:59:58Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

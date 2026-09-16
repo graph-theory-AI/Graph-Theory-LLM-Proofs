@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain sharp subclass suprema, including an explicit family of planar triangulations approaching circular choosability 6, and quantitative bounds for K_{2,n}, but do not improve the general upper bound 8.",
+  "would_publish": false,
+  "caveats": "The general 6\u20138 gap is unchanged; novelty of the subclass results has not been established.",
+  "id": "circular_choosability_of_planar_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.94222,
+  "eur": 0.975947,
+  "elapsed_s": 773.9,
+  "status": "completed",
+  "response_id": "resp_04d8cc45d52fdb7c006aaaca26f2c487d2ac57843718ebb9ec",
+  "when": "2026-09-16T17:09:00Z"
+}

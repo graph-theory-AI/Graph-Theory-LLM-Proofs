@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "antidirected_trees_in_digraphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Antidirected trees in digraphs",
+    "paper": "http://www.openproblemgarden.org/op/antidirected_trees_in_digraphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/antidirected_trees_in_digraphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "antidirected_trees_in_digraphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/antidirected_trees_in_digraphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/antidirected_trees_in_digraphs",
+    "catalog_title": "Antidirected trees in digraphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-02-26",
+    "authors": "Addario-Berry, Louigi, Havet, Fr\u00e9d\u00e9ric, Linhares Sales, Claudia, Reed, Bruce A., Thomass\u00e9, St\u00e9phan",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "An antidirected tree is an orientation of a tree in which every vertex has either indegree 0 or outdergree 0. Conjecture Let $ D $ be a digraph. If $ |A(D)| > (k-2) |V(D)| $ , then $ D $ contains every antidirected tree of order $ k $ .",
+    "context_text": "The value $ k-2 $ would be best possible, since the oriented tree consisting of a vertex dominating $ k-1 $ other vertices is not contained in any digraph in which every vertex has outdegree $ k-2 $ . The condition on the trees be antidirected cannot be suppressed. In a bipartite digraph $ D $ with bipartition $ (A,B) $ such that all arcs are directed from $ A $ to $ B $ , all the trees contained in $ D $ are antidirected. This conjecture for symmetric digraphs is equivalent to the celebrated Erd\u00f6s-Sos conjecture for undirected graphs. (see [E]). Conjecture Let $ G $ be a graph. If $ |E(G)| > \\frac{1}{2} (k-2) |V(G)| $ , then $ G $ contains every tree of order $ k $ . Addario-Berry et al. Conjecture also implies Burr's conjecture (see Oriented trees in n-chromatic digraphs ) for antidirected trees, since every digraph with chromatic number $ 2k-2 $ contains a colour-critical digraph has minimum degree at least $ 2k-3 $ , and so whose number of vertices is at least $ \\frac{2k-3}{2}|V(D)| $ , which exceeds $ (k-2) |V(D)| $ . This conjecture has only been proved [AHL+] for antidirected trees of diameter at most $ 3 $ .",
+    "references_text": "- *[AHL+] L. Addario-Berry, F. Havet, C. Linhares Sales, B. Reed, and S. Thomass\u00e9. Oriented trees in digraphs. Discrete Mathematics, 313(8):967-974, 2013.\n- [E] P. Erd\u00f6s, Some problems in graph theory, Theory of Graphs and Its Applications, M. Fielder, Editor, Academic Press, New York, 1965, pp. 29--36."
+  },
+  "started": "2026-09-16T17:01:25Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

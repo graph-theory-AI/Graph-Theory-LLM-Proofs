@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "Noncomplete powers of cycles have equivalence covering number \u0398(log(k+1)), contradicting the proposed \u03a9(k) lower bound.",
+  "would_publish": true,
+  "caveats": "Bibliographic novelty is unverified; an exact formula is obtained when k+1 divides n, but not for every n.",
+  "id": "covering_powers_of_cycles_with_equivalence_subgraphs",
+  "model": "gpt-6-astra",
+  "usd": 0.77041,
+  "eur": 0.797987,
+  "elapsed_s": 603.3,
+  "status": "completed",
+  "response_id": "resp_0cbbb540489c5ab2006aaaca5a3d6c87d289bc72f7daf35490",
+  "when": "2026-09-16T17:07:01Z"
+}

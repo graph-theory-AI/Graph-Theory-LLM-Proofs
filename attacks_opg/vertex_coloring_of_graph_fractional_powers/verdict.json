@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The triangular prism P is an explicit counterexample: \u03c7(P^{3/5}) = 6 while \u03c9(P^{3/5}) = 5.",
+  "would_publish": false,
+  "caveats": "No novelty is claimed; the self-contained proof below does not depend on verifying the catalog's bibliographic details.",
+  "id": "vertex_coloring_of_graph_fractional_powers",
+  "model": "gpt-6-astra",
+  "usd": 0.512165,
+  "eur": 0.530498,
+  "elapsed_s": 352.0,
+  "status": "completed",
+  "response_id": "resp_05a73cc3d818499f006aaac9d15ca887d2859462607bd22dcb",
+  "when": "2026-09-16T17:00:33Z"
+}

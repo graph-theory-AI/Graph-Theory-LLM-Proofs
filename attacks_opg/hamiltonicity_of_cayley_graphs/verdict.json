@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A constructive subgroup-splicing argument proves Hamiltonicity for conjugacy-invariant connection sets and yields an additional central-generator criterion.",
+  "would_publish": false,
+  "caveats": "The arbitrary-connection-set case is not resolved; no novelty is claimed for these special cases.",
+  "id": "hamiltonicity_of_cayley_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.638125,
+  "eur": 0.660967,
+  "elapsed_s": 743.4,
+  "status": "completed",
+  "response_id": "resp_053d6ebeb14d30e7006aaac827786487d2b9beb3e464850f40",
+  "when": "2026-09-16T16:59:58Z"
+}

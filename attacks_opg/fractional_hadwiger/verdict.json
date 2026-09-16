@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Part (c) holds for induced-2K2-free graphs with independence number at most six, and an additive bound holds for larger independence number.",
+  "would_publish": false,
+  "caveats": "Uses proved small-order Hadwiger cases; the unrestricted conjectures remain unresolved here, and novelty of the restricted result is not claimed.",
+  "id": "fractional_hadwiger",
+  "model": "gpt-6-astra",
+  "usd": 1.190785,
+  "eur": 1.233409,
+  "elapsed_s": 937.6,
+  "status": "completed",
+  "response_id": "resp_02eb39c37313d663006aaac6f1a98087d2a73ef5ccc84c845a",
+  "when": "2026-09-16T16:58:01Z"
+}

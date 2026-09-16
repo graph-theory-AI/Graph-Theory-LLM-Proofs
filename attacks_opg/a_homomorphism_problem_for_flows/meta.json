@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "a_homomorphism_problem_for_flows",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "A homomorphism problem for flows",
+    "paper": "http://www.openproblemgarden.org/op/a_homomorphism_problem_for_flows",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/a_homomorphism_problem_for_flows/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Nowhere-zero flows"
+  },
+  "dossier_meta": {
+    "id": "a_homomorphism_problem_for_flows",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/a_homomorphism_problem_for_flows/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/a_homomorphism_problem_for_flows",
+    "catalog_title": "A homomorphism problem for flows",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-03-07",
+    "authors": "DeVos, Matt",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Nowhere-zero flows",
+    "statement_text": "Conjecture Let $ M,M' $ be abelian groups and let $ B \\subseteq M $ and $ B' \\subseteq M' $ satisfy $ B=-B $ and $ B' = -B' $ . If there is a homomorphism from $ Cayley(M,B) $ to $ Cayley(M',B') $ , then every graph with a B-flow has a B'-flow.",
+    "context_text": "Definition: Let $ G $ be a directed graph, Let $ M $ be an abelian group, and let $ B $ be a subset of $ M $ such that $ B=-B $ . We say that a flow or a tension $ \\phi:E(G) \\rightarrow M $ is a $ B $ -flow or a $ B $ -tension if the range is a subset of $ B $ . If $ \\phi $ is a $ B $ -flow ( $ B $ -tension) of $ G $ and we reverse the direction of the edge $ e $ , then we may obtain a new $ B $ -flow ( $ B $ -tension) by changing $ \\phi(e) $ to $ -\\phi(e) $ . Thus, the existence of a $ B $ -flow or $ B $ -tension does not depend on the orientation, and we say that an undirected graph has a $ B $ -flow or a $ B $ -tension if some (and thus every) orientation of it admits such a map. We define the Cayley graph $ Cayley(M,B) $ to be the simple graph with vertex set $ M $ in which two vertices $ u,v $ are joined by an edge if and only if $ u-v \\in B $ . It is well known that a graph has a $ B $ -tension if and only if it has a homomorphism to $ Cayley(M,B) $ . So, if $ M,M',B,B' $ are as in the conjecture and there is a homomorphism from $ Cayley(M,B) $ to $ Cayley(M',B') $ , then every graph G with a $ B $ -tension has a $ B' $ -tension. This follows from the previous sentence and the fact that the composition of two homomorphisms is another homomorphism. In essence, the above conjecture states that the same equivalence should hold true for flows. If $ H $ and $ H^* $ are directed planar dual graphs (each edge of $ H^* $ crosses left to right over the corresponding edge of $ H $ ), then a map $ \\phi:E(H) \\to M $ is a tension if and only if the dual map $ \\phi^*:E(H^*) \\to M $ ( $ \\phi^* $ is given by the rule $ \\phi^*(e^*)=\\phi(e) $ ) is a flow of $ H^* $ . Thus, planar duality exchanges flows and tensions. For two undirected planar dual graphs, $ G $ and $ G^* $ we have that G has a $ B $ -flow if and only if $ G^* $ has a $ B $ -tension. It follows from this duality and the observation from the previous paragraph, that the above conjecture is true for planar graphs. This conjecture is also known in the special case when $ B=M\\setminus \\{0\\} $ and $ B'=M'\\setminus \\{0\\} $ . In this case, $ Cayley(M,B) $ and $ Cayley(M',B') $ are the complete graphs on $ |M| $ and $ |M'| $ vertices respectively, so there is a homomorphism from $ Cayley(M,B) $ to $ Cayley(M',B') $ if and only if $ |M'| $ is greater than or equal to $ |M| $ . Thus, in this case the conjecture is equivalent to the assertion that every graph with a nowhere-zero $ M $ -flow also has a nowhere-zero $ M' $ -flow if $ |M'| $ is at least $ |M| $ . This statement is true by a result of Tutte.",
+    "references_text": ""
+  },
+  "started": "2026-09-16T17:00:33Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

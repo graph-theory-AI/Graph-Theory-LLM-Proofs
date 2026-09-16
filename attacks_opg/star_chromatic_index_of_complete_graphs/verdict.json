@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An indexed-block packing argument gives chi_s'(K_n) >= 3n - O(1), but does not resolve whether O(n) colors suffice.",
+  "would_publish": false,
+  "caveats": "Linearity remains unresolved; novelty of the lower bound has not been checked.",
+  "id": "star_chromatic_index_of_complete_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.0187,
+  "eur": 1.055164,
+  "elapsed_s": 821.5,
+  "status": "completed",
+  "response_id": "resp_0b9f3fdf715391f9006aaac7c4b45087d2a3ed420d718857ed",
+  "when": "2026-09-16T16:59:38Z"
+}

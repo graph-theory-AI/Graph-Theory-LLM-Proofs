@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove an exact-member criterion that yields the conjecture for non-3-edge-colourable cubic graphs whenever deleting the prescribed circuit leaves a 3-edge-colourable graph.",
+  "would_publish": false,
+  "caveats": "The general containment problem is not settled here; novelty of the criterion is not claimed.",
+  "id": "strong_5_cycle_double_cover_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.00256,
+  "eur": 1.038446,
+  "elapsed_s": 1033.3,
+  "status": "completed",
+  "response_id": "resp_09f67f95f5589a75006aaac9a91ee887d2bd714ced998d7596",
+  "when": "2026-09-16T17:11:14Z"
+}

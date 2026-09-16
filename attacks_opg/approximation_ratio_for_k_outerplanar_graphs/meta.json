@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "approximation_ratio_for_k_outerplanar_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Approximation ratio for k-outerplanar graphs",
+    "paper": "http://www.openproblemgarden.org/op/approximation_ratio_for_k_outerplanar_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/approximation_ratio_for_k_outerplanar_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "approximation_ratio_for_k_outerplanar_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/approximation_ratio_for_k_outerplanar_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/approximation_ratio_for_k_outerplanar_graphs",
+    "catalog_title": "Approximation ratio for k-outerplanar graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2010-04-18",
+    "authors": "Bentz, Cedric",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture Is the approximation ratio for the Maximum Edge Disjoint Paths (MaxEDP) or the Maximum Integer Multiflow problem (MaxIMF) bounded by a constant in $ k $ -outerplanar graphs or tree-width graphs?",
+    "context_text": "Assume a flow graph $ G = (V, E) $ with $ n $ vertices and $ m $ edges ( Flow network ). Each edge has a capacity function $ c: E \\rightarrow \\mathbb{Z}^+ $ . The graph contains a list $ \\mathcal{N} $ of terminal vertices called sources ( $ s_i $ ) and sinks ( $ s_i' $ ). Each pair ( $ s_i, s_i' $ ) defines a net or commodity. A Multiflow is a way of routing commodities from their sources to the respective sinks while ensuring that the flow of each commodity is conserved at each non-terminal vertex and that the sum of the flows of all commodities through an edge does not exceed the capacity of the edge. The Maximum Integer Multiflow problem (MaxIMF) seeks to maximize the number of flow units routed between the nets in the graph. The Maximum Edge Disjoint Paths (MaxEDP) problem seeks to find the maximum number of disjoint paths between the sources and sinks. When the capacities for all edges are set to one, MaxIMF simplifies into the MaxEDP problem. Is the approximation ratio ( Approximation and integrality gap ) for MaxEDP or MaxIMF bounded by a constant in $ k $ -outerplanar graphs ( Outerplanar graphs ) or tree-width graphs?",
+    "references_text": "- C. Bentz, \u201cDisjoint paths in sparse graphs,\u201d Discrete Appl. Math., vol. 157, no. 17, pp. 3558\u20133568, 2009"
+  },
+  "started": "2026-09-16T17:01:43Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

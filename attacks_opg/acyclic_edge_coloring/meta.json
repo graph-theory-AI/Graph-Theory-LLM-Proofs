@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "acyclic_edge_coloring",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Acyclic edge-colouring",
+    "paper": "http://www.openproblemgarden.org/op/acyclic_edge_coloring",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/acyclic_edge_coloring/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Edge coloring"
+  },
+  "dossier_meta": {
+    "id": "acyclic_edge_coloring",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/acyclic_edge_coloring/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/acyclic_edge_coloring",
+    "catalog_title": "Acyclic edge-colouring",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-03-07",
+    "authors": "Fiamcik, Jozef",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Edge coloring",
+    "statement_text": "Conjecture Every simple graph with maximum degree $ \\Delta $ has a proper $ (\\Delta+2) $ - edge-colouring so that every cycle contains edges of at least three distinct colours.",
+    "context_text": "An edge-colouring with the property that every cycle contains edges of at least three distinct colours is called an acyclic edge-colouring. It is known (see [AMR]) that every graph of maximum degree $ \\Delta $ has an acyclic edge-colouring of size $ O(\\Delta ) $ . The best upper bound so far is $ 4\\Delta -4 $ and is due to Esperet and Parreau [EP]. It is also known (see [ASZ]) that this conjecture is true for graphs with girth at least $ C \\Delta \\log(\\Delta ) $ (for some fixed constant $ C $ ).",
+    "references_text": "- [AMR] N. Alon, C. McDiarmid and B. Reed, Acyclic colouring of graphs, Random Structures and Algorithms 2 (1991), 277-288. MathSciNet\n- [ASZ] N. Alon, B. Sudakov and A. Zaks, Acyclic edge-colorings of graphs, J. Graph Theory 37 (2001), 157-167. MathSciNet\n- [EP] L. Esperet and A. Parreau, Acyclic edge-coloring using entropy compression, arXiv:1206.1535 [math.CO]."
+  },
+  "started": "2026-09-16T17:00:52Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

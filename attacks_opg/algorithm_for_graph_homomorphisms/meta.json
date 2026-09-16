@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "algorithm_for_graph_homomorphisms",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Algorithm for graph homomorphisms",
+    "paper": "http://www.openproblemgarden.org/op/algorithm_for_graph_homomorphisms",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/algorithm_for_graph_homomorphisms/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Homomorphisms"
+  },
+  "dossier_meta": {
+    "id": "algorithm_for_graph_homomorphisms",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/algorithm_for_graph_homomorphisms/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/algorithm_for_graph_homomorphisms",
+    "catalog_title": "Algorithm for graph homomorphisms",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2010-07-08",
+    "authors": "Fomin, Fedor V., Heggernes, Pinar, Kratsch, Dieter",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Homomorphisms",
+    "statement_text": "Question Is there an algorithm that decides, for input graphs $ G $ and $ H $ , whether there exists a homomorphism from $ G $ to $ H $ in time $ O(c^{|V(G)|+|V(H)|}) $ for some constant $ c $ ?",
+    "context_text": "An affirmative answer is known in several cases: if $ H=K_k $ (graph coloring) [L], [BH], [K]; if $ H $ has bounded treewidth [FHK]; if $ H $ has bounded cliquewidth [W].",
+    "references_text": "- [BH] Andreas Bj\u00f6rklund, Thore Husfeldt: Inclusion--Exclusion Algorithms for Counting Set Partitions, Proc. FOCS'06 (2006).\n- *[FHK] Fedor V. Fomin, Pinar Heggernes, Dieter Kratsch: Exact Algorithms for Graph Homomorphisms, Theory Comput. Syst. 41 (2007), no. 2, 381--393. MathSciNet\n- [K] Mikko Koivisto: An Algorithm for Graph Coloring and Other Partitioning Problems via Inclusion--Exclusion, Proc. FOCS'06 (2006).\n- [L] Eugene L. Lawler: A note on the complexity of the chromatic number problem, Information Processing Lett. 5 (1976), no. 3, 66--67. MathSciNet\n- [W] Magnus Wahlstr\u00f6m: New Plain-Exponential Time Classs for Graph Homomorphism, CSR2009, LNCS5675 (2009), 346--355."
+  },
+  "started": "2026-09-16T17:01:09Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

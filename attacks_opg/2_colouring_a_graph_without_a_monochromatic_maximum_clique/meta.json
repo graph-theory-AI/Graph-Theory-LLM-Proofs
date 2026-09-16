@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "2_colouring_a_graph_without_a_monochromatic_maximum_clique",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "2-colouring a graph without a monochromatic maximum clique",
+    "paper": "http://www.openproblemgarden.org/op/2_colouring_a_graph_without_a_monochromatic_maximum_clique",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/2_colouring_a_graph_without_a_monochromatic_maximum_clique/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "2_colouring_a_graph_without_a_monochromatic_maximum_clique",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/2_colouring_a_graph_without_a_monochromatic_maximum_clique/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/2_colouring_a_graph_without_a_monochromatic_maximum_clique",
+    "catalog_title": "2-colouring a graph without a monochromatic maximum clique",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-08-25",
+    "authors": "Hoang, Chinh T., McDiarmid, Colin",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Conjecture If $ G $ is a non-empty graph containing no induced odd cycle of length at least $ 5 $ , then there is a $ 2 $ -vertex colouring of $ G $ in which no maximum clique is monochromatic.",
+    "context_text": "A $ 2 $ -division of a graph $ G $ is a partitioning of $ G $ into two subgraphs, neither of which contains a maximum clique. It is known that every perfect graph admits a $ 2 $ -division. Thus, by the Strong Perfect Graph Theorem [CRS], a graph which does not contain an induced copy of an odd cycle of length at least $ 5 $ or its complement has a $ 2 $ -division. Ho\u00e0ng and McDiarmid [HMcD] also prove that a claw-free graph admits a 2-division if and only if it does not contain an induced odd cycle of length at least $ 5 $ . The conjecture says that this holds for all graphs. This problem was featured as unsolved problem #49 in Bondy and Murty's book \"Graph Theory\" [BM]. See also a posting on the American Institute of Mathematics website, contributed by Bruce Reed.",
+    "references_text": "- [CRS] Maria Chudnovsky, Neil Robertson, Paul Seymour, Robin Thomas: The strong perfect graph theorem, Ann. of Math. (2) 164 (2006), no. 1, 51--229. MathSciNet\n- [HMcD] C.T. Ho\u00e0ng, C. McDiarmid, On the divisibility of graphs, Discrete Math. 242 (1\u20133) (2002) 145\u2013156.\n- [BM] J. A. Bondy and U. S. R. Murty. Graph theory, volume 244 of Graduate Texts in Mathematics. Springer, New York, 2008."
+  },
+  "started": "2026-09-16T16:58:02Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "approximation_ratio_for_maximum_edge_disjoint_paths_problem",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Approximation Ratio for Maximum Edge Disjoint Paths problem",
+    "paper": "http://www.openproblemgarden.org/op/approximation_ratio_for_maximum_edge_disjoint_paths_problem",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/approximation_ratio_for_maximum_edge_disjoint_paths_problem/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "approximation_ratio_for_maximum_edge_disjoint_paths_problem",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/approximation_ratio_for_maximum_edge_disjoint_paths_problem/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/approximation_ratio_for_maximum_edge_disjoint_paths_problem",
+    "catalog_title": "Approximation Ratio for Maximum Edge Disjoint Paths problem",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2010-04-18",
+    "authors": "Bentz, Cedric",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture Can the approximation ratio $ O(\\sqrt{n}) $ be improved for the Maximum Edge Disjoint Paths problem (MaxEDP) in planar graphs or can an inapproximability result stronger than $ \\mathcal{APX} $ -hardness?",
+    "context_text": "Assume a flow graph $ G = (V, E) $ with $ n $ vertices and $ m $ edges. Each edge has a capacity function $ c: E \\rightarrow \\mathbb{Z}^+ $ ( Flow network ). The graph contains a list $ \\mathcal{N} $ of terminal vertices called sources ( $ s_i $ ) and sinks ( $ s_i' $ ). Each pair ( $ s_i, s_i' $ ) defines a net or commodity. A Multiflow is a way of routing commodities from their sources to the respective sinks while ensuring that the flow of each commodity is conserved at each non-terminal vertex and that the sum of the flows of all commodities through an edge does not exceed the capacity of the edge. The Maximum Integer Multiflow problem (MaxIMF) seeks to maximize the number of flow units routed between the nets in the graph. The Maximum Edge Disjoint Paths (MaxEDP) problem seeks to find the maximum number of disjoint paths between the sources and sinks. When the capacities for all edges are set to one, MaxIMF simplifies into the MaxEDP problem. Bentz provides an algorithm to find the MaxEDP with a proven approximation ratio ( Approximation and integrality gap ) of $ O(\\sqrt{n}) $ . Can the approximation ratio be improved for MaxEDP in planar graphs, or can an inapproximability result stronger than $ \\mathcal{APX} $ -hardness be proved for this problem? And what about the general graphs?",
+    "references_text": "- C\u00e9dric Bentz, Edge disjoint paths and max integral muliflow/min multicut theorems in planar graphs, Electronic Notes in Discrete Mathematics 22 (2005), 55\u201360"
+  },
+  "started": "2026-09-16T17:04:05Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

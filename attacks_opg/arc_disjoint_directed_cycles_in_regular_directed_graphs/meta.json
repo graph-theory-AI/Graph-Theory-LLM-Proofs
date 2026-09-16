@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "arc_disjoint_directed_cycles_in_regular_directed_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Arc-disjoint directed cycles in regular directed graphs",
+    "paper": "http://www.openproblemgarden.org/op/arc_disjoint_directed_cycles_in_regular_directed_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/arc_disjoint_directed_cycles_in_regular_directed_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "arc_disjoint_directed_cycles_in_regular_directed_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/arc_disjoint_directed_cycles_in_regular_directed_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/arc_disjoint_directed_cycles_in_regular_directed_graphs",
+    "catalog_title": "Arc-disjoint directed cycles in regular directed graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-05-17",
+    "authors": "Alon, Noga, McDiarmid, Colin, Molloy, Michael",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "Conjecture If $ G $ is a $ k $ -regular directed graph with no parallel arcs, then $ G $ contains a collection of $ {k+1 \\choose 2} $ arc-disjoint directed cycles.",
+    "context_text": "If true, $ {k+1 \\choose 2} $ would be best possible as shown by the complete symmetric digraph. Alon et al. [AMM] showed that a $ k $ -regular directed graph with no parallel arcs contains at least $ \\frac{3}{2^{19}}k^2 $ arc-disjoint directed cycles. It was then improved by Alon [A] who showed that every directed graph with minimum outdegree at least $ k $ contains at least $ \\frac{1}{128}k^2 $ arc-disjoint directed cycles.",
+    "references_text": "- [A} N. Alon, Disjoint directed cycles, J. Combinatorial Theory, Ser. B, 68 (1996), 167-178.\n- *[AMM] N. Alon, C. McDiarmid and M. Molloy, Edge-disjoint cycles in regular directed graphs, J. Graph Theory, 22 (1996), no. 3, 231-237."
+  },
+  "started": "2026-09-16T17:07:01Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
