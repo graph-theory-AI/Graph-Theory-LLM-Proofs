@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 1,
+    "score": 5.0,
+    "tier": 5,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2402.08418__00",
+    "title_md": "[Conjecture 1.12](https://arxiv.org/abs/2402.08418)",
+    "paper": "Variations on Sidorenko's conjecture in tournaments",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2402.08418__00/"
+  },
+  "dossier_meta": {
+    "id": "2402.08418__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2402.08418__00/",
+    "arxiv_id": "2402.08418",
+    "tier": 5,
+    "score": 5.0,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Variations on Sidorenko's conjecture in tournaments",
+    "catalog_title": "Conjecture 1.12",
+    "statement_text": "For every undirected tree, there exists some orientation that has the tournament anti-Sidorenko property.",
+    "context_text": "After characterising exactly which orientations of stars are tournament anti-Sidorenko (Theorem 1.11), the authors note it is natural to ask whether every undirected tree admits at least one anti-Sidorenko orientation. They confirm the conjecture for all undirected trees with at most one vertex of even degree (Proposition 1.13)."
+  },
+  "started": "2026-09-16T20:29:04Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

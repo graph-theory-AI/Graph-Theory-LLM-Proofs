@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain an explicit polynomial bound for every cograph H and determine the exact maximum-degree bound for H = P3, but do not resolve arbitrary H.",
+  "would_publish": false,
+  "caveats": "Self-contained special cases only; no novelty or general resolution is claimed.",
+  "id": "1803.03588__00",
+  "model": "gpt-6-astra",
+  "usd": 1.19238,
+  "eur": 1.235061,
+  "elapsed_s": 882.6,
+  "status": "completed",
+  "response_id": "resp_0d00889c851396ad006aaafae786a087d293cb96ac843c1772",
+  "when": "2026-09-16T20:38:49Z"
+}

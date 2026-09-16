@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Explicit quadratic obstructions and a sublinear, order-dependent sufficient degree bound are obtained, but not the conjectured absolute threshold.",
+  "would_publish": false,
+  "caveats": "No novelty or optimality is claimed; the order-independent conjecture remains unresolved here.",
+  "id": "1610.00876__00",
+  "model": "gpt-6-astra",
+  "usd": 1.035205,
+  "eur": 1.07226,
+  "elapsed_s": 796.9,
+  "status": "completed",
+  "response_id": "resp_0418daebe6099edd006aaafa07d6fc87d286cf5f31f60eb955",
+  "when": "2026-09-16T20:33:40Z"
+}

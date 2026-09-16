@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An additive gluing formula gives the linear bound for arbitrary 1- and 2-clique-sums of fixed-apex planar pieces.",
+  "would_publish": false,
+  "caveats": "This does not resolve positive-genus torsos or general three-vertex adhesions; novelty of the composition result is not claimed.",
+  "id": "1604.07976__01",
+  "model": "gpt-6-astra",
+  "usd": 0.944755,
+  "eur": 0.978572,
+  "elapsed_s": 936.4,
+  "status": "completed",
+  "response_id": "resp_02b4cb46a91518a0006aaaf9ba2c0487d28d9e5118dcc37f39",
+  "when": "2026-09-16T20:34:42Z"
+}

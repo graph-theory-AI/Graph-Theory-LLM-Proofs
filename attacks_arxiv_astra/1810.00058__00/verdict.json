@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "The displayed linear-linear statement is false already for H = K_3, by a sparse random-graph construction followed by vertex deletion.",
+  "would_publish": false,
+  "caveats": "This refutes the displayed formula, not the polynomial-linear conjecture in the supplied source abstract; the catalog appears to have lost an exponent.",
+  "id": "1810.00058__00",
+  "model": "gpt-6-astra",
+  "usd": 0.423245,
+  "eur": 0.438395,
+  "elapsed_s": 293.9,
+  "status": "completed",
+  "response_id": "resp_0efe2bb2f9d8793a006aaafbb2b05c87d2865ed5aa22f50be0",
+  "when": "2026-09-16T20:32:24Z"
+}

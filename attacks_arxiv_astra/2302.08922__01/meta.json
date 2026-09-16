@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 2,
+    "score": 5.0,
+    "tier": 5,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2302.08922__01",
+    "title_md": "[Polynomial bounds for the Gy\u00e1rf\u00e1s-Sumner conjecture](https://arxiv.org/abs/2302.08922)",
+    "paper": "A note on the Gy\u00e1rf\u00e1s-Sumner conjecture",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2302.08922__01/"
+  },
+  "dossier_meta": {
+    "id": "2302.08922__01",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2302.08922__01/",
+    "arxiv_id": "2302.08922",
+    "tier": 5,
+    "score": 5.0,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "A note on the Gy\u00e1rf\u00e1s-Sumner conjecture",
+    "catalog_title": "Polynomial bounds for the Gy\u00e1rf\u00e1s-Sumner conjecture",
+    "statement_text": "It is possible that the Gy\\'{a}rf\\'{a}s-Sumner conjecture holds with polynomial bounds; that is, 1.1 holds with a bound on the chromatic number that is polynomial in $t$.",
+    "context_text": "The authors note that polynomial bounds on the $\\chi$-bounding function have recently been established for trees not containing $P_5$ as an induced subgraph, and suggest that the full Gy\u00e1rf\u00e1s-Sumner conjecture may admit a polynomial $\\chi$-bounding function in $t$ for every fixed tree $T$."
+  },
+  "started": "2026-09-16T20:28:49Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

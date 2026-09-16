@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A maximum-clique decomposition gives explicit polynomial bounds for a star or a four-vertex path together with arbitrary disjoint edges and isolated vertices.",
+  "would_publish": false,
+  "caveats": "The arbitrary-forest case is unresolved here; these elementary special cases are not claimed to be new.",
+  "id": "2202.05557__00",
+  "model": "gpt-6-astra",
+  "usd": 0.810175,
+  "eur": 0.839175,
+  "elapsed_s": 704.1,
+  "status": "completed",
+  "response_id": "resp_025cf3db1208be10006aaafbd29c5487d2b0c013108d5306e8",
+  "when": "2026-09-16T20:39:46Z"
+}

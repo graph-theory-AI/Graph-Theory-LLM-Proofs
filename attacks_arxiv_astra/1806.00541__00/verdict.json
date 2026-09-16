@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove a clique-minor special case and a sharp rank obstruction to extending the usual unique-disjointness witness to sparse graphs of linear treewidth, but do not resolve the conjecture.",
+  "would_publish": false,
+  "caveats": "The positive bound is a standard special case; the obstruction is method-specific, and no novelty or literature-resolution claim is made.",
+  "id": "1806.00541__00",
+  "model": "gpt-6-astra",
+  "usd": 1.0312,
+  "eur": 1.068112,
+  "elapsed_s": 935.6,
+  "status": "completed",
+  "response_id": "resp_0013e421a0f0bf59006aaafa1aaa2087d290e8eb5666cfde2d",
+  "when": "2026-09-16T20:36:18Z"
+}

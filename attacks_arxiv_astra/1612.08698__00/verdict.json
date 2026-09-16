@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The weighted and unweighted versions are equivalent for this class, and an explicit family of 2-degenerate 3-list instances forces any universal constant for d=2 to be at most 1/4.",
+  "would_publish": false,
+  "caveats": "This does not settle the existence of a positive constant; novelty of the auxiliary results is not asserted.",
+  "id": "1612.08698__00",
+  "model": "gpt-6-astra",
+  "usd": 1.364635,
+  "eur": 1.413482,
+  "elapsed_s": 1042.0,
+  "status": "completed",
+  "response_id": "resp_0c91ad28a559fdc5006aaaf9c6e2dc87d2a7f87f055e343785",
+  "when": "2026-09-16T20:36:39Z"
+}
