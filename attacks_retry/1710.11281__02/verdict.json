@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Two cops force one fixed cop's distance to tend to zero on every smooth monotone polar double, a class containing variable-curvature spheres.",
+  "would_publish": false,
+  "caveats": "Special geometric hypotheses only; arbitrary surfaces and finite-time exact capture are not settled, and novelty of the special case has not been checked.",
+  "id": "1710.11281__02",
+  "model": "gpt-6-astra",
+  "usd": 0.951565,
+  "eur": 0.985626,
+  "elapsed_s": 1016.4,
+  "status": "completed",
+  "response_id": "resp_0536c91790683c5a006aaafff7eae087d295243c659e4d8c3c",
+  "when": "2026-09-16T21:02:38Z"
+}

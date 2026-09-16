@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For q=r-m>=2, I characterize exactly when the minimum is t+2q or t+2q+1, for both simple and parallel-edge hypergraphs.",
+  "would_publish": false,
+  "caveats": "The general minimum is not determined; novelty relative to the source paper and covering-design literature is unchecked.",
+  "id": "2308.15387__03",
+  "model": "gpt-6-astra",
+  "usd": 0.979025,
+  "eur": 1.014069,
+  "elapsed_s": 833.0,
+  "status": "completed",
+  "response_id": "resp_0b5e938e7de77a74006aab02d8d05487d29a9775f196ece4e4",
+  "when": "2026-09-16T21:11:53Z"
+}

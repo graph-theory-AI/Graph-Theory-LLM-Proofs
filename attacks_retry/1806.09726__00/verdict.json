@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A self-contained argument gives the sharp special-case estimate r\u0303_rand(5,n) = \u0398((n/log n)^(8/3)), but does not resolve the diagonal or large-m asymptotics.",
+  "would_publish": false,
+  "caveats": "This is consistent with the intended large-m interpretation of part (b); the small-clique query exponent is already known, and no novelty is claimed.",
+  "id": "1806.09726__00",
+  "model": "gpt-6-astra",
+  "usd": 0.815585,
+  "eur": 0.844779,
+  "elapsed_s": 746.7,
+  "status": "completed",
+  "response_id": "resp_099a257288e4e5d4006aaafff7f1bc87d2840383dde9c9ead9",
+  "when": "2026-09-16T20:58:08Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For the intended even-order conjecture, I prove the cases n=6,8, derive unconditional general lower bounds, and establish the sharp lower bound for a natural class of drawings.",
+  "would_publish": false,
+  "caveats": "The general even-order conjecture remains unresolved here; novelty and best-known status of these partial results have not been checked.",
+  "id": "2009.03418__00",
+  "model": "gpt-6-astra",
+  "usd": 1.64092,
+  "eur": 1.699656,
+  "elapsed_s": 1261.3,
+  "status": "completed",
+  "response_id": "resp_06fd8ba6f120dd00006aaafff8cd0c87d2a358a6bba69bf99e",
+  "when": "2026-09-16T21:06:43Z"
+}

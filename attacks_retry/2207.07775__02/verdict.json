@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For genuine generalized lollipops, Tur\u00e1n is optimal among clique-partition graphons and is a strict local minimum under sufficiently small per-vertex recoloring.",
+  "would_publish": false,
+  "caveats": "Global extremality remains unproved; the local and restricted results below are not claimed to be literature-new.",
+  "id": "2207.07775__02",
+  "model": "gpt-6-astra",
+  "usd": 0.986355,
+  "eur": 1.021661,
+  "elapsed_s": 922.9,
+  "status": "completed",
+  "response_id": "resp_0317bfa76b09fe28006aaafff7ec4887d2a122ce8fd846105f",
+  "when": "2026-09-16T21:01:05Z"
+}

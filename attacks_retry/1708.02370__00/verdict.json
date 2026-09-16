@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain a clustered-colouring bound within one colour of optimal for excluded cycles, and deduce the conjectured bound for every wheel.",
+  "would_publish": false,
+  "caveats": "Uses the established bounded-treedepth theorem supplied in the question; novelty of these corollaries is not claimed, and the general conjecture remains unresolved.",
+  "id": "1708.02370__00",
+  "model": "gpt-6-astra",
+  "usd": 0.878575,
+  "eur": 0.910023,
+  "elapsed_s": 858.2,
+  "status": "completed",
+  "response_id": "resp_01a19a0d96452f64006aab00887acc87d291a1a94d3c77d243",
+  "when": "2026-09-16T21:02:26Z"
+}

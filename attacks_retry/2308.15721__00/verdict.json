@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The corrected conjecture holds for C5, all stars, and all K_{2,t}; its defective equality also holds for every complete bipartite target.",
+  "would_publish": false,
+  "caveats": "Uses the ordinary-minor defective theorem quoted in the prompt; novelty is not claimed, and the general conjecture remains open.",
+  "id": "2308.15721__00",
+  "model": "gpt-6-astra",
+  "usd": 1.151595,
+  "eur": 1.192816,
+  "elapsed_s": 1016.8,
+  "status": "completed",
+  "response_id": "resp_08373da3bab8ab2d006aaafff976d087d2a60835ab08728749",
+  "when": "2026-09-16T21:02:39Z"
+}
