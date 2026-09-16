@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "For an n-vertex graph with an edge, the circular mixing threshold is rational, with reduced numerator at most n+1.",
+  "would_publish": true,
+  "caveats": "Finite loopless graphs; edgeless graphs require the usual lower-end normalization. Integrality and attainment are not established.",
+  "id": "mixing_circular_colourings_0",
+  "model": "gpt-6-astra",
+  "usd": 0.76129,
+  "eur": 0.78854,
+  "elapsed_s": 815.5,
+  "status": "completed",
+  "response_id": "resp_0fbcea3dfba7afac006aaac066d54c87d288c967900ae2fc99",
+  "when": "2026-09-16T16:28:05Z"
+}

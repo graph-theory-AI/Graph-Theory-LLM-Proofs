@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "mixing_circular_colourings_0",
+    "tier": 1,
+    "score": 1.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Mixing Circular Colourings",
+    "paper": "http://www.openproblemgarden.org/op/mixing_circular_colourings_0",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/mixing_circular_colourings_0/",
+    "importance": "Low",
+    "undergrad": true,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "mixing_circular_colourings_0",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/mixing_circular_colourings_0/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 1,
+    "score": 1.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/mixing_circular_colourings_0",
+    "catalog_title": "Mixing Circular Colourings",
+    "importance": "Low \u272d",
+    "posted": "2012-09-22",
+    "authors": "Brewster, Richard C., Noel, Jonathan A.",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Question Is $ \\mathfrak{M}_c(G) $ always rational?",
+    "context_text": "Given a proper $ k $ -colouring $ f $ of a graph $ G $ , consider the following 'mixing process:' \\item choose a vertex $ v\\in V(G) $ ; \\item change the colour of $ v $ (if possible) to yield a different $ k $ -colouring $ f' $ of $ G $ . A natural problem arises: Can every $ k $ -colouring of $ G $ be generated from $ f $ by repeatedly applying this process? If so, we say that $ G $ is $ k $ -mixing . The problem of determining if a graph is $ k $ -mixing and several related problems have been studied in a series of recent papers [1,2,4-6]. The authors of [4] provide examples which show that a graph can be $ k $ -mixing but not $ k' $ -mixing for integers $ k' > k $ . For example, given $ m\\geq3 $ consider the bipartite graph $ L_m $ which is obtained by deleting a perfect matching from $ K_{m,m} $ . It is an easy exercise to show that for $ L_m $ is $ k $ -mixing if and only if $ k\\geq3 $ and $ k\\neq m $ . This example motivates the following definition. Definition Define the mixing threshold of $ G $ to be $$\\mathfrak{M}(G) := \\min\\{\\ell\\in\\mathbb{N}: G\\text{ is }k\\text{-mixing whenever } k\\geq\\ell\\}.$$ An analogous definition can be made for circular colouring. Recall, a $ (k,q) $ -colouring of a graph is a mapping $ f:V(G)\\to \\{0,1,\\dots,k-1\\} $ such that if $ uv\\in E(G) $ , then $ q\\leq |f(u)-f(v)|\\leq k-q $ . As with ordinary colourings, we say that a graph $ G $ is $ (k,q) $ -mixing if all $ (k,q) $ -colourings of $ G $ can be generated from a single $ (k,q) $ -colouring $ f $ by recolouring one vertex at a time. Definition Define the circular mixing threshold of $ G $ to be $$\\mathfrak{M}_c(G) := \\inf\\{\\ell\\in\\mathbb{Q}: G\\text{ is }(k,q)\\text{-mixing whenever } k/q \\geq\\ell\\}.$$ Several bounds on the circular mixing threshold are obtained in [3], including the following which relates the circular mixing threshold to the mixing threshold. Theorem (Brewster and Noel $ [3)</b> $ ] For every graph $ G $ , $$\\mathfrak{M}_c(G)\\leq\\max\\left\\{\\frac{|V(G)|+1}{2}, \\mathfrak{M}(G)\\right\\}.$$ As a corollary, we have the following: if $ |V(G)|\\leq 2\\mathfrak{M}(G)-1 $ , then $ \\mathfrak{M}_c(G)\\leq \\mathfrak{M}(G) $ . However, examples in [3] show that the ratio $ \\mathfrak{M}_c/\\mathfrak{M} $ can be arbitrarily large in general. Regarding the problem of determining if $ \\mathfrak{M}_c $ is rational, it is worth mentioning that there are no known examples of graphs $ G $ for which $ \\mathfrak{M}_c(G) $ is not an integer. Other problems are also given in [3]. One can check that $ \\mathfrak{M}_c(K_2) = 2 $ and $ \\mathfrak{M}(K_2) = 3 $ . However, the only graphs which are known to satisfy $ \\mathfrak{M}_c < \\mathfrak{M} $ are in some sense related to $ K_2 $ , eg. trees and complete bipartite graphs. Question Is there a non-bipartite graph $ G $ such that $ \\mathfrak{M}_c(G) < \\mathfrak{M}(G) $ ? Using an example from [4], it is shown in [3] that if $ m\\geq2 $ is an integer, then there is a graph $ G $ such that $ \\mathfrak{M}_c(G) = \\chi(G) = m $ if and only if $ m\\neq 3 $ . A natural question to ask is whether a similar result holds for the circular chromatic number. Again, certain bipartite graphs are an exception. Question Is there a non-bipartite graph $ G $ such that $ \\mathfrak{M}_c(G) =\\chi_c(G) $ ? Also, the example of $ K_2 $ shows that the circular mixing threshold is, in general, not attained. However, the following problem is open. Question Is the circular mixing threshold always attained for non-bipartite graphs? For more precise versions of the last three questions, see [3].",
+    "references_text": "- [1] P. Bonsma and L. Cereceda. Finding paths between graph colourings: PSPACE-completeness and superpolynomial distances. Theoret. Comput. Sci. 410 (2009), (50): 5215--5226.\n- [2] P. Bonsma, L. Cereceda, J. van den Heuvel, and M. Johnson. Finding paths between graph colourings: Computational complexity and possible distances. Electronic Notes in Discrete Mathematics 29 (2007): 463--469.\n- *[3] R. C. Brewster and J. A. Noel. Mixing Homomorphisms and Extending Circular Colourings. Submitted. pdf.\n- [4] L. Cereceda, J. van den Heuvel, and M. Johnson. Connectedness of the graph of vertex-colourings. Discrete Math. 308 (2008), (5-6): 913--919.\n- [5] L. Cereceda, J. van den Heuvel, and M. Johnson. Mixing 3-colourings in bipartite graphs. European J. Combin. 30 (2009), (7): 1593--1606.\n- [6] L. Cereceda, J. van den Heuvel, and M. Johnson. Finding paths between 3-colorings. Journal of Graph Theory, 67 (2011), (1): 69--82.\n- [7] J. A. Noel. \"Jonathan Noel - Mixing Circular Colourings.\" Webpage."
+  },
+  "started": "2026-09-16T16:14:29Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

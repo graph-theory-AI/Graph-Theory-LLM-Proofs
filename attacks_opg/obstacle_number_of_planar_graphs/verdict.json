@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A graph grown from a seed H by isolated, pendant, and twin additions has obstacle number at most max(1, the number of nonedges of H).",
+  "would_publish": false,
+  "caveats": "The universal planar bound is not settled here, and novelty of the special-case bound is not asserted.",
+  "id": "obstacle_number_of_planar_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.251645,
+  "eur": 1.296447,
+  "elapsed_s": 1201.8,
+  "status": "completed",
+  "response_id": "resp_0d201f1332ea2390006aaac066e60c87d2b5c43d31e880f8df",
+  "when": "2026-09-16T16:34:31Z"
+}

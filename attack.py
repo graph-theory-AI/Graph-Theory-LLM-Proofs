@@ -1077,7 +1077,7 @@ def write_results_md(rows: list[dict] | None = None) -> Path:
             url = cat.get("url") or SITE_ARXIV.format(id=rec_id)
             pub = "yes" if r.get("would_publish") else "no"
             lines.append(
-                f"| [`{rec_id}`]({url}) · [artifact](attacks/{rec_id}/) | "
+                f"| [`{rec_id}`]({url}) · [artifact]({ATTACKS.name}/{rec_id}/) | "
                 f"{_md_cell(str(r.get('confidence') or ''))} | {pub} | "
                 f"{_md_cell(str(r.get('one_line') or ''))} |"
             )
@@ -1114,9 +1114,10 @@ def write_results_md(rows: list[dict] | None = None) -> Path:
         pending_lines.append("Skipped without a call: " + ", ".join(f"`{s}`" for s in skipped))
         pending_lines.append("")
 
+    attacks_dir = ATTACKS.name
     body = f"""# Results
 
-Auto-generated from `attacks/*/verdict.json` by `python attack.py summary`.
+Auto-generated from `{attacks_dir}/*/verdict.json` by `python attack.py summary`.
 **These are unrefereed model self-reports.** A `proved` / `disproved` label is
 not a theorem. `would_publish` is the model's own claim that it would submit
 the writeup to a journal.
