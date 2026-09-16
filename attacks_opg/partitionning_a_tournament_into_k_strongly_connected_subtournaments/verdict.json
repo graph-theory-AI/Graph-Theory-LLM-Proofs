@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The established uniform partition theorem gives an affirmative answer, with g(k_1,...,k_p) <= C p max_i k_i for an absolute constant C.",
+  "would_publish": false,
+  "caveats": "This applies a published theorem rather than providing a new proof; the optimal threshold for unequal k_i is not determined here.",
+  "id": "partitionning_a_tournament_into_k_strongly_connected_subtournaments",
+  "model": "gpt-6-astra",
+  "usd": 0.227545,
+  "eur": 0.23569,
+  "elapsed_s": 193.1,
+  "status": "completed",
+  "response_id": "resp_0acfdc504b6cf518006aaadbbf59b087d28404db39f38fea63",
+  "when": "2026-09-16T18:14:24Z"
+}

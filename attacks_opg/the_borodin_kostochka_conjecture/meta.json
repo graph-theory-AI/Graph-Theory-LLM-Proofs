@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "the_borodin_kostochka_conjecture",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "The Borodin-Kostochka Conjecture",
+    "paper": "http://www.openproblemgarden.org/op/the_borodin_kostochka_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/the_borodin_kostochka_conjecture/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "the_borodin_kostochka_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/the_borodin_kostochka_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/the_borodin_kostochka_conjecture",
+    "catalog_title": "The Borodin-Kostochka Conjecture",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2012-09-10",
+    "authors": "Borodin, Oleg V., Kostochka, Alexandr V.",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture Every graph with maximum degree $ \\Delta \\geq 9 $ has chromatic number at most $ \\max\\{\\Delta-1, \\omega\\} $ .",
+    "context_text": "The Borodin-Kostochka conjecture proposes that for any graph $ G $ with maximum degree $ \\Delta $ and clique number $ \\omega < \\Delta $ , $ G $ is $ \\Delta-1 $ colourable so long as $ \\Delta $ is sufficiently large (specifically, $ \\Delta\\geq 9 $ ). The requirement that $ \\Delta \\geq 9 $ is necessary, as one can see by looking at the strong product of $ C_5 $ and $ K_3 $ . Reed [R] proved that there exists a $ \\Delta_0 $ for which the conjecture holds whenever $ \\Delta \\geq \\Delta_0 $ . Specifically he proved that $ \\Delta_0 \\leq 10^{14} $ , but claims that more careful analysis could reduce $ \\Delta_0 $ to 1000. The conjecture was recently proven by Cranston and Rabern for claw-free graphs [CR]. In their paper they mention an unpublished strengthening proposed by Borodin and Kostochka, namely that one can replace the chromatic number in the statement of the conjecture with the list chromatic number.",
+    "references_text": "- [BK] O. V. Borodin and A. V. Kostochka. On an upper bound of a graph's chromatic number, depending on the graph's degree and density. JCTB 23 (1977), 247--250.\n- [CR] D. W. Cranston and L. Rabern. Coloring claw-free graphs with colors, arXiv 1206.1269, 2012.\n- [R] B. A. Reed. A strengthening of Brooks\u2019 Theorem. J. Comb. Theory Ser. B, 76:136\u2013149, 1999."
+  },
+  "started": "2026-09-16T18:20:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

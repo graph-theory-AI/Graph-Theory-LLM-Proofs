@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove two order-dependent sufficient bounds and the Eulerian case a=b=2, but do not settle the full additive-2 conjecture.",
+  "would_publish": false,
+  "caveats": "The general bounds depend on the number of vertices; the exact special case requires Eulerian parity, and no novelty is claimed.",
+  "id": "partitioning_edge_connectivity",
+  "model": "gpt-6-astra",
+  "usd": 1.03312,
+  "eur": 1.0701,
+  "elapsed_s": 807.4,
+  "status": "completed",
+  "response_id": "resp_01408ce32ae7c170006aaadb557ec087d2928360fc72fc7700",
+  "when": "2026-09-16T18:22:52Z"
+}

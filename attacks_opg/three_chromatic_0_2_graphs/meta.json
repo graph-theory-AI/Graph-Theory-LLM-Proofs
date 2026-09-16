@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "three_chromatic_0_2_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Three-chromatic (0,2)-graphs",
+    "paper": "http://www.openproblemgarden.org/op/three_chromatic_0_2_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/three_chromatic_0_2_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Coloring"
+  },
+  "dossier_meta": {
+    "id": "three_chromatic_0_2_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/three_chromatic_0_2_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/three_chromatic_0_2_graphs",
+    "catalog_title": "Three-chromatic (0,2)-graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-09-07",
+    "authors": "Payan, Charles",
+    "subject": "Graph Theory \u00bb Coloring",
+    "statement_text": "Question Are there any (0,2)-graphs with chromatic number exactly three?",
+    "context_text": "A (0,2)-graph is a graph such that every pair of distinct vertices has either 0 or 2 common neighbours. It is fairly easy to see that a (0,2)-graph is necessarily regular and a variety of other properties can be shown to hold. Although (0,2)-graphs with chromatic number 2, 4 and 5 are known it is open as to whether there can be any (0,2)-graphs with chromatic number exactly three.",
+    "references_text": "- *[P] Payan, Charles: On the chromatic number of cube-like graphs, Discrete Math. 103 (1992), no. 3, 271--277."
+  },
+  "started": "2026-09-16T18:23:28Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "simultaneous_partition_of_hypergraphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Simultaneous partition of hypergraphs",
+    "paper": "http://www.openproblemgarden.org/op/simultaneous_partition_of_hypergraphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/simultaneous_partition_of_hypergraphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Hypergraphs"
+  },
+  "dossier_meta": {
+    "id": "simultaneous_partition_of_hypergraphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/simultaneous_partition_of_hypergraphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/simultaneous_partition_of_hypergraphs",
+    "catalog_title": "Simultaneous partition of hypergraphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-06",
+    "authors": "K\u00fchn, Daniella, Osthus, Deryk",
+    "subject": "Graph Theory \u00bb Hypergraphs",
+    "statement_text": "Problem Let $ H_1 $ and $ H_2 $ be two $ r $ -uniform hypergraph on the same vertex set $ V $ . Does there always exist a partition of $ V $ into $ r $ classes $ V_1, \\dots , V_r $ such that for both $ i=1,2 $ , at least $ r!m_i/r^r -o(m_i) $ hyperedges of $ H_i $ meet each of the classes $ V_1, \\dots , V_r $ ?",
+    "context_text": "The bound on the number of hyperedges is what one would expect for a random partition. For graphs, the question was answered in the a\u000effirmative in [KO]. Keevash and Sudakov observed that the answer is negative if we consider many hypergraphs instead of just 2 (see [KO] for the example).",
+    "references_text": "- *[KO] D. K\u00fchn and D. Osthus, Maximizing several cuts simultaneously, Combinatorics, Probability and Computing 16 (2007), 277-283."
+  },
+  "started": "2026-09-16T18:13:54Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

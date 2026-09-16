@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The supplied C4-free theorem also settles g=5, and a self-contained sampling argument proves an all-g special case with explicit dependence on the number of degree scales.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved; the partial bounds are not claimed to be new.",
+  "id": "subgraph_of_large_average_degree_and_large_average_degree",
+  "model": "gpt-6-astra",
+  "usd": 0.819185,
+  "eur": 0.848508,
+  "elapsed_s": 643.3,
+  "status": "completed",
+  "response_id": "resp_0a37de726ed179cc006aaadccfb5c487d294ffef35111bbbde",
+  "when": "2026-09-16T18:26:26Z"
+}

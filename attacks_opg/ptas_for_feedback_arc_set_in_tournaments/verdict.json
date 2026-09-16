@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "Yes: Kenyon-Mathieu and Schudy established a PTAS for feedback arc set in tournaments at STOC 2007.",
+  "would_publish": false,
+  "caveats": "This invokes the published PTAS identified in the supplied catalog; it is not a new proof of that algorithm.",
+  "id": "ptas_for_feedback_arc_set_in_tournaments",
+  "model": "gpt-6-astra",
+  "usd": 0.14883,
+  "eur": 0.154157,
+  "elapsed_s": 111.0,
+  "status": "completed",
+  "response_id": "resp_0ae37f9094b2d378006aaadbea5ca487d296f1687b2ca1f7aa",
+  "when": "2026-09-16T18:13:45Z"
+}

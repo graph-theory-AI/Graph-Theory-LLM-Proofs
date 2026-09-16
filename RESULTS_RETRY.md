@@ -12,8 +12,8 @@ runs were not used.
 ## Counts
 
 Finished attacks with a verdict: **0**.
-Spend (promo ledger × prepaid FX): **€96.24** billed USD
-**$92.91** / budget €600
+Spend (promo ledger × prepaid FX): **€113.49** billed USD
+**$109.57** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
@@ -42,11 +42,11 @@ Spend (promo ledger × prepaid FX): **€96.24** billed USD
 
 ## Coverage
 
-The sweep queue is the easiest-first open/partial arXiv ranking (597
+The sweep queue is the easiest-first open/partial arXiv ranking (612
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **597** (plus 0 skipped without a model call).
+Queue records not yet attacked: **612** (plus 0 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
@@ -161,13 +161,28 @@ Queue records not yet attacked: **597** (plus 0 skipped without a model call).
 | [`intersecting_two_perfect_matchings`](https://graph-theory-ai.github.io/graph-conjectures/op/intersecting_two_perfect_matchings/) | 2 | 2.0 | http://www.openproblemgarden.org/op/intersecting_two_perfect_matchings |
 | [`jones_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/jones_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/jones_conjecture |
 | [`kriesells_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/kriesells_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/kriesells_conjecture |
+| [`large_induced_forest_in_a_planar_graph`](https://graph-theory-ai.github.io/graph-conjectures/op/large_induced_forest_in_a_planar_graph/) | 2 | 2.0 | http://www.openproblemgarden.org/op/large_induced_forest_in_a_planar_graph |
+| [`linear_hypergraphs_with_dimension_3`](https://graph-theory-ai.github.io/graph-conjectures/op/linear_hypergraphs_with_dimension_3/) | 2 | 2.0 | http://www.openproblemgarden.org/op/linear_hypergraphs_with_dimension_3 |
 | [`list_chromatic_number_and_maximum_degree_of_bipartite_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/list_chromatic_number_and_maximum_degree_of_bipartite_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/list_chromatic_number_and_maximum_degree_of_bipartite_graphs |
+| [`list_colorings_of_edge_critical_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/list_colorings_of_edge_critical_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/list_colorings_of_edge_critical_graphs |
 | [`list_colourings_of_complete_multipartite_graphs_with_2_big_parts`](https://graph-theory-ai.github.io/graph-conjectures/op/list_colourings_of_complete_multipartite_graphs_with_2_big_parts/) | 2 | 2.0 | http://www.openproblemgarden.org/op/list_colourings_of_complete_multipartite_graphs_with_2_big_parts |
+| [`list_hadwiger_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/list_hadwiger_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/list_hadwiger_conjecture |
 | [`list_total_colouring_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/list_total_colouring_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/list_total_colouring_conjecture |
 | [`lovasz_path_removal_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/lovasz_path_removal_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/lovasz_path_removal_conjecture |
 | [`matchings_extends_to_hamilton_cycles_in_hypercubes`](https://graph-theory-ai.github.io/graph-conjectures/op/matchings_extends_to_hamilton_cycles_in_hypercubes/) | 2 | 2.0 | http://www.openproblemgarden.org/op/matchings_extends_to_hamilton_cycles_in_hypercubes |
 | [`minimal_graphs_with_a_prescribed_number_of_spanning_trees`](https://graph-theory-ai.github.io/graph-conjectures/op/minimal_graphs_with_a_prescribed_number_of_spanning_trees/) | 2 | 2.0 | http://www.openproblemgarden.org/op/minimal_graphs_with_a_prescribed_number_of_spanning_trees |
+| [`minimum_number_of_transitive_subtournaments_of_order_3_in_a_tournament`](https://graph-theory-ai.github.io/graph-conjectures/op/minimum_number_of_transitive_subtournaments_of_order_3_in_a_tournament/) | 2 | 2.0 | http://www.openproblemgarden.org/op/minimum_number_of_transitive_subtournaments_of_order_3_in_a_tournament |
+| [`negative_association_in_uniform_forests`](https://graph-theory-ai.github.io/graph-conjectures/op/negative_association_in_uniform_forests/) | 2 | 2.0 | http://www.openproblemgarden.org/op/negative_association_in_uniform_forests |
+| [`odd_cycle_transversal_in_triangle_free_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/odd_cycle_transversal_in_triangle_free_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/odd_cycle_transversal_in_triangle_free_graphs |
+| [`oriented_chromatic_number_of_planar_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/oriented_chromatic_number_of_planar_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/oriented_chromatic_number_of_planar_graphs |
+| [`packing_t_joins`](https://graph-theory-ai.github.io/graph-conjectures/op/packing_t_joins/) | 2 | 2.0 | http://www.openproblemgarden.org/op/packing_t_joins |
+| [`partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2`](https://graph-theory-ai.github.io/graph-conjectures/op/partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2/) | 2 | 2.0 | http://www.openproblemgarden.org/op/partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2 |
+| [`partitioning_edge_connectivity`](https://graph-theory-ai.github.io/graph-conjectures/op/partitioning_edge_connectivity/) | 2 | 2.0 | http://www.openproblemgarden.org/op/partitioning_edge_connectivity |
+| [`partitioning_planar_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/partitioning_planar_digraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/partitioning_planar_digraphs |
+| [`stable_set_meeting_all_longest_directed_paths`](https://graph-theory-ai.github.io/graph-conjectures/op/stable_set_meeting_all_longest_directed_paths/) | 2 | 2.0 | http://www.openproblemgarden.org/op/stable_set_meeting_all_longest_directed_paths |
 | [`star_chromatic_index_of_complete_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/star_chromatic_index_of_complete_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/star_chromatic_index_of_complete_graphs |
+| [`strong_edge_colouring_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/strong_edge_colouring_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/strong_edge_colouring_conjecture |
+| [`subgraph_of_large_average_degree_and_large_average_degree`](https://graph-theory-ai.github.io/graph-conjectures/op/subgraph_of_large_average_degree_and_large_average_degree/) | 2 | 2.0 | http://www.openproblemgarden.org/op/subgraph_of_large_average_degree_and_large_average_degree |
 | [`2004.07214__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2004.07214__01/) | 2 | 2.05 | Enumerating minimal dominating sets in the (in)comparability graphs of … |
 | [`2109.09205__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2109.09205__01/) | 2 | 2.05 | Ramsey goodness of books revisited |
 | [`2111.07147__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2111.07147__00/) | 2 | 2.05 | Weak diameter coloring of graphs on surfaces |
@@ -648,4 +663,4 @@ Queue records not yet attacked: **597** (plus 0 skipped without a model call).
 | [`2210.09227__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.09227__00/) | 4 | 3.75 | A multidimensional Ramsey Theorem |
 | [`2404.02021__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2404.02021__02/) | 4 | 3.85 | On off-diagonal hypergraph Ramsey numbers |
 
-Generated 2026-09-16T18:12:35Z.
+Generated 2026-09-16T18:27:37Z.

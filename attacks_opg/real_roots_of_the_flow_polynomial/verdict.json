@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The conjecture is false: the published counterexample G(119,7) has a nonzero flow polynomial with real roots greater than 5.",
+  "would_publish": false,
+  "caveats": "This uses the Jacobsen\u2013Salas result identified in the supplied catalog; its polynomial computation is not independently reproduced here.",
+  "id": "real_roots_of_the_flow_polynomial",
+  "model": "gpt-6-astra",
+  "usd": 0.241345,
+  "eur": 0.249984,
+  "elapsed_s": 217.8,
+  "status": "completed",
+  "response_id": "resp_0070ac7ba3b24b70006aaadc26c81c87d2ae05383968887cb4",
+  "when": "2026-09-16T18:16:32Z"
+}

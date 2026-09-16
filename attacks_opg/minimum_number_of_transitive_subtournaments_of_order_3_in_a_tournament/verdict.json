@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured bound is attained by every balanced cyclic three-part blow-up, and it also holds for several explicit perturbations of these examples.",
+  "would_publish": false,
+  "caveats": "No proof or counterexample for arbitrary tournaments; the novelty of these special-case results has not been checked.",
+  "id": "minimum_number_of_transitive_subtournaments_of_order_3_in_a_tournament",
+  "model": "gpt-6-astra",
+  "usd": 1.059545,
+  "eur": 1.097471,
+  "elapsed_s": 887.3,
+  "status": "completed",
+  "response_id": "resp_0cf38ad40de991d3006aaad9d480c887d2a32d0fcb1d4df1d8",
+  "when": "2026-09-16T18:17:47Z"
+}

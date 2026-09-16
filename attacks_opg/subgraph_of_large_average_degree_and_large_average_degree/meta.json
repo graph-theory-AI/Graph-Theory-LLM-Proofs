@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "subgraph_of_large_average_degree_and_large_average_degree",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Subgraph of large average degree and large girth.",
+    "paper": "http://www.openproblemgarden.org/op/subgraph_of_large_average_degree_and_large_average_degree",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/subgraph_of_large_average_degree_and_large_average_degree/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Basic Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "subgraph_of_large_average_degree_and_large_average_degree",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/subgraph_of_large_average_degree_and_large_average_degree/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/subgraph_of_large_average_degree_and_large_average_degree",
+    "catalog_title": "Subgraph of large average degree and large girth.",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-05",
+    "authors": "Thomassen, Carsten",
+    "subject": "Graph Theory \u00bb Basic Graph Theory",
+    "statement_text": "Conjecture For all positive integers $ g $ and $ k $ , there exists an integer $ d $ such that every graph of average degree at least $ d $ contains a subgraph of average degree at least $ k $ and girth greater than $ g $ .",
+    "context_text": "This conjecture is true for regular graphs as observed by Alon (see [KO]). The case $ g\\leq 4 $ was proved in [KO].",
+    "references_text": "- [KO] D. K\u00fchn and D. Osthus, Every graph of sufficiently large average degree contains a C4-free subgraph of large average degree, Combinatorica, 24 (2004), 155-162.\n- *[T] C. Thomassen, Girth in graphs, J. Combin. Theory B 35 (1983), 129\u2013141."
+  },
+  "started": "2026-09-16T18:15:43Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
