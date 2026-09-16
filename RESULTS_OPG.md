@@ -11,16 +11,17 @@ runs were not used.
 
 ## Counts
 
-Finished attacks with a verdict: **3**.
-Spend (promo ledger × prepaid FX): **€3.75** billed USD
-**$3.62** / budget €600
+Finished attacks with a verdict: **14**.
+Spend (promo ledger × prepaid FX): **€10.64** billed USD
+**$10.27** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
 | --- | ---: | ---: |
 | proved | 1 | 1 |
-| already_resolved | 1 | 0 |
-| partial | 1 | 0 |
+| disproved | 1 | 1 |
+| already_resolved | 6 | 0 |
+| partial | 6 | 0 |
 
 ## Claimed proofs (1)
 
@@ -28,16 +29,22 @@ Spend (promo ledger × prepaid FX): **€3.75** billed USD
 | --- | --- | --- | --- |
 | [`mixing_circular_colourings_0`](https://graph-theory-ai.github.io/graph-conjectures/op/mixing_circular_colourings_0/) · [artifact](attacks_opg/mixing_circular_colourings_0/) | high | yes | For an n-vertex graph with an edge, the circular mixing threshold is rational, with reduced numerator at most n+1. |
 
-## Claimed counterexamples (0)
+## Claimed counterexamples (1)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
+| [`geodesic_cycles_and_tuttes_theorem`](https://graph-theory-ai.github.io/graph-conjectures/op/geodesic_cycles_and_tuttes_theorem/) · [artifact](attacks_opg/geodesic_cycles_and_tuttes_theorem/) | high | yes | The eight-vertex graph obtained by inserting a degree-three vertex into every face of a tetrahedron is a counterexample. |
 
-## Already resolved (model says the literature already closed it) (1)
+## Already resolved (model says the literature already closed it) (6)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
+| [`book_thickness_of_subdivisions`](https://graph-theory-ai.github.io/graph-conjectures/op/book_thickness_of_subdivisions/) · [artifact](attacks_opg/book_thickness_of_subdivisions/) | high | no | The conjecture is false even for exact one-subdivisions: graphs of unbounded book thickness can have one-subdivisions of book thickness at most 5. |
+| [`bounding_the_on_line_choice_number_in_terms_of_the_choice_number`](https://graph-theory-ai.github.io/graph-conjectures/op/bounding_the_on_line_choice_number_in_terms_of_the_choice_number/) · [artifact](attacks_opg/bounding_the_on_line_choice_number_in_terms_of_the_choice_number/) | high | no | Duraj, Gutowski, and Kozik resolved the question affirmatively: the online-minus-offline choice-number gap for K_{N,N} is of order log log N. |
 | [`end_devouring_rays`](https://graph-theory-ai.github.io/graph-conjectures/op/end_devouring_rays/) · [artifact](attacks_opg/end_devouring_rays/) | high | no | The supplied catalog records the resolution, and a minimum-distance prefix construction gives a self-contained proof. |
+| [`extremal_problem_on_the_number_of_tree_endomorphism`](https://graph-theory-ai.github.io/graph-conjectures/op/extremal_problem_on_the_number_of_tree_endomorphism/) · [artifact](attacks_opg/extremal_problem_on_the_number_of_tree_endomorphism/) | high | no | The conjecture is exactly the Csikvári–Lin theorem identified in the supplied literature review. |
+| [`forcing_a_2_regular_minor`](https://graph-theory-ai.github.io/graph-conjectures/op/forcing_a_2_regular_minor/) · [artifact](attacks_opg/forcing_a_2_regular_minor/) | high | no | The stated conjecture was proved by Csóka, Lo, Norin, Wu, and Yepremyan in their 2017 paper, The extremal function for disconnected minors. |
+| [`what_is_the_largest_graph_of_positive_curvature`](https://graph-theory-ai.github.io/graph-conjectures/op/what_is_the_largest_graph_of_positive_curvature/) · [artifact](attacks_opg/what_is_the_largest_graph_of_positive_curvature/) | high | no | The exact maximum is 208 vertices: Ghidelli proved the upper bound, and an explicit attaining construction is verified below. |
 
 ## Ill-posed / no determinate statement as supplied (0)
 
@@ -50,26 +57,15 @@ The sweep queue is the easiest-first open/partial arXiv ranking (227
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **224** (plus 0 skipped without a model call).
+Queue records not yet attacked: **213** (plus 0 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
 | [`weak_saturation_of_the_cube_in_the_clique`](https://graph-theory-ai.github.io/graph-conjectures/op/weak_saturation_of_the_cube_in_the_clique/) | 1 | 1.0 | http://www.openproblemgarden.org/op/weak_saturation_of_the_cube_in_the_clique |
-| [`what_is_the_largest_graph_of_positive_curvature`](https://graph-theory-ai.github.io/graph-conjectures/op/what_is_the_largest_graph_of_positive_curvature/) | 1 | 1.0 | http://www.openproblemgarden.org/op/what_is_the_largest_graph_of_positive_curvature |
-| [`3_colourability_of_arrangements_of_great_circles`](https://graph-theory-ai.github.io/graph-conjectures/op/3_colourability_of_arrangements_of_great_circles/) | 2 | 2.0 | http://www.openproblemgarden.org/op/3_colourability_of_arrangements_of_great_circles |
 | [`almost_all_non_hamiltonian_3_regular_graphs_are_1_connected`](https://graph-theory-ai.github.io/graph-conjectures/op/almost_all_non_hamiltonian_3_regular_graphs_are_1_connected/) | 2 | 2.0 | http://www.openproblemgarden.org/op/almost_all_non_hamiltonian_3_regular_graphs_are_1_connected |
-| [`book_thickness_of_subdivisions`](https://graph-theory-ai.github.io/graph-conjectures/op/book_thickness_of_subdivisions/) | 2 | 2.0 | http://www.openproblemgarden.org/op/book_thickness_of_subdivisions |
-| [`bounding_the_on_line_choice_number_in_terms_of_the_choice_number`](https://graph-theory-ai.github.io/graph-conjectures/op/bounding_the_on_line_choice_number_in_terms_of_the_choice_number/) | 2 | 2.0 | http://www.openproblemgarden.org/op/bounding_the_on_line_choice_number_in_terms_of_the_choice_number |
-| [`choice_number_of_k_chromatic_graphs_of_bounded_order`](https://graph-theory-ai.github.io/graph-conjectures/op/choice_number_of_k_chromatic_graphs_of_bounded_order/) | 2 | 2.0 | http://www.openproblemgarden.org/op/choice_number_of_k_chromatic_graphs_of_bounded_order |
-| [`choosability_of_graph_powers`](https://graph-theory-ai.github.io/graph-conjectures/op/choosability_of_graph_powers/) | 2 | 2.0 | http://www.openproblemgarden.org/op/choosability_of_graph_powers |
 | [`earth_moon_problem`](https://graph-theory-ai.github.io/graph-conjectures/op/earth_moon_problem/) | 2 | 2.0 | http://www.openproblemgarden.org/op/earth_moon_problem |
-| [`extremal_problem_on_the_number_of_tree_endomorphism`](https://graph-theory-ai.github.io/graph-conjectures/op/extremal_problem_on_the_number_of_tree_endomorphism/) | 2 | 2.0 | http://www.openproblemgarden.org/op/extremal_problem_on_the_number_of_tree_endomorphism |
-| [`forcing_a_2_regular_minor`](https://graph-theory-ai.github.io/graph-conjectures/op/forcing_a_2_regular_minor/) | 2 | 2.0 | http://www.openproblemgarden.org/op/forcing_a_2_regular_minor |
 | [`fractional_hadwiger`](https://graph-theory-ai.github.io/graph-conjectures/op/fractional_hadwiger/) | 2 | 2.0 | http://www.openproblemgarden.org/op/fractional_hadwiger |
-| [`geodesic_cycles_and_tuttes_theorem`](https://graph-theory-ai.github.io/graph-conjectures/op/geodesic_cycles_and_tuttes_theorem/) | 2 | 2.0 | http://www.openproblemgarden.org/op/geodesic_cycles_and_tuttes_theorem |
 | [`list_colourings_of_complete_multipartite_graphs_with_2_big_parts`](https://graph-theory-ai.github.io/graph-conjectures/op/list_colourings_of_complete_multipartite_graphs_with_2_big_parts/) | 2 | 2.0 | http://www.openproblemgarden.org/op/list_colourings_of_complete_multipartite_graphs_with_2_big_parts |
-| [`matchings_extends_to_hamilton_cycles_in_hypercubes`](https://graph-theory-ai.github.io/graph-conjectures/op/matchings_extends_to_hamilton_cycles_in_hypercubes/) | 2 | 2.0 | http://www.openproblemgarden.org/op/matchings_extends_to_hamilton_cycles_in_hypercubes |
-| [`minimal_graphs_with_a_prescribed_number_of_spanning_trees`](https://graph-theory-ai.github.io/graph-conjectures/op/minimal_graphs_with_a_prescribed_number_of_spanning_trees/) | 2 | 2.0 | http://www.openproblemgarden.org/op/minimal_graphs_with_a_prescribed_number_of_spanning_trees |
 | [`star_chromatic_index_of_complete_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/star_chromatic_index_of_complete_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/star_chromatic_index_of_complete_graphs |
 | [`3_edge_coloring_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/3_edge_coloring_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/3_edge_coloring_conjecture |
 | [`coloring_and_immersion`](https://graph-theory-ai.github.io/graph-conjectures/op/coloring_and_immersion/) | 3 | 3.0 | http://www.openproblemgarden.org/op/coloring_and_immersion |
@@ -279,4 +275,4 @@ Queue records not yet attacked: **224** (plus 0 skipped without a model call).
 | [`reconstruction_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/reconstruction_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/reconstruction_conjecture |
 | [`the_berge_fulkerson_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/the_berge_fulkerson_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/the_berge_fulkerson_conjecture |
 
-Generated 2026-09-16T16:41:25Z.
+Generated 2026-09-16T16:57:22Z.

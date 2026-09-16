@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "Duraj, Gutowski, and Kozik resolved the question affirmatively: the online-minus-offline choice-number gap for K_{N,N} is of order log log N.",
+  "would_publish": false,
+  "caveats": "This is a literature-based resolution; the main chip-game theorem is cited rather than reproved.",
+  "id": "bounding_the_on_line_choice_number_in_terms_of_the_choice_number",
+  "model": "gpt-6-astra",
+  "usd": 0.313,
+  "eur": 0.324204,
+  "elapsed_s": 310.8,
+  "status": "completed",
+  "response_id": "resp_029ff61c655ae93e006aaac6f1b4f887d2ade24083bcc244db",
+  "when": "2026-09-16T16:47:35Z"
+}

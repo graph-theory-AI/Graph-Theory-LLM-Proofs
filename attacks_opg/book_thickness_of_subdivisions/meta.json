@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "book_thickness_of_subdivisions",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Book Thickness of Subdivisions",
+    "paper": "http://www.openproblemgarden.org/op/book_thickness_of_subdivisions",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/book_thickness_of_subdivisions/",
+    "importance": "Medium",
+    "undergrad": true,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "book_thickness_of_subdivisions",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/book_thickness_of_subdivisions/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/book_thickness_of_subdivisions",
+    "catalog_title": "Book Thickness of Subdivisions",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2009-01-19",
+    "authors": "Blankenship, Robin, Oporowski, Bogdan",
+    "subject": "Graph Theory",
+    "statement_text": "Let $ G $ be a finite undirected simple graph. A $ k $ -page book embedding of $ G $ consists of a linear order $ \\preceq $ of $ V(G) $ and a (non-proper) $ k $ -colouring of $ E(G) $ such that edges with the same colour do not cross with respect to $ \\preceq $ . That is, if $ v\\prec x\\prec w\\prec y $ for some edges $ vw,xy\\in E(G) $ , then $ vw $ and $ xy $ receive distinct colours. One can think that the vertices are placed along the spine of a book, and the edges are drawn without crossings on the pages of the book. The book thickness of $ G $ , denoted by bt $ (G) $ is the minimum integer $ k $ for which there is a $ k $ -page book embedding of $ G $ . Let $ G' $ be the graph obtained by subdividing each edge of $ G $ exactly once. Conjecture There is a function $ f $ such that for every graph $ G $ , $$ \\text{bt}(G) \\leq f( \\text{bt}(G') )\\enspace. $$",
+    "context_text": "The conjecture is due to [B099]. The conjecture is true for complete graphs [BO99,EM99,E02]. The conjecture is discussed in depth in [DW05].",
+    "references_text": "- *[BO99] Robin Blankenship and Bogdan Oporowski. Drawing Subdivisions Of Complete And Complete Bipartite Graphs On Books, Technical Report 1999-4, Department of Mathematics, Louisiana State University, 1999.\n- [DW05] Vida Dujmovic and David Wood. Stacks, queues and tracks: Layouts of graph subdivisions. Discrete Mathematics & Theoretical Computer Science 7:155-202, 2005.\n- [EM99] Hikoe Enomoto and Miki Shimabara Miyauchi. Embedding graphs into a three page book with crossings of edges over the spine. SIAM J. Discrete Math., 12(3):337\u2013341, 1999.\n- [E02] David Eppstein. Separating thickness from geometric thickness. In Proc. 10th International Symp. on Graph Drawing (GD \u201902), pp. 150\u2013161. vol. 2528 of Lecture Notes in Comput. Sci. Springer, 2002."
+  },
+  "started": "2026-09-16T16:42:23Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The stated conjecture was proved by Cs\u00f3ka, Lo, Norin, Wu, and Yepremyan in their 2017 paper, The extremal function for disconnected minors.",
+  "would_publish": false,
+  "caveats": "This identifies and explains the published resolution; it is not an independent reproof of its main theorem.",
+  "id": "forcing_a_2_regular_minor",
+  "model": "gpt-6-astra",
+  "usd": 0.25512,
+  "eur": 0.264252,
+  "elapsed_s": 212.1,
+  "status": "completed",
+  "response_id": "resp_0126c5f7c5be8afb006aaac6f1aa0487d2a87f6abc31f8e2fe",
+  "when": "2026-09-16T16:45:56Z"
+}

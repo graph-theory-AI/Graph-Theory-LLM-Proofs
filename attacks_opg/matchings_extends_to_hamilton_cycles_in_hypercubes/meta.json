@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "matchings_extends_to_hamilton_cycles_in_hypercubes",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Matchings extend to Hamiltonian cycles in hypercubes",
+    "paper": "http://www.openproblemgarden.org/op/matchings_extends_to_hamilton_cycles_in_hypercubes",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/matchings_extends_to_hamilton_cycles_in_hypercubes/",
+    "importance": "Medium",
+    "undergrad": true,
+    "subject": "Matchings"
+  },
+  "dossier_meta": {
+    "id": "matchings_extends_to_hamilton_cycles_in_hypercubes",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/matchings_extends_to_hamilton_cycles_in_hypercubes/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/matchings_extends_to_hamilton_cycles_in_hypercubes",
+    "catalog_title": "Matchings extend to Hamiltonian cycles in hypercubes",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-09-28",
+    "authors": "Ruskey, Frank, Savage, Carla",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Matchings",
+    "statement_text": "Question Does every matching of hypercube extend to a Hamiltonian cycle ?",
+    "context_text": "This question is due to Ruskey and Savage and appears in [RS] (page 19, question 3). The answer is positive for $ d $ -cube if $ d \\le 4 $ . Fink [F] proved Kreweras' conjecture [K] which asserts that every perfect matching of hypercube extends to a Hamiltonian cycle.",
+    "references_text": "- [RS] F. Ruskey and C. D. Savage, SIAM Journal on Discrete Mathematics 6, No.1 (1993) 152-166. download\n- [F] J. Fink. Perfect matchings extend to Hamilton cycles in hypercubes. J. Comb. Theory, Ser. B, 97(6):1074-1076, 2007. download\n- [K] G. Kreweras, Matchings and Hamiltonian cycles on hypercubes, Bull. Inst. Combin. Appl. 16 (1996), 87--91."
+  },
+  "started": "2026-09-16T16:42:24Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

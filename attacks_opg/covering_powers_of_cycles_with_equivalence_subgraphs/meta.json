@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "covering_powers_of_cycles_with_equivalence_subgraphs",
+    "tier": 1,
+    "score": 1.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Covering powers of cycles with equivalence subgraphs",
+    "paper": "http://www.openproblemgarden.org/op/covering_powers_of_cycles_with_equivalence_subgraphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/covering_powers_of_cycles_with_equivalence_subgraphs/",
+    "importance": "Low",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "covering_powers_of_cycles_with_equivalence_subgraphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/covering_powers_of_cycles_with_equivalence_subgraphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 1,
+    "score": 1.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/covering_powers_of_cycles_with_equivalence_subgraphs",
+    "catalog_title": "Covering powers of cycles with equivalence subgraphs",
+    "importance": "Low \u272d",
+    "posted": "2011-07-07",
+    "authors": "",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture Given $ k $ and $ n $ , the graph $ C_{n}^k $ has equivalence covering number $ \\Omega(k) $ .",
+    "context_text": "Given a graph $ G $ , a subgraph $ H $ of $ G $ is an equivalence subgraph of $ G $ if $ H $ a disjoint union of cliques. The quivalence covering number of $ G $ , denoted $ eq(G) $ , is the least number of equivalence subgraphs needed to cover the edges of $ G $ . This problem has been studied by various people since the 80s [A]. For line graphs, the equivalence covering number is known to within a constant factor [EGK]. It is therefore tempting to examine the situation for quasi-line graphs and claw-free graphs. Powers of cycles are perhaps the simplest interesting class of claw-free graphs that are not necessarily line graphs. However, even for $ n $ very large compared to $ k $ , no upper bound is known beyond trivial linear bounds of order $ \\Theta(k) $ . Furthermore, it is not even certain that a nontrivial lower bound (i.e. going to infinity as $ k $ goes to infinity) is known. It is possible that this can be related somehow to a known result, but for now it seems at least superficially that this problem is wide open.",
+    "references_text": "- [A] N. Alon, Covering graphs with the minimum number of equivalence relations, Combinatorica 6 (1986) 201\u2013206.\n- [EGK] L. Esperet, J. Gimbel, A. King, Covering line graphs with equivalence relations, Discrete Applied Mathematics Volume 158, Issue 17, 28 October 2010, Pages 1902-1907."
+  },
+  "started": "2026-09-16T16:56:58Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

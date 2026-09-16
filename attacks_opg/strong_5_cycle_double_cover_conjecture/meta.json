@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "strong_5_cycle_double_cover_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Strong 5-cycle double cover conjecture",
+    "paper": "http://www.openproblemgarden.org/op/strong_5_cycle_double_cover_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/strong_5_cycle_double_cover_conjecture/",
+    "importance": "High",
+    "undergrad": true,
+    "subject": "Cycles"
+  },
+  "dossier_meta": {
+    "id": "strong_5_cycle_double_cover_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/strong_5_cycle_double_cover_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/strong_5_cycle_double_cover_conjecture",
+    "catalog_title": "Strong 5-cycle double cover conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2010-08-03",
+    "authors": "Arthur, Hoffmann-Ostenhof",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Cycles",
+    "statement_text": "Conjecture Let $ C $ be a circuit in a bridgeless cubic graph $ G $ . Then there is a five cycle double cover of $ G $ such that $ C $ is a subgraph of one of these five cycles.",
+    "context_text": "A cycle in $ G $ is meant to be a $ 2 $ -regular subgraph of $ G $ . A five cycle double cover of $ G $ is a set of five cycles of $ G $ such that every edge of $ G $ is contained in exactly two of these cycles. This conjecture is a combination and thus strengthening of the $ 5 $ -cycle double cover conjecture and the strong cycle double cover conjecture.",
+    "references_text": ""
+  },
+  "started": "2026-09-16T16:54:00Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

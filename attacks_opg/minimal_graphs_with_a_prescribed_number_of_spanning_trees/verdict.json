@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An explicit construction gives alpha(n) ~ log n/log log n when P(n) = (log n)^{o(1)}, and proves the conjecture whenever sum_{p|n} p^2 = o(log n).",
+  "would_publish": false,
+  "caveats": "Only restricted families are covered; prime inputs remain untreated, and novelty of these partial results is not claimed.",
+  "id": "minimal_graphs_with_a_prescribed_number_of_spanning_trees",
+  "model": "gpt-6-astra",
+  "usd": 0.829215,
+  "eur": 0.858897,
+  "elapsed_s": 696.3,
+  "status": "completed",
+  "response_id": "resp_018dbd1d3912cf30006aaac6f1b1a487d2ab0ad5234bf1237d",
+  "when": "2026-09-16T16:54:00Z"
+}

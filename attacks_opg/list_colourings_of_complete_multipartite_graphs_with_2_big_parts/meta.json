@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "list_colourings_of_complete_multipartite_graphs_with_2_big_parts",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "List Colourings of Complete Multipartite Graphs with 2 Big Parts",
+    "paper": "http://www.openproblemgarden.org/op/list_colourings_of_complete_multipartite_graphs_with_2_big_parts",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/list_colourings_of_complete_multipartite_graphs_with_2_big_parts/",
+    "importance": "Medium",
+    "undergrad": true,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "list_colourings_of_complete_multipartite_graphs_with_2_big_parts",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/list_colourings_of_complete_multipartite_graphs_with_2_big_parts/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/list_colourings_of_complete_multipartite_graphs_with_2_big_parts",
+    "catalog_title": "List Colourings of Complete Multipartite Graphs with 2 Big Parts",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2014-04-12",
+    "authors": "Allagan, Julian",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Question Given $ a,b\\geq2 $ , what is the smallest integer $ t\\geq0 $ such that $ \\chi_\\ell(K_{a,b}+K_t)= \\chi(K_{a,b}+K_t) $ ?",
+    "context_text": "The list chromatic number of a graph $ G $ , denoted $ \\chi_\\ell(G) $ , is the minimum $ k $ such that for every assignment of lists of size $ k $ to the vertices of $ G $ there is a proper colouring in which every vertex is mapped to a colour in its own list. For more background on the list chromatic number, see [3]. Given graphs $ G $ and $ H $ , the join of $ G $ and $ H $ , denoted $ G+H $ , is obtained by taking disjoint copies of $ G $ and $ H $ and adding all edges between them. Ohba [1] proved that for every graph $ G $ there exists $ t\\geq0 $ such that $ \\chi_\\ell(G+K_t)= \\chi(G+K_t) $ . The question above asks to determine the minimum value of $ t $ in the case that $ G $ is a complete bipartite graph. It seems that it was first studied in [4], although this is unclear; for the time being, we have chosen to attribute this problem to J. Allagan. Define $ \\phi(a,b) $ to be the minimum $ t $ such that $ \\chi_\\ell(K_{a,b}+K_t)= \\chi(K_{a,b}+K_t) $ . Note that, if $ G $ is a complete multipartite graph with at most one non-singleton part, then we see that $ \\chi_\\ell(G)=\\chi(G) $ by colouring the vertices of the non-singleton part last. Thus, if $ a $ or $ b $ is equal to 1, then $ \\phi(a,b)=0 $ . As it turns out, $ \\phi(2,2)=\\phi(2,3)=0 $ and $ \\phi(3,3)=\\phi(2,4)=1 $ . This can be deduced from the following result of [2] and the fact that $ \\chi_\\ell(K_{3,3})=\\chi_\\ell(K_{4,2})=3 $ : Theorem (Noel, Reed, Wu (2012)) If $ |V(G)|\\leq 2\\chi(G)+1 $ , then $ \\chi_\\ell(G)=\\chi(G) $ . The above result of [2] implies that if $ a+b\\geq 5 $ , then $ \\phi(a,b)\\leq a+b-5 $ . However it seems that, for most values of $ a,b $ , this bound is far from tight. A simple observation is that, since $ \\chi_\\ell(K_{a,b}+K_t)\\geq \\chi_\\ell(K_{a,b}) $ for all $ t $ , we must have \\[\\phi(a,b)\\geq \\chi_\\ell(K_{a,b}) - \\chi(K_{a,b}) = \\chi_\\ell(K_{a,b}) -2.\\] The following is a result of Allagan [4]: Theorem (Allagan (2009)) If $ a\\geq5 $ , then \\[\\lfloor \\sqrt{a}\\rfloor - 1 \\leq \\phi(a,2)\\leq \\left\\lceil\\frac{-7+\\sqrt{8a+17}}{2}\\right\\rceil.\\] This implies that $ \\phi(a,2)=1 $ for $ 4\\leq a\\leq 8 $ and that $ \\phi(a,2)=2 $ for $ 9\\leq a\\leq 13 $ .",
+    "references_text": "- [1] K. Ohba. On chromatic-choosable graphs, J. Graph Theory. 40 (2002) 130--135. MathSciNet.\n- [2] J. A. Noel, B. A. Reed, H. Wu. A Proof of a Conjecture of Ohba. Submitted. pdf.\n- [3] J. A. Noel. Choosability of Graphs with Bounded Order: Ohba's Conjecture and Beyond. Master's Thesis, McGill University. pdf.\n- [4] J. A. D. Allagan. Choice Numbers, Ohba Numbers and Hall Numbers of some complete -partite graphs. PhD Thesis. Auburn University. 2009."
+  },
+  "started": "2026-09-16T16:42:23Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

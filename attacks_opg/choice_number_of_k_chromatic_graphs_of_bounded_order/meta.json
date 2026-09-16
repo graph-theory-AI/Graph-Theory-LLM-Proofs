@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "choice_number_of_k_chromatic_graphs_of_bounded_order",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Choice Number of k-Chromatic Graphs of Bounded Order",
+    "paper": "http://www.openproblemgarden.org/op/choice_number_of_k_chromatic_graphs_of_bounded_order",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/choice_number_of_k_chromatic_graphs_of_bounded_order/",
+    "importance": "Medium",
+    "undergrad": true,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "choice_number_of_k_chromatic_graphs_of_bounded_order",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/choice_number_of_k_chromatic_graphs_of_bounded_order/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/choice_number_of_k_chromatic_graphs_of_bounded_order",
+    "catalog_title": "Choice Number of k-Chromatic Graphs of Bounded Order",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-02-02",
+    "authors": "Noel, Jonathan A.",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Conjecture If $ G $ is a $ k $ -chromatic graph on at most $ mk $ vertices, then $ \\text{ch}(G)\\leq \\text{ch}(K_{m*k}) $ .",
+    "context_text": "For integers $ m,k\\geq1 $ , let $ K_{m*k} $ denote the complete $ k $ -partite graph in which every part has size $ m $ . In one of the original papers on choosability, Erdos, Rubin and Taylor [ERT] proved that $ \\text{ch}(K_{2*k})=k $ . Later, Ohba [Ohba] conjectured the following generalization: if $ |V(G)|\\leq 2\\chi(G)+1 $ , then TeX Embedding failed! .} This was proved by Noel, Reed and Wu [NRW12]. Theorem (Noel, Reed and Wu 2012) If $ |V(G)|\\leq 2\\chi(G)+1 $ , then $ \\text{ch}(G)=\\chi(G) $ . The above theorem implies that the above conjecture holds for $ m=2 $ . That is, if $ G $ is a $ k $ -chromatic graph on at most $ 2k $ vertices (in fact, at most $ 2k+1 $ vertices), then $ \\text{ch}(G)=k=\\text{ch}(K_{2*k}) $ . Kierstead [Kie00] proved that $ \\text{ch}(K_{3*k})=\\left\\lceil\\frac{4k-1}{3}\\right\\rceil $ . This was generalized by Noel, West, Wu and Zhu [NWWZ13] to the following: Theorem (Noel, West, Wu and Zhu 2013) For every graph $ G $ , \\[\\text{ch}(G)\\leq\\max\\left\\{\\chi(G),\\left\\lceil\\frac{|V(G)|+\\chi(G)-1}{3}\\right\\rceil\\right\\}.\\] Therefore, if $ G $ is a $ k $ -chromatic graph on at most $ 3k $ vertices, then $ \\text{ch}(G)\\leq \\left\\lceil\\frac{4k-1}{3}\\right\\rceil=\\text{ch}(K_{3*k}) $ . This shows that the conjecture is true for $ m=3 $ . Recently, Kierstead, Salmon and Wang [KSW14] proved the following: Theorem (Kierstead, Salmon and Wang 2014) $ \\text{ch}(K_{4*k})=\\left\\lceil\\frac{3k-1}{2}\\right\\rceil $ . However, it is not known whether the upper bound of $ \\left\\lceil\\frac{3k-1}{2}\\right\\rceil $ holds for all $ k $ -chromatic graphs on at most $ 4k $ vertices. If true, it would verify the conjecture for $ m=4 $ . The following is a refinement of the conjecture. Conjecture (Noel 2013) For $ n\\geq k\\geq 1 $ there is a graph $ G_{n,k} $ such that \\item $ G_{n,k} $ is a complete $ k $ -partite graph on $ n $ vertices, \\item the stability number of $ G_{n,k} $ is $ \\left\\lceil n/k\\right\\rceil $ , and \\item every $ k $ -chromatic graph $ G $ on at most $ n $ vertices satisfies $ \\text{ch}(G)\\leq \\text{ch}(G_{n,k}) $ .",
+    "references_text": "- [Alo92] N. Alon. Choice numbers of graphs: a probabilistic approach. Combin. Probab. Comput., 1(2):107\u2013114, 1992.\n- [ERT80] P. Erdos, A. L. Rubin, and H. Taylor. Choosability in graphs. Congress. Numer., XXVI, pages 125\u2013157, 1980.\n- [Kie00] H. A. Kierstead. On the choosability of complete multipartite graphs with part size three. Discrete Math., 211(1-3):255\u2013259, 2000.\n- [KSW14] H. A. Kierstead, A. Salmon and R. Wang. On the Choice Number of Complete Multipartite Graphs With Part Size Four.\n- *[Noe13] J. A. Noel. Choosability of Graphs With Bounded Order: Ohba's Conjecture and Beyond. Master's thesis, McGill University, Montreal. pdf\n- [NRW12] J. A. Noel, B. A. Reed, and H. Wu. A Proof of a Conjecture of Ohba. Preprint, arXiv:1211.1999v1, November 2012. Webpage\n- [NWWZ13] J. A. Noel, D. B. West, H. Wu, and X. Zhu. Beyond Ohba's Conjecture: A bound on the choice number of -chromatic graphs with vertices. Preprint, arXiv:1308.6739v1, August 2013. pdf\n- [Ohb02] K. Ohba. On chromatic-choosable graphs. J. Graph Theory, 40(2):130\u2013135, 2002.\n- [Yan03] D. Yang. Extension of the game coloring number and some results on the choosability of complete multipartite graphs. PhD thesis, Arizona State University, Tempe, Arizona, 2003."
+  },
+  "started": "2026-09-16T16:42:24Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

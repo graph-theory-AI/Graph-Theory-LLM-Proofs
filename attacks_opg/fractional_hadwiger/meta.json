@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "fractional_hadwiger",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Fractional Hadwiger",
+    "paper": "http://www.openproblemgarden.org/op/fractional_hadwiger",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/fractional_hadwiger/",
+    "importance": "Medium",
+    "undergrad": true,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "fractional_hadwiger",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/fractional_hadwiger/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/fractional_hadwiger",
+    "catalog_title": "Fractional Hadwiger",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2014-03-16",
+    "authors": "Harvey, Daniel J., Reed, Bruce A., Seymour, Paul D., Wood, David R.",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture For every graph $ G $ , (a) $ \\chi_f(G)\\leq\\text{had}(G) $ (b) $ \\chi(G)\\leq\\text{had}_f(G) $ (c) $ \\chi_f(G)\\leq\\text{had}_f(G) $ .",
+    "context_text": "Here $ \\chi $ is the chromatic number, $ \\chi_f $ is the fractional chromatic number, $ \\text{had} $ is the Hadwiger number, and $ \\text{had}_f $ is the fractional Hadwiger number (which was recently introduced independently by Fox [F] and Pedersen [P]). It is well known and easily proved (see [HW]) that $ \\chi_f(G)\\leq\\chi(G)\\text{ and }\\text{had}(G)\\leq\\text{had}_f(G)\\leq\\text{tw}(G)+1, $ where $ \\text{tw}(G) $ is the treewidth of $ G $ . Hadwiger's famous conjecture, $ \\chi(G)\\leq\\text{had}(G) $ , bridges the gap in the above inequalities. The above conjectures therefore are weaker than Hadwiger's conjecture. Note that Conjecture (a) implies Conjecture (c), and Conjecture (b) implies Conjecture (c). Note that Reed and Seymour [RS] proved that $ \\chi_f(G)\\leq2\\,\\text{had}(G) $ . Conjecture (a) is due to Reed and Seymour [RS]. Conjecture (b) is due to Harvey and Wood [HW]. Conjecture (c) is independently due to Harvey and Wood [HW] and Pedersen [P]. Pedersen [P] presents a natural equivalent formulation of Conjecture (c).",
+    "references_text": "- *[HW] Daniel J. Harvey, David R. Wood, Parameters tied to treewidth. arXiv:1312.3401, 2013.\n- [F] Jacob Fox. Constructing dense graphs with sublinear Hadwiger number. J. Combin. Theory Ser. B (to appear).\n- *[P] Anders Sune Pedersen. Contributions to the Theory of Colourings, Graph Minors, and Independent Sets, PhD thesis, Department of Mathematics and Computer Science University of Southern Denmark, 2011.\n- *[RS] Bruce A. Reed, Paul D. Seymour, Fractional colouring and Hadwiger's conjecture. J. Combin. Theory Ser. B, 74(2), 147-152."
+  },
+  "started": "2026-09-16T16:42:24Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "extremal_problem_on_the_number_of_tree_endomorphism",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Extremal problem on the number of tree endomorphism",
+    "paper": "http://www.openproblemgarden.org/op/extremal_problem_on_the_number_of_tree_endomorphism",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/extremal_problem_on_the_number_of_tree_endomorphism/",
+    "importance": "Medium",
+    "undergrad": true,
+    "subject": "Extremal Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "extremal_problem_on_the_number_of_tree_endomorphism",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/extremal_problem_on_the_number_of_tree_endomorphism/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/extremal_problem_on_the_number_of_tree_endomorphism",
+    "catalog_title": "Extremal problem on the number of tree endomorphism",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2011-03-01",
+    "authors": "Zhicong Lin",
+    "subject": "Graph Theory \u00bb Extremal Graph Theory",
+    "statement_text": "Conjecture An endomorphism of a graph is a mapping on the vertex set of the graph which preserves edges. Among all the $ n $ vertices' trees, the star with $ n $ vertices has the most endomorphisms, while the path with $ n $ vertices has the least endomorphisms.",
+    "context_text": "",
+    "references_text": "- [BT] Bela Bollobas and Mykhaylo Tyomkyn, Walks and paths in trees, http://arxiv.org/abs/1002.2768."
+  },
+  "started": "2026-09-16T16:42:23Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

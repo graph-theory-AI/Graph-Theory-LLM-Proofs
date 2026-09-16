@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The conjecture is exactly the Csikv\u00e1ri\u2013Lin theorem identified in the supplied literature review.",
+  "would_publish": false,
+  "caveats": "This is a literature resolution, not a new proof; the lower-bound proof is cited rather than reproduced.",
+  "id": "extremal_problem_on_the_number_of_tree_endomorphism",
+  "model": "gpt-6-astra",
+  "usd": 0.22748,
+  "eur": 0.235623,
+  "elapsed_s": 219.6,
+  "status": "completed",
+  "response_id": "resp_0cf9345d6eb5d7c4006aaac6f1a84c87d2bf927c0dc2f68a37",
+  "when": "2026-09-16T16:46:03Z"
+}

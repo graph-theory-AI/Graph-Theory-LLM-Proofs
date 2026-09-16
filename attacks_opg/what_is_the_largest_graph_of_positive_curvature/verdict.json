@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The exact maximum is 208 vertices: Ghidelli proved the upper bound, and an explicit attaining construction is verified below.",
+  "would_publish": false,
+  "caveats": "The upper bound is imported from the published theorem identified in the supplied verified literature record; its discharging proof is not reproduced here.",
+  "id": "what_is_the_largest_graph_of_positive_curvature",
+  "model": "gpt-6-astra",
+  "usd": 0.46343,
+  "eur": 0.480018,
+  "elapsed_s": 494.7,
+  "status": "completed",
+  "response_id": "resp_08d6c0e7fa6880f2006aaac6f1ab9887d280f0a64de73eabb6",
+  "when": "2026-09-16T16:50:38Z"
+}
