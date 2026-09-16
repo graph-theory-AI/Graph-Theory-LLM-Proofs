@@ -12,8 +12,8 @@ runs were not used.
 ## Counts
 
 Finished attacks with a verdict: **0**.
-Spend (promo ledger × prepaid FX): **€113.49** billed USD
-**$109.57** / budget €600
+Spend (promo ledger × prepaid FX): **€129.99** billed USD
+**$125.49** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
@@ -42,11 +42,11 @@ Spend (promo ledger × prepaid FX): **€113.49** billed USD
 
 ## Coverage
 
-The sweep queue is the easiest-first open/partial arXiv ranking (612
+The sweep queue is the easiest-first open/partial arXiv ranking (628
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **612** (plus 0 skipped without a model call).
+Queue records not yet attacked: **628** (plus 0 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
@@ -179,10 +179,24 @@ Queue records not yet attacked: **612** (plus 0 skipped without a model call).
 | [`partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2`](https://graph-theory-ai.github.io/graph-conjectures/op/partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2/) | 2 | 2.0 | http://www.openproblemgarden.org/op/partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2 |
 | [`partitioning_edge_connectivity`](https://graph-theory-ai.github.io/graph-conjectures/op/partitioning_edge_connectivity/) | 2 | 2.0 | http://www.openproblemgarden.org/op/partitioning_edge_connectivity |
 | [`partitioning_planar_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/partitioning_planar_digraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/partitioning_planar_digraphs |
+| [`signing_a_graph_to_have_small_magnitude_eigenvalues`](https://graph-theory-ai.github.io/graph-conjectures/op/signing_a_graph_to_have_small_magnitude_eigenvalues/) | 2 | 2.0 | http://www.openproblemgarden.org/op/signing_a_graph_to_have_small_magnitude_eigenvalues |
+| [`simultaneous_partition_of_hypergraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/simultaneous_partition_of_hypergraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/simultaneous_partition_of_hypergraphs |
 | [`stable_set_meeting_all_longest_directed_paths`](https://graph-theory-ai.github.io/graph-conjectures/op/stable_set_meeting_all_longest_directed_paths/) | 2 | 2.0 | http://www.openproblemgarden.org/op/stable_set_meeting_all_longest_directed_paths |
 | [`star_chromatic_index_of_complete_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/star_chromatic_index_of_complete_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/star_chromatic_index_of_complete_graphs |
+| [`star_chromatic_index_of_cubic_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/star_chromatic_index_of_cubic_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/star_chromatic_index_of_cubic_graphs |
 | [`strong_edge_colouring_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/strong_edge_colouring_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/strong_edge_colouring_conjecture |
+| [`subdivision_of_a_transitive_tournament_in_digraphs_with_large_outdegree`](https://graph-theory-ai.github.io/graph-conjectures/op/subdivision_of_a_transitive_tournament_in_digraphs_with_large_outdegree/) | 2 | 2.0 | http://www.openproblemgarden.org/op/subdivision_of_a_transitive_tournament_in_digraphs_with_large_outdegree |
 | [`subgraph_of_large_average_degree_and_large_average_degree`](https://graph-theory-ai.github.io/graph-conjectures/op/subgraph_of_large_average_degree_and_large_average_degree/) | 2 | 2.0 | http://www.openproblemgarden.org/op/subgraph_of_large_average_degree_and_large_average_degree |
+| [`switching_reconstruction_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/switching_reconstruction_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/switching_reconstruction_conjecture |
+| [`switching_reconstruction_of_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/switching_reconstruction_of_digraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/switching_reconstruction_of_digraphs |
+| [`the_bermond_thomassen_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/the_bermond_thomassen_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/the_bermond_thomassen_conjecture |
+| [`the_borodin_kostochka_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/the_borodin_kostochka_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/the_borodin_kostochka_conjecture |
+| [`the_crossing_number_of_the_hypercube`](https://graph-theory-ai.github.io/graph-conjectures/op/the_crossing_number_of_the_hypercube/) | 2 | 2.0 | http://www.openproblemgarden.org/op/the_crossing_number_of_the_hypercube |
+| [`three_4_flows_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/three_4_flows_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/three_4_flows_conjecture |
+| [`triangle_packing_vs_triangle_edge_transversal`](https://graph-theory-ai.github.io/graph-conjectures/op/triangle_packing_vs_triangle_edge_transversal/) | 2 | 2.0 | http://www.openproblemgarden.org/op/triangle_packing_vs_triangle_edge_transversal |
+| [`turans_problem_for_hypergraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/turans_problem_for_hypergraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/turans_problem_for_hypergraphs |
+| [`unit_vector_flows`](https://graph-theory-ai.github.io/graph-conjectures/op/unit_vector_flows/) | 2 | 2.0 | http://www.openproblemgarden.org/op/unit_vector_flows |
+| [`weak_pentagon_problem`](https://graph-theory-ai.github.io/graph-conjectures/op/weak_pentagon_problem/) | 2 | 2.0 | http://www.openproblemgarden.org/op/weak_pentagon_problem |
 | [`2004.07214__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2004.07214__01/) | 2 | 2.05 | Enumerating minimal dominating sets in the (in)comparability graphs of … |
 | [`2109.09205__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2109.09205__01/) | 2 | 2.05 | Ramsey goodness of books revisited |
 | [`2111.07147__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2111.07147__00/) | 2 | 2.05 | Weak diameter coloring of graphs on surfaces |
@@ -416,6 +430,7 @@ Queue records not yet attacked: **612** (plus 0 skipped without a model call).
 | [`2204.10119__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2204.10119__00/) | 3 | 3.0 | Bipartite graphs with no $K_6$ minor |
 | [`2401.00359__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2401.00359__02/) | 3 | 3.0 | Ramsey and Turán numbers of sparse hypergraphs |
 | [`3_edge_coloring_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/3_edge_coloring_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/3_edge_coloring_conjecture |
+| [`57_regular_moore_graph`](https://graph-theory-ai.github.io/graph-conjectures/op/57_regular_moore_graph/) | 3 | 3.0 | http://www.openproblemgarden.org/op/57_regular_moore_graph |
 | [`coloring_and_immersion`](https://graph-theory-ai.github.io/graph-conjectures/op/coloring_and_immersion/) | 3 | 3.0 | http://www.openproblemgarden.org/op/coloring_and_immersion |
 | [`hamiltonicity_of_cayley_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonicity_of_cayley_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/hamiltonicity_of_cayley_graphs |
 | [`monochromatic_vertex_colorings_inherited_from_perfect_matchings`](https://graph-theory-ai.github.io/graph-conjectures/op/monochromatic_vertex_colorings_inherited_from_perfect_matchings/) | 3 | 3.0 | http://www.openproblemgarden.org/op/monochromatic_vertex_colorings_inherited_from_perfect_matchings |
@@ -614,6 +629,7 @@ Queue records not yet attacked: **612** (plus 0 skipped without a model call).
 | [`2511.07601__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2511.07601__01/) | 2 | 1.85 | Infinite Schnyder Woods |
 | [`2511.07601__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2511.07601__02/) | 2 | 1.85 | Infinite Schnyder Woods |
 | [`2507.10840__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2507.10840__02/) | 2 | 1.95 | Covering Complete Geometric Graphs by Monotone Paths |
+| [`random_stable_roommates`](https://graph-theory-ai.github.io/graph-conjectures/op/random_stable_roommates/) | 2 | 2.0 | http://www.openproblemgarden.org/op/random_stable_roommates |
 | [`1908.03694__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1908.03694__00/) | 2 | 2.05 | High-girth near-Ramanujan graphs with localized eigenvectors |
 | [`2603.02786__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2603.02786__02/) | 2 | 2.2 | Packing arithmetic progressions |
 | [`2401.00299__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2401.00299__01/) | 2 | 2.25 | Partitioning the hypercube into smaller hypercubes |
@@ -663,4 +679,4 @@ Queue records not yet attacked: **612** (plus 0 skipped without a model call).
 | [`2210.09227__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.09227__00/) | 4 | 3.75 | A multidimensional Ramsey Theorem |
 | [`2404.02021__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2404.02021__02/) | 4 | 3.85 | On off-diagonal hypergraph Ramsey numbers |
 
-Generated 2026-09-16T18:27:37Z.
+Generated 2026-09-16T18:42:40Z.

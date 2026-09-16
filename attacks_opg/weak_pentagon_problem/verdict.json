@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the conjectured conclusion for triangle-free cubic graphs that become bipartite after deleting at most three edges.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not resolved, and novelty of this special case has not been checked.",
+  "id": "weak_pentagon_problem",
+  "model": "gpt-6-astra",
+  "usd": 0.929515,
+  "eur": 0.962787,
+  "elapsed_s": 669.7,
+  "status": "completed",
+  "response_id": "resp_095c16ebe4079a10006aaadff3271c87d29769e98e443a6e45",
+  "when": "2026-09-16T18:40:16Z"
+}

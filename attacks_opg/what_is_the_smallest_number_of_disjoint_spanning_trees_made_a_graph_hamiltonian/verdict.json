@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "Under the stated deletion procedure, the requested minimum need not exist, even with metric weights and uniquely determined minimum trees.",
+  "would_publish": false,
+  "caveats": "This refutes an unconditional guarantee and any absolute constant; sharp n-dependent thresholds conditional on availability are a different question.",
+  "id": "what_is_the_smallest_number_of_disjoint_spanning_trees_made_a_graph_hamiltonian",
+  "model": "gpt-6-astra",
+  "usd": 0.39487,
+  "eur": 0.409004,
+  "elapsed_s": 587.4,
+  "status": "completed",
+  "response_id": "resp_05073f56901c0158006aaae01ce1a087d292939637278b4e1c",
+  "when": "2026-09-16T18:39:36Z"
+}

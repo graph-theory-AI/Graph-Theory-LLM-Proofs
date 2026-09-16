@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A sharp digon-matching bound proves the conjecture for k\u22654 when n=2k+s, s\u2264k+2, and s(s+1)<28(k\u22122), using the established k=3 case.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved; novelty of this elementary order-restricted consequence has not been checked.",
+  "id": "the_bermond_thomassen_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.876385,
+  "eur": 0.907755,
+  "elapsed_s": 831.8,
+  "status": "completed",
+  "response_id": "resp_0c3b75d379efe038006aaadde36adc87d288d037567ab7a81e",
+  "when": "2026-09-16T18:34:11Z"
+}

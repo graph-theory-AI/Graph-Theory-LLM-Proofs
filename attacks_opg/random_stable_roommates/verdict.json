@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "A planted-matching and short-cycle argument gives the partial upper bound P_n = O(n^{-1/6} sqrt(log n)), but does not establish the conjectured exponent 1/4.",
+  "would_publish": true,
+  "caveats": "The argument below is independent of the cited literature; novelty and the recent bibliographic claims in the supplied catalog have not been independently verified.",
+  "id": "random_stable_roommates",
+  "model": "gpt-6-astra",
+  "usd": 0.99366,
+  "eur": 1.029228,
+  "elapsed_s": 941.1,
+  "status": "completed",
+  "response_id": "resp_0dbfed2a5c441574006aaadbee6e5087d2a185ba06f6ff5a57",
+  "when": "2026-09-16T18:27:39Z"
+}

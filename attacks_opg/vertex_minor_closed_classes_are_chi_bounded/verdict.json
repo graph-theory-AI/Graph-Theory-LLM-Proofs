@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "Yes: James Davies proved that every proper vertex-minor-closed class of finite simple graphs is chi-bounded.",
+  "would_publish": false,
+  "caveats": "This is a literature resolution, not a new proof; the argument below invokes Davies's published theorem rather than reproducing its proof.",
+  "id": "vertex_minor_closed_classes_are_chi_bounded",
+  "model": "gpt-6-astra",
+  "usd": 0.091835,
+  "eur": 0.095122,
+  "elapsed_s": 92.5,
+  "status": "completed",
+  "response_id": "resp_0e9686a02985bc1d006aaadfddd3c087d2a0716689ee65df2d",
+  "when": "2026-09-16T18:30:18Z"
+}

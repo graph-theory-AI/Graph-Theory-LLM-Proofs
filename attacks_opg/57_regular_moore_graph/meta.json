@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "57_regular_moore_graph",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "57-regular Moore graph?",
+    "paper": "http://www.openproblemgarden.org/op/57_regular_moore_graph",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/57_regular_moore_graph/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Algebraic Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "57_regular_moore_graph",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/57_regular_moore_graph/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/57_regular_moore_graph",
+    "catalog_title": "57-regular Moore graph?",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-03-18",
+    "authors": "Hoffman, Alan J., Singleton, Robert R.",
+    "subject": "Graph Theory \u00bb Algebraic Graph Theory",
+    "statement_text": "Question Does there exist a 57- regular graph with diameter 2 and girth 5?",
+    "context_text": "A Moore graph is a graph with diameter $ d $ and girth $ 2d+1 $ . It is known that every Moore graph is regular [S] (even distance-regular), and two (rather trivial) families of such graphs are provided by complete graphs and odd cycles. In one of the founding papers in the subject of algebraic graph theory, Hoffman and Singleton [HS] proved that every $ r $ -regular Moore graph with diameter 2 must have $ r \\in \\{2,3,7,57\\} $ . For $ r=2 $ and $ r=3 $ such graphs exist, are unique, and are familiar: the pentagon, and the Petersen graph . For $ r=7 $ Hoffman and Singleton constructed such a graph - now known as the Hoffman-Singleton graph , but for $ r=57 $ we are still uncertain whether such a graph exists. The pentagon, the Petersen graph, and the Hoffman-Singleton graph are all very highly symmetric graphs, and much of the interest in these objects is related to exceptional phenomena in small finite groups. In contrast to this, Higman proved that a 57-regular Moore graph cannot be vertex transitive (see [C]). In some sense, this is indication that even if a 57-regular Moore graph exists, it will be of less interest than its younger siblings. Nevertheless, as a lingering problem left by one of the first papers in algebraic graph theory, this is viewed as an important question. There are some easily established properties of a 57-regular Moore graph. For instance it must have 3250 vertices and independence number at most 400. However it seems not nearly enough is known to narrow the search sufficiently.",
+    "references_text": "- [C] P. J. Cameron, Automorphisms of graphs in: Selected topics in graph theory, Volume 2, eds. L. W. Beineke and R. J. Wilson (Academic Press, London) 1983, pp. 89-127. MathSciNet\n- * [HS] A. J. Hoffman and R. R. Singleton, On Moore graphs with diameters 2 and 3. IBM J. Res. Develop. 4 (1960) 497--504. MathSciNet\n- [S] R. R. Singleton, There is no irregular Moore graph. American Mathematical Monthly 75, vol 1 (1968) 42\u201343. MathSciNet"
+  },
+  "started": "2026-09-16T18:32:01Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

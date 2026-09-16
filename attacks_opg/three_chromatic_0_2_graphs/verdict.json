@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "Every finite 3-colourable (0,2)-graph is bipartite, so none has chromatic number exactly three.",
+  "would_publish": true,
+  "caveats": "For finite simple undirected graphs; literature priority has not been independently checked.",
+  "id": "three_chromatic_0_2_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.62526,
+  "eur": 0.647641,
+  "elapsed_s": 561.3,
+  "status": "completed",
+  "response_id": "resp_08747e481a3ddf6f006aaadea0619087d2af46d401d3631e6c",
+  "when": "2026-09-16T18:32:49Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A sharp six-colour bound is proved for simple cubic graphs having a 2-factor consisting of 3-, 5-, and 6-cycles, but the general conjecture is not resolved.",
+  "would_publish": false,
+  "caveats": "No novelty claim is made; the required short-cycle 2-factor need not exist.",
+  "id": "star_chromatic_index_of_cubic_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.95667,
+  "eur": 0.990914,
+  "elapsed_s": 860.8,
+  "status": "completed",
+  "response_id": "resp_0d131195eeb188f6006aaadc80c0f887d298a7c1c1c8803236",
+  "when": "2026-09-16T18:28:45Z"
+}

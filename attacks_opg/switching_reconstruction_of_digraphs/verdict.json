@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove an exponential orbit-size obstruction for connected counterexamples and exclude all switchings of transitive tournaments on at least twelve vertices.",
+  "would_publish": false,
+  "caveats": "The unrestricted existence question is not settled; novelty relative to the listed references has not been checked, and no exhaustive computation was performed.",
+  "id": "switching_reconstruction_of_digraphs",
+  "model": "gpt-6-astra",
+  "usd": 0.941395,
+  "eur": 0.975092,
+  "elapsed_s": 860.8,
+  "status": "completed",
+  "response_id": "resp_0f8a2966dec492e9006aaadd4c23d487d2b4a34dc400df56b0",
+  "when": "2026-09-16T18:32:08Z"
+}

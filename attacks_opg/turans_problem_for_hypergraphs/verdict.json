@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The K5^(3) bound, with equality characterized, holds whenever deleting one vertex makes the hypergraph 2-colorable.",
+  "would_publish": false,
+  "caveats": "Restricted-class result only; neither full conjecture is settled, and novelty is not claimed.",
+  "id": "turans_problem_for_hypergraphs",
+  "model": "gpt-6-astra",
+  "usd": 0.903525,
+  "eur": 0.935866,
+  "elapsed_s": 721.2,
+  "status": "completed",
+  "response_id": "resp_0627bd574dd4f4d8006aaadf8e486887d2936cf42ff23ffc94",
+  "when": "2026-09-16T18:39:27Z"
+}

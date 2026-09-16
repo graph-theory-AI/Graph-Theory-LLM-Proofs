@@ -11,19 +11,19 @@ runs were not used.
 
 ## Counts
 
-Finished attacks with a verdict: **123**.
-Spend (promo ledger × prepaid FX): **€113.49** billed USD
-**$109.57** / budget €600
+Finished attacks with a verdict: **143**.
+Spend (promo ledger × prepaid FX): **€129.99** billed USD
+**$125.49** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
 | --- | ---: | ---: |
-| proved | 5 | 4 |
-| disproved | 11 | 4 |
-| already_resolved | 20 | 0 |
-| partial | 87 | 0 |
+| proved | 6 | 5 |
+| disproved | 13 | 4 |
+| already_resolved | 21 | 0 |
+| partial | 103 | 1 |
 
-## Claimed proofs (5)
+## Claimed proofs (6)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
@@ -32,8 +32,9 @@ Spend (promo ledger × prepaid FX): **€113.49** billed USD
 | [`finding_k_edge_outerplanar_graph_embeddings`](https://graph-theory-ai.github.io/graph-conjectures/op/finding_k_edge_outerplanar_graph_embeddings/) · [artifact](attacks_opg/finding_k_edge_outerplanar_graph_embeddings/) | high | yes | A polynomial-time SPQR dynamic program, using a two-bin scheduling recurrence at parallel nodes, computes a minimum edge-outerplanar embedding. |
 | [`imbalance_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/imbalance_conjecture/) · [artifact](attacks_opg/imbalance_conjecture/) | high | yes | A truncated-tail inequality for edge imbalances implies every Erdős–Gallai inequality and proves the conjecture. |
 | [`mixing_circular_colourings_0`](https://graph-theory-ai.github.io/graph-conjectures/op/mixing_circular_colourings_0/) · [artifact](attacks_opg/mixing_circular_colourings_0/) | high | yes | For an n-vertex graph with an edge, the circular mixing threshold is rational, with reduced numerator at most n+1. |
+| [`three_chromatic_0_2_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/three_chromatic_0_2_graphs/) · [artifact](attacks_opg/three_chromatic_0_2_graphs/) | high | yes | Every finite 3-colourable (0,2)-graph is bipartite, so none has chromatic number exactly three. |
 
-## Claimed counterexamples (11)
+## Claimed counterexamples (13)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
@@ -48,8 +49,10 @@ Spend (promo ledger × prepaid FX): **€113.49** billed USD
 | [`matching_cut_and_girth`](https://graph-theory-ai.github.io/graph-conjectures/op/matching_cut_and_girth/) · [artifact](attacks_opg/matching_cut_and_girth/) | high | no | For every girth bound there is a simple 7-regular graph with no matching cut, so d = 8 refutes the universal assertion. |
 | [`melnikovs_valency_variety_problem`](https://graph-theory-ai.github.io/graph-conjectures/op/melnikovs_valency_variety_problem/) · [artifact](attacks_opg/melnikovs_valency_variety_problem/) | high | yes | A 37-vertex graph has chromatic number 3 and degree set {0,1,...,29}, making the proposed right-hand side equal to 3; moreover, 37 vertices is minimum. |
 | [`odd_cycles_and_low_oddness`](https://graph-theory-ai.github.io/graph-conjectures/op/odd_cycles_and_low_oddness/) · [artifact](attacks_opg/odd_cycles_and_low_oddness/) | high | no | A connected simple bridgeless cubic graph on 30 vertices has every 2-factor of type 5+5+5+15, and therefore has oddness 4. |
+| [`turan_number_of_a_finite_family`](https://graph-theory-ai.github.io/graph-conjectures/op/turan_number_of_a_finite_family/) · [artifact](attacks_opg/turan_number_of_a_finite_family/) | high | no | As written, the conjecture fails for the family {P3, 2K2}: its Turán number is 1, while both individual Turán numbers grow linearly. |
+| [`what_is_the_smallest_number_of_disjoint_spanning_trees_made_a_graph_hamiltonian`](https://graph-theory-ai.github.io/graph-conjectures/op/what_is_the_smallest_number_of_disjoint_spanning_trees_made_a_graph_hamiltonian/) · [artifact](attacks_opg/what_is_the_smallest_number_of_disjoint_spanning_trees_made_a_graph_hamiltonian/) | high | no | Under the stated deletion procedure, the requested minimum need not exist, even with metric weights and uniquely determined minimum trees. |
 
-## Already resolved (model says the literature already closed it) (20)
+## Already resolved (model says the literature already closed it) (21)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
@@ -72,6 +75,7 @@ Spend (promo ledger × prepaid FX): **€113.49** billed USD
 | [`ptas_for_feedback_arc_set_in_tournaments`](https://graph-theory-ai.github.io/graph-conjectures/op/ptas_for_feedback_arc_set_in_tournaments/) · [artifact](attacks_opg/ptas_for_feedback_arc_set_in_tournaments/) | high | no | Yes: Kenyon-Mathieu and Schudy established a PTAS for feedback arc set in tournaments at STOC 2007. |
 | [`real_roots_of_the_flow_polynomial`](https://graph-theory-ai.github.io/graph-conjectures/op/real_roots_of_the_flow_polynomial/) · [artifact](attacks_opg/real_roots_of_the_flow_polynomial/) | high | no | The conjecture is false: the published counterexample G(119,7) has a nonzero flow polynomial with real roots greater than 5. |
 | [`vertex_coloring_of_graph_fractional_powers`](https://graph-theory-ai.github.io/graph-conjectures/op/vertex_coloring_of_graph_fractional_powers/) · [artifact](attacks_opg/vertex_coloring_of_graph_fractional_powers/) | high | no | The triangular prism P is an explicit counterexample: χ(P^{3/5}) = 6 while ω(P^{3/5}) = 5. |
+| [`vertex_minor_closed_classes_are_chi_bounded`](https://graph-theory-ai.github.io/graph-conjectures/op/vertex_minor_closed_classes_are_chi_bounded/) · [artifact](attacks_opg/vertex_minor_closed_classes_are_chi_bounded/) | high | no | Yes: James Davies proved that every proper vertex-minor-closed class of finite simple graphs is chi-bounded. |
 | [`what_is_the_largest_graph_of_positive_curvature`](https://graph-theory-ai.github.io/graph-conjectures/op/what_is_the_largest_graph_of_positive_curvature/) · [artifact](attacks_opg/what_is_the_largest_graph_of_positive_curvature/) | high | no | The exact maximum is 208 vertices: Ghidelli proved the upper bound, and an explicit attaining construction is verified below. |
 
 ## Ill-posed / no determinate statement as supplied (0)
@@ -85,35 +89,15 @@ The sweep queue is the easiest-first open/partial arXiv ranking (227
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **104** (plus 0 skipped without a model call).
+Queue records not yet attacked: **84** (plus 0 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
-| [`random_stable_roommates`](https://graph-theory-ai.github.io/graph-conjectures/op/random_stable_roommates/) | 2 | 2.0 | http://www.openproblemgarden.org/op/random_stable_roommates |
-| [`signing_a_graph_to_have_small_magnitude_eigenvalues`](https://graph-theory-ai.github.io/graph-conjectures/op/signing_a_graph_to_have_small_magnitude_eigenvalues/) | 2 | 2.0 | http://www.openproblemgarden.org/op/signing_a_graph_to_have_small_magnitude_eigenvalues |
-| [`simultaneous_partition_of_hypergraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/simultaneous_partition_of_hypergraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/simultaneous_partition_of_hypergraphs |
-| [`star_chromatic_index_of_cubic_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/star_chromatic_index_of_cubic_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/star_chromatic_index_of_cubic_graphs |
-| [`subdivision_of_a_transitive_tournament_in_digraphs_with_large_outdegree`](https://graph-theory-ai.github.io/graph-conjectures/op/subdivision_of_a_transitive_tournament_in_digraphs_with_large_outdegree/) | 2 | 2.0 | http://www.openproblemgarden.org/op/subdivision_of_a_transitive_tournament_in_digraphs_with_large_outdegree |
-| [`switching_reconstruction_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/switching_reconstruction_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/switching_reconstruction_conjecture |
-| [`switching_reconstruction_of_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/switching_reconstruction_of_digraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/switching_reconstruction_of_digraphs |
-| [`the_bermond_thomassen_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/the_bermond_thomassen_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/the_bermond_thomassen_conjecture |
-| [`the_borodin_kostochka_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/the_borodin_kostochka_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/the_borodin_kostochka_conjecture |
-| [`the_crossing_number_of_the_hypercube`](https://graph-theory-ai.github.io/graph-conjectures/op/the_crossing_number_of_the_hypercube/) | 2 | 2.0 | http://www.openproblemgarden.org/op/the_crossing_number_of_the_hypercube |
-| [`three_4_flows_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/three_4_flows_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/three_4_flows_conjecture |
-| [`three_chromatic_0_2_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/three_chromatic_0_2_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/three_chromatic_0_2_graphs |
-| [`triangle_packing_vs_triangle_edge_transversal`](https://graph-theory-ai.github.io/graph-conjectures/op/triangle_packing_vs_triangle_edge_transversal/) | 2 | 2.0 | http://www.openproblemgarden.org/op/triangle_packing_vs_triangle_edge_transversal |
-| [`turan_number_of_a_finite_family`](https://graph-theory-ai.github.io/graph-conjectures/op/turan_number_of_a_finite_family/) | 2 | 2.0 | http://www.openproblemgarden.org/op/turan_number_of_a_finite_family |
-| [`turans_problem_for_hypergraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/turans_problem_for_hypergraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/turans_problem_for_hypergraphs |
-| [`unit_vector_flows`](https://graph-theory-ai.github.io/graph-conjectures/op/unit_vector_flows/) | 2 | 2.0 | http://www.openproblemgarden.org/op/unit_vector_flows |
 | [`universal_steiner_triple_systems`](https://graph-theory-ai.github.io/graph-conjectures/op/universal_steiner_triple_systems/) | 2 | 2.0 | http://www.openproblemgarden.org/op/universal_steiner_triple_systems |
-| [`vertex_minor_closed_classes_are_chi_bounded`](https://graph-theory-ai.github.io/graph-conjectures/op/vertex_minor_closed_classes_are_chi_bounded/) | 2 | 2.0 | http://www.openproblemgarden.org/op/vertex_minor_closed_classes_are_chi_bounded |
-| [`weak_pentagon_problem`](https://graph-theory-ai.github.io/graph-conjectures/op/weak_pentagon_problem/) | 2 | 2.0 | http://www.openproblemgarden.org/op/weak_pentagon_problem |
 | [`weighted_colouring_of_hexagonal_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/weighted_colouring_of_hexagonal_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/weighted_colouring_of_hexagonal_graphs |
-| [`what_is_the_smallest_number_of_disjoint_spanning_trees_made_a_graph_hamiltonian`](https://graph-theory-ai.github.io/graph-conjectures/op/what_is_the_smallest_number_of_disjoint_spanning_trees_made_a_graph_hamiltonian/) | 2 | 2.0 | http://www.openproblemgarden.org/op/what_is_the_smallest_number_of_disjoint_spanning_trees_made_a_graph_hamiltonian |
 | [`3_decomposition_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/3_decomposition_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/3_decomposition_conjecture |
 | [`3_flow_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/3_flow_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/3_flow_conjecture |
 | [`4_flow_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/4_flow_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/4_flow_conjecture |
-| [`57_regular_moore_graph`](https://graph-theory-ai.github.io/graph-conjectures/op/57_regular_moore_graph/) | 3 | 3.0 | http://www.openproblemgarden.org/op/57_regular_moore_graph |
 | [`acyclic_list_colouring_of_planar_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/acyclic_list_colouring_of_planar_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/acyclic_list_colouring_of_planar_graphs |
 | [`adams_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/adams_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/adams_conjecture |
 | [`are_almost_all_graphs_determined_by_their_spectrum`](https://graph-theory-ai.github.io/graph-conjectures/op/are_almost_all_graphs_determined_by_their_spectrum/) | 3 | 3.0 | http://www.openproblemgarden.org/op/are_almost_all_graphs_determined_by_their_spectrum |
@@ -194,4 +178,4 @@ Queue records not yet attacked: **104** (plus 0 skipped without a model call).
 | [`reconstruction_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/reconstruction_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/reconstruction_conjecture |
 | [`the_berge_fulkerson_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/the_berge_fulkerson_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/the_berge_fulkerson_conjecture |
 
-Generated 2026-09-16T18:27:37Z.
+Generated 2026-09-16T18:42:40Z.

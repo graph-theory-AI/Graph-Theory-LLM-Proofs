@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "adams_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "\u00c1d\u00e1m's Conjecture",
+    "paper": "http://www.openproblemgarden.org/op/adams_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/adams_conjecture/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "adams_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/adams_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/adams_conjecture",
+    "catalog_title": "\u00c1d\u00e1m's Conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2013-03-01",
+    "authors": "\u00c1d\u00e1m, Andr\u00e1s",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "Conjecture Every digraph with at least one directed cycle has an arc whose reversal reduces the number of directed cycles.",
+    "context_text": "The conjecture fails for multigraphs (multiple arcs are allowed). Counterexamples for multidigraphs have been given by Grinberg [G], Jir\u00e1sek [J] and Thomassen [T]. Surprisingly, the conjecture remains open for tournaments. Conjecture Every tournament that is not transitive has an arc whose reversal reduces the number of directed cycles.",
+    "references_text": "- *[A] A. \u00c1d\u00e1m, Problem 2. In Theory of Graphs and its Applications (M. Fiedler, ed.), 234. (1964) Publishing House of the Czechoslovak Academy of Sciences, Prague.\n- [G] E.Y. Grinberg, Examples of non-\u00c1d\u00e1m multigraphs (in Russian) Latv. Mat. Ezhegodnik, 31 (1988), pp. 128\u2013138\n- [J] J. Jir\u00e1sek, On a certain class of multidigraphs, for which reversal of no arc decreases the number of their cycles, Comment. Math. Univ. Carolinae, 28 (1987), pp. 185\u2013189.\n- [T] C. Thomassen, Counterexamples to \u00c1d\u00e1m's conjecture on arc reversals in directed graphs, J. Combin. Theory Ser. B, 42 (1987), pp. 128\u2013130."
+  },
+  "started": "2026-09-16T18:32:49Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

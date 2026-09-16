@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An explicit construction gives an S^2-flow for every generalized Petersen graph and for a larger family of two-layer cubic graphs over finite abelian groups.",
+  "would_publish": false,
+  "caveats": "The unrestricted first conjecture is not resolved; novelty and the catalog's reported 2026 results have not been independently verified.",
+  "id": "unit_vector_flows",
+  "model": "gpt-6-astra",
+  "usd": 0.91771,
+  "eur": 0.950559,
+  "elapsed_s": 828.1,
+  "status": "completed",
+  "response_id": "resp_0be2750f7dccc3b9006aaadf90e58087d2a134d83c69ee535b",
+  "when": "2026-09-16T18:41:16Z"
+}

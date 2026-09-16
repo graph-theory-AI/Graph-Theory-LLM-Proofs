@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "universal_steiner_triple_systems",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Universal Steiner triple systems",
+    "paper": "http://www.openproblemgarden.org/op/universal_steiner_triple_systems",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/universal_steiner_triple_systems/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Edge coloring"
+  },
+  "dossier_meta": {
+    "id": "universal_steiner_triple_systems",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/universal_steiner_triple_systems/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/universal_steiner_triple_systems",
+    "catalog_title": "Universal Steiner triple systems",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-10-05",
+    "authors": "Grannell, Mike, Griggs, Terry, Knor, Martin, Skoviera, Martin",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Edge coloring",
+    "statement_text": "Problem Which Steiner triple systems are universal?",
+    "context_text": "A cubic graph $ G $ is $ S $ -edge-colorable for a Steiner triple system $ S $ if its edges can be colored with the points of $ S $ in such a way that the points assigned to three edges sharing a vertex form a triple in $ S $ . A Steiner triple system $ S $ is called universal if any (simple) cubic graph is $ S $ -colorable. It is easy to see that if $ S_3 $ denotes the trivial Steiner triple system with three points and one triple, then $ S_3 $ -colorable graphs are precisely (cubic) edge-3-colorable graphs. For the same reason, any cubic edge-3-colorable graph is $ S $ -colorable for any Steiner triple system (with at least one edge). Thus, the study of $ S $ -colorings may be viewed as an attempt to understand snarks . It is not hard to see, that a graph is Fano-colorable iff it has a nowhere-zero 8-flow. Thus (by Jaeger's result) Fano plane is \"almost universal\": it is possible to use it to color any bridgeless cubic graph (but it doesn't work for any graph with a bridge). Grannell et al. [GGKS] constructed a universal Steiner triple system of order 381. Holroyd, Skoviera [HS] proved that neither projective nor affine Steiner triple systems are universal. Kral et al. [KMPS] proved that any non-affine non-projective non-trivial point-transitive Steiner triple system is universal.",
+    "references_text": "- *[GGKS] M.J. Grannell, T.S. Griggs, M. Knor, M. Skoviera, A Steiner triple system which colours all cubic graphs, J. Graph Theory 46 (2004), 15--24. MathSciNet\n- [HS] F. Holroyd and M. Skoviera, Colouring of cubic graphs by Steiner triple systems, J.~Combin. Theory Ser. B 91 (2004), 57--66.\n- [KMPS] D. Kral, E. Macajova, A. Por, J.-S. Sereni, Characterization results for Steiner triple systems and their application to edge-colorings of cubic graphs, preprint."
+  },
+  "started": "2026-09-16T18:27:39Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

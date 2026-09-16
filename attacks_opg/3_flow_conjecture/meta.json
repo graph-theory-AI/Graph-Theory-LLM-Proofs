@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "3_flow_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "3-flow conjecture",
+    "paper": "http://www.openproblemgarden.org/op/3_flow_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/3_flow_conjecture/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Nowhere-zero flows"
+  },
+  "dossier_meta": {
+    "id": "3_flow_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/3_flow_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/3_flow_conjecture",
+    "catalog_title": "3-flow conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-03-07",
+    "authors": "Tutte, William T.",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Nowhere-zero flows",
+    "statement_text": "Conjecture Every 4- edge-connected graph has a nowhere-zero 3-flow.",
+    "context_text": "Grotzsch proved that every triangle free (and loopless) planar graph is 3- colorable . By flow/coloring duality , this is equivalent to the statement that every 4-edge-connected planar graph has a nowhere-zero 3-flow. The 3-flow conjecture asserts that this is still true without the assumption of planarity. Jaeger proved that 4-edge-connected graphs have nowhere-zero 4-flows, but very little is known about nowhere-zero 3-flows. In particular, the following weak version of the 3-flow conjecture is still wide open. Conjecture (The weak 3-flow conjecture (Jaeger)) There exists a fixed integer $ k $ so that every $ k $ -edge-connected graph has a nowhere-zero 3-flow. Lai and Zhang [LZ] have proved that if $ G $ has $ n $ vertices and edge-connectivity at least $ 4 \\log_2(n) $ then $ G $ has a nowhere-zero 3-flow. A similar result (edge connectivity at least $ 4 \\log(n) + 2 $ ) also follows from a theorem of Alon, Linial, and Meshulam [ALM] on additive bases of vector spaces.",
+    "references_text": "- [ALM] N. Alon, N. Linial, and R. Meshulam Additive Bases of Vector Spaces over Prime Fields J. Combinatorial Theory Ser. A 57 (1991), 203-210.\n- [J] F. Jaeger, Flows and Generalized Coloring Theorems in Graphs, J. Combinatorial Theory Ser. B 26 (1979) 205-216.\n- [LZ] H.J. Lai and C.Q. Zhang, Nowhere-Zero 3-Flows of Highly Connected Graphs, Discrete Math 110 (1992) 179-183.\n- [T54] W.T. Tutte, A Contribution on the Theory of Chromatic Polynomial, Canad. J. Math. 6 (1954) 80-91.\n- [T66] W.T. Tutte, On the Algebraic Theory of Graph Colorings, J. Combinatorial Theory 1 (1966) 15-50."
+  },
+  "started": "2026-09-16T18:30:44Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

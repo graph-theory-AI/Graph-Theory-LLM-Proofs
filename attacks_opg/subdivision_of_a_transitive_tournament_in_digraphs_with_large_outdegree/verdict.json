@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An explicit oriented four-cycle blow-up has subdivision threshold (19/128)k^2 + O(k), giving a quadratic lower bound on any possible forcing function f(k).",
+  "would_publish": false,
+  "caveats": "This gives no universal upper bound and does not establish that f(5) exists; novelty of the obstruction-family calculation has not been checked.",
+  "id": "subdivision_of_a_transitive_tournament_in_digraphs_with_large_outdegree",
+  "model": "gpt-6-astra",
+  "usd": 1.346085,
+  "eur": 1.394268,
+  "elapsed_s": 980.3,
+  "status": "completed",
+  "response_id": "resp_0fb59ebceb63c76f006aaadcb9e35887d291f3c64d1e74fb1f",
+  "when": "2026-09-16T18:31:41Z"
+}
