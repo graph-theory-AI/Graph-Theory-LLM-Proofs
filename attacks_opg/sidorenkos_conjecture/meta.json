@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "sidorenkos_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Sidorenko's Conjecture",
+    "paper": "http://www.openproblemgarden.org/op/sidorenkos_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/sidorenkos_conjecture/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "sidorenkos_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/sidorenkos_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/sidorenkos_conjecture",
+    "catalog_title": "Sidorenko's Conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2019-10-10",
+    "authors": "Sidorenko, A.",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture For any bipartite graph $ H $ and graph $ G $ , the number of homomorphisms from $ H $ to $ G $ is at least $ \\left(\\frac{2|E(G)|}{|V(G)|^2}\\right)^{|E(H)|}|V(G)|^{|V(H)|} $ .",
+    "context_text": "A homomorphism from a graph $ H $ to a graph $ G $ is a mapping $ f:V(H)\\to V(G) $ which preserves edges. Given graphs $ H $ and $ G $ , the homomorphism density of $ H $ in $ G $ , denoted $ t(H,G) $ , is the probability that a random function $ f:V(H)\\to V(G) $ is a homomorphism. That is, $$t(H,G)=\\frac{\\left|\\left\\{f: V(H)\\to V(G): f\\text{ is a homomorphism from }H\\text{ to }G\\right\\}\\right|}{|V(G)|^{|V(H)|}}.$$ In this language, Sidorenko's Conjecture says that, if $ H $ is bipartite, then every graph $ G $ satisfies $$t(H,G)\\geq t(K_2,G)^{|E(H)|}.$$ There are lots of results on Sidorenko's Conjecture; rather than listing them all here, we encourage the reader to see the references of the recent paper [CL].",
+    "references_text": "- [CL] David Conlon and Joonkyung Lee: Sidorenko's conjecture for blow-ups, submitted."
+  },
+  "started": "2026-09-16T19:18:22Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "strong_matchings_and_covers",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Strong matchings and covers",
+    "paper": "http://www.openproblemgarden.org/op/strong_matchings_and_covers",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/strong_matchings_and_covers/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Infinite Graphs"
+  },
+  "dossier_meta": {
+    "id": "strong_matchings_and_covers",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/strong_matchings_and_covers/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/strong_matchings_and_covers",
+    "catalog_title": "Strong matchings and covers",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-10-23",
+    "authors": "Aharoni, Ron",
+    "subject": "Graph Theory \u00bb Infinite Graphs",
+    "statement_text": "Let $ H $ be a hypergraph . A strongly maximal matching is a matching $ F \\subseteq E(H) $ so that $ |F' \\setminus F| \\le |F \\setminus F'| $ for every matching $ F' $ . A strongly minimal cover is a (vertex) cover $ X \\subseteq V(H) $ so that $ |X' \\setminus X| \\ge |X \\setminus X'| $ for every cover $ X' $ . Conjecture If $ H $ is a (possibly infinite) hypergraph in which all edges have size $ \\le k $ for some integer $ k $ , then $ H $ has a strongly maximal matching and a strongly minimal cover.",
+    "context_text": "The theory of matching in finite graphs is quite well understood. Now, thanks to the work of Aharoni and others, much of this theory has been extended to infinite graphs. On the other hand, matching in hypergraphs - both finite and infinite - is a subject where our knowledge apears to be lacking. The above conjecture asserts a rather basic property of hypergraphs which would be nice to verify. This conjecture is (of course) trivial for finite hypergraphs, but it looks very difficult for infinite ones. It has been proved by Aharoni [A2] for the case when $ k=2 $ , that is, for infinite graphs. Here the key tool is an infinite version of the Tutte-Edmonds-Gallai decomposition theorem [A1]. Next we offer another interesting conjecture of Aharoni on minimal covers. Conjecture If $ G $ is a (possibly infinite) graph and $ H $ is the hypergraph of independent sets in $ G $ , then $ H $ has a strongly minimal cover.",
+    "references_text": "- [A1] R. Aharoni, Matchings in infinite graphs. J. Combin. Theory Ser. B 44 (1988), no. 1, 87--125. MathSciNet.\n- *[A2] R. Aharoni, Infinite matching theory. Directions in infinite graph theory and combinatorics (Cambridge, 1989). Discrete Math. 95 (1991), no. 1-3, 5--22. MathSciNet."
+  },
+  "started": "2026-09-16T19:21:46Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "Seymour\u2019s r-graph conjecture is an immediate corollary of the proved Goldberg\u2013Seymour edge-colouring theorem.",
+  "would_publish": false,
+  "caveats": "Uses the established Goldberg\u2013Seymour theorem; graphs are finite loopless multigraphs, and this is not a new result.",
+  "id": "seymours_r_graph_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.108565,
+  "eur": 0.112451,
+  "elapsed_s": 101.5,
+  "status": "completed",
+  "response_id": "resp_0de93161eafb5e2b006aaaea8fd9c487d28b8dcfc6de8c9981",
+  "when": "2026-09-16T19:16:05Z"
+}

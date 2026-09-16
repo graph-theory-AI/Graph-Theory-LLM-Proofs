@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "small_universal_point_sets_for_planar_graphs",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Universal point sets for planar graphs",
+    "paper": "http://www.openproblemgarden.org/op/small_universal_point_sets_for_planar_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/small_universal_point_sets_for_planar_graphs/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Drawings"
+  },
+  "dossier_meta": {
+    "id": "small_universal_point_sets_for_planar_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/small_universal_point_sets_for_planar_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/small_universal_point_sets_for_planar_graphs",
+    "catalog_title": "Universal point sets for planar graphs",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-05-22",
+    "authors": "Mohar, Bojan",
+    "subject": "Graph Theory \u00bb Topological Graph Theory \u00bb Drawings",
+    "statement_text": "We say that a set $ P \\subseteq {\\mathbb R}^2 $ is $ n $ - universal if every $ n $ vertex planar graph can be drawn in the plane so that each vertex maps to a distinct point in $ P $ , and all edges are (non-intersecting) straight line segments. Question Does there exist an $ n $ -universal set of size $ O(n) $ ?",
+    "context_text": "More generally, if we let $ f(n) $ denote the size of the smallest $ n $ -universal set, we are interested in the behaviour of $ f $ . The best known upper bound is $ f(n) = O(n^2) $ . Indeed, every $ n $ -vertex planar graph can be drawn as required in the $ n \\times n $ grid [dFPP], [S]. On the flip side, it is known that $ f(n) \\ge 1.098n $ for sufficiently large $ n $ [CH].",
+    "references_text": "- [CH] M. Chrobak and H.Karloff. A lower bound on the size of universal sets for planar graphs. SIGACT News, 20:83-86, 1989.\n- [dFPP] H. de Fraysseix, J. Pach, and R. Pollack. How to draw a planar graph on a grid. Combinatorica, 10(1):41-51, 1990. MathSciNet\n- [S] W. Schnyder. Embedding planar graphs on the grid. In Proc. 1st ACM-SIAM Sympos. Discrete Algorithms, pages 138-148, 1990."
+  },
+  "started": "2026-09-16T19:20:21Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

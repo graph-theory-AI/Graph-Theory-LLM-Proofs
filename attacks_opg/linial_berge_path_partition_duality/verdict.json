@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A sharp stable-module lifting theorem gives explicit positive cases for every k\u22653 and a gap-preserving parameter reduction, but does not settle the general conjecture.",
+  "would_publish": false,
+  "caveats": "The positive cases use the established k=2 theorem supplied in the question; no novelty claim is made for these restricted results.",
+  "id": "linial_berge_path_partition_duality",
+  "model": "gpt-6-astra",
+  "usd": 1.36191,
+  "eur": 1.410659,
+  "elapsed_s": 1237.9,
+  "status": "completed",
+  "response_id": "resp_0a66d513f0d4b310006aaae71f381887d29e0b5b76789e17e9",
+  "when": "2026-09-16T19:20:20Z"
+}

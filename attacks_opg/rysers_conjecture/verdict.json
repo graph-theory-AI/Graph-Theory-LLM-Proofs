@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove Ryser's inequality when nonisolated degrees lie in {d,d+1} with d <= r-2, or when maximum vertex degree is at most three and r >= 6.",
+  "would_publish": false,
+  "caveats": "Only degree-restricted families are treated; novelty has not been checked, and the general conjecture is not resolved.",
+  "id": "rysers_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.067185,
+  "eur": 1.105385,
+  "elapsed_s": 826.7,
+  "status": "completed",
+  "response_id": "resp_0e7ebeb3aebf14ce006aaaea62b24c87d29abdb4dcba43696f",
+  "when": "2026-09-16T19:27:25Z"
+}

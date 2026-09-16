@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "shannon_capacity_of_the_seven_cycle",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Shannon capacity of the seven-cycle",
+    "paper": "http://www.openproblemgarden.org/op/shannon_capacity_of_the_seven_cycle",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/shannon_capacity_of_the_seven_cycle/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "shannon_capacity_of_the_seven_cycle",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/shannon_capacity_of_the_seven_cycle/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/shannon_capacity_of_the_seven_cycle",
+    "catalog_title": "Shannon capacity of the seven-cycle",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2009-02-19",
+    "authors": "",
+    "subject": "Graph Theory",
+    "statement_text": "Problem What is the Shannon capacity of $ C_7 $ ?",
+    "context_text": "Let $ \\alpha(G) $ denote the independence number of the graph $ G $ , and let $ G*H $ denote the strong graph product of $ G $ and $ H $ (in which $ (g,h) $ is adjacent to $ (g',h') $ if $ g=g' $ and $ h $ is adjacent to $ h' $ , or if $ h=h' $ and $ g $ is adjacent to $ g' $ , or if $ g $ is adjacent to $ g' $ and $ h $ is adjacent to $ h' $ ). Then the Shannon capacity of $ G $ is defined by $$\\theta(G) = \\lim_{k\\to\\infty} \\biggl({\\alpha(G*G*\\cdots*G) \\over k}\\biggr)^{1/k},$$ where the strong graph product is over $ k $ copies of $ G $ . The Shannon capacity is important because it represents the effective size of an alphabet in a communication model represented by $ G $ , but it is notoriously difficult to compute. Lov\u00e1sz [L] famously proved that the Shannon capacity of the five-cycle $ C_5 $ is $ \\sqrt{5} $ , but even the Shannon capacity of $ C_7 $ remains unknown. However, Bohman [B] has shown that $$\\lim_{k\\to\\infty}(k+(1/2)-\\theta(C_{2k+1}))=0.$$",
+    "references_text": "- [B] Tom Bohman, A limit theorem for the Shannon capacity of odd cycles II, Proc. Amer. Math. Soc. 133 (2005), no. 2, 537-543.\n- [L] L\u00e1szl\u00f3 Lov\u00e1sz, On the Shannon capacity of a graph, IEEE Trans. Inform. Th. IT-25 (1979), 1-7."
+  },
+  "started": "2026-09-16T19:16:05Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "seymours_r_graph_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Seymour's r-graph conjecture",
+    "paper": "http://www.openproblemgarden.org/op/seymours_r_graph_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/seymours_r_graph_conjecture/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Edge coloring"
+  },
+  "dossier_meta": {
+    "id": "seymours_r_graph_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/seymours_r_graph_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/seymours_r_graph_conjecture",
+    "catalog_title": "Seymour's r-graph conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2008-10-03",
+    "authors": "Seymour, Paul D.",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Edge coloring",
+    "statement_text": "An $ r $ - graph is an $ r $ -regular graph $ G $ with the property that $ |\\delta(X)| \\ge r $ for every $ X \\subseteq V(G) $ with odd size. Conjecture $ \\chi'(G) \\le r+1 $ for every $ r $ -graph $ G $ .",
+    "context_text": "This conjecture is among the most important unsolved problems in edge coloring. It is very close in nature to Goldberg's Conjecture , and is also closely related to Rizzi's packing postman sets conjecture (see packing T-joins ). If $ G $ is an $ r $ -regular graph and there exists $ X \\subseteq V(G) $ with $ |X| $ odd and $ |\\delta(X)| < r $ , then it is immediate that $ G $ is not $ r $ -edge-colourable, since every perfect matching must use at least one edge from $ \\delta(X) $ . This is in some sense the only obvious obstruction to $ r $ -edge-colorability that we know of. So, $ r $ -graphs are the $ r $ -regular graphs which do not fail to be $ r $ -edge-colorable for this obvious reason. Not every $ r $ -graph is $ r $ -edge-colorable, for instance Petersen's graph is a 3-graph which is not 3-edge-colorable. However, this conjecture asserts that all such graphs are still $ (r+1) $ -edge-colorable. This conjecture has been proved for $ r \\le 11 $ by Nishizeki and Kashiwagi [NK].",
+    "references_text": "- [NK] T. Nishizeki and K. Kashiwagi, An upper bound on the chromatic index of multigraphs. Graph theory with applications to algorithms and computer science (Kalamazoo, Mich., 1984), 595--604, Wiley-Intersci. Publ., Wiley, New York, 1985. MathSciNet.\n- *[S] P.D. Seymour, On multicolourings of cubic graphs, and conjectures of Fulkerson and Tutte. Proc. London Math. Soc. (3) 38 (1979), no. 3, 423--460. MathSciNet."
+  },
+  "started": "2026-09-16T19:14:23Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -12,8 +12,8 @@ runs were not used.
 ## Counts
 
 Finished attacks with a verdict: **0**.
-Spend (promo ledger × prepaid FX): **€165.66** billed USD
-**$159.94** / budget €600
+Spend (promo ledger × prepaid FX): **€185.87** billed USD
+**$179.44** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
@@ -42,11 +42,11 @@ Spend (promo ledger × prepaid FX): **€165.66** billed USD
 
 ## Coverage
 
-The sweep queue is the easiest-first open/partial arXiv ranking (662
+The sweep queue is the easiest-first open/partial arXiv ranking (682
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **662** (plus 0 skipped without a model call).
+Queue records not yet attacked: **682** (plus 0 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
@@ -466,9 +466,29 @@ Queue records not yet attacked: **662** (plus 0 skipped without a model call).
 | [`high_connectivity_no_k_n`](https://graph-theory-ai.github.io/graph-conjectures/op/high_connectivity_no_k_n/) | 3 | 3.0 | http://www.openproblemgarden.org/op/high_connectivity_no_k_n |
 | [`hoand_reed_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/hoand_reed_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/hoand_reed_conjecture |
 | [`jorgensens_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/jorgensens_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/jorgensens_conjecture |
+| [`linial_berge_path_partition_duality`](https://graph-theory-ai.github.io/graph-conjectures/op/linial_berge_path_partition_duality/) | 3 | 3.0 | http://www.openproblemgarden.org/op/linial_berge_path_partition_duality |
+| [`long_directed_cycles_in_digraph_with_minimum_in_and_out_degree`](https://graph-theory-ai.github.io/graph-conjectures/op/long_directed_cycles_in_digraph_with_minimum_in_and_out_degree/) | 3 | 3.0 | http://www.openproblemgarden.org/op/long_directed_cycles_in_digraph_with_minimum_in_and_out_degree |
+| [`m_n_cycle_covers`](https://graph-theory-ai.github.io/graph-conjectures/op/m_n_cycle_covers/) | 3 | 3.0 | http://www.openproblemgarden.org/op/m_n_cycle_covers |
 | [`mapping_planar_graphs_to_odd_cycles`](https://graph-theory-ai.github.io/graph-conjectures/op/mapping_planar_graphs_to_odd_cycles/) | 3 | 3.0 | http://www.openproblemgarden.org/op/mapping_planar_graphs_to_odd_cycles |
+| [`monochromatic_reachability_vs_rainbow_triangles`](https://graph-theory-ai.github.io/graph-conjectures/op/monochromatic_reachability_vs_rainbow_triangles/) | 3 | 3.0 | http://www.openproblemgarden.org/op/monochromatic_reachability_vs_rainbow_triangles |
 | [`monochromatic_vertex_colorings_inherited_from_perfect_matchings`](https://graph-theory-ai.github.io/graph-conjectures/op/monochromatic_vertex_colorings_inherited_from_perfect_matchings/) | 3 | 3.0 | http://www.openproblemgarden.org/op/monochromatic_vertex_colorings_inherited_from_perfect_matchings |
+| [`monochromatoc_reachability_in_arc_colored_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/monochromatoc_reachability_in_arc_colored_digraphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/monochromatoc_reachability_in_arc_colored_digraphs |
+| [`multicolour_erdos_hajnal_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/multicolour_erdos_hajnal_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/multicolour_erdos_hajnal_conjecture |
+| [`nearly_spanning_regular_subgraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/nearly_spanning_regular_subgraphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/nearly_spanning_regular_subgraphs |
+| [`non_edges_vs_feedback_edge_sets_in_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/non_edges_vs_feedback_edge_sets_in_digraphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/non_edges_vs_feedback_edge_sets_in_digraphs |
+| [`oriented_trees_in_n_chromatic_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/oriented_trees_in_n_chromatic_digraphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/oriented_trees_in_n_chromatic_digraphs |
+| [`partial_list_coloring`](https://graph-theory-ai.github.io/graph-conjectures/op/partial_list_coloring/) | 3 | 3.0 | http://www.openproblemgarden.org/op/partial_list_coloring |
+| [`partial_list_coloring_0`](https://graph-theory-ai.github.io/graph-conjectures/op/partial_list_coloring_0/) | 3 | 3.0 | http://www.openproblemgarden.org/op/partial_list_coloring_0 |
+| [`pebbling_a_cartesian_product`](https://graph-theory-ai.github.io/graph-conjectures/op/pebbling_a_cartesian_product/) | 3 | 3.0 | http://www.openproblemgarden.org/op/pebbling_a_cartesian_product |
+| [`pentagon_problem`](https://graph-theory-ai.github.io/graph-conjectures/op/pentagon_problem/) | 3 | 3.0 | http://www.openproblemgarden.org/op/pentagon_problem |
+| [`petersen_coloring_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/petersen_coloring_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/petersen_coloring_conjecture |
+| [`ramsey_properties_of_cayley_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/ramsey_properties_of_cayley_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/ramsey_properties_of_cayley_graphs |
+| [`reeds_omega_delta_and_chi_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/reeds_omega_delta_and_chi_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/reeds_omega_delta_and_chi_conjecture |
+| [`rysers_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/rysers_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/rysers_conjecture |
+| [`seagull_problem`](https://graph-theory-ai.github.io/graph-conjectures/op/seagull_problem/) | 3 | 3.0 | http://www.openproblemgarden.org/op/seagull_problem |
 | [`seymours_second_neighbourhood_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/seymours_second_neighbourhood_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/seymours_second_neighbourhood_conjecture |
+| [`seymours_self_minor_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/seymours_self_minor_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/seymours_self_minor_conjecture |
+| [`shannon_capacity_of_the_seven_cycle`](https://graph-theory-ai.github.io/graph-conjectures/op/shannon_capacity_of_the_seven_cycle/) | 3 | 3.0 | http://www.openproblemgarden.org/op/shannon_capacity_of_the_seven_cycle |
 | [`strong_5_cycle_double_cover_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/strong_5_cycle_double_cover_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/strong_5_cycle_double_cover_conjecture |
 | [`2005.10849__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2005.10849__00/) | 3 | 3.05 | On the cop number of graphs of high girth |
 | [`2009.07840__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2009.07840__00/) | 3 | 3.05 | Typical and Extremal Aspects of Friends-and-Strangers Graphs |
@@ -713,4 +733,4 @@ Queue records not yet attacked: **662** (plus 0 skipped without a model call).
 | [`2210.09227__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.09227__00/) | 4 | 3.75 | A multidimensional Ramsey Theorem |
 | [`2404.02021__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2404.02021__02/) | 4 | 3.85 | On off-diagonal hypergraph Ramsey numbers |
 
-Generated 2026-09-16T19:12:45Z.
+Generated 2026-09-16T19:27:49Z.

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "seymours_self_minor_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Seymour's self-minor conjecture",
+    "paper": "http://www.openproblemgarden.org/op/seymours_self_minor_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/seymours_self_minor_conjecture/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Infinite Graphs"
+  },
+  "dossier_meta": {
+    "id": "seymours_self_minor_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/seymours_self_minor_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/seymours_self_minor_conjecture",
+    "catalog_title": "Seymour's self-minor conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-05-22",
+    "authors": "Seymour, Paul D.",
+    "subject": "Graph Theory \u00bb Infinite Graphs",
+    "statement_text": "Conjecture Every infinite graph is a proper minor of itself.",
+    "context_text": "Robertson and Seymour famously proved that the set of all finite graphs is well-quasi-ordered by the minor relation. More precisely, if we let $ G_1,G_2,\\ldots $ be an infinite sequence of graphs, then there exist $ i < j $ so that $ G_i $ is a minor of $ G_j $ . Their theory also gives us a rough structure theorem for the family of graphs without a fixed minor - a powerful tool for studying minors in finite graphs. On the other hand, there are still large gaps in our understanding of minors of infinite graphs. For instance, while it is known that Wagner's conjecture does not hold in general for infinite graphs [T], it is possible that countably infinite graphs are well quasi-ordered. The conjecture highlighted above is especially interesting, because (if true) it would imply the well quasi-ordering of finite graphs. Indeed, the well quasi-ordering of finite graphs is equivalent to the statement that every infinite set $ \\Omega $ of finite graphs contains two distinct members, one of which is a minor of the other. This latter statement follows from the above conjecture, since we may form a single infinite graph $ G $ from the disjoint union of the graphs in $ \\Omega $ , and the proper self-minor of $ G $ gives us a pair of graphs in $ \\Omega $ with one a minor of the other.",
+    "references_text": "- [T] R. Thomas, A counterexample to \"Wagner's conjecture\" for infinite graphs. Math. Proc. Cambridge Philos. Soc. 103 (1988), no. 1, 55--57. MathSciNet"
+  },
+  "started": "2026-09-16T19:14:44Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

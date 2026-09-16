@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds whenever one vertex meets every odd directed cycle, with the stronger bound 2d+2 for d>=2.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved; no novelty claim is made for this elementary special case.",
+  "id": "long_directed_cycles_in_digraph_with_minimum_in_and_out_degree",
+  "model": "gpt-6-astra",
+  "usd": 0.91258,
+  "eur": 0.945246,
+  "elapsed_s": 749.4,
+  "status": "completed",
+  "response_id": "resp_0c566b0e3fbef46f006aaae77b219887d288f904c1de5ea51c",
+  "when": "2026-09-16T19:13:44Z"
+}

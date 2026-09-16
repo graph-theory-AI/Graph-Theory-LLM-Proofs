@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for at most five vertices and for feedback-vertex number at most one, and every minimal counterexample has minimum in- and out-degree at least two.",
+  "would_publish": false,
+  "caveats": "The general three-colour case is unresolved here; novelty of these self-contained partial results has not been checked.",
+  "id": "monochromatic_reachability_vs_rainbow_triangles",
+  "model": "gpt-6-astra",
+  "usd": 0.93852,
+  "eur": 0.972114,
+  "elapsed_s": 713.6,
+  "status": "completed",
+  "response_id": "resp_09514aeae2cbe62d006aaae798d16487d2853c70e497a564c1",
+  "when": "2026-09-16T19:13:38Z"
+}

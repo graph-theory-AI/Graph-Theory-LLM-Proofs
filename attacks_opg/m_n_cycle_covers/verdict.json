@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A prescribed-circuit extension criterion proves the conjecture for cubic graphs having a cycle that dominates all vertices.",
+  "would_publish": false,
+  "caveats": "The universal conjecture is not resolved; no novelty relative to existing extension theorems is claimed.",
+  "id": "m_n_cycle_covers",
+  "model": "gpt-6-astra",
+  "usd": 1.15878,
+  "eur": 1.200258,
+  "elapsed_s": 1022.5,
+  "status": "completed",
+  "response_id": "resp_01d9140ccdc9fc15006aaae7804b6487d2ac745c3e0bc59717",
+  "when": "2026-09-16T19:18:22Z"
+}
