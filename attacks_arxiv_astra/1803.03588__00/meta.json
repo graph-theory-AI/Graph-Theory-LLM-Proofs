@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 11,
+    "score": 4.8,
+    "tier": 5,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1803.03588__00",
+    "title_md": "[Polynomial dependence of $\\delta$ on $d$ in R\u00f6dl's theorem](https://arxiv.org/abs/1803.03588)",
+    "paper": "Towards Erdos-Hajnal for graphs with no 5-hole",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1803.03588__00/"
+  },
+  "dossier_meta": {
+    "id": "1803.03588__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1803.03588__00/",
+    "arxiv_id": "1803.03588",
+    "tier": 5,
+    "score": 4.8,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Towards Erdos-Hajnal for graphs with no 5-hole",
+    "catalog_title": "Polynomial dependence of $\\delta$ on $d$ in R\u00f6dl's theorem",
+    "statement_text": "A polynomial dependence of $\\delta$ on $d$ holds in Theorem 2.2, i.e., the $\\delta$ satisfying R\u00f6dl's theorem can be taken to be polynomial in $d$; and this would imply the Erd\u0151s-Hajnal conjecture itself.",
+    "context_text": "In the discussion following R\u00f6dl's theorem (2.2), the authors note that R\u00f6dl's original proof gives a tower-type bound for $1/\\delta$ in terms of $1/d$, while Fox and Sudakov [7] improve this to $\\delta = 2^{-|V(H)|^{15}(\\log(1/d))^2}$. A polynomial dependence is stated as a community conjecture whose truth would imply the full Erd\u0151s-Hajnal conjecture."
+  },
+  "started": "2026-09-16T20:24:07Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 17,
+    "score": 4.75,
+    "tier": 5,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1608.03040__07",
+    "title_md": "[Open Problem 8](https://arxiv.org/abs/1608.03040)",
+    "paper": "Majority Colourings of Digraphs",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1608.03040__07/"
+  },
+  "dossier_meta": {
+    "id": "1608.03040__07",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1608.03040__07/",
+    "arxiv_id": "1608.03040",
+    "tier": 5,
+    "score": 4.75,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Majority Colourings of Digraphs",
+    "catalog_title": "Open Problem 8",
+    "statement_text": "Let $S(G)$ be the set of all stable sets of a digraph $G$ and $S(G,v)$ the stable sets containing $v$. A fractional majority colouring assigns each $T \\in S(G)$ a weight $x_T \\geq 0$ such that $\\sum_{T \\in S(G,v)} x_T \\geq 1$ for each vertex $v$. What is the minimum $k$ such that every digraph $G$ has a fractional majority colouring with $\\sum_{T \\in S(G)} x_T \\leq k$? Perhaps $k < 3$.",
+    "context_text": "This fractional relaxation of majority colouring is introduced in Section 5 as a natural variant. The informal conjecture that the minimum total weight is less than 3 would constitute a fractional analogue of Conjecture 2."
+  },
+  "started": "2026-09-16T20:17:18Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

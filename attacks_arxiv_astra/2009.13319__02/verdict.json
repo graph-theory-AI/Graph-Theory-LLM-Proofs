@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "With K_k edgeless as explicitly stipulated, iterated cyclic-triangle tournaments disprove the statement already for k=2 and a directed three-vertex path.",
+  "would_publish": false,
+  "caveats": "This refutes the supplied edgeless-K_k formulation, not the different clique-bounded conjecture suggested by the surrounding context.",
+  "id": "2009.13319__02",
+  "model": "gpt-6-astra",
+  "usd": 0.108625,
+  "eur": 0.112513,
+  "elapsed_s": 125.2,
+  "status": "completed",
+  "response_id": "resp_009d730355f9d621006aaafafd465887d29df3f66170b13b50",
+  "when": "2026-09-16T20:26:34Z"
+}

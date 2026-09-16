@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 18,
+    "score": 4.75,
+    "tier": 5,
+    "lean": "prove",
+    "status": "open",
+    "id": "1808.01605__01",
+    "title_md": "[Conjecture 6](https://arxiv.org/abs/1808.01605)",
+    "paper": "Triangle-free subgraphs with large fractional chromatic number",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1808.01605__01/"
+  },
+  "dossier_meta": {
+    "id": "1808.01605__01",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1808.01605__01/",
+    "arxiv_id": "1808.01605",
+    "tier": 5,
+    "score": 4.75,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Triangle-free subgraphs with large fractional chromatic number",
+    "catalog_title": "Conjecture 6",
+    "statement_text": "For every positive integers $k$ and $g \\geq 3$, there exists a positive number $c(k,g)$ such that every graph with chromatic number at least $c(k,g)$ contains a subgraph of girth at least $g$ and with average degree at least $k$.",
+    "context_text": "Proposed by the authors as a weakening of both the Erd\u0151s\u2013Hajnal conjecture and Thomassen's conjecture: the hypothesis uses chromatic number (rather than average degree) and the conclusion asks only for large average degree (rather than large chromatic number) in the subgraph."
+  },
+  "started": "2026-09-16T20:15:27Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

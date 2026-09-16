@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 19,
+    "score": 4.7,
+    "tier": 5,
+    "lean": "prove",
+    "status": "open",
+    "id": "2403.08303__00",
+    "title_md": "[Conjecture 10](https://arxiv.org/abs/2403.08303)",
+    "paper": "Equivalence between Erd\u0151s-Hajnal and polynomial R\u00f6dl and Nikiforov conj\u2026",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2403.08303__00/"
+  },
+  "dossier_meta": {
+    "id": "2403.08303__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2403.08303__00/",
+    "arxiv_id": "2403.08303",
+    "tier": 5,
+    "score": 4.7,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Equivalence between Erd\u0151s-Hajnal and polynomial R\u00f6dl and Nikiforov conj\u2026",
+    "catalog_title": "Conjecture 10",
+    "statement_text": "For each proper hereditary family $\\mathcal{F}$ of graphs there are $C_{\\mathcal{F}},d_{\\mathcal{F}}>0$ such that if $0<\\varepsilon<1/2$, every graph on $n$ vertices which is $\\varepsilon^{d_{\\mathcal{F}}}$-close to $\\mathcal{F}$ contains an $\\varepsilon$-homogeneous set of size at least $\\varepsilon^{C_{\\mathcal{F}}}n$.",
+    "context_text": "A graph on $n$ vertices is $\\alpha$-close to a family $\\mathcal{F}$ if one can add or delete at most $\\alpha n^2/2$ edges to obtain a graph in $\\mathcal{F}$. This conjecture, introduced as a natural extension for hereditary families, defines the polynomial close R\u00f6dl property; a family with this property also has the polynomial R\u00f6dl property."
+  },
+  "started": "2026-09-16T20:15:21Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

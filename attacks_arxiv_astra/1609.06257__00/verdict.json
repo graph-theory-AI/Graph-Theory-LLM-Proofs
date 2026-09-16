@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The sharp bound holds for K_{2k+1}-F with k missing edges whenever F has at most k+1 nonisolated vertices or is a linear forest.",
+  "would_publish": false,
+  "caveats": "The general question is not resolved here; novelty and the latest literature status have not been independently verified.",
+  "id": "1609.06257__00",
+  "model": "gpt-6-astra",
+  "usd": 1.254665,
+  "eur": 1.299575,
+  "elapsed_s": 1170.2,
+  "status": "completed",
+  "response_id": "resp_063f969812399ad3006aaaf72f2b0887d28128a3d4dbd6ebd4",
+  "when": "2026-09-16T20:27:45Z"
+}

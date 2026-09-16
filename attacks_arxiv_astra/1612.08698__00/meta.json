@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 15,
+    "score": 4.75,
+    "tier": 5,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1612.08698__00",
+    "title_md": "[Problem 1](https://arxiv.org/abs/1612.08698)",
+    "paper": "List coloring with requests",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1612.08698__00/"
+  },
+  "dossier_meta": {
+    "id": "1612.08698__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1612.08698__00/",
+    "arxiv_id": "1612.08698",
+    "tier": 5,
+    "score": 4.75,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "List coloring with requests",
+    "catalog_title": "Problem 1",
+    "statement_text": "Does there for every integer $d \\geq 0$ exist $\\varepsilon > 0$ such that every $d$-degenerate graph with an assignment of lists of size $d + 1$ is weighted $\\varepsilon$-flexible? Or at least $\\varepsilon$-flexible?",
+    "context_text": "Theorem 2 shows that lists of size $d+2$ suffice for weighted $\\varepsilon$-flexibility of $d$-degenerate graphs. The question is whether one extra color (size $d+1$, matching choosability) also guarantees flexibility. For $d=0$ trivial; for $d=1$ (forests with lists of size 2) weighted $1/2$-flexibility is easy; the first open case is $d=2$."
+  },
+  "started": "2026-09-16T20:19:17Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

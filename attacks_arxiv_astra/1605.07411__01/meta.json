@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 7,
+    "score": 5.0,
+    "tier": 5,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1605.07411__01",
+    "title_md": "[Conjecture 4](https://arxiv.org/abs/1605.07411)",
+    "paper": "$\u03c7$-bounded families of oriented graphs",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1605.07411__01/"
+  },
+  "dossier_meta": {
+    "id": "1605.07411__01",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1605.07411__01/",
+    "arxiv_id": "1605.07411",
+    "tier": 5,
+    "score": 5.0,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "$\u03c7$-bounded families of oriented graphs",
+    "catalog_title": "Conjecture 4",
+    "statement_text": "For any oriented star $S$, $\\mathrm{Forb}(S)$ is $\\chi$-bounded.",
+    "context_text": "This is the paper's central new conjecture, extending the Gy\u00e1rf\u00e1s\u2013Sumner framework to oriented graphs. The authors note it suffices to prove it for $S_{k,k}$ for all $k$, and prove several special cases: $k=0$, $k=\\ell=1$, and the $TT_3$-free case (Theorem 15)."
+  },
+  "started": "2026-09-16T20:27:22Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 8,
+    "score": 5.0,
+    "tier": 5,
+    "lean": "prove",
+    "status": "open",
+    "id": "1907.12999__00",
+    "title_md": "[Conjecture 1](https://arxiv.org/abs/1907.12999)",
+    "paper": "Independence number in triangle-free graphs avoiding a minor",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1907.12999__00/"
+  },
+  "dossier_meta": {
+    "id": "1907.12999__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1907.12999__00/",
+    "arxiv_id": "1907.12999",
+    "tier": 5,
+    "score": 5.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Independence number in triangle-free graphs avoiding a minor",
+    "catalog_title": "Conjecture 1",
+    "statement_text": "For every positive integer $t$, if an $n$-vertex graph $G$ does not contain $K_{t+1}$ as a minor then $\\alpha(G) \\geq n/t$.",
+    "context_text": "This conjecture is a natural weakening of Hadwiger's conjecture: since Hadwiger's conjecture would imply every $n$-vertex $K_{t+1}$-minor-free graph has chromatic number at most $t$ and thus an independent set of size at least $n/t$, this bound has attracted considerable attention (see Seymour's survey [31]). Duchet and Meyniel proved the bound holds within a factor of 2 in 1982, and subsequent improvements have been made by Fox, Balogh\u2013Kostochka, and others. The present paper studies this conjecture restricted to triangle-free graphs."
+  },
+  "started": "2026-09-16T20:26:34Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

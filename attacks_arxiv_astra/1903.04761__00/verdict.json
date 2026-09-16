@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For each fixed r, there is a division-free polynomial-time MWIS algorithm for C4-free perfect graphs whose triangles can be hit by the union of r cliques.",
+  "would_publish": false,
+  "caveats": "This is an elementary restricted result, with no novelty claim; the parameter is unbounded even in connected, clique-cutset-free examples of maximum degree three.",
+  "id": "1903.04761__00",
+  "model": "gpt-6-astra",
+  "usd": 0.783325,
+  "eur": 0.811364,
+  "elapsed_s": 728.1,
+  "status": "completed",
+  "response_id": "resp_029480ee4caa47e4006aaaf5e56f8887d2b08bb25c4ea4ee45",
+  "when": "2026-09-16T20:14:53Z"
+}

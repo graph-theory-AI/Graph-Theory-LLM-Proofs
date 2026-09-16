@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 23,
+    "score": 4.5,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2301.02138__00",
+    "title_md": "[Informal Conjecture (chordal modulator characterization for even-hole-f\u2026](https://arxiv.org/abs/2301.02138)",
+    "paper": "Induced subgraphs and tree decompositions VIII. Excluding a forest in (\u2026",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2301.02138__00/"
+  },
+  "dossier_meta": {
+    "id": "2301.02138__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2301.02138__00/",
+    "arxiv_id": "2301.02138",
+    "tier": 4,
+    "score": 4.5,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Induced subgraphs and tree decompositions VIII. Excluding a forest in (\u2026",
+    "catalog_title": "Informal Conjecture (chordal modulator characterization for even-hole-free graphs)",
+    "statement_text": "Every chordal graph of clique number at most three modulates even-hole-free graphs.",
+    "context_text": "Theorem 1.2 (Sintiari\u2013Trotignon) shows that a graph $H$ can modulate even-hole-free graphs only if $H$ is a chordal graph of clique number at most three; the authors state that the converse may also be true. The paper proves the forest case (Theorem 1.6) but explicitly notes that extending to all chordal graphs of clique number at most three remains open."
+  },
+  "started": "2026-09-16T20:13:07Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

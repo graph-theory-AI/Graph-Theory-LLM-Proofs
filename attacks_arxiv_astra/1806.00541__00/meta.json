@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 13,
+    "score": 4.8,
+    "tier": 5,
+    "lean": "prove",
+    "status": "open",
+    "id": "1806.00541__00",
+    "title_md": "[Conjecture 2](https://arxiv.org/abs/1806.00541)",
+    "paper": "Extension Complexity of the Correlation Polytope",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1806.00541__00/"
+  },
+  "dossier_meta": {
+    "id": "1806.00541__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1806.00541__00/",
+    "arxiv_id": "1806.00541",
+    "tier": 5,
+    "score": 4.8,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Extension Complexity of the Correlation Polytope",
+    "catalog_title": "Conjecture 2",
+    "statement_text": "For every $n$-vertex graph $G$, the extension complexity of $\\mathrm{COR}(G)$ is $2^{\\Omega(\\mathrm{tw}(G)+\\log n)}$.",
+    "context_text": "The authors prove the matching upper bound $2^{O(\\mathrm{tw}(G)+\\log n)}$ in Theorem 1 and conjecture that this is tight in general. If true, the conjecture would improve the bound of G\u00f6\u00f6s, Jain and Watson ($2^{\\Omega(n/\\log n)}$ for the stable set polytope) to $2^{\\Omega(n)}$, and would yield explicit 0/1-polytopes with extension complexity exponential in their dimension, as predicted by the counting argument of Rothvo\u00df."
+  },
+  "started": "2026-09-16T20:20:42Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

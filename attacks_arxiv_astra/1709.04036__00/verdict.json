@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove an 8/9 bound for planar graphs of girth at least five, but do not resolve the conjecture when 4-cycles are allowed.",
+  "would_publish": false,
+  "caveats": "The special-case proof is self-contained; its novelty has not been checked, and the general 7/8 conjecture remains unresolved here.",
+  "id": "1709.04036__00",
+  "model": "gpt-6-astra",
+  "usd": 1.495145,
+  "eur": 1.548663,
+  "elapsed_s": 1237.8,
+  "status": "completed",
+  "response_id": "resp_01dd61b3a467ac67006aaaf6270c3487d28ef707c3be67538e",
+  "when": "2026-09-16T20:24:28Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A directed triangle has fractional majority colouring weight exactly 3, refuting the quoted k<3 speculation but not determining the optimal universal constant.",
+  "would_publish": false,
+  "caveats": "The exact universal optimum remains unresolved here; the catalog's strict inequality needs checking against the source.",
+  "id": "1608.03040__07",
+  "model": "gpt-6-astra",
+  "usd": 0.197515,
+  "eur": 0.204585,
+  "elapsed_s": 184.7,
+  "status": "completed",
+  "response_id": "resp_099bc01b2a1f03c3006aaaf94f0e7487d2ac543c5403343aaf",
+  "when": "2026-09-16T20:20:23Z"
+}

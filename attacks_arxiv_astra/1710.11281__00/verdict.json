@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For the restricted class of graphs of diameter at most two, I establish sharp order g^{1/3} for both genus-extremal cop numbers, without settling the full conjecture.",
+  "would_publish": false,
+  "caveats": "The unrestricted upper bound is not improved; this elementary special-case result is not claimed to be novel.",
+  "id": "1710.11281__00",
+  "model": "gpt-6-astra",
+  "usd": 0.61069,
+  "eur": 0.63255,
+  "elapsed_s": 518.8,
+  "status": "completed",
+  "response_id": "resp_02b0966f5496b972006aaaf6a1c95087d2b2f87f3f2b0c5f9b",
+  "when": "2026-09-16T20:14:32Z"
+}

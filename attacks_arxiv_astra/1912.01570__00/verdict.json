@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "A 12-vertex planar graph has fvs = 5 and fp = 2; a related family has fvs/fp tending to 3.",
+  "would_publish": true,
+  "caveats": "Uses the stated vertex-disjoint, planar-embedding definition; no claim of minimality or literature priority.",
+  "id": "1912.01570__00",
+  "model": "gpt-6-astra",
+  "usd": 1.22167,
+  "eur": 1.265399,
+  "elapsed_s": 988.6,
+  "status": "completed",
+  "response_id": "resp_0045182c5ec17a9b006aaaf70a3f8887d2a816f0588db1bdb6",
+  "when": "2026-09-16T20:24:06Z"
+}
