@@ -44,7 +44,7 @@ _CATALOG_INDEX: dict[str, dict] | None = None
 
 MODEL = "gpt-5.6-sol"
 CORPUS = "arxiv"
-SERVICE_TIER = "default"
+SERVICE_TIER = "flex"
 SITE_ARXIV = "https://graph-theory-ai.github.io/graph-conjectures/arxiv/{id}/"
 SITE_OPG = "https://graph-theory-ai.github.io/graph-conjectures/op/{slug}/"
 ARXIV_ABS = "https://arxiv.org/abs/{arxiv_id}"
@@ -76,6 +76,8 @@ MODEL_PRICES = {
 }
 
 # Multiplies every rate. Batch and flex are half price, fast/priority double.
+# Flex is the default tier: these sweeps are batch jobs with no latency
+# requirement, and it halves the bill for identical output.
 TIER_MULTIPLIER = {"default": 1.0, "flex": 0.5, "batch": 0.5, "priority": 2.0}
 
 PRICE = MODEL_PRICES[MODEL]
@@ -1214,7 +1216,7 @@ def configure(args: argparse.Namespace) -> None:
     if MODEL not in MODEL_PRICES:
         raise SystemExit(f"no price table for model {MODEL!r}; add one to MODEL_PRICES")
     PRICE = MODEL_PRICES[MODEL]
-    SERVICE_TIER = getattr(args, "service_tier", None) or "default"
+    SERVICE_TIER = getattr(args, "service_tier", None) or "flex"
     if SERVICE_TIER not in TIER_MULTIPLIER:
         raise SystemExit(f"unknown service tier {SERVICE_TIER!r}")
     if CORPUS == "opg":
@@ -1232,8 +1234,10 @@ def main() -> None:
     common.add_argument("--corpus", choices=["arxiv", "opg"], default="arxiv",
                         help="arxiv ranking (default) or the OpenProblemGarden catalog")
     common.add_argument("--model", help="override the model (default: sol for arxiv, astra for opg)")
-    common.add_argument("--service-tier", choices=sorted(TIER_MULTIPLIER), default="default",
-                        help="flex and batch bill at half rate; priority at double")
+    common.add_argument("--service-tier", choices=sorted(TIER_MULTIPLIER), default="flex",
+                        help="default flex: half the standard rate for the same model and "
+                             "reasoning settings, which is the right trade for a batch sweep. "
+                             "Pass --service-tier default for the standard tier, priority for double.")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     p_spend = sub.add_parser("spend", parents=[common], help="print remaining budget")
