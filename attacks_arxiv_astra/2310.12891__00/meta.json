@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 37,
+    "score": 4.15,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2310.12891__00",
+    "title_md": "[Open case of Erd\u0151s's problem for fixed small k](https://arxiv.org/abs/2310.12891)",
+    "paper": "Vertex-critical graphs far from edge-criticality",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2310.12891__00/"
+  },
+  "dossier_meta": {
+    "id": "2310.12891__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2310.12891__00/",
+    "arxiv_id": "2310.12891",
+    "tier": 4,
+    "score": 4.15,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Vertex-critical graphs far from edge-criticality",
+    "catalog_title": "Open case of Erd\u0151s's problem for fixed small k",
+    "statement_text": "For every fixed $k \\geq 4$ and arbitrarily large $r$, does there exist a $k$-chromatic vertex-critical graph $G$ such that $\\chi(G - R) = k$ for every $R \\subseteq E(G)$ with $|R| \\leq r$?",
+    "context_text": "Theorem 1 resolves Erd\u0151s's problem for all sufficiently large $k$ (as a function of $r$), but leaves open the regime where $k \\geq 4$ is held fixed as a small constant while $r$ grows. The authors explicitly flag this as an interesting remaining open case."
+  },
+  "started": "2026-09-16T20:01:38Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

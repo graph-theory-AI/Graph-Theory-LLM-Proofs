@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 36,
+    "score": 4.2,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1610.00876__02",
+    "title_md": "[Conjecture 7](https://arxiv.org/abs/1610.00876)",
+    "paper": "Subdivisions in digraphs of large out-degree or large dichromatic number",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1610.00876__02/"
+  },
+  "dossier_meta": {
+    "id": "1610.00876__02",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1610.00876__02/",
+    "arxiv_id": "1610.00876",
+    "tier": 4,
+    "score": 4.2,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Subdivisions in digraphs of large out-degree or large dichromatic number",
+    "catalog_title": "Conjecture 7",
+    "statement_text": "If $F_1$ and $F_2$ are $\\delta^+$-maderian, then the disjoint union of $F_1$ and $F_2$ is also $\\delta^+$-maderian.",
+    "context_text": "Alon's Conjecture 6 would imply this. Partial positive answers follow from the Erd\u0151s\u2013P\u00f3sa property: Theorem 8 shows that if $F$ is $\\delta^+$-maderian and has the Erd\u0151s\u2013P\u00f3sa property, then $k \\times F$ is also $\\delta^+$-maderian for all positive integers $k$."
+  },
+  "started": "2026-09-16T20:01:40Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

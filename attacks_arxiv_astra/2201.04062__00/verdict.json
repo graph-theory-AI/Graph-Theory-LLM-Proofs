@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A local-lemma construction gives the necessary bound xi(c) < 1/ceil(1/c) for 0 < c < 1/2, but does not settle Possibility 1.6.",
+  "would_publish": false,
+  "caveats": "Necessary-condition improvement only; novelty of the probabilistic argument is not claimed.",
+  "id": "2201.04062__00",
+  "model": "gpt-6-astra",
+  "usd": 0.858185,
+  "eur": 0.888904,
+  "elapsed_s": 717.9,
+  "status": "completed",
+  "response_id": "resp_0ad0a3280ae7ae36006aaaf294ee2087d2924e3e9d77af969b",
+  "when": "2026-09-16T20:00:33Z"
+}

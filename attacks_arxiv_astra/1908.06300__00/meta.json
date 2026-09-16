@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 38,
+    "score": 4.15,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1908.06300__00",
+    "title_md": "[Conjecture on polynomial-time solvability of bounded sub-determinant in\u2026](https://arxiv.org/abs/1908.06300)",
+    "paper": "The stable set problem in graphs with bounded genus and bounded odd cyc\u2026",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1908.06300__00/"
+  },
+  "dossier_meta": {
+    "id": "1908.06300__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1908.06300__00/",
+    "arxiv_id": "1908.06300",
+    "tier": 4,
+    "score": 4.15,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "The stable set problem in graphs with bounded genus and bounded odd cyc\u2026",
+    "catalog_title": "Conjecture on polynomial-time solvability of bounded sub-determinant integer programs",
+    "statement_text": "Integer programs with bounded sub-determinants can be solved in polynomial time. In particular, the stable set problem on graphs with $\\mathrm{ocp}(G) \\leq k$ is polynomial for every fixed $k$.",
+    "context_text": "The authors note that recent work links the complexity of integer programs to the magnitude of their sub-determinants, and that it is tempting to believe bounded sub-determinant integer programs are polynomial-time solvable. This would imply the stable set problem is polynomial for every fixed bound $k$ on the odd cycle packing number, which remains open for $k \\geq 2$."
+  },
+  "started": "2026-09-16T20:01:11Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

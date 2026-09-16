@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The list-flow theorem stated in the supplied source abstract proves the claim by assigning the list {1,2} to every arc over Z_5.",
+  "would_publish": false,
+  "caveats": "Uses the source theorem as quoted in the question; no independent full-text verification or numerical connectivity bound.",
+  "id": "1701.03366__00",
+  "model": "gpt-6-astra",
+  "usd": 0.13166,
+  "eur": 0.136373,
+  "elapsed_s": 118.9,
+  "status": "completed",
+  "response_id": "resp_042d1510ad6133d2006aaaf54ec69c87d292f9cde8bf47c3f6",
+  "when": "2026-09-16T20:02:13Z"
+}

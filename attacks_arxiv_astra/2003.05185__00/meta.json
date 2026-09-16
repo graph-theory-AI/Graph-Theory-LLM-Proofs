@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 32,
+    "score": 4.3,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2003.05185__00",
+    "title_md": "[Combinatorial polynomial-time algorithm for MWIS in perfect graphs](https://arxiv.org/abs/2003.05185)",
+    "paper": "Induced subgraphs of bounded treewidth and the container method",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2003.05185__00/"
+  },
+  "dossier_meta": {
+    "id": "2003.05185__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2003.05185__00/",
+    "arxiv_id": "2003.05185",
+    "tier": 4,
+    "score": 4.3,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Induced subgraphs of bounded treewidth and the container method",
+    "catalog_title": "Combinatorial polynomial-time algorithm for MWIS in perfect graphs",
+    "statement_text": "Design a combinatorial polynomial-time algorithm for the Maximum Weight Independent Set problem in perfect graphs.",
+    "context_text": "The polynomial-time algorithm of Gr\u00f6tschel, Lov\u00e1sz, and Schrijver for MWIS in perfect graphs relies on the ellipsoid method. The authors explicitly note that designing a combinatorial polynomial-time algorithm for this problem remains an important open problem."
+  },
+  "started": "2026-09-16T20:03:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

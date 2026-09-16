@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A self-contained construction gives mader_chi(K_n) >= (1/(2e)-o(1)) n^2/log n, but does not determine the exact threshold.",
+  "would_publish": false,
+  "caveats": "Logarithms are natural; novelty of the lower bound has not been checked, and no exact value for n >= 3 is established here.",
+  "id": "1610.00876__04",
+  "model": "gpt-6-astra",
+  "usd": 0.885725,
+  "eur": 0.917429,
+  "elapsed_s": 698.5,
+  "status": "completed",
+  "response_id": "resp_01b761260a6842af006aaaf294eeac87d2962b962d3e45e974",
+  "when": "2026-09-16T20:00:14Z"
+}

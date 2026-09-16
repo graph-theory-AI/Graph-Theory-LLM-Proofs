@@ -12,8 +12,8 @@ runs were not used.
 ## Counts
 
 Finished attacks with a verdict: **0**.
-Spend (promo ledger × prepaid FX): **€205.88** billed USD
-**$198.76** / budget €600
+Spend (promo ledger × prepaid FX): **€221.37** billed USD
+**$213.72** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
@@ -753,4 +753,4 @@ Queue records not yet attacked: **702** (plus 0 skipped without a model call).
 | [`2210.09227__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.09227__00/) | 4 | 3.75 | A multidimensional Ramsey Theorem |
 | [`2404.02021__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2404.02021__02/) | 4 | 3.85 | On off-diagonal hypergraph Ramsey numbers |
 
-Generated 2026-09-16T19:57:54Z.
+Generated 2026-09-16T20:12:56Z.

@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 33,
+    "score": 4.25,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1903.04761__00",
+    "title_md": "[Combinatorial Polynomial-Time Algorithm for MIS/MWIS in Perfect Graphs](https://arxiv.org/abs/1903.04761)",
+    "paper": "On the Maximum Weight Independent Set Problem in graphs without induced\u2026",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1903.04761__00/"
+  },
+  "dossier_meta": {
+    "id": "1903.04761__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1903.04761__00/",
+    "arxiv_id": "1903.04761",
+    "tier": 4,
+    "score": 4.25,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "On the Maximum Weight Independent Set Problem in graphs without induced\u2026",
+    "catalog_title": "Combinatorial Polynomial-Time Algorithm for MIS/MWIS in Perfect Graphs",
+    "statement_text": "No combinatorial polynomial-time algorithm is known for any of MIS, MWIS, MC, and MWC in perfect graphs; finding one is a major open problem in the field. At the moment we do not even have a polynomial-time combinatorial algorithm to solve MIS in perfect graphs with no hole of length four.",
+    "context_text": "The Gr\u00f6tschel\u2013Lov\u00e1sz\u2013Schrijver algorithm solves MWIS on perfect graphs via the ellipsoid method, which the authors distinguish from combinatorial algorithms (roughly, algorithms not using division and operating directly on vertices and edges). Even the restricted case of MIS in perfect graphs with no $C_4$ (hole of length four) lacks a combinatorial polynomial-time algorithm."
+  },
+  "started": "2026-09-16T20:02:45Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

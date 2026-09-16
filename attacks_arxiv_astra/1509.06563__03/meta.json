@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 35,
+    "score": 4.2,
+    "tier": 4,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1509.06563__03",
+    "title_md": "[Informal Question (on 2.1 for \u2113 = 4)](https://arxiv.org/abs/1509.06563)",
+    "paper": "Induced subgraphs of graphs with large chromatic number. IV. Consecutiv\u2026",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1509.06563__03/"
+  },
+  "dossier_meta": {
+    "id": "1509.06563__03",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1509.06563__03/",
+    "arxiv_id": "1509.06563",
+    "tier": 4,
+    "score": 4.2,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Induced subgraphs of graphs with large chromatic number. IV. Consecutiv\u2026",
+    "catalog_title": "Informal Question (on 2.1 for \u2113 = 4)",
+    "statement_text": "Statement 2.1 might be true when $\\ell = 4$: let $\\varphi : \\mathbb{N} \\to \\mathbb{N}$ be a non-decreasing function; does there exist $n$ such that every $(2,\\varphi)$-controlled triangle-free graph with chromatic number more than $n$ has a $4$-hole?",
+    "context_text": "Statement 2.1 is proved in the paper for all $\\ell \\geq 5$ (with $\\ell = 7$ handled by a prior paper). The authors remark that 2.1 might also hold for $\\ell = 4$ but that they have not been able to decide this."
+  },
+  "started": "2026-09-16T20:01:45Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

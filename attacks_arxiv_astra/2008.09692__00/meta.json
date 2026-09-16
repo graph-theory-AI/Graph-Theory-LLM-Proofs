@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 24,
+    "score": 4.5,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2008.09692__00",
+    "title_md": "[Conjecture 11](https://arxiv.org/abs/2008.09692)",
+    "paper": "Coloring Drawings of Graphs",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2008.09692__00/"
+  },
+  "dossier_meta": {
+    "id": "2008.09692__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2008.09692__00/",
+    "arxiv_id": "2008.09692",
+    "tier": 4,
+    "score": 4.5,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Coloring Drawings of Graphs",
+    "catalog_title": "Conjecture 11",
+    "statement_text": "If $G$ is a universally cell 3-colorable graph which does not have a subcontraction isomorphic to $K^+_{3,n-3}$ for some $n \\geq 7$, then $G$ is 3-flowable.",
+    "context_text": "The paper exhibits an infinite family of universally cell 3-colorable graphs ($K^+_{3,n-3}$ for $n \\geq 7$) that do not admit a nowhere-zero 3-flow, showing the two properties are not equivalent in general. The authors believe excluding these graphs as subcontractions is sufficient to recover equivalence between universal cell 3-colorability and 3-flowability. Remarkably, a positive resolution of this conjecture would also imply Tutte's 3-Flow Conjecture."
+  },
+  "started": "2026-09-16T20:10:47Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

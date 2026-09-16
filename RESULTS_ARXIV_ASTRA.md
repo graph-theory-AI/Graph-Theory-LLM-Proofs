@@ -11,14 +11,16 @@ runs were not used.
 
 ## Counts
 
-Finished attacks with a verdict: **2**.
-Spend (promo ledger × prepaid FX): **€205.88** billed USD
-**$198.76** / budget €600
+Finished attacks with a verdict: **19**.
+Spend (promo ledger × prepaid FX): **€221.37** billed USD
+**$213.72** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
 | --- | ---: | ---: |
 | disproved | 2 | 0 |
+| already_resolved | 1 | 0 |
+| partial | 16 | 0 |
 
 ## Claimed proofs (0)
 
@@ -32,10 +34,11 @@ Spend (promo ledger × prepaid FX): **€205.88** billed USD
 | [`1611.03196__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.03196__02/) · [artifact](attacks_arxiv_astra/1611.03196__02/) | high | no | The stated conjecture fails at maximum degree 4: seven edge classes of size 6 need not admit a matching meeting every class, even in a tree. |
 | [`2009.13319__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2009.13319__01/) · [artifact](attacks_arxiv_astra/2009.13319__01/) | high | no | Randomly ordered line graphs of complete bipartite graphs refute the conjecture with H the directed triangle and F any orientation of the claw. |
 
-## Already resolved (model says the literature already closed it) (0)
+## Already resolved (model says the literature already closed it) (1)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
+| [`1701.03366__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1701.03366__00/) · [artifact](attacks_arxiv_astra/1701.03366__00/) | high | no | The list-flow theorem stated in the supplied source abstract proves the claim by assigning the list {1,2} to every arc over Z_5. |
 
 ## Ill-posed / no determinate statement as supplied (0)
 
@@ -48,28 +51,11 @@ The sweep queue is the easiest-first open/partial arXiv ranking (692
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **56** (plus 0 skipped without a model call).
+Queue records not yet attacked: **39** (plus 0 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
-| [`2201.04062__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2201.04062__00/) | 4 | 4.0 | Pure pairs. VIII. Excluding a sparse graph |
-| [`2312.01028__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2312.01028__00/) | 4 | 4.0 | A structure theorem for pseudo-segments and its applications |
-| [`2301.13305__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2301.13305__00/) | 4 | 4.0 | Graph-codes |
-| [`1802.04179__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1802.04179__00/) | 4 | 4.05 | Planar graphs without cycles of length 4 or 5 are (11:3)-colorable |
-| [`1909.08426__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1909.08426__00/) | 4 | 4.05 | When Maximum Stable Set can be solved in FPT time |
-| [`1905.05312__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1905.05312__00/) | 4 | 4.05 | Books versus triangles at the extremal density |
-| [`1907.04066__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1907.04066__00/) | 4 | 4.05 | Coloring count cones of planar graphs |
-| [`2102.10061__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2102.10061__00/) | 4 | 4.05 | Improved bounds for weak coloring numbers |
-| [`2210.15076__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.15076__00/) | 4 | 4.05 | Turán graphs with bounded matching number |
-| [`2202.05557__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2202.05557__01/) | 4 | 4.05 | Polynomial bounds for chromatic number. V. Excluding a tree of radius t… |
-| [`1610.00876__04`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1610.00876__04/) | 4 | 4.1 | Subdivisions in digraphs of large out-degree or large dichromatic number |
-| [`1610.00876__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1610.00876__01/) | 4 | 4.1 | Subdivisions in digraphs of large out-degree or large dichromatic number |
-| [`1804.01060__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1804.01060__00/) | 4 | 4.1 | Pure pairs. II. Excluding all subdivisions of a graph |
 | [`2201.09115__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2201.09115__00/) | 4 | 4.1 | Disproof of a Conjecture by Woodall |
-| [`2206.13635__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2206.13635__00/) | 4 | 4.1 | Coloring hypergraphs with excluded minors |
-| [`2002.05383__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2002.05383__00/) | 4 | 4.1 | An update on reconfiguring $10$-colorings of planar graphs |
-| [`1701.03366__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1701.03366__00/) | 4 | 4.15 | Additive bases and flows in graphs |
-| [`1808.01605__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1808.01605__00/) | 4 | 4.15 | Triangle-free subgraphs with large fractional chromatic number |
 | [`1908.06300__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1908.06300__00/) | 4 | 4.15 | The stable set problem in graphs with bounded genus and bounded odd cyc… |
 | [`2310.12891__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2310.12891__00/) | 4 | 4.15 | Vertex-critical graphs far from edge-criticality |
 | [`1610.00876__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1610.00876__02/) | 4 | 4.2 | Subdivisions in digraphs of large out-degree or large dichromatic number |
@@ -109,4 +95,4 @@ Queue records not yet attacked: **56** (plus 0 skipped without a model call).
 | [`2302.08922__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2302.08922__01/) | 5 | 5.0 | A note on the Gyárfás-Sumner conjecture |
 | [`2402.08418__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2402.08418__00/) | 5 | 5.0 | Variations on Sidorenko's conjecture in tournaments |
 
-Generated 2026-09-16T19:57:54Z.
+Generated 2026-09-16T20:12:57Z.

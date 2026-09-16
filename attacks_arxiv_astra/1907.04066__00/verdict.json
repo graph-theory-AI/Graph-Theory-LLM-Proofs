@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "After degree-three peeling, there is an O(4^k n)-time algorithm, where k counts interior vertices of degree at least five, and every instance reduces to an alternating two-color boundary instance.",
+  "would_publish": false,
+  "caveats": "The unrestricted polynomial-time question is not settled; no novelty claim is made for these elementary partial results.",
+  "id": "1907.04066__00",
+  "model": "gpt-6-astra",
+  "usd": 1.16968,
+  "eur": 1.211548,
+  "elapsed_s": 1178.7,
+  "status": "completed",
+  "response_id": "resp_0815d63c8309d383006aaaf294ea6887d2808c4557dc234299",
+  "when": "2026-09-16T20:08:14Z"
+}

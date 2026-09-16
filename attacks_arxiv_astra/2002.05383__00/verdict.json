@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Linear 7-coloring bounds hold for two explicit classes of planar graphs defined by the subgraph induced by their high-degree vertices, but the unrestricted minimum remains undetermined.",
+  "would_publish": false,
+  "caveats": "These are restricted-class results, with no novelty claim; they do not improve the supplied interval 7 <= kappa <= 10.",
+  "id": "2002.05383__00",
+  "model": "gpt-6-astra",
+  "usd": 0.776145,
+  "eur": 0.803927,
+  "elapsed_s": 743.8,
+  "status": "completed",
+  "response_id": "resp_09d7bccd23aa0705006aaaf421f91887d2b4cd3ea7ad9ffb19",
+  "when": "2026-09-16T20:07:37Z"
+}

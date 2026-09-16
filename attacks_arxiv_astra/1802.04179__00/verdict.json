@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The candidate bound 3 holds for every graph in this planar class whose 3-core is claw-free, but the unrestricted extremal constant is not determined.",
+  "would_publish": false,
+  "caveats": "No improved general bound is obtained, and no novelty is claimed for the special case.",
+  "id": "1802.04179__00",
+  "model": "gpt-6-astra",
+  "usd": 0.964185,
+  "eur": 0.998698,
+  "elapsed_s": 849.1,
+  "status": "completed",
+  "response_id": "resp_0e3b37c3f3ea1d5a006aaaf295066487d2ade404d3b79bf559",
+  "when": "2026-09-16T20:02:44Z"
+}

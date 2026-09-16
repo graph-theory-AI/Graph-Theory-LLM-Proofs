@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 28,
+    "score": 4.4,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1710.11281__00",
+    "title_md": "[Conjecture 8](https://arxiv.org/abs/1710.11281)",
+    "paper": "Notes on Cops and Robber game on graphs",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1710.11281__00/"
+  },
+  "dossier_meta": {
+    "id": "1710.11281__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1710.11281__00/",
+    "arxiv_id": "1710.11281",
+    "tier": 4,
+    "score": 4.4,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Notes on Cops and Robber game on graphs",
+    "catalog_title": "Conjecture 8",
+    "statement_text": "$c(g) = g^{\\frac{1}{2}+o(1)}$ and $ec(g) = g^{\\frac{1}{2}+o(1)}$. In other words, for every $\\varepsilon > 0$ there exists $g_0$ such that for every $g \\geq g_0$, $$g^{\\frac{1}{2}-\\varepsilon} < c(g) < g^{\\frac{1}{2}+\\varepsilon}$$ and $$g^{\\frac{1}{2}-\\varepsilon} < ec(g) < g^{\\frac{1}{2}+\\varepsilon}.$$",
+    "context_text": "After establishing via random graphs that $c(g) \\geq g^{1/2-o(1)}$, the author conjectures the true growth rate of the cop number (and nonorientable cop number) as a function of genus is exactly $g^{1/2}$. The conjecture has been unchallenged as of the writing of the notes."
+  },
+  "started": "2026-09-16T20:05:53Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

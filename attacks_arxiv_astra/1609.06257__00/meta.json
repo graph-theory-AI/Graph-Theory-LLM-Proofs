@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 26,
+    "score": 4.4,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1609.06257__00",
+    "title_md": "[Question 1.1](https://arxiv.org/abs/1609.06257)",
+    "paper": "Gallai's path decomposition conjecture for graphs of small maximum degr\u2026",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1609.06257__00/"
+  },
+  "dossier_meta": {
+    "id": "1609.06257__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1609.06257__00/",
+    "arxiv_id": "1609.06257",
+    "tier": 4,
+    "score": 4.4,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Gallai's path decomposition conjecture for graphs of small maximum degr\u2026",
+    "catalog_title": "Question 1.1",
+    "statement_text": "Does every connected graph $G$ that is not an odd semi-clique admit a path decomposition into $\\lfloor \\frac{|V(G)|}{2} \\rfloor$ paths?",
+    "context_text": "An odd semi-clique is a graph obtained from a clique on $2k+1$ vertices by deleting at most $k-1$ edges; a simple counting argument shows such a graph cannot be decomposed into $k$ paths. The authors ask whether odd semi-cliques are the only obstructions to a stronger, ceiling-free version of Gallai's conjecture."
+  },
+  "started": "2026-09-16T20:08:14Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A quotient-transfer argument proves the conjectured bound for a concrete planar subclass containing graphs of unbounded treewidth, but not for all planar graphs.",
+  "would_publish": false,
+  "caveats": "Special-case result only; no claim of novelty or of a representation theorem covering every planar graph.",
+  "id": "2102.10061__00",
+  "model": "gpt-6-astra",
+  "usd": 0.719595,
+  "eur": 0.745353,
+  "elapsed_s": 789.1,
+  "status": "completed",
+  "response_id": "resp_02baa8fbe5d3a154006aaaf294f69487d2bd39d50141783491",
+  "when": "2026-09-16T20:01:44Z"
+}
