@@ -9,7 +9,7 @@
     "paper": "Essentially tight bounds for rainbow cycles in proper edge-colourings",
     "source": "arxiv",
     "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2309.04460__01/",
-    "retry_of": "/home/enatale/repos/lelarge/graph-theory-auto/attacks/2309.04460__01",
+    "retry_of": "attacks/2309.04460__01",
     "prior_verdict": "partial",
     "prior_confidence": "high",
     "prior_model": "gpt-5.6-sol",

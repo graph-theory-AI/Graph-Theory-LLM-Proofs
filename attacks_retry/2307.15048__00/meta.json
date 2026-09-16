@@ -9,7 +9,7 @@
     "paper": "Correspondence coloring of random graphs",
     "source": "arxiv",
     "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2307.15048__00/",
-    "retry_of": "/home/enatale/repos/lelarge/graph-theory-auto/attacks/2307.15048__00",
+    "retry_of": "attacks/2307.15048__00",
     "prior_verdict": "disproved",
     "prior_confidence": "high",
     "prior_model": "gpt-5.6-sol",

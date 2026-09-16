@@ -9,7 +9,7 @@
     "paper": "Ramsey multiplicity and the Tur\u00e1n coloring",
     "source": "arxiv",
     "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2207.07775__02/",
-    "retry_of": "/home/enatale/repos/lelarge/graph-theory-auto/attacks/2207.07775__02",
+    "retry_of": "attacks/2207.07775__02",
     "prior_verdict": "disproved",
     "prior_confidence": "high",
     "prior_model": "gpt-5.6-sol",

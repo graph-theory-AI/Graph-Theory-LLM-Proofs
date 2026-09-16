@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Both equality characterizations hold for graphs with at most two negative eigenvalues, and also for graphs with at most two positive eigenvalues and adjacency nullity at most one.",
+  "would_publish": false,
+  "caveats": "The general case remains open; the low-nullity argument excludes equality without proving the lower bound, and novelty of these special cases has not been checked.",
+  "id": "2506.07264__02",
+  "model": "gpt-6-astra",
+  "usd": 1.783875,
+  "eur": 1.847728,
+  "elapsed_s": 1439.8,
+  "status": "completed",
+  "response_id": "resp_03301a910d3a5ad2006aab04a0521c87d2b48ab53e254854b2",
+  "when": "2026-09-16T21:29:35Z"
+}

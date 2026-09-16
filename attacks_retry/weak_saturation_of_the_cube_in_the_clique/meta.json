@@ -9,7 +9,7 @@
     "paper": "http://www.openproblemgarden.org/op/weak_saturation_of_the_cube_in_the_clique",
     "source": "opg",
     "url": "https://graph-theory-ai.github.io/graph-conjectures/op/weak_saturation_of_the_cube_in_the_clique/",
-    "retry_of": "/home/enatale/repos/lelarge/graph-theory-auto/attacks_opg/weak_saturation_of_the_cube_in_the_clique",
+    "retry_of": "attacks_opg/weak_saturation_of_the_cube_in_the_clique",
     "prior_verdict": "partial",
     "prior_confidence": "high",
     "prior_model": "gpt-6-astra",

@@ -9,7 +9,7 @@
     "paper": "Fair representation by independent sets",
     "source": "arxiv",
     "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.03196__00/",
-    "retry_of": "/home/enatale/repos/lelarge/graph-theory-auto/attacks/1611.03196__00",
+    "retry_of": "attacks/1611.03196__00",
     "prior_verdict": "disproved",
     "prior_confidence": "high",
     "prior_model": "gpt-5.6-sol",

@@ -527,7 +527,7 @@ def retry_records() -> list[dict]:
                     "url": base.get("url")
                     or (SITE_ARXIV.format(id=rec_id) if source == "arxiv"
                         else SITE_OPG.format(slug=rec_id)),
-                    "retry_of": str(path),
+                    "retry_of": str(path.relative_to(ROOT)),
                     "prior_verdict": verdict,
                     "prior_confidence": v.get("confidence"),
                     "prior_model": v.get("model"),
@@ -604,7 +604,9 @@ def claim_next() -> dict | None:
 
 def cmd_queue(args: argparse.Namespace) -> None:
     rows = corpus_records()
-    if CORPUS != "opg":
+    # catalog/queue.json is the canonical arXiv queue; only a plain arXiv run
+    # writing to the default directory may replace it.
+    if CORPUS == "arxiv" and ATTACKS == ROOT / "attacks":
         QUEUE_PATH.write_text(json.dumps(rows, indent=2) + "\n")
     done = attacked_ids()
     pending = [r for r in rows if r["id"] not in done]
@@ -665,6 +667,8 @@ def fetch_opg_dossier(rec: dict) -> dict:
 def fetch_retry_dossier(rec: dict) -> dict:
     """A retry reuses the first attempt's prompt and adds what came of it."""
     src = Path(rec["retry_of"])
+    if not src.is_absolute():
+        src = ROOT / src
     prior_prompt = ""
     ppath = src / "prompt.md"
     if ppath.exists():

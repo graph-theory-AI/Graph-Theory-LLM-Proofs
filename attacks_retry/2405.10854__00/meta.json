@@ -9,7 +9,7 @@
     "paper": "Strong log-convexity of genus sequences",
     "source": "arxiv",
     "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2405.10854__00/",
-    "retry_of": "/home/enatale/repos/lelarge/graph-theory-auto/attacks/2405.10854__00",
+    "retry_of": "attacks/2405.10854__00",
     "prior_verdict": "partial",
     "prior_confidence": "high",
     "prior_model": "gpt-5.6-sol",

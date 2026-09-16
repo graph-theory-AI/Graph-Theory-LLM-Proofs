@@ -9,7 +9,7 @@
     "paper": "http://www.openproblemgarden.org/op/obstacle_number_of_planar_graphs",
     "source": "opg",
     "url": "https://graph-theory-ai.github.io/graph-conjectures/op/obstacle_number_of_planar_graphs/",
-    "retry_of": "/home/enatale/repos/lelarge/graph-theory-auto/attacks_opg/obstacle_number_of_planar_graphs",
+    "retry_of": "attacks_opg/obstacle_number_of_planar_graphs",
     "prior_verdict": "partial",
     "prior_confidence": "high",
     "prior_model": "gpt-6-astra",
