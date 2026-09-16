@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "reconstruction_conjecture",
+    "tier": 4,
+    "score": 4.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Reconstruction conjecture",
+    "paper": "http://www.openproblemgarden.org/op/reconstruction_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/reconstruction_conjecture/",
+    "importance": "Outstanding",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "reconstruction_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/reconstruction_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 4,
+    "score": 4.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/reconstruction_conjecture",
+    "catalog_title": "Reconstruction conjecture",
+    "importance": "Outstanding \u272d\u272d\u272d\u272d",
+    "posted": "2007-10-18",
+    "authors": "Kelly, Paul J., Ulam, Stanislaw M.",
+    "subject": "Graph Theory",
+    "statement_text": "The deck of a graph $ G $ is the multiset consisting of all unlabelled subgraphs obtained from $ G $ by deleting a vertex in all possible ways (counted according to multiplicity). Conjecture If two graphs on $ \\ge 3 $ vertices have the same deck, then they are isomorphic.",
+    "context_text": "See Wikipedia's Reconstruction Conjecture for more on this problem.",
+    "references_text": "- *[K] P. J. Kelly, A congruence theorem for trees, Pacific J. Math., 7 (1957), 961\u2013968.\n- *[U] S. M. Ulam, A collection of mathematical problems, Wiley, New York, 1960."
+  },
+  "started": "2026-09-16T19:30:38Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

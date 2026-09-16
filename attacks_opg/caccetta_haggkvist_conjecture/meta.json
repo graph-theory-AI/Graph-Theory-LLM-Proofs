@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "caccetta_haggkvist_conjecture",
+    "tier": 4,
+    "score": 4.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Caccetta-H\u00e4ggkvist Conjecture",
+    "paper": "http://www.openproblemgarden.org/op/caccetta_haggkvist_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/caccetta_haggkvist_conjecture/",
+    "importance": "Outstanding",
+    "undergrad": false,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "caccetta_haggkvist_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/caccetta_haggkvist_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 4,
+    "score": 4.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/caccetta_haggkvist_conjecture",
+    "catalog_title": "Caccetta-H\u00e4ggkvist Conjecture",
+    "importance": "Outstanding \u272d\u272d\u272d\u272d",
+    "posted": "2013-02-28",
+    "authors": "Caccetta, L., H\u00e4ggkvist, Roland",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "Conjecture Every simple digraph of order $ n $ with minimum outdegree at least $ r $ has a cycle with length at most $ \\lceil n/r\\rceil $",
+    "context_text": "It is one of the most famous conjectures in graph theory. It has many alternative formulations and lots of work have been done around it. Many interesting conjectures are related to it. See [Sul]. It is in particular implied by a conjecture of Thomass\u00e9 and Ho\u00e0ng-Reed Conjecture . The Caccetta-H\u00e4ggkvist Conjecture is a generalization of an earlier conjecture of Behzad, Chartrand, and Wall, who conjectured it only for diregular digraphs. Caccetta-H \u00e4ggkvist Conjecture has been proved for $ r\\leq \\sqrt{n/2} $ by Shen [She1]. For $ r\\geq n/2 $ it is trivial. But already for $ r=n/3 $ , it is still open as well as Behzad-Chartrand-Wall Conjecture Conjecture Every simple $ n $ -vertex digraph with minimum outdegree at least $ r/3 $ and minimum indegree at least $ r/3 $ has a cycle with length at most $ 3 $ . This conjecture would be implied by Seymour's Second Neighbourhood Conjecure . Shen [She2] also proved the following approximate version. Theorem Every simple digraph of order $ n $ with minimum outdegree at least $ r $ has a cycle with length at most $ n/r + 73 $ . Bollob\u00e1s and Scott [BS] proposed a weighted version of the Caccetta-H\u00e4ggkvist Conjecture. Conjecture Let $ w:E(D) \\rightarrow [0,1] $ be a weight function on the arcs of a digraph $ D $ . If $ \\sum_{u\\in N^-(v)} w(uv) \\geq 1 $ and $ \\sum_{u\\in N^+(v)} w(vu) \\geq 1 $ for all $ v\\in V(D) $ , then there is a directed cycle in $ D $ of total weight at least 1. They gave a nice proof that there is a directed path of total weight at least 1.",
+    "references_text": "- [BCW] M. Behzad, G. Chartrand, and C. Wall. On minimal regular digraphs with given girth. Fundamenta Mathematicae, 69:227\u2013231, 1970.\n- [BS] B. Bollob\u00e1s and A. D. Scott, A proof of a conjecture of {B}ondy concerning paths in weighted digraphs. J. Combin. Theory Ser. B, 66:283-292, 1996.\n- *[CH] L. Caccetta and R. H\u00e4ggkvist. On minimal digraphs with given girth. Congressus Numerantium, XXI, 1978\n- [She1J. Shen. On the girth of digraphs. Discrete Math, 211(1-3):167\u2013181, 2000.\n- [She2] J. Shen. On the Caccetta-H\u00e4ggkvist conjecture. Graphs and Combinatorics, 18(3):645\u2013654, 2002.\n- [Sul] Blair D. Sullivan: A Summary of Problems and Results related to the Caccetta-H\u00e4ggkvist Conjecture"
+  },
+  "started": "2026-09-16T19:29:55Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

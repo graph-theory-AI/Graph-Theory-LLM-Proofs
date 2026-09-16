@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured stage count is sharp for affine masks over finite fields, and the universal lower bound holds for all k and n.",
+  "would_publish": false,
+  "caveats": "The upper bound for arbitrary masks is not proved; novelty of the special cases below has not been checked.",
+  "id": "shuffle_exchange_conjecture_graph_theoretic_form",
+  "model": "gpt-6-astra",
+  "usd": 0.91061,
+  "eur": 0.943205,
+  "elapsed_s": 779.3,
+  "status": "completed",
+  "response_id": "resp_06f6d780e6722d80006aaaeaf8477887d288e8f0975878f032",
+  "when": "2026-09-16T19:29:07Z"
+}

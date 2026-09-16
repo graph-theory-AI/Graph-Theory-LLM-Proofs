@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A vertex-replication construction proves the conjecture for vertex-cover number at most three and gives an explicit size bound for bounded-cover counterexamples.",
+  "would_publish": false,
+  "caveats": "Restricted, possibly known results; no general or orientable solution is claimed, and the proposed finite search was not executed.",
+  "id": "the_circular_embedding_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.07384,
+  "eur": 1.112278,
+  "elapsed_s": 1037.2,
+  "status": "completed",
+  "response_id": "resp_0e2f649653af28f5006aaaec8a9b0487d29e76742ea8fd53a2",
+  "when": "2026-09-16T19:40:07Z"
+}

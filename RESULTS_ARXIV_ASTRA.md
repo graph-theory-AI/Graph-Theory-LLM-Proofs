@@ -12,8 +12,8 @@ runs were not used.
 ## Counts
 
 Finished attacks with a verdict: **0**.
-Spend (promo ledger × prepaid FX): **€185.87** billed USD
-**$179.44** / budget €600
+Spend (promo ledger × prepaid FX): **€199.31** billed USD
+**$192.43** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
@@ -109,4 +109,4 @@ Queue records not yet attacked: **58** (plus 0 skipped without a model call).
 | [`2302.08922__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2302.08922__01/) | 5 | 5.0 | A note on the Gyárfás-Sumner conjecture |
 | [`2402.08418__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2402.08418__00/) | 5 | 5.0 | Variations on Sidorenko's conjecture in tournaments |
 
-Generated 2026-09-16T19:27:49Z.
+Generated 2026-09-16T19:42:51Z.

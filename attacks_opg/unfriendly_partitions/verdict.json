@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A reservation-and-compactness argument proves a structural sufficient condition, including the case where every finite degree is at most two.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not resolved here, and no novelty claim is made.",
+  "id": "unfriendly_partitions",
+  "model": "gpt-6-astra",
+  "usd": 0.87527,
+  "eur": 0.9066,
+  "elapsed_s": 778.2,
+  "status": "completed",
+  "response_id": "resp_04cf2153c74f14fa006aaaed5856d087d2b2515cb13f9f0bb9",
+  "when": "2026-09-16T19:39:14Z"
+}
