@@ -39,23 +39,22 @@
 \renewcommand{\headrulewidth}{0.2pt}
 
 \title{The number of partitions of the hypercube into squares:\\ the asymptotic conjectured by Alon, Balogh and Potapov}
-\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
 \date{9 September 2026}
 
 \begin{document}
 \maketitle
 
-\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
-\small
-The mathematics in this note was produced without human intervention, in three stages.
-(1)~The argument was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2401.00299\_\_02}; original writeup in \texttt{attacks/2401.00299\_\_02/output.md}).
-(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the two cited propositions verbatim against all three arXiv versions of the source paper, and machine-verified the construction: all $30^4=810{,}000$ lifted $4$-tuples at $m=4$ give distinct valid square partitions of $Q_6$, and exhaustive censuses gave $f_2(2),\dots,f_2(5)=1,3,30,4380$. Its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
-(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}. No mathematical content was changed. Three clarifications taken from the referee's report are added as remarks and marked as such: the equivalence of the writeup's asymptotic with the source paper's $N^{1\pm o(1)}$ formulation (\cref{rem:equiv}), the version-dependence of the proposition numbering (\cref{rem:numbering}), and the exact numbers of the machine checks (\cref{rem:comp}).
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
-\end{tcolorbox}
 
 \begin{abstract}
 Let $f_2(d)$ be the number of partitions of the vertex set of the hypercube $Q_d$ into $2$-dimensional subcubes. Alon, Balogh and Potapov asked for the asymptotic behaviour of $f_2(d)$ and conjectured that it obeys the same bound as their Proposition~1.10 for partitions into singletons and squares, namely $f_2(d)=N^{1\pm o(1)}$ with $N=(d/e)^{2^{d-1}}$, equivalently $\log f_2(d)=(1+o(1))\,2^{d-1}\log d$. We prove this. The upper bound is their Proposition~1.6. For the lower bound, a pigeonhole argument selects a common singleton set $L$ for many singleton-and-square partitions of $Q_{d-2}$; placing four such partitions on the four layers of $Q_{d-2}\times Q_2$ and replacing the four aligned copies of each singleton by one vertical square yields $f_2(d)\ge\bigl(f_{0,2}(d-2)/2^{2^{d-2}}\bigr)^4$, and the pigeonhole loss is negligible against the main term.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+
 \end{abstract}
 
 \section{Introduction}
@@ -141,6 +140,15 @@ Exhaustive exact-cover enumeration gave $f_{0,2}(1),\dots,f_{0,2}(4)=1,2,10,339$
 \begin{remark}[Novelty]
 The referee's search (\cref{app:referee}) found no publication of this observation and no resolution of \cref{prob} among the papers citing \cite{ABP}; the nearest related works (partitions of $\mathbb Z_q^n$ into subcubes of dimension $n-m$; partitions of $\mathbb F_2^m$ into $2$-dimensional affine subspaces) concern different families. This has not been checked by a human.
 \end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The argument was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2401.00299\_\_02}; original writeup in \texttt{attacks/2401.00299\_\_02/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the two cited propositions verbatim against all three arXiv versions of the source paper, and machine-verified the construction: all $30^4=810{,}000$ lifted $4$-tuples at $m=4$ give distinct valid square partitions of $Q_6$, and exhaustive censuses gave $f_2(2),\dots,f_2(5)=1,3,30,4380$. Its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}. No mathematical content was changed. Three clarifications taken from the referee's report are added as remarks and marked as such: the equivalence of the writeup's asymptotic with the source paper's $N^{1\pm o(1)}$ formulation (\cref{rem:equiv}), the version-dependence of the proposition numbering (\cref{rem:numbering}), and the exact numbers of the machine checks (\cref{rem:comp}).
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+
 
 \appendix
 

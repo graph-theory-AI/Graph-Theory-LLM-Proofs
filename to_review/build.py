@@ -54,6 +54,30 @@ SLUGS = {
 }
 
 
+# Machine-checked Rocq/MathComp proofs in the companion repository
+# https://github.com/LLM4Rocq/graph-theory-rocq (theorem name -> source file).
+ROCQ_BASE = "https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/"
+FORMALIZATIONS = {
+    "2103.15175__00": ("list_ramsey_chromatic_resolution",
+                       "extremal-graph-theory/theories/applications/list_ramsey_graph.v"),
+    "2310.04265__09": ("question_5_9_disproved",
+                       "digraph-theory/theories/applications/question_5_9_resolution.v"),
+    "2408.02400__00": ("cochromatic_gap_three_proved",
+                       "chromatic-theory/theories/applications/cochromatic_gap/cochromatic_gap.v"),
+    "2512.10438__00": ("problem_5_1_q6_n9",
+                       "digraph-theory/theories/applications/color_avoiding_tournament.v"),
+    "1812.02420__03": ("directed_kneser_existence_disproved",
+                       "digraph-theory/theories/applications/directed_kneser_nonexistence.v"),
+}
+
+
+def rocq_cell(cid: str) -> str:
+    if cid not in FORMALIZATIONS:
+        return "—"
+    thm, path = FORMALIZATIONS[cid]
+    return f"[`{thm}`]({ROCQ_BASE}{path})"
+
+
 def pdf_name(cid: str) -> str:
     kind = "note" if (SRC / cid / "note.tex").exists() else "writeup"
     return f"{cid}__{SLUGS.get(cid, 'result')}__{kind}.pdf"
@@ -330,10 +354,11 @@ def write_index(entries, built):
         pdf = f"[{name}]({name})" if built.get(cid) else "(build failed)"
         rows.append(f"| [`{cid}`]({dm.get('url', '')}) | {esc(ctitle)} | "
                     f"*{esc(dm.get('paper', ''))}* ([arXiv:{arxiv}](https://arxiv.org/abs/{arxiv})) | "
-                    f"{e['claimed_verdict']} | {e['review_verdict']} | {kind} | {pdf} |")
+                    f"{e['claimed_verdict']} | {e['review_verdict']} | {rocq_cell(cid)} | {kind} | {pdf} |")
     n_c = sum(e["review_verdict"] == "CONFIRMED" for e in entries)
     n_m = sum(e["review_verdict"] == "MINOR_GAPS" for e in entries)
     n_notes = sum((SRC / e["id"] / "note.tex").exists() for e in entries)
+    n_rocq = sum(e["id"] in FORMALIZATIONS for e in entries)
     text = f"""# Results to review
 
 Claimed resolutions of open problems from the catalog that (a) the attacking model
@@ -357,6 +382,13 @@ Two kinds of PDF, distinguished by the file-name suffix:
 Sources are in `src/<id>/` (`note.tex` where a note exists). Regenerate everything with
 `python3 to_review/build.py`.
 
+{n_rocq} of these results have machine-checked Rocq/MathComp proofs in the companion
+repository [LLM4Rocq/graph-theory-rocq](https://github.com/LLM4Rocq/graph-theory-rocq),
+linked in the table and in the note itself. Each is checked against a source-verified
+formal statement and reports no added axioms. A formalization certifies the formal
+proposition; whether that proposition faithfully renders the source paper's question is
+still a matter of source reading.
+
 **Caveat.** Nothing here has been checked by a human mathematician. "CONFIRMED" is the
 verdict of an LLM referee, and novelty was checked only against the indexed literature.
 
@@ -376,8 +408,8 @@ the novelty of the other notes.
 
 ## Notes
 
-| id | problem | source paper | claim | referee | format | pdf |
-|:--|:--|:--|:--|:--|:--|:--|
+| id | problem | source paper | claim | referee | Rocq formalization | format | pdf |
+|:--|:--|:--|:--|:--|:--|:--|:--|
 """ + "\n".join(rows) + "\n"
     (HERE / "README.md").write_text(text)
 

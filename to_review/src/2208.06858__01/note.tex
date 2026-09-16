@@ -51,23 +51,22 @@
 \renewcommand{\headrulewidth}{0.2pt}
 
 \title{The monotone relaxation of Levine's hat problem has success probability $\tfrac12$ for every number of players\\[1ex] \large A disproof of Conjecture~2.2 of Alon, Friedgut, Kalai and Kindler}
-\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
 \date{9 September 2026}
 
 \begin{document}
 \maketitle
 
-\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
-\small
-The mathematics in this note was produced without human intervention, in three stages.
-(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2208.06858\_\_01}; original writeup in \texttt{attacks/2208.06858\_\_01/output.md}).
-(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the definitions against the source paper, verified the balancing lemma exhaustively on all $168$ monotone families of $\{0,1\}^4$, verified the whole construction end-to-end in exact rational arithmetic for $t=2$ and one or two hats per tribe, and evaluated the concentration bounds exactly for tribe counts up to $N\sim10^{60}$; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
-(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, and one clarification supplied by the referee was added as \cref{lem:limit} (the source paper defines $\pmon(t)$ as a limit in the stack length $n$, the writeup argued with a supremum; the two agree because $\pmon(t,n)$ is nondecreasing in $n$). No other mathematical content was changed.
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
-\end{tcolorbox}
 
 \begin{abstract}
 In Levine's hat problem, $t$ players each wear a stack of $n$ hats, independently coloured black or white with probability $\tfrac12$; each player sees every stack but her own and must point to a black hat on her own head, and the players win only if all succeed. Alon, Friedgut, Kalai and Kindler introduced the relaxation in which a player may, instead of a single hat, name any \emph{balanced monotone} family of colourings of her own stack, and conjectured (Conjecture~2.2 of arXiv:2208.06858) that the optimal success probability $\pmon(t)$ of this relaxed game tends to $0$ as $t\to\infty$. We show that $\pmon(t)=\tfrac12$ for every $t\ge1$. The construction partitions each stack into $N$ tribes of $m$ hats; the players aim at the event that some tribe is entirely black across all players, and each player rounds the conditional fibre of that event to a balanced monotone family. A second-moment bound shows the conditional probabilities concentrate around $\tfrac12$, so the loss in the rounding is $O(t\,2^{-m/2})$.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+
 \end{abstract}
 
 \section{Introduction}
@@ -185,6 +184,15 @@ The referee (\cref{app:referee}) verified \cref{lem:balance} exhaustively on all
 \begin{remark}[Novelty and related work]
 The referee's search found no earlier resolution of \cref{conj:22}. Heilman and Tamuz \cite{HT25} give a Fourier-analytic upper bound for two players in the original game and do not treat the monotone relaxation. A recent analysis of a continuous-stack relaxation \cite{Cont25} finds value exactly $\frac12$ for that different relaxation, an independent echo of the phenomenon here. None of this has been checked by a human.
 \end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2208.06858\_\_01}; original writeup in \texttt{attacks/2208.06858\_\_01/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the definitions against the source paper, verified the balancing lemma exhaustively on all $168$ monotone families of $\{0,1\}^4$, verified the whole construction end-to-end in exact rational arithmetic for $t=2$ and one or two hats per tribe, and evaluated the concentration bounds exactly for tribe counts up to $N\sim10^{60}$; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, and one clarification supplied by the referee was added as \cref{lem:limit} (the source paper defines $\pmon(t)$ as a limit in the stack length $n$, the writeup argued with a supremum; the two agree because $\pmon(t,n)$ is nondecreasing in $n$). No other mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+
 
 \appendix
 

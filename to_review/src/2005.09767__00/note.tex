@@ -44,23 +44,22 @@
 \renewcommand{\headrulewidth}{0.2pt}
 
 \title{Exponentially many $f$-avoiding flows for groups of order $6$ and $7$:\\ Conjecture~1.10 of DeVos, Langhede, Mohar and Šámal}
-\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
 \date{9 September 2026}
 
 \begin{document}
 \maketitle
 
-\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
-\small
-The mathematics in this note was produced without human intervention, in three stages.
-(1)~The proof was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2005.09767\_\_00}; original writeup in \texttt{attacks/2005.09767\_\_00/output.md}).
-(2)~An independent adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) re-derived every step, checked Theorem~1.9, Conjecture~1.10 and the Jaeger--Linial--Payan--Tarsi input against the source, verified the support bound exhaustively for small parameters, enumerated complete flow spaces on ten $3$-edge-connected graphs (with loops and parallel edges) minimising over all $f$ where feasible, and implemented the three $\Z_6$ families literally; every check passed. Its verdict was \textsc{minor\_gaps}: one repairable gap (the uniform constant for $|\Gamma|\ge8$ on graphs with at most $3$ vertices, \cref{sec:large}), a missing attribution (\cref{lem:AF}), and a degenerate-convention remark. Its report is reproduced verbatim in \cref{app:referee}.
-(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}. Three repairs were made, each declared where it occurs: (i)~\cref{sec:large} derives an explicit uniform constant for $|\Gamma|\ge8$ from the source's Theorem~1.9 for $n\ge4$ and handles $n\le3$ by a two-line parallel-edge argument (the writeup asserted the constant without this case analysis); (ii)~the support bound is attributed to Alon and Füredi and the Eulerian lift is labelled folklore; (iii)~the one-vertex convention is stated and discussed (\cref{rem:degenerate}). The main constants $7^{1/4}$ and $3^{1/12}$ and all proofs of the $\Z_7$ and $\Z_6$ cases are as in the writeup; full proofs are in \cref{app:proofs}.
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
-\end{tcolorbox}
 
 \begin{abstract}
 An oriented graph $G=(V,E)$ is $\Gamma$-connected if for every $f\colon E\to\Gamma$ there is a $\Gamma$-flow $\phi$ with $\phi(e)\ne f(e)$ for all $e$. Jaeger, Linial, Payan and Tarsi proved that every $3$-edge-connected oriented graph is $\Gamma$-connected whenever $|\Gamma|\ge6$. DeVos, Langhede, Mohar and Šámal showed that for $|\Gamma|\ge8$ there are exponentially many such flows and conjectured (Conjecture~1.10) that this holds for all $|\Gamma|\ge6$, the cases $\Z_6$ and $\Z_7$ being open. We prove the conjecture. For $\Z_7$ the number of $f$-avoiding flows is at least $7^{n/4+1}$, by applying the Alon--Füredi bound on the support of a polynomial over a finite grid to the product of the $m$ linear forms $\phi(e)-f(e)$ on the $r$-dimensional flow space. For $\Z_6\cong\F_2\times\F_3$ the number is at least $3^{n/12+2/3}$: after normalising by one avoiding flow, the forbidden values split into three classes, and three explicit families of admissible flows (binary flows vanishing on one class, ternary flows avoiding one class, and unit-valued lifts of binary flows vanishing on the third) cannot all be small. Together with the source paper's theorem for $|\Gamma|\ge8$, this gives the conjecture with the explicit constant $c=2^{-1/4}(3/2)^{1/2}\approx1.03$.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
@@ -248,6 +247,15 @@ The referee (\cref{app:referee}) verified \cref{lem:AF} exhaustively over all re
 \begin{remark}[Novelty]
 The referee's literature search found only two papers citing \cite{DLMS20}, neither resolving \cref{conj:110}, and no polynomial-method attack on group connectivity. This has not been checked by a human.
 \end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The proof was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2005.09767\_\_00}; original writeup in \texttt{attacks/2005.09767\_\_00/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) re-derived every step, checked Theorem~1.9, Conjecture~1.10 and the Jaeger--Linial--Payan--Tarsi input against the source, verified the support bound exhaustively for small parameters, enumerated complete flow spaces on ten $3$-edge-connected graphs (with loops and parallel edges) minimising over all $f$ where feasible, and implemented the three $\Z_6$ families literally; every check passed. Its verdict was \textsc{minor\_gaps}: one repairable gap (the uniform constant for $|\Gamma|\ge8$ on graphs with at most $3$ vertices, \cref{sec:large}), a missing attribution (\cref{lem:AF}), and a degenerate-convention remark. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}. Three repairs were made, each declared where it occurs: (i)~\cref{sec:large} derives an explicit uniform constant for $|\Gamma|\ge8$ from the source's Theorem~1.9 for $n\ge4$ and handles $n\le3$ by a two-line parallel-edge argument (the writeup asserted the constant without this case analysis); (ii)~the support bound is attributed to Alon and Füredi and the Eulerian lift is labelled folklore; (iii)~the one-vertex convention is stated and discussed (\cref{rem:degenerate}). The main constants $7^{1/4}$ and $3^{1/12}$ and all proofs of the $\Z_7$ and $\Z_6$ cases are as in the writeup; full proofs are in \cref{app:proofs}.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+
 
 \appendix
 

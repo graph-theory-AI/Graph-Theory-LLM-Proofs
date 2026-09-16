@@ -49,23 +49,24 @@
 \renewcommand{\headrulewidth}{0.2pt}
 
 \title{Directed Kneser graphs with the acyclicity--intersection property\\ exist only for $b\le2$ or $k\le b+1$\\[1ex] \large A complete answer to Problem~5.40 of Hochstättler, Schröder and Steiner}
-\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
 \date{9 September 2026}
 
 \begin{document}
 \maketitle
 
-\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
-\small
-The mathematics in this note was produced without human intervention, in three stages.
-(1)~The classification and its proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{1812.02420\_\_03}; original writeup in \texttt{attacks/1812.02420\_\_03/output.md}).
-(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, confirmed the problem statement and the digraph conventions verbatim against the source paper, verified the three positive constructions exhaustively over all subfamilies (up to $2^{21}-1$ families for $b=2$, $k=7$), and confirmed the key impossibility $(k,b)=(5,3)$ by an independent finite computation not relying on the structural lemma; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
-(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, and three clarifications taken from the referee's report were added and are marked as such (the reason the closed walk in \cref{lem:min} lies on a proper subset, the second cyclic order in the $b=2$ triangle, and the remarks on parallel arcs and on $b=0$). No other mathematical content was changed.
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
-\end{tcolorbox}
 
 \begin{abstract}
 Hochstättler, Schröder and Steiner asked (Problem~5.40 of \emph{On the complexity of digraph colourings and vertex arboricity}) whether for all $k\ge b$ there is a digraph $\dK(k,b)$ on the vertex set $\binom{[k]}{b}$ such that the subdigraph induced by a family of $b$-sets is acyclic if and only if the family has a common element. Such ``directed Kneser graphs'' would make $b$-tuple $k$-colourings of digraphs equivalent to circular homomorphisms. We show that, in the source paper's convention (loopless digraphs, antiparallel arcs allowed, a digon being a directed cycle), $\dK(k,b)$ exists if and only if $b\le2$ or $k\le b+1$. In particular no $\dK(5,3)$ exists, so the answer to Problem~5.40 is negative in general. The negative part rests on a structural lemma: an inclusion-minimal family with empty intersection must induce exactly a directed Hamilton cycle; two overlapping minimal edge covers of $K_{b+2}$ then force incompatible induced graphs.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+A machine-checked Rocq/MathComp formalization of this result is available as
+\href{https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/digraph-theory/theories/applications/directed_kneser_nonexistence.v}{\texttt{directed\_kneser\_existence\_disproved}}.
+\Cref{sec:provenance} records the full provenance.
+
 \end{abstract}
 
 \section{Introduction}
@@ -157,6 +158,16 @@ The referee's scripts (\texttt{verification/scripts/1812.02420\_\_03/}) verified
 \begin{remark}[Consequences and novelty]
 The intended application in \cite{HSS20} was to express $b$-tuple $k$-colourings of digraphs as circular homomorphisms to $\dK(k,b)$; \cref{thm:main} shows that this cannot be set up in the proposed form for any $b\ge3$ and $k\ge b+2$. The referee's search found no prior construction or refutation of these digraphs; the related papers \cite{Kneser23,Kneser25} study dichromatic numbers of Kneser-type digraphs with canonical orientations, not the intersection--acyclicity property. This has not been checked by a human.
 \end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The classification and its proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{1812.02420\_\_03}; original writeup in \texttt{attacks/1812.02420\_\_03/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, confirmed the problem statement and the digraph conventions verbatim against the source paper, verified the three positive constructions exhaustively over all subfamilies (up to $2^{21}-1$ families for $b=2$, $k=7$), and confirmed the key impossibility $(k,b)=(5,3)$ by an independent finite computation not relying on the structural lemma; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, and three clarifications taken from the referee's report were added and are marked as such (the reason the closed walk in \cref{lem:min} lies on a proper subset, the second cyclic order in the $b=2$ triangle, and the remarks on parallel arcs and on $b=0$). No other mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+
+ (4)~Independently of this note, the result has been formalized in Rocq/MathComp in the companion repository \href{https://github.com/LLM4Rocq/graph-theory-rocq}{LLM4Rocq/graph-theory-rocq} as \href{https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/digraph-theory/theories/applications/directed_kneser_nonexistence.v}{\texttt{directed\_kneser\_existence\_disproved}}, checked against a source-verified formal statement with no added axioms. That check certifies the formal proposition, not its faithfulness to the source paper.
 
 \appendix
 

@@ -46,23 +46,22 @@
 \renewcommand{\headrulewidth}{0.2pt}
 
 \title{Sublinear separators and expansion:\\ the exact value of Dvořák's exponent $b_\varepsilon$}
-\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
 \date{9 September 2026}
 
 \begin{document}
 \maketitle
 
-\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
-\small
-The mathematics in this note was produced without human intervention, in three stages.
-(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2001.09679\_\_00}; original writeup in \texttt{attacks/2001.09679\_\_00/output.md}).
-(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the source paper, and brute-forced the finite structural claims on a concrete instance; its verdict was \textsc{minor\_gaps}, with two presentational gaps (the definition of $b_\varepsilon$, and a one-sentence padding remark). Its report is reproduced verbatim in \cref{app:referee}.
-(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the two gaps were repaired (\cref{sec:beps} and \cref{prop:exact}), a reference for the expander input was added, and the text was reorganised, with full proofs moved to \cref{app:proofs}. No mathematical content beyond these repairs was added.
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
-\end{tcolorbox}
 
 \begin{abstract}
 For a hereditary class $\cG$ of graphs let $s_{\cG}(n)$ be the largest size of a minimum balanced separator over graphs of $\cG$ with at most $n$ vertices, and let $\nabla_{\cG}(r)$ be the largest density of an $r$-shallow minor of a graph in $\cG$. Dvořák (2020) defined $b_\varepsilon$ as the supremum of the exponents $b$ such that every hereditary class with $s_{\cG}(n)=\Theta(n^{1-\varepsilon})$ has $\nabla_{\cG}(r)=\Omega(r^{b})$, proved $\frac1{2\varepsilon}-1\le b_\varepsilon\le\frac1{2\varepsilon}-\frac12$ for $0<\varepsilon<\frac12$, and asked which bound is tight. We construct, for every $0<\varepsilon<\frac12$, a monotone class $\cC_\varepsilon$ with $s_{\cC_\varepsilon}(n)=\Theta(n^{1-\varepsilon})$ and $\nabla_{\cC_\varepsilon}(r)=O(r^{1/(2\varepsilon)-1})$. Hence $b_\varepsilon=\frac1{2\varepsilon}-1$, the lower bound is tight, and $b_\varepsilon$ is continuous at $\varepsilon=\frac12$. The class consists of bounded-degree expanders whose vertices are replaced by $\Theta(L)\times\Theta(L)$ grids and whose edges are replaced by matchings of length~$L$ between boundary intervals of the grids.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
@@ -252,6 +251,15 @@ All constants are absolute except where they visibly depend on $\varepsilon$ thr
 \begin{remark}[Novelty]
 The referee's search (\cref{app:referee}) found no work resolving the question; the only citing papers concern other topics. This has not been checked by a human.
 \end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2001.09679\_\_00}; original writeup in \texttt{attacks/2001.09679\_\_00/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the source paper, and brute-forced the finite structural claims on a concrete instance; its verdict was \textsc{minor\_gaps}, with two presentational gaps (the definition of $b_\varepsilon$, and a one-sentence padding remark). Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the two gaps were repaired (\cref{sec:beps} and \cref{prop:exact}), a reference for the expander input was added, and the text was reorganised, with full proofs moved to \cref{app:proofs}. No mathematical content beyond these repairs was added.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+
 
 \appendix
 

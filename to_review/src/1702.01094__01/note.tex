@@ -45,23 +45,22 @@
 \renewcommand{\headrulewidth}{0.2pt}
 
 \title{Uniquely covered induced paths in triangle-free graphs:\\ a negative answer to a question of Scott and Seymour}
-\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
 \date{9 September 2026}
 
 \begin{document}
 \maketitle
 
-\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
-\small
-The mathematics in this note was produced without human intervention, in three stages.
-(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{1702.01094\_\_01}; original writeup in \texttt{attacks/1702.01094\_\_01/output.md}).
-(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, confirmed the question verbatim against the TeX source of the paper, and verified the deterministic core (\cref{lem:upset}) by exhaustive enumeration on eight graphs, including a $100$-vertex subdivided Petersen graph, as well as every inequality of the probabilistic part numerically; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
-(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, and the referee's remarks on interpretation and on what remains open were added as \cref{sec:remarks}. No mathematical content was changed.
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
-\end{tcolorbox}
 
 \begin{abstract}
 Scott and Seymour asked whether, for a triangle-free graph $G$ of very large chromatic number and an arbitrary family $\cA$ of stable sets covering $V(G)$ (not necessarily pairwise disjoint), there must be an $s$-vertex induced path $P$ each of whose vertices $v$ is \emph{uniquely covered}, i.e.\ $X\cap V(P)=\{v\}$ for some $X\in\cA$. The partition case is their rainbow-path theorem. We show that the general question has a negative answer for every $s\ge3$: for every $C$ there is a connected triangle-free graph $G$ with $\chi(G)>C$ and a stable-set cover $\cA$ of $V(G)$ such that no path of $G$ with at least three vertices, induced or not, has all its vertices uniquely covered. The cover consists of the principal upsets of a partial order obtained by orienting the distance-two graph of $G$ along a proper colouring; its members are stable as soon as the odd girth of $G$ is large compared with the number of colours. Graphs of large girth, bounded degree and large chromatic number supply the hypothesis.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+
 \end{abstract}
 
 \section{Introduction}
@@ -158,6 +157,15 @@ The referee implemented \cref{lem:upset} exactly as stated (DSATUR colouring of 
 \begin{remark}[Related work and novelty]
 The proper-colouring special case is the subject of the rainbow-path conjecture of Aravind; Duron and Raymond \cite{DR26} recently improved the length of the guaranteed rainbow induced path in triangle-free graphs, but do not consider covers by overlapping stable sets. The referee's search found no prior resolution of \cref{q:ss} in either direction; the construction is simple enough that independent earlier discovery is conceivable, and a human priority check is advised.
 \end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{1702.01094\_\_01}; original writeup in \texttt{attacks/1702.01094\_\_01/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, confirmed the question verbatim against the TeX source of the paper, and verified the deterministic core (\cref{lem:upset}) by exhaustive enumeration on eight graphs, including a $100$-vertex subdivided Petersen graph, as well as every inequality of the probabilistic part numerically; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, and the referee's remarks on interpretation and on what remains open were added as \cref{sec:remarks}. No mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+
 
 \appendix
 

@@ -43,23 +43,24 @@
 \renewcommand{\headrulewidth}{0.2pt}
 
 \title{The list Ramsey number of the family of graphs\\ with chromatic number greater than $s$ equals $s^k+1$}
-\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
 \date{9 September 2026}
 
 \begin{document}
 \maketitle
 
-\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
-\small
-The mathematics in this note was produced without human intervention, in three stages.
-(1)~The proof was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2103.15175\_\_00}; original writeup in \texttt{attacks/2103.15175\_\_00/output.md}).
-(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the definitions against the source paper and against the paper of Alon, Bucić, Kalvari, Kuperwasser and Szabó, and verified the theorem exhaustively for $s=k=2$ (all $97{,}191$ list assignments on $K_4$ up to colour isomorphism, and all $1024$ colourings of $K_5$ with constant lists) and the greedy construction on adversarial and random instances up to $27$ vertices; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
-(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, definitions were spelled out, and context on the source paper and on the referee's remarks was added as \cref{sec:remarks}. No mathematical content was changed; the two degenerate-case observations in \cref{rem:degenerate} are taken from the referee's report.
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
-\end{tcolorbox}
 
 \begin{abstract}
 The list Ramsey number $\Rl(\cH,k)$ of a family $\cH$ of graphs is the least $n$ for which some assignment of $k$-element colour lists to the edges of $K_n$ forces every colouring from the lists to contain a monochromatic member of $\cH$. Fox, He, Luo and Xu proved $\frac1e s^k\le\Rl(\cH_s,k)\le s^k+1$ for the family $\cH_s$ of graphs with chromatic number greater than $s$, and conjectured that the upper bound is the truth. We prove the conjecture: $\Rl(\cH_s,k)=s^k+1$ for all $s\ge2$ and $k\ge1$. The new ingredient is a one-paragraph greedy argument: on at most $s^k$ vertices, one can assign to every vertex and every colour a label in $[s]$ so that each edge is separated, in one of its listed colours, by the labels of its ends; colouring each edge with such a colour makes every colour class properly $s$-coloured.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+A machine-checked Rocq/MathComp formalization of this result is available as
+\href{https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/extremal-graph-theory/theories/applications/list_ramsey_graph.v}{\texttt{list\_ramsey\_chromatic\_resolution}}.
+\Cref{sec:provenance} records the full provenance.
+
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
@@ -128,6 +129,16 @@ The referee's scripts (\texttt{verification/scripts/2103.15175\_\_00/}) verify, 
 \begin{remark}[Novelty]
 The argument is one page of elementary counting, which is striking given that the authors of \cite{FHLX21} posed the conjecture together with a Local-Lemma proof of the bound weaker by a factor $e$. The referee scrutinised the proof specifically for this reason and found no flaw, but notes that the simplicity raises the prior that the argument is folklore or exists unpublished. Its searches (arXiv full text, Semantic Scholar citations of \cite{FHLX21}, web searches for a resolution, September 2026) found no written source; only two papers cite \cite{FHLX21}, neither on this question. This has not been checked by a human.
 \end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The proof was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2103.15175\_\_00}; original writeup in \texttt{attacks/2103.15175\_\_00/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the definitions against the source paper and against the paper of Alon, Bucić, Kalvari, Kuperwasser and Szabó, and verified the theorem exhaustively for $s=k=2$ (all $97{,}191$ list assignments on $K_4$ up to colour isomorphism, and all $1024$ colourings of $K_5$ with constant lists) and the greedy construction on adversarial and random instances up to $27$ vertices; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, definitions were spelled out, and context on the source paper and on the referee's remarks was added as \cref{sec:remarks}. No mathematical content was changed; the two degenerate-case observations in \cref{rem:degenerate} are taken from the referee's report.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+
+ (4)~Independently of this note, the result has been formalized in Rocq/MathComp in the companion repository \href{https://github.com/LLM4Rocq/graph-theory-rocq}{LLM4Rocq/graph-theory-rocq} as \href{https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/extremal-graph-theory/theories/applications/list_ramsey_graph.v}{\texttt{list\_ramsey\_chromatic\_resolution}}, checked against a source-verified formal statement with no added axioms. That check certifies the formal proposition, not its faithfulness to the source paper.
 
 \appendix
 

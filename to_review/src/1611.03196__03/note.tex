@@ -41,23 +41,22 @@
 \renewcommand{\headrulewidth}{0.2pt}
 
 \title{Fair representation by matchings in bipartite graphs:\\ Conjecture~1.15 of Aharoni, Alon, Berger, Chudnovsky, Kotlar, Loebl and Ziv\\ holds with $c(m)=32(m+1)^3$}
-\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
 \date{9 September 2026}
 
 \begin{document}
 \maketitle
 
-\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
-\small
-The mathematics in this note was produced without human intervention, in three stages.
-(1)~The proof was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{1611.03196\_\_03}; original writeup in \texttt{attacks/1611.03196\_\_03/output.md}).
-(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the conjecture verbatim against the arXiv source and the Stromquist--Woodall reference, and machine-tested the combinatorial core of the interpolation lemma on $4000$ random instances, the statement itself by brute force on $587$ small instances, and the whole pipeline end to end on bipartite circulant graphs; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
-(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, the interval-splitting theorem is now cited precisely, and steps that the writeup stated in one line (the rounding error, the transition count, the induction) are spelled out exactly as the referee re-derived them. Two observations of the referee are recorded as remarks and marked as such (\cref{rem:slack,rem:edgecases}). No mathematical content was changed.
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
-\end{tcolorbox}
 
 \begin{abstract}
 Aharoni, Alon, Berger, Chudnovsky, Kotlar, Loebl and Ziv conjectured (Conjecture~1.15 of arXiv:1611.03196) that for every $m$ there is a constant $c(m)$ such that, for every bipartite graph $G$ with maximum degree $\Delta$ and arbitrary edge sets $E_1,\dots,E_m\subseteq E(G)$, there is a matching $S$ with $|S|\ge|E(G)|/\Delta-c(m)$ and $|S\cap E_i|\le\lceil|E_i|/\Delta\rceil$ for all $i$. We prove the conjecture with the explicit, unoptimised constant $c(m)=32(m+1)^3$. The proof writes the target vector $(|E(G)|/\Delta,|E_1|/\Delta,\dots,|E_m|/\Delta)$ as a convex combination of the statistics of at most $m+2$ matchings (Kőnig plus Carathéodory) and then shows, using the Stromquist--Woodall interval-splitting theorem on the alternating cycles of two matchings, that a convex combination of two matchings' statistics can be realised by a single matching up to an additive error $32(m+1)$. The authors' suggested sharp value $c(m)=m/2$ remains open.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
@@ -190,6 +189,15 @@ The referee (\cref{app:referee}) implemented the dummy extension, the cell decom
 \begin{remark}[Novelty]\label{rem:novelty}
 The referee's searches found no resolution of \cref{conj:115} in the literature. The closest work it located is Othman and Berger \cite{OB24}, which treats perfect matchings of $K_{n,n}$ under partitions with a two-sided fairness measure and reports an unpublished 2014 result for $K_{n,n}$ with partitions; this is strictly narrower than \cref{conj:115} (complete bipartite graphs only, partitions only). The interpolation-between-matchings idea is folklore-adjacent, so an unindexed prior proof cannot be excluded. This has not been checked by a human.
 \end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The proof was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{1611.03196\_\_03}; original writeup in \texttt{attacks/1611.03196\_\_03/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the conjecture verbatim against the arXiv source and the Stromquist--Woodall reference, and machine-tested the combinatorial core of the interpolation lemma on $4000$ random instances, the statement itself by brute force on $587$ small instances, and the whole pipeline end to end on bipartite circulant graphs; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, the interval-splitting theorem is now cited precisely, and steps that the writeup stated in one line (the rounding error, the transition count, the induction) are spelled out exactly as the referee re-derived them. Two observations of the referee are recorded as remarks and marked as such (\cref{rem:slack,rem:edgecases}). No mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+
 
 \appendix
 

@@ -46,20 +46,12 @@
 \renewcommand{\headrulewidth}{0.2pt}
 
 \title{The expected number of faces of a random embedding\\ of a dense simple graph is $\Theta(\log n)$}
-\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
 \date{9 September 2026}
 
 \begin{document}
 \maketitle
 
-\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
-\small
-The mathematics in this note was produced without human intervention, in three stages.
-(1)~The argument was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2211.01032\_\_02}; original writeup in \texttt{attacks/2211.01032\_\_02/output.md}).
-(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the source paper's \TeX{} source, verified the exposure lemma, the facial-cycle probability and the light-face bound \emph{exactly} by enumerating all rotation systems of $K_5$ and of the octahedron, and ran Monte Carlo experiments up to $n=800$; its verdict was \textsc{minor\_gaps}: no substantive error, but a one-unit miscount in one intermediate display, implicit large-$n$ thresholds, an unstated connectivity convention, and one unused inequality. Its report is reproduced verbatim in \cref{app:referee}.
-(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}, repairing exactly those four points: the count of admissible darts in the heavy-face bound is corrected to $d_u-\lfloor\theta d_u\rfloor-1$ (\cref{lem:heavy}; the downstream bound $2/\delta$ is unchanged); the theorem is stated for $n\ge n_0(c)$ and the thresholds used are listed (\cref{rem:thresholds}); the connectivity convention is discussed (\cref{rem:connected}); and the unused inequality is dropped. The text was reorganised with full proofs in \cref{app:proofs}. No other mathematical content was changed.
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
-\end{tcolorbox}
 
 \begin{abstract}
 A random embedding of a graph $G$ is obtained by choosing, independently and uniformly at each vertex, a cyclic order of the incident edge-ends; let $F(G)$ be the resulting number of faces. Campion Loth, Halasz, Masařík, Mohar and Šámal conjectured (Conjecture~9.3 of arXiv:2211.01032) that every graph on $n$ vertices with minimum degree $\Omega(n)$ has $\E F(G)=\Theta(\log n)$. We prove this for simple graphs: for every $c>0$ and every simple graph $G$ on $n\ge n_0(c)$ vertices with $\delta(G)\ge cn$,
@@ -67,6 +59,13 @@ A random embedding of a graph $G$ is obtained by choosing, independently and uni
  \tfrac12\log n-O_c(1)\ \le\ \E F(G)\ \le\ \bigl(2/c^2+o_c(1)\bigr)\log n .
 \]
 The upper bound exposes the random rotations along a face and splits faces into light, heavy-and-short, and long; the lower bound counts faces bounded by vertex-simple cycles through a spectral estimate. For $K_n$ the upper bound specialises to $(2+o(1))\log n$. We also observe that the statement is false for multigraphs, so the simple-graph reading is the intended one.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
@@ -213,6 +212,15 @@ By enumerating all $7776$ rotation systems of $K_5$ and all $46656$ of the octah
 The referee's search found no resolution of \cref{conj:93} in the literature. It also noted that a four-page elementary argument improving the constants of a long SODA paper is a reason for caution, and recommended an independent expert pass before the conjecture is treated as resolved; we repeat that recommendation. Nothing here has been checked by a human.
 \end{remark}
 
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The argument was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2211.01032\_\_02}; original writeup in \texttt{attacks/2211.01032\_\_02/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the source paper's \TeX{} source, verified the exposure lemma, the facial-cycle probability and the light-face bound \emph{exactly} by enumerating all rotation systems of $K_5$ and of the octahedron, and ran Monte Carlo experiments up to $n=800$; its verdict was \textsc{minor\_gaps}: no substantive error, but a one-unit miscount in one intermediate display, implicit large-$n$ thresholds, an unstated connectivity convention, and one unused inequality. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}, repairing exactly those four points: the count of admissible darts in the heavy-face bound is corrected to $d_u-\lfloor\theta d_u\rfloor-1$ (\cref{lem:heavy}; the downstream bound $2/\delta$ is unchanged); the theorem is stated for $n\ge n_0(c)$ and the thresholds used are listed (\cref{rem:thresholds}); the connectivity convention is discussed (\cref{rem:connected}); and the unused inequality is dropped. The text was reorganised with full proofs in \cref{app:proofs}. No other mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+
+
 \appendix
 
 \section{Full proofs}\label{app:proofs}
@@ -318,7 +326,7 @@ A rotation system of a graph with $V$ vertices, $E$ edges and $F$ faces defines 
 \section{Report of the LLM referee (verbatim)}\label{app:referee}
 
 \begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
-\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) on the \emph{original} writeup. Its section and equation numbers refer to that writeup, not to this note; the four items it lists as defects are the ones repaired here (see the provenance box). The scripts it mentions are in \texttt{verification/scripts/2211.01032\_\_02/}. Treat it as machine output, not as an authority.
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) on the \emph{original} writeup. Its section and equation numbers refer to that writeup, not to this note; the four items it lists as defects are the ones repaired here (see \cref{sec:provenance}). The scripts it mentions are in \texttt{verification/scripts/2211.01032\_\_02/}. Treat it as machine output, not as an authority.
 \end{tcolorbox}
 
 \input{.build/referee.tex}

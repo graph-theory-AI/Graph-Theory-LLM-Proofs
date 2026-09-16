@@ -44,20 +44,12 @@
 \renewcommand{\headrulewidth}{0.2pt}
 
 \title{The biconstrained function $\psi$ of Chudnovsky, Hompe, Scott, Seymour and Spirkl is not symmetric:\\ $\psi(2/7,5/7)\le 23/28<6/7=\psi(5/7,2/7)$}
-\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
 \date{9 September 2026}
 
 \begin{document}
 \maketitle
 
-\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
-\small
-The mathematics in this note was produced without human intervention, in three stages.
-(1)~The constructions and proofs were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{1902.10878\_\_01}; original writeup in \texttt{attacks/1902.10878\_\_01/output.md}).
-(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) checked the definitions against the arXiv v3 TeX source of the paper, re-derived every step of the rigidity argument, rebuilt the $42$-vertex certificate independently from the prose and verified it exactly (together with the $q=9,11$ members of the family and the cyclic constructions for $q=3,\dots,13$), and machine-checked the parity obstruction by exhaustive enumeration of all matchings of $K_q$ for $q\le13$; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
-(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, the $q=7$ certificate was written out as explicit tables (\cref{tab:cert}), and \cref{sec:remarks} adds context taken from the referee's report (consistency with the theorems of the source paper, the role of $q\ge7$, scope). No mathematical content was changed.
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
-\end{tcolorbox}
 
 \begin{abstract}
 For $x,y\in(0,1]$, Chudnovsky, Hompe, Scott, Seymour and Spirkl define $\psi(x,y)$ as the largest $z$ such that in every graph with an $(x,y)$-biconstrained tripartition $(A,B,C)$ some vertex of $C$ is joined by two-edge paths to at least $z|A|$ vertices of $A$. They prove that the one-sided analogue $\phi$ is symmetric, $\phi(x,y)=\phi(y,x)$, and ask whether the same holds for $\psi$. We show that it does not: for every odd $q\ge7$,
@@ -65,6 +57,13 @@ For $x,y\in(0,1]$, Chudnovsky, Hompe, Scott, Seymour and Spirkl define $\psi(x,y
  \psi\Bigl(\frac2q,\frac{q-2}q\Bigr)\ \le\ 1-\frac{2(q-2)}{q(q+1)}\ <\ 1-\frac1q\ =\ \psi\Bigl(\frac{q-2}q,\frac2q\Bigr).
 \]
 The value $\psi((q-2)/q,2/q)=1-1/q$ is determined exactly by a rigidity argument ending in a parity obstruction; the upper bound on $\psi(2/q,(q-2)/q)$ comes from an explicit triple with $|A|=q(q+1)/2$ and $|B|=|C|=q$. For $q=7$ this is a $42$-vertex graph with $\psi(2/7,5/7)\le23/28<24/28=\psi(5/7,2/7)$.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+
 \end{abstract}
 
 \section{Introduction}
@@ -205,6 +204,15 @@ The referee rebuilt both constructions from the prose and verified, with exact r
 \begin{remark}[Novelty]
 The referee's literature search (September 2026) found no resolution of \cref{q:sym}; the published version of \cite{CHSSS} still lists it as open, and the exact value $\psi((q-2)/q,2/q)=1-1/q$ does not appear there. This has not been checked by a human.
 \end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The constructions and proofs were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{1902.10878\_\_01}; original writeup in \texttt{attacks/1902.10878\_\_01/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) checked the definitions against the arXiv v3 TeX source of the paper, re-derived every step of the rigidity argument, rebuilt the $42$-vertex certificate independently from the prose and verified it exactly (together with the $q=9,11$ members of the family and the cyclic constructions for $q=3,\dots,13$), and machine-checked the parity obstruction by exhaustive enumeration of all matchings of $K_q$ for $q\le13$; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, the $q=7$ certificate was written out as explicit tables (\cref{tab:cert}), and \cref{sec:remarks} adds context taken from the referee's report (consistency with the theorems of the source paper, the role of $q\ge7$, scope). No mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+
 
 \appendix
 
