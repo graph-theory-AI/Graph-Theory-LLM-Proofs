@@ -10,12 +10,16 @@ cd "$ROOT"
 PY="$ROOT/.venv/bin/python"
 [[ -x "$PY" ]] || PY=python3
 "$PY" "$ROOT/attack.py" summary --corpus opg >/dev/null || true
+if [[ -d "$ROOT/attacks_retry" ]]; then
+  "$PY" "$ROOT/attack.py" summary --corpus retry --wallet attacks_opg >/dev/null || true
+fi
 if [[ -d "$ROOT/attacks_arxiv_astra" ]]; then
   "$PY" "$ROOT/attack.py" summary --corpus arxiv \
     --attacks-dir attacks_arxiv_astra --wallet attacks_opg --done-dir attacks >/dev/null || true
 fi
 
-git add -A -- attacks_opg attacks_arxiv_astra RESULTS_OPG.md RESULTS_ARXIV_ASTRA.md \
+git add -A -- attacks_opg attacks_arxiv_astra attacks_retry \
+  RESULTS_OPG.md RESULTS_ARXIV_ASTRA.md RESULTS_RETRY.md \
   attack.py scripts .gitignore
 
 if git diff --cached --name-only | grep -E '(^|/)(\.env|raw\.json|claimed\.json|spend\.lock)$' >/dev/null; then

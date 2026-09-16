@@ -454,8 +454,97 @@ def opg_records() -> list[dict]:
     return rows
 
 
+# Where a retry sweep looks for finished attacks to reconsider, and which
+# corpus each directory's ids belong to.
+RETRY_SOURCES = (("attacks", "arxiv"), ("attacks_opg", "opg"))
+
+# Outcomes worth a second, stronger attempt. `partial` and `unknown` mean the
+# problem is still open and the first model got somewhere or nowhere; a claimed
+# resolution that failed the referee pass means the problem is still open too,
+# and the referee report says exactly what broke. `already_resolved`,
+# `ill_posed` and referee-confirmed resolutions are not open problems.
+RETRY_VERDICTS = {"partial", "unknown", "no_progress"}
+RETRY_REVIEW_VERDICTS = {"FATAL_ERROR", "MAJOR_GAP", "UNVERIFIABLE"}
+
+
+def review_index() -> dict[str, str]:
+    """Map catalog id -> adversarial referee verdict, when the pass has run."""
+    path = ROOT / "verification" / "verdicts.json"
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text())
+    except json.JSONDecodeError:
+        return {}
+    return {e["id"]: e.get("review_verdict") for e in data.get("verdicts", [])}
+
+
+def retry_records() -> list[dict]:
+    """Finished attacks that are still open, most promising first.
+
+    Ordering, best first:
+      1. a claimed resolution the referee pass rejected -- a full proof was
+         within reach and the report says where it failed;
+      2. `partial` at high confidence, easiest first;
+      3. everything else still open (lower confidence, then `unknown`).
+    """
+    reviews = review_index()
+    rank = {r["id"]: r for r in parse_ranking()}
+    opg_rank = {r["id"]: r for r in opg_records()}
+    rows: list[dict] = []
+    for dirname, source in RETRY_SOURCES:
+        root = ROOT / dirname
+        if not root.exists():
+            continue
+        for path in sorted(root.iterdir()):
+            vpath = path / "verdict.json"
+            if not path.is_dir() or not vpath.exists():
+                continue
+            try:
+                v = json.loads(vpath.read_text())
+            except json.JSONDecodeError:
+                continue
+            rec_id = path.name
+            review = reviews.get(rec_id)
+            verdict = v.get("verdict")
+            if review in RETRY_REVIEW_VERDICTS:
+                band = 0
+            elif verdict in RETRY_VERDICTS:
+                band = 1 if v.get("confidence") == "high" and verdict == "partial" else 2
+            else:
+                continue  # resolved, already known, or ill-posed: not open
+            base = (rank.get(rec_id) or opg_rank.get(rec_id) or {})
+            rows.append(
+                {
+                    "id": rec_id,
+                    "tier": base.get("tier"),
+                    "score": float(base.get("score") or 9.0),
+                    "lean": base.get("lean"),
+                    "status": "open",
+                    "title_md": base.get("title_md") or rec_id,
+                    "paper": base.get("paper") or "",
+                    "source": source,
+                    "url": base.get("url")
+                    or (SITE_ARXIV.format(id=rec_id) if source == "arxiv"
+                        else SITE_OPG.format(slug=rec_id)),
+                    "retry_of": str(path),
+                    "prior_verdict": verdict,
+                    "prior_confidence": v.get("confidence"),
+                    "prior_model": v.get("model"),
+                    "review_verdict": review,
+                    "band": band,
+                }
+            )
+    rows.sort(key=lambda r: (r["band"], r["score"], r["id"]))
+    return rows
+
+
 def corpus_records() -> list[dict]:
-    return opg_records() if CORPUS == "opg" else parse_ranking()
+    if CORPUS == "opg":
+        return opg_records()
+    if CORPUS == "retry":
+        return retry_records()
+    return parse_ranking()
 
 
 def attacked_ids() -> set[str]:
@@ -520,11 +609,15 @@ def cmd_queue(args: argparse.Namespace) -> None:
     done = attacked_ids()
     pending = [r for r in rows if r["id"] not in done]
     n = args.n or 15
-    label = "OpenProblemGarden" if CORPUS == "opg" else "open/partial arXiv"
+    label = {"opg": "OpenProblemGarden", "retry": "still-open earlier attempts"}.get(
+        CORPUS, "open/partial arXiv")
     print(f"{len(rows)} {label} records; {len(done)} attacked; {len(pending)} pending")
     print(f"first {n}:")
     for r in pending[:n]:
-        if CORPUS == "opg":
+        if CORPUS == "retry":
+            why = r.get("review_verdict") or f"{r.get('prior_verdict')}/{r.get('prior_confidence')}"
+            print(f"  band {r['band']}  {r['score']:.2f}  {why:16} {r['id'][:24]:26} {r['paper'][:46]}")
+        elif CORPUS == "opg":
             flag = "ugrad" if r.get("undergrad") else "     "
             print(f"  {r.get('importance') or '?':11} {flag}  {r['id'][:58]:58}  {r.get('subject') or ''}")
         else:
@@ -569,7 +662,48 @@ def fetch_opg_dossier(rec: dict) -> dict:
     }
 
 
+def fetch_retry_dossier(rec: dict) -> dict:
+    """A retry reuses the first attempt's prompt and adds what came of it."""
+    src = Path(rec["retry_of"])
+    prior_prompt = ""
+    ppath = src / "prompt.md"
+    if ppath.exists():
+        prior_prompt = ppath.read_text()
+    prior_writeup = ""
+    opath = src / "output.md"
+    if opath.exists():
+        prior_writeup = opath.read_text()[:60000]
+    referee = ""
+    rpath = ROOT / "verification" / f"{rec['id']}.md"
+    if rpath.exists():
+        referee = rpath.read_text()[:30000]
+    return {
+        "id": rec["id"],
+        "url": rec["url"],
+        "source": "retry",
+        "origin": rec.get("source"),
+        "arxiv_id": None,
+        "page_text": "",
+        "abstract": "",
+        "tier": rec.get("tier"),
+        "score": rec.get("score"),
+        "lean": rec.get("lean"),
+        "status": rec.get("status"),
+        "paper": rec.get("paper"),
+        "catalog_title": rec.get("title_md"),
+        "prior_prompt": prior_prompt,
+        "prior_writeup": prior_writeup,
+        "prior_model": rec.get("prior_model"),
+        "prior_verdict": rec.get("prior_verdict"),
+        "prior_confidence": rec.get("prior_confidence"),
+        "review_verdict": rec.get("review_verdict"),
+        "referee_report": referee,
+    }
+
+
 def fetch_dossier(rec: dict) -> dict:
+    if rec.get("retry_of"):
+        return fetch_retry_dossier(rec)
     if rec.get("source") == "opg" or CORPUS == "opg":
         return fetch_opg_dossier(rec)
     page_url = rec["url"]
@@ -635,7 +769,42 @@ def build_opg_prompt(d: dict) -> str:
     return "\n".join(parts) + "\n"
 
 
+def build_retry_prompt(d: dict) -> str:
+    head = d.get("prior_prompt") or (
+        f"Attack the following open graph-theory problem.\n\n"
+        f"Catalog id: {d['id']}\nCatalog page: {d['url']}\n"
+    )
+    parts = [head.rstrip(), "", "=" * 72, "", "=== A PREVIOUS, UNVERIFIED ATTEMPT ==="]
+    parts.append(
+        f"The problem above was already attacked by `{d.get('prior_model')}`, which "
+        f"reported verdict `{d.get('prior_verdict')}` at {d.get('prior_confidence')} "
+        "confidence. That attempt is reproduced below."
+    )
+    if d.get("review_verdict"):
+        parts.append(
+            f"An adversarial referee then reviewed it and returned "
+            f"`{d['review_verdict']}`, i.e. the claimed resolution did not stand, so "
+            "the problem is still open."
+        )
+    parts += [
+        "",
+        "Treat it as a lead, not as an authority: it is unverified, it may be wrong "
+        "in ways neither model noticed, and its framing may be the reason it "
+        "stalled. Check anything you reuse, and say so if you discard it. Your task "
+        "is the original problem, not a critique of this attempt. If you can finish "
+        "what it started, do that; if a different route is better, take it.",
+        "",
+        "--- previous attempt ---",
+        d.get("prior_writeup") or "(no writeup saved)",
+    ]
+    if d.get("referee_report"):
+        parts += ["", "--- referee report on that attempt ---", d["referee_report"]]
+    return "\n".join(parts) + "\n"
+
+
 def build_prompt(dossier: dict) -> str:
+    if dossier.get("source") == "retry":
+        return build_retry_prompt(dossier)
     if dossier.get("source") == "opg":
         return build_opg_prompt(dossier)
     extracted = ""
@@ -1232,6 +1401,8 @@ def configure(args: argparse.Namespace) -> None:
 
     if CORPUS == "opg":
         ATTACKS = ROOT / "attacks_opg"
+    elif CORPUS == "retry":
+        ATTACKS = ROOT / "attacks_retry"
     if getattr(args, "attacks_dir", None):
         ATTACKS = _abs(args.attacks_dir)
     stem = ATTACKS.name.removeprefix("attacks_")
@@ -1252,8 +1423,9 @@ def configure(args: argparse.Namespace) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     common = argparse.ArgumentParser(add_help=False)
-    common.add_argument("--corpus", choices=["arxiv", "opg"], default="arxiv",
-                        help="arxiv ranking (default) or the OpenProblemGarden catalog")
+    common.add_argument("--corpus", choices=["arxiv", "opg", "retry"], default="arxiv",
+                        help="arxiv ranking (default), the OpenProblemGarden catalog, or "
+                             "retry: still-open problems from earlier attacks, most promising first")
     common.add_argument("--model", help="override the model (default: sol for arxiv, astra for opg)")
     common.add_argument("--attacks-dir", help="write attacks here (default: attacks/, or attacks_opg/ for --corpus opg)")
     common.add_argument("--wallet", help="directory holding spend.json/ledger.jsonl (default: the attacks dir)")

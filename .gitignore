@@ -28,3 +28,8 @@ attacks_arxiv_astra/**/encrypted_reasoning.json
 attacks_arxiv_astra/**/claimed.json
 attacks_arxiv_astra/spend.lock
 attacks_arxiv_astra/*.log
+attacks_retry/**/raw.json
+attacks_retry/**/encrypted_reasoning.json
+attacks_retry/**/claimed.json
+attacks_retry/spend.lock
+attacks_retry/*.log
