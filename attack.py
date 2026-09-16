@@ -44,6 +44,9 @@ _CATALOG_INDEX: dict[str, dict] | None = None
 
 MODEL = "gpt-5.6-sol"
 CORPUS = "arxiv"
+# Directories whose finished attacks also count as done, so a second leg of a
+# campaign writing to a new directory does not redo the first leg's work.
+DONE_DIRS: list[Path] = []
 SERVICE_TIER = "flex"
 SITE_ARXIV = "https://graph-theory-ai.github.io/graph-conjectures/arxiv/{id}/"
 SITE_OPG = "https://graph-theory-ai.github.io/graph-conjectures/op/{slug}/"
@@ -457,13 +460,14 @@ def corpus_records() -> list[dict]:
 
 def attacked_ids() -> set[str]:
     done = set()
-    if not ATTACKS.exists():
-        return done
-    for p in ATTACKS.iterdir():
-        if p.is_dir() and (
-            (p / "verdict.json").exists() or (p / "skipped.json").exists()
-        ):
-            done.add(p.name)
+    for root in [ATTACKS, *DONE_DIRS]:
+        if not root.exists():
+            continue
+        for p in root.iterdir():
+            if p.is_dir() and (
+                (p / "verdict.json").exists() or (p / "skipped.json").exists()
+            ):
+                done.add(p.name)
     return done
 
 
@@ -493,7 +497,10 @@ def is_busy(path: Path) -> bool:
 def claim_next() -> dict | None:
     """Pick the next easiest complete record and mark it claimed."""
     with SpendLock():
+        done = attacked_ids()
         for rec in corpus_records():
+            if rec["id"] in done:
+                continue
             dest = ATTACKS / rec["id"]
             if dest.exists() and is_busy(dest):
                 continue
@@ -1207,7 +1214,7 @@ def configure(args: argparse.Namespace) -> None:
     The OPG campaign keeps its own output directory, budget and ledger so it
     cannot disturb the arXiv/Sol artifacts already in `attacks/`.
     """
-    global CORPUS, MODEL, PRICE, SERVICE_TIER
+    global CORPUS, MODEL, PRICE, SERVICE_TIER, DONE_DIRS
     global ATTACKS, SPEND_PATH, LEDGER_PATH, LOCK_PATH, RESULTS_PATH
     CORPUS = getattr(args, "corpus", None) or "arxiv"
     MODEL = getattr(args, "model", None) or (
@@ -1219,13 +1226,27 @@ def configure(args: argparse.Namespace) -> None:
     SERVICE_TIER = getattr(args, "service_tier", None) or "flex"
     if SERVICE_TIER not in TIER_MULTIPLIER:
         raise SystemExit(f"unknown service tier {SERVICE_TIER!r}")
+    def _abs(value: str) -> Path:
+        path = Path(value)
+        return path if path.is_absolute() else ROOT / path
+
     if CORPUS == "opg":
         ATTACKS = ROOT / "attacks_opg"
-        RESULTS_PATH = ROOT / "RESULTS_OPG.md"
-        ATTACKS.mkdir(exist_ok=True)
-    SPEND_PATH = ATTACKS / "spend.json"
-    LEDGER_PATH = ATTACKS / "ledger.jsonl"
-    LOCK_PATH = ATTACKS / "spend.lock"
+    if getattr(args, "attacks_dir", None):
+        ATTACKS = _abs(args.attacks_dir)
+    stem = ATTACKS.name.removeprefix("attacks_")
+    RESULTS_PATH = ROOT / ("RESULTS.md" if ATTACKS.name == "attacks"
+                           else f"RESULTS_{stem.upper()}.md")
+    ATTACKS.mkdir(parents=True, exist_ok=True)
+
+    # A second leg of a campaign can share the first leg's wallet, so the whole
+    # campaign is accounted against one budget.
+    wallet = _abs(args.wallet) if getattr(args, "wallet", None) else ATTACKS
+    wallet.mkdir(parents=True, exist_ok=True)
+    SPEND_PATH = wallet / "spend.json"
+    LEDGER_PATH = wallet / "ledger.jsonl"
+    LOCK_PATH = wallet / "spend.lock"
+    DONE_DIRS = [_abs(d) for d in (getattr(args, "done_dir", None) or [])]
 
 
 def main() -> None:
@@ -1234,6 +1255,10 @@ def main() -> None:
     common.add_argument("--corpus", choices=["arxiv", "opg"], default="arxiv",
                         help="arxiv ranking (default) or the OpenProblemGarden catalog")
     common.add_argument("--model", help="override the model (default: sol for arxiv, astra for opg)")
+    common.add_argument("--attacks-dir", help="write attacks here (default: attacks/, or attacks_opg/ for --corpus opg)")
+    common.add_argument("--wallet", help="directory holding spend.json/ledger.jsonl (default: the attacks dir)")
+    common.add_argument("--done-dir", action="append", metavar="DIR",
+                        help="also treat finished attacks in DIR as done; repeatable")
     common.add_argument("--service-tier", choices=sorted(TIER_MULTIPLIER), default="flex",
                         help="default flex: half the standard rate for the same model and "
                              "reasoning settings, which is the right trade for a batch sweep. "

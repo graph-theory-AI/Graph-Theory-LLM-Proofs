@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-# Stage the OPG/astra campaign artifacts, commit if anything changed, push.
-# Mirrors commit-attacks.sh but for attacks_opg/ and RESULTS_OPG.md.
+# Stage the astra campaign artifacts, commit if anything changed, push.
+# Mirrors commit-attacks.sh but for the astra legs: attacks_opg/ (OPG corpus)
+# and attacks_arxiv_astra/ (the arXiv records the first campaign never reached),
+# which share one wallet in attacks_opg/spend.json.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
@@ -8,8 +10,13 @@ cd "$ROOT"
 PY="$ROOT/.venv/bin/python"
 [[ -x "$PY" ]] || PY=python3
 "$PY" "$ROOT/attack.py" summary --corpus opg >/dev/null || true
+if [[ -d "$ROOT/attacks_arxiv_astra" ]]; then
+  "$PY" "$ROOT/attack.py" summary --corpus arxiv \
+    --attacks-dir attacks_arxiv_astra --wallet attacks_opg --done-dir attacks >/dev/null || true
+fi
 
-git add -A -- attacks_opg RESULTS_OPG.md attack.py scripts .gitignore
+git add -A -- attacks_opg attacks_arxiv_astra RESULTS_OPG.md RESULTS_ARXIV_ASTRA.md \
+  attack.py scripts .gitignore
 
 if git diff --cached --name-only | grep -E '(^|/)(\.env|raw\.json|claimed\.json|spend\.lock)$' >/dev/null; then
   echo "refusing to commit secrets or in-flight lock files" >&2
