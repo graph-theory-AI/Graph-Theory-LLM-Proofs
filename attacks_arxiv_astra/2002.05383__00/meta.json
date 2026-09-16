@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 41,
+    "score": 4.1,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2002.05383__00",
+    "title_md": "[Problem 3](https://arxiv.org/abs/2002.05383)",
+    "paper": "An update on reconfiguring $10$-colorings of planar graphs",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2002.05383__00/"
+  },
+  "dossier_meta": {
+    "id": "2002.05383__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2002.05383__00/",
+    "arxiv_id": "2002.05383",
+    "tier": 4,
+    "score": 4.1,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "An update on reconfiguring $10$-colorings of planar graphs",
+    "catalog_title": "Problem 3",
+    "statement_text": "What is the minimum integer $\\kappa$ such that for every planar graph $G$ with $n$ vertices, $R_{\\kappa}(G)$ has diameter $O(n)$?",
+    "context_text": "Planar graphs are 5-degenerate and have maximum average degree less than 6; prior results give $R_8(G)$ diameter $O(n(\\log n)^7)$ and $R_{12}(G)$ diameter at most $6n$ for planar $G$. The paper improves the upper bound to $\\kappa \\leq 10$ via Theorem 4, and an isolated 6-coloring of the icosahedron shows $\\kappa \\geq 7$; the authors note that $\\kappa = 7$ cannot be excluded."
+  },
+  "started": "2026-09-16T19:55:13Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove reconstructibility when some card has a nonsingular walk matrix and an odd-sized degree class.",
+  "would_publish": false,
+  "caveats": "This is a sufficient condition only; novelty is not claimed, and the general conjecture is not settled.",
+  "id": "reconstruction_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.927415,
+  "eur": 0.960612,
+  "elapsed_s": 922.1,
+  "status": "completed",
+  "response_id": "resp_0434dd818a82efe5006aaaee5eeba087d292af0472591b2a4f",
+  "when": "2026-09-16T19:46:00Z"
+}

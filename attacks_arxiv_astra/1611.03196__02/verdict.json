@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "The stated conjecture fails at maximum degree 4: seven edge classes of size 6 need not admit a matching meeting every class, even in a tree.",
+  "would_publish": false,
+  "caveats": "This addresses the supplied statement with arbitrary edge classes, not a version requiring each class to be a matching.",
+  "id": "1611.03196__02",
+  "model": "gpt-6-astra",
+  "usd": 0.514925,
+  "eur": 0.533357,
+  "elapsed_s": 397.5,
+  "status": "completed",
+  "response_id": "resp_0db942ca75bcd766006aaaf294e9d487d280b962e6be44b0fd",
+  "when": "2026-09-16T19:55:13Z"
+}

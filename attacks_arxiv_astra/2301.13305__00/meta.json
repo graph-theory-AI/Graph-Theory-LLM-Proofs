@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 56,
+    "score": 4.0,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2301.13305__00",
+    "title_md": "[Question 1.1](https://arxiv.org/abs/2301.13305)",
+    "paper": "Graph-codes",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2301.13305__00/"
+  },
+  "dossier_meta": {
+    "id": "2301.13305__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2301.13305__00/",
+    "arxiv_id": "2301.13305",
+    "tier": 4,
+    "score": 4.0,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Graph-codes",
+    "catalog_title": "Question 1.1",
+    "statement_text": "Let $\\mathcal{H}$ be a family of graphs closed under isomorphism. Is it true that $d_{\\mathcal{H}}(n)$ tends to $0$ as $n$ tends to infinity if and only if $\\mathcal{H}$ contains a graph with an even number of edges? Equivalently: is it true that for any fixed graph $H$ with an even number of edges, $d_H(n)$ tends to $0$ as $n$ tends to infinity?",
+    "context_text": "The authors define $d_H(n)$ as the maximum fraction of all graphs on $[n]$ forming an $H$-code (a family with no two members whose symmetric difference is a copy of $H$). If every member of $\\mathcal{H}$ has an odd number of edges then $d_{\\mathcal{H}}(n) \\geq 1/2$, motivating the question of whether containing an even-edge graph is exactly the condition that forces $d_{\\mathcal{H}}(n) \\to 0$. The question is stated as the central open problem and noted in the concluding remarks to remain wide open."
+  },
+  "started": "2026-09-16T19:48:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the conjecture when, in each weak component, at most five SCCs have external degree imbalance nonzero modulo k.",
+  "would_publish": false,
+  "caveats": "The general case is not resolved, and novelty of this arithmetic special case is not claimed.",
+  "id": "woodalls_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.097185,
+  "eur": 1.136459,
+  "elapsed_s": 1100.7,
+  "status": "completed",
+  "response_id": "resp_0961d1ec517b2a69006aaaeda8072087d29f6205e4c973be41",
+  "when": "2026-09-16T19:45:56Z"
+}

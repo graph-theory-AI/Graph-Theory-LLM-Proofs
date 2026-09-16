@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 48,
+    "score": 4.05,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2210.15076__00",
+    "title_md": "[Extension to H-free graphs](https://arxiv.org/abs/2210.15076)",
+    "paper": "Tur\u00e1n graphs with bounded matching number",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.15076__00/"
+  },
+  "dossier_meta": {
+    "id": "2210.15076__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.15076__00/",
+    "arxiv_id": "2210.15076",
+    "tier": 4,
+    "score": 4.05,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Tur\u00e1n graphs with bounded matching number",
+    "catalog_title": "Extension to H-free graphs",
+    "statement_text": "Determine the maximum possible number of edges of an $H$-free graph on $n$ vertices with matching number at most $s$, for general forbidden subgraphs $H$ (extending Theorem 1.1 beyond the case $H = K_{k+1}$).",
+    "context_text": "At the opening of Section 3, the authors note it may be interesting to extend Theorem 1.1 by replacing the forbidden clique $K_{k+1}$ by other forbidden subgraphs $H$. Proposition 3.1 settles this for color-critical $H$ when $s$ and $n$ are sufficiently large, but the problem for general $H$ (including non-color-critical graphs and small parameters) remains open."
+  },
+  "started": "2026-09-16T19:48:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

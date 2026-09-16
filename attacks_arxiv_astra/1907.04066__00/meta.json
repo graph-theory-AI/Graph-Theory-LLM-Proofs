@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 50,
+    "score": 4.05,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1907.04066__00",
+    "title_md": "[Problem 1](https://arxiv.org/abs/1907.04066)",
+    "paper": "Coloring count cones of planar graphs",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1907.04066__00/"
+  },
+  "dossier_meta": {
+    "id": "1907.04066__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1907.04066__00/",
+    "arxiv_id": "1907.04066",
+    "tier": 4,
+    "score": 4.05,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Coloring count cones of planar graphs",
+    "catalog_title": "Problem 1",
+    "statement_text": "Does there exist a polynomial-time algorithm which, given a near-triangulation $G$ with the outer face bounded by a 4-cycle $C$ and a 4-coloring $\\psi$ of $C$, correctly decides whether $\\psi$ extends to a 4-coloring of $G$?",
+    "context_text": "The authors note that even very basic precoloring extension questions for planar graphs are wide open. There exist infinitely many near-triangulations $G$ whose outer 4-cycle has a precoloring that does not extend to a 4-coloring of $G$, yet no good characterization of such graphs is known."
+  },
+  "started": "2026-09-16T19:48:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

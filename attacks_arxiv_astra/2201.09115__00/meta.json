@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 43,
+    "score": 4.1,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2201.09115__00",
+    "title_md": "[Question 1](https://arxiv.org/abs/2201.09115)",
+    "paper": "Disproof of a Conjecture by Woodall",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2201.09115__00/"
+  },
+  "dossier_meta": {
+    "id": "2201.09115__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2201.09115__00/",
+    "arxiv_id": "2201.09115",
+    "tier": 4,
+    "score": 4.1,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Disproof of a Conjecture by Woodall",
+    "catalog_title": "Question 1",
+    "statement_text": "Is every graph without a $K_{4,4}$-minor $7$-choosable? Is every graph without a $K_{3,5}$-minor $7$-choosable?",
+    "context_text": "After disproving Woodall's Conjecture for large comparable $s$ and $t$, the authors identify $K_{4,4}$ and $K_{3,5}$ as the smallest parameter pairs for which the conjecture is not yet settled by prior results, since J\u00f8rgensen's result gives only $8$-choosability for $K_{4,4}$-minor-free graphs and no sharp result is known for $K_{3,5}$."
+  },
+  "started": "2026-09-16T19:48:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

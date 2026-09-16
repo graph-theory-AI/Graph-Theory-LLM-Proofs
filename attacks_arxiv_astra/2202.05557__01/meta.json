@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 47,
+    "score": 4.05,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2202.05557__01",
+    "title_md": "[Question: Extending Theorem 1.6 to paths](https://arxiv.org/abs/2202.05557)",
+    "paper": "Polynomial bounds for chromatic number. V. Excluding a tree of radius t\u2026",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2202.05557__01/"
+  },
+  "dossier_meta": {
+    "id": "2202.05557__01",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2202.05557__01/",
+    "arxiv_id": "2202.05557",
+    "tier": 4,
+    "score": 4.05,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Polynomial bounds for chromatic number. V. Excluding a tree of radius t\u2026",
+    "catalog_title": "Question: Extending Theorem 1.6 to paths",
+    "statement_text": "Is it true that if $H$ is a path, then for every integer $d \\geq 1$, there is a polynomial $f$ such that $\\chi(G) \\leq f(\\tau_d(G))$ for every $H$-free graph $G$?",
+    "context_text": "This question, suggested by a referee and included by the authors, asks whether the main result (Theorem 1.6 for trees of radius two) can be extended to paths\u2014another prominent family of forests for which polynomial bounds in terms of $\\tau_2(G)$ are already known (via results of Bonamy et al. and Scott-Seymour-Spirkl)."
+  },
+  "started": "2026-09-16T19:48:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

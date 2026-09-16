@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 58,
+    "score": 4.0,
+    "tier": 4,
+    "lean": "balanced",
+    "status": "open",
+    "id": "2201.04062__00",
+    "title_md": "[Possibility 1.6](https://arxiv.org/abs/2201.04062)",
+    "paper": "Pure pairs. VIII. Excluding a sparse graph",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2201.04062__00/"
+  },
+  "dossier_meta": {
+    "id": "2201.04062__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2201.04062__00/",
+    "arxiv_id": "2201.04062",
+    "tier": 4,
+    "score": 4.0,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Pure pairs. VIII. Excluding a sparse graph",
+    "catalog_title": "Possibility 1.6",
+    "statement_text": "For all $c > 0$, there exists $\\xi > 0$ with the following property. For every graph $H$ with congestion at most $\\xi$, there exists $\\varepsilon > 0$ such that for every graph $G$ with $|G| > 1$ that is $H$-free and $\\bar{H}$-free, there is a pure pair $A, B$ in $G$ with $|A| \\geq \\varepsilon|G|$ and $|B| \\geq \\varepsilon|G|^{1-c}$.",
+    "context_text": "Theorem 1.3 (from an earlier paper) gives a pure pair where one set has linear size, and the authors ask whether an analogous strengthening of their main result 1.4 holds: can one of the two sets always be taken to have linear size rather than polynomial size $\\varepsilon|G|^{1-c}$? The authors explicitly state they were unable to decide this. The proof technique for 1.4 cannot be directly extended to resolve 1.6 because a key inductive argument requires strictly increasing shrinkage parameters, leaving no room for the stronger conclusion."
+  },
+  "started": "2026-09-16T19:48:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

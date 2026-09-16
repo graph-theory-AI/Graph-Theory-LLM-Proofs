@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 57,
+    "score": 4.0,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2312.01028__00",
+    "title_md": "[Optimal disjoint-edges bound in complete simple topological graphs](https://arxiv.org/abs/2312.01028)",
+    "paper": "A structure theorem for pseudo-segments and its applications",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2312.01028__00/"
+  },
+  "dossier_meta": {
+    "id": "2312.01028__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2312.01028__00/",
+    "arxiv_id": "2312.01028",
+    "tier": 4,
+    "score": 4.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "A structure theorem for pseudo-segments and its applications",
+    "catalog_title": "Optimal disjoint-edges bound in complete simple topological graphs",
+    "statement_text": "Is it true that every complete $n$-vertex simple topological graph contains $\\Omega(n)$ pairwise disjoint edges?",
+    "context_text": "Aichholzer et al. [2] showed that every complete $n$-vertex simple topological graph always contains $\\Omega(n^{1/2})$ pairwise disjoint edges. The paper notes that improving this lower bound to $\\Omega(n)$ is an open problem, and Corollary 1.3 provides a new nearly-polynomial lower bound under a density assumption."
+  },
+  "started": "2026-09-16T19:48:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

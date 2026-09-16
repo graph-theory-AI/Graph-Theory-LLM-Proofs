@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An exact rounding argument handles fractional covers with at most seven terms, and eight terms when every coefficient is at most one half.",
+  "would_publish": false,
+  "caveats": "No novelty claim; the general conjecture and the exceptional eight-term case are not settled here.",
+  "id": "the_berge_fulkerson_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.208235,
+  "eur": 1.251484,
+  "elapsed_s": 1021.5,
+  "status": "completed",
+  "response_id": "resp_0b4ea0e8e5d5b8ac006aaaee8e034887d29baa42e540d17fd3",
+  "when": "2026-09-16T19:48:27Z"
+}

@@ -12,8 +12,8 @@ runs were not used.
 ## Counts
 
 Finished attacks with a verdict: **0**.
-Spend (promo ledger × prepaid FX): **€199.31** billed USD
-**$192.43** / budget €600
+Spend (promo ledger × prepaid FX): **€205.88** billed USD
+**$198.76** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
@@ -42,11 +42,11 @@ Spend (promo ledger × prepaid FX): **€199.31** billed USD
 
 ## Coverage
 
-The sweep queue is the easiest-first open/partial arXiv ranking (697
+The sweep queue is the easiest-first open/partial arXiv ranking (702
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **697** (plus 0 skipped without a model call).
+Queue records not yet attacked: **702** (plus 0 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
@@ -503,6 +503,8 @@ Queue records not yet attacked: **697** (plus 0 skipped without a model call).
 | [`triangle_free_strongly_regular_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/triangle_free_strongly_regular_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/triangle_free_strongly_regular_graphs |
 | [`unfriendly_partitions`](https://graph-theory-ai.github.io/graph-conjectures/op/unfriendly_partitions/) | 3 | 3.0 | http://www.openproblemgarden.org/op/unfriendly_partitions |
 | [`unions_of_triangle_free_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/unions_of_triangle_free_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/unions_of_triangle_free_graphs |
+| [`uniquely_hamiltonian_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/uniquely_hamiltonian_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/uniquely_hamiltonian_graphs |
+| [`woodalls_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/woodalls_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/woodalls_conjecture |
 | [`2005.10849__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2005.10849__00/) | 3 | 3.05 | On the cop number of graphs of high girth |
 | [`2009.07840__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2009.07840__00/) | 3 | 3.05 | Typical and Extremal Aspects of Friends-and-Strangers Graphs |
 | [`2011.08049__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2011.08049__00/) | 3 | 3.05 | Efficient polynomial-time approximation scheme for the genus of dense g… |
@@ -692,6 +694,9 @@ Queue records not yet attacked: **697** (plus 0 skipped without a model call).
 | [`1909.05988__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1909.05988__01/) | 4 | 4.0 | Independent sets in hypergraphs with a forbidden link |
 | [`5_flow_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/5_flow_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/5_flow_conjecture |
 | [`caccetta_haggkvist_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/caccetta_haggkvist_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/caccetta_haggkvist_conjecture |
+| [`cycle_double_cover_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/cycle_double_cover_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/cycle_double_cover_conjecture |
+| [`reconstruction_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/reconstruction_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/reconstruction_conjecture |
+| [`the_berge_fulkerson_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/the_berge_fulkerson_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/the_berge_fulkerson_conjecture |
 | [`2506.07264__03`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2506.07264__03/) | 1 | 1.5 | Refinement of a conjecture on positive square energy of graphs |
 | [`2301.02020__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2301.02020__00/) | 2 | 1.7 | Extremal Independent Set Reconfiguration |
 | [`2511.07601__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2511.07601__00/) | 2 | 1.85 | Infinite Schnyder Woods |
@@ -748,4 +753,4 @@ Queue records not yet attacked: **697** (plus 0 skipped without a model call).
 | [`2210.09227__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.09227__00/) | 4 | 3.75 | A multidimensional Ramsey Theorem |
 | [`2404.02021__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2404.02021__02/) | 4 | 3.85 | On off-diagonal hypergraph Ramsey numbers |
 
-Generated 2026-09-16T19:42:51Z.
+Generated 2026-09-16T19:57:54Z.

@@ -11,9 +11,9 @@ runs were not used.
 
 ## Counts
 
-Finished attacks with a verdict: **222**.
-Spend (promo ledger × prepaid FX): **€199.31** billed USD
-**$192.43** / budget €600
+Finished attacks with a verdict: **227**.
+Spend (promo ledger × prepaid FX): **€205.88** billed USD
+**$198.76** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
@@ -21,7 +21,7 @@ Spend (promo ledger × prepaid FX): **€199.31** billed USD
 | proved | 6 | 5 |
 | disproved | 15 | 4 |
 | already_resolved | 29 | 0 |
-| partial | 172 | 1 |
+| partial | 177 | 1 |
 
 ## Claimed proofs (6)
 
@@ -99,14 +99,6 @@ The sweep queue is the easiest-first open/partial arXiv ranking (227
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **5** (plus 0 skipped without a model call).
+Queue records not yet attacked: **0** (plus 0 skipped without a model call).
 
-| id | tier | score | paper |
-| --- | ---: | ---: | --- |
-| [`uniquely_hamiltonian_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/uniquely_hamiltonian_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/uniquely_hamiltonian_graphs |
-| [`woodalls_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/woodalls_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/woodalls_conjecture |
-| [`cycle_double_cover_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/cycle_double_cover_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/cycle_double_cover_conjecture |
-| [`reconstruction_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/reconstruction_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/reconstruction_conjecture |
-| [`the_berge_fulkerson_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/the_berge_fulkerson_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/the_berge_fulkerson_conjecture |
-
-Generated 2026-09-16T19:42:51Z.
+Generated 2026-09-16T19:57:54Z.

@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 46,
+    "score": 4.1,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1610.00876__04",
+    "title_md": "[Problem 12](https://arxiv.org/abs/1610.00876)",
+    "paper": "Subdivisions in digraphs of large out-degree or large dichromatic number",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1610.00876__04/"
+  },
+  "dossier_meta": {
+    "id": "1610.00876__04",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1610.00876__04/",
+    "arxiv_id": "1610.00876",
+    "tier": 4,
+    "score": 4.1,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Subdivisions in digraphs of large out-degree or large dichromatic number",
+    "catalog_title": "Problem 12",
+    "statement_text": "What is $\\mathrm{mader}_{\\vec{\\chi}}(\\vec{K}_n)$?",
+    "context_text": "The paper proves in Section 3 that every digraph is $\\vec{\\chi}$-maderian. Since every digraph of order $n$ is a subdigraph of $\\vec{K}_n$, bounding $\\mathrm{mader}_{\\vec{\\chi}}(\\vec{K}_n)$ controls all cases. The paper establishes $\\mathrm{mader}_{\\vec{\\chi}}(\\vec{K}_n) \\leq 4^{n^2-2n+1}(n-1)+1$ (Corollary 36), but the exact value is unknown."
+  },
+  "started": "2026-09-16T19:48:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

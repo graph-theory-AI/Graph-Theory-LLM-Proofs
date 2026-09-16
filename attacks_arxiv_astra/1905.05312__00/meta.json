@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 52,
+    "score": 4.05,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1905.05312__00",
+    "title_md": "[Conjecture 1.1](https://arxiv.org/abs/1905.05312)",
+    "paper": "Books versus triangles at the extremal density",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1905.05312__00/"
+  },
+  "dossier_meta": {
+    "id": "1905.05312__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1905.05312__00/",
+    "arxiv_id": "1905.05312",
+    "tier": 4,
+    "score": 4.05,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Books versus triangles at the extremal density",
+    "catalog_title": "Conjecture 1.1",
+    "statement_text": "If $n/6 \\leq b < n/4$, then every graph on $n$ vertices with at least $\\lfloor n^2/4 \\rfloor$ edges and book number at most $b$ which is not the balanced complete bipartite graph has at least $b^2(n - 4b)$ triangles, with equality if and only if the graph is $S_{b,n}$.",
+    "context_text": "The authors introduce the 3-prism blow-up $S_{b,n}$ \u2014 formed by blowing up the 3-prism graph with four parts of size $b$ and two parts of size $\\lfloor(n-4b)/2\\rfloor$ and $\\lceil(n-4b)/2\\rceil$ \u2014 as the conjectured extremal construction. The conjecture implies an asymptotically tight bound on $t(n,b)$ for $n/6 \\leq b \\leq n/4 - \\omega(1)$, fully addressing Mubayi's question about the $\\gamma(\\beta)$ dependency. A footnote notes the construction is essentially identical to one in an earlier arXiv version of Mubayi's paper."
+  },
+  "started": "2026-09-16T19:48:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
