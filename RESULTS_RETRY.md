@@ -11,21 +11,24 @@ runs were not used.
 
 ## Counts
 
-Finished attacks with a verdict: **19**.
-Spend (promo ledger × prepaid FX): **€280.77** billed USD
-**$271.07** / budget €600
+Finished attacks with a verdict: **29**.
+Spend (promo ledger × prepaid FX): **€294.83** billed USD
+**$284.64** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
 | --- | ---: | ---: |
+| proved | 2 | 2 |
 | disproved | 1 | 0 |
 | already_resolved | 1 | 0 |
-| partial | 17 | 0 |
+| partial | 25 | 0 |
 
-## Claimed proofs (0)
+## Claimed proofs (2)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
+| [`2402.10782__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2402.10782__01/) · [artifact](attacks_retry/2402.10782__01/) | high | yes | The path-FAS problem is NP-complete, whereas the maximum-degree-1 FAS problem is polynomial-time solvable. |
+| [`2603.02786__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2603.02786__00/) · [artifact](attacks_retry/2603.02786__00/) | high | yes | Fixed-size CRT-generic prime blocks, together with clustered residue classes for their multiples and a tail decomposition, give m(n) ~ (4/3)n^(3/2)/log n. |
 
 ## Claimed counterexamples (1)
 
@@ -50,23 +53,13 @@ The sweep queue is the easiest-first open/partial arXiv ranking (702
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **683** (plus 0 skipped without a model call).
+Queue records not yet attacked: **673** (plus 0 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
-| [`2308.15387__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2308.15387__02/) | 1 | 1.0 | The power of many colours |
-| [`2309.04460__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2309.04460__01/) | 1 | 1.0 | Essentially tight bounds for rainbow cycles in proper edge-colourings |
-| [`2309.04460__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2309.04460__02/) | 1 | 1.0 | Essentially tight bounds for rainbow cycles in proper edge-colourings |
-| [`2309.04460__03`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2309.04460__03/) | 1 | 1.0 | Essentially tight bounds for rainbow cycles in proper edge-colourings |
-| [`circular_choosability_of_planar_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/circular_choosability_of_planar_graphs/) | 1 | 1.0 | http://www.openproblemgarden.org/op/circular_choosability_of_planar_graphs |
 | [`obstacle_number_of_planar_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/obstacle_number_of_planar_graphs/) | 1 | 1.0 | http://www.openproblemgarden.org/op/obstacle_number_of_planar_graphs |
-| [`weak_saturation_of_the_cube_in_the_clique`](https://graph-theory-ai.github.io/graph-conjectures/op/weak_saturation_of_the_cube_in_the_clique/) | 1 | 1.0 | http://www.openproblemgarden.org/op/weak_saturation_of_the_cube_in_the_clique |
-| [`2309.04460__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2309.04460__00/) | 1 | 1.45 | Essentially tight bounds for rainbow cycles in proper edge-colourings |
-| [`2206.12335__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2206.12335__00/) | 1 | 1.5 | Improved bounds for 1-independent percolation on $\mathbb{Z}^n$ |
-| [`2402.10782__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2402.10782__01/) | 1 | 1.5 | Finding forest-orderings of tournaments is NP-complete |
 | [`2506.07264__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2506.07264__02/) | 1 | 1.5 | Refinement of a conjecture on positive square energy of graphs |
 | [`2510.01916__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2510.01916__00/) | 1 | 1.5 | Short circuit walks in fixed dimension |
-| [`2603.02786__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2603.02786__00/) | 1 | 1.5 | Packing arithmetic progressions |
 | [`2502.05289__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2502.05289__01/) | 2 | 1.6 | Induced Disjoint Paths Without an Induced Minor |
 | [`2507.12748__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2507.12748__00/) | 2 | 1.6 | Improved Decomposition Bounds for Partition Polytopes and Odd-Covers |
 | [`2512.17342__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2512.17342__01/) | 2 | 1.6 | Nowhere-zero flow reconfiguration |
@@ -738,4 +731,4 @@ Queue records not yet attacked: **683** (plus 0 skipped without a model call).
 | [`2210.09227__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.09227__00/) | 4 | 3.75 | A multidimensional Ramsey Theorem |
 | [`2404.02021__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2404.02021__02/) | 4 | 3.85 | On off-diagonal hypergraph Ramsey numbers |
 
-Generated 2026-09-16T21:13:08Z.
+Generated 2026-09-16T21:28:10Z.

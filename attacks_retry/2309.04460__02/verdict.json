@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The exact abelian threshold extends to groups whose derived subgroup has order at most two, while a group-algebra argument gives logarithmic bounds and exact examples for class-two groups of odd prime exponent.",
+  "would_publish": false,
+  "caveats": "The unrestricted function d(n), including a uniform O(log n) upper bound, is not determined here; novelty of the special-case results has not been checked.",
+  "id": "2309.04460__02",
+  "model": "gpt-6-astra",
+  "usd": 1.51804,
+  "eur": 1.572378,
+  "elapsed_s": 1105.1,
+  "status": "completed",
+  "response_id": "resp_0942c6872dfc528b006aab0331138887d29d61a5760154c26a",
+  "when": "2026-09-16T21:17:53Z"
+}

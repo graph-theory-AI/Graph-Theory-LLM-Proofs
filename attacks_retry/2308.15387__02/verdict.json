@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A dual-matching argument proves M(r,s) >= ceil(((168 - 24 sqrt(2))/47)(s+1) - 6) for s >= 14, and also gives rounded r-dependent lower bounds.",
+  "would_publish": false,
+  "caveats": "The exact minimum remains undetermined in general; no claim of literature novelty or best-known status is made, and isolated vertices are permitted.",
+  "id": "2308.15387__02",
+  "model": "gpt-6-astra",
+  "usd": 1.068935,
+  "eur": 1.107197,
+  "elapsed_s": 1244.4,
+  "status": "completed",
+  "response_id": "resp_053c4b605ac79e39006aab01989a8487d2995bdfd82f39844b",
+  "when": "2026-09-16T21:13:24Z"
+}

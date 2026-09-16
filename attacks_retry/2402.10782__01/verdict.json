@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "The path-FAS problem is NP-complete, whereas the maximum-degree-1 FAS problem is polynomial-time solvable.",
+  "would_publish": true,
+  "caveats": "The proof uses the standard deletion definition of a feedback arc set; novelty against later source versions and follow-up literature has not been independently checked.",
+  "id": "2402.10782__01",
+  "model": "gpt-6-astra",
+  "usd": 0.949275,
+  "eur": 0.983254,
+  "elapsed_s": 1081.7,
+  "status": "completed",
+  "response_id": "resp_0c4ea12cc0fa76cb006aab0491c01487d292ebba6bc9c23cd7",
+  "when": "2026-09-16T21:23:23Z"
+}

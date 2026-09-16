@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain cch(K_{2,n}) = 4 - 8/sqrt(n) + O(1/n) and a sharp bound for bipartite planar graphs, but do not improve the general planar upper bound.",
+  "would_publish": false,
+  "caveats": "The general 6\u20138 gap is unchanged; novelty of the auxiliary results and current literature status have not been independently verified.",
+  "id": "circular_choosability_of_planar_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.67345,
+  "eur": 1.733351,
+  "elapsed_s": 1214.2,
+  "status": "completed",
+  "response_id": "resp_01ad27699a2c1d09006aab03ac31cc87d2a48bbf8ac085738b",
+  "when": "2026-09-16T21:21:45Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove an exact characterization for planar transposition graphs and determine t(8)=16, extending the verified exact values through k=8.",
+  "would_publish": false,
+  "caveats": "The general function remains undetermined here for k\u22659; novelty and subsequent literature status have not been checked.",
+  "id": "2309.04460__03",
+  "model": "gpt-6-astra",
+  "usd": 1.9108,
+  "eur": 1.979197,
+  "elapsed_s": 1558.0,
+  "status": "completed",
+  "response_id": "resp_0b61d546aebc2e0e006aab03919f3887d2a50aa88e921a3898",
+  "when": "2026-09-16T21:27:03Z"
+}
