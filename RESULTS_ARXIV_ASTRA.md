@@ -11,16 +11,16 @@ runs were not used.
 
 ## Counts
 
-Finished attacks with a verdict: **56**.
-Spend (promo ledger × prepaid FX): **€258.27** billed USD
-**$249.35** / budget €600
+Finished attacks with a verdict: **58**.
+Spend (promo ledger × prepaid FX): **€262.72** billed USD
+**$253.64** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
 | --- | ---: | ---: |
 | disproved | 6 | 1 |
 | already_resolved | 1 | 0 |
-| partial | 49 | 0 |
+| partial | 51 | 0 |
 
 ## Claimed proofs (0)
 
@@ -55,11 +55,6 @@ The sweep queue is the easiest-first open/partial arXiv ranking (692
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **2** (plus 0 skipped without a model call).
+Queue records not yet attacked: **0** (plus 0 skipped without a model call).
 
-| id | tier | score | paper |
-| --- | ---: | ---: | --- |
-| [`1907.12999__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1907.12999__00/) | 5 | 5.0 | Independence number in triangle-free graphs avoiding a minor |
-| [`2110.00278__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2110.00278__00/) | 5 | 5.0 | Polynomial bounds for chromatic number. IV. A near-polynomial bound for… |
-
-Generated 2026-09-16T20:43:02Z.
+Generated 2026-09-16T20:58:05Z.

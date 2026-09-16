@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The intended fair-splitting conjecture is covered by Alishahi\u2013Meunier's theorem, whereas the displayed integer-budget formulation is inequivalent and false.",
+  "would_publish": false,
+  "caveats": "Odd-sized parts require distinguishing half-integer deficits from their integer roundings; the affirmative result does not prove the literal wording.",
+  "id": "1611.03196__00",
+  "model": "gpt-6-astra",
+  "usd": 0.456815,
+  "eur": 0.473167,
+  "elapsed_s": 418.1,
+  "status": "completed",
+  "response_id": "resp_013f8640d2d6e432006aaafff8714487d2b4ae59b88243be14",
+  "when": "2026-09-16T20:52:40Z"
+}

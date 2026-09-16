@@ -11,29 +11,33 @@ runs were not used.
 
 ## Counts
 
-Finished attacks with a verdict: **0**.
-Spend (promo ledger × prepaid FX): **€258.27** billed USD
-**$249.35** / budget €600
+Finished attacks with a verdict: **3**.
+Spend (promo ledger × prepaid FX): **€262.72** billed USD
+**$253.64** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
 | --- | ---: | ---: |
-
+| disproved | 1 | 0 |
+| already_resolved | 1 | 0 |
+| partial | 1 | 0 |
 
 ## Claimed proofs (0)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
 
-## Claimed counterexamples (0)
+## Claimed counterexamples (1)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
+| [`2211.01032__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2211.01032__00/) · [artifact](attacks_retry/2211.01032__00/) | high | no | Under the source's normalized face count, p=1/(2n) gives a uniformly bounded expected number of faces, whereas ln(pn^2) tends to infinity. |
 
-## Already resolved (model says the literature already closed it) (0)
+## Already resolved (model says the literature already closed it) (1)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
+| [`1611.03196__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.03196__00/) · [artifact](attacks_retry/1611.03196__00/) | high | no | The intended fair-splitting conjecture is covered by Alishahi–Meunier's theorem, whereas the displayed integer-budget formulation is inequivalent and false. |
 
 ## Ill-posed / no determinate statement as supplied (0)
 
@@ -46,7 +50,7 @@ The sweep queue is the easiest-first open/partial arXiv ranking (702
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **702** (plus 0 skipped without a model call).
+Queue records not yet attacked: **699** (plus 0 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
@@ -55,8 +59,6 @@ Queue records not yet attacked: **702** (plus 0 skipped without a model call).
 | [`1811.08750__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1811.08750__00/) | 3 | 2.6 | Additive Approximation of Generalized Turán Questions |
 | [`2308.15721__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2308.15721__00/) | 3 | 2.65 | Clustered Colouring of Odd-$H$-Minor-Free Graphs |
 | [`2409.18220__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2409.18220__00/) | 3 | 2.65 | A Linear Lower Bound for the Square Energy of Graphs |
-| [`2211.01032__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2211.01032__00/) | 3 | 2.7 | Random Embeddings of Graphs: The Expected Number of Faces in Most Graph… |
-| [`1611.03196__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.03196__00/) | 3 | 2.85 | Fair representation by independent sets |
 | [`2004.07457__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2004.07457__01/) | 3 | 2.85 | Asymmetric list sizes in bipartite graphs |
 | [`2207.07775__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2207.07775__02/) | 3 | 2.85 | Ramsey multiplicity and the Turán coloring |
 | [`2503.16882__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2503.16882__00/) | 3 | 2.85 | Vertex Partitioning and $p$-Energy of Graphs |
@@ -64,7 +66,6 @@ Queue records not yet attacked: **702** (plus 0 skipped without a model call).
 | [`2009.03418__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2009.03418__00/) | 3 | 3.0 | On a conjecture by Anthony Hill |
 | [`1806.09726__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1806.09726__00/) | 3 | 3.1 | Online Ramsey Numbers and the Subgraph Query Problem |
 | [`1708.08486__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1708.08486__01/) | 3 | 3.4 | Popular progression differences in vector spaces II |
-| [`1710.10663__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1710.10663__00/) | 3 | 3.45 | List-decodable zero-rate codes |
 | [`1710.11281__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1710.11281__02/) | 4 | 3.5 | Notes on Cops and Robber game on graphs |
 | [`1708.02370__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1708.02370__00/) | 4 | 3.55 | Clustered Colouring in Minor-Closed Classes |
 | [`2308.15387__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2308.15387__02/) | 1 | 1.0 | The power of many colours |
@@ -753,4 +754,4 @@ Queue records not yet attacked: **702** (plus 0 skipped without a model call).
 | [`2210.09227__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.09227__00/) | 4 | 3.75 | A multidimensional Ramsey Theorem |
 | [`2404.02021__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2404.02021__02/) | 4 | 3.85 | On off-diagonal hypergraph Ramsey numbers |
 
-Generated 2026-09-16T20:43:02Z.
+Generated 2026-09-16T20:58:04Z.
