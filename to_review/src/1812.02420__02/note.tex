@@ -44,23 +44,22 @@
 \renewcommand{\headrulewidth}{0.2pt}
 
 \title{Deciding whether the fractional dichromatic number\\ of a digraph is at most $2$ is NP-complete}
-\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
 \date{9 September 2026}
 
 \begin{document}
 \maketitle
 
-\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
-\small
-The mathematics in this note was produced without human intervention, in three stages.
-(1)~The reduction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{1812.02420\_\_02}; original writeup in \texttt{attacks/1812.02420\_\_02/output.md}).
-(2)~An independent adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) re-derived every step, downloaded the source paper's \LaTeX{} source to confirm the problem statement, the LP definition and the digon convention, confirmed the external hardness result of Bokal et al., and verified the reduction by exact LP computation on $125$ instances (including the digon-free Paley tournament $ST_7$ and the bidirected $K_3$); its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
-(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, and three clarifications supplied by the referee's report were added as remarks (the empty instance, attainment of the LP optimum, and the fact that the source paper itself proves NP membership). No mathematical content was changed.
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
-\end{tcolorbox}
 
 \begin{abstract}
 The fractional dichromatic number $\fdc(D)$ of a digraph $D$ is the optimum of the linear programme covering the vertices by acyclic vertex sets. Hochstättler, Schröder and Steiner proved that deciding $\fdc(D)\le p$ is NP-complete for every real $p>1$ with $p\ne2$, and left the case $p=2$ open (Problem~3.21). We show that the case $p=2$ is NP-complete as well, for digraphs in which antiparallel arcs (digons) are allowed, as in the source paper. The reduction is from the NP-complete problem of deciding whether a digraph is $2$-dicolourable (Bokal, Fijavž, Juvan, Kayll and Mohar): take two disjoint copies of $D$ and join the two copies of each vertex by a digon. A fractional colouring of weight $2$ is then forced to use only acyclic sets containing exactly one copy of every vertex, and such a set is precisely an acyclic $2$-colouring of $D$.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
@@ -156,6 +155,15 @@ The referee verified \cref{prop:equiv} by brute force (enumeration of all acycli
 \begin{remark}[Novelty]
 The referee's literature search found no resolution of the $p=2$ case after \cite{HSS20}; the catalogue's own review (May 2026) found none either. The argument is short, which makes an unindexed prior appearance conceivable. This has not been checked by a human.
 \end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The reduction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{1812.02420\_\_02}; original writeup in \texttt{attacks/1812.02420\_\_02/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02) re-derived every step, downloaded the source paper's \LaTeX{} source to confirm the problem statement, the LP definition and the digon convention, confirmed the external hardness result of Bokal et al., and verified the reduction by exact LP computation on $125$ instances (including the digon-free Paley tournament $ST_7$ and the bidirected $K_3$); its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, and three clarifications supplied by the referee's report were added as remarks (the empty instance, attainment of the LP optimum, and the fact that the source paper itself proves NP membership). No mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+
 
 \appendix
 

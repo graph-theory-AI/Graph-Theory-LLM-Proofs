@@ -41,23 +41,22 @@
 \renewcommand{\headrulewidth}{0.2pt}
 
 \title{Linear-size deletion-saturated graphs for even cycles\\ from line graphs of cubic hypohamiltonian graphs}
-\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
 \date{9 September 2026}
 
 \begin{document}
 \maketitle
 
-\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
-\small
-The mathematics in this note was produced without human intervention, in three stages.
-(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2505.24100\_\_01}; original writeup in \texttt{attacks/2505.24100\_\_01/output.md}).
-(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the cited sources, and verified the construction by exhaustive computation on the line graphs of the Petersen graph and of the flower snarks $J_5$ and $J_7$, and the two small-case graphs of Observation~1.5 of the source paper; its verdict was \textsc{minor\_gaps}, the single defect being a citation slip for $t=3,4$. Its report is reproduced verbatim in \cref{app:referee}.
-(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}. Repairs, all taken from the referee's report and re-checked against the source paper \cite{FHHS25}: (i)~the small cases $t=3,4$ are now covered by Observation~1.5 of \cite{FHHS25} instead of Theorem~1.6, which is stated only for $t\ge5$ (\cref{prop:small}); (ii)~the parity of $m=2t-2$, used implicitly, is made explicit; (iii)~the concurrent paper of Choi \cite{Choi26}, which independently implies the yes/no answer to Question~1.8, is reported (\cref{sec:intro}, \cref{rem:choi}); (iv)~the referee's observation that the additive constant can be made small is recorded as a remark. The text was reorganised with full proofs in \cref{app:proofs}. No other mathematical content was changed.
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
-\end{tcolorbox}
 
 \begin{abstract}
 Fan, Hajebi, Hajebi and Spirkl proved that for every $t\ge5$ there is a graph with at least one edge that is $C_{2t-2}$-free but in which deleting any edge creates an induced $C_{2t-2}$; their construction has doubly exponential size in $t$, and they asked (Question~1.8) whether polynomial size is possible. We observe that the line graph of any simple cubic hypohamiltonian graph on $m$ vertices has exactly this property for $C_m$, with $3m/2$ vertices. Since cubic hypohamiltonian graphs exist for every even $m\ge26$ (Goedgebeur and Zamfirescu), this gives, for every $t\ge14$, such a graph on exactly $3t-3$ vertices; the finitely many smaller $t$ are covered by the source paper itself. Hence Question~1.8 has an affirmative answer with a linear polynomial. The construction handles edge deletion only, as the question asks, not edge addition.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
@@ -142,6 +141,15 @@ The referee verified \cref{lem:line} exhaustively on $30$ random graphs, and \cr
 \begin{remark}[Novelty]
 The referee found no earlier publication containing this construction; the source paper \cite{FHHS25} does not mention hypohamiltonian graphs. See \cref{rem:choi} for the concurrent result of Choi. None of this has been checked by a human.
 \end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2505.24100\_\_01}; original writeup in \texttt{attacks/2505.24100\_\_01/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the cited sources, and verified the construction by exhaustive computation on the line graphs of the Petersen graph and of the flower snarks $J_5$ and $J_7$, and the two small-case graphs of Observation~1.5 of the source paper; its verdict was \textsc{minor\_gaps}, the single defect being a citation slip for $t=3,4$. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}. Repairs, all taken from the referee's report and re-checked against the source paper \cite{FHHS25}: (i)~the small cases $t=3,4$ are now covered by Observation~1.5 of \cite{FHHS25} instead of Theorem~1.6, which is stated only for $t\ge5$ (\cref{prop:small}); (ii)~the parity of $m=2t-2$, used implicitly, is made explicit; (iii)~the concurrent paper of Choi \cite{Choi26}, which independently implies the yes/no answer to Question~1.8, is reported (\cref{sec:intro}, \cref{rem:choi}); (iv)~the referee's observation that the additive constant can be made small is recorded as a remark. The text was reorganised with full proofs in \cref{app:proofs}. No other mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+
 
 \appendix
 

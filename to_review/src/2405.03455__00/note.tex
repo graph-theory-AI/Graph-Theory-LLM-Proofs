@@ -42,20 +42,12 @@
 \renewcommand{\headrulewidth}{0.2pt}
 
 \title{Big line or big convex polygon:\\ the dependence on $\ell$ is uniformly linear}
-\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
 \date{9 September 2026}
 
 \begin{document}
 \maketitle
 
-\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
-\small
-The mathematics in this note was produced without human intervention, in three stages.
-(1)~The argument was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2405.03455\_\_00}; original writeup in \texttt{attacks/2405.03455\_\_00/output.md}).
-(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every identity and inequality by hand and re-checked them symbolically and numerically (all $n\le 20000$ and $n=10^5,10^6$ for the asymptotic step), fetched the TeX source of the source paper to confirm the two theorems used and the exact wording of the open problem, and read the only citing paper (Furukawa, arXiv:2501.03645), which proves a strictly weaker bound; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
-(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}; the constant $C_0'$ of the writeup is explained as the rescaling of $C_0$ by the base of the logarithm; and the referee's clarifications (the explicit handling of the ceiling, the edge cases $\ell=3$ and $k=n=3$, the numerical value of the constant, the comparison with Furukawa's bound) were added as remarks. No mathematical content was changed.
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
-\end{tcolorbox}
 
 \begin{abstract}
 Let $\ES_\ell(n)$ be the least $N$ such that every $N$-point set in the plane contains $\ell$ collinear points or $n$ points in convex position. Conlon, Fox, He, Mubayi, Suk and Verstraete proved $(3\ell-1)2^{n-5}<\ES_\ell(n)<\ell^2\,2^{n+C\sqrt{n\log n}}$ for all $\ell,n\ge3$ and asked for the correct dependence on $\ell$. We show that there is an absolute constant $C_1$ with
@@ -63,6 +55,13 @@ Let $\ES_\ell(n)$ be the least $N$ such that every $N$-point set in the plane co
  \ES_\ell(n)\le \ell\,2^{\,n+C_1\sqrt{n\log n}}\qquad(\ell,n\ge3),
 \]
 so that $\ES_\ell(n)/\ell$ lies between $2^n/12$ and $2^{n+C_1\sqrt{n\log n}}$ uniformly in both parameters: the dependence on $\ell$ is linear. The proof is a two-step bootstrap. An elementary alteration lemma extracts from any $N$-point set with fewer than $\ell$ collinear points a subset of size $\frac14(N/\ell)^{(k-2)/(k-1)}$ with no $k$ collinear points; applied with $k=n$ and combined with the diagonal case $\ES_n(n)$ of the known upper bound, the exponent loss $(n-1)/(n-2)$ costs only a factor absorbed by the subexponential term.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+
 \end{abstract}
 
 \section{Introduction}
@@ -139,6 +138,15 @@ The only paper citing \cite{CFHMSV} found by the referee is Furukawa \cite{Furuk
 \begin{remark}[Computational checks]
 The referee verified symbolically the binomial identity and the two algebraic identities in the proof of \cref{lem:alt} for $3\le k\le14$, the inequality $2^{-1-1/(k-1)}\ge\frac14$ for $k<1000$, the arithmetic of \cref{thm:transfer} on a grid of $(k,M,\ell)$, and the asymptotic step of \cref{thm:main} for all $3\le n\le20000$ and $n=10^5,10^6$; it also stress-tested \cref{lem:alt} on thirty concrete point sets (grids, unions of lines, clustered and random sets). Scripts are in \texttt{verification/scripts/2405.03455\_\_00/}.
 \end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The argument was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2405.03455\_\_00}; original writeup in \texttt{attacks/2405.03455\_\_00/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every identity and inequality by hand and re-checked them symbolically and numerically (all $n\le 20000$ and $n=10^5,10^6$ for the asymptotic step), fetched the TeX source of the source paper to confirm the two theorems used and the exact wording of the open problem, and read the only citing paper (Furukawa, arXiv:2501.03645), which proves a strictly weaker bound; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}; the constant $C_0'$ of the writeup is explained as the rescaling of $C_0$ by the base of the logarithm; and the referee's clarifications (the explicit handling of the ceiling, the edge cases $\ell=3$ and $k=n=3$, the numerical value of the constant, the comparison with Furukawa's bound) were added as remarks. No mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+
 
 \appendix
 

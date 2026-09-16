@@ -42,23 +42,24 @@
 \renewcommand{\headrulewidth}{0.2pt}
 
 \title{A non-transitive $6$-edge-coloured tournament on $9$ vertices\\ with a shorter longest colour-avoiding path than any transitive one:\\ an answer to Problem~5.1 of Fox, Sudakov and Wigderson}
-\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
 \date{9 September 2026}
 
 \begin{document}
 \maketitle
 
-\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
-\small
-The mathematics in this note was produced without human intervention, in three stages.
-(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2512.10438\_\_00}; original writeup in \texttt{attacks/2512.10438\_\_00/output.md}).
-(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, compared the problem statement and definitions verbatim with the source paper, re-encoded the tournament and brute-forced all its directed paths, and verified the transitive benchmark $f_{6,5}(9)=8$ exhaustively over all $6^8$ colourings of the consecutive edges; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
-(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, the colouring was tabulated edge by edge (the writeup left the ``remaining'' edges to colour~$1$ implicitly), and two clarifications taken from the referee's report were added and are marked as such (the count of $21$ eight-vertex paths, and why the unspecified edge colours are irrelevant). No mathematical content was changed.
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
-\end{tcolorbox}
 
 \begin{abstract}
 Fox, Sudakov and Wigderson study, for a $q$-edge-coloured tournament on $N$ vertices, the longest directed path whose edges miss at least one colour, and denote by $f_{q,q-1}(N)$ the minimum length (in vertices) of such a path over all $q$-edge-colourings of the transitive $N$-vertex tournament. Their Problem~5.1 asks whether, for some $q\ge4$ and $N$, a \emph{non-transitive} $q$-edge-coloured tournament on $N$ vertices can have a strictly shorter longest colour-avoiding path than $f_{q,q-1}(N)$. We answer this affirmatively with $(q,N)=(6,9)$: we show $f_{6,5}(9)=8$ and exhibit a $6$-edge-coloured tournament on $9$ vertices containing one directed triangle whose longest colour-avoiding path has $7$ vertices.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+A machine-checked Rocq/MathComp formalization of this result is available as
+\href{https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/digraph-theory/theories/applications/color_avoiding_tournament.v}{\texttt{problem\_5\_1\_q6\_n9}}.
+\Cref{sec:provenance} records the full provenance.
+
 \end{abstract}
 
 \section{Introduction}
@@ -171,6 +172,16 @@ The referee (\cref{app:referee}) re-encoded $T$ and found: $36$ edges, one per p
 \begin{remark}[Novelty]
 The referee's literature search (September 2026) found no follow-up to \cite{FSW25} resolving \cref{prob:51} for $q\ge4$ and no prior occurrence of this example. This has not been checked by a human.
 \end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2512.10438\_\_00}; original writeup in \texttt{attacks/2512.10438\_\_00/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, compared the problem statement and definitions verbatim with the source paper, re-encoded the tournament and brute-forced all its directed paths, and verified the transitive benchmark $f_{6,5}(9)=8$ exhaustively over all $6^8$ colourings of the consecutive edges; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, the colouring was tabulated edge by edge (the writeup left the ``remaining'' edges to colour~$1$ implicitly), and two clarifications taken from the referee's report were added and are marked as such (the count of $21$ eight-vertex paths, and why the unspecified edge colours are irrelevant). No mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+
+ (4)~Independently of this note, the result has been formalized in Rocq/MathComp in the companion repository \href{https://github.com/LLM4Rocq/graph-theory-rocq}{LLM4Rocq/graph-theory-rocq} as \href{https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/digraph-theory/theories/applications/color_avoiding_tournament.v}{\texttt{problem\_5\_1\_q6\_n9}}, checked against a source-verified formal statement with no added axioms. That check certifies the formal proposition, not its faithfulness to the source paper.
 
 \appendix
 

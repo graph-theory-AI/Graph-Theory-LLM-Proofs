@@ -44,23 +44,24 @@
 \renewcommand{\headrulewidth}{0.2pt}
 
 \title{Graphs with clique number four whose chromatic number\\ exceeds the cochromatic number by exactly three:\\ an affirmative answer to Problem~1.5 of Steiner}
-\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
 \date{9 September 2026}
 
 \begin{document}
 \maketitle
 
-\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
-\small
-The mathematics in this note was produced without human intervention, in three stages.
-(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2408.02400\_\_00}; original writeup in \texttt{attacks/2408.02400\_\_00/output.md}).
-(2)~An independent adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02/03) re-derived every step, checked Problem~1.5 and Theorem~1.4 verbatim against the source paper, verified all parameters of the $13$-vertex seed by exhaustive computation, tested the Mycielskian lemma on all $1099$ labelled graphs with at most $5$ vertices and on random larger graphs, and verified the $k=5$ instance ($27$ vertices) end-to-end by brute force; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
-(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised, with statements and proof ideas in the main text and full proofs in \cref{app:proofs}; the standard upper bound $\chi(\myc(H))\le\chi(H)+1$, which the writeup invoked as a ``standard identity'' without proof, is now spelled out; and context from the referee's report was added as remarks. No mathematical content was changed.
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
-\end{tcolorbox}
 
 \begin{abstract}
 The cochromatic number $\zeta(G)$ of a graph $G$ is the least number of parts in a partition of $V(G)$ into cliques and independent sets. Steiner (arXiv:2408.02400) disproved a 1988 conjecture of Erdős, Gimbel and Straight by exhibiting infinitely many graphs with $\omega(G)<5$, $\zeta(G)=4$ and $\chi(G)=7$, and asked (Problem~1.5) whether for every $k\ge5$ there is a graph $G_k$ with $\omega(G_k)<5$, $\zeta(G_k)=k$ and $\chi(G_k)=k+3$. We answer this affirmatively. The complement $G$ of the circulant graph $C_{13}(1,5)$ has $(\omega,\zeta,\chi)=(4,4,7)$ and admits an optimal cochromatic partition with an independent part; a lemma shows that the Mycielskian raises the cochromatic number by exactly one under this hypothesis and preserves the hypothesis, while it is classical that it raises the chromatic number by one and preserves the clique number. Hence the iterated Mycielskians $G_k=\myc^{k-4}(G)$, of order $14\cdot2^{k-4}-1$, satisfy $\omega(G_k)=4$, $\zeta(G_k)=k$ and $\chi(G_k)=k+3$ for every $k\ge4$.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+A machine-checked Rocq/MathComp formalization of this result is available as
+\href{https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/chromatic-theory/theories/applications/cochromatic_gap/cochromatic_gap.v}{\texttt{cochromatic\_gap\_three\_proved}}.
+\Cref{sec:provenance} records the full provenance.
+
 \end{abstract}
 
 \section{Introduction}
@@ -168,6 +169,16 @@ The referee (\cref{app:referee}) verified by exhaustive computation that $\omega
 \begin{remark}[Novelty]
 The referee's search found only two papers citing \cite{Steiner24}, both on the Erdős--Gimbel random-graph question, and no resolution of \cref{prob:15}; the catalog review of May 2026 found none either. This has not been checked by a human.
 \end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-08-31, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2408.02400\_\_00}; original writeup in \texttt{attacks/2408.02400\_\_00/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}, 2026-09-02/03) re-derived every step, checked Problem~1.5 and Theorem~1.4 verbatim against the source paper, verified all parameters of the $13$-vertex seed by exhaustive computation, tested the Mycielskian lemma on all $1099$ labelled graphs with at most $5$ vertices and on random larger graphs, and verified the $k=5$ instance ($27$ vertices) end-to-end by brute force; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised, with statements and proof ideas in the main text and full proofs in \cref{app:proofs}; the standard upper bound $\chi(\myc(H))\le\chi(H)+1$, which the writeup invoked as a ``standard identity'' without proof, is now spelled out; and context from the referee's report was added as remarks. No mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+
+ (4)~Independently of this note, the result has been formalized in Rocq/MathComp in the companion repository \href{https://github.com/LLM4Rocq/graph-theory-rocq}{LLM4Rocq/graph-theory-rocq} as \href{https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/chromatic-theory/theories/applications/cochromatic_gap/cochromatic_gap.v}{\texttt{cochromatic\_gap\_three\_proved}}, checked against a source-verified formal statement with no added axioms. That check certifies the formal proposition, not its faithfulness to the source paper.
 
 \appendix
 

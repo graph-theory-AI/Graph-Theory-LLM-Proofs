@@ -42,25 +42,25 @@
 \renewcommand{\headrulewidth}{0.2pt}
 
 \title{An infinite family of $3$-$\cl$-critical tournaments\\ and a negative answer to Question~5.9 of Aboulker, Aubian, Charbit and Lopes}
-\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note (see provenance box)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
 \date{10 September 2026}
 
 \begin{document}
 \maketitle
 
-\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt,title=Provenance,fonttitle=\bfseries]
-\small
-The mathematics in this note was produced without human intervention, in three stages.
-(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2310.04265\_\_09}; original writeup in \texttt{attacks/2310.04265\_\_09/output.md}).
-(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the source paper, and verified the claims by exhaustive search for $7$--$15$ vertices, by SAT solving up to $61$ vertices and structurally up to $121$ vertices; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
-(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, the exact value $\cl(T_n-v)=2$ (needed for the word ``critical'' in the source paper's sense, and noted as missing by the referee) was added, and context on related work was added. No other mathematical content was changed.
-On 2026-09-10, the related-work discussion was updated following a report from Samuel Coulomb. The mathematical proof and the original referee report were left unchanged.
-\textbf{No human mathematician has checked this argument.} We circulate this proof for human review, not as a claim to a new resolution. Its overlap with published work is described below.
-\end{tcolorbox}
 
 \begin{abstract}
 The clique number $\cl(T)$ of a tournament $T$, introduced by Aboulker, Aubian, Charbit and Lopes, is the minimum over all linear orderings of $V(T)$ of the clique number of the backedge graph. They asked (Question~5.9) whether there is a function $\ell$ such that every tournament $T$ with $\cl(T)\ge k$ contains a subtournament on at most $\ell(k)$ vertices with clique number at least $k$. We answer this negatively, already for $k=3$: for every $n\ge3$ the circulant tournament $T_n=\Cay(\Z_{2n+1},\{1,\dots,n-1,n+1\})$ satisfies $\cl(T_n)=3$ while every proper subtournament has clique number at most~$2$. The family $(T_n)_{n\ge3}$ also establishes the case $k=3$ of their Conjecture~5.10 on the existence of infinitely many $k$-$\cl$-critical tournaments.
 The same family and criticality result appear in Aubian and Coulomb \cite[6.1]{AC26}. We retain this note as a self-contained account of a machine-generated proof of that result.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+A machine-checked Rocq/MathComp formalization of this result is available as
+\href{https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/digraph-theory/theories/applications/question_5_9_resolution.v}{\texttt{question\_5\_9\_disproved}}.
+\Cref{sec:provenance} records the full provenance.
+
 \end{abstract}
 
 \section{Introduction}
@@ -134,6 +134,17 @@ Accordingly, this note should be read as a self-contained account of a machine-g
 
 The provenance recorded in this note dates the original generation to 1 September 2026, before the 7 September submission of Aubian and Coulomb's preprint. These dates document our workflow. They do not establish priority or independent discovery. The mathematical argument presented here still awaits human review.
 \end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2310.04265\_\_09}; original writeup in \texttt{attacks/2310.04265\_\_09/output.md}).
+(2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the source paper, and verified the claims by exhaustive search for $7$--$15$ vertices, by SAT solving up to $61$ vertices and structurally up to $121$ vertices; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, the exact value $\cl(T_n-v)=2$ (needed for the word ``critical'' in the source paper's sense, and noted as missing by the referee) was added, and context on related work was added. No other mathematical content was changed.
+On 2026-09-10, the related-work discussion was updated following a report from Samuel Coulomb. The mathematical proof and the original referee report were left unchanged.
+\textbf{No human mathematician has checked this argument.} We circulate this proof for human review, not as a claim to a new resolution. Its overlap with published work is described below.
+
+ (4)~Independently of this note, the result has been formalized in Rocq/MathComp in the companion repository \href{https://github.com/LLM4Rocq/graph-theory-rocq}{LLM4Rocq/graph-theory-rocq} as \href{https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/digraph-theory/theories/applications/question_5_9_resolution.v}{\texttt{question\_5\_9\_disproved}}, checked against a source-verified formal statement with no added axioms. That check certifies the formal proposition, not its faithfulness to the source paper.
 
 \appendix
 
