@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "domination_in_cubic_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Domination in cubic graphs",
+    "paper": "http://www.openproblemgarden.org/op/domination_in_cubic_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/domination_in_cubic_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Basic Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "domination_in_cubic_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/domination_in_cubic_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/domination_in_cubic_graphs",
+    "catalog_title": "Domination in cubic graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2009-08-19",
+    "authors": "Reed, Bruce A.",
+    "subject": "Graph Theory \u00bb Basic Graph Theory",
+    "statement_text": "Problem Does every 3-connected cubic graph $ G $ satisfy $ \\gamma(G) \\le \\lceil |G|/3 \\rceil $ ?",
+    "context_text": "If the girth of $ G $ is sufficiently large, then $ \\gamma(G)\\leq 0.2999|G| $ [KSV].",
+    "references_text": "- [KSV] Daniel Kral, Petr Skoda, Jan Volec: Domination number of cubic graphs with large girth"
+  },
+  "started": "2026-09-16T17:30:15Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

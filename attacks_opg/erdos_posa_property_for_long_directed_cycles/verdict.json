@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The directed grid theorem resolves the conjecture, via a packing\u2013transversal lemma for digraphs of bounded directed treewidth.",
+  "would_publish": false,
+  "caveats": "Uses the established directed grid theorem as a black box; no new or optimal quantitative bound is claimed.",
+  "id": "erdos_posa_property_for_long_directed_cycles",
+  "model": "gpt-6-astra",
+  "usd": 0.28132,
+  "eur": 0.29139,
+  "elapsed_s": 259.2,
+  "status": "completed",
+  "response_id": "resp_0a5b285177f83391006aaad34568d887d2b94d567fe35685a8",
+  "when": "2026-09-16T17:39:20Z"
+}

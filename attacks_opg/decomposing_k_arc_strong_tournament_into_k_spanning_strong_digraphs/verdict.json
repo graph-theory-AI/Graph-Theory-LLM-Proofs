@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every k-arc-strong tournament having a directed cut of size k with both sides non-singleton admits the required decomposition.",
+  "would_publish": false,
+  "caveats": "The singleton-minimum-cut case remains untreated; novelty of this sufficient condition has not been checked.",
+  "id": "decomposing_k_arc_strong_tournament_into_k_spanning_strong_digraphs",
+  "model": "gpt-6-astra",
+  "usd": 0.62582,
+  "eur": 0.648221,
+  "elapsed_s": 752.9,
+  "status": "completed",
+  "response_id": "resp_0f03155f6be5ba3f006aaad18ac34887d2b2dddec6b2be5022",
+  "when": "2026-09-16T17:40:11Z"
+}

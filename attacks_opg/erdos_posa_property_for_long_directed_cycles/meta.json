@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "erdos_posa_property_for_long_directed_cycles",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Erd\u0151s-Posa property for long directed cycles",
+    "paper": "http://www.openproblemgarden.org/op/erdos_posa_property_for_long_directed_cycles",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/erdos_posa_property_for_long_directed_cycles/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "erdos_posa_property_for_long_directed_cycles",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/erdos_posa_property_for_long_directed_cycles/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/erdos_posa_property_for_long_directed_cycles",
+    "catalog_title": "Erd\u0151s-Posa property for long directed cycles",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-06-25",
+    "authors": "Havet, Fr\u00e9d\u00e9ric, Maia, Ana Karolinna",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "Conjecture Let $ \\ell \\geq 2 $ be an integer. For every integer $ n\\geq 0 $ , there exists an integer $ t_n=t_n(\\ell) $ such that for every digraph $ D $ , either $ D $ has a $ n $ pairwise-disjoint directed cycles of length at least $ \\ell $ , or there exists a set $ T $ of at most $ t_n $ vertices such that $ D-T $ has no directed cycles of length at least $ \\ell $ .",
+    "context_text": "The case $ \\ell=2 $ has been proved by Reed et al. [RRST], hence solving a conjecture of Gallai [G] and Younger [Y]. The case $ \\ell=2 $ and $ n=2 $ has previously been solved by McCuaig [M], who proved that $ t_2(2)=3 $ . Havet and Maia [HM] proved the case $ \\ell=3 $ . The analogous statement for undirected graph has been proved by Birmel\u00e9, Bondy and Reed [BBR], hence generalizing Erd\u0151s-Posa [EP] result for $ \\ell =3 $ .",
+    "references_text": "- [BBR] E. Birmel\u00e9, J.A. Bondy, and B.A. Reed. The Erdos-Posa property for long circuits, Combinatorica, 27(2), 135\u2013145, 2007.\n- [EP] P. Erd\u0151s and L. P\u00f3sa. On the independent circuits contained in a graph. Canad. J. Math., 17, 347--352, 1965.\n- [G] T. Gallai. Problem 6, in Theory of Graphs, Proc. Colloq. Tihany 1966 (New York), Academic Press, p.362, 1968.\n- *[HM] F. Havet and A. K. Maia. On disjoint directed cycles with prescribed minimum lengths. INRIA Research Report, RR-8286, 2013.\n- [M] W. McCuaig, Intercyclic digraphs. Graph Structure Theory, (Neil Robertson and Paul Seymour, eds.), AMS Contemporary Math., 147:203--245, 1993.\n- [RRST] B. Reed, N. Robertson, P.D. Seymour, and R. Thomas. Packing directed circuits. Combinatorica, 16(4):535--554, 1996.\n- [Y] D. H. Younger. Graphs with interlinked directed circuits. Proceedings of the Midwest Symposium on Circuit Theory, 2:XVI 2.1 - XVI 2.7, 1973."
+  },
+  "started": "2026-09-16T17:35:01Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

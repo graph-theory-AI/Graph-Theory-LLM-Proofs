@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "every_prism_over_a_3_connected_planar_graph_is_hamiltonian",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Every prism over a 3-connected planar graph is hamiltonian.",
+    "paper": "http://www.openproblemgarden.org/op/every_prism_over_a_3_connected_planar_graph_is_hamiltonian",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/every_prism_over_a_3_connected_planar_graph_is_hamiltonian/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Cycles"
+  },
+  "dossier_meta": {
+    "id": "every_prism_over_a_3_connected_planar_graph_is_hamiltonian",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/every_prism_over_a_3_connected_planar_graph_is_hamiltonian/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/every_prism_over_a_3_connected_planar_graph_is_hamiltonian",
+    "catalog_title": "Every prism over a 3-connected planar graph is hamiltonian.",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-11",
+    "authors": "Kaiser, Tom\u00e1s, Kr\u00e1l, Daniel, Rosenfeld, Moshe, Ryj\u00e1cek, Zdenek, Voss, Heinz-J\u00fcrgen",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Cycles",
+    "statement_text": "Conjecture If $ G $ is a $ 3 $ -connected planar graph, then $ G\\square K_2 $ has a Hamilton cycle.",
+    "context_text": "The Cartesian product $ G\\square K_2 $ is called the prism over $ G $ . Rosenfeld and Barnette [RB] showed that the Four-Colour Theorem implies that cubic planar 3-connected graphs have hamiltonian prisms. Fleischner [F] found a proof avoiding the use of the Four Colour Theorem. Eventually, Paulraja [P] showed that planarity is inessential here : The prism over any 3-connected cubic graph has a Hamilton cycle. Clearly, if $ G $ is hamiltonian, then $ G\\square K_2 $ is also hamiltonian. A classical theorem of Tutte [T] states that all 4-connected planar graphs are hamiltonian. There are well-known examples of non-hamiltonian 3-connected planar graphs.",
+    "references_text": "- [F] H. Fleischner, The prism of a 2-connected, planar, cubic graph is hamiltonian (a proof independent of the four colour theorem), in Graph theory in memory of G. A. Dirac, Volume 41 of Ann. Discrete Math., 1989), 141\u2013170.\n- *[KKRRV] T. Kaiser, D. Kr\u00e1\u013e, M. Rosenfeld, Z. Ryj\u00e1\u010dek, H.-J. Voss, Hamilton cycles in prisms, Journal of graph theory 56 (2007), 249-269.\n- [P] P. Paulraja, \u201cA characterization of hamiltonian prisms\u201d, J. Graph Theory 17 (1993) 161\u2013171.\n- [RB] M. Rosenfeld and D. Barnette, Hamiltonian circuits in certain prisms, Discrete Math. 5 (1973) 389\u2013394.\n- [T] W. T. Tutte, A theorem on planar graphs, Trans. Amer. Math. Soc. 82 (1956) 99\u2013116."
+  },
+  "started": "2026-09-16T17:36:32Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

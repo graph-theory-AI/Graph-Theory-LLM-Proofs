@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The limit exists and is effectively approximable, with \u221a11/2 \u2264 W \u2264 \u221a(1+2 cos(\u03c0/9)), but its exact value is not obtained.",
+  "would_publish": false,
+  "caveats": "No exact evaluation or claim of novelty; the literature status of these partial results has not been verified.",
+  "id": "counting_3_colorings_of_the_hex_lattice",
+  "model": "gpt-6-astra",
+  "usd": 0.930955,
+  "eur": 0.964278,
+  "elapsed_s": 780.5,
+  "status": "completed",
+  "response_id": "resp_0207f13f7d9c8b68006aaad038997087d29bb3c97c68ba516d",
+  "when": "2026-09-16T17:35:00Z"
+}

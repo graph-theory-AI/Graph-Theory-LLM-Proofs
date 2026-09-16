@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "decomposing_the_prism_of_a_3_connected_cubic_planar_graphs_in_hamilton_cycles",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Hamilton decomposition of prisms over 3-connected cubic planar graphs",
+    "paper": "http://www.openproblemgarden.org/op/decomposing_the_prism_of_a_3_connected_cubic_planar_graphs_in_hamilton_cycles",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_the_prism_of_a_3_connected_cubic_planar_graphs_in_hamilton_cycles/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Cycles"
+  },
+  "dossier_meta": {
+    "id": "decomposing_the_prism_of_a_3_connected_cubic_planar_graphs_in_hamilton_cycles",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_the_prism_of_a_3_connected_cubic_planar_graphs_in_hamilton_cycles/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/decomposing_the_prism_of_a_3_connected_cubic_planar_graphs_in_hamilton_cycles",
+    "catalog_title": "Hamilton decomposition of prisms over 3-connected cubic planar graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-12",
+    "authors": "Alspach, Brian, Rosenfeld, Moshe",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Cycles",
+    "statement_text": "Conjecture Every prism over a $ 3 $ -connected cubic planar graph can be decomposed into two Hamilton cycles.",
+    "context_text": "The prism over a graph $ G $ is the Cartesian product $ G\\square K_2 $ . Rosenfeld and Barnette [RB] deduced from the Four-Colour Theorem that the prism over cubic planar 3-connected $ G $ has a Hamilton cycle $ C $ . The graph $ G\\setminus E(C) $ is cycle factor (spanning union of cycles). The conjecture says that one can choses $ C $ so that the cycle factor $ G\\setminus E(C) $ has a unique cycle, that is a Hamilton cycle.",
+    "references_text": "- *[AR] B. Alspach and M. Rosenfeld, On Hamilton decompositions of prisms over simple -polytopes. Graphs Combin. 2 (1986), 1--8.\n- [RB] M. Rosenfeld and D. Barnette, Hamiltonian circuits in certain prisms, Discrete Math. 5 (1973) 389\u2013394."
+  },
+  "started": "2026-09-16T17:28:13Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

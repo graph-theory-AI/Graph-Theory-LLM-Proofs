@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "Thomassen's conjecture is a published theorem, with the optimal-order connectivity bound f(k)=O(k^2).",
+  "would_publish": false,
+  "caveats": "The published upper-bound theorem is invoked, not reproved; no novelty is claimed.",
+  "id": "edge_disjoint_hamilton_cycles",
+  "model": "gpt-6-astra",
+  "usd": 0.26267,
+  "eur": 0.272072,
+  "elapsed_s": 244.7,
+  "status": "completed",
+  "response_id": "resp_0aa27215dd134f81006aaad31657e487d2b0a7a0005bb25759",
+  "when": "2026-09-16T17:38:18Z"
+}

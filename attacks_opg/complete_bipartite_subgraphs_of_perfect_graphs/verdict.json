@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the desired near-linear bound for clique-sums of substitution-composites of comparability, cocomparability, and basic perfect graphs, but not for arbitrary perfect graphs.",
+  "would_publish": false,
+  "caveats": "This is a specified structural subclass, not a resolution of the conjecture; novelty of the closure results is not claimed.",
+  "id": "complete_bipartite_subgraphs_of_perfect_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.756845,
+  "eur": 0.783936,
+  "elapsed_s": 718.5,
+  "status": "completed",
+  "response_id": "resp_08f4947f1540b528006aaacf06faa487d294763c003cf7059f",
+  "when": "2026-09-16T17:28:53Z"
+}

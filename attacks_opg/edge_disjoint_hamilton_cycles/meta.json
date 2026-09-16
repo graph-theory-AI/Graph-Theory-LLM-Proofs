@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "edge_disjoint_hamilton_cycles",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Edge-disjoint Hamilton cycles in highly strongly connected tournaments.",
+    "paper": "http://www.openproblemgarden.org/op/edge_disjoint_hamilton_cycles",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/edge_disjoint_hamilton_cycles/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Tournaments"
+  },
+  "dossier_meta": {
+    "id": "edge_disjoint_hamilton_cycles",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/edge_disjoint_hamilton_cycles/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/edge_disjoint_hamilton_cycles",
+    "catalog_title": "Edge-disjoint Hamilton cycles in highly strongly connected tournaments.",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-08",
+    "authors": "Thomassen, Carsten",
+    "subject": "Graph Theory \u00bb Directed Graphs \u00bb Tournaments",
+    "statement_text": "Conjecture For every $ k\\geq 2 $ , there is an integer $ f(k) $ so that every strongly $ f(k) $ -connected tournament has $ k $ edge-disjoint Hamilton cycles.",
+    "context_text": "Kelly made the following conjecture which replaces the assumption of high connectivity by regularity. Conjecture Every regular tournament of order $ n $ can be decomposed into $ (n-1)/2 $ Hamilton directed cycles. Kelly's conjecture has been proved for tournaments of sufficiently large order by K\u00fchn and Osthus [KO].",
+    "references_text": "- [KO] Daniela K\u00fchn and Deryk Osthus, Hamilton decompositions of regular expanders: a proof of Kelly's conjecture for large tournaments, Advances in Mathematics 237 (2013), 62-146.\n- *[T] C. Thomassen, Edge-disjoint Hamiltonian paths and cycles in tournaments, Proc. London Math. Soc. 45 (1982), 151-168."
+  },
+  "started": "2026-09-16T17:34:14Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

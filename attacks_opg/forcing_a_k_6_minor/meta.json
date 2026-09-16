@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "forcing_a_k_6_minor",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Forcing a $K_6$-minor",
+    "paper": "http://www.openproblemgarden.org/op/forcing_a_k_6_minor",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/forcing_a_k_6_minor/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Minors"
+  },
+  "dossier_meta": {
+    "id": "forcing_a_k_6_minor",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/forcing_a_k_6_minor/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/forcing_a_k_6_minor",
+    "catalog_title": "Forcing a $K_6$-minor",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2012-01-16",
+    "authors": "Bar\u00e1t ,J\u00e1nos, Joret, Gwena\u00ebl, Wood, David R.",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Minors",
+    "statement_text": "Conjecture Every graph with minimum degree at least 7 contains a $ K_6 $ -minor. Conjecture Every 7-connected graph contains a $ K_6 $ -minor.",
+    "context_text": "The first conjecture implies the second. Whether the second conjecture is true was first asked in [KT]. Both conjectures were stated in [BJW]. The second conjecture is implied by J\u00f8rgensen\u2019s conjecture , which asserts that every $ 6 $ -connected $ K_6 $ -minor-free graph is apex (which have minimum degree at most $ 6 $ and are thus not $ 7 $ -connected). Since J\u00f8rgensen\u2019s conjecture is true for sufficiently large graphs [KNTWa,KNTWb], the second conjecture is true for sufficiently large graphs.",
+    "references_text": "- *[BJW] J\u00e1nos Bar\u00e1t, Gwena\u00ebl Joret, David R. Wood. Disproof of the List Hadwiger Conjecture, Electronic J. Combinatorics 18:P232, 2011.\n- *[KT] Ken-ichi Kawarabayashi and Bjarne Toft. Any 7-chromatic graph has or as a minor. Combinatorica 25 (3), 327\u2013353, 2005.\n- [KNTWa] Ken-ichi Kawarabayashi, Serguei Norine, Robin Thomas, Paul Wollan. minors in -connected graphs of bounded tree-width. http://arxiv.org/abs/1203.2171\n- [KNTWb] Ken-ichi Kawarabayashi, Serguei Norine, Robin Thomas, Paul Wollan. minors in large -connected graphs. http://arxiv.org/abs/1203.2192"
+  },
+  "started": "2026-09-16T17:38:50Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

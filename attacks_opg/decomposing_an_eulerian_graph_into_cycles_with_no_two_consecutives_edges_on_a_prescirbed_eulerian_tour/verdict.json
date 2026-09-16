@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain a controlled-defect decomposition, reduce the conjecture to degrees 4 and 6, and prove a compatible-factorization theorem for regular bipartite graphs.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not settled; these self-contained partial results may be known, and no novelty or current-literature claim is made.",
+  "id": "decomposing_an_eulerian_graph_into_cycles_with_no_two_consecutives_edges_on_a_prescirbed_eulerian_tour",
+  "model": "gpt-6-astra",
+  "usd": 0.870005,
+  "eur": 0.901147,
+  "elapsed_s": 793.9,
+  "status": "completed",
+  "response_id": "resp_0aebbec98b70c3db006aaad11025b487d2b72e8aa7a6c45091",
+  "when": "2026-09-16T17:38:49Z"
+}

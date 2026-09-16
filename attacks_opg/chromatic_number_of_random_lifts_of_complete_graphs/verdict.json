@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A random h-lift of K_5 has chromatic number 3 asymptotically almost surely.",
+  "would_publish": true,
+  "caveats": "Novelty relative to the full cited literature has not been independently checked.",
+  "id": "chromatic_number_of_random_lifts_of_complete_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.155715,
+  "eur": 1.197084,
+  "elapsed_s": 1324.9,
+  "status": "completed",
+  "response_id": "resp_01b73ced83ef9f95006aaace64362887d29c536a91ff3c5827",
+  "when": "2026-09-16T17:36:16Z"
+}

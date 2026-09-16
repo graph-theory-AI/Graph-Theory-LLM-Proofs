@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "decomposing_k_arc_strong_tournament_into_k_spanning_strong_digraphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Decomposing k-arc-strong tournament into k spanning strong digraphs",
+    "paper": "http://www.openproblemgarden.org/op/decomposing_k_arc_strong_tournament_into_k_spanning_strong_digraphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_k_arc_strong_tournament_into_k_spanning_strong_digraphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Tournaments"
+  },
+  "dossier_meta": {
+    "id": "decomposing_k_arc_strong_tournament_into_k_spanning_strong_digraphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_k_arc_strong_tournament_into_k_spanning_strong_digraphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/decomposing_k_arc_strong_tournament_into_k_spanning_strong_digraphs",
+    "catalog_title": "Decomposing k-arc-strong tournament into k spanning strong digraphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-15",
+    "authors": "Bang-Jensen, Joergen, Yeo, Anders",
+    "subject": "Graph Theory \u00bb Directed Graphs \u00bb Tournaments",
+    "statement_text": "Conjecture Every k-arc-strong tournament decomposes into k spanning strong digraphs.",
+    "context_text": "Conjecture 8 implies Kelly's conjecture ( Every regular tournament of order $ n $ can be decomposed into $ (n-1)/2 $ Hamilton directed cycles. ) which has been proved for tournaments of sufficiently large order by K\u00fchn and Osthus [KO]. Bang-Jensen and Yeo [BY] gave several results supporting this conjecture. For example they proved it for $ k $ -arc-strong tournaments with minimum in- and out-degree at least $ 37k $ .",
+    "references_text": "- *[BY] J. Bang-Jensen, A. Yeo, Decomposing k-arc-strong tournaments into strong spanning subdigraphs, Combinatorica 24 (2004) 331\u2013349.\n- [KO] Daniela K\u00fchn and Deryk Osthus, Hamilton decompositions of regular expanders: a proof of Kelly's conjecture for large tournaments, Advances in Mathematics 237 (2013), 62-146."
+  },
+  "started": "2026-09-16T17:27:38Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

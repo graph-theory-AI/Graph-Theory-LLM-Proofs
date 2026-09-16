@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "double_critical_graph_conjecture",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Double-critical graph conjecture",
+    "paper": "http://www.openproblemgarden.org/op/double_critical_graph_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/double_critical_graph_conjecture/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "double_critical_graph_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/double_critical_graph_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/double_critical_graph_conjecture",
+    "catalog_title": "Double-critical graph conjecture",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2009-01-18",
+    "authors": "Erdos, Paul, Lovasz, Laszlo",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "A connected simple graph $ G $ is called double-critical, if removing any pair of adjacent vertexes lowers the chromatic number by two. Conjecture $ K_n $ is the only $ n $ -chromatic double-critical graph",
+    "context_text": "This conjecture is a special case of a more general problem by Erdos and Lovasz proposed in 1966. It has been independently proven for the case where $ \\chi(G) = 5 $ by Mozhan [3] and Stiebitz [4].",
+    "references_text": "- *[1] P. Erdos, Problem 2, in: Theory of Graphs (Proc. Colloq., Tihany, 1966), Academic Press, New York, 1968, p. 361.\n- [2] F. Chung, R. Graham, Erdos on graphs: His legacy of unsolved problems, A K Peters, Wellesley, Massachusetts, 1998.\n- [3] N. N. Mozhan, On double critical graphs with the chromatic number \ffive, Metody Diskretb. Anal. 46 (1987) 50-59.\n- [4] M. Stiebitz, is the only double-critical -chromatic graph, Discrete Math. 64 (1987) 91-93."
+  },
+  "started": "2026-09-16T17:32:10Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
