@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the self-contained bound min(2k,k+4) for the length of a directed path, establishing the conjecture for k\u22644.",
+  "would_publish": false,
+  "caveats": "The general case remains unresolved here; no novelty claim or independent verification of the supplied literature is made.",
+  "id": "directed_cycle_of_length_twice_the_minimum_outdegree",
+  "model": "gpt-6-astra",
+  "usd": 0.927805,
+  "eur": 0.961016,
+  "elapsed_s": 883.9,
+  "status": "completed",
+  "response_id": "resp_002a14cf6b211243006aaae441821087d28f5fa5cc6ca7dbde",
+  "when": "2026-09-16T19:02:13Z"
+}

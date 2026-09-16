@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "non_edges_vs_feedback_edge_sets_in_digraphs",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Non-edges vs. feedback edge sets in digraphs",
+    "paper": "http://www.openproblemgarden.org/op/non_edges_vs_feedback_edge_sets_in_digraphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/non_edges_vs_feedback_edge_sets_in_digraphs/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "non_edges_vs_feedback_edge_sets_in_digraphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/non_edges_vs_feedback_edge_sets_in_digraphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/non_edges_vs_feedback_edge_sets_in_digraphs",
+    "catalog_title": "Non-edges vs. feedback edge sets in digraphs",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2008-07-08",
+    "authors": "Chudnovsky, Maria, Seymour, Paul D., Sullivan, Blair",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "For any simple digraph $ G $ , we let $ \\gamma(G) $ be the number of unordered pairs of nonadjacent vertices (i.e. the number of non-edges), and $ \\beta(G) $ be the size of the smallest feedback edge set . Conjecture If $ G $ is a simple digraph without directed cycles of length $ \\le 3 $ , then $ \\beta(G) \\le \\frac{1}{2} \\gamma(G) $ .",
+    "context_text": "If $ G $ satisfies $ \\gamma(G) = 0 $ , then $ G $ is a tournament, and it is easy to check that $ G $ will have a directed cycle of length three unless it is acyclic, in which case $ \\beta(G) = 0 $ . So in this case, the conjecture holds. More generally, it is natural to suspect that a digraph with few non-edges and no directed triangles should be close to acyclic. Indeed, this conjecture asserts a precise relationship of this form. If true, the above conjecture is essentially tight for a number of examples. We noted above that it is tight for transitive tournaments. Here is another basic class: let $ G_k $ be the circulant digraph obtained by placing $ 3k+1 $ vertices in a circle, and adding an edge directed from $ u $ to $ v $ whenever $ v $ is distance $ \\le k $ from $ u $ in the clockwise order. Such examples may be nested to obtain new ones. Chudnovsky, Seymour, and Sullivan [CSS] utilized a clever double counting argument to prove that $ \\beta(G) \\le \\gamma(G) $ always holds. They also proved their conjecture in the case when $ V(G) $ is the union of two cliques, and when $ G $ is a circular interval digraph.",
+    "references_text": "- *[CSS] M. Chudnovsky, P.D. Seymour, and B. Sullivan, Cycles in dense digraphs."
+  },
+  "started": "2026-09-16T19:05:42Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

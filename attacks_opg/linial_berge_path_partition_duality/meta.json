@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "linial_berge_path_partition_duality",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Linial-Berge path partition duality",
+    "paper": "http://www.openproblemgarden.org/op/linial_berge_path_partition_duality",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/linial_berge_path_partition_duality/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Coloring"
+  },
+  "dossier_meta": {
+    "id": "linial_berge_path_partition_duality",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/linial_berge_path_partition_duality/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/linial_berge_path_partition_duality",
+    "catalog_title": "Linial-Berge path partition duality",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-03-27",
+    "authors": "Berge, Claude, Linial, Nathan",
+    "subject": "Graph Theory \u00bb Coloring",
+    "statement_text": "Conjecture The minimum $ k $ -norm of a path partition on a directed graph $ D $ is no more than the maximal size of an induced $ k $ -colorable subgraph.",
+    "context_text": "Definitions: Let $ D $ be a directed graph. A path partition of $ D $ is a set of vertex disjoint paths in it (some might be singletons), covering all vertices. Let $ k $ be a positive integer. The $ k $ norm of a path partition is the sum of $ \\min\\{|V(P)|,k\\} $ for all paths $ P $ in it. This conjecture is known for acyclic graphs and for $ k =1,2 $ .",
+    "references_text": ""
+  },
+  "started": "2026-09-16T18:59:42Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

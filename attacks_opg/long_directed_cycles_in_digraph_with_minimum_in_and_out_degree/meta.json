@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "long_directed_cycles_in_digraph_with_minimum_in_and_out_degree",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Long directed cycles in diregular digraphs",
+    "paper": "http://www.openproblemgarden.org/op/long_directed_cycles_in_digraph_with_minimum_in_and_out_degree",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/long_directed_cycles_in_digraph_with_minimum_in_and_out_degree/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "long_directed_cycles_in_digraph_with_minimum_in_and_out_degree",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/long_directed_cycles_in_digraph_with_minimum_in_and_out_degree/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/long_directed_cycles_in_digraph_with_minimum_in_and_out_degree",
+    "catalog_title": "Long directed cycles in diregular digraphs",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2013-03-01",
+    "authors": "Jackson, Bill",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "Conjecture Every strong oriented graph in which each vertex has indegree and outdegree at least $ d $ contains a directed cycle of length at least $ 2d+1 $ .",
+    "context_text": "The disjoint union of two regular tournaments on $ 2d+1 $ vertices shows that this would be best possible. If the oriented graph has order at most $ 4d+1 $ , Jackson conjecture the existence of a longer cycle, namely a Hamilton cycle",
+    "references_text": "- *[J] B. Jackson. Long paths and cycles in oriented graphs. J. Graph Theory 5 (1981), 145--157."
+  },
+  "started": "2026-09-16T19:01:14Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

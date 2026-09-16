@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove Gallai's bound, with additional endpoint control, for connected graphs whose blocks are cliques or cycles.",
+  "would_publish": false,
+  "caveats": "This does not settle arbitrary connected graphs; no novelty is claimed for the special case.",
+  "id": "decomposing_a_connected_graph_into_paths",
+  "model": "gpt-6-astra",
+  "usd": 0.96203,
+  "eur": 0.996466,
+  "elapsed_s": 951.7,
+  "status": "completed",
+  "response_id": "resp_0b6bf2eb6aa36e0b006aaae3e0ce2487d28f43a0f3236038c0",
+  "when": "2026-09-16T19:01:44Z"
+}

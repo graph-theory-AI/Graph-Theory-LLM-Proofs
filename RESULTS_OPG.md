@@ -11,17 +11,17 @@ runs were not used.
 
 ## Counts
 
-Finished attacks with a verdict: **164**.
-Spend (promo ledger × prepaid FX): **€147.56** billed USD
-**$142.46** / budget €600
+Finished attacks with a verdict: **184**.
+Spend (promo ledger × prepaid FX): **€165.66** billed USD
+**$159.94** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
 | --- | ---: | ---: |
 | proved | 6 | 5 |
 | disproved | 14 | 4 |
-| already_resolved | 25 | 0 |
-| partial | 119 | 1 |
+| already_resolved | 27 | 0 |
+| partial | 137 | 1 |
 
 ## Claimed proofs (6)
 
@@ -53,7 +53,7 @@ Spend (promo ledger × prepaid FX): **€147.56** billed USD
 | [`turan_number_of_a_finite_family`](https://graph-theory-ai.github.io/graph-conjectures/op/turan_number_of_a_finite_family/) · [artifact](attacks_opg/turan_number_of_a_finite_family/) | high | no | As written, the conjecture fails for the family {P3, 2K2}: its Turán number is 1, while both individual Turán numbers grow linearly. |
 | [`what_is_the_smallest_number_of_disjoint_spanning_trees_made_a_graph_hamiltonian`](https://graph-theory-ai.github.io/graph-conjectures/op/what_is_the_smallest_number_of_disjoint_spanning_trees_made_a_graph_hamiltonian/) · [artifact](attacks_opg/what_is_the_smallest_number_of_disjoint_spanning_trees_made_a_graph_hamiltonian/) | high | no | Under the stated deletion procedure, the requested minimum need not exist, even with metric weights and uniquely determined minimum trees. |
 
-## Already resolved (model says the literature already closed it) (25)
+## Already resolved (model says the literature already closed it) (27)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
@@ -73,7 +73,9 @@ Spend (promo ledger × prepaid FX): **€147.56** billed USD
 | [`forcing_a_2_regular_minor`](https://graph-theory-ai.github.io/graph-conjectures/op/forcing_a_2_regular_minor/) · [artifact](attacks_opg/forcing_a_2_regular_minor/) | high | no | The stated conjecture was proved by Csóka, Lo, Norin, Wu, and Yepremyan in their 2017 paper, The extremal function for disconnected minors. |
 | [`goldbergs_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/goldbergs_conjecture/) · [artifact](attacks_opg/goldbergs_conjecture/) | high | no | The stated inequality is the established Goldberg–Seymour theorem; the original OpenProblemGarden discussion is outdated. |
 | [`grunbaums_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/grunbaums_conjecture/) · [artifact](attacks_opg/grunbaums_conjecture/) | high | no | The full conjecture was disproved by Kochol (2009), using snarks with polyhedral embeddings in orientable surfaces. |
+| [`hedetniemis_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/hedetniemis_conjecture/) · [artifact](attacks_opg/hedetniemis_conjecture/) | high | no | Hedetniemi’s conjecture was disproved by Shitov in 2019; below is a self-contained, nonoptimized counterexample construction. |
 | [`highly_arc_transitive_two_ended_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/highly_arc_transitive_two_ended_digraphs/) · [artifact](attacks_opg/highly_arc_transitive_two_ended_digraphs/) | high | no | The conjecture is false: an explicit two-ended highly arc-transitive digraph has connected, noncomplete bipartite tiles. |
+| [`jaegers_modular_orientation_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/jaegers_modular_orientation_conjecture/) · [artifact](attacks_opg/jaegers_modular_orientation_conjecture/) | medium | no | The supplied catalog reports a prior disproof for every k≥3, and the circular-flow counterexamples apply to exactly the stated modular-orientation conjecture. |
 | [`laplacian_degrees_of_a_graph`](https://graph-theory-ai.github.io/graph-conjectures/op/laplacian_degrees_of_a_graph/) · [artifact](attacks_opg/laplacian_degrees_of_a_graph/) | high | no | The conjecture is true in full, as the supplied catalog reports, and a self-contained proof is given below. |
 | [`number_of_cliques_in_minor_closed_classes`](https://graph-theory-ai.github.io/graph-conjectures/op/number_of_cliques_in_minor_closed_classes/) · [artifact](attacks_opg/number_of_cliques_in_minor_closed_classes/) | high | no | The original question is settled affirmatively by the published Fox–Wei bound of 3^{2t/3+o(t)} n cliques. |
 | [`partitionning_a_tournament_into_k_strongly_connected_subtournaments`](https://graph-theory-ai.github.io/graph-conjectures/op/partitionning_a_tournament_into_k_strongly_connected_subtournaments/) · [artifact](attacks_opg/partitionning_a_tournament_into_k_strongly_connected_subtournaments/) | high | no | The established uniform partition theorem gives an affirmative answer, with g(k_1,...,k_p) <= C p max_i k_i for an absolute constant C. |
@@ -94,33 +96,13 @@ The sweep queue is the easiest-first open/partial arXiv ranking (227
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **63** (plus 0 skipped without a model call).
+Queue records not yet attacked: **43** (plus 0 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
-| [`cycle_double_covers_containing_predefined_2_regular_subgraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/cycle_double_covers_containing_predefined_2_regular_subgraphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/cycle_double_covers_containing_predefined_2_regular_subgraphs |
-| [`decomposing_a_connected_graph_into_paths`](https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_a_connected_graph_into_paths/) | 3 | 3.0 | http://www.openproblemgarden.org/op/decomposing_a_connected_graph_into_paths |
-| [`decomposing_an_even_tournament_in_directed_paths`](https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_an_even_tournament_in_directed_paths/) | 3 | 3.0 | http://www.openproblemgarden.org/op/decomposing_an_even_tournament_in_directed_paths |
-| [`decomposing_eulerian_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_eulerian_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/decomposing_eulerian_graphs |
-| [`degenerate_colorings_of_planar_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/degenerate_colorings_of_planar_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/degenerate_colorings_of_planar_graphs |
-| [`directed_cycle_of_length_twice_the_minimum_outdegree`](https://graph-theory-ai.github.io/graph-conjectures/op/directed_cycle_of_length_twice_the_minimum_outdegree/) | 3 | 3.0 | http://www.openproblemgarden.org/op/directed_cycle_of_length_twice_the_minimum_outdegree |
-| [`edge_list_coloring_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/edge_list_coloring_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/edge_list_coloring_conjecture |
-| [`edge_reconstruction_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/edge_reconstruction_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/edge_reconstruction_conjecture |
-| [`erdos_faber_lovasz_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/erdos_faber_lovasz_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/erdos_faber_lovasz_conjecture |
-| [`faithful_cycle_covers`](https://graph-theory-ai.github.io/graph-conjectures/op/faithful_cycle_covers/) | 3 | 3.0 | http://www.openproblemgarden.org/op/faithful_cycle_covers |
-| [`graceful_tree_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/graceful_tree_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/graceful_tree_conjecture |
-| [`graphs_with_a_forbidden_induced_tree_are_chi_bounded`](https://graph-theory-ai.github.io/graph-conjectures/op/graphs_with_a_forbidden_induced_tree_are_chi_bounded/) | 3 | 3.0 | http://www.openproblemgarden.org/op/graphs_with_a_forbidden_induced_tree_are_chi_bounded |
-| [`hamiltonian_cycles_in_line_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonian_cycles_in_line_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/hamiltonian_cycles_in_line_graphs |
-| [`hamiltonian_paths_and_cycles_in_vertex_transitive_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonian_paths_and_cycles_in_vertex_transitive_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/hamiltonian_paths_and_cycles_in_vertex_transitive_graphs |
-| [`hedetniemis_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/hedetniemis_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/hedetniemis_conjecture |
-| [`high_connectivity_no_k_n`](https://graph-theory-ai.github.io/graph-conjectures/op/high_connectivity_no_k_n/) | 3 | 3.0 | http://www.openproblemgarden.org/op/high_connectivity_no_k_n |
-| [`hoand_reed_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/hoand_reed_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/hoand_reed_conjecture |
-| [`jaegers_modular_orientation_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/jaegers_modular_orientation_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/jaegers_modular_orientation_conjecture |
-| [`jorgensens_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/jorgensens_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/jorgensens_conjecture |
 | [`linial_berge_path_partition_duality`](https://graph-theory-ai.github.io/graph-conjectures/op/linial_berge_path_partition_duality/) | 3 | 3.0 | http://www.openproblemgarden.org/op/linial_berge_path_partition_duality |
 | [`long_directed_cycles_in_digraph_with_minimum_in_and_out_degree`](https://graph-theory-ai.github.io/graph-conjectures/op/long_directed_cycles_in_digraph_with_minimum_in_and_out_degree/) | 3 | 3.0 | http://www.openproblemgarden.org/op/long_directed_cycles_in_digraph_with_minimum_in_and_out_degree |
 | [`m_n_cycle_covers`](https://graph-theory-ai.github.io/graph-conjectures/op/m_n_cycle_covers/) | 3 | 3.0 | http://www.openproblemgarden.org/op/m_n_cycle_covers |
-| [`mapping_planar_graphs_to_odd_cycles`](https://graph-theory-ai.github.io/graph-conjectures/op/mapping_planar_graphs_to_odd_cycles/) | 3 | 3.0 | http://www.openproblemgarden.org/op/mapping_planar_graphs_to_odd_cycles |
 | [`monochromatic_reachability_vs_rainbow_triangles`](https://graph-theory-ai.github.io/graph-conjectures/op/monochromatic_reachability_vs_rainbow_triangles/) | 3 | 3.0 | http://www.openproblemgarden.org/op/monochromatic_reachability_vs_rainbow_triangles |
 | [`monochromatoc_reachability_in_arc_colored_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/monochromatoc_reachability_in_arc_colored_digraphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/monochromatoc_reachability_in_arc_colored_digraphs |
 | [`multicolour_erdos_hajnal_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/multicolour_erdos_hajnal_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/multicolour_erdos_hajnal_conjecture |
@@ -162,4 +144,4 @@ Queue records not yet attacked: **63** (plus 0 skipped without a model call).
 | [`reconstruction_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/reconstruction_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/reconstruction_conjecture |
 | [`the_berge_fulkerson_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/the_berge_fulkerson_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/the_berge_fulkerson_conjecture |
 
-Generated 2026-09-16T18:57:42Z.
+Generated 2026-09-16T19:12:45Z.

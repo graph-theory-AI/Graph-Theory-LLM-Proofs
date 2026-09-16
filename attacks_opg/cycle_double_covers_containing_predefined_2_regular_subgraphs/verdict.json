@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for graphs assembled from 3-edge-colourable cubic graphs and Petersen graphs by 2- and 3-edge sums, and its fractional relaxation holds for every bridgeless cubic graph.",
+  "would_publish": false,
+  "caveats": "No novelty is claimed; the general integral case remains unresolved, and the fractional result uses the standard perfect-matching polytope theorem.",
+  "id": "cycle_double_covers_containing_predefined_2_regular_subgraphs",
+  "model": "gpt-6-astra",
+  "usd": 0.781855,
+  "eur": 0.809841,
+  "elapsed_s": 862.7,
+  "status": "completed",
+  "response_id": "resp_0cf529f7fcc34f59006aaae3bdd46c87d2a42785f7ec37baa2",
+  "when": "2026-09-16T18:59:40Z"
+}

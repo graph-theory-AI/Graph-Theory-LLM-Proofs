@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "hoand_reed_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Ho\u00e0ng-Reed Conjecture",
+    "paper": "http://www.openproblemgarden.org/op/hoand_reed_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/hoand_reed_conjecture/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "hoand_reed_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/hoand_reed_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/hoand_reed_conjecture",
+    "catalog_title": "Ho\u00e0ng-Reed Conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2013-03-11",
+    "authors": "Hoang, Chinh T., Reed, Bruce A.",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "Conjecture Every digraph in which each vertex has outdegree at least $ k $ contains $ k $ directed cycles $ C_1, \\ldots, C_k $ such that $ C_j $ meets $ \\cup_{i=1}^{j-1}C_i $ in at most one vertex, $ 2 \\leq j \\leq k $ .",
+    "context_text": "This conjecture is not even known to be true for $ k=3 $ . In the case $ k=2 $ , Thomassen proved [T] that every digraph with minimum outdegree 2 has two directed cycles intersecting on a vertex. This conjecture would imply the Caccetta-H\u00e4ggkvist Conjecture .",
+    "references_text": "- *[HR] C.T. Ho\u00e0ng and B. Reed, A note on short cycles in digraphs, Discrete Math., 66 (1987), 103-107.\n- [T] C. Thomassen, The 2-linkage problem for acyclic digraphs, Discrete Math., 55 (1985), 73-87."
+  },
+  "started": "2026-09-16T18:58:07Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

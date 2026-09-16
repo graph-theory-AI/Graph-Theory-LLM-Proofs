@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds when the vertices belonging to at least three constituent cliques induce a bipartite graph.",
+  "would_publish": false,
+  "caveats": "Structural special case only; novelty has not been established.",
+  "id": "erdos_faber_lovasz_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.01825,
+  "eur": 1.054698,
+  "elapsed_s": 769.0,
+  "status": "completed",
+  "response_id": "resp_00287cca77c41d6c006aaae47f048c87d28bf874642b452f17",
+  "when": "2026-09-16T19:01:19Z"
+}

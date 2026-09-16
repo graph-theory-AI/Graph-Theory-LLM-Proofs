@@ -12,8 +12,8 @@ runs were not used.
 ## Counts
 
 Finished attacks with a verdict: **0**.
-Spend (promo ledger × prepaid FX): **€147.56** billed USD
-**$142.46** / budget €600
+Spend (promo ledger × prepaid FX): **€165.66** billed USD
+**$159.94** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
@@ -42,11 +42,11 @@ Spend (promo ledger × prepaid FX): **€147.56** billed USD
 
 ## Coverage
 
-The sweep queue is the easiest-first open/partial arXiv ranking (644
+The sweep queue is the easiest-first open/partial arXiv ranking (662
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **644** (plus 0 skipped without a model call).
+Queue records not yet attacked: **662** (plus 0 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
@@ -448,7 +448,25 @@ Queue records not yet attacked: **644** (plus 0 skipped without a model call).
 | [`coloring_and_immersion`](https://graph-theory-ai.github.io/graph-conjectures/op/coloring_and_immersion/) | 3 | 3.0 | http://www.openproblemgarden.org/op/coloring_and_immersion |
 | [`consecutive_non_orientable_embedding_obstructions`](https://graph-theory-ai.github.io/graph-conjectures/op/consecutive_non_orientable_embedding_obstructions/) | 3 | 3.0 | http://www.openproblemgarden.org/op/consecutive_non_orientable_embedding_obstructions |
 | [`crossing_numbers_and_coloring`](https://graph-theory-ai.github.io/graph-conjectures/op/crossing_numbers_and_coloring/) | 3 | 3.0 | http://www.openproblemgarden.org/op/crossing_numbers_and_coloring |
+| [`cycle_double_covers_containing_predefined_2_regular_subgraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/cycle_double_covers_containing_predefined_2_regular_subgraphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/cycle_double_covers_containing_predefined_2_regular_subgraphs |
+| [`decomposing_a_connected_graph_into_paths`](https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_a_connected_graph_into_paths/) | 3 | 3.0 | http://www.openproblemgarden.org/op/decomposing_a_connected_graph_into_paths |
+| [`decomposing_an_even_tournament_in_directed_paths`](https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_an_even_tournament_in_directed_paths/) | 3 | 3.0 | http://www.openproblemgarden.org/op/decomposing_an_even_tournament_in_directed_paths |
+| [`decomposing_eulerian_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_eulerian_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/decomposing_eulerian_graphs |
+| [`degenerate_colorings_of_planar_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/degenerate_colorings_of_planar_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/degenerate_colorings_of_planar_graphs |
+| [`directed_cycle_of_length_twice_the_minimum_outdegree`](https://graph-theory-ai.github.io/graph-conjectures/op/directed_cycle_of_length_twice_the_minimum_outdegree/) | 3 | 3.0 | http://www.openproblemgarden.org/op/directed_cycle_of_length_twice_the_minimum_outdegree |
+| [`edge_list_coloring_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/edge_list_coloring_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/edge_list_coloring_conjecture |
+| [`edge_reconstruction_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/edge_reconstruction_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/edge_reconstruction_conjecture |
+| [`erdos_faber_lovasz_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/erdos_faber_lovasz_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/erdos_faber_lovasz_conjecture |
+| [`faithful_cycle_covers`](https://graph-theory-ai.github.io/graph-conjectures/op/faithful_cycle_covers/) | 3 | 3.0 | http://www.openproblemgarden.org/op/faithful_cycle_covers |
+| [`graceful_tree_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/graceful_tree_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/graceful_tree_conjecture |
+| [`graphs_with_a_forbidden_induced_tree_are_chi_bounded`](https://graph-theory-ai.github.io/graph-conjectures/op/graphs_with_a_forbidden_induced_tree_are_chi_bounded/) | 3 | 3.0 | http://www.openproblemgarden.org/op/graphs_with_a_forbidden_induced_tree_are_chi_bounded |
+| [`hamiltonian_cycles_in_line_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonian_cycles_in_line_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/hamiltonian_cycles_in_line_graphs |
+| [`hamiltonian_paths_and_cycles_in_vertex_transitive_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonian_paths_and_cycles_in_vertex_transitive_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/hamiltonian_paths_and_cycles_in_vertex_transitive_graphs |
 | [`hamiltonicity_of_cayley_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonicity_of_cayley_graphs/) | 3 | 3.0 | http://www.openproblemgarden.org/op/hamiltonicity_of_cayley_graphs |
+| [`high_connectivity_no_k_n`](https://graph-theory-ai.github.io/graph-conjectures/op/high_connectivity_no_k_n/) | 3 | 3.0 | http://www.openproblemgarden.org/op/high_connectivity_no_k_n |
+| [`hoand_reed_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/hoand_reed_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/hoand_reed_conjecture |
+| [`jorgensens_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/jorgensens_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/jorgensens_conjecture |
+| [`mapping_planar_graphs_to_odd_cycles`](https://graph-theory-ai.github.io/graph-conjectures/op/mapping_planar_graphs_to_odd_cycles/) | 3 | 3.0 | http://www.openproblemgarden.org/op/mapping_planar_graphs_to_odd_cycles |
 | [`monochromatic_vertex_colorings_inherited_from_perfect_matchings`](https://graph-theory-ai.github.io/graph-conjectures/op/monochromatic_vertex_colorings_inherited_from_perfect_matchings/) | 3 | 3.0 | http://www.openproblemgarden.org/op/monochromatic_vertex_colorings_inherited_from_perfect_matchings |
 | [`seymours_second_neighbourhood_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/seymours_second_neighbourhood_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/seymours_second_neighbourhood_conjecture |
 | [`strong_5_cycle_double_cover_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/strong_5_cycle_double_cover_conjecture/) | 3 | 3.0 | http://www.openproblemgarden.org/op/strong_5_cycle_double_cover_conjecture |
@@ -695,4 +713,4 @@ Queue records not yet attacked: **644** (plus 0 skipped without a model call).
 | [`2210.09227__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.09227__00/) | 4 | 3.75 | A multidimensional Ramsey Theorem |
 | [`2404.02021__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2404.02021__02/) | 4 | 3.85 | On off-diagonal hypergraph Ramsey numbers |
 
-Generated 2026-09-16T18:57:42Z.
+Generated 2026-09-16T19:12:45Z.

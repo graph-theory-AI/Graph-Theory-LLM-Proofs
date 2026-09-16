@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for finite vertex-transitive digraphs in a stronger rooted form, and a reciprocal-edge criterion gives another unconditional special case.",
+  "would_publish": false,
+  "caveats": "No general resolution or novelty claim; the catalog's conflicting claims about the k=3 literature were not independently verified.",
+  "id": "hoand_reed_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.972225,
+  "eur": 1.007026,
+  "elapsed_s": 788.3,
+  "status": "completed",
+  "response_id": "resp_06147fbe6ee0e03a006aaae6bf6dc487d28202b24c268b1153",
+  "when": "2026-09-16T19:11:15Z"
+}

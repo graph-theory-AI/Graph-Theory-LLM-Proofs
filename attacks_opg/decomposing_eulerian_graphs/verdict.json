@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for every graph 3H+2J with H connected Eulerian and J arbitrary, as a consequence of a constructive parity criterion.",
+  "would_publish": false,
+  "caveats": "Special case only; no improvement of the general connectivity bound, and novelty has not been checked.",
+  "id": "decomposing_eulerian_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.039255,
+  "eur": 1.076455,
+  "elapsed_s": 869.6,
+  "status": "completed",
+  "response_id": "resp_09f3e0b46452bd8e006aaae4153f6087d2bd9046dd6c239b69",
+  "when": "2026-09-16T19:01:14Z"
+}

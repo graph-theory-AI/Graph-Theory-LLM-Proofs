@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "monochromatic_reachability_vs_rainbow_triangles",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Monochromatic reachability or rainbow triangles",
+    "paper": "http://www.openproblemgarden.org/op/monochromatic_reachability_vs_rainbow_triangles",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/monochromatic_reachability_vs_rainbow_triangles/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Tournaments"
+  },
+  "dossier_meta": {
+    "id": "monochromatic_reachability_vs_rainbow_triangles",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/monochromatic_reachability_vs_rainbow_triangles/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/monochromatic_reachability_vs_rainbow_triangles",
+    "catalog_title": "Monochromatic reachability or rainbow triangles",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2008-07-15",
+    "authors": "Sands, Bill, Sauer, Norbert W., Woodrow, Robert E.",
+    "subject": "Graph Theory \u00bb Directed Graphs \u00bb Tournaments",
+    "statement_text": "In an edge-colored digraph, we say that a subgraph is rainbow if all its edges have distinct colors, and monochromatic if all its edges have the same color. Problem Let $ G $ be a tournament with edges colored from a set of three colors. Is it true that $ G $ must have either a rainbow directed cycle of length three or a vertex $ v $ so that every other vertex can be reached from $ v $ by a monochromatic (directed) path?",
+    "context_text": "This problem was raised in a paper by Sands, Sauer, and Woodrow [SSW] where they prove that every tournament with 2-colored edges has a vertex $ v $ so that every other vertex can be reached from $ v $ by a monochromatic path. Galeana-Sanchez and Rojas-Monroy found a tournament on 6 vertices with 4-colored edges which has no rainbow triangle and does not have a vertex $ v $ which has monochromatic paths to all remaining vertices. However, the following generalization of the above conjecture looks plausible. Problem Does every edge-colored tournament have either a rainbow directed cycle or a vertex $ v $ so that every other vertex can be reached from $ v $ by a monochromatic path?",
+    "references_text": "- *[SSW] B. Sands, N. Sauer, R. Woodrow, On monochromatic paths in edge-coloured digraphs. J. Combin. Theory Ser. B 33 (1982), no. 3, 271--275. MathSciNet."
+  },
+  "started": "2026-09-16T19:01:44Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

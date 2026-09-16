@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A parity-counting argument gives rigorous density, symmetry, and local-completion criteria for edge reconstruction, but does not resolve the general conjecture.",
+  "would_publish": false,
+  "caveats": "No general proof or counterexample is obtained, and no novelty is claimed for these partial results.",
+  "id": "edge_reconstruction_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.722115,
+  "eur": 0.747963,
+  "elapsed_s": 596.9,
+  "status": "completed",
+  "response_id": "resp_066439ff80ba8ac8006aaae47cbcf487d2b40ab71951d65604",
+  "when": "2026-09-16T18:58:25Z"
+}

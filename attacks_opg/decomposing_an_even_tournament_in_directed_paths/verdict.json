@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A constructive two-vertex reduction proves the conjecture when deleting one vertex makes the tournament transitive, and a dominant-cut criterion gives another family.",
+  "would_publish": false,
+  "caveats": "No unrestricted proof or counterexample; novelty of these elementary special cases is not claimed.",
+  "id": "decomposing_an_even_tournament_in_directed_paths",
+  "model": "gpt-6-astra",
+  "usd": 0.757455,
+  "eur": 0.784568,
+  "elapsed_s": 686.1,
+  "status": "completed",
+  "response_id": "resp_04db0428bb8174d5006aaae411037087d2b1f9733b3401430f",
+  "when": "2026-09-16T18:58:06Z"
+}

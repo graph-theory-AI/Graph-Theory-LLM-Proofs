@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "petersen_coloring_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Petersen coloring conjecture",
+    "paper": "http://www.openproblemgarden.org/op/petersen_coloring_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/petersen_coloring_conjecture/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Edge coloring"
+  },
+  "dossier_meta": {
+    "id": "petersen_coloring_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/petersen_coloring_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/petersen_coloring_conjecture",
+    "catalog_title": "Petersen coloring conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-03-07",
+    "authors": "Jaeger, Francois",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Edge coloring",
+    "statement_text": "Conjecture Let $ G $ be a cubic graph with no bridge . Then there is a coloring of the edges of $ G $ using the edges of the Petersen graph so that any three mutually adjacent edges of $ G $ map to three mutually adjancent edges in the Petersen graph.",
+    "context_text": "This extrordainary conjecture asserts that in a very strong sense, every bridgeless cubic graph has all of the cycle-space properties posessed by the Petersen graph. If true, this conjecture would imply both The Berge-Fulkerson conjecture and The five cycle double cover conjecture . If $ G $ is a graph and $ C \\subseteq E(G) $ we say that $ C $ is a binary cycle if every vertex in the graph $ (V(G),C) $ has even degree. If $ H $ is a graph and $ f : E(G) \\rightarrow E(H) $ is a map, we say that $ f $ is cycle-continuous if the pre-image of every binary cycle is a binary cycle. The following conjecture is an equivalent reformulation of the Petersen coloring conjecture. Conjecture (Petersen coloring conjecture (2)) Every bridgeless graph has a cycle-continuous mapping to the Petersen graph.",
+    "references_text": ""
+  },
+  "started": "2026-09-16T19:11:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "Hedetniemi\u2019s conjecture was disproved by Shitov in 2019; below is a self-contained, nonoptimized counterexample construction.",
+  "would_publish": false,
+  "caveats": "This is not a new resolution, and no claim is made about the smallest possible colour threshold.",
+  "id": "hedetniemis_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.71593,
+  "eur": 0.741557,
+  "elapsed_s": 520.4,
+  "status": "completed",
+  "response_id": "resp_0228b93d26bcfa19006aaae67d928487d2b544c2770686b16c",
+  "when": "2026-09-16T19:05:41Z"
+}
