@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "circular_flow_number_of_regular_class_1_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Circular flow number of regular class 1 graphs",
+    "paper": "http://www.openproblemgarden.org/op/circular_flow_number_of_regular_class_1_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/circular_flow_number_of_regular_class_1_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Nowhere-zero flows"
+  },
+  "dossier_meta": {
+    "id": "circular_flow_number_of_regular_class_1_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/circular_flow_number_of_regular_class_1_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/circular_flow_number_of_regular_class_1_graphs",
+    "catalog_title": "Circular flow number of regular class 1 graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2015-08-05",
+    "authors": "Steffen, Eckhard",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Nowhere-zero flows",
+    "statement_text": "A nowhere-zero $ r $ -flow $ (D(G),\\phi) $ on $ G $ is an orientation $ D $ of $ G $ together with a function $ \\phi $ from the edge set of $ G $ into the real numbers such that $ 1 \\leq |\\phi(e)| \\leq r-1 $ , for all $ e \\in E(G) $ , and $ \\sum_{e \\in E^+(v)}\\phi(e) = \\sum_{e \\in E^-(v)}\\phi(e), \\textrm{ for all } v \\in V(G) $ . The circular flow number of $ G $ is inf $ \\{ r | G $ has a nowhere-zero $ r $ -flow $ \\} $ , and it is denoted by $ F_c(G) $ . A graph with maximum vertex degree $ k $ is a class 1 graph if its edge chromatic number is $ k $ . Conjecture Let $ t \\geq 1 $ be an integer and $ G $ a $ (2t+1) $ -regular graph. If $ G $ is a class 1 graph, then $ F_c(G) \\leq 2 + \\frac{2}{t} $ .",
+    "context_text": "The conjecture is true for $ t=1 $ , i.e. for cubic graphs. It says, that the circular flow number of $ (2t+1) $ -regular class 1 graphs is bounded by the circular flow number of the complete graph on $ 2t+2 $ vertices.",
+    "references_text": "- [ES_2001] E. Steffen, Circular flow numbers of regular multigraphs, J. Graph Theory 36, 24 \u2013 34 (2001)\n- *[ES_2015] E. Steffen, Edge-colorings and circular flow numbers on regular graphs, J. Graph Theory 79, 1\u20137, 2015"
+  },
+  "started": "2026-09-16T17:14:46Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

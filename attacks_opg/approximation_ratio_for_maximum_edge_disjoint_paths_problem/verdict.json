@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A deterministic O(sqrt(h+1))-approximation is obtainable when a feedback vertex set of size h is supplied, but this does not improve the worst-case planar bound.",
+  "would_publish": false,
+  "caveats": "Requires a supplied feedback vertex set; novelty is not claimed; no new hardness result is established.",
+  "id": "approximation_ratio_for_maximum_edge_disjoint_paths_problem",
+  "model": "gpt-6-astra",
+  "usd": 0.83075,
+  "eur": 0.860487,
+  "elapsed_s": 799.1,
+  "status": "completed",
+  "response_id": "resp_01badd809abe08ff006aaacc05f7b487d2b710f2706b6e594c",
+  "when": "2026-09-16T17:17:24Z"
+}

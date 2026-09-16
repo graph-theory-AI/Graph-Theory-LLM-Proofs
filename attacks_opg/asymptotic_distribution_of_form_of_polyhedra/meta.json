@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "asymptotic_distribution_of_form_of_polyhedra",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Asymptotic Distribution of Form of Polyhedra",
+    "paper": "http://www.openproblemgarden.org/op/asymptotic_distribution_of_form_of_polyhedra",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/asymptotic_distribution_of_form_of_polyhedra/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Basic Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "asymptotic_distribution_of_form_of_polyhedra",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/asymptotic_distribution_of_form_of_polyhedra/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/asymptotic_distribution_of_form_of_polyhedra",
+    "catalog_title": "Asymptotic Distribution of Form of Polyhedra",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2009-05-09",
+    "authors": "R\u00fcdinger, Andreas",
+    "subject": "Graph Theory \u00bb Basic Graph Theory",
+    "statement_text": "Problem Consider the set of all topologically inequivalent polyhedra with $ k $ edges. Define a form parameter for a polyhedron as $ \\beta:= v/(k+2) $ where $ v $ is the number of vertices. What is the distribution of $ \\beta $ for $ k \\to \\infty $ ?",
+    "context_text": "Consider the set of all topologically inequivalent polyhedra on a sphere with k edges (i.e. polyhedral graphs, Sloan Sequence A002840 ). Due to duality the distribution of the form parameter $ \\beta:= v/(k+2) $ is symmetric about $ \\beta=1/2 $ . Now a natural question is whether the distribution of beta tends to a limiting distribution when the number of edges tends to infinity. Is there any nontrivial limit theorem by means of rescaling? Some numerical values can be found on Counting Polyhedra suggesting that the distribution concentrates around $ \\beta=1/2 $ .",
+    "references_text": ""
+  },
+  "started": "2026-09-16T17:12:38Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

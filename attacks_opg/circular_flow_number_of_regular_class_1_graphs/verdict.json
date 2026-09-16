@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The supplied literature record reports a disproof, with counterexamples already for t=6.",
+  "would_publish": false,
+  "caveats": "The counterexample theorem is taken from the supplied catalog; its construction is not independently reconstructed here.",
+  "id": "circular_flow_number_of_regular_class_1_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.464745,
+  "eur": 0.48138,
+  "elapsed_s": 419.4,
+  "status": "completed",
+  "response_id": "resp_0bf04f2e20f1fc21006aaace87199887d2a2dbcc01761a0298",
+  "when": "2026-09-16T17:21:46Z"
+}

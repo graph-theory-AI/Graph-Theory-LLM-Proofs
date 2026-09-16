@@ -11,17 +11,17 @@ runs were not used.
 
 ## Counts
 
-Finished attacks with a verdict: **30**.
-Spend (promo ledger × prepaid FX): **€26.03** billed USD
-**$25.13** / budget €600
+Finished attacks with a verdict: **51**.
+Spend (promo ledger × prepaid FX): **€44.33** billed USD
+**$42.79** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
 | --- | ---: | ---: |
 | proved | 1 | 1 |
-| disproved | 2 | 2 |
-| already_resolved | 8 | 0 |
-| partial | 19 | 0 |
+| disproved | 7 | 4 |
+| already_resolved | 11 | 0 |
+| partial | 32 | 0 |
 
 ## Claimed proofs (1)
 
@@ -29,20 +29,28 @@ Spend (promo ledger × prepaid FX): **€26.03** billed USD
 | --- | --- | --- | --- |
 | [`mixing_circular_colourings_0`](https://graph-theory-ai.github.io/graph-conjectures/op/mixing_circular_colourings_0/) · [artifact](attacks_opg/mixing_circular_colourings_0/) | high | yes | For an n-vertex graph with an edge, the circular mixing threshold is rational, with reduced numerator at most n+1. |
 
-## Claimed counterexamples (2)
+## Claimed counterexamples (7)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
+| [`a_generalization_of_vizings_theorem`](https://graph-theory-ai.github.io/graph-conjectures/op/a_generalization_of_vizings_theorem/) · [artifact](attacks_opg/a_generalization_of_vizings_theorem/) | high | yes | A probabilistic construction gives a simple 100-uniform hypergraph with maximum 99-codegree at most 200 that requires at least 451 colors, contradicting the proposed bound of 299. |
+| [`are_critical_k_forests_tight`](https://graph-theory-ai.github.io/graph-conjectures/op/are_critical_k_forests_tight/) · [artifact](attacks_opg/are_critical_k_forests_tight/) | high | no | An explicit six-vertex, nine-edge 3-forest is inclusion-maximal but not tight. |
+| [`cores_of_cayley_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/cores_of_cayley_graphs/) · [artifact](attacks_opg/cores_of_cayley_graphs/) | high | no | For M = Z/4Z, the Cayley graph C4 has core K2, which cannot be a Cayley graph on any direct power of M. |
 | [`covering_powers_of_cycles_with_equivalence_subgraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/covering_powers_of_cycles_with_equivalence_subgraphs/) · [artifact](attacks_opg/covering_powers_of_cycles_with_equivalence_subgraphs/) | high | yes | Noncomplete powers of cycles have equivalence covering number Θ(log(k+1)), contradicting the proposed Ω(k) lower bound. |
+| [`cyclic_spanning_subdigraph_with_small_cyclomatic_number`](https://graph-theory-ai.github.io/graph-conjectures/op/cyclic_spanning_subdigraph_with_small_cyclomatic_number/) · [artifact](attacks_opg/cyclic_spanning_subdigraph_with_small_cyclomatic_number/) | high | no | As formulated for possibly nonstrong digraphs, the claim has a ten-vertex oriented counterexample with stability number 2 and minimum cyclic-spanning cyclomatic number 3. |
 | [`geodesic_cycles_and_tuttes_theorem`](https://graph-theory-ai.github.io/graph-conjectures/op/geodesic_cycles_and_tuttes_theorem/) · [artifact](attacks_opg/geodesic_cycles_and_tuttes_theorem/) | high | yes | The eight-vertex graph obtained by inserting a degree-three vertex into every face of a tetrahedron is a counterexample. |
+| [`melnikovs_valency_variety_problem`](https://graph-theory-ai.github.io/graph-conjectures/op/melnikovs_valency_variety_problem/) · [artifact](attacks_opg/melnikovs_valency_variety_problem/) | high | yes | A 37-vertex graph has chromatic number 3 and degree set {0,1,...,29}, making the proposed right-hand side equal to 3; moreover, 37 vertices is minimum. |
 
-## Already resolved (model says the literature already closed it) (8)
+## Already resolved (model says the literature already closed it) (11)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
 | [`antichains_in_the_cycle_continuous_order`](https://graph-theory-ai.github.io/graph-conjectures/op/antichains_in_the_cycle_continuous_order/) · [artifact](attacks_opg/antichains_in_the_cycle_continuous_order/) | high | no | The supplied catalog records Šámal’s affirmative solution, strengthened to an embedding of every countable poset into the cycle-continuous quasi-order. |
 | [`book_thickness_of_subdivisions`](https://graph-theory-ai.github.io/graph-conjectures/op/book_thickness_of_subdivisions/) · [artifact](attacks_opg/book_thickness_of_subdivisions/) | high | no | The conjecture is false even for exact one-subdivisions: graphs of unbounded book thickness can have one-subdivisions of book thickness at most 5. |
 | [`bounding_the_on_line_choice_number_in_terms_of_the_choice_number`](https://graph-theory-ai.github.io/graph-conjectures/op/bounding_the_on_line_choice_number_in_terms_of_the_choice_number/) · [artifact](attacks_opg/bounding_the_on_line_choice_number_in_terms_of_the_choice_number/) | high | no | Duraj, Gutowski, and Kozik resolved the question affirmatively: the online-minus-offline choice-number gap for K_{N,N} is of order log log N. |
+| [`chromatic_number_of_common_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/chromatic_number_of_common_graphs/) · [artifact](attacks_opg/chromatic_number_of_common_graphs/) | high | no | No: Kráľ, Volec, and Wei proved that connected common graphs exist with every prescribed positive chromatic number. |
+| [`circular_flow_number_of_regular_class_1_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/circular_flow_number_of_regular_class_1_graphs/) · [artifact](attacks_opg/circular_flow_number_of_regular_class_1_graphs/) | high | no | The supplied literature record reports a disproof, with counterexamples already for t=6. |
+| [`circular_flow_numbers_of_r_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/circular_flow_numbers_of_r_graphs/) · [artifact](attacks_opg/circular_flow_numbers_of_r_graphs/) | high | no | The class-1 counterexample theorem reported in the supplied catalog already disproves the stated r-graph conjecture, including at t=6. |
 | [`end_devouring_rays`](https://graph-theory-ai.github.io/graph-conjectures/op/end_devouring_rays/) · [artifact](attacks_opg/end_devouring_rays/) | high | no | The supplied catalog records the resolution, and a minimum-distance prefix construction gives a self-contained proof. |
 | [`extremal_problem_on_the_number_of_tree_endomorphism`](https://graph-theory-ai.github.io/graph-conjectures/op/extremal_problem_on_the_number_of_tree_endomorphism/) · [artifact](attacks_opg/extremal_problem_on_the_number_of_tree_endomorphism/) | high | no | The conjecture is exactly the Csikvári–Lin theorem identified in the supplied literature review. |
 | [`forcing_a_2_regular_minor`](https://graph-theory-ai.github.io/graph-conjectures/op/forcing_a_2_regular_minor/) · [artifact](attacks_opg/forcing_a_2_regular_minor/) | high | no | The stated conjecture was proved by Csóka, Lo, Norin, Wu, and Yepremyan in their 2017 paper, The extremal function for disconnected minors. |
@@ -60,45 +68,24 @@ The sweep queue is the easiest-first open/partial arXiv ranking (227
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **197** (plus 0 skipped without a model call).
+Queue records not yet attacked: **176** (plus 0 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
-| [`melnikovs_valency_variety_problem`](https://graph-theory-ai.github.io/graph-conjectures/op/melnikovs_valency_variety_problem/) | 1 | 1.0 | http://www.openproblemgarden.org/op/melnikovs_valency_variety_problem |
-| [`2_colouring_a_graph_without_a_monochromatic_maximum_clique`](https://graph-theory-ai.github.io/graph-conjectures/op/2_colouring_a_graph_without_a_monochromatic_maximum_clique/) | 2 | 2.0 | http://www.openproblemgarden.org/op/2_colouring_a_graph_without_a_monochromatic_maximum_clique |
-| [`4_connected_graphs_are_not_uniquely_hamiltonian`](https://graph-theory-ai.github.io/graph-conjectures/op/4_connected_graphs_are_not_uniquely_hamiltonian/) | 2 | 2.0 | http://www.openproblemgarden.org/op/4_connected_graphs_are_not_uniquely_hamiltonian |
-| [`5_local_tensions`](https://graph-theory-ai.github.io/graph-conjectures/op/5_local_tensions/) | 2 | 2.0 | http://www.openproblemgarden.org/op/5_local_tensions |
-| [`a_generalization_of_vizings_theorem`](https://graph-theory-ai.github.io/graph-conjectures/op/a_generalization_of_vizings_theorem/) | 2 | 2.0 | http://www.openproblemgarden.org/op/a_generalization_of_vizings_theorem |
-| [`a_gold_grabbing_game`](https://graph-theory-ai.github.io/graph-conjectures/op/a_gold_grabbing_game/) | 2 | 2.0 | http://www.openproblemgarden.org/op/a_gold_grabbing_game |
-| [`a_homomorphism_problem_for_flows`](https://graph-theory-ai.github.io/graph-conjectures/op/a_homomorphism_problem_for_flows/) | 2 | 2.0 | http://www.openproblemgarden.org/op/a_homomorphism_problem_for_flows |
-| [`acyclic_edge_coloring`](https://graph-theory-ai.github.io/graph-conjectures/op/acyclic_edge_coloring/) | 2 | 2.0 | http://www.openproblemgarden.org/op/acyclic_edge_coloring |
-| [`algorithm_for_graph_homomorphisms`](https://graph-theory-ai.github.io/graph-conjectures/op/algorithm_for_graph_homomorphisms/) | 2 | 2.0 | http://www.openproblemgarden.org/op/algorithm_for_graph_homomorphisms |
-| [`antidirected_trees_in_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/antidirected_trees_in_digraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/antidirected_trees_in_digraphs |
-| [`approximation_ratio_for_k_outerplanar_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/approximation_ratio_for_k_outerplanar_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/approximation_ratio_for_k_outerplanar_graphs |
-| [`approximation_ratio_for_maximum_edge_disjoint_paths_problem`](https://graph-theory-ai.github.io/graph-conjectures/op/approximation_ratio_for_maximum_edge_disjoint_paths_problem/) | 2 | 2.0 | http://www.openproblemgarden.org/op/approximation_ratio_for_maximum_edge_disjoint_paths_problem |
-| [`arc_disjoint_directed_cycles_in_regular_directed_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/arc_disjoint_directed_cycles_in_regular_directed_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/arc_disjoint_directed_cycles_in_regular_directed_graphs |
-| [`arc_disjoint_out_branching_and_in_branching`](https://graph-theory-ai.github.io/graph-conjectures/op/arc_disjoint_out_branching_and_in_branching/) | 2 | 2.0 | http://www.openproblemgarden.org/op/arc_disjoint_out_branching_and_in_branching |
-| [`arc_disjoint_strongly_connected_spanning_subdigraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/arc_disjoint_strongly_connected_spanning_subdigraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/arc_disjoint_strongly_connected_spanning_subdigraphs |
-| [`are_critical_k_forests_tight`](https://graph-theory-ai.github.io/graph-conjectures/op/are_critical_k_forests_tight/) | 2 | 2.0 | http://www.openproblemgarden.org/op/are_critical_k_forests_tight |
 | [`asymptotic_distribution_of_form_of_polyhedra`](https://graph-theory-ai.github.io/graph-conjectures/op/asymptotic_distribution_of_form_of_polyhedra/) | 2 | 2.0 | http://www.openproblemgarden.org/op/asymptotic_distribution_of_form_of_polyhedra |
 | [`bounding_the_chromatic_number_of_triangle_free_graphs_with_fixed_maximum_degree`](https://graph-theory-ai.github.io/graph-conjectures/op/bounding_the_chromatic_number_of_triangle_free_graphs_with_fixed_maximum_degree/) | 2 | 2.0 | http://www.openproblemgarden.org/op/bounding_the_chromatic_number_of_triangle_free_graphs_with_fixed_maximum_degree |
-| [`chromatic_number_of_common_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/chromatic_number_of_common_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/chromatic_number_of_common_graphs |
 | [`chromatic_number_of_frac_3_3_power_of_graph`](https://graph-theory-ai.github.io/graph-conjectures/op/chromatic_number_of_frac_3_3_power_of_graph/) | 2 | 2.0 | http://www.openproblemgarden.org/op/chromatic_number_of_frac_3_3_power_of_graph |
 | [`chromatic_number_of_random_lifts_of_complete_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/chromatic_number_of_random_lifts_of_complete_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/chromatic_number_of_random_lifts_of_complete_graphs |
 | [`circular_chromatic_number_of_triangle_free_planar_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/circular_chromatic_number_of_triangle_free_planar_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/circular_chromatic_number_of_triangle_free_planar_graphs |
 | [`circular_colouring_the_orthogonality_graph`](https://graph-theory-ai.github.io/graph-conjectures/op/circular_colouring_the_orthogonality_graph/) | 2 | 2.0 | http://www.openproblemgarden.org/op/circular_colouring_the_orthogonality_graph |
-| [`circular_flow_number_of_regular_class_1_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/circular_flow_number_of_regular_class_1_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/circular_flow_number_of_regular_class_1_graphs |
-| [`circular_flow_numbers_of_r_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/circular_flow_numbers_of_r_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/circular_flow_numbers_of_r_graphs |
 | [`coloring_random_subgraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/coloring_random_subgraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/coloring_random_subgraphs |
 | [`coloring_the_union_of_degenerate_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/coloring_the_union_of_degenerate_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/coloring_the_union_of_degenerate_graphs |
 | [`colouring_the_square_of_a_planar_graph`](https://graph-theory-ai.github.io/graph-conjectures/op/colouring_the_square_of_a_planar_graph/) | 2 | 2.0 | http://www.openproblemgarden.org/op/colouring_the_square_of_a_planar_graph |
 | [`complete_bipartite_subgraphs_of_perfect_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/complete_bipartite_subgraphs_of_perfect_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/complete_bipartite_subgraphs_of_perfect_graphs |
 | [`complexity_of_the_h_factor_problem`](https://graph-theory-ai.github.io/graph-conjectures/op/complexity_of_the_h_factor_problem/) | 2 | 2.0 | http://www.openproblemgarden.org/op/complexity_of_the_h_factor_problem |
-| [`cores_of_cayley_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/cores_of_cayley_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/cores_of_cayley_graphs |
 | [`counting_3_colorings_of_the_hex_lattice`](https://graph-theory-ai.github.io/graph-conjectures/op/counting_3_colorings_of_the_hex_lattice/) | 2 | 2.0 | http://www.openproblemgarden.org/op/counting_3_colorings_of_the_hex_lattice |
 | [`crossing_sequences`](https://graph-theory-ai.github.io/graph-conjectures/op/crossing_sequences/) | 2 | 2.0 | http://www.openproblemgarden.org/op/crossing_sequences |
 | [`cycles_in_graphs_of_large_chromatic_number`](https://graph-theory-ai.github.io/graph-conjectures/op/cycles_in_graphs_of_large_chromatic_number/) | 2 | 2.0 | http://www.openproblemgarden.org/op/cycles_in_graphs_of_large_chromatic_number |
-| [`cyclic_spanning_subdigraph_with_small_cyclomatic_number`](https://graph-theory-ai.github.io/graph-conjectures/op/cyclic_spanning_subdigraph_with_small_cyclomatic_number/) | 2 | 2.0 | http://www.openproblemgarden.org/op/cyclic_spanning_subdigraph_with_small_cyclomatic_number |
 | [`decomposing_an_eulerian_graph_into_cycles`](https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_an_eulerian_graph_into_cycles/) | 2 | 2.0 | http://www.openproblemgarden.org/op/decomposing_an_eulerian_graph_into_cycles |
 | [`decomposing_an_eulerian_graph_into_cycles_with_no_two_consecutives_edges_on_a_prescirbed_eulerian_tour`](https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_an_eulerian_graph_into_cycles_with_no_two_consecutives_edges_on_a_prescirbed_eulerian_tour/) | 2 | 2.0 | http://www.openproblemgarden.org/op/decomposing_an_eulerian_graph_into_cycles_with_no_two_consecutives_edges_on_a_prescirbed_eulerian_tour |
 | [`decomposing_k_arc_strong_tournament_into_k_spanning_strong_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_k_arc_strong_tournament_into_k_spanning_strong_digraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/decomposing_k_arc_strong_tournament_into_k_spanning_strong_digraphs |
@@ -262,4 +249,4 @@ Queue records not yet attacked: **197** (plus 0 skipped without a model call).
 | [`reconstruction_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/reconstruction_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/reconstruction_conjecture |
 | [`the_berge_fulkerson_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/the_berge_fulkerson_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/the_berge_fulkerson_conjecture |
 
-Generated 2026-09-16T17:12:25Z.
+Generated 2026-09-16T17:27:27Z.

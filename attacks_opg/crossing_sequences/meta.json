@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "crossing_sequences",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Crossing sequences",
+    "paper": "http://www.openproblemgarden.org/op/crossing_sequences",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/crossing_sequences/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Crossing numbers"
+  },
+  "dossier_meta": {
+    "id": "crossing_sequences",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/crossing_sequences/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/crossing_sequences",
+    "catalog_title": "Crossing sequences",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2008-07-30",
+    "authors": "Archdeacon, Dan, Bonnington, C. Paul, Siran, Jozef",
+    "subject": "Graph Theory \u00bb Topological Graph Theory \u00bb Crossing numbers",
+    "statement_text": "Conjecture Let $ (a_0,a_1,a_2,\\ldots,0) $ be a sequence of nonnegative integers which strictly decreases until $ 0 $ . Then there exists a graph that be drawn on a surface with orientable (nonorientable, resp.) genus $ i $ with $ a_i $ crossings, but not with less crossings.",
+    "context_text": "This actually are two conjectures, one for the orientable case and another for nonorientable one. For sequences $ (a_0,a_1,0) $ the nonorientable case was resolved in [ABS] and the orientable one in [DMS]. The conclusion also holds (for the orientable case) whenever the sequence $ (a_i) $ is convex [S], that is whenever $ a_i - a_{i-1} $ is nonincreasing. It might seem that this condition is also necessary: For the most extreme sequence $ (N,N-1,0) $ (suggested by Salazar) one needs to construct a graph for which adding one handle saves just one crossing, while adding another saves many -- but then why not add the second handle first? Somewhat surprisingly, graphs with this counterintuitive property exist, at least for sequences $ (a_0,a_1,0) $ . An interesting open case is to consider sequences for which $$ a_0 - a_s < \\varepsilon (a_s - a_{s+1}) $$ for some $ s $ and small $ \\varepsilon $ .",
+    "references_text": "- *[ABS] Dan Archdeacon, C. Paul Bonnington, and Jozef Siran, Trading crossings for handles and crosscaps, J.Graph Theory 38 (2001), 230--243.\n- [DMS] Matt DeVos, Bojan Mohar, Robert Samal, Unexpected behaviour of crossing sequences, in preparation\n- [S] Jozef Siran, The crossing function of a graph, Abh. Math. Sem. Univ. Hamburg 53 (1983), 131--133."
+  },
+  "started": "2026-09-16T17:22:27Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

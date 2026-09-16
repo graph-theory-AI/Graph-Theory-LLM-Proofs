@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "cycles_in_graphs_of_large_chromatic_number",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Cycles in Graphs of Large Chromatic Number",
+    "paper": "http://www.openproblemgarden.org/op/cycles_in_graphs_of_large_chromatic_number",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/cycles_in_graphs_of_large_chromatic_number/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "cycles_in_graphs_of_large_chromatic_number",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/cycles_in_graphs_of_large_chromatic_number/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/cycles_in_graphs_of_large_chromatic_number",
+    "catalog_title": "Cycles in Graphs of Large Chromatic Number",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2015-09-20",
+    "authors": "Brewster, Richard C., McGuinness, Sean, Moore, Benjamin, Noel, Jonathan A.",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Conjecture If $ \\chi(G)>k $ , then $ G $ contains at least $ \\frac{(k+1)(k-1)!}{2} $ cycles of length $ 0\\bmod k $ .",
+    "context_text": "Chudnovsky, Plumettaz, Scott and Seymour [CPSS] proved that every graph with chromatic number at least $ 4 $ contains a cycle of length $ 0\\bmod 3 $ . A simpler proof was found by Wrochna [W]. Wrochna's argument was generalised by Brewster, McGuinness, Moore and Noel [BMMN] to the following: if $ \\chi(G)>k $ , then $ G $ contains at least TeX Embedding failed! cycles of length $ 0\\bmod k $ .} The compete graph on $ k+1 $ vertices has exactly $ \\frac{(k+1)(k-1)!}{2} $ cycles of length $ 0\\bmod k $ and so the conjecture above, if true, would be best possible.",
+    "references_text": "- [BMMN] R. C. Brewster, S. McGuinness, B. Moore, J. A. Noel, A Dichotomy Theorem for Circular Colouring Reconfiguration, submitted, arXiv:1508.05573v1.\n- [CPSS] M. Chudnovsky, M. Plumettaz, A. Scott, and P. Seymour, The Structure of Graphs with no Cycles of Length Divisible by Three, in preparation.\n- [Wro] M. Wrochna, unpublished."
+  },
+  "started": "2026-09-16T17:23:07Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

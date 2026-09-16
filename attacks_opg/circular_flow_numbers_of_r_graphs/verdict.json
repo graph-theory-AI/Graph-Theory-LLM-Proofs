@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The class-1 counterexample theorem reported in the supplied catalog already disproves the stated r-graph conjecture, including at t=6.",
+  "would_publish": false,
+  "caveats": "Uses the counterexample theorem supplied in the question; its construction and bibliographic details are not independently reverified here.",
+  "id": "circular_flow_numbers_of_r_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.535545,
+  "eur": 0.554715,
+  "elapsed_s": 485.6,
+  "status": "completed",
+  "response_id": "resp_0bfa714585fc7f84006aaace9cb71c87d281d76c3c0871530e",
+  "when": "2026-09-16T17:23:14Z"
+}

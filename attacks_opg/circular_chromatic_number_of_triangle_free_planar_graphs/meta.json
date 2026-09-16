@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "circular_chromatic_number_of_triangle_free_planar_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Circular coloring triangle-free subcubic planar graphs",
+    "paper": "http://www.openproblemgarden.org/op/circular_chromatic_number_of_triangle_free_planar_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/circular_chromatic_number_of_triangle_free_planar_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "circular_chromatic_number_of_triangle_free_planar_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/circular_chromatic_number_of_triangle_free_planar_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/circular_chromatic_number_of_triangle_free_planar_graphs",
+    "catalog_title": "Circular coloring triangle-free subcubic planar graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-06-20",
+    "authors": "Ghebleh, Mohammad, Zhu, Xuding",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Problem Does every triangle-free planar graph of maximum degree three have circular chromatic number at most $ \\frac{20}{7} $ ?",
+    "context_text": "Throughout, we let $ \\chi_c(G) $ denote the circular chromatic number of the graph $ G $ . A well-known Question of Nesetril asks if $ \\chi_c(G) \\le \\frac{5}{2} $ for all cubic graphs $ G $ of sufficiently high girth. A conjecture of Jaeger asserts that $ \\chi_c(G) \\le 2 + \\frac{1}{k} $ for every planar graph $ G $ of girth $ 4k+1 $ . There are numerous partial results on these problems, and there are many interesting questions concerning the circular chromatic numbers of restricted families of graphs. Here we are restricted to planar graphs of girth $ \\ge 4 $ with maximum degree $ \\le 3 $ . The dodecahedron lives in this class and has $ \\chi_c = \\frac{20}{7} $ . It remains unclear if anyone else in this class might have $ \\chi_c $ larger. A related conjecture of X. Zhu asserts that for every triangle-free planar graph $ G $ with $ \\Delta(G)\\le 4 $ and $ |V(G)|<3k $ one has $ \\chi_c(G)\\le 3-1/k $ .",
+    "references_text": ""
+  },
+  "started": "2026-09-16T17:14:15Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

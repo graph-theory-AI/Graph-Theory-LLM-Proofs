@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An explicit construction proves a'(K_{p,p}) = p+2 for every odd prime p, but does not resolve the conjecture for general graphs.",
+  "would_publish": false,
+  "caveats": "A sharp special-case verification only; no claim of novelty or reliance on the unverified recent literature.",
+  "id": "acyclic_edge_coloring",
+  "model": "gpt-6-astra",
+  "usd": 0.917725,
+  "eur": 0.950575,
+  "elapsed_s": 762.6,
+  "status": "completed",
+  "response_id": "resp_096a8020f19b0350006aaacb44a3c087d2bb9d7bcfe7e4104b",
+  "when": "2026-09-16T17:13:35Z"
+}

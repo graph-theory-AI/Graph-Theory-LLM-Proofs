@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "No: Kr\u00e1\u013e, Volec, and Wei proved that connected common graphs exist with every prescribed positive chromatic number.",
+  "would_publish": false,
+  "caveats": "This is a literature-based resolution using the published theorem identified in the question, not a new self-contained proof.",
+  "id": "chromatic_number_of_common_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.097385,
+  "eur": 0.100871,
+  "elapsed_s": 92.8,
+  "status": "completed",
+  "response_id": "resp_0ff605584b4afcdc006aaace3f7f3887d29a62676ee199f24b",
+  "when": "2026-09-16T17:15:08Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "As formulated for possibly nonstrong digraphs, the claim has a ten-vertex oriented counterexample with stability number 2 and minimum cyclic-spanning cyclomatic number 3.",
+  "would_publish": false,
+  "caveats": "Uses the non-vacuous interpretation that every vertex must lie on a directed cycle; does not refute the version restricted to strong digraphs.",
+  "id": "cyclic_spanning_subdigraph_with_small_cyclomatic_number",
+  "model": "gpt-6-astra",
+  "usd": 0.20233,
+  "eur": 0.209572,
+  "elapsed_s": 143.2,
+  "status": "completed",
+  "response_id": "resp_00b16a9f98b378d2006aaad080ab6c87d2becd1bee32dd9680",
+  "when": "2026-09-16T17:25:35Z"
+}

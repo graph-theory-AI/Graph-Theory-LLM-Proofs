@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "colouring_the_square_of_a_planar_graph",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Colouring the square of a planar graph",
+    "paper": "http://www.openproblemgarden.org/op/colouring_the_square_of_a_planar_graph",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/colouring_the_square_of_a_planar_graph/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "colouring_the_square_of_a_planar_graph",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/colouring_the_square_of_a_planar_graph/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/colouring_the_square_of_a_planar_graph",
+    "catalog_title": "Colouring the square of a planar graph",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-13",
+    "authors": "Wegner",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Conjecture Let $ G $ be a planar graph of maximum degree $ \\Delta $ . The chromatic number of its square is \\item at most $ 7 $ if $ \\Delta =3 $ , \\item at most $ \\Delta+5 $ if $ 4\\leq\\Delta\\leq 7 $ , \\item at most $ \\left\\lfloor\\frac32\\,\\Delta\\right\\rfloor+1 $ if $ \\Delta\\ge8 $ .",
+    "context_text": "The square of a graph $ G $ is the graph $ G^2 $ on the same set of vertices, in which two vertices are adjacent when their distance in $ G $ is at most 2. Wegner [W] also gave examples showing that these bounds would be tight. For $ \\Delta\\geq 8 $ , they are the following. For $ 4\\leq \\Delta \\leq 9 $ , the examples are planar graphs on $ \\Delta+5 $ with maximum degree $ \\Delta $ whose square is a complete graph. This conjecture has also been generalized to the list chromatic number . Conjecture Let $ G $ be a planar graph of maximum degree $ \\Delta $ . The list chromatic number of its square is \\item at most $ 7 $ if $ \\Delta =3 $ , \\item at most $ \\Delta+5 $ if $ 4\\leq\\Delta\\leq 7 $ , \\item at most $ \\left\\lfloor\\frac32\\,\\Delta\\right\\rfloor+1 $ if $ \\Delta\\ge8 $ . Cranston and Kim [CK] showed that the square of every connected graph (non necessarily planar) which is subcubic (i.e., with $ \\Delta\\le3 $ ) is 8-choosable, except for the Petersen graph. However, the 7-choosability of the square of subcubic planar graphs is still open. Havet et al. [HHMR] proved the conjecture asymptotically: Theorem The square of every planar graph $ G $ of maximum degree $ \\Delta $ has list chromatic number at most $ (1+o(1))\\,\\frac32\\,\\Delta $ . In fact, they proved this results for more general classes of graph. This led them to pose the following problem. Problem Is it true that for every minor-closed family $ {\\cal F} $ of graphs (with $ {\\cal F} $ not the set of all graphs), we have $ \\chi(G^2)\\le \\bigl(\\frac32+o(1)\\bigr) \\Delta(G) $ for all $ G\\in{\\cal F} $ ?",
+    "references_text": "- [HHMR] F. Havet, J. van den Heuvel, C. McDiarmid, and B. Reed. List Colouring Squares of Planar Graphs. Research Report RR-6586, INRIA, July 2008.\n- [CK] D. W. Cranston and S.-J. Kim. List-coloring the square of a subcubic graph, J. Graph Theory, 57(1):65--87, 2008.\n- *[W] G. Wegner. Graphs with given diameter and a coloring problem. Technical report, 1977."
+  },
+  "started": "2026-09-16T17:16:53Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

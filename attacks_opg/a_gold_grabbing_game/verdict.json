@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain an exact all-gold capture criterion for arbitrary support and complete optimal strategies when at most two vertices carry gold.",
+  "would_publish": false,
+  "caveats": "General intermediate optimal scores are not characterized; novelty and current literature status have not been verified.",
+  "id": "a_gold_grabbing_game",
+  "model": "gpt-6-astra",
+  "usd": 1.102205,
+  "eur": 1.141658,
+  "elapsed_s": 970.8,
+  "status": "completed",
+  "response_id": "resp_0800947c335128bc006aaacb29c4b887d29dd39409a170a5fe",
+  "when": "2026-09-16T17:16:36Z"
+}

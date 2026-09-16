@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "chromatic_number_of_frac_3_3_power_of_graph",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Chromatic number of $\\frac{3}{3}$-power of graph",
+    "paper": "http://www.openproblemgarden.org/op/chromatic_number_of_frac_3_3_power_of_graph",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/chromatic_number_of_frac_3_3_power_of_graph/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "chromatic_number_of_frac_3_3_power_of_graph",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/chromatic_number_of_frac_3_3_power_of_graph/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/chromatic_number_of_frac_3_3_power_of_graph",
+    "catalog_title": "Chromatic number of $\\frac{3}{3}$-power of graph",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2023-04-20",
+    "authors": "",
+    "subject": "Graph Theory",
+    "statement_text": "Let $ G $ be a graph and $ m,n\\in \\mathbb{N} $ . The graph $ G^{\\frac{m}{n}} $ is defined to be the $ m $ -power of the $ n $ -subdivision of $ G $ . In other words, $ G^{\\frac{m}{n}}=(G^{\\frac{1}{n}})^m $ . Conjecture Let $ G $ be a graph with $ \\Delta(G)\\geq 2 $ . Then $ \\chi(G^{\\frac{3}{3}})\\leq 2\\Delta(G)+1 $ .",
+    "context_text": "",
+    "references_text": "- [1] Mahsa Mozafari-Nia and M. N. Iradmusa, Simultaneous coloring of vertices and incidences of graphs, Australasian Journal of Combinatorics, Vol. 85, Mo. 3, pp. 287-307, 2023.\n- [2] Mahsa Mozafari-Nia and M. N. Iradmusa, Simultaneous coloring of vertices and incidences of outerplanar graphs, Electronic Journal of Graph Theory and Applications, Vol.11, No.1, pp.245-262, 2023.\n- [3] Mahsa Mozafari-Nia and M. N. Iradmusa, A note on coloring of 3/3-power of subquartic graphs, Australasian Journal of Combinatorics, Vol. 79, No. 3, pp. 454-460, 2021.\n- [4] M. N. Iradmusa, A short proof of 7-colorability of 3/3-power of subcubic graphs, Iranian Journal of Science and Technology, Transactions A: Science, Vol. 44, No. 1, pp. 225-226, 2020."
+  },
+  "started": "2026-09-16T17:13:45Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

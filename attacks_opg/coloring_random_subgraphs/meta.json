@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "coloring_random_subgraphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Coloring random subgraphs",
+    "paper": "http://www.openproblemgarden.org/op/coloring_random_subgraphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/coloring_random_subgraphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Probabilistic Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "coloring_random_subgraphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/coloring_random_subgraphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/coloring_random_subgraphs",
+    "catalog_title": "Coloring random subgraphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2008-06-18",
+    "authors": "Bukh, Boris",
+    "subject": "Graph Theory \u00bb Probabilistic Graph Theory",
+    "statement_text": "If $ G $ is a graph and $ p \\in [0,1] $ , we let $ G_p $ denote a subgraph of $ G $ where each edge of $ G $ appears in $ G_p $ with independently with probability $ p $ . Problem Does there exist a constant $ c $ so that $ {\\mathbb E}(\\chi(G_{1/2})) > c \\frac{\\chi(G)}{\\log \\chi(G)} $ ?",
+    "context_text": "It is a classical result that the above problem has a positive answer when $ G $ is the complete graph. More generally, the lower bound $ {\\mathbb E}(\\chi(G_{1/2})) \\ge c \\frac{\\chi(G)}{\\log |V(G)|} $ is known. It is easy to obtain the bound $ {\\mathbb E}(\\chi(G_{1/2})) \\ge (\\chi(G))^{1/2} $ , since we may imagine forming two random subgraphs $ H,H' $ of $ G $ by putting each edge of $ G $ in either $ H $ or $ H' $ independently with probability $ 1/2 $ . Then $ \\chi(H) \\chi(H') \\ge \\chi(G) $ and this gives the desired bound. A similar argument with three subgraphs shows that $ {\\mathbb E}(\\chi(G_{1/3})) \\ge (\\chi(G))^{1/3} $ , however these arguments all seem to require integer multiples, so the best known lower bound on $ {\\mathbb E}(\\chi(G_{49/100})) $ of this form is $ (\\chi(G))^{1/3} $ .",
+    "references_text": "- *[B] Boris Bukh's problem page."
+  },
+  "started": "2026-09-16T17:15:37Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
