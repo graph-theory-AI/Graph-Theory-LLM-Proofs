@@ -12,7 +12,7 @@ PY="$ROOT/.venv/bin/python"
 # Retry metadata written before the fix stored an absolute path; keep every
 # snapshot free of local paths, including files the running sweep just wrote.
 if [[ -d "$ROOT/attacks_retry" ]]; then
-  grep -rl -- "$ROOT/" "$ROOT/attacks_retry" --include=meta.json 2>/dev/null \
+  { grep -rl -- "$ROOT/" "$ROOT/attacks_retry" --include=meta.json 2>/dev/null || true; } \
     | xargs -r sed -i "s|$ROOT/||g"
 fi
 [[ -x "$PY" ]] || PY=python3

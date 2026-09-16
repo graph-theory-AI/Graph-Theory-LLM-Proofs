@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A fixed-vertex decomposition proves E[F_n] <= ln n + O(1), with the stronger upper bound ln n + 1/4 + gamma/2 + o(1).",
+  "would_publish": true,
+  "caveats": "The proof uses exactly the stated uniform-rotation, independent-fair-signature model; literature priority has not been checked.",
+  "id": "2211.01032__03",
+  "model": "gpt-6-astra",
+  "usd": 0.938795,
+  "eur": 0.972399,
+  "elapsed_s": 1252.1,
+  "status": "completed",
+  "response_id": "resp_0cc6e182d0ccea7c006aab081f677887d29b165ce61e09f22f",
+  "when": "2026-09-16T21:41:23Z"
+}

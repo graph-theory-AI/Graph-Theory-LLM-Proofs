@@ -11,22 +11,23 @@ runs were not used.
 
 ## Counts
 
-Finished attacks with a verdict: **29**.
-Spend (promo ledger × prepaid FX): **€294.83** billed USD
-**$284.64** / budget €600
+Finished attacks with a verdict: **38**.
+Spend (promo ledger × prepaid FX): **€307.73** billed USD
+**$297.10** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
 | --- | ---: | ---: |
-| proved | 2 | 2 |
+| proved | 3 | 3 |
 | disproved | 1 | 0 |
 | already_resolved | 1 | 0 |
-| partial | 25 | 0 |
+| partial | 33 | 0 |
 
-## Claimed proofs (2)
+## Claimed proofs (3)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
+| [`2211.01032__03`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2211.01032__03/) · [artifact](attacks_retry/2211.01032__03/) | high | yes | A fixed-vertex decomposition proves E[F_n] <= ln n + O(1), with the stronger upper bound ln n + 1/4 + gamma/2 + o(1). |
 | [`2402.10782__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2402.10782__01/) · [artifact](attacks_retry/2402.10782__01/) | high | yes | The path-FAS problem is NP-complete, whereas the maximum-degree-1 FAS problem is polynomial-time solvable. |
 | [`2603.02786__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2603.02786__00/) · [artifact](attacks_retry/2603.02786__00/) | high | yes | Fixed-size CRT-generic prime blocks, together with clustered residue classes for their multiples and a tail decomposition, give m(n) ~ (4/3)n^(3/2)/log n. |
 
@@ -53,20 +54,11 @@ The sweep queue is the easiest-first open/partial arXiv ranking (702
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **673** (plus 0 skipped without a model call).
+Queue records not yet attacked: **664** (plus 0 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
-| [`obstacle_number_of_planar_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/obstacle_number_of_planar_graphs/) | 1 | 1.0 | http://www.openproblemgarden.org/op/obstacle_number_of_planar_graphs |
-| [`2506.07264__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2506.07264__02/) | 1 | 1.5 | Refinement of a conjecture on positive square energy of graphs |
-| [`2510.01916__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2510.01916__00/) | 1 | 1.5 | Short circuit walks in fixed dimension |
-| [`2502.05289__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2502.05289__01/) | 2 | 1.6 | Induced Disjoint Paths Without an Induced Minor |
-| [`2507.12748__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2507.12748__00/) | 2 | 1.6 | Improved Decomposition Bounds for Partition Polytopes and Odd-Covers |
-| [`2512.17342__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2512.17342__01/) | 2 | 1.6 | Nowhere-zero flow reconfiguration |
-| [`2605.13628__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2605.13628__00/) | 2 | 1.7 | A note on arithmetic progressions with restricted differences |
-| [`2512.08049__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2512.08049__00/) | 2 | 1.75 | Spectrally symmetric orientations of graphs |
 | [`2605.13628__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2605.13628__01/) | 2 | 1.75 | A note on arithmetic progressions with restricted differences |
-| [`2211.01032__03`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2211.01032__03/) | 2 | 1.85 | Random Embeddings of Graphs: The Expected Number of Faces in Most Graph… |
 | [`2211.01032__04`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2211.01032__04/) | 2 | 1.85 | Random Embeddings of Graphs: The Expected Number of Faces in Most Graph… |
 | [`2405.10854__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2405.10854__00/) | 2 | 1.85 | Strong log-convexity of genus sequences |
 | [`2506.08810__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2506.08810__00/) | 2 | 1.85 | Infinite induced-saturated graphs |
@@ -731,4 +723,4 @@ Queue records not yet attacked: **673** (plus 0 skipped without a model call).
 | [`2210.09227__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.09227__00/) | 4 | 3.75 | A multidimensional Ramsey Theorem |
 | [`2404.02021__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2404.02021__02/) | 4 | 3.85 | On off-diagonal hypergraph Ramsey numbers |
 
-Generated 2026-09-16T21:28:10Z.
+Generated 2026-09-16T21:48:28Z.

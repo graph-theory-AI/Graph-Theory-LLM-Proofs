@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The implication holds for every graph when 2\u2264k\u22646, and for every k when every chordless cycle has length at most nine.",
+  "would_publish": false,
+  "caveats": "The general case for arbitrary graphs and k\u22657 remains unresolved; novelty relative to the full source paper has not been independently checked.",
+  "id": "2512.17342__01",
+  "model": "gpt-6-astra",
+  "usd": 1.455305,
+  "eur": 1.507397,
+  "elapsed_s": 1872.6,
+  "status": "completed",
+  "response_id": "resp_0d71a918944bb7d4006aab0675146487d28ad756f942329854",
+  "when": "2026-09-16T21:44:37Z"
+}
