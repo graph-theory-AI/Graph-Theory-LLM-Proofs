@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds on the torus when one summand has plane crossing number at most 7, and on every closed orientable surface when one has plane crossing number at most 1.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture remains unresolved here; the novelty of these special cases has not been checked.",
+  "id": "drawing_disconnected_graphs_on_surfaces",
+  "model": "gpt-6-astra",
+  "usd": 0.87839,
+  "eur": 0.909832,
+  "elapsed_s": 954.2,
+  "status": "completed",
+  "response_id": "resp_032cd4fa187bbedb006aaad2b3a77c87d28379372a7f324b2f",
+  "when": "2026-09-16T17:48:29Z"
+}

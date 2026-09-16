@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Haj\u00f3s' bound is proved here for graphs of maximum degree four admitting a triangle decomposition, with the stronger bound n/3 in the 4-regular case.",
+  "would_publish": false,
+  "caveats": "This is a restricted-class result, not a resolution of the conjecture; novelty is not claimed.",
+  "id": "decomposing_an_eulerian_graph_into_cycles",
+  "model": "gpt-6-astra",
+  "usd": 1.001905,
+  "eur": 1.037768,
+  "elapsed_s": 1280.0,
+  "status": "completed",
+  "response_id": "resp_08b38aa3201e42cc006aaad0828c9087d28460410890600ce5",
+  "when": "2026-09-16T17:44:34Z"
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "kriesells_conjecture",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Kriesell's Conjecture",
+    "paper": "http://www.openproblemgarden.org/op/kriesells_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/kriesells_conjecture/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Connectivity"
+  },
+  "dossier_meta": {
+    "id": "kriesells_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/kriesells_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/kriesells_conjecture",
+    "catalog_title": "Kriesell's Conjecture",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-08-25",
+    "authors": "Kriesell, Matthias",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Connectivity",
+    "statement_text": "Conjecture Let $ G $ be a graph and let $ T\\subseteq V(G) $ such that for any pair $ u,v\\in T $ there are $ 2k $ edge-disjoint paths from $ u $ to $ v $ in $ G $ . Then $ G $ contains $ k $ edge-disjoint trees, each of which contains $ T $ .",
+    "context_text": "This problem was featured as unsolved problem #22 in Bondy and Murty's book \"Graph Theory\" [BM]. See also a posting on the open problem forum of the Egerv\u00e1ry Research Group on Combinatorial Optimization.",
+    "references_text": "- [BM] J. A. Bondy and U. S. R. Murty. Graph theory, volume 244 of Graduate Texts in Mathematics. Springer, New York, 2008."
+  },
+  "started": "2026-09-16T17:50:57Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

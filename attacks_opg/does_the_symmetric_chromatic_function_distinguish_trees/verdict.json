@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A self-contained reconstruction argument proves the conjecture for an explicit leaf-rich-centroid class, including every tree whose maximum degree is at least half its order.",
+  "would_publish": false,
+  "caveats": "The general problem is not settled; novelty of the sufficient condition and the latest literature status have not been verified.",
+  "id": "does_the_symmetric_chromatic_function_distinguish_trees",
+  "model": "gpt-6-astra",
+  "usd": 0.925145,
+  "eur": 0.95826,
+  "elapsed_s": 945.9,
+  "status": "completed",
+  "response_id": "resp_0e0be2c8c2739536006aaad220b37487d299dccb8da1b60b60",
+  "when": "2026-09-16T17:45:54Z"
+}

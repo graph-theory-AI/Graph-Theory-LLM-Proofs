@@ -11,17 +11,17 @@ runs were not used.
 
 ## Counts
 
-Finished attacks with a verdict: **71**.
-Spend (promo ledger × prepaid FX): **€64.03** billed USD
-**$61.81** / budget €600
+Finished attacks with a verdict: **86**.
+Spend (promo ledger × prepaid FX): **€77.81** billed USD
+**$75.12** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
 | --- | ---: | ---: |
 | proved | 3 | 2 |
-| disproved | 7 | 4 |
-| already_resolved | 14 | 0 |
-| partial | 47 | 0 |
+| disproved | 8 | 4 |
+| already_resolved | 15 | 0 |
+| partial | 60 | 0 |
 
 ## Claimed proofs (3)
 
@@ -31,7 +31,7 @@ Spend (promo ledger × prepaid FX): **€64.03** billed USD
 | [`chromatic_number_of_random_lifts_of_complete_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/chromatic_number_of_random_lifts_of_complete_graphs/) · [artifact](attacks_opg/chromatic_number_of_random_lifts_of_complete_graphs/) | high | yes | A random h-lift of K_5 has chromatic number 3 asymptotically almost surely. |
 | [`mixing_circular_colourings_0`](https://graph-theory-ai.github.io/graph-conjectures/op/mixing_circular_colourings_0/) · [artifact](attacks_opg/mixing_circular_colourings_0/) | high | yes | For an n-vertex graph with an edge, the circular mixing threshold is rational, with reduced numerator at most n+1. |
 
-## Claimed counterexamples (7)
+## Claimed counterexamples (8)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
@@ -41,9 +41,10 @@ Spend (promo ledger × prepaid FX): **€64.03** billed USD
 | [`covering_powers_of_cycles_with_equivalence_subgraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/covering_powers_of_cycles_with_equivalence_subgraphs/) · [artifact](attacks_opg/covering_powers_of_cycles_with_equivalence_subgraphs/) | high | yes | Noncomplete powers of cycles have equivalence covering number Θ(log(k+1)), contradicting the proposed Ω(k) lower bound. |
 | [`cyclic_spanning_subdigraph_with_small_cyclomatic_number`](https://graph-theory-ai.github.io/graph-conjectures/op/cyclic_spanning_subdigraph_with_small_cyclomatic_number/) · [artifact](attacks_opg/cyclic_spanning_subdigraph_with_small_cyclomatic_number/) | high | no | As formulated for possibly nonstrong digraphs, the claim has a ten-vertex oriented counterexample with stability number 2 and minimum cyclic-spanning cyclomatic number 3. |
 | [`geodesic_cycles_and_tuttes_theorem`](https://graph-theory-ai.github.io/graph-conjectures/op/geodesic_cycles_and_tuttes_theorem/) · [artifact](attacks_opg/geodesic_cycles_and_tuttes_theorem/) | high | yes | The eight-vertex graph obtained by inserting a degree-three vertex into every face of a tetrahedron is a counterexample. |
+| [`hamilton_cycle_in_small_d_diregular_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/hamilton_cycle_in_small_d_diregular_graphs/) · [artifact](attacks_opg/hamilton_cycle_in_small_d_diregular_graphs/) | high | no | Under the stated minimum-degree definition, two regular tournaments sharing one vertex give a counterexample on exactly 4d+1 vertices. |
 | [`melnikovs_valency_variety_problem`](https://graph-theory-ai.github.io/graph-conjectures/op/melnikovs_valency_variety_problem/) · [artifact](attacks_opg/melnikovs_valency_variety_problem/) | high | yes | A 37-vertex graph has chromatic number 3 and degree set {0,1,...,29}, making the proposed right-hand side equal to 3; moreover, 37 vertices is minimum. |
 
-## Already resolved (model says the literature already closed it) (14)
+## Already resolved (model says the literature already closed it) (15)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
@@ -59,6 +60,7 @@ Spend (promo ledger × prepaid FX): **€64.03** billed USD
 | [`every_prism_over_a_3_connected_planar_graph_is_hamiltonian`](https://graph-theory-ai.github.io/graph-conjectures/op/every_prism_over_a_3_connected_planar_graph_is_hamiltonian/) · [artifact](attacks_opg/every_prism_over_a_3_connected_planar_graph_is_hamiltonian/) | high | no | The conjecture is false: the supplied literature record identifies Špacapan’s published construction of a 3-connected planar graph with a non-Hamiltonian prism. |
 | [`extremal_problem_on_the_number_of_tree_endomorphism`](https://graph-theory-ai.github.io/graph-conjectures/op/extremal_problem_on_the_number_of_tree_endomorphism/) · [artifact](attacks_opg/extremal_problem_on_the_number_of_tree_endomorphism/) | high | no | The conjecture is exactly the Csikvári–Lin theorem identified in the supplied literature review. |
 | [`forcing_a_2_regular_minor`](https://graph-theory-ai.github.io/graph-conjectures/op/forcing_a_2_regular_minor/) · [artifact](attacks_opg/forcing_a_2_regular_minor/) | high | no | The stated conjecture was proved by Csóka, Lo, Norin, Wu, and Yepremyan in their 2017 paper, The extremal function for disconnected minors. |
+| [`highly_arc_transitive_two_ended_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/highly_arc_transitive_two_ended_digraphs/) · [artifact](attacks_opg/highly_arc_transitive_two_ended_digraphs/) | high | no | The conjecture is false: an explicit two-ended highly arc-transitive digraph has connected, noncomplete bipartite tiles. |
 | [`vertex_coloring_of_graph_fractional_powers`](https://graph-theory-ai.github.io/graph-conjectures/op/vertex_coloring_of_graph_fractional_powers/) · [artifact](attacks_opg/vertex_coloring_of_graph_fractional_powers/) | high | no | The triangular prism P is an explicit counterexample: χ(P^{3/5}) = 6 while ω(P^{3/5}) = 5. |
 | [`what_is_the_largest_graph_of_positive_curvature`](https://graph-theory-ai.github.io/graph-conjectures/op/what_is_the_largest_graph_of_positive_curvature/) · [artifact](attacks_opg/what_is_the_largest_graph_of_positive_curvature/) | high | no | The exact maximum is 208 vertices: Ghidelli proved the upper bound, and an explicit attaining construction is verified below. |
 
@@ -73,31 +75,16 @@ The sweep queue is the easiest-first open/partial arXiv ranking (227
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **156** (plus 0 skipped without a model call).
+Queue records not yet attacked: **141** (plus 0 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
-| [`decomposing_an_eulerian_graph_into_cycles`](https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_an_eulerian_graph_into_cycles/) | 2 | 2.0 | http://www.openproblemgarden.org/op/decomposing_an_eulerian_graph_into_cycles |
-| [`decomposing_the_prism_of_a_3_connected_cubic_planar_graphs_in_hamilton_cycles`](https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_the_prism_of_a_3_connected_cubic_planar_graphs_in_hamilton_cycles/) | 2 | 2.0 | http://www.openproblemgarden.org/op/decomposing_the_prism_of_a_3_connected_cubic_planar_graphs_in_hamilton_cycles |
-| [`does_the_symmetric_chromatic_function_distinguish_trees`](https://graph-theory-ai.github.io/graph-conjectures/op/does_the_symmetric_chromatic_function_distinguish_trees/) | 2 | 2.0 | http://www.openproblemgarden.org/op/does_the_symmetric_chromatic_function_distinguish_trees |
-| [`domination_in_cubic_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/domination_in_cubic_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/domination_in_cubic_graphs |
-| [`domination_in_plane_triangulations`](https://graph-theory-ai.github.io/graph-conjectures/op/domination_in_plane_triangulations/) | 2 | 2.0 | http://www.openproblemgarden.org/op/domination_in_plane_triangulations |
-| [`double_critical_graph_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/double_critical_graph_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/double_critical_graph_conjecture |
-| [`drawing_disconnected_graphs_on_surfaces`](https://graph-theory-ai.github.io/graph-conjectures/op/drawing_disconnected_graphs_on_surfaces/) | 2 | 2.0 | http://www.openproblemgarden.org/op/drawing_disconnected_graphs_on_surfaces |
-| [`every_4_connected_toroidal_graph_has_a_hamilton_cycle`](https://graph-theory-ai.github.io/graph-conjectures/op/every_4_connected_toroidal_graph_has_a_hamilton_cycle/) | 2 | 2.0 | http://www.openproblemgarden.org/op/every_4_connected_toroidal_graph_has_a_hamilton_cycle |
 | [`exact_colorings_of_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/exact_colorings_of_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/exact_colorings_of_graphs |
 | [`finding_k_edge_outerplanar_graph_embeddings`](https://graph-theory-ai.github.io/graph-conjectures/op/finding_k_edge_outerplanar_graph_embeddings/) | 2 | 2.0 | http://www.openproblemgarden.org/op/finding_k_edge_outerplanar_graph_embeddings |
-| [`forcing_a_k_6_minor`](https://graph-theory-ai.github.io/graph-conjectures/op/forcing_a_k_6_minor/) | 2 | 2.0 | http://www.openproblemgarden.org/op/forcing_a_k_6_minor |
-| [`frankls_union_closed_sets_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/frankls_union_closed_sets_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/frankls_union_closed_sets_conjecture |
-| [`friendly_partitions`](https://graph-theory-ai.github.io/graph-conjectures/op/friendly_partitions/) | 2 | 2.0 | http://www.openproblemgarden.org/op/friendly_partitions |
-| [`good_edge_labelings`](https://graph-theory-ai.github.io/graph-conjectures/op/good_edge_labelings/) | 2 | 2.0 | http://www.openproblemgarden.org/op/good_edge_labelings |
-| [`grahams_conjecture_on_tree_reconstruction`](https://graph-theory-ai.github.io/graph-conjectures/op/grahams_conjecture_on_tree_reconstruction/) | 2 | 2.0 | http://www.openproblemgarden.org/op/grahams_conjecture_on_tree_reconstruction |
 | [`half_integral_flow_polynomial_values`](https://graph-theory-ai.github.io/graph-conjectures/op/half_integral_flow_polynomial_values/) | 2 | 2.0 | http://www.openproblemgarden.org/op/half_integral_flow_polynomial_values |
-| [`hamilton_cycle_in_small_d_diregular_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/hamilton_cycle_in_small_d_diregular_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/hamilton_cycle_in_small_d_diregular_graphs |
 | [`hamiltonian_cycles_in_line_graphs_of_infinite_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonian_cycles_in_line_graphs_of_infinite_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/hamiltonian_cycles_in_line_graphs_of_infinite_graphs |
 | [`hamiltonian_cycles_in_powers_of_infinite_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonian_cycles_in_powers_of_infinite_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/hamiltonian_cycles_in_powers_of_infinite_graphs |
 | [`high_girth_low_degree_4_chromatic_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/high_girth_low_degree_4_chromatic_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/high_girth_low_degree_4_chromatic_graphs |
-| [`highly_arc_transitive_two_ended_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/highly_arc_transitive_two_ended_digraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/highly_arc_transitive_two_ended_digraphs |
 | [`imbalance_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/imbalance_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/imbalance_conjecture |
 | [`infinite_uniquely_hamiltonian_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/infinite_uniquely_hamiltonian_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/infinite_uniquely_hamiltonian_graphs |
 | [`intersecting_two_perfect_matchings`](https://graph-theory-ai.github.io/graph-conjectures/op/intersecting_two_perfect_matchings/) | 2 | 2.0 | http://www.openproblemgarden.org/op/intersecting_two_perfect_matchings |
@@ -234,4 +221,4 @@ Queue records not yet attacked: **156** (plus 0 skipped without a model call).
 | [`reconstruction_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/reconstruction_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/reconstruction_conjecture |
 | [`the_berge_fulkerson_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/the_berge_fulkerson_conjecture/) | 4 | 4.0 | http://www.openproblemgarden.org/op/the_berge_fulkerson_conjecture |
 
-Generated 2026-09-16T17:42:29Z.
+Generated 2026-09-16T17:57:31Z.

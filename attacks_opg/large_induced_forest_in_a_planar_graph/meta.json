@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "large_induced_forest_in_a_planar_graph",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Large induced forest in a planar graph.",
+    "paper": "http://www.openproblemgarden.org/op/large_induced_forest_in_a_planar_graph",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/large_induced_forest_in_a_planar_graph/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Topological Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "large_induced_forest_in_a_planar_graph",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/large_induced_forest_in_a_planar_graph/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/large_induced_forest_in_a_planar_graph",
+    "catalog_title": "Large induced forest in a planar graph.",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-04",
+    "authors": "Abertson, Michael O., Berman, David M.",
+    "subject": "Graph Theory \u00bb Topological Graph Theory",
+    "statement_text": "Conjecture Every planar graph on $ n $ verices has an induced forest with at least $ n/2 $ vertices.",
+    "context_text": "This conjecture is best possible. (See [AW]). It follows from Borodin's theorem stating that every planar graph has an acyclic $ 5 $ -colouring that every planar graph on $ n $ verices has an induced forest with at least $ 2n/5 $ vertices. The conjecture holds for planar graph with girth at least $ 5 $ , because they can be partitionned into a stable set and a forest [BG] (see also [KT]). Akiyama-Watanabe [AW] conjectured an even larger induced forest for bipartite planar graphs. Conjecture Every bipartite planar graph on $ n $ verices has an induced forest with at least $ 5n/8 $ vertices. This conjecture is also best possible. (See [AW]).",
+    "references_text": "- *[AB] M. O. Albertson and D. M. Berman. A conjecture on planar graphs. Graph Theory and Related Topics (J. A. Bondy and U. S. R. Murty, eds.), (Academic Press, 1979), 357.\n- [AW] J. Akiyama and M. Watanabe. Maximum induced forests of planar graphs. Graphs and Combinatorics 3 (1987), 201--202.\n- [B] O. V. Borodin. A proof of B. Gr\u00fcnbaum's conjecture on the acyclic 5-colorability of planar graphs. (Russian) Dokl. Akad. Nauk SSSR 231 (1976), no. 1, 18--20.\n- [BG] O. V. Borodin and A. N. Glebov. On the partition of a planar graph of girth 5 into an empty graph and an acyclic subgraph. Diskretn. Anal. Issled. Oper. Ser. 1 8:34\u201353, 2001\n- [KT] K. Kawarabayashi and C. Thomassen. Decomposing a planar graph of girth 5 into an independent set and a forest. Journal of Combinatorial Theory, Series B 99(4):674\u2013684, 2009."
+  },
+  "started": "2026-09-16T17:54:33Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

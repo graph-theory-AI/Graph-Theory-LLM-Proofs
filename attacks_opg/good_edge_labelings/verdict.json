@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An increasing-walk potential gives a sharp logarithmic density bound, and local extension arguments establish the critical-graph finiteness assertion for c <= 5/2.",
+  "would_publish": false,
+  "caveats": "Novelty has not been verified; the full critical-graph conjecture and exact extremal values for general orders are not resolved here.",
+  "id": "good_edge_labelings",
+  "model": "gpt-6-astra",
+  "usd": 1.05391,
+  "eur": 1.091634,
+  "elapsed_s": 860.9,
+  "status": "completed",
+  "response_id": "resp_0a57a2d0410a2b7c006aaad47c07bc87d28a708b18638d1432",
+  "when": "2026-09-16T17:54:32Z"
+}

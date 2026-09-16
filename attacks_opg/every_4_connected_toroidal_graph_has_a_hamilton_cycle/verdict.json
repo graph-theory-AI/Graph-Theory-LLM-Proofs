@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The triangle-free case admits a complete constructive proof, even with every edge on a Hamilton cycle, but the general conjecture remains unresolved here.",
+  "would_publish": false,
+  "caveats": "No novelty claim; the proof uses a flat quadrangulation structure that is unavailable in the general triangular-face case.",
+  "id": "every_4_connected_toroidal_graph_has_a_hamilton_cycle",
+  "model": "gpt-6-astra",
+  "usd": 1.0728,
+  "eur": 1.111201,
+  "elapsed_s": 880.2,
+  "status": "completed",
+  "response_id": "resp_098e6335533b347c006aaad39172a887d29ce23d3f094b1e10",
+  "when": "2026-09-16T17:50:57Z"
+}

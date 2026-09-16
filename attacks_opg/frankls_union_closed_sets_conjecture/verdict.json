@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A local fractional-cover parameter at most 2 guarantees an abundant element in a specified member, and an explicit construction shows this threshold is sharp.",
+  "would_publish": false,
+  "caveats": "This does not resolve Frankl's conjecture or improve the general abundance bound; novelty of these partial results is not claimed.",
+  "id": "frankls_union_closed_sets_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.779705,
+  "eur": 0.807614,
+  "elapsed_s": 763.3,
+  "status": "completed",
+  "response_id": "resp_0b4ee92392b1f5ac006aaad42ff45887d2b6a87dc8290f7df1",
+  "when": "2026-09-16T17:51:38Z"
+}

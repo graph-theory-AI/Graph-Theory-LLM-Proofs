@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove gamma(G) <= floor(n/4+b/8), where b counts vertices with bipartite open neighborhoods, establishing the conjectured bound when b=0.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not settled; novelty of this structural bound has not been checked.",
+  "id": "domination_in_plane_triangulations",
+  "model": "gpt-6-astra",
+  "usd": 0.815765,
+  "eur": 0.844965,
+  "elapsed_s": 829.6,
+  "status": "completed",
+  "response_id": "resp_06fa0c41b9abc7ce006aaad2876fac87d298a6cb2c05fa1807",
+  "when": "2026-09-16T17:45:40Z"
+}

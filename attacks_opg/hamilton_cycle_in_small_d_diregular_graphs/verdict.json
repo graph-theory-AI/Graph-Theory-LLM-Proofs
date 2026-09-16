@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "Under the stated minimum-degree definition, two regular tournaments sharing one vertex give a counterexample on exactly 4d+1 vertices.",
+  "would_publish": false,
+  "caveats": "This disproves the explicitly stated at-least-d version, not the different conjecture requiring both degrees to equal d.",
+  "id": "hamilton_cycle_in_small_d_diregular_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.08168,
+  "eur": 0.084604,
+  "elapsed_s": 67.7,
+  "status": "completed",
+  "response_id": "resp_01bdf038c28be36e006aaad583025487d29b4ac394f1e6b74e",
+  "when": "2026-09-16T17:45:42Z"
+}

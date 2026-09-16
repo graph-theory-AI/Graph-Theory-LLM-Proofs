@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "list_chromatic_number_and_maximum_degree_of_bipartite_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "List chromatic number and maximum degree of bipartite graphs",
+    "paper": "http://www.openproblemgarden.org/op/list_chromatic_number_and_maximum_degree_of_bipartite_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/list_chromatic_number_and_maximum_degree_of_bipartite_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "list_chromatic_number_and_maximum_degree_of_bipartite_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/list_chromatic_number_and_maximum_degree_of_bipartite_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/list_chromatic_number_and_maximum_degree_of_bipartite_graphs",
+    "catalog_title": "List chromatic number and maximum degree of bipartite graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-12",
+    "authors": "Alon, Noga",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Conjecture There is a constant $ c $ such that the list chromatic number of any bipartite graph $ G $ of maximum degree $ \\Delta $ is at most $ c \\log \\Delta $ .",
+    "context_text": "For definitions and an introduction to list colouring, see the related Wikipedia page . Alon [A] showed that the list chromatic number of a graph (not necessarily bipartite) of maximum degree $ \\Delta $ is at least $ \\frac{1}{2}(1-o(1))\\log_2\\Delta $ . Random bipartite graphs show that this is tight up to a multiplicative factor $ (2+o(1)) $ . It is not diffcult to see that the list chromatic number of any bipartite graph $ G $ of maximum degree $ \\Delta $ is at most $ O(\\Delta/\\log \\Delta) $ . It also follows a more general result of Johansson [J] on triangle-free graphs.",
+    "references_text": "- *[A] N. Alon, Degrees and choice numbers, Random Structures Algorithms, 16 (2000), 364--368.\n- [AK] N. Alon and M. Krivelevich, The choice number of random bipartite graphs, Annals of Combi- natorics 2 (1998), 291-297.\n- [J] A. Johansson. Asymptotic choice number for triangle free graphs. Technical Report 91\u201395, DIMACS, 1996."
+  },
+  "started": "2026-09-16T17:57:10Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
