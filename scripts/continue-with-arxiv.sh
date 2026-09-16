@@ -47,11 +47,9 @@ pending = [r for r in rows if r["id"] not in done]
 print(f"{len(rows)} arXiv rows, {len(done)} already attacked, {len(pending)} pending")
 PY
 
-if ! pgrep -f '[c]ommit-loop.sh' >/dev/null; then
-  nohup env INTERVAL=900 COMMIT_SCRIPT="$ROOT/scripts/commit-opg-attacks.sh" \
-    "$ROOT/scripts/commit-loop.sh" >>"$ROOT/attacks_opg/commit-loop.log" 2>&1 &
-  echo "commit-loop pid $!"
-fi
+# Artifacts are committed by hand. To commit periodically instead, run the loop
+# yourself in another shell:
+#   INTERVAL=900 COMMIT_SCRIPT=scripts/commit-opg-attacks.sh scripts/commit-loop.sh
 
 echo "launching arXiv leg jobs=$JOBS hours=$HOURS tier=$TIER $(date -Is)"
 exec "$PY" -u "$ROOT/attack.py" sweep --corpus arxiv --model gpt-6-astra \

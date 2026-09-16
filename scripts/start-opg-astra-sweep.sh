@@ -32,11 +32,9 @@ echo "=== start-opg-astra-sweep $(date -Is) jobs=$JOBS hours=$HOURS tier=$TIER =
 "$ROOT/.venv/bin/python" "$ROOT/attack.py" spend --corpus opg
 "$ROOT/.venv/bin/python" "$ROOT/attack.py" queue --corpus opg -n 5
 
-if ! pgrep -f '[c]ommit-loop.sh' >/dev/null; then
-  nohup env INTERVAL=900 COMMIT_SCRIPT="$ROOT/scripts/commit-opg-attacks.sh" \
-    "$ROOT/scripts/commit-loop.sh" >>"$ROOT/attacks_opg/commit-loop.log" 2>&1 &
-  echo "commit-loop pid $!"
-fi
+# Artifacts are committed by hand. To commit periodically instead, run the loop
+# yourself in another shell:
+#   INTERVAL=900 COMMIT_SCRIPT=scripts/commit-opg-attacks.sh scripts/commit-loop.sh
 
 exec "$ROOT/.venv/bin/python" -u "$ROOT/attack.py" sweep \
   --corpus opg --service-tier "$TIER" --jobs "$JOBS" --hours "$HOURS"
