@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A one-ended cubic graph admitting a vertex enumeration whose sufficiently large initial segments have at most five outgoing edges cannot be uniquely Hamiltonian.",
+  "would_publish": false,
+  "caveats": "This is a restricted low-width obstruction, not a resolution of the general question; literature novelty is not claimed.",
+  "id": "infinite_uniquely_hamiltonian_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.429015,
+  "eur": 1.480166,
+  "elapsed_s": 1183.2,
+  "status": "completed",
+  "response_id": "resp_0397b921f1718ca1006aaad62976e887d2aea8e5a6cde6ead2",
+  "when": "2026-09-16T18:07:04Z"
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "oriented_chromatic_number_of_planar_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Oriented chromatic number of planar graphs",
+    "paper": "http://www.openproblemgarden.org/op/oriented_chromatic_number_of_planar_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/oriented_chromatic_number_of_planar_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "oriented_chromatic_number_of_planar_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/oriented_chromatic_number_of_planar_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/oriented_chromatic_number_of_planar_graphs",
+    "catalog_title": "Oriented chromatic number of planar graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-08-04",
+    "authors": "",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "An oriented colouring of an oriented graph is assignment $ c $ of colours to the vertices such that no two arcs receive ordered pairs of colours $ (c_1,c_2) $ and $ (c_2,c_1) $ . It is equivalent to a homomorphism of the digraph onto some tournament of order $ k $ . Problem What is the maximal possible oriented chromatic number of an oriented planar graph?",
+    "context_text": "Raspaud and Sopena [RS] showed using Borodin's result about acyclic chromatic number of planar graphs, that every planar oriented graph has oriented chromatic number at most 80. (Their motivation came from a work of Courcelle [C] concerning the monadic second-order logic of graphs. That, however, deals with a stronger variant of coloring.) On the other hand, Marshall [M] showed that there is an oriented planar graph with oriented chromatic number at least~17.",
+    "references_text": "- [C] B. Courcelle, The monadic second order logic of graphs VI: On several representations of graphs by relational structures, Discrete Appl. Math. 54 ( 1994),\n- [M] T. H. Marshall. On -universal graphs. Research Report 2001-510, KAM-DIMATIA Series, 2001.\n- *[RS] A. Raspaud and E. Sopena. Good and semi-strong colorings of oriented planar graphs. Inform. Process. Lett., 51(4):171\u2013174, 1994. MathSciNet"
+  },
+  "started": "2026-09-16T18:05:41Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

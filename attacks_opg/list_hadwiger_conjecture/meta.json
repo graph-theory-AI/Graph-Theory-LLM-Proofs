@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "list_hadwiger_conjecture",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "List Hadwiger Conjecture",
+    "paper": "http://www.openproblemgarden.org/op/list_hadwiger_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/list_hadwiger_conjecture/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "list_hadwiger_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/list_hadwiger_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/list_hadwiger_conjecture",
+    "catalog_title": "List Hadwiger Conjecture",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2014-07-07",
+    "authors": "Kawarabayashi, Ken-ichi, Mohar, Bojan",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Conjecture Every $ K_t $ -minor-free graph is $ c t $ -list-colourable for some constant $ c\\geq1 $ .",
+    "context_text": "Hadwiger's conjecture asserts that every $ K_t $ - minor -free graph is $ (t \u2212 1) $ -colourable. Robertson, Seymour and Thomas [RST] proved Hadwiger's conjecture for $ t \\leq 6 $ . It remains open for $ t \\geq 7 $ . In fact, it is open whether every $ K_t $ -minor-free graph is $ ct $ -colourable for some constant $ c\\geq 1 $ . It is natural to consider analogous problems for list colourings . First, consider planar graphs. While every planar graph is 4-colourable, Erd\u00f6s, Rubin and Taylor. [ERT] conjectured that some planar graph is not 4-list-colourable, and that every planar graph is 5-list-colourable. The first conjecture was verified by Voigt [V] and the second by Thomassen [T]. More generally, Borowiecki [B] asked whether every $ K_t $ -minor-free graph is $ (t \u2212 1) $ -list-colourable, which is true for $ t \\leq 4 $ but false for $ t = 5 $ by Voigt\u2019s example. Kawarabayashi and Mohar [KM] proposed the stated conjecture, and suggested it might be true with $ c=\\frac{3}{2} $ . Bar\u00e1t, Joret and Wood [BJW] proved that $ c\\geq\\frac{4}{3} $ . In particular, they constructed a $ K_{3t+2} $ -minor-free graph that is not $ 4t $ -list-colourable.",
+    "references_text": "- [B] Mieczyslaw Borowiecki. Research problem 172. Discrete Math., 121:235\u2013236, 1993. .\n- [BJW] Janos Bar\u00e1t, Gwenael Joret, David R. Wood. Disproof of the List Hadwiger Conjecture, Electronic J. Combinatorics 18:P232, 2011.\n- [ERT] Paul Erdo \u030bs, Arthur L. Rubin, and Herbert Taylor. Choosability in graphs. In Proc. West Coast Conference on Combinatorics, Graph Theory and Computing, vol. XXVI of Congress. Numer., pp. 125\u2013157. Utilitas Math., 1980. MathSciNet.\n- *[KM] Ken-ichi Kawarabayashi and Bojan Mohar. A relaxed Hadwiger\u2019s conjecture for list colorings. J. Combin. Theory Ser. B, 97(4):647\u2013651, 2007. MathSciNet.\n- [RST] Neil Robertson, Paul D. Seymour, and Robin Thomas. Hadwiger\u2019s conjecture for -free graphs. Combinatorica, 13(3):279\u2013361, 1993. MathSciNet.\n- [T] Carsten Thomassen. Every planar graph is 5-choosable. J. Combin. Theory Ser. B, 62(1):180\u2013181, 1994. MathSciNet."
+  },
+  "started": "2026-09-16T18:00:06Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

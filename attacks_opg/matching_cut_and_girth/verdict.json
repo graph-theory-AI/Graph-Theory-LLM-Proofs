@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "For every girth bound there is a simple 7-regular graph with no matching cut, so d = 8 refutes the universal assertion.",
+  "would_publish": false,
+  "caveats": "Matching cuts are understood to use nonempty proper vertex sets; no novelty or optimal degree threshold is claimed.",
+  "id": "matching_cut_and_girth",
+  "model": "gpt-6-astra",
+  "usd": 0.569885,
+  "eur": 0.590284,
+  "elapsed_s": 411.5,
+  "status": "completed",
+  "response_id": "resp_0114eada472cf11b006aaad9b9b04887d28032d0ad90714243",
+  "when": "2026-09-16T18:09:25Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Both conjectures hold for finite twin inflations of locally finite graphs, a class containing every countably infinite graph with a finite vertex cover.",
+  "would_publish": false,
+  "caveats": "Special case only, using Hamilton circles in the vertex\u2013end space; no claim of novelty or full resolution.",
+  "id": "hamiltonian_cycles_in_powers_of_infinite_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.71318,
+  "eur": 0.738708,
+  "elapsed_s": 1038.8,
+  "status": "completed",
+  "response_id": "resp_0dbf623967362de9006aaad5c560f487d2b5031587ce1b92da",
+  "when": "2026-09-16T18:02:59Z"
+}

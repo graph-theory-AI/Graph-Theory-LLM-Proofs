@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "matching_cut_and_girth",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Matching cut and girth",
+    "paper": "http://www.openproblemgarden.org/op/matching_cut_and_girth",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/matching_cut_and_girth/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "matching_cut_and_girth",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/matching_cut_and_girth/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/matching_cut_and_girth",
+    "catalog_title": "Matching cut and girth",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2011-11-30",
+    "authors": "",
+    "subject": "Graph Theory",
+    "statement_text": "Question For every $ d $ does there exists a $ g $ such that every graph with average degree smaller than $ d $ and girth at least $ g $ has a matching-cut?",
+    "context_text": "Let $ G=(V,E) $ be a graph. A matching $ M $ is a matching-cut if there exists a set $ S\\subset V $ such that $ M = E(S:V\\setminus S) $ . Graphs having a matching-cut are called decomposable. It is known that every graph with $ |E| < 3(|V|-1)/2 $ is decomposable [BFP11].",
+    "references_text": "- [C84] V. Chv\u00e1tal, Recognizing decomposable graphs, J Graph Theory 8 (1984), 51\u201353\n- [BFP11] P. Bonsma, A. Farley, A. Proskurowski, Extremal graphs having no matching cuts, J Graph Theory (2011)"
+  },
+  "started": "2026-09-16T18:02:33Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

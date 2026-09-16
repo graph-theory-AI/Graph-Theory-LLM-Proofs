@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds when at most 2k+1 vertices outside T have odd degree, by a splitting-off and hypergraph-packing argument.",
+  "would_publish": false,
+  "caveats": "The full conjecture is not resolved here, and novelty of this special case has not been checked.",
+  "id": "kriesells_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.81715,
+  "eur": 0.8464,
+  "elapsed_s": 1256.1,
+  "status": "completed",
+  "response_id": "resp_0833a21b99d3e844006aaad701e74887d2819cf0d16f0fdb11",
+  "when": "2026-09-16T18:11:53Z"
+}

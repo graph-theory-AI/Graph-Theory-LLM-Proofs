@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "lovasz_path_removal_conjecture",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Lov\u00e1sz Path Removal Conjecture",
+    "paper": "http://www.openproblemgarden.org/op/lovasz_path_removal_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/lovasz_path_removal_conjecture/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "lovasz_path_removal_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/lovasz_path_removal_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/lovasz_path_removal_conjecture",
+    "catalog_title": "Lov\u00e1sz Path Removal Conjecture",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-04",
+    "authors": "Lovasz, Laszlo",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture There is an integer-valued function $ f(k) $ such that if $ G $ is any $ f(k) $ -connected graph and $ x $ and $ y $ are any two vertices of $ G $ , then there exists an induced path $ P $ with ends $ x $ and $ y $ such that $ G-V(P) $ is $ k $ -connected.",
+    "context_text": "It follows from a theorem of Tutte that any 3-connected graph contains a non-separating path connecting any two vertices, and consequently, $ f(1)=3 $ . When $ k=2 $ , it was independently shown by Chen, Gould, and Yu [CGY] and Kriesell [K] that $ f(2) = 5 $ . Anwering a conjecture of Kriesell, Kawarabayashi et al. [KLRW] proved the following weaker statement, in which one only removes the edges of the path. Theorem There exists a function $ f(k) $ such that for every $ f(k) $ -connected graph $ G $ and any two vertices $ x $ and $ y $ of $ G $ , there exists an induced path $ P $ with ends $ x $ and $ y $ such that $ G\\setminus E(P) $ is $ k $ -connected.",
+    "references_text": "- [CGY] G. Chen, R. Gould, X. Yu, Graph connectivity after path removal, Combinatorica 23 (2003) 185--203.\n- [KLRW] K. Kawarabayashi, O. Lee, B. Reed, and P. Wollan, A weaker version of Lovasz's path removal conjecture, Journal of Combinatorial Theory, Series B 98 (2008) 972--979.\n- [K] M. Kriesell, Induced paths in 5-connected graphs, J. of Graph Theory, 36 (2001), 52--58.\n- *[T] C. Thomassen, Graph decompositions with applications to subdivisions and path systems modulo k, J. of Graph Theory, 7 (1983), 261--271."
+  },
+  "started": "2026-09-16T18:01:01Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

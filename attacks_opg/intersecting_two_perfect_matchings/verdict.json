@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A fractional-matching argument proves the conjecture for fewer than 70 vertices and gives broader sufficient conditions, while a sharp construction shows that the first matching cannot be prescribed arbitrarily.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not settled, and novelty of the partial results is not claimed.",
+  "id": "intersecting_two_perfect_matchings",
+  "model": "gpt-6-astra",
+  "usd": 1.368695,
+  "eur": 1.417687,
+  "elapsed_s": 1028.9,
+  "status": "completed",
+  "response_id": "resp_069cecdf6095ee44006aaad66e2f0087d2bb1085e245677e11",
+  "when": "2026-09-16T18:05:38Z"
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "list_colorings_of_edge_critical_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "List colorings of edge-critical graphs",
+    "paper": "http://www.openproblemgarden.org/op/list_colorings_of_edge_critical_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/list_colorings_of_edge_critical_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Edge coloring"
+  },
+  "dossier_meta": {
+    "id": "list_colorings_of_edge_critical_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/list_colorings_of_edge_critical_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/list_colorings_of_edge_critical_graphs",
+    "catalog_title": "List colorings of edge-critical graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-06-12",
+    "authors": "Mohar, Bojan",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Edge coloring",
+    "statement_text": "Conjecture Suppose that $ G $ is a $ \\Delta $ -edge-critical graph. Suppose that for each edge $ e $ of $ G $ , there is a list $ L(e) $ of $ \\Delta $ colors. Then $ G $ is $ L $ -edge-colorable unless all lists are equal to each other.",
+    "context_text": "(Reproduced from [M].) A graph $ G $ is said to be $ \\Delta $ -edge-critical if it is not $ \\Delta $ -edge-colorable but every edge-deleted subgraph is $ \\Delta $ -edge-colorable. (Here $ \\Delta $ is the maximum degree of $ G $ .)",
+    "references_text": "- *[M] B. Mohar, Problem of the Month"
+  },
+  "started": "2026-09-16T17:58:06Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

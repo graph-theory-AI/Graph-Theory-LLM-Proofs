@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For graphs with no induced cycle longer than ell, connectivity at least k + floor(ell/2) + 1 guarantees that deleting any shortest x-y path leaves a k-connected graph.",
+  "would_publish": false,
+  "caveats": "No unrestricted bound f(k) is obtained; novelty of these restricted-class results is not claimed.",
+  "id": "lovasz_path_removal_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.84939,
+  "eur": 0.879794,
+  "elapsed_s": 609.2,
+  "status": "completed",
+  "response_id": "resp_072ce33725e966c0006aaad95dddc087d29d0fcb34aa9f9565",
+  "when": "2026-09-16T18:11:10Z"
+}
