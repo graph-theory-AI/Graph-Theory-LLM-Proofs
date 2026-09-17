@@ -156,8 +156,11 @@ $S$ = top-$k$, which is legitimate because $x\mapsto\min\{k,x\}$ is nondecreasin
 | 7 | 1044 | 85 | 0 | 0 | 11 |
 | 8 | 12346 | 567 | 0 | 0 | 14 |
 | 9 | 274668 | 6554 | 0 | 0 | 17 |
+| 10 | 12005168 | 139742 | 0 | 0 | 20 |
 
-This reproduces the literature's "verified for $\le9$ vertices".
+This reproduces the literature's "verified for $\le9$ vertices" and extends my own
+exhaustive verification to $n=10$ (all $12\,005\,168$ non-isomorphic graphs on 10
+vertices; $139\,742$ of them satisfy the hypothesis with $m>0$).
 
 **2. Audit of the writeup's internal steps (2)–(7), over EVERY $S$ and every
 maximum-degree vertex** (`audit_steps_D4.py`, written for this run). This is the check
@@ -217,9 +220,13 @@ $n=20,60,150$) elsewhere. Complete split graphs are automatically excluded — t
 vertices are adjacent and equidegree, so they violate the hypothesis — which is a useful
 confirmation that the filter is doing real work.
 
-**6. Randomized search beyond exhaustive range** (`search_large.py`, annealing on
-$n=8,\dots,24$ minimizing the lemma slack subject to all imbalances positive): no lemma
-violation and no non-graphic $M_G$ found.
+**6. Randomized search beyond exhaustive range** (`search_large.py`, and a
+reduced-budget rerun of the same annealing scheme): simulated annealing on
+$n=8,\dots,24$, minimizing the lemma slack under a hard penalty for any zero imbalance,
+6 restarts per $n$, 102 hypothesis-satisfying local optima. Result: **0 lemma
+violations, 0 non-graphic $M_G$**, global minimum slack $0$. The per-$n$ minima found
+were slack $0$ for $n=8..16$ (the annealer keeps rediscovering stars) and then
+$4,4,5,8,7,5,15,28$ for $n=17,\dots,24$. Nothing ever goes negative.
 
 No computational check contradicts anything in the writeup. `computation_run: true`.
 
@@ -269,7 +276,8 @@ where the key convexity estimate (6) genuinely fails, $\Delta=3,k=2$, is exactly
 case the writeup removes by hand beforehand — I confirmed both the failure and the
 completeness of the case split by exhaustive parameter sweep. Computationally, the
 conjecture, the lemma and every internal step (2)–(7) survive exhaustive checking over
-all graphs up to 9 vertices (for the internal steps, over *every* $k$-subset $S$ and
+all graphs up to 9 vertices (and the conjecture and lemma up to 10 vertices, all
+12,005,168 of them) (for the internal steps, over *every* $k$-subset $S$ and
 every maximum-degree vertex) and over sparse graphs up to 14 vertices, where the lemma
 is exactly tight on stars with slack 0 and never negative.
 

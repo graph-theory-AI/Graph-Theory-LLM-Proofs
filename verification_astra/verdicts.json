@@ -1,16 +1,10 @@
 {
-  "reviewed": 26,
-  "pending": [
-    "2402.10782__01",
-    "2509.09031__00",
-    "2603.02786__00",
-    "2604.09449__03",
-    "circular_colouring_the_orthogonality_graph"
-  ],
+  "reviewed": 31,
+  "pending": [],
   "counts": {
-    "MINOR_GAPS": 9,
-    "CONFIRMED": 11,
-    "ALREADY_KNOWN": 6
+    "MINOR_GAPS": 11,
+    "CONFIRMED": 13,
+    "ALREADY_KNOWN": 7
   },
   "verdicts": [
     {
@@ -168,6 +162,20 @@
       "claimed_one_line": "An explicit gap reduction shows that RFCPP has no polynomial-time o(log |V|)-approximation unless P=NP, and hence rules out constant-factor approximation under that assumption."
     },
     {
+      "id": "2402.10782__01",
+      "leg": "attacks_retry",
+      "claimed_verdict": "proved",
+      "review_verdict": "ALREADY_KNOWN",
+      "confidence": "high",
+      "interpretation_ok": true,
+      "references_ok": true,
+      "computation_run": true,
+      "one_line": "Every step checks out and the 3-SAT reduction proving path-FAS NP-complete is correct and appears genuinely new, but the writeup's other announced half (matching-FAS in O(n^3)) and its self-declared \"new ingredient\" (the two-state U_m gadget, plus the score-localization lemma and the degree-d dynamic program) are all already published \u2014 Davot, Isenmann, Roy, Thiebaut, \"Degreewidth: a new parameter for solving problems on tournaments\" (arXiv:2212.06007, WG 2023) and Keeney, Lokshtanov, \"Degreewidth on semi-complete digraphs\" (WG 2024).",
+      "claimed_confidence": "high",
+      "claimed_would_publish": true,
+      "claimed_one_line": "The path-FAS problem is NP-complete, whereas the maximum-degree-1 FAS problem is polynomial-time solvable."
+    },
+    {
       "id": "2506.08810__03",
       "leg": "attacks_retry",
       "claimed_verdict": "disproved",
@@ -196,6 +204,20 @@
       "claimed_one_line": "An odd regular polygon with a central cluster yields point sets requiring at least 3n/4 - O(sqrt(n)) crossing-free paths."
     },
     {
+      "id": "2509.09031__00",
+      "leg": "attacks_retry",
+      "claimed_verdict": "disproved",
+      "review_verdict": "MINOR_GAPS",
+      "confidence": "medium",
+      "interpretation_ok": true,
+      "references_ok": true,
+      "computation_run": true,
+      "one_line": "No error found \u2014 the class of \"thread-complete\" graphs is genuinely contraction/subdivision-closed (verified exhaustively), the (2,1)-quasi-isometry and all Section-6 distance identities check out computationally, and the quantitative core reproduces exactly as an LP; several justifications are terse but all are routinely repairable, and the intricate rigidity Lemma 3.1 could only be checked by hand.",
+      "claimed_confidence": "high",
+      "claimed_would_publish": true,
+      "claimed_one_line": "A finite counterexample is obtained from a contraction- and subdivision-closed class whose branch vertices are pairwise joined by internally degree-two paths."
+    },
+    {
       "id": "2510.11311__04",
       "leg": "attacks_retry",
       "claimed_verdict": "disproved",
@@ -208,6 +230,20 @@
       "claimed_confidence": "high",
       "claimed_would_publish": true,
       "claimed_one_line": "The anti-directed C4 is not Eulerian-avoidable: Eulerian oriented graphs can have arbitrarily large minimum out-degree while having no anti-directed-C4-free subdigraph of minimum out-degree 2."
+    },
+    {
+      "id": "2603.02786__00",
+      "leg": "attacks_retry",
+      "claimed_verdict": "proved",
+      "review_verdict": "MINOR_GAPS",
+      "confidence": "medium",
+      "interpretation_ok": true,
+      "references_ok": true,
+      "computation_run": true,
+      "one_line": "Every step of the CRT-phase construction checks out and I verified the whole Section 5 block packing (composites included) by brute force, but the prime-range core is Theorem 1.1 of arXiv:2609.07487 (Hou-Liu-Zhao, 7 Sep 2026, nine days before the attack ran); only the bundle/colouring extension to composite differences is new.",
+      "claimed_confidence": "high",
+      "claimed_would_publish": true,
+      "claimed_one_line": "Fixed-size CRT-generic prime blocks, together with clustered residue classes for their multiples and a tail decomposition, give m(n) ~ (4/3)n^(3/2)/log n."
     },
     {
       "id": "2603.02786__01",
@@ -238,6 +274,20 @@
       "claimed_one_line": "A random-composition fractional tiling, rounded by edge-colouring and a reservoir, proves M_k(n)=nk+o(k) for every fixed n."
     },
     {
+      "id": "2604.09449__03",
+      "leg": "attacks_retry",
+      "claimed_verdict": "proved",
+      "review_verdict": "CONFIRMED",
+      "confidence": "high",
+      "interpretation_ok": true,
+      "references_ok": true,
+      "computation_run": true,
+      "one_line": "Every step checks out \u2014 the O(k log k) bound is proved in the source paper's own vector-label formulation (and in fact also improves the paper's cornerstone K_{n,n} matching theorem from O(k^2) to O(k log k)); no prior art found, and the only web hit tying this claim to the paper is this campaign's own repository.",
+      "claimed_confidence": "high",
+      "claimed_would_publish": true,
+      "claimed_one_line": "The requested O(k^2) bound improves to O(k log(k+1)) for Hamilton cycles in both complete and complete bipartite graphs, including for bounded vector labels in an arbitrary norm."
+    },
+    {
       "id": "a_generalization_of_vizings_theorem",
       "leg": "attacks_opg",
       "claimed_verdict": "disproved",
@@ -264,6 +314,20 @@
       "claimed_confidence": "high",
       "claimed_would_publish": true,
       "claimed_one_line": "A random h-lift of K_5 has chromatic number 3 asymptotically almost surely."
+    },
+    {
+      "id": "circular_colouring_the_orthogonality_graph",
+      "leg": "attacks_retry",
+      "claimed_verdict": "proved",
+      "review_verdict": "CONFIRMED",
+      "confidence": "high",
+      "interpretation_ok": true,
+      "references_ok": true,
+      "computation_run": true,
+      "one_line": "The geometric odd-walk lemma is correct (re-verified in exact arithmetic on seven explicit triples and on ~4000 random ones), the locally-bipartite reduction and the K_{p/q} lemma are correct and sharp, so the proof that \u03c7_c(\ud835\udcaa) = 4 stands; it resolves Conjecture 4.41 of Ghebleh's 2007 SFU thesis, whose Theorem 4.40 (\u03c7_c \u2265 11/3, not the catalog's 3.5) is the true published state of the art.",
+      "claimed_confidence": "high",
+      "claimed_would_publish": true,
+      "claimed_one_line": "A geometric odd-walk lemma excludes every homomorphism from O to a finite locally bipartite graph, and consequently proves \u03c7_c(O)=4."
     },
     {
       "id": "covering_powers_of_cycles_with_equivalence_subgraphs",

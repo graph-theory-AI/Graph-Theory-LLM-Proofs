@@ -122,5 +122,29 @@ if toks and u.get("output_tokens"):
     lines.append("- Per-review token detail lives in `verdicts.json` (`review_tokens`).")
     lines.append("")
 
+# ALREADY_KNOWN is doing double duty, so spell out what each one means: a full
+# supersession is a different finding from a partly-known result whose new half
+# stands. Ordered by how much of the claim survives.
+known = [e for e in entries if e["review_verdict"] == "ALREADY_KNOWN"]
+if known:
+    lines.append("## What the ALREADY_KNOWN verdicts mean")
+    lines.append("")
+    lines.append("In every case below the referee checked the mathematics and did not break it. "
+                 "The verdict is about priority, not correctness, and the margins are days to "
+                 "weeks rather than decades. Two of the superseding papers state that their own "
+                 "proofs were first produced by an OpenAI model, so on these problems the "
+                 "campaign is racing comparable pipelines and losing on publication speed.")
+    lines.append("")
+    lines.append("| id | what is superseded |")
+    lines.append("|:--|:--|")
+    for e in sorted(known, key=lambda e: e["id"]):
+        one = (e.get("one_line") or "").replace("|", "\\|")
+        lines.append(f"| [`{e['id']}`]({e['id']}.md) | {one} |")
+    lines.append("")
+    lines.append("`2402.10782__01` is the odd one out and should not be read as fully known: its "
+                 "NP-completeness half is new and correct, and only the second announced half and "
+                 "the gadget it advertised as novel are prior art.")
+    lines.append("")
+
 (HERE / "SUMMARY.md").write_text("\n".join(lines) + "\n")
 print(f"SUMMARY.md written: {len(entries)} entries, counts {dict(counts)}")
