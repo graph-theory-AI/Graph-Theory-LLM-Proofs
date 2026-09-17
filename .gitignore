@@ -33,3 +33,14 @@ attacks_retry/**/encrypted_reasoning.json
 attacks_retry/**/claimed.json
 attacks_retry/spend.lock
 attacks_retry/*.log
+# Verification scratch: third-party papers, binaries and caches are not artifacts.
+verification_astra/**/*.pdf
+verification_astra/**/ref/
+verification_astra/**/paper.txt
+verification_astra/**/*.npy
+verification_astra/**/*.pyc
+verification_astra/**/__pycache__/
+verification_astra/scripts/**/bigclique
+verification_astra/scripts/**/anneal
+verification_astra/scripts/**/eta
+verification_astra/scripts/**/eta2

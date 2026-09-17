@@ -1,0 +1,2 @@
+checked 4562 graphs on n=10
+ALL CHECKS PASSED

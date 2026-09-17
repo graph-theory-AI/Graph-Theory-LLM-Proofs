@@ -1,0 +1,1 @@
+n=11 graphs=21372807 non-exceptional-min-eta=32 (attained by J?aJCpa[n~_) below-bound=0

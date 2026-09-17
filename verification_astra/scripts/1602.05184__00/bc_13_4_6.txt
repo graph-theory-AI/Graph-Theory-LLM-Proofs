@@ -1,0 +1,1 @@
+n=13 k=4 shard=6: graphs=1523584 min-nonexceptional-eta=26 2n=26 below=0

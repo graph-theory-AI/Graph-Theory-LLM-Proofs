@@ -1,0 +1,1 @@
+n=11 graphs=11935520 non-exceptional-min-eta=37 (attained by J?`DBHdef~_) below-bound=0

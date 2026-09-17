@@ -1,0 +1,1 @@
+n=11 k=5 shard=17: graphs=11136864 min-nonexceptional-eta=22 2n=22 below=0

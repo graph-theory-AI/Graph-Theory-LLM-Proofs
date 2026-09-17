@@ -1,0 +1,1 @@
+n=11 graphs=16851696 non-exceptional-min-eta=33 (attained by JCe[}~^n|~_) below-bound=0
