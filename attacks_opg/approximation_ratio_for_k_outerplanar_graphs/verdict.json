@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For every k, an explicit k-outerplanar subcubic instance of treewidth at most 2k has natural MaxEDP/MaxIMF LP integrality gap exactly k.",
+  "would_publish": false,
+  "caveats": "This refutes a parameter-independent natural-LP bound, not constant-factor approximation relative to the integer optimum; no novelty is claimed.",
+  "id": "approximation_ratio_for_k_outerplanar_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.708185,
+  "eur": 0.733534,
+  "elapsed_s": 709.8,
+  "status": "completed",
+  "response_id": "resp_0e139be653205321006aaacb77d40087d2be033b3efce2a746",
+  "when": "2026-09-16T17:13:33Z"
+}

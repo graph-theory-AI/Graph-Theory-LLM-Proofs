@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every pair of cyclic midpoint colorings admits a rainbow stacking in every odd order, with an extension to midpoint colorings over abelian groups whose Sylow subgroups are homocyclic.",
+  "would_publish": false,
+  "caveats": "Arbitrary proper colorings remain untreated; the literature novelty of the auxiliary affine-avoidance result has not been checked.",
+  "id": "2405.14795__01",
+  "model": "gpt-6-astra",
+  "usd": 1.241615,
+  "eur": 1.286058,
+  "elapsed_s": 1033.6,
+  "status": "completed",
+  "response_id": "resp_034dc6ff560d2200006aab43bc3ff087d287a7addc96a7d15c",
+  "when": "2026-09-17T01:52:05Z"
+}

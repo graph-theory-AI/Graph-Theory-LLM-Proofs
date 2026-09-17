@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove a quantitative disjoint-union closure theorem for modulators, but do not resolve the unknown connected-target cases.",
+  "would_publish": false,
+  "caveats": "The closure result may be standard; no novelty claim or new connected chordal case is asserted.",
+  "id": "2301.02138__00",
+  "model": "gpt-6-astra",
+  "usd": 0.86083,
+  "eur": 0.891643,
+  "elapsed_s": 854.6,
+  "status": "completed",
+  "response_id": "resp_02872de8e18792e4006aaaf85388cc87d29e255388fc51d52b",
+  "when": "2026-09-16T20:27:21Z"
+}

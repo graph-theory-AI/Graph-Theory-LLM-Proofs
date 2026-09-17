@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Graceful-labeling search has a one-sided randomized n^{O(k)} algorithm for trees with k non-leaf vertices, via an exact leaf-completion criterion.",
+  "would_publish": false,
+  "caveats": "This is an algorithmic partial result, not a general existence proof; novelty is not established.",
+  "id": "graceful_tree_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.1525,
+  "eur": 1.193754,
+  "elapsed_s": 973.7,
+  "status": "completed",
+  "response_id": "resp_0b028d22d5bb6f9e006aaae4ff3e5087d2919ffb08af0dadde",
+  "when": "2026-09-16T19:06:51Z"
+}

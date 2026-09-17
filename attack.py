@@ -43,21 +43,47 @@ _PRINT_LOCK = threading.Lock()
 _CATALOG_INDEX: dict[str, dict] | None = None
 
 MODEL = "gpt-5.6-sol"
+CORPUS = "arxiv"
+# Directories whose finished attacks also count as done, so a second leg of a
+# campaign writing to a new directory does not redo the first leg's work.
+DONE_DIRS: list[Path] = []
+SERVICE_TIER = "flex"
 SITE_ARXIV = "https://graph-theory-ai.github.io/graph-conjectures/arxiv/{id}/"
 SITE_OPG = "https://graph-theory-ai.github.io/graph-conjectures/op/{slug}/"
 ARXIV_ABS = "https://arxiv.org/abs/{arxiv_id}"
 ARXIV_HTML = "https://arxiv.org/html/{arxiv_id}"
 
-# Promo rates through 2026-11-21 (OpenAI). Reasoning tokens bill as output.
-PRICE = {
-    "input": 4.00 / 1_000_000,
-    "cached_input": 0.40 / 1_000_000,
-    "output": 20.00 / 1_000_000,
-    "long_input": 8.00 / 1_000_000,
-    "long_cached": 0.80 / 1_000_000,
-    "long_output": 30.00 / 1_000_000,
-    "long_threshold": 272_000,
+# USD per token. Reasoning tokens bill as output. Long tier applies to the whole
+# request once the prompt exceeds `long_threshold` tokens.
+MODEL_PRICES = {
+    # gpt-5.6-sol promo rates through 2026-11-21.
+    "gpt-5.6-sol": {
+        "input": 4.00 / 1_000_000,
+        "cached_input": 0.40 / 1_000_000,
+        "output": 20.00 / 1_000_000,
+        "long_input": 8.00 / 1_000_000,
+        "long_cached": 0.80 / 1_000_000,
+        "long_output": 30.00 / 1_000_000,
+        "long_threshold": 272_000,
+    },
+    # developers.openai.com/api/docs/pricing, checked 2026-09-16.
+    "gpt-6-astra": {
+        "input": 10.00 / 1_000_000,
+        "cached_input": 1.00 / 1_000_000,
+        "output": 50.00 / 1_000_000,
+        "long_input": 20.00 / 1_000_000,
+        "long_cached": 2.00 / 1_000_000,
+        "long_output": 75.00 / 1_000_000,
+        "long_threshold": 272_000,
+    },
 }
+
+# Multiplies every rate. Batch and flex are half price, fast/priority double.
+# Flex is the default tier: these sweeps are batch jobs with no latency
+# requirement, and it halves the bill for identical output.
+TIER_MULTIPLIER = {"default": 1.0, "flex": 0.5, "batch": 0.5, "priority": 2.0}
+
+PRICE = MODEL_PRICES[MODEL]
 
 INSTRUCTIONS = """\
 You are a research mathematician attacking an open graph-theory conjecture.
@@ -216,17 +242,21 @@ def remaining(spend: dict) -> dict:
     }
 
 
+def tier_mult() -> float:
+    return TIER_MULTIPLIER.get(SERVICE_TIER, 1.0)
+
+
 def price_usd(input_tokens: int, output_tokens: int, cached_tokens: int = 0) -> float:
+    mult = tier_mult()
     long_ctx = input_tokens > PRICE["long_threshold"]
+    uncached = max(input_tokens - cached_tokens, 0)
     if long_ctx:
-        uncached = max(input_tokens - cached_tokens, 0)
-        return (
+        return mult * (
             uncached * PRICE["long_input"]
             + cached_tokens * PRICE["long_cached"]
             + output_tokens * PRICE["long_output"]
         )
-    uncached = max(input_tokens - cached_tokens, 0)
-    return (
+    return mult * (
         uncached * PRICE["input"]
         + cached_tokens * PRICE["cached_input"]
         + output_tokens * PRICE["output"]
@@ -379,15 +409,154 @@ def catalog_index() -> dict[str, dict]:
     return out
 
 
+_OPG_ROWS: list[dict] | None = None
+
+
+def opg_index() -> dict[str, dict]:
+    """Map OpenProblemGarden slugs to their catalog/problems.json records."""
+    data = json.loads((CATALOG / "problems.json").read_text())
+    return {rec["slug"]: rec for rec in data}
+
+
+def opg_records() -> list[dict]:
+    """OpenProblemGarden rows, easiest-looking first.
+
+    OPG has no difficulty ranking, so we order by the two proxies it does carry:
+    problems flagged accessible to undergraduates first, then by ascending
+    importance stars (Low, Medium, High, Outstanding), then by slug. The order
+    only matters if the budget runs out before the corpus does.
+    """
+    global _OPG_ROWS
+    if _OPG_ROWS is not None:
+        return _OPG_ROWS
+    rows = []
+    for rec in opg_index().values():
+        imp = rec.get("importance") or {}
+        subj = rec.get("subject_path") or []
+        rows.append(
+            {
+                "id": rec["slug"],
+                "tier": imp.get("stars"),
+                "score": float(imp.get("stars") or 0),
+                "lean": None,
+                "status": "open",
+                "title_md": rec.get("title") or rec["slug"],
+                "paper": rec.get("canonical_url") or "",
+                "source": "opg",
+                "url": SITE_OPG.format(slug=rec["slug"]),
+                "importance": imp.get("label"),
+                "undergrad": bool(rec.get("accessible_to_undergrads")),
+                "subject": subj[-1]["label"] if subj else "",
+            }
+        )
+    rows.sort(key=lambda r: (not r["undergrad"], r["score"], r["id"]))
+    _OPG_ROWS = rows
+    return rows
+
+
+# Where a retry sweep looks for finished attacks to reconsider, and which
+# corpus each directory's ids belong to.
+RETRY_SOURCES = (("attacks", "arxiv"), ("attacks_opg", "opg"))
+
+# Outcomes worth a second, stronger attempt. `partial` and `unknown` mean the
+# problem is still open and the first model got somewhere or nowhere; a claimed
+# resolution that failed the referee pass means the problem is still open too,
+# and the referee report says exactly what broke. `already_resolved`,
+# `ill_posed` and referee-confirmed resolutions are not open problems.
+RETRY_VERDICTS = {"partial", "unknown", "no_progress"}
+RETRY_REVIEW_VERDICTS = {"FATAL_ERROR", "MAJOR_GAP", "UNVERIFIABLE"}
+
+
+def review_index() -> dict[str, str]:
+    """Map catalog id -> adversarial referee verdict, when the pass has run."""
+    path = ROOT / "verification" / "verdicts.json"
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text())
+    except json.JSONDecodeError:
+        return {}
+    return {e["id"]: e.get("review_verdict") for e in data.get("verdicts", [])}
+
+
+def retry_records() -> list[dict]:
+    """Finished attacks that are still open, most promising first.
+
+    Ordering, best first:
+      1. a claimed resolution the referee pass rejected -- a full proof was
+         within reach and the report says where it failed;
+      2. `partial` at high confidence, easiest first;
+      3. everything else still open (lower confidence, then `unknown`).
+    """
+    reviews = review_index()
+    rank = {r["id"]: r for r in parse_ranking()}
+    opg_rank = {r["id"]: r for r in opg_records()}
+    rows: list[dict] = []
+    for dirname, source in RETRY_SOURCES:
+        root = ROOT / dirname
+        if not root.exists():
+            continue
+        for path in sorted(root.iterdir()):
+            vpath = path / "verdict.json"
+            if not path.is_dir() or not vpath.exists():
+                continue
+            try:
+                v = json.loads(vpath.read_text())
+            except json.JSONDecodeError:
+                continue
+            rec_id = path.name
+            review = reviews.get(rec_id)
+            verdict = v.get("verdict")
+            if review in RETRY_REVIEW_VERDICTS:
+                band = 0
+            elif verdict in RETRY_VERDICTS:
+                band = 1 if v.get("confidence") == "high" and verdict == "partial" else 2
+            else:
+                continue  # resolved, already known, or ill-posed: not open
+            base = (rank.get(rec_id) or opg_rank.get(rec_id) or {})
+            rows.append(
+                {
+                    "id": rec_id,
+                    "tier": base.get("tier"),
+                    "score": float(base.get("score") or 9.0),
+                    "lean": base.get("lean"),
+                    "status": "open",
+                    "title_md": base.get("title_md") or rec_id,
+                    "paper": base.get("paper") or "",
+                    "source": source,
+                    "url": base.get("url")
+                    or (SITE_ARXIV.format(id=rec_id) if source == "arxiv"
+                        else SITE_OPG.format(slug=rec_id)),
+                    "retry_of": str(path.relative_to(ROOT)),
+                    "prior_verdict": verdict,
+                    "prior_confidence": v.get("confidence"),
+                    "prior_model": v.get("model"),
+                    "review_verdict": review,
+                    "band": band,
+                }
+            )
+    rows.sort(key=lambda r: (r["band"], r["score"], r["id"]))
+    return rows
+
+
+def corpus_records() -> list[dict]:
+    if CORPUS == "opg":
+        return opg_records()
+    if CORPUS == "retry":
+        return retry_records()
+    return parse_ranking()
+
+
 def attacked_ids() -> set[str]:
     done = set()
-    if not ATTACKS.exists():
-        return done
-    for p in ATTACKS.iterdir():
-        if p.is_dir() and (
-            (p / "verdict.json").exists() or (p / "skipped.json").exists()
-        ):
-            done.add(p.name)
+    for root in [ATTACKS, *DONE_DIRS]:
+        if not root.exists():
+            continue
+        for p in root.iterdir():
+            if p.is_dir() and (
+                (p / "verdict.json").exists() or (p / "skipped.json").exists()
+            ):
+                done.add(p.name)
     return done
 
 
@@ -417,7 +586,10 @@ def is_busy(path: Path) -> bool:
 def claim_next() -> dict | None:
     """Pick the next easiest complete record and mark it claimed."""
     with SpendLock():
-        for rec in parse_ranking():
+        done = attacked_ids()
+        for rec in corpus_records():
+            if rec["id"] in done:
+                continue
             dest = ATTACKS / rec["id"]
             if dest.exists() and is_busy(dest):
                 continue
@@ -431,20 +603,113 @@ def claim_next() -> dict | None:
 
 
 def cmd_queue(args: argparse.Namespace) -> None:
-    rows = parse_ranking()
-    QUEUE_PATH.write_text(json.dumps(rows, indent=2) + "\n")
+    rows = corpus_records()
+    # catalog/queue.json is the canonical arXiv queue; only a plain arXiv run
+    # writing to the default directory may replace it.
+    if CORPUS == "arxiv" and ATTACKS == ROOT / "attacks":
+        QUEUE_PATH.write_text(json.dumps(rows, indent=2) + "\n")
     done = attacked_ids()
     pending = [r for r in rows if r["id"] not in done]
     n = args.n or 15
-    print(f"{len(rows)} open/partial arXiv records; {len(done)} attacked; {len(pending)} pending")
-    print(f"easiest {n}:")
+    label = {"opg": "OpenProblemGarden", "retry": "still-open earlier attempts"}.get(
+        CORPUS, "open/partial arXiv")
+    print(f"{len(rows)} {label} records; {len(done)} attacked; {len(pending)} pending")
+    print(f"first {n}:")
     for r in pending[:n]:
-        print(
-            f"  tier {r['tier']}  {r['score']:.2f}  {r['status']:8}  {r['id']:22}  {r['paper'][:60]}"
-        )
+        if CORPUS == "retry":
+            why = r.get("review_verdict") or f"{r.get('prior_verdict')}/{r.get('prior_confidence')}"
+            print(f"  band {r['band']}  {r['score']:.2f}  {why:16} {r['id'][:24]:26} {r['paper'][:46]}")
+        elif CORPUS == "opg":
+            flag = "ugrad" if r.get("undergrad") else "     "
+            print(f"  {r.get('importance') or '?':11} {flag}  {r['id'][:58]:58}  {r.get('subject') or ''}")
+        else:
+            print(
+                f"  tier {r['tier']}  {r['score']:.2f}  {r['status']:8}  {r['id']:22}  {r['paper'][:60]}"
+            )
+
+
+def fetch_opg_dossier(rec: dict) -> dict:
+    page_url = rec["url"]
+    try:
+        page_text = html_to_text(http_get(page_url))
+    except Exception as exc:  # noqa: BLE001
+        page_text = f"(failed to fetch {page_url}: {exc})"
+    cat = opg_index().get(rec["id"]) or {}
+    refs = []
+    for ref in (cat.get("references") or [])[:20]:
+        line = html_to_text(ref.get("raw_html") or "").strip()
+        if line:
+            refs.append(f"- {line}")
+    return {
+        "id": rec["id"],
+        "url": page_url,
+        "source": "opg",
+        "arxiv_id": None,
+        "page_text": page_text[:20000],
+        "abstract": "",
+        "tier": rec.get("tier"),
+        "score": rec.get("score"),
+        "lean": None,
+        "status": rec.get("status"),
+        "paper": cat.get("canonical_url") or "",
+        "catalog_title": cat.get("title") or rec.get("title_md") or "",
+        "importance": (cat.get("importance") or {}).get("raw")
+        or (cat.get("importance") or {}).get("label"),
+        "posted": cat.get("posted_at"),
+        "authors": ", ".join(a.get("label", "") for a in (cat.get("authors") or [])),
+        "subject": " » ".join(x.get("label", "") for x in (cat.get("subject_path") or [])),
+        "statement_text": (cat.get("statement_text") or "")[:8000],
+        "context_text": (cat.get("discussion_text") or "")[:6000],
+        "references_text": "\n".join(refs)[:4000],
+    }
+
+
+def fetch_retry_dossier(rec: dict) -> dict:
+    """A retry reuses the first attempt's prompt and adds what came of it."""
+    src = Path(rec["retry_of"])
+    if not src.is_absolute():
+        src = ROOT / src
+    prior_prompt = ""
+    ppath = src / "prompt.md"
+    if ppath.exists():
+        prior_prompt = ppath.read_text()
+    prior_writeup = ""
+    opath = src / "output.md"
+    if opath.exists():
+        prior_writeup = opath.read_text()[:60000]
+    referee = ""
+    rpath = ROOT / "verification" / f"{rec['id']}.md"
+    if rpath.exists():
+        referee = rpath.read_text()[:30000]
+    return {
+        "id": rec["id"],
+        "url": rec["url"],
+        "source": "retry",
+        "origin": rec.get("source"),
+        "arxiv_id": None,
+        "page_text": "",
+        "abstract": "",
+        "tier": rec.get("tier"),
+        "score": rec.get("score"),
+        "lean": rec.get("lean"),
+        "status": rec.get("status"),
+        "paper": rec.get("paper"),
+        "catalog_title": rec.get("title_md"),
+        "prior_prompt": prior_prompt,
+        "prior_writeup": prior_writeup,
+        "prior_model": rec.get("prior_model"),
+        "prior_verdict": rec.get("prior_verdict"),
+        "prior_confidence": rec.get("prior_confidence"),
+        "review_verdict": rec.get("review_verdict"),
+        "referee_report": referee,
+    }
 
 
 def fetch_dossier(rec: dict) -> dict:
+    if rec.get("retry_of"):
+        return fetch_retry_dossier(rec)
+    if rec.get("source") == "opg" or CORPUS == "opg":
+        return fetch_opg_dossier(rec)
     page_url = rec["url"]
     try:
         page_html = http_get(page_url)
@@ -482,7 +747,70 @@ def fetch_dossier(rec: dict) -> dict:
     }
 
 
+def build_opg_prompt(d: dict) -> str:
+    parts = [
+        "Attack the following open graph-theory problem.",
+        "",
+        f"Catalog id: {d['id']}",
+        f"Source: OpenProblemGarden (importance: {d.get('importance') or 'unknown'})",
+        f"Subject: {d.get('subject') or 'Graph Theory'}",
+        f"Catalog page: {d['url']}",
+        f"Original entry: {d.get('paper')}",
+    ]
+    if d.get("authors"):
+        parts.append(f"Problem attributed to: {d['authors']} (posted {d.get('posted')})")
+    parts += [
+        "",
+        "=== Problem statement (OpenProblemGarden) ===",
+        f"Title: {d.get('catalog_title') or ''}",
+        d.get("statement_text") or "(no statement text in the catalog JSON)",
+    ]
+    if d.get("context_text"):
+        parts += ["", "=== Discussion / context (OpenProblemGarden) ===", d["context_text"]]
+    if d.get("references_text"):
+        parts += ["", "=== References listed by OpenProblemGarden ===", d["references_text"]]
+    parts += ["", "=== Catalog page (statement + literature review) ===", d["page_text"]]
+    return "\n".join(parts) + "\n"
+
+
+def build_retry_prompt(d: dict) -> str:
+    head = d.get("prior_prompt") or (
+        f"Attack the following open graph-theory problem.\n\n"
+        f"Catalog id: {d['id']}\nCatalog page: {d['url']}\n"
+    )
+    parts = [head.rstrip(), "", "=" * 72, "", "=== A PREVIOUS, UNVERIFIED ATTEMPT ==="]
+    parts.append(
+        f"The problem above was already attacked by `{d.get('prior_model')}`, which "
+        f"reported verdict `{d.get('prior_verdict')}` at {d.get('prior_confidence')} "
+        "confidence. That attempt is reproduced below."
+    )
+    if d.get("review_verdict"):
+        parts.append(
+            f"An adversarial referee then reviewed it and returned "
+            f"`{d['review_verdict']}`, i.e. the claimed resolution did not stand, so "
+            "the problem is still open."
+        )
+    parts += [
+        "",
+        "Treat it as a lead, not as an authority: it is unverified, it may be wrong "
+        "in ways neither model noticed, and its framing may be the reason it "
+        "stalled. Check anything you reuse, and say so if you discard it. Your task "
+        "is the original problem, not a critique of this attempt. If you can finish "
+        "what it started, do that; if a different route is better, take it.",
+        "",
+        "--- previous attempt ---",
+        d.get("prior_writeup") or "(no writeup saved)",
+    ]
+    if d.get("referee_report"):
+        parts += ["", "--- referee report on that attempt ---", d["referee_report"]]
+    return "\n".join(parts) + "\n"
+
+
 def build_prompt(dossier: dict) -> str:
+    if dossier.get("source") == "retry":
+        return build_retry_prompt(dossier)
+    if dossier.get("source") == "opg":
+        return build_opg_prompt(dossier)
     extracted = ""
     stmt = (dossier.get("statement_text") or "").strip()
     if stmt:
@@ -586,6 +914,8 @@ def call_sol(prompt: str, max_output_tokens: int, timeout_s: int):
         reasoning={"effort": "max", "mode": "pro", "summary": "auto"},
         store=True,
     )
+    if SERVICE_TIER != "default":
+        kwargs["service_tier"] = SERVICE_TIER
     last_exc: Exception | None = None
     for attempt in range(8):
         try:
@@ -643,7 +973,7 @@ def cmd_spend(_: argparse.Namespace) -> None:
 
 
 def select_records(args: argparse.Namespace) -> list[dict]:
-    rows = parse_ranking()
+    rows = corpus_records()
     by_id = {r["id"]: r for r in rows}
     done = attacked_ids()
     if args.id:
@@ -735,6 +1065,8 @@ def attack_one(rec: dict, max_out: int, timeout_s: int, force: bool = False) -> 
                     },
                     "started": utc_now(),
                     "model": MODEL,
+                    "service_tier": SERVICE_TIER,
+                    "corpus": CORPUS,
                     "reasoning": {"effort": "max", "mode": "pro"},
                 },
                 indent=2,
@@ -885,9 +1217,9 @@ def collect_verdicts() -> list[dict]:
 def write_results_md(rows: list[dict] | None = None) -> Path:
     """Write RESULTS.md from on-disk verdicts. Safe to run during a sweep."""
     rows = rows if rows is not None else collect_verdicts()
-    rank = {r["id"]: r for r in parse_ranking()}
+    rank = {r["id"]: r for r in corpus_records()}
     done = attacked_ids()
-    pending = [r for r in parse_ranking() if r["id"] not in done]
+    pending = [r for r in corpus_records() if r["id"] not in done]
     counts: dict[str, int] = {}
     publish: dict[str, int] = {}
     for row in rows:
@@ -927,7 +1259,7 @@ def write_results_md(rows: list[dict] | None = None) -> Path:
             url = cat.get("url") or SITE_ARXIV.format(id=rec_id)
             pub = "yes" if r.get("would_publish") else "no"
             lines.append(
-                f"| [`{rec_id}`]({url}) · [artifact](attacks/{rec_id}/) | "
+                f"| [`{rec_id}`]({url}) · [artifact]({ATTACKS.name}/{rec_id}/) | "
                 f"{_md_cell(str(r.get('confidence') or ''))} | {pub} | "
                 f"{_md_cell(str(r.get('one_line') or ''))} |"
             )
@@ -964,9 +1296,10 @@ def write_results_md(rows: list[dict] | None = None) -> Path:
         pending_lines.append("Skipped without a call: " + ", ".join(f"`{s}`" for s in skipped))
         pending_lines.append("")
 
+    attacks_dir = ATTACKS.name
     body = f"""# Results
 
-Auto-generated from `attacks/*/verdict.json` by `python attack.py summary`.
+Auto-generated from `{attacks_dir}/*/verdict.json` by `python attack.py summary`.
 **These are unrefereed model self-reports.** A `proved` / `disproved` label is
 not a theorem. `would_publish` is the model's own claim that it would submit
 the writeup to a journal.
@@ -1048,21 +1381,77 @@ def cmd_sweep(args: argparse.Namespace) -> None:
         print("DONE")
 
 
+def configure(args: argparse.Namespace) -> None:
+    """Apply the global --corpus/--model/--service-tier options.
+
+    The OPG campaign keeps its own output directory, budget and ledger so it
+    cannot disturb the arXiv/Sol artifacts already in `attacks/`.
+    """
+    global CORPUS, MODEL, PRICE, SERVICE_TIER, DONE_DIRS
+    global ATTACKS, SPEND_PATH, LEDGER_PATH, LOCK_PATH, RESULTS_PATH
+    CORPUS = getattr(args, "corpus", None) or "arxiv"
+    MODEL = getattr(args, "model", None) or (
+        "gpt-6-astra" if CORPUS == "opg" else "gpt-5.6-sol"
+    )
+    if MODEL not in MODEL_PRICES:
+        raise SystemExit(f"no price table for model {MODEL!r}; add one to MODEL_PRICES")
+    PRICE = MODEL_PRICES[MODEL]
+    SERVICE_TIER = getattr(args, "service_tier", None) or "flex"
+    if SERVICE_TIER not in TIER_MULTIPLIER:
+        raise SystemExit(f"unknown service tier {SERVICE_TIER!r}")
+    def _abs(value: str) -> Path:
+        path = Path(value)
+        return path if path.is_absolute() else ROOT / path
+
+    if CORPUS == "opg":
+        ATTACKS = ROOT / "attacks_opg"
+    elif CORPUS == "retry":
+        ATTACKS = ROOT / "attacks_retry"
+    if getattr(args, "attacks_dir", None):
+        ATTACKS = _abs(args.attacks_dir)
+    stem = ATTACKS.name.removeprefix("attacks_")
+    RESULTS_PATH = ROOT / ("RESULTS.md" if ATTACKS.name == "attacks"
+                           else f"RESULTS_{stem.upper()}.md")
+    ATTACKS.mkdir(parents=True, exist_ok=True)
+
+    # A second leg of a campaign can share the first leg's wallet, so the whole
+    # campaign is accounted against one budget.
+    wallet = _abs(args.wallet) if getattr(args, "wallet", None) else ATTACKS
+    wallet.mkdir(parents=True, exist_ok=True)
+    SPEND_PATH = wallet / "spend.json"
+    LEDGER_PATH = wallet / "ledger.jsonl"
+    LOCK_PATH = wallet / "spend.lock"
+    DONE_DIRS = [_abs(d) for d in (getattr(args, "done_dir", None) or [])]
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
+    common = argparse.ArgumentParser(add_help=False)
+    common.add_argument("--corpus", choices=["arxiv", "opg", "retry"], default="arxiv",
+                        help="arxiv ranking (default), the OpenProblemGarden catalog, or "
+                             "retry: still-open problems from earlier attacks, most promising first")
+    common.add_argument("--model", help="override the model (default: sol for arxiv, astra for opg)")
+    common.add_argument("--attacks-dir", help="write attacks here (default: attacks/, or attacks_opg/ for --corpus opg)")
+    common.add_argument("--wallet", help="directory holding spend.json/ledger.jsonl (default: the attacks dir)")
+    common.add_argument("--done-dir", action="append", metavar="DIR",
+                        help="also treat finished attacks in DIR as done; repeatable")
+    common.add_argument("--service-tier", choices=sorted(TIER_MULTIPLIER), default="flex",
+                        help="default flex: half the standard rate for the same model and "
+                             "reasoning settings, which is the right trade for a batch sweep. "
+                             "Pass --service-tier default for the standard tier, priority for double.")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
-    p_spend = sub.add_parser("spend", help="print remaining budget")
+    p_spend = sub.add_parser("spend", parents=[common], help="print remaining budget")
     p_spend.set_defaults(func=cmd_spend)
 
-    p_q = sub.add_parser("queue", help="rebuild easiest-first queue")
+    p_q = sub.add_parser("queue", parents=[common], help="rebuild easiest-first queue")
     p_q.add_argument("-n", type=int, default=15)
     p_q.set_defaults(func=cmd_queue)
 
-    p_sum = sub.add_parser("summary", help="write RESULTS.md from on-disk verdicts")
+    p_sum = sub.add_parser("summary", parents=[common], help="write RESULTS.md from on-disk verdicts")
     p_sum.set_defaults(func=cmd_summary)
 
-    p_run = sub.add_parser("run", help="attack one or more conjectures")
+    p_run = sub.add_parser("run", parents=[common], help="attack one or more conjectures")
     p_run.add_argument("--id", help="catalog id, e.g. 2402.10782__01")
     p_run.add_argument("--next", action="store_true", help="next unattacked easiest record")
     p_run.add_argument("--limit", type=int, help="max number of new attacks this invocation")
@@ -1070,7 +1459,7 @@ def main() -> None:
     p_run.add_argument("--timeout", type=int, default=10_800, help="seconds")
     p_run.set_defaults(func=cmd_run)
 
-    p_sw = sub.add_parser("sweep", help="parallel attacks until budget or time is gone")
+    p_sw = sub.add_parser("sweep", parents=[common], help="parallel attacks until budget or time is gone")
     p_sw.add_argument("--jobs", type=int, default=24, help="concurrent Sol calls")
     p_sw.add_argument("--hours", type=float, default=5.0, help="wall-clock cap")
     p_sw.add_argument("--max-output-tokens", type=int, default=128_000)
@@ -1078,6 +1467,7 @@ def main() -> None:
     p_sw.set_defaults(func=cmd_sweep)
 
     args = ap.parse_args()
+    configure(args)
     args.func(args)
 
 

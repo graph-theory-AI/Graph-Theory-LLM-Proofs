@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The outward orientation of the ten-vertex spider with leg lengths 2, 3, and 4 is tournament anti-Sidorenko, as certified by an explicit nonnegative identity.",
+  "would_publish": false,
+  "caveats": "The general conjecture remains unsettled; novelty and the precise meaning of the catalog's named '2-3-4 tree' have not been independently checked.",
+  "id": "2402.08418__00",
+  "model": "gpt-6-astra",
+  "usd": 1.09489,
+  "eur": 1.134081,
+  "elapsed_s": 746.0,
+  "status": "completed",
+  "response_id": "resp_0a2c0bf42d3cd364006aaafc10b26c87d291224c5040f56437",
+  "when": "2026-09-16T20:41:30Z"
+}

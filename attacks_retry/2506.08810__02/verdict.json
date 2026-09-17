@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Two structural sufficient conditions for prime targets, together with explicit constructions, settle every target on three, four, or five vertices.",
+  "would_publish": false,
+  "caveats": "No full characterization or literature-priority claim; the arguments still leave, for example, C3\u2295C3 and transitive targets T_h with h\u22657 untreated.",
+  "id": "2506.08810__02",
+  "model": "gpt-6-astra",
+  "usd": 1.4893,
+  "eur": 1.542609,
+  "elapsed_s": 1168.9,
+  "status": "completed",
+  "response_id": "resp_03a7695fd84e99b3006aab3a56bf8087d2a34b7c67259e38d1",
+  "when": "2026-09-17T01:14:14Z"
+}

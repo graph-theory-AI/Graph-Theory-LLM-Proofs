@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds if deleting the endpoints of some edge leaves independence number at most two; consequently, any noncomplete counterexample has at least \u03c7(G)+6 vertices.",
+  "would_publish": false,
+  "caveats": "The general conjecture remains unresolved; novelty is not claimed for these restricted results.",
+  "id": "double_critical_graph_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.133005,
+  "eur": 1.173561,
+  "elapsed_s": 910.6,
+  "status": "completed",
+  "response_id": "resp_00fe3959259f2170006aaad29a99c887d2b192947657bf96a9",
+  "when": "2026-09-16T17:47:20Z"
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "graceful_tree_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Graceful Tree Conjecture",
+    "paper": "http://www.openproblemgarden.org/op/graceful_tree_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/graceful_tree_conjecture/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Labeling"
+  },
+  "dossier_meta": {
+    "id": "graceful_tree_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/graceful_tree_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/graceful_tree_conjecture",
+    "catalog_title": "Graceful Tree Conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-07-13",
+    "authors": "",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Labeling",
+    "statement_text": "Conjecture All trees are graceful",
+    "context_text": "Label the vertices of a simple undirected graph $ G(V,E) $ (where $ |V| = n $ and $ |E| = m $ ) with integers from $ 0 $ to $ m $ . Now label each edge with absolute difference of the labels of its incident vertices. The labeling is said to be graceful if the edges are labelled $ 1 $ through $ m $ inclusive (with no number repeated). A graph is called graceful if it has at least one such labeling. This labeling was originally introduced in 1967 by Rosa. The name graceful labeling was coined later by Golomb. Gracefully labeled graphs serve as models in a wide range of applications including coding theory and communication network addressing. The graceful labeling problem is to determine which graphs are graceful. It is conjectured (by Kotzig, Ringel and Rosa) that all trees are graceful. Despite numerous (more than 200) publications on graceful labeling for over three decades, only a very restricted classes of trees (and also of some other graphs) have been shown to be graceful. These restricted classes include paths, stars, complete bipartite graphs, prism graphs, wheel graphs, caterpillar graphs, olive trees, and symmetrical trees.",
+    "references_text": ""
+  },
+  "started": "2026-09-16T18:50:37Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

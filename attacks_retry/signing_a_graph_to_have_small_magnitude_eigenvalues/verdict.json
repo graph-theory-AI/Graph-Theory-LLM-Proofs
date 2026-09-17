@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every claw-free cubic graph has an explicit signing of norm at most 1 + \u221a3; the conjecture also holds for every regular graph admitting a partition into twin pairs.",
+  "would_publish": false,
+  "caveats": "The general non-bipartite case is not resolved; novelty of these special cases has not been checked; the substantive conjecture is interpreted for d >= 2.",
+  "id": "signing_a_graph_to_have_small_magnitude_eigenvalues",
+  "model": "gpt-6-astra",
+  "usd": 1.048615,
+  "eur": 1.08615,
+  "elapsed_s": 1080.5,
+  "status": "completed",
+  "response_id": "resp_04978cd09c8923c5006aab272deae087d28e10a459c3f3683b",
+  "when": "2026-09-16T23:51:02Z"
+}

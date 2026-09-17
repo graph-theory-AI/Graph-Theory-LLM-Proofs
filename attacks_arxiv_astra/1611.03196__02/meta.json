@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 55,
+    "score": 4.05,
+    "tier": 4,
+    "lean": "disprove",
+    "status": "open",
+    "id": "1611.03196__02",
+    "title_md": "[Conjecture 1.14](https://arxiv.org/abs/1611.03196)",
+    "paper": "Fair representation by independent sets",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.03196__02/"
+  },
+  "dossier_meta": {
+    "id": "1611.03196__02",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.03196__02/",
+    "arxiv_id": "1611.03196",
+    "tier": 4,
+    "score": 4.05,
+    "lean": "disprove",
+    "status": "open",
+    "paper": "Fair representation by independent sets",
+    "catalog_title": "Conjecture 1.14",
+    "statement_text": "If the edge set of a graph $H$ is partitioned into sets $E_1, \\ldots, E_m$ then there exists a matching $M$ satisfying $|M \\cap E_i| \\geq \\left\\lfloor \\frac{|E_i|}{\\Delta(H)+2} \\right\\rfloor$ for all $i \\leq m$.",
+    "context_text": "Proposed as a stronger version of Conjecture 1.12 (the rainbow matching conjecture), extending almost fair representation to arbitrary graphs via the parameter $\\Delta(H)+2$, which mirrors the connectivity bound for independence complexes of line graphs."
+  },
+  "started": "2026-09-16T19:48:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

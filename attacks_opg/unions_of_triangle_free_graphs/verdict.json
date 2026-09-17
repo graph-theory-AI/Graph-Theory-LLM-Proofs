@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "In ZFC, every graph omitting K_{n,n,(2^{aleph_0})^+} for some positive integer n is a countable union of triangle-free graphs.",
+  "would_publish": false,
+  "caveats": "This is a size-unrestricted special case, not a resolution of the original existence question; novelty is not claimed.",
+  "id": "unions_of_triangle_free_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.887385,
+  "eur": 0.919149,
+  "elapsed_s": 703.5,
+  "status": "completed",
+  "response_id": "resp_06fba54b4fd7bcd1006aaaed6f29c087d285989ab47f02d618",
+  "when": "2026-09-16T19:38:22Z"
+}

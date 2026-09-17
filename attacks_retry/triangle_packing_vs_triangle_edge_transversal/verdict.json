@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Tuza's inequality holds whenever no triangle contains two edges that each lie in at least three triangles.",
+  "would_publish": false,
+  "caveats": "The general conjecture is unresolved here; novelty of the special case and the stronger defect bound below is not claimed.",
+  "id": "triangle_packing_vs_triangle_edge_transversal",
+  "model": "gpt-6-astra",
+  "usd": 1.128725,
+  "eur": 1.169127,
+  "elapsed_s": 1157.6,
+  "status": "completed",
+  "response_id": "resp_006aebe898156ee5006aab2bdf7d1487d2920562befc525258",
+  "when": "2026-09-17T00:12:20Z"
+}

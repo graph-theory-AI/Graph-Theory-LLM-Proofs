@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The entire class of n^\u03b5-long subdivisions has 2-ply ball representations in dimension O(1+1/\u03b5), and the order of this dimension bound is optimal.",
+  "would_publish": false,
+  "caveats": "This handles a subdivision family in the explicit thin-ball model, not the full tame-convex conjecture; novelty is not asserted.",
+  "id": "2001.01552__01",
+  "model": "gpt-6-astra",
+  "usd": 1.04437,
+  "eur": 1.081753,
+  "elapsed_s": 944.1,
+  "status": "completed",
+  "response_id": "resp_0ea30f44276a3340006aab4b33aaac87d2ad4153bd712a4127",
+  "when": "2026-09-17T02:22:27Z"
+}

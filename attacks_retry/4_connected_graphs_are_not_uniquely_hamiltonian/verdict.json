@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Any counterexample satisfies n \u2265 13 and 5n \u2265 18\u03b4 \u2212 21, and an even-order counterexample satisfies n \u2265 4\u03b4 \u2212 2.",
+  "would_publish": false,
+  "caveats": "The conjecture is not resolved here; the bounds are self-contained but are not claimed to be new or best known.",
+  "id": "4_connected_graphs_are_not_uniquely_hamiltonian",
+  "model": "gpt-6-astra",
+  "usd": 1.149675,
+  "eur": 1.190827,
+  "elapsed_s": 1031.9,
+  "status": "completed",
+  "response_id": "resp_0102e8ebf2b0bb7f006aab10ee8b9087d2aff94810fca1d5a7",
+  "when": "2026-09-16T22:15:18Z"
+}

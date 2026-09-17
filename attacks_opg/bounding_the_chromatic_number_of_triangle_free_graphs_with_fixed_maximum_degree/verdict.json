@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For maximum degree 6, the conjecture holds if deleting at most two vertices makes the degree-6 subgraph bipartite, and hence if there are at most nine degree-6 vertices.",
+  "would_publish": false,
+  "caveats": "This is a structural special case, not a resolution of the conjecture; no novelty or independent literature-status claim is made.",
+  "id": "bounding_the_chromatic_number_of_triangle_free_graphs_with_fixed_maximum_degree",
+  "model": "gpt-6-astra",
+  "usd": 1.267345,
+  "eur": 1.312709,
+  "elapsed_s": 879.7,
+  "status": "completed",
+  "response_id": "resp_00d15ac78294542b006aaace3df73487d29162191dee26a0c4",
+  "when": "2026-09-16T17:28:13Z"
+}

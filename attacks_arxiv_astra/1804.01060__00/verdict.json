@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The supplied path theorem proves the conjecture whenever, in each component of P, the vertices having degree at least three in H lie on a single path.",
+  "would_publish": false,
+  "caveats": "This is a structural corollary of the supplied path theorem, not a resolution; no novelty claim is made.",
+  "id": "1804.01060__00",
+  "model": "gpt-6-astra",
+  "usd": 0.604275,
+  "eur": 0.625905,
+  "elapsed_s": 784.7,
+  "status": "completed",
+  "response_id": "resp_02c43620c9ac9c38006aaaf294e94887d297ebfa2d77d4fc84",
+  "when": "2026-09-16T20:01:40Z"
+}

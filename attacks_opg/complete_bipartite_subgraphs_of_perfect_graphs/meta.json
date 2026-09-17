@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "complete_bipartite_subgraphs_of_perfect_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Complete bipartite subgraphs of perfect graphs",
+    "paper": "http://www.openproblemgarden.org/op/complete_bipartite_subgraphs_of_perfect_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/complete_bipartite_subgraphs_of_perfect_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Basic Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "complete_bipartite_subgraphs_of_perfect_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/complete_bipartite_subgraphs_of_perfect_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/complete_bipartite_subgraphs_of_perfect_graphs",
+    "catalog_title": "Complete bipartite subgraphs of perfect graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2008-06-17",
+    "authors": "Fox, Jacob",
+    "subject": "Graph Theory \u00bb Basic Graph Theory",
+    "statement_text": "Problem Let $ G $ be a perfect graph on $ n $ vertices. Is it true that either $ G $ or $ \\bar{G} $ contains a complete bipartite subgraph with bipartition $ (A,B) $ so that $ |A|, |B| \\ge n^{1 - o(1)} $ ?",
+    "context_text": "Every perfect graph on $ n $ vertices either has a clique or an independent set of size $ \\ge n^{1/2} $ , so weakening the bound on $ |A| $ , $ |B| $ to $ \\lfloor \\frac{1}{2} n^{1/2} \\rfloor $ gives a true statement. Jacob Fox [F] has proved that every comparability graph $ G $ on $ n $ vertices has a complete bipartite subgraph of size $ \\ge c \\frac{n}{\\log n} $ , and (up to the constant) this is best possible.",
+    "references_text": "- [F] J. Fox, A Bipartite Analogue of Dilworth\u2019s Theorem, Order 23 (2006), 197-209."
+  },
+  "started": "2026-09-16T17:16:54Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

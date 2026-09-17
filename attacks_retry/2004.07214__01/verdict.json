@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds with polynomial delay and polynomial space whenever H is an induced subgraph of two cliques joined by a perfect matching.",
+  "would_publish": false,
+  "caveats": "H-freeness is induced; this covers only a proper subclass of co-bipartite H, and novelty of the special case is not claimed.",
+  "id": "2004.07214__01",
+  "model": "gpt-6-astra",
+  "usd": 0.88609,
+  "eur": 0.917807,
+  "elapsed_s": 976.7,
+  "status": "completed",
+  "response_id": "resp_0a79a17aae79cffb006aab2e3b107c87d2a7c4dc9139560ea6",
+  "when": "2026-09-17T00:19:23Z"
+}

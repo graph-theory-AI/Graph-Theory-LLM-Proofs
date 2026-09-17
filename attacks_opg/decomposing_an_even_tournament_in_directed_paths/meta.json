@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "decomposing_an_even_tournament_in_directed_paths",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Decomposing an even tournament in directed paths.",
+    "paper": "http://www.openproblemgarden.org/op/decomposing_an_even_tournament_in_directed_paths",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_an_even_tournament_in_directed_paths/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Tournaments"
+  },
+  "dossier_meta": {
+    "id": "decomposing_an_even_tournament_in_directed_paths",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_an_even_tournament_in_directed_paths/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/decomposing_an_even_tournament_in_directed_paths",
+    "catalog_title": "Decomposing an even tournament in directed paths.",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2013-02-26",
+    "authors": "Alspach, Brian, Mason, David W., Pullman, Norman J.",
+    "subject": "Graph Theory \u00bb Directed Graphs \u00bb Tournaments",
+    "statement_text": "Conjecture Every tournament $ D $ on an even number of vertices can be decomposed into $ \\sum_{v\\in V}\\max\\{0,d^+(v)-d^-(v)\\} $ directed paths.",
+    "context_text": "This conjecture is clearly tight, because in a decomposition of a directed graph in directed paths, at least $ \\max \\{0,d^+(v)-d^-(v)\\} $ directed paths must start at vertex $ v $ . Observe that the analogue is trivially false for odd tournament: in regular tournament $ d^+(v)=d^-(v) $ for every vertex $ v $ , so $ \\sum_{v\\in V}\\max\\{0,d^+(v)-d^-(v)\\}=0 $ . For a tournament of even order $ n $ , $ \\sum_{v\\in V}\\max\\{0,d^+(v)-d^-(v)\\}\\geq n/2 $ . Since a directed path may have up to $ n-1 $ arcs, it might be possible to cover the $ n(n-1)/2 $ arcs of the tournament if $ n $ is even. If the tournament is almost regular (i.e. $ |d^+(v)-d^-(v)|=1 $ for all vertex $ v $ ), the conjecture asserts that it can be decomposed into directed Hamilton paths. This conjecture for almost regular tournaments would imply the following one due to Kelly. Conjecture Every regular tournament of order $ n $ can be decomposed into $ (n-1)/2 $ Hamilton directed cycles. To see this, consider a regular tournament $ T $ and a vertex $ v $ of $ T $ . The tournament $ T-v $ has even order, and in $ T-v $ , $ \\max \\{0,d^+(v)-d^-(v)\\}=0 $ unless $ v $ is an outneighbour of $ v $ in $ T $ in which case $ \\max \\{0,d^+(v)-d^-(v)\\}=0 $ . Hence $ \\sum_{v\\in V}\\max\\{0,d^+(v)-d^-(v)\\}=(n-1)/2 $ . Now if Alspach-Mason-Pulman conjecture holds, $ T-v $ can be decomposed into $ (n-1)/2 $ directed paths. These paths must start at distinct outneighbours of $ v $ in $ T $ and ends at distinct inneighbours of $ v $ in $ T $ . Hence, we can complete each directed path in a Hamilton directed cycle in $ T $ to obtain a decomposition of $ T $ into $ (n-1)/2 $ Hamilton cycles. Kelly's conjecture has been proved for tournaments of sufficiently large order by K\u00fchn and Osthus [KO].",
+    "references_text": "- *[AMP] Brian Alspach, David W. Mason, Norman J. Pullman, Path numbers of tournaments, Journal of Combinatorial Theory, Series B, 20 (1976), no. 3, June 1976, 222\u2013228\n- [KO] Daniela K\u00fchn and Deryk Osthus, Hamilton decompositions of regular expanders: a proof of Kelly's conjecture for large tournaments, Advances in Mathematics 237 (2013), 62-146."
+  },
+  "started": "2026-09-16T18:46:40Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

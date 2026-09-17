@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Explicit bounds give subquadratic results for roots of sublinear degeneracy or with subexponential-size blocks, but do not settle the unrestricted question.",
+  "would_publish": false,
+  "caveats": "These elementary special cases and the logarithmic-gap example are not claimed to be new; no universal subquadratic bound is obtained.",
+  "id": "choosability_of_graph_powers",
+  "model": "gpt-6-astra",
+  "usd": 1.005405,
+  "eur": 1.041393,
+  "elapsed_s": 822.3,
+  "status": "completed",
+  "response_id": "resp_06dba45e43ec58c3006aaac6f1b0b887d2ba38334a569c75ed",
+  "when": "2026-09-16T16:56:06Z"
+}

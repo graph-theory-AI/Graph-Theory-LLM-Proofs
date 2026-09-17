@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the stronger floor(n/3) bound for bridgeless cubic graphs having a dominating family of vertex-disjoint triangles.",
+  "would_publish": false,
+  "caveats": "Special case only; novelty is not established, and triangle-free graphs are not covered.",
+  "id": "domination_in_cubic_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.036025,
+  "eur": 1.073109,
+  "elapsed_s": 903.3,
+  "status": "completed",
+  "response_id": "resp_0bfbce6dc714f67e006aaad227eaa087d2b2a39eb3f6a07dce",
+  "when": "2026-09-16T17:45:19Z"
+}

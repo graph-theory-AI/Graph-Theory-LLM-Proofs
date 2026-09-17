@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For Steiner triple systems obtained by three disjoint Fano switches in a binary projective system, universality is equivalent to the three switch centers forming a projective line.",
+  "would_publish": false,
+  "caveats": "This classifies only a restricted family; novelty relative to the point-intransitive constructions mentioned in the question has not been checked.",
+  "id": "universal_steiner_triple_systems",
+  "model": "gpt-6-astra",
+  "usd": 1.09812,
+  "eur": 1.137427,
+  "elapsed_s": 1293.7,
+  "status": "completed",
+  "response_id": "resp_015ee1211ca4a386006aab2cc38aa087d2ae119f853f80f8ca",
+  "when": "2026-09-17T00:18:24Z"
+}

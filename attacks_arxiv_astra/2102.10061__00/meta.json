@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 49,
+    "score": 4.05,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2102.10061__00",
+    "title_md": "[Conjecture 4](https://arxiv.org/abs/2102.10061)",
+    "paper": "Improved bounds for weak coloring numbers",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2102.10061__00/"
+  },
+  "dossier_meta": {
+    "id": "2102.10061__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2102.10061__00/",
+    "arxiv_id": "2102.10061",
+    "tier": 4,
+    "score": 4.05,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Improved bounds for weak coloring numbers",
+    "catalog_title": "Conjecture 4",
+    "statement_text": "Planar graphs have $r$-th weak coloring numbers in $O(r^2 \\log r)$.",
+    "context_text": "The best known lower bound for the maximum $r$-th weak coloring number of planar graphs is $\\Omega(r^2 \\log r)$ (proved in this paper via Corollary 3) and the best upper bound is $O(r^3)$ due to Van den Heuvel, Ossona de Mendez, Quiroz, Rabinovich, and Siebertz. The authors find it particularly intriguing to close this gap and believe the lower bound gives the correct order of magnitude."
+  },
+  "started": "2026-09-16T19:48:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

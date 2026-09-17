@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "decomposing_an_eulerian_graph_into_cycles_with_no_two_consecutives_edges_on_a_prescirbed_eulerian_tour",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Decomposing an eulerian graph into cycles with no two consecutives edges on a prescribed eulerian tour.",
+    "paper": "http://www.openproblemgarden.org/op/decomposing_an_eulerian_graph_into_cycles_with_no_two_consecutives_edges_on_a_prescirbed_eulerian_tour",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_an_eulerian_graph_into_cycles_with_no_two_consecutives_edges_on_a_prescirbed_eulerian_tour/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Cycles"
+  },
+  "dossier_meta": {
+    "id": "decomposing_an_eulerian_graph_into_cycles_with_no_two_consecutives_edges_on_a_prescirbed_eulerian_tour",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_an_eulerian_graph_into_cycles_with_no_two_consecutives_edges_on_a_prescirbed_eulerian_tour/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/decomposing_an_eulerian_graph_into_cycles_with_no_two_consecutives_edges_on_a_prescirbed_eulerian_tour",
+    "catalog_title": "Decomposing an eulerian graph into cycles with no two consecutives edges on a prescribed eulerian tour.",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-04",
+    "authors": "Sabidussi, Gert",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Cycles",
+    "statement_text": "Conjecture Let $ G $ be an eulerian graph of minimum degree $ 4 $ , and let $ W $ be an eulerian tour of $ G $ . Then $ G $ admits a decomposition into cycles none of which contains two consecutive edges of $ W $ .",
+    "context_text": "Kotzig proved the converse statement: Theorem Let $ G $ be an eulerian graph of minimum degree $ 4 $ and let $ (C_1, \\dots , C_p) $ be a decomposition into cycles of $ G $ . Then $ G $ admits an eulerian tour such that none of the $ C_i $ , $ 1\\leq i\\leq p $ , contains two consecutive edges of $ W $ . For more details on eulerian graphs, see [F].",
+    "references_text": "- *[F] H. Fleischner. Eulerian Graphs and Related Topics. Part 1. Vol. 1. Annals of Discrete Mathematics, Vol. 45, (1990) North-Holland, Amsterdam."
+  },
+  "started": "2026-09-16T17:25:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

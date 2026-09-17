@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "The displayed conjecture fails for an explicit partition of E(K_{12,12}) into nine parts, with j=9.",
+  "would_publish": false,
+  "caveats": "This refutes the extracted formula; the source paper\u2019s precise formulation was not independently verified.",
+  "id": "1611.03196__01",
+  "model": "gpt-6-astra",
+  "usd": 0.54698,
+  "eur": 0.566559,
+  "elapsed_s": 377.8,
+  "status": "completed",
+  "response_id": "resp_062ac6ab0fb6fb77006aaafa5859d487d2990426bff485cdc2",
+  "when": "2026-09-16T20:28:01Z"
+}

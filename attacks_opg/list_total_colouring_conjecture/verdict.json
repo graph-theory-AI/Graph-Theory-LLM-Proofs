@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds, with an exact formula, for multigraphs obtained by gluing simple cycles and parallel-edge bundles at cut vertices.",
+  "would_publish": false,
+  "caveats": "This is a restricted special case, with no novelty claim; the general conjecture remains unresolved here.",
+  "id": "list_total_colouring_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.78086,
+  "eur": 0.808811,
+  "elapsed_s": 670.2,
+  "status": "completed",
+  "response_id": "resp_0e047d3920891db9006aaad94fe3e887d287f83e6d58d99442",
+  "when": "2026-09-16T18:11:57Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "A finite counterexample is obtained from a contraction- and subdivision-closed class whose branch vertices are pairwise joined by internally degree-two paths.",
+  "would_publish": true,
+  "caveats": "Uses the standard coarsely onto definition of quasi-isometry; the class is not required to be closed under edge deletion.",
+  "id": "2509.09031__00",
+  "model": "gpt-6-astra",
+  "usd": 1.208495,
+  "eur": 1.251753,
+  "elapsed_s": 1350.0,
+  "status": "completed",
+  "response_id": "resp_0cb814ebdb109f4b006aab6a05092c87d2b09968af594cb8a6",
+  "when": "2026-09-17T04:40:42Z"
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "coloring_and_immersion",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Coloring and immersion",
+    "paper": "http://www.openproblemgarden.org/op/coloring_and_immersion",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/coloring_and_immersion/",
+    "importance": "High",
+    "undergrad": true,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "coloring_and_immersion",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/coloring_and_immersion/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/coloring_and_immersion",
+    "catalog_title": "Coloring and immersion",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-09-04",
+    "authors": "Abu-Khzam, Faisal N., Langston, Michael A.",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Conjecture For every positive integer $ t $ , every (loopless) graph $ G $ with $ \\chi(G) \\ge t $ immerses $ K_t $ .",
+    "context_text": "Let $ G $ be a graph and let $ uv, vw \\in E(G) $ . The operation of deleting the edges $ uv $ and $ vw $ and then adding a new edge between $ v $ and $ w $ is called a split . We say that a graph $ G $ immerses a graph $ H $ if a graph isomorphic to $ H $ may be obtained from $ G $ by repeatedly making splits and deleting vertices and edges. The graph containment relations of minor and topological minor have been thoroughly studied with respect to graph coloring. In particular, there are two famous conjectures: Hajos conjectured that every graph with chromatic number $ \\ge t $ contains a subdivision of the complete graph $ K_t $ as a subgraph. Hadwiger conjectured that every graph with chromatic number $ \\ge t $ contains $ K_t $ as a minor. While Hajos' Conjecture is false for $ t \\ge 8 $ (indeed it is actually false on average), Hadwiger's Conjecture remains open, and is one of the outstanding problems in Graph Theory. On the other hand, the relationship between graph coloring and immersions seems to have been largely ignored until Abu-Khzam and Langston made the above conjecture. In addition to formulating this conjecture, they proved it for $ t \\le 4 $ and showed that a minimal counterexample to it must be 4-connected and $ t $ -edge-connected. Recently, DeVos, Kawarabayashi, Mohar, and Okamura have resolved the conjecture for $ t \\le 7 $ .",
+    "references_text": "- * Faisal N. Abu-Khzam and Michael A. Langston, Graph Coloring and the Immersion Order"
+  },
+  "started": "2026-09-16T16:46:29Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

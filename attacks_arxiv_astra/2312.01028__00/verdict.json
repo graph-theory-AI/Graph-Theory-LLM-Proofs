@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A star-parity argument proves a linear bound when some vertex is incident with O(n^2) crossings, and also gives a bounded-alternation special case.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not settled; there is no improvement to the quoted general lower bound, and novelty of these restricted-case observations is not asserted.",
+  "id": "2312.01028__00",
+  "model": "gpt-6-astra",
+  "usd": 0.871415,
+  "eur": 0.902607,
+  "elapsed_s": 914.7,
+  "status": "completed",
+  "response_id": "resp_026ab0034b46b5bc006aaaf295265087d290946f90226ee56e",
+  "when": "2026-09-16T20:03:50Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove sharp local frequency bounds for members of size at most six, including that 19 is the minimum family size permitting a three-element member with no abundant element.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is unresolved here; these local results do not improve the general abundance bound, and novelty is not claimed.",
+  "id": "frankls_union_closed_sets_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.043755,
+  "eur": 1.081116,
+  "elapsed_s": 870.4,
+  "status": "completed",
+  "response_id": "resp_036bf85da6b47b05006aab1dbd5bb887d28e2ada148c93ee1c",
+  "when": "2026-09-16T23:07:15Z"
+}

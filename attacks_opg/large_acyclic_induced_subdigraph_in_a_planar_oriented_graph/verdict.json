@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "An explicit seven-vertex planar oriented graph has maximum acyclic induced order four, and an infinite family has acyclic fraction tending to one half.",
+  "would_publish": false,
+  "caveats": "No claim of novelty or historical priority; the supplied open-status report is incompatible with this explicit construction.",
+  "id": "large_acyclic_induced_subdigraph_in_a_planar_oriented_graph",
+  "model": "gpt-6-astra",
+  "usd": 1.036325,
+  "eur": 1.07342,
+  "elapsed_s": 706.7,
+  "status": "completed",
+  "response_id": "resp_086c4da91a899254006aaad7875af887d2ba025bfe49d8554d",
+  "when": "2026-09-16T18:04:57Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "medium",
+  "one_line": "The supplied catalog reports a prior disproof for every k\u22653, and the circular-flow counterexamples apply to exactly the stated modular-orientation conjecture.",
+  "would_publish": false,
+  "caveats": "The literature conclusion relies on the supplied catalog, not an independently checked counterexample construction; k=1 and k=2 are not settled here.",
+  "id": "jaegers_modular_orientation_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.90856,
+  "eur": 0.941082,
+  "elapsed_s": 820.0,
+  "status": "completed",
+  "response_id": "resp_08146fcdbb228bda006aaae6d198b087d2a94b5bd6b50be978",
+  "when": "2026-09-16T19:12:05Z"
+}

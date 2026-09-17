@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "A 37-vertex graph has chromatic number 3 and degree set {0,1,...,29}, making the proposed right-hand side equal to 3; moreover, 37 vertices is minimum.",
+  "would_publish": true,
+  "caveats": "The counterexample has one isolated vertex, which the statement permits; bibliographic novelty has not been independently checked.",
+  "id": "melnikovs_valency_variety_problem",
+  "model": "gpt-6-astra",
+  "usd": 1.565455,
+  "eur": 1.62149,
+  "elapsed_s": 1022.8,
+  "status": "completed",
+  "response_id": "resp_02fa8b7d4d2529c8006aaaca685c1887d2a1c33f99b8dbfe9f",
+  "when": "2026-09-16T17:14:14Z"
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "do_any_three_longest_paths_in_a_connected_graph_have_a_vertex_in_common",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Do any three longest paths in a connected graph have a vertex in common?",
+    "paper": "http://www.openproblemgarden.org/op/do_any_three_longest_paths_in_a_connected_graph_have_a_vertex_in_common",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/do_any_three_longest_paths_in_a_connected_graph_have_a_vertex_in_common/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "do_any_three_longest_paths_in_a_connected_graph_have_a_vertex_in_common",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/do_any_three_longest_paths_in_a_connected_graph_have_a_vertex_in_common/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/do_any_three_longest_paths_in_a_connected_graph_have_a_vertex_in_common",
+    "catalog_title": "Do any three longest paths in a connected graph have a vertex in common?",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-03",
+    "authors": "Gallai, Tibor",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture Do any three longest paths in a connected graph have a vertex in common?",
+    "context_text": "It is a well-known exercise that every two longest paths in a connected graph have a common vertex. Skupien [S] showed connected graphs where 7 longest paths do not share a common vertex.",
+    "references_text": "- *[G] T. Gallai, Problem 6. In Theory of Graphs (Proc. Colloq., Tihany, 1966), 362 Academic Press, New York, 1968.\n- Z. Skupie\u0144, Smallest sets of longest paths with empty intersection. Combin. Probab. Comput. 5 (1996), no. 4, 429\u2013436."
+  },
+  "started": "2026-09-16T17:28:53Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

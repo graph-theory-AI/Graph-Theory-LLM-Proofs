@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove a Fourier extension criterion, an exact alphabet obstruction for the dual Fano matroid, and the conjecture for every uniform 5-entropic matroid.",
+  "would_publish": false,
+  "caveats": "The general prime case remains unresolved; novelty of these special cases relative to the source and subsequent literature has not been checked.",
+  "id": "1909.12175__00",
+  "model": "gpt-6-astra",
+  "usd": 1.22006,
+  "eur": 1.263732,
+  "elapsed_s": 1049.5,
+  "status": "completed",
+  "response_id": "resp_0a12cd3f949d0517006aab3db6a9a887d281fe0bb17603efcc",
+  "when": "2026-09-17T01:26:39Z"
+}

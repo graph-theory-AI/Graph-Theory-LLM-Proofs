@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "hamiltonian_cycles_in_line_graphs_of_infinite_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Hamiltonian cycles in line graphs of infinite graphs",
+    "paper": "http://www.openproblemgarden.org/op/hamiltonian_cycles_in_line_graphs_of_infinite_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonian_cycles_in_line_graphs_of_infinite_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Infinite Graphs"
+  },
+  "dossier_meta": {
+    "id": "hamiltonian_cycles_in_line_graphs_of_infinite_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonian_cycles_in_line_graphs_of_infinite_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/hamiltonian_cycles_in_line_graphs_of_infinite_graphs",
+    "catalog_title": "Hamiltonian cycles in line graphs of infinite graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-07-24",
+    "authors": "Georgakopoulos, Agelos",
+    "subject": "Graph Theory \u00bb Infinite Graphs",
+    "statement_text": "Conjecture \\item If $ G $ is a 4-edge-connected locally finite graph, then its line graph is hamiltonian. \\item If the line graph $ L(G) $ of a locally finite graph $ G $ is 4-connected, then $ L(G) $ is hamiltonian.",
+    "context_text": "(Reproduced from [M].) A locally finite graph is hamiltonian, if its Freudenthal compactification (also called the end compactification, see [D]) contains a hamilton circle, i.e. a homeomorphic copy of $ S^1 $ containing all vertices. The first part is known for finite graphs. The proof uses the existence of two edge-disjoint spanning trees in 4-edge-connected graphs. In the infinite case, it would be enough to prove that a 4-edge-connected locally finite graph $ G $ has two edge-disjoint topological spanning trees (see [D]), one of which is connected as a subgraph of $ G $ . The problem is open even for the 1-ended case (where hamilton circles correspond to 2-way-infinite paths). The second part is widely open even in the finite case, where it was proposed by Thomassen [T].",
+    "references_text": "- [D] Reinhard Diestel, Graph Theory, Third Edition, Springer, 2005.\n- *[G] A. Georgakopoulos, Oberwolfach reports, 2007.\n- [M] Bojan Mohar, Problem of the Month\n- [T] Carsten Thomassen, Reflections on graph theory, J. Graph Theory 10 (1986) 309-324, MathSciNet"
+  },
+  "started": "2026-09-16T17:45:19Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

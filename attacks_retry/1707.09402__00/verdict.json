@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove polynomial-time solvability on rP3-free graphs for every fixed r, covering all forbidden linear forests whose components have at most three vertices.",
+  "would_publish": false,
+  "caveats": "The full dichotomy and unrestricted P6-free case remain unresolved here; novelty of this special-case result has not been independently checked.",
+  "id": "1707.09402__00",
+  "model": "gpt-6-astra",
+  "usd": 1.105485,
+  "eur": 1.145056,
+  "elapsed_s": 885.5,
+  "status": "completed",
+  "response_id": "resp_0e059a37c36b0622006aab4a7ee5a887d2852e3beb005013de",
+  "when": "2026-09-17T02:18:27Z"
+}

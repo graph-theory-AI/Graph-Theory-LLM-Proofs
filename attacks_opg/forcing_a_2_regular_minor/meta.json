@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "forcing_a_2_regular_minor",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Forcing a 2-regular minor",
+    "paper": "http://www.openproblemgarden.org/op/forcing_a_2_regular_minor",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/forcing_a_2_regular_minor/",
+    "importance": "Medium",
+    "undergrad": true,
+    "subject": "Minors"
+  },
+  "dossier_meta": {
+    "id": "forcing_a_2_regular_minor",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/forcing_a_2_regular_minor/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/forcing_a_2_regular_minor",
+    "catalog_title": "Forcing a 2-regular minor",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2014-03-16",
+    "authors": "Reed, Bruce A., Wood, David R.",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Minors",
+    "statement_text": "Conjecture Every graph with average degree at least $ \\frac{4}{3}t-2 $ contains every 2-regular graph on $ t $ vertices as a minor.",
+    "context_text": "Reed and Wood [RW] explained that a result of Corradi and Hajnal [CH] implies that if $ H $ is the graph consisting of $ k $ disjoint triangles, then every graph with average degree at least $ 4k-2 $ contains $ H $ as a minor. Moreover, the bound of $ 4k-2 $ is best possible since the complete bipartite graph $ K_{2k-1,n} $ contains no $ H $ -minor, but has average degree tending to $ 4k-2 $ (as $ n\\rightarrow\\infty $ ). Thus the conjecture would generalise this result. Update: There has been a lot of recent progress on this conjecture [HW,CNLWY].",
+    "references_text": "- [CH] Keresztely Corradi and Andras Hajnal. On the maximal number of independent circuits of a graph. Acta Math. Acad. Sci. Hungar., 14:423\u2013443, 1963.\n- *[RW] Bruce Reed and David R. Wood. Forcing a sparse minor, arXiv:1402.0272, 2013.\n- [HW] Daniel J. Harvey and David R. Wood. Cycles of given size in a dense graph. SIAM J. Discrete Math. 29.4:2336\u20132349, 2015.\n- [CNLWY] E. Cs\u00f3ka, S. Norin, I. Lo, H. Wu and L. Yepremyan. The extremal function for disconnected minors. J. Comb. Theory B 126 (2017), 162-174."
+  },
+  "started": "2026-09-16T16:42:24Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "strong_colorability",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Strong colorability",
+    "paper": "http://www.openproblemgarden.org/op/strong_colorability",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/strong_colorability/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "strong_colorability",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/strong_colorability/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/strong_colorability",
+    "catalog_title": "Strong colorability",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-03-27",
+    "authors": "Aharoni, Ron, Alon, Noga, Haxell, Penny E.",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Let $ r $ be a positive integer. We say that a graph $ G $ is strongly $ r $ -colorable if for every partition of the vertices to sets of size at most $ r $ there is a proper $ r $ -coloring of $ G $ in which the vertices in each set of the partition have distinct colors. Conjecture If $ \\Delta $ is the maximal degree of a graph $ G $ , then $ G $ is strongly $ 2 \\Delta $ -colorable.",
+    "context_text": "Haxell proved that if $ \\Delta $ is the maximal degree of a graph $ G $ , then $ G $ is strongly $ 3 \\Delta - 1 $ -colorable. She later proved that the strong chromatic number $ \\chi_S $ is at most $ (2.75+\\epsilon)\\Delta $ for sufficiently large $ \\Delta $ depending on $ \\epsilon $ . Aharoni, Berger, and Ziv proved the fractional relaxation.",
+    "references_text": ""
+  },
+  "started": "2026-09-16T19:21:03Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Replacing a cubic vertex by the cube with one vertex deleted preserves Hamilton decomposability of the prism, yielding an explicit infinite 3-connected planar family.",
+  "would_publish": false,
+  "caveats": "This is a local preservation result, not a resolution of the conjecture; its novelty has not been checked.",
+  "id": "decomposing_the_prism_of_a_3_connected_cubic_planar_graphs_in_hamilton_cycles",
+  "model": "gpt-6-astra",
+  "usd": 0.828685,
+  "eur": 0.858348,
+  "elapsed_s": 1104.0,
+  "status": "completed",
+  "response_id": "resp_0eff41882e265a4b006aaad1adef3887d2adf7698404d6bc52",
+  "when": "2026-09-16T17:46:37Z"
+}

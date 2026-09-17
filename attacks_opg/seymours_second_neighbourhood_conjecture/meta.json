@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "seymours_second_neighbourhood_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Seymour's Second Neighbourhood Conjecture",
+    "paper": "http://www.openproblemgarden.org/op/seymours_second_neighbourhood_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/seymours_second_neighbourhood_conjecture/",
+    "importance": "High",
+    "undergrad": true,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "seymours_second_neighbourhood_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/seymours_second_neighbourhood_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/seymours_second_neighbourhood_conjecture",
+    "catalog_title": "Seymour's Second Neighbourhood Conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-10-09",
+    "authors": "Seymour, Paul D.",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "Conjecture Any oriented graph has a vertex whose outdegree is at most its second outdegree.",
+    "context_text": "By the $ n $ th outdegree of $ v $ , we mean the number of vertices for which the minimal outward-directed path from $ v $ to them is of length $ n $ . Chen, Shen, and Yuster [CSY] proved that in any oriented graph there is a vertex whose second outdegree is at least $ \\gamma $ times its outdegree, where $ \\gamma=0.657298... $ is the unique real root of $ 2x^3+x^2 -1=0 $ . This conjecture implies a special case of the \\Oprefnum[Caccetta-H\u00e4ggkvist Conjecture]{46385}.",
+    "references_text": "- [ASY] Chen, G.; Shen, J.; Yuster, R. Second neighborhood via first neighborhood in digraphs, Annals of Combinatorics, 7 (2003), 15--20.\n- [F] Fisher, David C. Squaring a tournament: a proof of Dean's conjecture. J. Graph Theory 23 (1996), no. 1, 43--48.\n- [KL] Kaneko, Yoshihiro; Locke, Stephen C. The minimum degree approach for Paul Seymour's distance 2 conjecture. Proceedings of the Thirty-second Southeastern International Conference on Combinatorics, Graph Theory and Computing (Baton Rouge, LA, 2001). Congr. Numer. 148 (2001), 201--206."
+  },
+  "started": "2026-09-16T16:53:18Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

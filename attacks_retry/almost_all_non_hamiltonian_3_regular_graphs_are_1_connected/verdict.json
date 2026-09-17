@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A sharper bridge enumeration, including an exact asymptotic for graphs with multiple bridges, is possible, but the required upper bound on bridgeless non-Hamiltonian graphs remains missing.",
+  "would_publish": false,
+  "caveats": "Connected simple unlabelled graphs are intended; standard regular-graph enumeration is used, and no novelty claim is made. The disconnected interpretation is false.",
+  "id": "almost_all_non_hamiltonian_3_regular_graphs_are_1_connected",
+  "model": "gpt-6-astra",
+  "usd": 1.24322,
+  "eur": 1.287721,
+  "elapsed_s": 1047.4,
+  "status": "completed",
+  "response_id": "resp_0f66b88b23c5935f006aab127f7ffc87d28669612617fd0521",
+  "when": "2026-09-16T22:22:14Z"
+}

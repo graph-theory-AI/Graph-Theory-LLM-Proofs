@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the stronger bound h(G) >= chi(G) when deleting at most one vertex makes the complement C4-free.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved here; novelty of this special case has not been checked.",
+  "id": "seagull_problem",
+  "model": "gpt-6-astra",
+  "usd": 0.90072,
+  "eur": 0.932961,
+  "elapsed_s": 774.0,
+  "status": "completed",
+  "response_id": "resp_0315f8e4b8c4dc4c006aaaea68e4a887d29586577449b5ccf1",
+  "when": "2026-09-16T19:26:38Z"
+}

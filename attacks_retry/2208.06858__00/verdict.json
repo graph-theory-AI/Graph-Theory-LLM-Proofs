@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove uniform vanishing for n <= (1+o(1))log_2(t) and the sharp (1+o(1))/log_2(t) law for all fixed-partition strategies, but not the full conjecture.",
+  "would_publish": false,
+  "caveats": "Arbitrary intersecting fibers at larger heights remain uncontrolled; the partition restriction is genuinely restrictive, and novelty has not been checked.",
+  "id": "2208.06858__00",
+  "model": "gpt-6-astra",
+  "usd": 1.32784,
+  "eur": 1.37537,
+  "elapsed_s": 1058.9,
+  "status": "completed",
+  "response_id": "resp_0b55043cf03ad135006aab4161843c87d28675a31b94f480bd",
+  "when": "2026-09-17T01:42:28Z"
+}

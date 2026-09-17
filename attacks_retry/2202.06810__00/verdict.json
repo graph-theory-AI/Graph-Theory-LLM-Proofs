@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove M_{F_{2c}}(5)=5 and M_{F_{2c}}(n)=2^{n-2} for every odd n>=11 such that 217 does not divide n-2.",
+  "would_publish": false,
+  "caveats": "The cases n=7,9 and n=219+434k remain outside this result; novelty has not been externally checked.",
+  "id": "2202.06810__00",
+  "model": "gpt-6-astra",
+  "usd": 1.57667,
+  "eur": 1.633107,
+  "elapsed_s": 1321.1,
+  "status": "completed",
+  "response_id": "resp_06aed10181739e3d006aab55a939dc87d29dcfc1295ebad36f",
+  "when": "2026-09-17T03:13:22Z"
+}

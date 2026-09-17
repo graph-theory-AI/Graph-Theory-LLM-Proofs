@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured bound, including its equality characterization, holds for K4-free graphs with minimum degree at least n/2.",
+  "would_publish": false,
+  "caveats": "The general conjecture remains unresolved; the minimum-degree and K4-free restrictions are substantial, and novelty of this special case is unchecked.",
+  "id": "1905.05312__00",
+  "model": "gpt-6-astra",
+  "usd": 0.96221,
+  "eur": 0.996652,
+  "elapsed_s": 755.8,
+  "status": "completed",
+  "response_id": "resp_0dd7357bf09ff62c006aaaf294f22087d288800125cdf43fbe",
+  "when": "2026-09-16T20:01:11Z"
+}

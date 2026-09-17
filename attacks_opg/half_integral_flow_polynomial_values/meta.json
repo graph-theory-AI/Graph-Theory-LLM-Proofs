@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "half_integral_flow_polynomial_values",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Half-integral flow polynomial values",
+    "paper": "http://www.openproblemgarden.org/op/half_integral_flow_polynomial_values",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/half_integral_flow_polynomial_values/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Algebraic Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "half_integral_flow_polynomial_values",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/half_integral_flow_polynomial_values/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/half_integral_flow_polynomial_values",
+    "catalog_title": "Half-integral flow polynomial values",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-05-31",
+    "authors": "Mohar, Bojan",
+    "subject": "Graph Theory \u00bb Algebraic Graph Theory",
+    "statement_text": "Let $ \\Phi(G,x) $ be the flow polynomial of a graph $ G $ . So for every positive integer $ k $ , the value $ \\Phi(G,k) $ equals the number of nowhere-zero $ k $ -flows in $ G $ . Conjecture $ \\Phi(G,5.5) > 0 $ for every 2-edge-connected graph $ G $ .",
+    "context_text": "By Seymour's 6-flow theorem, $ \\Phi(G,k) > 0 $ for every 2-edge-connected graph $ G $ and every integer $ k\\ge6 $ . It would be interesting to find any non-integer rational number $ x>5 $ so that $ \\Phi(G,x) > 0 $ for every 2-edge-connected graph $ G $ . It is known that zeros of flow polynomials are dense in the complex plane.",
+    "references_text": ""
+  },
+  "started": "2026-09-16T17:40:57Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

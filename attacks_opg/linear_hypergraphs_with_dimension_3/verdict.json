@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds when every vertex belongs to at most three hyperedges, and every linear dimension-3 incidence graph is 3-degenerate.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not settled here; these are self-contained consequences, but their novelty has not been checked.",
+  "id": "linear_hypergraphs_with_dimension_3",
+  "model": "gpt-6-astra",
+  "usd": 1.35851,
+  "eur": 1.407138,
+  "elapsed_s": 1058.6,
+  "status": "completed",
+  "response_id": "resp_0be65c78e7c007db006aaad84aa41887d299a8e4659d61ce19",
+  "when": "2026-09-16T18:14:05Z"
+}

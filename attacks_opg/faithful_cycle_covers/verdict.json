@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain a bounded-weight reduction for counterexamples and an explicit graph-size-dependent additive buffer that makes every admissible weighting faithfully coverable.",
+  "would_publish": false,
+  "caveats": "The conjecture remains unresolved; novelty is not claimed, and the optional linear buffer bound uses the interval theorem exactly as quoted in the question.",
+  "id": "faithful_cycle_covers",
+  "model": "gpt-6-astra",
+  "usd": 0.990785,
+  "eur": 1.02625,
+  "elapsed_s": 800.6,
+  "status": "completed",
+  "response_id": "resp_0868c29f321c5f67006aaae4d5ad3c87d2bb5b47c42dff355b",
+  "when": "2026-09-16T19:03:18Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Starting from the known three-term realizations, protected padding yields exactly the sequences whose positive drops can be made nonincreasing by at most one adjacent swap, in either surface category.",
+  "would_publish": false,
+  "caveats": "Uses the established three-term results quoted in the question; no novelty claim, and the general conjecture remains unresolved.",
+  "id": "crossing_sequences",
+  "model": "gpt-6-astra",
+  "usd": 1.295975,
+  "eur": 1.342364,
+  "elapsed_s": 1407.8,
+  "status": "completed",
+  "response_id": "resp_0eb526985754a041006aab1795c80c87d2a6e9ba5855b35da3",
+  "when": "2026-09-16T22:49:57Z"
+}

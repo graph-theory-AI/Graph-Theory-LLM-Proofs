@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove decomposition theorems for directed expanders and for digraphs of bounded total degree imbalance, but neither yields a universal connectivity constant.",
+  "would_publish": false,
+  "caveats": "Extra hypotheses remain necessary for these arguments; novelty and the latest literature status have not been independently checked.",
+  "id": "arc_disjoint_strongly_connected_spanning_subdigraphs",
+  "model": "gpt-6-astra",
+  "usd": 1.07859,
+  "eur": 1.117198,
+  "elapsed_s": 1251.0,
+  "status": "completed",
+  "response_id": "resp_0384bce446b6ba73006aab14f6831887d2952d1367b59e1258",
+  "when": "2026-09-16T22:36:09Z"
+}

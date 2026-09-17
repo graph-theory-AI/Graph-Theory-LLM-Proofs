@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 27,
+    "score": 4.4,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1912.01570__00",
+    "title_md": "[Conjecture 2](https://arxiv.org/abs/1912.01570)",
+    "paper": "Jones' Conjecture in subcubic graphs",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1912.01570__00/"
+  },
+  "dossier_meta": {
+    "id": "1912.01570__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1912.01570__00/",
+    "arxiv_id": "1912.01570",
+    "tier": 4,
+    "score": 4.4,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Jones' Conjecture in subcubic graphs",
+    "catalog_title": "Conjecture 2",
+    "statement_text": "For every planar graph $G$, we have $\\mathrm{fvs}(G) \\leq 2 \\cdot \\mathrm{fp}(G)$, where $\\mathrm{fp}(G)$ is the maximum size of a face-packing of $G$, i.e., a cycle-packing where, for some embedding of $G$, every cycle bounds a face.",
+    "context_text": "The authors pose this stronger conjecture to highlight how little is understood around Jones' Conjecture. They note that the example of many nested disjoint cycles shows the embedding cannot be fixed, and that the simple discharging argument giving $\\mathrm{fvs}(G) \\leq 3\\,\\mathrm{cp}(G)$ does not imply this conjecture even with factor 3 instead of 2."
+  },
+  "started": "2026-09-16T20:07:38Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

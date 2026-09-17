@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Any polynomial bound for a k-vertex tree must have degree at least floor(k/2) when k >= 5; I also give a sharp-exponent proof for the claw, but no general upper bound.",
+  "would_publish": false,
+  "caveats": "These are standard Ramsey-type partial results, not a claimed new resolution; the catalog's later references were not independently verified.",
+  "id": "2302.08922__01",
+  "model": "gpt-6-astra",
+  "usd": 0.640955,
+  "eur": 0.663898,
+  "elapsed_s": 626.1,
+  "status": "completed",
+  "response_id": "resp_0556e45217c80093006aaafc01754887d2bfb9533397e18b86",
+  "when": "2026-09-16T20:39:15Z"
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "cycle_double_covers_containing_predefined_2_regular_subgraphs",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Cycle Double Covers Containing Predefined 2-Regular Subgraphs",
+    "paper": "http://www.openproblemgarden.org/op/cycle_double_covers_containing_predefined_2_regular_subgraphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/cycle_double_covers_containing_predefined_2_regular_subgraphs/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "cycle_double_covers_containing_predefined_2_regular_subgraphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/cycle_double_covers_containing_predefined_2_regular_subgraphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/cycle_double_covers_containing_predefined_2_regular_subgraphs",
+    "catalog_title": "Cycle Double Covers Containing Predefined 2-Regular Subgraphs",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2017-06-21",
+    "authors": "Arthur, Hoffmann-Ostenhof",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture Let $ G $ be a $ 2 $ -connected cubic graph and let $ S $ be a $ 2 $ -regular subgraph such that $ G-E(S) $ is connected. Then $ G $ has a cycle double cover which contains $ S $ (i.e all cycles of $ S $ ).",
+    "context_text": "Used definitions in the above conjecture: a \"cycle\" is a connected 2-regular subgraph, a \"cycle double cover\" of a graph $ G $ is a set of cycles of $ G $ such that every edge of $ G $ is contained in precisely two cycles of the set. This conjecture has been motivated by Theorem 3, respectively, Theorem 4 in www.arxiv.org/abs/1711.10614. A weaker conjecture (Conjecture 14) has been stated in \"Snarks with special spanning trees\" (see www.arxiv.org/abs/1706.05595).",
+    "references_text": ""
+  },
+  "started": "2026-09-16T18:45:17Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A different partition gives three 3-flow complements for the cycle-doubling class, including all flower snarks, but the full conjecture remains unresolved.",
+  "would_publish": false,
+  "caveats": "Novelty has not been checked; the stronger 2,3,3 statement in the supplied discussion is false under its literal disjoint-partition interpretation.",
+  "id": "three_4_flows_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.54551,
+  "eur": 1.600831,
+  "elapsed_s": 1776.2,
+  "status": "completed",
+  "response_id": "resp_06da22ab29eda99b006aab2bccb39c87d2ba673e13aa1d5fd4",
+  "when": "2026-09-17T00:22:20Z"
+}

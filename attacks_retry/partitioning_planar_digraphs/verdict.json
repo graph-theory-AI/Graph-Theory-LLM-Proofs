@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Self-contained arguments prove the conjecture for planar graphs of maximum average degree at most 46/11, and for planar graphs with at most eleven undirected triangles.",
+  "would_publish": false,
+  "caveats": "The full conjecture remains unresolved by this argument; no novelty claim or computational verification is made.",
+  "id": "partitioning_planar_digraphs",
+  "model": "gpt-6-astra",
+  "usd": 1.329685,
+  "eur": 1.377281,
+  "elapsed_s": 1414.1,
+  "status": "completed",
+  "response_id": "resp_067c63514e085a4c006aab26b8378487d280840ecff91c60e5",
+  "when": "2026-09-16T23:54:38Z"
+}

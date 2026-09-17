@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "negative_association_in_uniform_forests",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Negative association in uniform forests",
+    "paper": "http://www.openproblemgarden.org/op/negative_association_in_uniform_forests",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/negative_association_in_uniform_forests/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Probabilistic Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "negative_association_in_uniform_forests",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/negative_association_in_uniform_forests/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/negative_association_in_uniform_forests",
+    "catalog_title": "Negative association in uniform forests",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2008-06-30",
+    "authors": "Pemantle, Robin",
+    "subject": "Graph Theory \u00bb Probabilistic Graph Theory",
+    "statement_text": "Conjecture Let $ G $ be a finite graph, let $ e,f \\in E(G) $ , and let $ F $ be the edge set of a forest chosen uniformly at random from all forests of $ G $ . Then \\[ {\\mathbb P}(e \\in F \\mid f \\in F}) \\le {\\mathbb P}(e \\in F) \\]",
+    "context_text": "The FKG inequality is the cornerstone of a respectable theory of positive association; If a natural lattice condition holds, we can use it to deduce positive association. On the other hand, the theory of negative associations is still lacking good techniques. See Pemantle's lovely paper [P] for an excellent description of this situation. The conjecture highlighted above seems to be almost obviously true, but we have no tools to prove it. Modifying the conjecture by replacing \"forest\" by \"spanning tree\" gives a true statement which was proved by Feder and Mihail [FM]. Actually, they prove that this holds more generally for uniform bases of balanced matroids. Perhaps surprisingly, this is false for general matroids, see [SW].",
+    "references_text": "- [FM] T. Feder and M. Mihail, Balanced Matroids. Proc 24th Annual STOC 26 - 38 (1992).\n- *[P] R. Pemantle, Towards a theory of negative dependence, Journal of Mathematical Physics 41 (2000), 1371\u20131390.\n- [SW] P. D. Seymour and D. J. A. Welsh, Combinatorial applications of an inequality from statistical mechanics. Math. Proc. Camb. Phil. Soc. 77 485 - 495 (1975)."
+  },
+  "started": "2026-09-16T18:03:09Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

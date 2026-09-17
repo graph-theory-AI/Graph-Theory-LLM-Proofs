@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The Petersen graph is not countable: a twisted affine-polarity construction gives C4-free graphs with a positive Petersen prediction but no Petersen homomorphism.",
+  "would_publish": true,
+  "caveats": "The full characterization and the dodecahedral case remain unresolved here; novelty has not been independently checked.",
+  "id": "2106.03261__00",
+  "model": "gpt-6-astra",
+  "usd": 1.38204,
+  "eur": 1.43151,
+  "elapsed_s": 1260.8,
+  "status": "completed",
+  "response_id": "resp_0d37ae7120004c09006aab3791a97487d2a880fe9b478b255a",
+  "when": "2026-09-17T01:03:58Z"
+}

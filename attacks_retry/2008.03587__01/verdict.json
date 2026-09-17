@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove z(G'_k) >= c(G)+1 for every odd k >= 2 diam(G)+3, establishing the intended conjecture whenever z(G)=c(G).",
+  "would_publish": false,
+  "caveats": "The case z(G)>c(G) and the proposed universal choice k=5 remain unresolved; novelty of the partial bound has not been checked.",
+  "id": "2008.03587__01",
+  "model": "gpt-6-astra",
+  "usd": 0.99256,
+  "eur": 1.028088,
+  "elapsed_s": 1236.8,
+  "status": "completed",
+  "response_id": "resp_024f634ee6321754006aaafff7f8bc87d2a7ba191c6338f89b",
+  "when": "2026-09-16T21:06:18Z"
+}

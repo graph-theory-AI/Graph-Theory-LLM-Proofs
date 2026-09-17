@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The ratio inequality holds for every balanced complete tripartite graph and, for each fixed k, for all sufficiently large balanced complete k-partite graphs.",
+  "would_publish": false,
+  "caveats": "General graphs are not settled; novelty of these self-contained special-case results has not been checked.",
+  "id": "partial_list_coloring_0",
+  "model": "gpt-6-astra",
+  "usd": 0.97067,
+  "eur": 1.005415,
+  "elapsed_s": 888.8,
+  "status": "completed",
+  "response_id": "resp_01cdacf9b1fb0656006aaae8d2087887d292d1fc32b5afc1b7",
+  "when": "2026-09-16T19:21:46Z"
+}

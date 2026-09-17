@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every odd-regular graph of degree at least 3 and girth at least 5 has a friendly partition, as shown by the self-contained argument below.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved; novelty of this special case and its algorithmic proof is not claimed.",
+  "id": "friendly_partitions",
+  "model": "gpt-6-astra",
+  "usd": 1.12884,
+  "eur": 1.169247,
+  "elapsed_s": 1069.1,
+  "status": "completed",
+  "response_id": "resp_07a497c3cef3a1c0006aaad448e17487d2bea2c4bf3b9c21b9",
+  "when": "2026-09-16T17:57:09Z"
+}

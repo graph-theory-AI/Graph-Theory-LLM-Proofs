@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds when Delta(G)/(chi(G)-1) is bounded, with order-optimal quadratic and cubic thresholds for girths 5\u20136 and 7\u20138, respectively.",
+  "would_publish": false,
+  "caveats": "Arbitrary degree distributions remain uncontrolled; these self-contained special cases are not claimed to be new, and later literature has not been independently checked.",
+  "id": "1808.01605__01",
+  "model": "gpt-6-astra",
+  "usd": 0.999115,
+  "eur": 1.034878,
+  "elapsed_s": 816.6,
+  "status": "completed",
+  "response_id": "resp_0f3c86038f922e75006aaaf8df53ac87d28eaf77a85571de01",
+  "when": "2026-09-16T20:29:03Z"
+}

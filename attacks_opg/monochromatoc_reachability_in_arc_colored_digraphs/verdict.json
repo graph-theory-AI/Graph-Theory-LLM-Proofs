@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A self-contained argument gives an O_k(log(alpha(D)+1)) stable-set bound and proves the desired constant bound for complete multipartite underlying graphs.",
+  "would_publish": false,
+  "caveats": "Finite digraphs are assumed; the general bound still depends on the stability number, and novelty of these partial results is not claimed.",
+  "id": "monochromatoc_reachability_in_arc_colored_digraphs",
+  "model": "gpt-6-astra",
+  "usd": 0.816125,
+  "eur": 0.845338,
+  "elapsed_s": 729.9,
+  "status": "completed",
+  "response_id": "resp_0c8f6f9149b5ce1b006aaae7b5c84887d2a04e6bef9f67a9b3",
+  "when": "2026-09-16T19:14:23Z"
+}

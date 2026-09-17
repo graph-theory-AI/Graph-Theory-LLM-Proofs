@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A uniform padding reduction preserves the unrestricted complexity dichotomy for 0 < c < 1/|H|, and an explicit expansion condition gives sharper hardness bounds.",
+  "would_publish": false,
+  "caveats": "The general higher-density regime and equality cases are not resolved here; literature novelty is not claimed.",
+  "id": "complexity_of_the_h_factor_problem",
+  "model": "gpt-6-astra",
+  "usd": 1.22624,
+  "eur": 1.270133,
+  "elapsed_s": 1008.7,
+  "status": "completed",
+  "response_id": "resp_0842c36fbfe982a2006aaacf26efd487d2ae8381042899de23",
+  "when": "2026-09-16T17:34:13Z"
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "linear_hypergraphs_with_dimension_3",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Linear Hypergraphs with Dimension 3",
+    "paper": "http://www.openproblemgarden.org/op/linear_hypergraphs_with_dimension_3",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/linear_hypergraphs_with_dimension_3/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Drawings"
+  },
+  "dossier_meta": {
+    "id": "linear_hypergraphs_with_dimension_3",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/linear_hypergraphs_with_dimension_3/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/linear_hypergraphs_with_dimension_3",
+    "catalog_title": "Linear Hypergraphs with Dimension 3",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-09-26",
+    "authors": "de Fraysseix, Hubert, Ossona de Mendez, Patrice, Rosenstiehl, Pierre",
+    "subject": "Graph Theory \u00bb Topological Graph Theory \u00bb Drawings",
+    "statement_text": "Conjecture Any linear hypergraph with incidence poset of dimension at most 3 is the intersection hypergraph of a family of triangles and segments in the plane.",
+    "context_text": "A hypergraph is linear if any two edges may share at most one vertex. The incidence poset of a hypergraph is the vertex-edge inclusion poset. The dimension of a poset $ P $ is the minimum number of linear extentions of $ P $ , whose intersection is $ P $ [DM]. Schnyder proved that the incidence poset of a graph $ G $ has dimension at most $ 3 $ if and only if $ G $ is planar [S89]. Fraysseix, Rosenstiehl and Ossona de Mendez proved that every planar graph has a representation by contacts of triangles [FOR94] and Scheinerman conjectured that every planar graph has a representation by intersection of segments [S84] (claimed to be proved by Gon\u00e7alves et al.). A hypergraph is planar if its vertex-edge incidence graph is planar [W]. Fraysseix, Rosenstiehl and Ossona de Mendez proved that every planar linear hypergraph has a representation by contacts of triangles [FOR07] and it has been conjectured that they have a representation by intersection of straight line segments [FO07] (cf Straight line representation of planar linear hypergraphs ). Although the incidence poset of a simple planar hypergraph has dimension at most $ 3 $ (what follows from [BT]), the converse is false: The linear hypergraph with vertices $ 1,\\dots,5 $ and edge set $ \\{\\{1,2\\},\\{2,3\\},\\{3,4\\},\\{1,4\\},\\{1,3,5\\},\\{2,4,5\\}\\} $ has incidence dimension $ 3 $ but is not planar (its vertex-edge incidence graph is a subdivision of $ K_{3,3} $ ). It follows from [O] that the vertices of simple hypergraphs with incidence posets of dimensions $ d $ can be represented by convex sets of the Euclidean space of dimension $ d-1 $ , in such a way that the edges of the hypergraph are exactly the maximal subsets of vertices, such that the corresponding subset of convexes has a non-empty intersection.",
+    "references_text": "- [BT] G.~Brightwell and W.T. Trotter, The order dimension of planar maps, SIAM journal on Discrete Mathematics 10 (1997), no.~4, 515--528.\n- [DM] B.~Dushnik and E.W. Miller, Partially ordered sets, Amer. J. Math. 63 (1941), 600--610.\n- [FO07] Hubert de Fraysseix, Patrice Ossona de Mendez: Stretching of Jordan arc contact systems, Discrete Applied Mathematics 155 (2007), no. 9, 1079--1095.\n- [FOR94] H.~de Fraysseix, P.~Ossona~de Mendez, and P.~Rosenstiehl, On triangle contact graphs, Combinatorics, Probability and Computing 3 (1994), 233--246.\n- *[FOR07] H.~de Fraysseix, P.~Ossona~de Mendez, and P.~Rosenstiehl, Representation of Planar Hypergraphs by Contacts of Triangles, Proc. of Graph Drawing '07, to appear.\n- [O] P.~Ossona~de Mendez, Realization of posets, Journal of Graph Algorithms and Applications 6 (2002), no.~1, 149--153.\n- [S84] E.R. Scheinerman, Intersection classes and multiple intersection parameters of graphs, Ph.D. thesis, Princeton University, 1984.\n- [S89] W.~Schnyder, Planar graphs and poset dimension, Order 5 (1989), 323--343.\n- [W] T.R.S. Walsh, Hypermaps versus bipartite maps, J. Combinatorial Theory 18(B) (1975), 155--163."
+  },
+  "started": "2026-09-16T17:56:26Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

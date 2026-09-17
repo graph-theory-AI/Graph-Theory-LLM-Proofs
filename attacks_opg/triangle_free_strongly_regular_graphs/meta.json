@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "triangle_free_strongly_regular_graphs",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Triangle free strongly regular graphs",
+    "paper": "http://www.openproblemgarden.org/op/triangle_free_strongly_regular_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/triangle_free_strongly_regular_graphs/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Algebraic Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "triangle_free_strongly_regular_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/triangle_free_strongly_regular_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/triangle_free_strongly_regular_graphs",
+    "catalog_title": "Triangle free strongly regular graphs",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-05-28",
+    "authors": "",
+    "subject": "Graph Theory \u00bb Algebraic Graph Theory",
+    "statement_text": "Problem Is there an eighth triangle free strongly regular graph?",
+    "context_text": "A regular graph $ G $ is strongly regular if there exist integers $ \\lambda, \\mu $ so that every pair of adjacent vertices have exactly $ \\lambda $ common neighbors, and every pair of nonadjacent vertices have exactly $ \\mu $ common neighbors. To eliminate degeneracies, we shall further assume that $ \\mu \\ge 1 $ . If $ G $ is $ k $ -regular and $ |V(G)| = n $ , then we say that $ G $ is a $ (n,k,\\lambda,\\mu) $ strongly regular graph. There are exactly seven triangle-free strongly regular graphs known: The five cycle, the Petersen Graph , The Clebsch Graph, the Hoffman-Singleton Graph , The Gewirtz Graph, the Higman-Sims Graph, and a $ (77,16,0,4) $ strongly regular subgraph of the Higman-Sims graph. Every Moore Graph of diameter 2 is a triangle-free strongly regular graph, so if there is a 57-regular Moore Graph of diameter 2, this would add another to the list. See Andries Brouwer's graph descriptions for more on these graphs.",
+    "references_text": "- [G] C. D. Godsil, Problems in Algebraic Combinatorics, Electronic Journal of Combinatorics, Volume 2, F1"
+  },
+  "started": "2026-09-16T19:26:05Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

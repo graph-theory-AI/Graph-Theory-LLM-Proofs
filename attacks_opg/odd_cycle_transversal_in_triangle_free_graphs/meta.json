@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "odd_cycle_transversal_in_triangle_free_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Odd-cycle transversal in triangle-free graphs",
+    "paper": "http://www.openproblemgarden.org/op/odd_cycle_transversal_in_triangle_free_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/odd_cycle_transversal_in_triangle_free_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Extremal Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "odd_cycle_transversal_in_triangle_free_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/odd_cycle_transversal_in_triangle_free_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/odd_cycle_transversal_in_triangle_free_graphs",
+    "catalog_title": "Odd-cycle transversal in triangle-free graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-06",
+    "authors": "Erdos, Paul, Faudree, Ralph, Pach, J\u00e1nos, Spencer, Joel",
+    "subject": "Graph Theory \u00bb Extremal Graph Theory",
+    "statement_text": "Conjecture If $ G $ is a simple triangle-free graph, then there is a set of at most $ n^2/25 $ edges whose deletion destroys every odd cycle.",
+    "context_text": "",
+    "references_text": "- *[EFPS] P. Erd\u00f6s, R. Faudree, J. Pach and J. Spencer, How to make a graph bipartite. J. Combin. Theory Ser. B 45 (1988), 86--98."
+  },
+  "started": "2026-09-16T18:04:58Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For every r>=1, I construct a finite (P4 plus r isolated vertices)-induced-saturated graph on 2r+25 vertices, ruling out that entire candidate exceptional family.",
+  "would_publish": false,
+  "caveats": "The original existence question remains unresolved; novelty of these positive constructions has not been checked.",
+  "id": "2506.08810__00",
+  "model": "gpt-6-astra",
+  "usd": 0.988725,
+  "eur": 1.024116,
+  "elapsed_s": 1823.9,
+  "status": "completed",
+  "response_id": "resp_0558e6518e528902006aab09a77a9887d2b39355eba233e174",
+  "when": "2026-09-16T21:57:27Z"
+}

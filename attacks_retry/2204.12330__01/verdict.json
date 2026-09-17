@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A fully specified finite-search construction gives a recursively presented finitely generated group of infinite twin-width, but not the natural or direct example sought by the question.",
+  "would_publish": false,
+  "caveats": "The construction still searches for high-twin-width witnesses and uses counting and the local lemma; no novelty claim or short finite presentation is made.",
+  "id": "2204.12330__01",
+  "model": "gpt-6-astra",
+  "usd": 0.988645,
+  "eur": 1.024033,
+  "elapsed_s": 1211.6,
+  "status": "completed",
+  "response_id": "resp_0bdff52b60902b9b006aab575085a487d294de4150a7639097",
+  "when": "2026-09-17T03:18:35Z"
+}

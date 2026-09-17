@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Weighted padding proves NP-hardness for P_(2k) at every c < 1/2 - 1/(2k), for k >= 2, and extends to connected trees and linear forests.",
+  "would_publish": false,
+  "caveats": "The general classification and most boundary cases remain unresolved; literature novelty has not been established.",
+  "id": "complexity_of_the_h_factor_problem",
+  "model": "gpt-6-astra",
+  "usd": 1.069835,
+  "eur": 1.10813,
+  "elapsed_s": 1140.8,
+  "status": "completed",
+  "response_id": "resp_086a3c4aaece9007006aab173207a087d2938bf2719c66a9f9",
+  "when": "2026-09-16T22:43:50Z"
+}

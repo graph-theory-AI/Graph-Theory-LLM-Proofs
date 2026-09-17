@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "partial_list_coloring",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Partial List Coloring",
+    "paper": "http://www.openproblemgarden.org/op/partial_list_coloring",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/partial_list_coloring/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "partial_list_coloring",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/partial_list_coloring/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/partial_list_coloring",
+    "catalog_title": "Partial List Coloring",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2008-05-05",
+    "authors": "Albertson, Michael O., Grossman, Sara, Haas, Ruth",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Conjecture Let $ G $ be a simple graph with $ n $ vertices and list chromatic number $ \\chi_\\ell(G) $ . Suppose that $ 0\\leq t\\leq \\chi_\\ell $ and each vertex of $ G $ is assigned a list of $ t $ colors. Then at least $ \\frac{tn}{\\chi_\\ell(G)} $ vertices of $ G $ can be colored from these lists.",
+    "context_text": "Albertson, Grossman, and Haas introduce this interesting question in [AGH], and prove some partial results. For instance, they show that under the above assumptions, at least $ (1 - (\\frac{ \\chi(G) - 1}{\\chi(G)} )^t) \\cdot n $ vertices of $ G $ can be colored from the lists.",
+    "references_text": "- *[AGH] M. Albertson, S. Grossman and R. Haas, Partial list colouring, Discrete Math., 214(2000), pp. 235-240."
+  },
+  "started": "2026-09-16T19:06:51Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

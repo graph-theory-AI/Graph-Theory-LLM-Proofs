@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For every even-edge complete bipartite graph K_{a,b}, I obtain d_{K_{a,b}}(n)=Theta(n^{-k}), where 2k is the largest even part size, together with a broader rooted-copy result.",
+  "would_publish": false,
+  "caveats": "The general conjecture remains unresolved; novelty of these self-contained special-case bounds has not been verified.",
+  "id": "2301.13305__00",
+  "model": "gpt-6-astra",
+  "usd": 0.76312,
+  "eur": 0.790436,
+  "elapsed_s": 782.4,
+  "status": "completed",
+  "response_id": "resp_0934ee941cd56841006aaaf294f8f887d2a0d77aa04e68f972",
+  "when": "2026-09-16T20:01:37Z"
+}

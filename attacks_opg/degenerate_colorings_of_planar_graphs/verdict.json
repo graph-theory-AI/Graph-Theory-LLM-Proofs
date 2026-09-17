@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An explicit rooted coloring proves the conjecture for every triangulation obtained by repeatedly inserting icosahedra into triangular faces.",
+  "would_publish": false,
+  "caveats": "This gives an infinite minimum-degree-five special case and a reducible configuration, not a general solution; no novelty is claimed.",
+  "id": "degenerate_colorings_of_planar_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.256615,
+  "eur": 1.301595,
+  "elapsed_s": 1045.5,
+  "status": "completed",
+  "response_id": "resp_0b96c75d467b8eee006aaae429450887d2a6ef909df0604492",
+  "when": "2026-09-16T19:04:30Z"
+}

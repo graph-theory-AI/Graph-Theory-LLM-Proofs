@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "If deleting one vertex makes G acyclic, then the sharp stronger bound gamma(G) >= 2 beta(G) + binom(beta(G),2) holds.",
+  "would_publish": false,
+  "caveats": "This does not resolve the unrestricted conjecture, and novelty of the special-case estimate is not claimed.",
+  "id": "non_edges_vs_feedback_edge_sets_in_digraphs",
+  "model": "gpt-6-astra",
+  "usd": 0.589265,
+  "eur": 0.610358,
+  "elapsed_s": 541.7,
+  "status": "completed",
+  "response_id": "resp_040535178eca7884006aaae8863acc87d2aee9dd2706ef3f6b",
+  "when": "2026-09-16T19:14:43Z"
+}

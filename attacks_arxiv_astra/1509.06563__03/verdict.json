@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For every fixed control function \u03c6 and \u03b5 > 0, controlled graphs of girth at least five satisfy \u03c7(G) \u2264 C(\u03c6,\u03b5) max{1,\u0394(G)}^\u03b5, so the conjecture holds when maximum degree is polynomially bounded in chromatic number.",
+  "would_publish": false,
+  "caveats": "The unrestricted question remains unresolved; the auxiliary bound's novelty has not been checked.",
+  "id": "1509.06563__03",
+  "model": "gpt-6-astra",
+  "usd": 0.97826,
+  "eur": 1.013277,
+  "elapsed_s": 821.4,
+  "status": "completed",
+  "response_id": "resp_0a2ad9204a62f84e006aaaf5a9e4d087d2ae139ae1dfd9c75c",
+  "when": "2026-09-16T20:15:26Z"
+}

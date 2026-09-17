@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A depth-independent split-composition lemma proves the desired bound for a strictly larger decomposable subclass than the one in the supplied attempt.",
+  "would_publish": false,
+  "caveats": "This does not improve the unrestricted perfect-graph bound; the comparability extension uses the Fox bound supplied in the question, and novelty is not claimed.",
+  "id": "complete_bipartite_subgraphs_of_perfect_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.137465,
+  "eur": 1.17818,
+  "elapsed_s": 1357.2,
+  "status": "completed",
+  "response_id": "resp_0b42c7136802848c006aab1697062887d286c7e218c33cc979",
+  "when": "2026-09-16T22:44:51Z"
+}

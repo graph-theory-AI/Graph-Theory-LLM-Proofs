@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The bound holds for clique-gluings of graphs with independence number at most two, with the stronger bound 2t-3, but the unrestricted problem is not resolved.",
+  "would_publish": false,
+  "caveats": "Self-contained special cases only; no novelty claim or improvement of the unrestricted upper bound.",
+  "id": "2110.09403__00",
+  "model": "gpt-6-astra",
+  "usd": 1.01251,
+  "eur": 1.048753,
+  "elapsed_s": 843.3,
+  "status": "completed",
+  "response_id": "resp_054668f8ef5ba819006aaaf66e54a087d2823d18dda9b4262b",
+  "when": "2026-09-16T20:19:05Z"
+}

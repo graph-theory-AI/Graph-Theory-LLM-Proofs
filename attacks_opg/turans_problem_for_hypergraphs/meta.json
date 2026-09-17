@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "turans_problem_for_hypergraphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Tur\u00e1n's problem for hypergraphs",
+    "paper": "http://www.openproblemgarden.org/op/turans_problem_for_hypergraphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/turans_problem_for_hypergraphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Hypergraphs"
+  },
+  "dossier_meta": {
+    "id": "turans_problem_for_hypergraphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/turans_problem_for_hypergraphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/turans_problem_for_hypergraphs",
+    "catalog_title": "Tur\u00e1n's problem for hypergraphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-12",
+    "authors": "Turan, Paul",
+    "subject": "Graph Theory \u00bb Hypergraphs",
+    "statement_text": "Conjecture Every simple $ 3 $ -uniform hypergraph on $ 3n $ vertices which contains no complete $ 3 $ -uniform hypergraph on four vertices has at most $ \\frac12 n^2(5n-3) $ hyperedges. Conjecture Every simple $ 3 $ -uniform hypergraph on $ 2n $ vertices which contains no complete $ 3 $ -uniform hypergraph on five vertices has at most $ n^2(n-1) $ hyperedges.",
+    "context_text": "Let $ V $ be an $ n $ -set. A $ k $ -uniform hypergraph $ (V,{\\cal F}) $ is complete if $ {\\cal F}={V \\choose k} $ , the set of all $ {n\\choose{k}} $ $ k $ -subsets of $ V $ . Let $ \\{X,Y,Z\\} $ be a partition of $ V $ into three sets which are as nearly equal in size as possible, and let $ {\\cal F} $ be the union of $ \\{\\{x,y,z\\}:x\\in X, y\\in Y, z\\in Z\\} $ , $ \\{\\{x_1,x_2,y\\}:x_1\\in X, x_2\\in X, y\\in Y\\} $ , $ \\{\\{y_1,y_2,z\\}:y_1\\in Y, y_2\\in Y, z\\in Z\\} $ , and $ \\{\\{z_1,z_2,x\\}:z_1\\in Z, z_2\\in Z, x\\in X\\} $ . This $ 3 $ -uniform hypergraph has $ \\frac12 n^2(5n-3) $ hyperedges and contains no complete $ 3 $ -uniform hypergraph on four vertices. Hence the first conjecture asserts that this hypergraph is extremal with this prpoerty. Let $ \\{X,Y\\} $ be a partition of $ V $ into two sets which are as nearly equal in size as possible, and let $ {\\cal F} $ be the set of all $ 3 $ -subsets of $ V $ which intersect both $ X $ and $ Y $ . This $ 3 $ -uniform hypergraph has $ n^2(n-1) $ hyperedges and contains no complete $ 3 $ -uniform hypergraph on five vertices. Hence the second conjecture asserts that this hypergraph is extremal with this property.",
+    "references_text": "- *[T] P. Tur\u00e1n, Eine Extremalaufgabe aus der Graphentheorie. Mat. Fiz. Lapok 48 (1941), 436--452."
+  },
+  "started": "2026-09-16T18:27:26Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

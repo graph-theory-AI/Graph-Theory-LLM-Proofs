@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove a structural characterization and polynomial-time exact coloring algorithm for even-hole-free graphs with independence number at most three and no induced five-cycle.",
+  "would_publish": false,
+  "caveats": "The full problem is not resolved, and novelty of this elementary special-case result is not claimed.",
+  "id": "2407.08927__01",
+  "model": "gpt-6-astra",
+  "usd": 1.11742,
+  "eur": 1.157418,
+  "elapsed_s": 1042.3,
+  "status": "completed",
+  "response_id": "resp_08971e385b0ad2d4006aab6435f15087d2b15618f2fd9ef8e5",
+  "when": "2026-09-17T04:10:48Z"
+}

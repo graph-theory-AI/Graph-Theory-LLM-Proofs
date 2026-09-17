@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "signing_a_graph_to_have_small_magnitude_eigenvalues",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Signing a graph to have small magnitude eigenvalues",
+    "paper": "http://www.openproblemgarden.org/op/signing_a_graph_to_have_small_magnitude_eigenvalues",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/signing_a_graph_to_have_small_magnitude_eigenvalues/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "signing_a_graph_to_have_small_magnitude_eigenvalues",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/signing_a_graph_to_have_small_magnitude_eigenvalues/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/signing_a_graph_to_have_small_magnitude_eigenvalues",
+    "catalog_title": "Signing a graph to have small magnitude eigenvalues",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-24",
+    "authors": "Bilu, Yonatan, Linial, Nathan",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture If $ A $ is the adjacency matrix of a $ d $ -regular graph, then there is a symmetric signing of $ A $ (i.e. replace some $ +1 $ entries by $ -1 $ ) so that the resulting matrix has all eigenvalues of magnitude at most $ 2 \\sqrt{d-1} $ .",
+    "context_text": "A graph $ H $ is a $ k $ - lift of a graph $ G $ if there is a $ k $ -to- $ 1 $ map $ f : V(H) \\rightarrow V(G) $ which is locally injective in the sense that the restriction of $ f $ to the neighbourhood of every vertex is an injection. We can construct a random $ k $ -lift of $ G $ with vertex set $ V(G) \\times \\{1,\\ldots,k\\} $ by adding a (uniformly chosen) random matching between $ \\{v\\} \\times \\{1,\\ldots,k\\} $ and $ \\{w\\} \\times \\{1,\\ldots,k\\} $ whenever $ vw \\in E(G) $ . If $ H $ is a $ k $ -lift of $ G $ , then every eigenvalue of $ G $ will also be an eigenvalue of $ H $ , but in addition $ H $ will have $ (k-1) |V(G)| $ new eigenvalues. There has been considerable interest and investigation into the behaviour of these new eigenvalues for a random $ k $ -lift, since it is expected that they should generally be small in magnitude. In particular, if $ G $ is a Ramanujan graph (a $ d $ -regular graph for which all nontrivial eigenvalues are at most $ 2 \\sqrt{d-1} $ ) it may be possible to construct a new Ramanujan graph by taking a suitable $ k $ -lift of $ G $ . A series of increasingly strong results have shown that a random $ k $ -lift of a $ d $ -regular Ramanujan graph will have all new eigenvalues at most $ O(d^{3/4}) $ (Friedman [F]), $ O(d^{2/3}) $ (Linial and Pruder [LP]) and $ O(\\sqrt{d} \\log d) $ (Lubetzky, Sudakov, and Vu [LSV]). An interesting paper of Bilu and Linial [BL] investigates 2-lifts of graphs. Let $ G $ be a graph and let $ H $ be a 2-lift of $ G $ with vertex set $ V(G) \\times \\{1,2\\} $ as above. Every eigenvector of $ G $ extends naturally to an eigenvector of $ H $ which is constant on each fiber (set of the form $ \\{u\\} \\times \\{1,2\\} $ ). Thus, we may assume that all of the new eigenvalues are associated with eigenvectors which sum to zero on each fiber. So, each of these new eigenvectors is completely determined by its behaviour on $ V(G) \\times \\{1\\} $ . Now we assign a signature $ \\pm 1 $ to each edge of $ G $ to form a signed graph $ G^* $ by assigning each edge $ uv \\in E(G) $ for which $ (u,1)(v,1) \\in E(H) $ a sign of $ 1 $ and every other edge of $ G $ sign $ -1 $ . It is straightforward to verify that the restriction of any new eigenvector of $ H $ to $ V(G) \\times \\{1\\} $ will then be an eigenvector of $ G^* $ . Thus, the above conjecture is equivalent to the conjecture that every $ d $ -regular graph has a $ 2 $ -lift so that all new eigenvalues have magnitude at most $ 2 \\sqrt{d-1} $ . Furthermore, a positive solution to this conjecture for $ d $ -regular Ramanujan graphs would yield families of $ d $ -regular expanders.",
+    "references_text": "- *[BL] Y. Bilu, N. Linial, Lifts, discrepancy and nearly optimal spectral gap, Combinatorica 26 (5) (2006) 495\u2013519. MathSciNet\n- [F] J. Friedman, Relative expanders or weakly relatively Ramanujan graphs, Duke Math. J. 118 (1) (2003) 19\u201335. MathSciNet\n- [LP] N. Linial, D. Puder, Word maps and spectra of random graph lifts, Random Structures Algorithms 37 (1) (2010) 100\u2013135. MathSciNet\n- [LSV] E. Lubetzky, B. Sudakov, V Vu, Spectra of lifted Ramanujan graphs. Adv. Math. 227 (2011), no. 4, 1612\u20131645. MathSciNet"
+  },
+  "started": "2026-09-16T18:13:45Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

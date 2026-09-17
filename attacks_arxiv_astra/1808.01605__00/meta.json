@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 39,
+    "score": 4.15,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1808.01605__00",
+    "title_md": "[Conjecture 4](https://arxiv.org/abs/1808.01605)",
+    "paper": "Triangle-free subgraphs with large fractional chromatic number",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1808.01605__00/"
+  },
+  "dossier_meta": {
+    "id": "1808.01605__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1808.01605__00/",
+    "arxiv_id": "1808.01605",
+    "tier": 4,
+    "score": 4.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Triangle-free subgraphs with large fractional chromatic number",
+    "catalog_title": "Conjecture 4",
+    "statement_text": "For every real number $x \\geq 1$ and any integer $g \\geq 3$, there exists a positive number $k(x,g)$ such that every graph $G$ with $\\chi_f(G) \\geq k(x,g)$ contains a subgraph $H$ of girth at least $g$ and with $\\chi_f(H) \\geq x$.",
+    "context_text": "Proposed immediately after Theorem 3 as the natural full generalisation to arbitrary girth. Theorem 3 of this paper establishes the case $g = 4$ (triangle-free subgraphs), and Conjecture 4 asks whether the same holds for every girth."
+  },
+  "started": "2026-09-16T20:00:33Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

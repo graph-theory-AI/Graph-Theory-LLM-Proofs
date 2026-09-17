@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "odd_cycles_and_low_oddness",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Odd cycles and low oddness",
+    "paper": "http://www.openproblemgarden.org/op/odd_cycles_and_low_oddness",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/odd_cycles_and_low_oddness/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "odd_cycles_and_low_oddness",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/odd_cycles_and_low_oddness/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/odd_cycles_and_low_oddness",
+    "catalog_title": "Odd cycles and low oddness",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2010-01-15",
+    "authors": "",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture If in a bridgeless cubic graph $ G $ the cycles of any $ 2 $ -factor are odd, then $ \\omega(G)\\leq 2 $ , where $ \\omega(G) $ denotes the oddness of the graph $ G $ , that is, the minimum number of odd cycles in a $ 2 $ -factor of $ G $ .",
+    "context_text": "",
+    "references_text": ""
+  },
+  "started": "2026-09-16T18:05:39Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

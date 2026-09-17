@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "Yes: an explicit construction from a biregular tree gives universal highly arc-transitive digraphs of every composite common indegree and outdegree.",
+  "would_publish": false,
+  "caveats": "The supplied catalog attributes the resolution to DeVos, Mohar, and \u0160\u00e1mal; the proof below is self-contained, and no novelty is claimed.",
+  "id": "universal_highly_arc_transitive_digraphs",
+  "model": "gpt-6-astra",
+  "usd": 0.29326,
+  "eur": 0.303757,
+  "elapsed_s": 236.7,
+  "status": "completed",
+  "response_id": "resp_009bba334ab79ab8006aaaeda133f087d2bcf763609c7851bb",
+  "when": "2026-09-16T19:31:25Z"
+}

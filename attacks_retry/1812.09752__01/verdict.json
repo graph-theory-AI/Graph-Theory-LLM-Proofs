@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Reciprocal-permutation strategies require at most (1+o(1))n/log n colors, and none wins with n+1 colors for n>=3.",
+  "would_publish": false,
+  "caveats": "This covers a restricted, though fully nonlinear, strategy class; the unrestricted hat guessing number is not determined, and novelty of the restricted result was not checked.",
+  "id": "1812.09752__01",
+  "model": "gpt-6-astra",
+  "usd": 1.35034,
+  "eur": 1.398675,
+  "elapsed_s": 1096.9,
+  "status": "completed",
+  "response_id": "resp_0774d44049e33555006aab4522254c87d2b151ba062d459920",
+  "when": "2026-09-17T01:59:06Z"
+}

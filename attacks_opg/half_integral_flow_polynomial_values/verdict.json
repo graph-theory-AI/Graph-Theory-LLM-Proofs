@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Positivity holds for every bridgeless graph of cycle rank at most 8 and for every projective-planar graph, but the general conjecture is not settled here.",
+  "would_publish": false,
+  "caveats": "These are restricted-class results; no claim of novelty or exhaustive computational verification is made.",
+  "id": "half_integral_flow_polynomial_values",
+  "model": "gpt-6-astra",
+  "usd": 1.42673,
+  "eur": 1.4778,
+  "elapsed_s": 1204.2,
+  "status": "completed",
+  "response_id": "resp_03fc26580fa9b13e006aaad4a967b887d28c60139d62b8e496",
+  "when": "2026-09-16T18:01:01Z"
+}

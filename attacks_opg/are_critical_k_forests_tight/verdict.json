@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "An explicit six-vertex, nine-edge 3-forest is inclusion-maximal but not tight.",
+  "would_publish": false,
+  "caveats": "No novelty claim: the supplied catalog already reports a disproof; the argument below is self-contained.",
+  "id": "are_critical_k_forests_tight",
+  "model": "gpt-6-astra",
+  "usd": 0.33024,
+  "eur": 0.342061,
+  "elapsed_s": 339.9,
+  "status": "completed",
+  "response_id": "resp_0572a2ea58be2713006aaacdb2d40087d2879e8b5539b2e86e",
+  "when": "2026-09-16T17:16:54Z"
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "decomposing_a_connected_graph_into_paths",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Decomposing a connected graph into paths.",
+    "paper": "http://www.openproblemgarden.org/op/decomposing_a_connected_graph_into_paths",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_a_connected_graph_into_paths/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Paths"
+  },
+  "dossier_meta": {
+    "id": "decomposing_a_connected_graph_into_paths",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_a_connected_graph_into_paths/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/decomposing_a_connected_graph_into_paths",
+    "catalog_title": "Decomposing a connected graph into paths.",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2013-03-04",
+    "authors": "Gallai, Tibor",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Paths",
+    "statement_text": "Conjecture Every simple connected graph on $ n $ vertices can be decomposed into at most $ \\frac{1}{2}(n+1) $ paths.",
+    "context_text": "This conjecture is tight because a complete graph on $ n $ vertices cannot be covered by less than $ (n+1)/2 $ cycles. There is a similar conjecture about decomposition of an eulerian graph into cycles .",
+    "references_text": "- * [L] L. Lov\u00e1sz, On covering of graphs. In Theory of Graphs (Proc. Colloq., Tihany, 1966), 231--236. Academic Press, New York, 1968."
+  },
+  "started": "2026-09-16T18:45:52Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

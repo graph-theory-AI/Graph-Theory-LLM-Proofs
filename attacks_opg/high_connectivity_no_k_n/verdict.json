@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The cograph case has a sharp order bound of 2n-4, while random graphs force any general threshold to be at least n log n - 2n log log n - O(n).",
+  "would_publish": false,
+  "caveats": "No general upper threshold is proved for n >= 7; the cograph case is vacuous beyond its order bound, and novelty is not asserted.",
+  "id": "high_connectivity_no_k_n",
+  "model": "gpt-6-astra",
+  "usd": 0.82533,
+  "eur": 0.854873,
+  "elapsed_s": 880.0,
+  "status": "completed",
+  "response_id": "resp_0a35202e5c5af147006aaae69555ec87d2862f0ecaddec73b4",
+  "when": "2026-09-16T19:12:05Z"
+}

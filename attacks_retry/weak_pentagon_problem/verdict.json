@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the conjectured conclusion when some maximum cut omits at most six edges and all omitted edges lie on one side, extending the previous near-bipartite construction.",
+  "would_publish": false,
+  "caveats": "This is not a uniform result for edge-bipartization number at most six; the general conjecture remains unresolved here, and novelty is unchecked.",
+  "id": "weak_pentagon_problem",
+  "model": "gpt-6-astra",
+  "usd": 1.519065,
+  "eur": 1.57344,
+  "elapsed_s": 1576.9,
+  "status": "completed",
+  "response_id": "resp_096b35bcd13554ac006aab2ce1675487d299bb619a0458b5a5",
+  "when": "2026-09-17T00:23:38Z"
+}

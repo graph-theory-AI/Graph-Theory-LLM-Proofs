@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "A 59-vertex cactus requires at least three zombies, but adding one leaf produces a graph requiring exactly two.",
+  "would_publish": true,
+  "caveats": "Uses the standard compulsory-move rules, with zombies moving before the survivor; no computational or literature-status claim is made.",
+  "id": "2008.03587__00",
+  "model": "gpt-6-astra",
+  "usd": 1.296865,
+  "eur": 1.343286,
+  "elapsed_s": 979.7,
+  "status": "completed",
+  "response_id": "resp_0c4bf9584a516941006aab4ee4d3d887d2b9c8def24a8276b1",
+  "when": "2026-09-17T02:38:47Z"
+}

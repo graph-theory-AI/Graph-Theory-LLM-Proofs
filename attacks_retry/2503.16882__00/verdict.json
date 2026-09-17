@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The intended bound holds for every real p >= 2 when the graph has at most two negative adjacency eigenvalues, and also for every connected graph of adjacency rank at most four.",
+  "would_publish": false,
+  "caveats": "The general K_n-comparator conjecture is not resolved; novelty of these special cases has not been checked.",
+  "id": "2503.16882__00",
+  "model": "gpt-6-astra",
+  "usd": 1.04262,
+  "eur": 1.07994,
+  "elapsed_s": 948.9,
+  "status": "completed",
+  "response_id": "resp_0579c93a083da94c006aaafff97cb887d2af55f12718875b5d",
+  "when": "2026-09-16T21:01:31Z"
+}

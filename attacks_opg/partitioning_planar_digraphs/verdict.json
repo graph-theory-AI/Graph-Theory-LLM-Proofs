@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A self-contained sparsity bound proves the conjecture for planar graphs with at most nine undirected triangles, and for those whose distinct triangles have pairwise distance at least three.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not resolved; no novelty claim is made for these partial results.",
+  "id": "partitioning_planar_digraphs",
+  "model": "gpt-6-astra",
+  "usd": 0.930685,
+  "eur": 0.963999,
+  "elapsed_s": 781.6,
+  "status": "completed",
+  "response_id": "resp_033a1f2f9f9466a4006aaadba3599887d2987136bf46afe5f4",
+  "when": "2026-09-16T18:23:44Z"
+}

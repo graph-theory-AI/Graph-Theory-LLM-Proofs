@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A self-contained reduction argument proves cc(G) \u2264 2cp(G) for every graph of treewidth at most 3, without assuming planarity.",
+  "would_publish": false,
+  "caveats": "The general planar case is not resolved, and novelty of this special case has not been checked.",
+  "id": "jones_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.303695,
+  "eur": 1.35036,
+  "elapsed_s": 966.4,
+  "status": "completed",
+  "response_id": "resp_06902f8b8653c794006aaad6af0ec487d2a3b618fe33e0b87a",
+  "when": "2026-09-16T18:05:41Z"
+}

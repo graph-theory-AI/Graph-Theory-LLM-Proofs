@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 29,
+    "score": 4.35,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2110.09403__00",
+    "title_md": "[Problem 1](https://arxiv.org/abs/2110.09403)",
+    "paper": "Improved lower bound for the list chromatic number of graphs with no $K\u2026",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2110.09403__00/"
+  },
+  "dossier_meta": {
+    "id": "2110.09403__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2110.09403__00/",
+    "arxiv_id": "2110.09403",
+    "tier": 4,
+    "score": 4.35,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Improved lower bound for the list chromatic number of graphs with no $K\u2026",
+    "catalog_title": "Problem 1",
+    "statement_text": "Does every $K_t$-minor-free graph $G$ satisfy $\\chi_\\ell(G) \\leq 2t$?",
+    "context_text": "Having established the lower bound $(2-o(1))t$ for the maximum list chromatic number of $K_t$-minor free graphs, the author asks whether the probabilistic lower-bound construction is essentially optimal up to lower-order terms, or whether the lower bound can be further improved beyond $2t$."
+  },
+  "started": "2026-09-16T20:05:02Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove a finite-separator characterization of binary type and a minor-stability theorem, but not a characterization of the whole intended class.",
+  "would_publish": false,
+  "caveats": "No novelty is claimed; an elementary counterexample below concerns only the degree-only wording, not the standard part-size definition.",
+  "id": "characterizing_aleph_0_aleph_1_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.92218,
+  "eur": 0.955189,
+  "elapsed_s": 843.0,
+  "status": "completed",
+  "response_id": "resp_03e1153981b8726f006aaae29127ec87d2bdb5264eb8693556",
+  "when": "2026-09-16T18:54:19Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the conjecture for sufficiently long subdivisions of every finite simple graph, using an explicit small-activity negative-correlation bound.",
+  "would_publish": false,
+  "caveats": "The general uniform-forest conjecture remains untreated; novelty and current literature status are not asserted.",
+  "id": "negative_association_in_uniform_forests",
+  "model": "gpt-6-astra",
+  "usd": 0.889855,
+  "eur": 0.921707,
+  "elapsed_s": 729.3,
+  "status": "completed",
+  "response_id": "resp_0295a78c2e657d33006aaad9dda43487d290ed8469352389a8",
+  "when": "2026-09-16T18:15:18Z"
+}

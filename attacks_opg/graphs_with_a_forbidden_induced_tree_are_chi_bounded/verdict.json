@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove an explicit polynomial \u03c7-bound after additionally excluding an induced K_{2,s}, but do not resolve the unrestricted conjecture.",
+  "would_publish": false,
+  "caveats": "The extra induced-biclique exclusion is essential to this argument; no novelty claim is made for the restricted result.",
+  "id": "graphs_with_a_forbidden_induced_tree_are_chi_bounded",
+  "model": "gpt-6-astra",
+  "usd": 0.7602,
+  "eur": 0.787411,
+  "elapsed_s": 535.8,
+  "status": "completed",
+  "response_id": "resp_019029b32fa9de15006aaae57ac9b487d29b7314b7b765c702",
+  "when": "2026-09-16T19:01:38Z"
+}

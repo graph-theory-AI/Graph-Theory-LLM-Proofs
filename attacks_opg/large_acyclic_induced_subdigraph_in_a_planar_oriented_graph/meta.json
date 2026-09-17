@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "large_acyclic_induced_subdigraph_in_a_planar_oriented_graph",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Large acyclic induced subdigraph in a planar oriented graph.",
+    "paper": "http://www.openproblemgarden.org/op/large_acyclic_induced_subdigraph_in_a_planar_oriented_graph",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/large_acyclic_induced_subdigraph_in_a_planar_oriented_graph/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "large_acyclic_induced_subdigraph_in_a_planar_oriented_graph",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/large_acyclic_induced_subdigraph_in_a_planar_oriented_graph/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/large_acyclic_induced_subdigraph_in_a_planar_oriented_graph",
+    "catalog_title": "Large acyclic induced subdigraph in a planar oriented graph.",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-06-25",
+    "authors": "Harutyunyan, Ararat",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "Conjecture Every planar oriented graph $ D $ has an acyclic induced subdigraph of order at least $ \\frac{3}{5} |V(D)| $ .",
+    "context_text": "Borodin's 5-Colour Theorem states that every planar graph has an acyclic 5-colouring This implies that every planar oriented graph $ D $ has an acyclic induced subdigraph of order at least $ \\frac{2}{5} |V(D)| $ . Already improving this bound to $ \\frac{1}{2} |V(D)| $ would be interesting: it is a relaxtion of both a Conjecture of Albertson and Berman stating that every planar graph $ G $ has an induced forest of order $ \\frac{1}{2} |V(G)| $ and a Conjecture of Neumann-Lara stating that every planar oriented graph can be split into two acyclic subdigraphs. If true, this conjecture would be best possible.",
+    "references_text": ""
+  },
+  "started": "2026-09-16T17:53:11Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

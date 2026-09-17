@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove a constructive cyclic-order special case and an explicit fractional-colouring bound, but do not resolve arbitrary great-circle arrangements.",
+  "would_publish": false,
+  "caveats": "Novelty of these partial results is unchecked; neither the general conjecture nor 3-choosability is proved.",
+  "id": "3_colourability_of_arrangements_of_great_circles",
+  "model": "gpt-6-astra",
+  "usd": 0.977835,
+  "eur": 1.012836,
+  "elapsed_s": 873.5,
+  "status": "completed",
+  "response_id": "resp_07da53edd4eca3c0006aaac6f1bc3c87d2a14c5c6b25ba0fcb",
+  "when": "2026-09-16T16:56:57Z"
+}

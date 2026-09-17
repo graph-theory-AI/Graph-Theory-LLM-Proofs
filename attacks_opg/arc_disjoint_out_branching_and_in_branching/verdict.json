@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For complete independent blow-ups with every part of size at least two, k=3 suffices and is sharp for prescribed roots.",
+  "would_publish": false,
+  "caveats": "This is a structural special case, not a resolution for arbitrary digraphs; novelty is not claimed.",
+  "id": "arc_disjoint_out_branching_and_in_branching",
+  "model": "gpt-6-astra",
+  "usd": 1.2165,
+  "eur": 1.260044,
+  "elapsed_s": 899.8,
+  "status": "completed",
+  "response_id": "resp_0f5d14d33f079a91006aaacccfa2a487d2ab5043f95f74c5cb",
+  "when": "2026-09-16T17:22:26Z"
+}

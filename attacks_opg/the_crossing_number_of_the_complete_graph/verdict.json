@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I derive necessary conditions for a smallest counterexample and give a self-contained reproof for n <= 8, but obtain no improvement on the catalog's known bounds.",
+  "would_publish": false,
+  "caveats": "The small cases are already known; no novelty is claimed, and the K13 application uses the catalog's value cr(K11)=100 as an input.",
+  "id": "the_crossing_number_of_the_complete_graph",
+  "model": "gpt-6-astra",
+  "usd": 1.019135,
+  "eur": 1.055615,
+  "elapsed_s": 816.4,
+  "status": "completed",
+  "response_id": "resp_005b2558d6dab55a006aaaed011b8087d2a81b5e062b6c0ebe",
+  "when": "2026-09-16T19:38:25Z"
+}

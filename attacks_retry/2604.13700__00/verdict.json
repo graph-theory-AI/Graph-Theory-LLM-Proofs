@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I do not determine L, but prove c(T) >= ceil(3(r+1)/4) for regular tournaments of degree r >= 3, and c(T)=r for r<=8.",
+  "would_publish": false,
+  "caveats": "No improvement of the universal interval [3/22,7/8]; novelty of the tournament results is unverified, and the source bounds are used as supplied.",
+  "id": "2604.13700__00",
+  "model": "gpt-6-astra",
+  "usd": 1.32373,
+  "eur": 1.371113,
+  "elapsed_s": 1336.3,
+  "status": "completed",
+  "response_id": "resp_0119c2eb9f07f33b006aab34bec86c87d28d23c92138fbc9ae",
+  "when": "2026-09-17T00:53:10Z"
+}

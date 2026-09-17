@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the conjecture for linear forests and establish necessary exponent bounds, including s \u2265 2 whenever H contains a triangle.",
+  "would_publish": false,
+  "caveats": "No general proof or counterexample is obtained, and no novelty or optimality is claimed for these partial results.",
+  "id": "1810.00058__02",
+  "model": "gpt-6-astra",
+  "usd": 0.818925,
+  "eur": 0.848238,
+  "elapsed_s": 776.4,
+  "status": "completed",
+  "response_id": "resp_0fb4b8bc5d497d55006aaaf7501d1487d2b82c3ce98b99e131",
+  "when": "2026-09-16T20:21:43Z"
+}

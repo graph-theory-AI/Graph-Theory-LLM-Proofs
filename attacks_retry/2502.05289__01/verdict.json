@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For k=2, I prove a no-gap theorem for hereditary classes with a bounded transversal of fully pairable four-sets, covering outerstring graphs and a bounded-interior-string extension.",
+  "would_publish": false,
+  "caveats": "No separating class or universal reduction is obtained; the catalog question remains unresolved here, and novelty of the partial results is not asserted.",
+  "id": "2502.05289__01",
+  "model": "gpt-6-astra",
+  "usd": 1.371345,
+  "eur": 1.420432,
+  "elapsed_s": 1759.4,
+  "status": "completed",
+  "response_id": "resp_025cd715de4d8923006aab0619e20887d2a28e7594214231ff",
+  "when": "2026-09-16T21:41:13Z"
+}

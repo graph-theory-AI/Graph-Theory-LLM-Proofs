@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "star_chromatic_index_of_cubic_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Star chromatic index of cubic graphs",
+    "paper": "http://www.openproblemgarden.org/op/star_chromatic_index_of_cubic_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/star_chromatic_index_of_cubic_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "star_chromatic_index_of_cubic_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/star_chromatic_index_of_cubic_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/star_chromatic_index_of_cubic_graphs",
+    "catalog_title": "Star chromatic index of cubic graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2010-11-16",
+    "authors": "Dvorak, Zdenek, Mohar, Bojan, Samal, Robert",
+    "subject": "Graph Theory",
+    "statement_text": "The star chromatic index $ \\chi_s'(G) $ of a graph $ G $ is the minimum number of colors needed to properly color the edges of the graph so that no path or cycle of length four is bi-colored. Question Is it true that for every (sub)cubic graph $ G $ , we have $ \\chi_s'(G) \\le 6 $ ?",
+    "context_text": "The star chromatic number is the more usual concept [ACKKR,FRR]. Star chromatic index of a graph $ G $ is simply the star chromatic number of the line graph $ L(G) $ ; the definition given above is easily seen to be equivalent. Dvo\u0159\u00e1k, Mohar, and \u0160\u00e1mal [DMS] show that every (sub)cubic graph $ G $ , satisfies $ \\chi_s'(G) \\le 7 $ ? On the other hand, it is simple to check that $ \\chi_s'(K_{3,3])=6 $ , so the conjecture, if true, is tight.",
+    "references_text": "- [ACKKR] Albertson, Michael O.; Chappell, Glenn G.; Kierstead, Hal A.; K\u00fcndgen, Andr\u00e9; Ramamurthi, Radhika: Coloring with no 2-Colored P4's, The Electronic Journal of Combinatorics 11 (1).\n- [FRR] Fertin, Guillaume; Raspaud, Andr\u00e9; Reed, Bruce, Star coloring of graphs, Journal of Graph Theory 47 (3): 163-182, doi:10.1002/jgt.20029 .\n- *[DMS] Dvo\u0159\u00e1k, Zden\u011bk; Mohar, Bojan; \u0160\u00e1mal, Robert: Star chromatic index, arXiv:1011.3376."
+  },
+  "started": "2026-09-16T18:14:24Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

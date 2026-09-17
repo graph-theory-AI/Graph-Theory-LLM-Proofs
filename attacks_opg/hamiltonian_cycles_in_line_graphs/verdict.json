@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds when a finite simple root has at most five degree-3 vertices, and a related path-cover bound follows for arbitrary roots.",
+  "would_publish": false,
+  "caveats": "The full conjecture is not settled here; no novelty is claimed for these sufficient conditions.",
+  "id": "hamiltonian_cycles_in_line_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.83175,
+  "eur": 0.861522,
+  "elapsed_s": 686.0,
+  "status": "completed",
+  "response_id": "resp_076af3a65b632463006aaae623395c87d2917d5f204bd96a9a",
+  "when": "2026-09-16T19:06:57Z"
+}

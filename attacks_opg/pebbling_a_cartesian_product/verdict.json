@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A connectivity-sensitive bound gives an explicit range of complete factors for which Graham\u2019s inequality holds, but does not resolve arbitrary Cartesian products.",
+  "would_publish": false,
+  "caveats": "The partial bounds are proved below; their novelty relative to the complete-factor literature has not been verified.",
+  "id": "pebbling_a_cartesian_product",
+  "model": "gpt-6-astra",
+  "usd": 1.156705,
+  "eur": 1.198109,
+  "elapsed_s": 878.2,
+  "status": "completed",
+  "response_id": "resp_0979ef62b435ae27006aaae91c189c87d289ae030eabda9192",
+  "when": "2026-09-16T19:22:50Z"
+}

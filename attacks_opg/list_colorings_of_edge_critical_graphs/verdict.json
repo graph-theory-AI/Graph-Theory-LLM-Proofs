@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for subcubic critical graphs when the lists have a common color or use at most three distinct list types, and for arbitrary maximum degree when all list variation is confined to one star.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved; these are self-contained partial results, with no claim of novelty.",
+  "id": "list_colorings_of_edge_critical_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.294655,
+  "eur": 1.340997,
+  "elapsed_s": 1056.3,
+  "status": "completed",
+  "response_id": "resp_0a23d89bf1a7cab6006aaad8af2ff487d2828518ada61514da",
+  "when": "2026-09-16T18:15:43Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An explicit 44-vertex graph G satisfies \u03c7(G)=5 and \u03c7\u00b2(G\u22a0K\u2083)=4, giving the improved lower bound c\u22655/4.",
+  "would_publish": false,
+  "caveats": "The optimal constant remains undetermined; the upper bound 2 is unchanged, and novelty has not been checked independently of the supplied review.",
+  "id": "2504.01548__00",
+  "model": "gpt-6-astra",
+  "usd": 1.55376,
+  "eur": 1.609377,
+  "elapsed_s": 1272.4,
+  "status": "completed",
+  "response_id": "resp_0e6b498891312b2d006aab472d452887d29900d1eb68ce9c99",
+  "when": "2026-09-17T02:10:45Z"
+}

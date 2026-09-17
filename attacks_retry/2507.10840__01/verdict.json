@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "An odd regular polygon with a central cluster yields point sets requiring at least 3n/4 - O(sqrt(n)) crossing-free paths.",
+  "would_publish": true,
+  "caveats": "The optimal leading constant is not determined; paths have their standard graph-theoretic meaning.",
+  "id": "2507.10840__01",
+  "model": "gpt-6-astra",
+  "usd": 1.27848,
+  "eur": 1.324243,
+  "elapsed_s": 1174.9,
+  "status": "completed",
+  "response_id": "resp_0582c817a1f83d2e006aab323f067c87d295bd304ec9d45358",
+  "when": "2026-09-17T00:39:49Z"
+}

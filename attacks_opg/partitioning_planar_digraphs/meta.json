@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "partitioning_planar_digraphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "The Two Color Conjecture",
+    "paper": "http://www.openproblemgarden.org/op/partitioning_planar_digraphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/partitioning_planar_digraphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "partitioning_planar_digraphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/partitioning_planar_digraphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/partitioning_planar_digraphs",
+    "catalog_title": "The Two Color Conjecture",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-03-26",
+    "authors": "Neumann-Lara, Victor",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "Conjecture If $ G $ is an orientation of a simple planar graph, then there is a partition of $ V(G) $ into $ \\{X_1,X_2\\} $ so that the graph induced by $ X_i $ is acyclic for $ i=1,2 $ .",
+    "context_text": "This is a type of coloring digraphs introduced by V. Neumann-Lara. More generally, if $ G $ is a digraph, we wish to partition the vertex set of $ G $ into as few parts as possible so that each induces an acyclic subgraph.",
+    "references_text": "- * [N] V. Neumann-Lara (1985). Vertex colourings in digraphs. Some problems. Technical report, University of Waterloo."
+  },
+  "started": "2026-09-16T18:10:43Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

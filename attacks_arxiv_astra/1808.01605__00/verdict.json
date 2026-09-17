@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An all-girth sparsification bound proves the conjectured conclusion under a polynomial maximum-degree restriction.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not settled, and novelty of the partial bound is not claimed.",
+  "id": "1808.01605__00",
+  "model": "gpt-6-astra",
+  "usd": 0.789775,
+  "eur": 0.818045,
+  "elapsed_s": 613.2,
+  "status": "completed",
+  "response_id": "resp_0d66d1cbb4a6ab50006aaaf56320e087d2b8902c66cf9362c1",
+  "when": "2026-09-16T20:10:47Z"
+}

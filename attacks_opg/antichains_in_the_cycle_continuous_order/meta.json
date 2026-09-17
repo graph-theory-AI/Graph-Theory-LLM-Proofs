@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "antichains_in_the_cycle_continuous_order",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Antichains in the cycle continuous order",
+    "paper": "http://www.openproblemgarden.org/op/antichains_in_the_cycle_continuous_order",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/antichains_in_the_cycle_continuous_order/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Nowhere-zero flows"
+  },
+  "dossier_meta": {
+    "id": "antichains_in_the_cycle_continuous_order",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/antichains_in_the_cycle_continuous_order/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/antichains_in_the_cycle_continuous_order",
+    "catalog_title": "Antichains in the cycle continuous order",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-05-12",
+    "authors": "DeVos, Matt",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Nowhere-zero flows",
+    "statement_text": "If $ G $ , $ H $ are graphs, a function $ f : E(G) \\rightarrow E(H) $ is called cycle-continuous if the pre-image of every element of the (binary) cycle space of $ H $ is a member of the cycle space of $ G $ . Problem Does there exist an infinite set of graphs $ \\{G_1,G_2,\\ldots \\} $ so that there is no cycle continuous mapping between $ G_i $ and $ G_j $ whenever $ i \\neq j $ ?",
+    "context_text": "The definition of a cycle-continuous mapping is based on some work of Jaeger, and the most interesting question on this subject is undoubtedly Jaeger's Petersen coloring conjecture . Let us define a relation on the set of all finite graphs with at least one edge by the rule $ G>H $ if there is a cycle-continuous mapping from $ G $ to $ H $ . It is not difficult to verify that $ > $ is a quasi order (reflexive and transitive). In this order, every Eulerian graph dominates every other graph, and every graph with a cut edge is dominated by every other graph. Let $ A_i $ be the graph on two vertices with $ i $ parallel edges. Then $ A_3 < A_5 < A_7 < ... $ with all the inequalities strict, so this sequence is an infinite chain. Very little else seems to be known about this order. In particular, the problem highlighted above - does there exist an infinite antichain? remains open.",
+    "references_text": ""
+  },
+  "started": "2026-09-16T17:01:16Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For digraphs of any fixed bounded independence number, I prove that minimum outdegree 2d+(2+o(1))sqrt(d log d) suffices, with asymptotically optimal leading coefficient.",
+  "would_publish": false,
+  "caveats": "This elementary special-case bound is not claimed to be new; it does not settle F(2,2) for unrestricted digraphs.",
+  "id": "splitting_a_digraph_with_minimum_outdegree_constraints",
+  "model": "gpt-6-astra",
+  "usd": 0.689165,
+  "eur": 0.713834,
+  "elapsed_s": 586.0,
+  "status": "completed",
+  "response_id": "resp_096e3137a904c17d006aaaec14acbc87d2ae9b60ed38899a4e",
+  "when": "2026-09-16T19:30:38Z"
+}

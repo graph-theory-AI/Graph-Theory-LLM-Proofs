@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A sharp high-girth pseudoforest theorem yields polynomial-time MIS for the predicted-tractable H when the number of vertex-disjoint short cycles is O(log n).",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved; the algorithm requires an additional short-cycle packing bound, and novelty is not claimed.",
+  "id": "1909.08426__00",
+  "model": "gpt-6-astra",
+  "usd": 1.1754,
+  "eur": 1.217473,
+  "elapsed_s": 932.6,
+  "status": "completed",
+  "response_id": "resp_0da94675dea8c914006aaaf294f07c87d283c81015da4360dc",
+  "when": "2026-09-16T20:04:08Z"
+}

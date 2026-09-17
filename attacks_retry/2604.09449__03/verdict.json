@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "The requested O(k^2) bound improves to O(k log(k+1)) for Hamilton cycles in both complete and complete bipartite graphs, including for bounded vector labels in an arbitrary norm.",
+  "would_publish": true,
+  "caveats": "Optimality and priority relative to later revisions of the source paper are not established.",
+  "id": "2604.09449__03",
+  "model": "gpt-6-astra",
+  "usd": 0.788045,
+  "eur": 0.816253,
+  "elapsed_s": 658.3,
+  "status": "completed",
+  "response_id": "resp_0c96b525d056b16a006aab47ec3a6087d2ac6d56a11a94102c",
+  "when": "2026-09-17T02:03:42Z"
+}

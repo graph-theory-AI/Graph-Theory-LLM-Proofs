@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I determine the circular chromatic number exactly for the cubic planar family G(2n,2), including the dodecahedron, and verify the 20/7 bound throughout this family.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not resolved; novelty of this family calculation has not been checked.",
+  "id": "circular_chromatic_number_of_triangle_free_planar_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.110915,
+  "eur": 1.15068,
+  "elapsed_s": 1517.6,
+  "status": "completed",
+  "response_id": "resp_01d7549ce074bc78006aab155da88c87d289447495d63e905a",
+  "when": "2026-09-16T22:42:19Z"
+}

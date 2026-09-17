@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove wsat(K_9,Q_3)=16 and wsat(K_11,Q_3)=19, and strengthen the general lower bound to wsat(K_n,Q_3) >= ceil(5n/3) for n >= 8.",
+  "would_publish": false,
+  "caveats": "The general exact function remains undetermined; novelty and current literature status have not been verified.",
+  "id": "weak_saturation_of_the_cube_in_the_clique",
+  "model": "gpt-6-astra",
+  "usd": 1.57566,
+  "eur": 1.63206,
+  "elapsed_s": 1504.4,
+  "status": "completed",
+  "response_id": "resp_0cec8b879afdd691006aab03e297f087d2ac4fe2d368cb5d61",
+  "when": "2026-09-16T21:27:30Z"
+}

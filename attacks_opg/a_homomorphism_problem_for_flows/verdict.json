@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For the intended zero-free formulation, I prove the conjecture for one-relation source connection sets, source groups of order at most four, and regular bipartite input graphs.",
+  "would_publish": false,
+  "caveats": "The general zero-free case is not settled; novelty is unchecked; the literal simple-graph wording has a zero-element degeneracy.",
+  "id": "a_homomorphism_problem_for_flows",
+  "model": "gpt-6-astra",
+  "usd": 1.1031,
+  "eur": 1.142585,
+  "elapsed_s": 853.1,
+  "status": "completed",
+  "response_id": "resp_0924f4a17e261f61006aaacb31c37487d2bba24d7bd4501458",
+  "when": "2026-09-16T17:14:46Z"
+}

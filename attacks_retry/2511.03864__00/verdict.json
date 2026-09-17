@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain a degree-(\u03bc+1) polynomial bound for globally bounded induced matching number, improve the bounded-color case, and obtain polynomial-in-t bag guards giving a general bound with an additional log |V(G)| factor.",
+  "would_publish": false,
+  "caveats": "The uniform, n-independent polynomial bound remains unproved; no claim of literature novelty is made.",
+  "id": "2511.03864__00",
+  "model": "gpt-6-astra",
+  "usd": 1.53151,
+  "eur": 1.58633,
+  "elapsed_s": 1363.0,
+  "status": "completed",
+  "response_id": "resp_0af3ba8b2fd110d7006aab6f4b21c887d290a87d138ed29f8c",
+  "when": "2026-09-17T05:03:25Z"
+}

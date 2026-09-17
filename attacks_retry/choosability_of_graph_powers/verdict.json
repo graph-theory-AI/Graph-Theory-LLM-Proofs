@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A local-palette argument gives O(k log k) for a bounded-fibre quotient class containing arbitrarily large regular roots with square degree (k-1)^2, but does not settle the unrestricted question.",
+  "would_publish": false,
+  "caveats": "The quotient hypothesis is additional; no universal o(k^2) bound or claim of novelty is obtained.",
+  "id": "choosability_of_graph_powers",
+  "model": "gpt-6-astra",
+  "usd": 1.118635,
+  "eur": 1.158676,
+  "elapsed_s": 1216.6,
+  "status": "completed",
+  "response_id": "resp_0fef454bd9a96d2f006aab1531967c87d28dc6760be4b9d39d",
+  "when": "2026-09-16T22:36:33Z"
+}

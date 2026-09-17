@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 40,
+    "score": 4.15,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1701.03366__00",
+    "title_md": "[Antisymmetric variant of Jaeger's weak 3-flow conjecture](https://arxiv.org/abs/1701.03366)",
+    "paper": "Additive bases and flows in graphs",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1701.03366__00/"
+  },
+  "dossier_meta": {
+    "id": "1701.03366__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1701.03366__00/",
+    "arxiv_id": "1701.03366",
+    "tier": 4,
+    "score": 4.15,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Additive bases and flows in graphs",
+    "catalog_title": "Antisymmetric variant of Jaeger's weak 3-flow conjecture",
+    "statement_text": "There is a constant $k$ such that every directed $k$-edge-connected graph has a $\\mathbb{Z}_5$-antisymmetric flow.",
+    "context_text": "The authors present this as the natural antisymmetric analogue of Jaeger's weak 3-flow conjecture (which was solved by Thomassen and later improved to 6-edge-connectivity by Lov\u00e1sz et al.). The note $\\mathbb{Z}_5$ is best possible since $\\mathbb{Z}_2$, $\\mathbb{Z}_3$, and $\\mathbb{Z}_4$ cannot support antisymmetric flows in general."
+  },
+  "started": "2026-09-16T20:00:14Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

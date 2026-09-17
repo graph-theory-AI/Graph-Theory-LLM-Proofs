@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "Every 2-connected graph outside the three exceptional families satisfies \u03b7(G) \u2265 min{2n, 3n\u221210}, proving the conjecture for n \u2265 10.",
+  "would_publish": true,
+  "caveats": "The proof is self-contained; novelty and current literature status have not been independently checked.",
+  "id": "1602.05184__00",
+  "model": "gpt-6-astra",
+  "usd": 1.430235,
+  "eur": 1.48143,
+  "elapsed_s": 1297.1,
+  "status": "completed",
+  "response_id": "resp_0ce23da8364da348006aab496b14a087d29831894b056eaf75",
+  "when": "2026-09-17T02:20:44Z"
+}

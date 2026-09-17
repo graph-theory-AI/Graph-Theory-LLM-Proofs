@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "switching_reconstruction_of_digraphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Switching reconstruction of digraphs",
+    "paper": "http://www.openproblemgarden.org/op/switching_reconstruction_of_digraphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/switching_reconstruction_of_digraphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "switching_reconstruction_of_digraphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/switching_reconstruction_of_digraphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/switching_reconstruction_of_digraphs",
+    "catalog_title": "Switching reconstruction of digraphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-07",
+    "authors": "Bondy, J. Adrian, Mercier, Fabien",
+    "subject": "Graph Theory",
+    "statement_text": "Question Are there any switching-nonreconstructible digraphs on twelve or more vertices?",
+    "context_text": "To switch a vertex of a digraph is to reverse all the arcs incident to it. The digraph so obtained is called a switching of the digraph. The collection of switchings of a digraph $ D $ is called the switching deck of $ D $ . A digraph is switching-reconstructible if every digraph with the same deck as $ D $ is isomorphic to $ D $ . The problem is a directed analogue of switching reconstruction of graphs in which one complements the edges at a vertex, instead of reversing each of its incident arcs. Bondy and Mercier proved an analogue to Stanley's result for switching reconstruction of graphs. They proved that a digraph on $ n $ vertices is switching-reconstructible if $ n \\not\\equiv 0 (\\mod 4) $ . They also proved many other common results for both switching reconstructions. One significant difference between the directed and undirected problems is that there exist switching-nonreconstructible directed graphs on eight vertices, while Stanley's conjecture that every simple graph on five or more vertices is switching-reconstructible.",
+    "references_text": "- *[BM] J. A. Bondy and F. Mercier. Switching reconstruction of digraphs. J. Graph Theory 67(2011), no. 4, 332-348."
+  },
+  "started": "2026-09-16T18:17:47Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

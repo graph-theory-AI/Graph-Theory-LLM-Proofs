@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 9,
+    "score": 5.0,
+    "tier": 5,
+    "lean": "prove",
+    "status": "open",
+    "id": "1705.04609__00",
+    "title_md": "[Conjecture 1.8](https://arxiv.org/abs/1705.04609)",
+    "paper": "Induced subgraphs of graphs with large chromatic number. X. Holes of sp\u2026",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1705.04609__00/"
+  },
+  "dossier_meta": {
+    "id": "1705.04609__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1705.04609__00/",
+    "arxiv_id": "1705.04609",
+    "tier": 5,
+    "score": 5.0,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Induced subgraphs of graphs with large chromatic number. X. Holes of sp\u2026",
+    "catalog_title": "Conjecture 1.8",
+    "statement_text": "For all integers $\\kappa, \\ell \\geq 0$, there exists $c \\geq 0$ such that every graph with chromatic number greater than $c$ contains either a complete subgraph on $\\kappa$ vertices or holes of $\\ell$ consecutive lengths.",
+    "context_text": "The authors proved in [14] (a prior paper in this series) that every triangle-free graph with sufficiently large chromatic number contains holes of $\\ell$ consecutive lengths (result 1.7 of the present paper). Conjecture 1.8 extends this to graphs with clique number bounded by any $\\kappa$. The conjecture remains open; this paper makes a partial step by proving 1.9, which guarantees holes of two consecutive lengths both greater than $\\ell$."
+  },
+  "started": "2026-09-16T20:25:25Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

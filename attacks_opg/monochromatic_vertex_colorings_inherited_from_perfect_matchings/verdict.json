@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "In the full complex-weighted model, I prove d \u2264 n\u22122 for even n \u2265 6, classify existence for n \u2264 4, and establish rigidity for regular effective supports.",
+  "would_publish": false,
+  "caveats": "This argument does not decide, for example, (n,d)=(6,3); no claim of novelty or independently verified literature status.",
+  "id": "monochromatic_vertex_colorings_inherited_from_perfect_matchings",
+  "model": "gpt-6-astra",
+  "usd": 0.899285,
+  "eur": 0.931475,
+  "elapsed_s": 1007.6,
+  "status": "completed",
+  "response_id": "resp_057685a82e554e26006aaac8df63dc87d290a836d46fb95859",
+  "when": "2026-09-16T17:07:26Z"
+}

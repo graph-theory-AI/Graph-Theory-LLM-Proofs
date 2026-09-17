@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I construct explicit O(k^2 n)-point universal sets for planar n-vertex graphs with vertex-cover number at most k, but do not resolve the unrestricted problem.",
+  "would_publish": false,
+  "caveats": "No improvement to the unrestricted bounds; novelty of this restricted-class result is not asserted.",
+  "id": "small_universal_point_sets_for_planar_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.89932,
+  "eur": 0.931511,
+  "elapsed_s": 1067.5,
+  "status": "completed",
+  "response_id": "resp_07265809b4bbe99c006aaaebf5a21087d29a428753acbd56f6",
+  "when": "2026-09-16T19:38:08Z"
+}

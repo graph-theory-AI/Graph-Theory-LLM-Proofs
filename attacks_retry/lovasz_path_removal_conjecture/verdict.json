@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For every k\u22652, the sharp connectivity threshold is k+3 within proper circular-arc graphs, without any bound on induced-cycle length.",
+  "would_publish": false,
+  "caveats": "No unrestricted f(k) is obtained; novelty of the restricted-class result is not claimed.",
+  "id": "lovasz_path_removal_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.870005,
+  "eur": 0.901147,
+  "elapsed_s": 1132.8,
+  "status": "completed",
+  "response_id": "resp_0961f496f149f465006aab22c1061487d2ae41bbe5983a0dfe",
+  "when": "2026-09-16T23:33:01Z"
+}

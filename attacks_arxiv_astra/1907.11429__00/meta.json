@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 22,
+    "score": 4.6,
+    "tier": 5,
+    "lean": "prove",
+    "status": "open",
+    "id": "1907.11429__00",
+    "title_md": "[Open problem on minimum independence ratio of Mycielski graphs](https://arxiv.org/abs/1907.11429)",
+    "paper": "Revisiting a theorem by Folkman on graph colouring",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1907.11429__00/"
+  },
+  "dossier_meta": {
+    "id": "1907.11429__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1907.11429__00/",
+    "arxiv_id": "1907.11429",
+    "tier": 5,
+    "score": 4.6,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Revisiting a theorem by Folkman on graph colouring",
+    "catalog_title": "Open problem on minimum independence ratio of Mycielski graphs",
+    "statement_text": "The exact value of the minimum independence ratio of Mycielski graphs seems to be unknown.",
+    "context_text": "While Cropper, Gy\u00e1rf\u00e1s and Lehel [CGL06] established asymptotic bounds $c_1 \\cdot \\frac{\\sqrt{\\log m}}{m} \\leq \\mathrm{mir}(M_s) \\leq c_2 \\cdot \\frac{\\log m}{m}$ for every integer $m > 3$ (where $s$ is one less than the Ramsey number $R(3,m)$), no exact formula for $\\mathrm{mir}(M_k)$ is known. The authors flag this gap while discussing why replacing the constant $2$ by a larger integer $k$ fails to generalise Observation 1.1."
+  },
+  "started": "2026-09-16T20:14:33Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove (i)\u2013(ii) for graph classes with fixed biclique-cover load, and the k_B-bound in (iii) when the cover has load one on B.",
+  "would_publish": false,
+  "caveats": "These are structural special cases, not a resolution for general bipartite graphs; novelty is not asserted.",
+  "id": "2004.07457__01",
+  "model": "gpt-6-astra",
+  "usd": 1.026685,
+  "eur": 1.063435,
+  "elapsed_s": 826.5,
+  "status": "completed",
+  "response_id": "resp_0c126faf5d1713c4006aaafff8301887d29a599bae9dbfb24f",
+  "when": "2026-09-16T20:59:28Z"
+}

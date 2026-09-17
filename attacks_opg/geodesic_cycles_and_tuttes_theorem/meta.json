@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "geodesic_cycles_and_tuttes_theorem",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Geodesic cycles and Tutte's Theorem",
+    "paper": "http://www.openproblemgarden.org/op/geodesic_cycles_and_tuttes_theorem",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/geodesic_cycles_and_tuttes_theorem/",
+    "importance": "Medium",
+    "undergrad": true,
+    "subject": "Cycles"
+  },
+  "dossier_meta": {
+    "id": "geodesic_cycles_and_tuttes_theorem",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/geodesic_cycles_and_tuttes_theorem/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/geodesic_cycles_and_tuttes_theorem",
+    "catalog_title": "Geodesic cycles and Tutte's Theorem",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-08-04",
+    "authors": "Georgakopoulos, Agelos, Spr\u00fcssel, Philipp",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Cycles",
+    "statement_text": "Problem If $ G $ is a $ 3 $ -connected finite graph, is there an assignment of lengths $ \\ell: E(G) \\to \\mathb R^+ $ to the edges of $ G $ , such that every $ \\ell $ -geodesic cycle is peripheral ?",
+    "context_text": "A cycle $ C $ is $ \\ell $ -geodesic if for every two vertices $ x,y $ on $ C $ there is no $ x $ - $ y $ ~path in $ G $ shorter, with respect to $ \\ell $ , than both $ x $ - $ y $ ~arcs on $ C $ . It is not hard to prove [GS] that for every finite graph $ G $ and every assignment of edge lengths $ \\ell: E(G) \\to \\mathb R^+ $ the $ \\ell $ -geodesic cycles of $ G $ generate its cycle space. Thus, a positive answer to the problem would imply a new proof of Tutte's classical theorem [T] that the peripheral cycles of a $ 3 $ -connected finite graph generate its cycle space.",
+    "references_text": "- *[GS] Angelos Georgakopoulos, Philipp Spr\u00fcssel: Geodesic topological cycles in locally finite graphs. Preprint 2007.\n- [T] W.T. Tutte, How to draw a graph. Proc. London Math. Soc. 13 (1963), 743\u2013768."
+  },
+  "started": "2026-09-16T16:42:24Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

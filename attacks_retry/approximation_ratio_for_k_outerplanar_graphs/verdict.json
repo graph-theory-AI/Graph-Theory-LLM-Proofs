@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A verified k-outerplanar construction has natural path-LP gap k, and the gap remains unbounded after any fixed number of Sherali\u2013Adams rounds.",
+  "would_publish": false,
+  "caveats": "This concerns relaxation gaps, not approximation hardness; it does not settle the algorithmic question or verify the current literature status.",
+  "id": "approximation_ratio_for_k_outerplanar_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.79567,
+  "eur": 0.824151,
+  "elapsed_s": 1085.8,
+  "status": "completed",
+  "response_id": "resp_0f7ff2644f16876c006aab13581f1c87d28dddc0293c389102",
+  "when": "2026-09-16T22:26:29Z"
+}

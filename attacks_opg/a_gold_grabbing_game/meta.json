@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "a_gold_grabbing_game",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "A gold-grabbing game",
+    "paper": "http://www.openproblemgarden.org/op/a_gold_grabbing_game",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/a_gold_grabbing_game/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Algorithms"
+  },
+  "dossier_meta": {
+    "id": "a_gold_grabbing_game",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/a_gold_grabbing_game/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/a_gold_grabbing_game",
+    "catalog_title": "A gold-grabbing game",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2009-10-02",
+    "authors": "Rosenfeld, Moshe",
+    "subject": "Graph Theory \u00bb Graph Algorithms",
+    "statement_text": "Setup Fix a tree $ T $ and for every vertex $ v \\in V(T) $ a non-negative integer $ g(v) $ which we think of as the amount of gold at $ v $ . 2-Player game Players alternate turns. On each turn, a player chooses a leaf vertex $ v $ of the tree, takes the gold at this vertex, and then deletes $ v $ . The game ends when the tree is empty, and the winner is the player who has accumulated the most gold. Problem Find optimal strategies for the players.",
+    "context_text": "In the special case when $ T $ is a path of even length, the first player can ensure that she chooses either all of the even vertices, or all of the odd vertices. Thus, player 1 should never finish with less than player 2, and whenever the total gold on the odd vertices and the total gold on the even vertices are not equal, there is a winning strategy for player 1.",
+    "references_text": ""
+  },
+  "started": "2026-09-16T17:00:25Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

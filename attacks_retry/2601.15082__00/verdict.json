@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I characterize bounded ratio for all finitely based hereditary claw-free classes, and for every pair of forbidden induced graphs in which one forbidden graph is a star.",
+  "would_publish": false,
+  "caveats": "The unrestricted hereditary and dense cases remain unresolved; the literature novelty of these special-case characterizations has not been verified.",
+  "id": "2601.15082__00",
+  "model": "gpt-6-astra",
+  "usd": 1.17819,
+  "eur": 1.220363,
+  "elapsed_s": 1150.3,
+  "status": "completed",
+  "response_id": "resp_08e3bc87aca0cd3e006aab3260efe487d2a0e4efd7371b7d33",
+  "when": "2026-09-17T00:39:58Z"
+}

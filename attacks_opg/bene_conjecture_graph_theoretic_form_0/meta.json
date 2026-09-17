@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "bene_conjecture_graph_theoretic_form_0",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Bene\u0161 Conjecture (graph-theoretic form)",
+    "paper": "http://www.openproblemgarden.org/op/bene_conjecture_graph_theoretic_form_0",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/bene_conjecture_graph_theoretic_form_0/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "bene_conjecture_graph_theoretic_form_0",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/bene_conjecture_graph_theoretic_form_0/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/bene_conjecture_graph_theoretic_form_0",
+    "catalog_title": "Bene\u0161 Conjecture (graph-theoretic form)",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2010-04-17",
+    "authors": "Bene\u0161, V\u00e1clav E.",
+    "subject": "Graph Theory",
+    "statement_text": "Problem ( $ \\dag $ ) Find a sufficient condition for a straight $ \\ell $ -stage graph to be rearrangeable. In particular, what about a straight uniform graph? Conjecture ( $ \\diamond $ ) Let $ L $ be a simple regular ordered $ 2 $ -stage graph. Suppose that the graph $ L^m $ is externally connected, for some $ m\\ge1 $ . Then the graph $ L^{2m} $ is rearrangeable.",
+    "context_text": "Given an integer $ \\ell\\ge2 $ , an $ \\ell $ -stage graph is an $ \\ell $ -partite graph $ G $ with a list of its parts $ V_1,\\dots,V_{\\ell} $ such that every edge of $ G $ has endpoints in both $ V_i $ and $ V_{i+1} $ , for some $ i\\in[\\ell-1] $ . A vertex in $ V_1 $ ( $ V_\\ell $ ) is a source ( target ) of $ G $ . A path in $ G $ is plain if it goes from a source to a target through each part of $ G $ exactly once. The graph $ G $ is externally connected if for every source $ s $ and target $ t $ there exists a plain path from $ s $ to $ t $ . A mask for $ G $ is a $ 2 $ -stage multigraph $ M $ whose sources and targets are exactly those of $ G $ and such that every vertex of $ M $ has the same degree in $ G $ . The graph $ G $ is rearrangeable if for every its mask there exists a collection, called routing , of corresponding mutually edge-disjoint plain paths in $ G $ . The graph $ G $ is ordered if each of its parts is linearly ordered. The graph $ G $ is uniform and denoted $ B^{\\ell-1} $ if there is an ordered 2-stage graph $ B $ with equal-sized parts such that $ G $ is the proper (i.e., respecting all the orders in $ B $ ) concatenation of $ \\ell-1 $ identical copies of $ B $ . The graph $ G $ is straight if for any $ 2\\le i\\le\\ell-1 $ and any $ v\\in V_i $ , the number of edges joining $ v $ with $ V_{i-1} $ equals that of $ V_{i+1} $ . Conjecture ( $ \\diamond $ ) can be reformulated as $ R(L) \\le 2F(L) $ , where $ R(B) $ ( $ F(B) $ ) denotes the smallest positive integer $ n $ , or $ \\infty $ if none exists, such that the graph $ B^n $ is rearrangeable (externally connected). Examples Consider the simple 2-regular $ 2 $ -stage ordered graphs $ A, C, D $ shown in Fig.1. It is easy to see that $ F(A) = 2 $ and $ F(C) = F(D) = 3 $ (the corresponding externally connected graphs $ A^2, C^3, D^3 $ are depicted in blue). Therefore, according to Conjecture ( $ \\diamond $ ), the graphs $ A^4, C^6, D^6 $ should be rearrangeable, which is indeed the case. The graph $ A $ is the 2-stage Shuffle-exchange graph $ \\text{SE}(2,3) $ , and there are several nice proofs known for $ R(A)=4 $ . Although I am not aware of any theoretical proof for rearrangeability of $ C^5 $ or $ D^6 $ , I have verified by brute force without difficulty that $ R(C)=5 $ and $ R(D)=6 $ . Figure 1. Examples for Conjecture ( $ \\diamond $ ). Link to Bene\u0161 Conjecture Problem ( $ \\dag $ ) and Conjecture ( $ \\diamond $ ) are equivalent \"graph-theoretic\" forms of Problem ( $ \\star $ ) and Bene\u0161 conjecture [B75], respectively. The equivalence is based on the natural bijection between the $ \\ell $ -systems of partitions and the straight $ \\ell $ -stage graphs, given any $ \\ell\\ge2 $ . Here an $ \\ell $ -system of partitions is an $ \\ell $ -tuple $ {\\bf H} :=({\\bf h}_1,\\dots,{\\bf h}_\\ell) $ of partitions of some finite set $ E $ . The image of $ {\\bf H} $ under this bijection is the straight $ \\ell $ -stage graph denoted $ G({\\bf H}) $ and defined as follows. The edge set of $ G({\\bf H}) $ is $ [\\ell-1]\\times E $ , the $ i $ th vertex part is $ U_i:=\\{i\\}\\times {\\bf h}_i $ , for all $ i\\in[\\ell] $ , and the edge-vertex incidence is such that every edge $ (j,e) $ has endpoints $ (j,a)\\in U_j $ and $ (j+1,b)\\in U_{j+1} $ uniquely determined by $ e\\in a\\cap b $ . The bijection $ {\\bf H} \\mapsto G({\\bf H}) $ provides a convenient two-way link between the frameworks for Problems ( $ \\star $ ) and ( $ \\dag $ ) via numerous easily seen equivalences. Here is some basic ones: $ \\bullet $ Simplicity of $ G({\\bf H}) $ is equivalent to the condition $ {\\bf h}_i\\wedge{\\bf h}_{i+1}={\\bf 0} $ , for all $ i\\in[\\ell-1] $ . $ \\bullet $ Uniformity of $ G({\\bf H}) $ is equivalent to the existence of a permutation $ \\delta $ of $ E $ such that $ {\\bf h}_{i+1}=\\delta ({\\bf h}_i) $ , for all $ i\\in[\\ell-1] $ . $ \\bullet $ $ k $ -quasi-regularity of $ G({\\bf H}) $ is equivalent to every block of $ {\\bf h}_i $ being of size $ k $ , for all $ i\\in[\\ell] $ . Here the graph $ G $ is $ k $ -quasi-regular if the induced bipartite subgraph on $ V_i\\cup V_{i+1} $ is $ k $ -regular, for all $ i\\in[\\ell-1] $ . Note that a quasi-regular multistage graph is straight. Also, $ k $ -quasi-regularity of $ B^n $ is equivalent to $ k $ -regularity of $ B $ . $ \\bullet $ External connectivity of $ G({\\bf H}) $ is equivalent to transitivity of $ S({\\bf h}_\\ell)\\dots S({\\bf h}_2)S({\\bf h}_1) $ . $ \\bullet $ Given a permutation $ \\xi $ of $ E $ , the membership $ \\xi \\in S({\\bf h}_1)S({\\bf h}_2) \\dots S({\\bf h}_\\ell) $ is equivalent to routability of the mask $ M(\\xi) $ for $ G({\\bf H}) $ defined as follows. The edge set of $ M(\\xi) $ is $ E $ and the edge-vertex incidence is such that every edge $ e\\in E $ has endpoints $ (1,a)\\in U_1 $ and $ (\\ell,b)\\in U_{\\ell} $ uniquely determined by $ e\\in \\xi^{-1}(a)\\cap b $ . Note that given $ {\\bf H} $ , the map $ \\xi \\mapsto M(\\xi) $ is surjective (but generally not injective). $ \\bullet $ Consequently, rearrangeability of $ G({\\bf H}) $ is equivalent to completeness of $ {\\bf H} $ . Here $ {\\bf H} $ is complete if it satisfies $ \\frak S(E) = S({\\bf h}_1)S({\\bf h}_2) \\dots S({\\bf h}_\\ell) $ . $ \\bullet $ If $ G({\\bf H}) $ is rearrangeable, then any routing algorithm for $ G({\\bf H}) $ easily translates to a factorization algorithm of the same complexity for the latter identity, and vise versa. Here, given a rearrangeable multistage graph, a routing algorithm is one that takes a mask of the graph as input and returns a corresponding routing. $ \\bullet $ Contracting all edges between $ U_i $ and $ U_{i+1} $ in $ G({\\bf H}) $ is equivalent to replacing the partitions $ {\\bf h}_i $ and $ {\\bf h}_{i+1} $ in $ {\\bf H} $ with their supremum $ {\\bf h}_i\\vee{\\bf h}_{i+1} $ , given any fixed $ i\\in[\\ell-1] $ . In other words, $ G_i=G({\\bf H}_i) $ , where $ G_i $ is the contracted graph and $ {\\bf H}_i:=({\\bf h}_1,\\dots,{\\bf h}_i\\vee{\\bf h}_{i+1},\\dots,{\\bf h}_\\ell) $ . In fact, the procedure $ {\\bf H} \\mapsto {\\bf H}_i $ preserves completeness",
+    "references_text": "- *[B75] V.E. Bene\u0161, Proving the rearrangeability of connecting networks by group calculation, Bell Syst. Tech. J. 54 (1975), 421-434."
+  },
+  "started": "2026-09-16T18:39:27Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Given a k-vertex chordal deletion set, the problem has a deterministic 2^{O(k log(k+2))}n^4 algorithm, but the unrestricted polynomial-time question remains unresolved.",
+  "would_publish": false,
+  "caveats": "The deletion set is supplied; novelty of the restricted-class algorithm is not claimed, and no unrestricted algorithm or hardness result is obtained.",
+  "id": "2009.05691__01",
+  "model": "gpt-6-astra",
+  "usd": 1.49936,
+  "eur": 1.553029,
+  "elapsed_s": 1302.4,
+  "status": "completed",
+  "response_id": "resp_0da47e6755e0c7c1006aab3f5234dc87d296150f5629464345",
+  "when": "2026-09-17T01:37:44Z"
+}

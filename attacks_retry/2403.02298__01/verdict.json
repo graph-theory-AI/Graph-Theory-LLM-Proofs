@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A random-priority triangle filter gives t_vec(n) >= (sqrt(pi)/4-o(1))sqrt(n)/ln(n), improving the lower-bound constant but leaving the logarithmic gap open.",
+  "would_publish": false,
+  "caveats": "Only the constant improves, not the order; novelty beyond the bounds supplied in the prompt is not asserted.",
+  "id": "2403.02298__01",
+  "model": "gpt-6-astra",
+  "usd": 0.78143,
+  "eur": 0.809401,
+  "elapsed_s": 614.9,
+  "status": "completed",
+  "response_id": "resp_0bf5f8a8f774070e006aab6201907c87d289e16b78903b55a5",
+  "when": "2026-09-17T03:54:16Z"
+}

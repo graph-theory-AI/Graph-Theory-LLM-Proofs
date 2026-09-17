@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An independently checked Wronskian argument gives a sharper cubic upper bound, and the linear bound is sharp for pencils and an additional genuinely three-dimensional four-term class.",
+  "would_publish": false,
+  "caveats": "The unrestricted maximum remains undetermined; no literature-priority claim is made.",
+  "id": "2308.05208__01",
+  "model": "gpt-6-astra",
+  "usd": 1.522105,
+  "eur": 1.576588,
+  "elapsed_s": 1245.5,
+  "status": "completed",
+  "response_id": "resp_0960d0a5140293e8006aab39f72e4887d2af059f81d90d5122",
+  "when": "2026-09-17T01:13:56Z"
+}

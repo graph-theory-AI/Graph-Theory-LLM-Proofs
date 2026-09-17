@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "three_4_flows_conjecture",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "The three 4-flows conjecture",
+    "paper": "http://www.openproblemgarden.org/op/three_4_flows_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/three_4_flows_conjecture/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Nowhere-zero flows"
+  },
+  "dossier_meta": {
+    "id": "three_4_flows_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/three_4_flows_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/three_4_flows_conjecture",
+    "catalog_title": "The three 4-flows conjecture",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-03-07",
+    "authors": "DeVos, Matt",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Nowhere-zero flows",
+    "statement_text": "Conjecture For every graph $ G $ with no bridge , there exist three disjoint sets $ A_1,A_2,A_3 \\subseteq E(G) $ with $ A_1 \\cup A_2 \\cup A_3 = E(G) $ so that $ G \\setminus A_i $ has a nowhere-zero 4-flow for $ 1 \\le i \\le 3 $ .",
+    "context_text": "A graph $ G $ has a nowhere-zero 4-flow if and only if there exist disjoint sets $ A_1,A_2,A_3 \\subseteq E(G) $ with $ A_1 \\cup A_2 \\cup A_3 = E(G) $ so that $ G\\A_i $ has a nowhere-zero 2-flow for $ 1 \\le i \\le 3 $ . Thus, the above conjecture is true with room to spare for such graphs. Since every 4-edge-connected graph and every 3- edge-colorable cubic graph has a nowhere-zero 4-flow, this conjecture is automatically true for these families. As with the 5-flow conjecture or the cycle double cover conjecture , establishing this conjecture comes down to proving it for cubic graphs which are not 3-edge-colorable. This conjecture is a consequence of the Petersen coloring conjecture , and it implies the Orientable cycle four cover conjecture . The latter implication follows immediately from the fact that every graph with a nowhere-zero 4-flow has an orientable cycle double cover. Actually, it is possible that for every graph $ G $ with no cut-edge, there exist disjoint sets $ A_B_1,B_2 \\subseteq E(G) $ with $ A \\cup B_1 \\cup B_2 = E(G) $ and so that $ G\\B_1 $ and $ G\\B_2 $ have nowhere-zero 3-flows and $ G\\A $ has a nowhere-zero 2-flow. The Petersen graph has such a decomposition ( $ B_1 $ and $ B_2 $ should be alternate edges of some 8-circuit) and so does every graph with a nowhere-zero 4-flow. If this stronger statement is true, then it would imply the oriented eight cycle four cover conjecture.",
+    "references_text": "- [J] F. Jaeger, On circular flows in graphs. Finite and infinite sets, Vol. I, II (Eger, 1981), 391--402, Colloq. Math. Soc. J\u00e1nos Bolyai, 37, North-Holland, Amsterdam, 1984.. MathSciNet"
+  },
+  "started": "2026-09-16T18:22:53Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

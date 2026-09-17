@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Any counterexample has at least twelve non-ring triangular faces; one with at most thirteen has exactly two degree-six interior vertices and at most sixteen vertices in total.",
+  "would_publish": false,
+  "caveats": "The remaining small cases have not been enumerated, and the unrestricted conjecture is not proved.",
+  "id": "2407.18800__03",
+  "model": "gpt-6-astra",
+  "usd": 1.516925,
+  "eur": 1.571223,
+  "elapsed_s": 1787.2,
+  "status": "completed",
+  "response_id": "resp_075ec39d10a81ac8006aab0cf95bfc87d2936959233bc5cc96",
+  "when": "2026-09-16T22:11:00Z"
+}

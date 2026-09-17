@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A self-contained splitting argument proves CDC for bridgeless graphs with at most ten odd-degree vertices, but does not settle the conjecture.",
+  "would_publish": false,
+  "caveats": "Elementary special case; no novelty claimed, and unrestricted cubic cores remain untreated.",
+  "id": "cycle_double_cover_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.01276,
+  "eur": 1.049012,
+  "elapsed_s": 922.3,
+  "status": "completed",
+  "response_id": "resp_07767ddd851d45d1006aaaee4f81ec87d2a9a0ea1722f38bda",
+  "when": "2026-09-16T19:45:45Z"
+}

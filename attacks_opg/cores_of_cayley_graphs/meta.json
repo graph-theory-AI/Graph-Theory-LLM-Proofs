@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "cores_of_cayley_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Cores of Cayley graphs",
+    "paper": "http://www.openproblemgarden.org/op/cores_of_cayley_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/cores_of_cayley_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Homomorphisms"
+  },
+  "dossier_meta": {
+    "id": "cores_of_cayley_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/cores_of_cayley_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/cores_of_cayley_graphs",
+    "catalog_title": "Cores of Cayley graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-03-06",
+    "authors": "Samal, Robert",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Homomorphisms",
+    "statement_text": "Conjecture Let $ M $ be an abelian group. Is the core of a Cayley graph (on some power of $ M $ ) a Cayley graph (on some power of $ M $ )?",
+    "context_text": "Even the case $ M=\\mathbb{Z}_2 $ is open. In this case, Cayley graphs on some power of $ \\mathbb{Z}_2 $ are called cube-like graphs , they have been introduced by Lov\\'asz as an example of graphs, for which every eigenvalue is an integer. So, in this case we ask, whether a core of each cube-like graph is a cube-like graph.",
+    "references_text": ""
+  },
+  "started": "2026-09-16T17:21:46Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

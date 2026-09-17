@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds with asymptotically optimal coefficient 2 for graphs assembled by pure clique-sums of co-bipartite pieces, but the general case is not resolved.",
+  "would_publish": false,
+  "caveats": "Restricted-class result; the lower bound recovers the asymptotic obstruction supplied in the question, and no novelty is claimed.",
+  "id": "list_hadwiger_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.936915,
+  "eur": 0.970452,
+  "elapsed_s": 767.1,
+  "status": "completed",
+  "response_id": "resp_0df82c6ed08b274f006aaad92726e087d2b067ff0b773e2cc3",
+  "when": "2026-09-16T18:12:54Z"
+}

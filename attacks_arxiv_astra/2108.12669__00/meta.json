@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 30,
+    "score": 4.35,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2108.12669__00",
+    "title_md": "[Conjecture 1](https://arxiv.org/abs/2108.12669)",
+    "paper": "Triangle-free planar graphs with at most $64^{n^{0.731}}$ 3-colorings",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2108.12669__00/"
+  },
+  "dossier_meta": {
+    "id": "2108.12669__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2108.12669__00/",
+    "arxiv_id": "2108.12669",
+    "tier": 4,
+    "score": 4.35,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Triangle-free planar graphs with at most $64^{n^{0.731}}$ 3-colorings",
+    "catalog_title": "Conjecture 1",
+    "statement_text": "There exists a constant $c > 1$ such that every $n$-vertex triangle-free planar graph has at least $c^{n^{\\log_{9/2} 3}}$ distinct proper 3-colorings.",
+    "context_text": "Theorem 1 of the paper provides, for infinitely many $n$, an $n$-vertex triangle-free planar graph with at most $64^{n^{\\log_{9/2} 3}} < 64^{n^{0.731}}$ 3-colorings, improving Thomassen's construction. The authors conjecture that the exponent $\\log_{9/2} 3 \\approx 0.731$ in the upper bound is optimal, making Conjecture 1 the matching lower-bound statement."
+  },
+  "started": "2026-09-16T20:04:08Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

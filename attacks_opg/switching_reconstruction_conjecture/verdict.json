@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A local degree certificate settles several infinite families, and an exponential self-switching bound gives failure probability O(n^2 2^(-3n/2)) for G(n,1/2).",
+  "would_publish": false,
+  "caveats": "The general case n divisible by 4 remains unresolved; novelty of these partial results has not been verified.",
+  "id": "switching_reconstruction_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.228195,
+  "eur": 1.272158,
+  "elapsed_s": 1078.1,
+  "status": "completed",
+  "response_id": "resp_03bd76d4b2670c33006aaadd009d0c87d2a46cbd738cdd0c72",
+  "when": "2026-09-16T18:34:30Z"
+}

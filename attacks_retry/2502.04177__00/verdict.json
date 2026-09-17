@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove a delayed-treewidth subdivision case and construct explicit classes of expansion \u0398(s^{2a}) containing graphs with bn_r=2 and scol_r=r^a+2.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not resolved; the constructed classes themselves have polynomial strong coloring numbers.",
+  "id": "2502.04177__00",
+  "model": "gpt-6-astra",
+  "usd": 1.11513,
+  "eur": 1.155046,
+  "elapsed_s": 1281.2,
+  "status": "completed",
+  "response_id": "resp_0599c708db276c3c006aab45780ab487d286ee9a9ffc21befa",
+  "when": "2026-09-17T02:03:37Z"
+}

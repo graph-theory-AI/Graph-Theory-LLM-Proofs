@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "decomposing_an_eulerian_graph_into_cycles",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Decomposing an eulerian graph into cycles.",
+    "paper": "http://www.openproblemgarden.org/op/decomposing_an_eulerian_graph_into_cycles",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_an_eulerian_graph_into_cycles/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Cycles"
+  },
+  "dossier_meta": {
+    "id": "decomposing_an_eulerian_graph_into_cycles",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_an_eulerian_graph_into_cycles/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/decomposing_an_eulerian_graph_into_cycles",
+    "catalog_title": "Decomposing an eulerian graph into cycles.",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-04",
+    "authors": "Haj\u00f3s, G.",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Cycles",
+    "statement_text": "Conjecture Every simple eulerian graph on $ n $ vertices can be decomposed into at most $ \\frac{1}{2}(n-1) $ cycles.",
+    "context_text": "This conjecture is tight because a complete graph on $ 2k+1 $ vertices cannot be covered by less than $ k $ cycles. There is a similar conjecture about decomposition of a connected graph into paths .",
+    "references_text": "- * [L] L. Lov\u00e1sz, On covering of graphs. In Theory of Graphs (Proc. Colloq., Tihany, 1966), 231--236. Academic Press, New York, 1968."
+  },
+  "started": "2026-09-16T17:23:14Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

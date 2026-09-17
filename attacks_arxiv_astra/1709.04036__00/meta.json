@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 31,
+    "score": 4.35,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "1709.04036__00",
+    "title_md": "[Conjecture 1.1](https://arxiv.org/abs/1709.04036)",
+    "paper": "Induced 2-degenerate Subgraphs of Triangle-free Planar Graphs",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1709.04036__00/"
+  },
+  "dossier_meta": {
+    "id": "1709.04036__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1709.04036__00/",
+    "arxiv_id": "1709.04036",
+    "tier": 4,
+    "score": 4.35,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Induced 2-degenerate Subgraphs of Triangle-free Planar Graphs",
+    "catalog_title": "Conjecture 1.1",
+    "statement_text": "Every triangle-free planar graph contains an induced 2-degenerate subgraph on at least $\\frac{7}{8}$ of its vertices.",
+    "context_text": "The authors introduce this as the central open problem motivating the paper, noting it would be tight for the cube (the unique 3-regular triangle-free planar graph on 8 vertices). The paper's main theorems (Theorems 1.2 and 1.3) prove weaker bounds of $\\frac{4}{5}$ and $\\frac{7}{8}n - 18n_3$ respectively as partial progress."
+  },
+  "started": "2026-09-16T20:03:50Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

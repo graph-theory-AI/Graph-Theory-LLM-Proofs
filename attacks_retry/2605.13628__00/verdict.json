@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Exponential decay holds for an explicit family S in F_{p^2} of size (p^2+6p-3)/4, including a balanced boundary example in F_25.",
+  "would_publish": false,
+  "caveats": "This is a structured-set result, not a uniform cardinality improvement; novelty relative to the full source paper is unchecked.",
+  "id": "2605.13628__00",
+  "model": "gpt-6-astra",
+  "usd": 1.382465,
+  "eur": 1.43195,
+  "elapsed_s": 1192.7,
+  "status": "completed",
+  "response_id": "resp_09f457be577e061f006aab0686ba5c87d28ea6fccd87afb500",
+  "when": "2026-09-16T21:33:35Z"
+}

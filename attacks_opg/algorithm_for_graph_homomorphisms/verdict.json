@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A sublinear-vertex reduction from bounded-degree 3-coloring to balanced homomorphism instances gives an ETH obstruction to the proposed running time.",
+  "would_publish": false,
+  "caveats": "This is not an unconditional nonexistence proof, and no novelty is claimed for the lower-bound conclusion; the catalog's dismissal of the ETH obstruction is misleading.",
+  "id": "algorithm_for_graph_homomorphisms",
+  "model": "gpt-6-astra",
+  "usd": 0.854945,
+  "eur": 0.885548,
+  "elapsed_s": 688.3,
+  "status": "completed",
+  "response_id": "resp_0ca04e878c34ae7e006aaacb561fa087d2a1c1bfdb1b2487bf",
+  "when": "2026-09-16T17:12:38Z"
+}

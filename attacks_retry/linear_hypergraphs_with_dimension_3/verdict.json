@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds whenever every vertex-node has degree at most three in the 2-core of the incidence graph, even when total incidence degrees are unbounded.",
+  "would_publish": false,
+  "caveats": "The unrestricted high-core-degree case remains unresolved; novelty is unchecked, and the intended finite Sperner convention is used.",
+  "id": "linear_hypergraphs_with_dimension_3",
+  "model": "gpt-6-astra",
+  "usd": 1.47788,
+  "eur": 1.53078,
+  "elapsed_s": 1949.1,
+  "status": "completed",
+  "response_id": "resp_0b4242f65ce5d72e006aab2100019887d2be1002a9c23c6882",
+  "when": "2026-09-16T23:39:08Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for k >= 4 and for additional broad classes of 3-uniform hypergraphs, leaving a specific five-vertex case and general mixed-twin cases unresolved.",
+  "would_publish": false,
+  "caveats": "Uses the intended H-free formulation and nonempty, vertex-locally finite perturbations; the full k=3 conjecture remains unresolved here.",
+  "id": "2506.08810__04",
+  "model": "gpt-6-astra",
+  "usd": 1.434095,
+  "eur": 1.485428,
+  "elapsed_s": 1460.0,
+  "status": "completed",
+  "response_id": "resp_00a65e5d737640e2006aab0dc5c67087d2af11dd0e7fbfd05e",
+  "when": "2026-09-16T22:08:57Z"
+}

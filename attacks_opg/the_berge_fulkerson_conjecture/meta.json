@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "the_berge_fulkerson_conjecture",
+    "tier": 4,
+    "score": 4.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "The Berge-Fulkerson conjecture",
+    "paper": "http://www.openproblemgarden.org/op/the_berge_fulkerson_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/the_berge_fulkerson_conjecture/",
+    "importance": "Outstanding",
+    "undergrad": false,
+    "subject": "Matchings"
+  },
+  "dossier_meta": {
+    "id": "the_berge_fulkerson_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/the_berge_fulkerson_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 4,
+    "score": 4.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/the_berge_fulkerson_conjecture",
+    "catalog_title": "The Berge-Fulkerson conjecture",
+    "importance": "Outstanding \u272d\u272d\u272d\u272d",
+    "posted": "2007-03-07",
+    "authors": "Berge, Claude, Fulkerson, Delbert R.",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Matchings",
+    "statement_text": "Conjecture If $ G $ is a bridgeless cubic graph, then there exist 6 perfect matchings $ M_1,\\ldots,M_6 $ of $ G $ with the property that every edge of $ G $ is contained in exactly two of $ M_1,\\ldots,M_6 $ .",
+    "context_text": "This conjecture is due to Berge and Fulkerson, and appears first in [F] (see [S79b]). If $ G $ is 3- edge-colorable , then we may choose three perfect matchings $ M_1,M_2,M_3 $ so that every edge is in exactly one. Taking each of these twice gives us 6 perfect matchings with the properties described above. Thus, the above conjecture holds trivially for 3-edge-colorable graphs. There do exist bridgeless cubic graphs which are not 3-edge-colorable (for instance the Petersen graph ), but the above conjecture asserts that every such graph is close to being 3-edge-colorable. Definition: An $ r $ -graph is an $ r $ - regular graph $ G $ on an even number of vertices with the property that every edge-cut which separates $ V(G) $ into two sets of odd cardinality has size at least $ r $ . Observe that a cubic graph is a 3-graph if and only if it has no bridge. If G is an $ r $ -regular graph which has an $ r $ -edge-coloring, then every color class is a perfect matching, so $ |V(G)| $ must be even, and every color must appear in every edge-cut which separates $ V(G) $ into two sets of odd size, so every edge-cut of this form must have size at least $ r $ . Thus, every $ r $ -edge-colorable $ r $ -regular graph is an $ r $ -graph. In a sense, we may view the $ r $ -graphs as the $ r $ -regular graphs which have the obvious necessary conditions to be $ r $ -edge-colorable. Seymour [S79b] defined $ r $ -graphs and offered the following generalization of the Berge-Fulkerson conjecture. Conjecture (The generalized Berge-Fulkerson conjecture (Seymour)) Let $ G $ be an $ r $ -graph. Then there exist $ 2r $ perfect matchings $ M_1,\\ldots,M_{2r} $ of $ G $ with the property that every edge of $ G $ is contained in exactly two of $ M_1,\\ldots,M_{2r} $ . More generally, for a graph $ G=(V,E) $ , one may consider the vector space of real numbers indexed by $ E $ . We associate every perfect matching $ M $ with its characteristic vector. In this context, the Berge-Fulkerson conjecture asserts that for every 3-graph, the vector which is identically 1 may be written as a half-integer combination of perfect matchings. Edmonds matching polytope theorem [E] gives a complete characterization of what vectors in $ {\\mathbb R}^E $ which can be written as a nonnegative real combination of perfect matchings. A particular consequence of this theorem is that the vector which is identically 1 can be written as a nonnegative rational combination of perfect matchings if G is an $ r $ -graph. It follows from this that for every $ r $ -graph $ G $ , there is a list of perfect matchings $ M_1,\\ldots,M_{kr} $ so that every edge is contained in exactly $ k $ of them. Unfortunately, the particular $ k $ depends on the graph. The following weak version of the Berge-Fulkerson conjecture asserts that this dependence is inessential. Conjecture (the weak Berge-Fulkerson conjecture) There exists a positive integer $ k $ with the following property. Every 3-graph $ G $ has a list of $ 3k $ perfect matchings such that every edge of $ G $ is contained in exactly $ k $ of them. There is a fascinating theorem of Lovasz [L] that characterizes which vectors in $ {\\mathbb Z}^E $ can be written as an integer combination of perfect matchings. However, very little is known about nonnegative integer combinations of perfect matchings. In particular, if the Berge-Fulkerson conjecture is true, then for every 3-graph $ G=(V,E) $ , there is a list of 5 perfect matchings with union $ E $ (take any 5 of the 6 perfect matchings given by the conjecture). The following weakening of this (suggested by Berge) is still open. Conjecture There exists a fixed integer $ k $ such that the edge set of every 3-graph can be written as a union of $ k $ perfect matchings. Another consequence of the Berge-Fulkerson conjecture would be that every 3-graph has 3 perfect matchings with empty intersection (take any 3 of the 6 perfect matchings given by the conjecture). The following weakening of this (also suggested by Berge) is still open. Conjecture There exists a fixed integer $ k $ such that every 3-graph has a list of $ k $ perfect matchings with empty intersection.",
+    "references_text": "- [E] J. Edmonds, Maximum matching and a polyhedron with 0,1-vertices, J. Res. Nat. Bur Stand B, Math & Math Phys. 69B (1965), 125-130.\n- [F] D.R. Fulkerson, Blocking and anti-blocking pairs of polyhedra, Math. Programming 1 (1971) 168-194. MathSciNet\n- [KKN] T. Kaiser, D. Kral, and S. Norine, Unions of perfect matchings in cubic graphs\n- [L] L. Lovasz, Matching structure and the matching lattice, J. Combin. Theory Ser. B 43 (1987), 187-222. MathSciNet\n- [R] R. Rizzi, Indecomposable r-graphs and some other counterexamples, J. Graph Theory 32 (1999), 1-15. MathSciNet\n- [S79a] P.D. Seymour, \"Some unsolved problems on one-factorizations of graphs\", Graph theory and Related Topics, J.A. Bondy and U.S.R. Murty (Editors), Academic, New York (1979), 367-368.\n- [S79b] P.D. Seymour, On multi-colourings of cubic graphs, and conjectures of Fulkerson and Tutte, Proc. London Math Soc. 38 (1979), 423-460. MathSciNet"
+  },
+  "started": "2026-09-16T19:31:25Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

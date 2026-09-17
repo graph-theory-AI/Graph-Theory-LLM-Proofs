@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove a combinatorial MWIS algorithm for graphs with a supplied parity-consistent boundary and logarithmic-size remaining components, but not for all perfect graphs.",
+  "would_publish": false,
+  "caveats": "The boundary must be supplied; no novelty or improvement over the cited partial results is claimed.",
+  "id": "2003.05185__00",
+  "model": "gpt-6-astra",
+  "usd": 0.904625,
+  "eur": 0.937006,
+  "elapsed_s": 941.5,
+  "status": "completed",
+  "response_id": "resp_0613bbeb8516024e006aaaf61819c887d2b0cf5797ab19c3dd",
+  "when": "2026-09-16T20:19:17Z"
+}

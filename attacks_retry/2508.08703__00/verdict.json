@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every 6-regular (4,1)-graph has at least 16 vertices, and an order-16 example would necessarily have independence number 5.",
+  "would_publish": false,
+  "caveats": "Existence at order 16 or larger remains unresolved; the novelty of these bounds relative to the full source paper has not been checked.",
+  "id": "2508.08703__00",
+  "model": "gpt-6-astra",
+  "usd": 1.11738,
+  "eur": 1.157376,
+  "elapsed_s": 1185.8,
+  "status": "completed",
+  "response_id": "resp_0a96f8d8163638c9006aab0ddd919087d2865346964496894d",
+  "when": "2026-09-16T22:04:47Z"
+}

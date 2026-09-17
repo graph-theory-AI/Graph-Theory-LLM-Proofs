@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "imbalance_conjecture",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Imbalance conjecture",
+    "paper": "http://www.openproblemgarden.org/op/imbalance_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/imbalance_conjecture/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "imbalance_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/imbalance_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/imbalance_conjecture",
+    "catalog_title": "Imbalance conjecture",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-09-24",
+    "authors": "Kozerenko, Sergiy",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture Suppose that for all edges $ e\\in E(G) $ we have $ imb(e)>0 $ . Then $ M_{G} $ is graphic.",
+    "context_text": "Consider simple undirected graph $ G $ and let $ e=uv\\in E(G) $ . The imbalance of the edge $ e $ defined as $ imb(e)=|deg(u)-deg(v)| $ . The multiset of all edge imbalances of $ G $ is denoted by $ M_{G} $ . Note, that conjecture is verified for all such graphs with $ \\leq 9 $ vertices.",
+    "references_text": "- *Graphs with graphic imbalance sequences"
+  },
+  "started": "2026-09-16T17:46:38Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

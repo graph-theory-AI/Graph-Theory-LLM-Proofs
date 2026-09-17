@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "Fixed-size CRT-generic prime blocks, together with clustered residue classes for their multiples and a tail decomposition, give m(n) ~ (4/3)n^(3/2)/log n.",
+  "would_publish": true,
+  "caveats": "The argument is qualitative and does not extract a useful rate of convergence.",
+  "id": "2603.02786__00",
+  "model": "gpt-6-astra",
+  "usd": 1.29622,
+  "eur": 1.342618,
+  "elapsed_s": 1246.1,
+  "status": "completed",
+  "response_id": "resp_08d0c76eb6066ae9006aab04e3d70887d28766da6c98521e2f",
+  "when": "2026-09-16T21:27:29Z"
+}

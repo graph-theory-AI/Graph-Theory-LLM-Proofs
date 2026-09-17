@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A signed-minor argument establishes Hamiltonian extendability for matchings whose alternating cycles are all 4-cycles, including all uniquely restricted matchings.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved, and novelty of these special cases is not claimed.",
+  "id": "matchings_extends_to_hamilton_cycles_in_hypercubes",
+  "model": "gpt-6-astra",
+  "usd": 0.70102,
+  "eur": 0.726113,
+  "elapsed_s": 736.7,
+  "status": "completed",
+  "response_id": "resp_0cf31369e7cfebd1006aaac6f1ba3087d2bdd9915f2b5f0c3a",
+  "when": "2026-09-16T16:54:40Z"
+}

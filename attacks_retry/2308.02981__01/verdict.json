@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove logarithmic stability under point deletion and slicewise polynomial-time exact computation at fixed deletion distance from separability, but not an FPT algorithm in separable index.",
+  "would_publish": false,
+  "caveats": "The slicewise exact algorithms are nonuniform in deletion distance; no general constant-factor approximation or hardness classification is obtained, and novelty has not been checked against the full paper.",
+  "id": "2308.02981__01",
+  "model": "gpt-6-astra",
+  "usd": 1.309875,
+  "eur": 1.356762,
+  "elapsed_s": 1390.0,
+  "status": "completed",
+  "response_id": "resp_00b95b761c983ab1006aab30111f0887d2b4e8cf53203bc982",
+  "when": "2026-09-17T00:34:06Z"
+}

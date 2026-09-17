@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured bound holds for line graphs of simple graphs and for ordinary Mycielski graphs, using only cycles of lengths k and 2k.",
+  "would_publish": false,
+  "caveats": "Intended range k\u22653; these are structural special cases, with no novelty claim, and the general case is not resolved.",
+  "id": "cycles_in_graphs_of_large_chromatic_number",
+  "model": "gpt-6-astra",
+  "usd": 1.1221,
+  "eur": 1.162265,
+  "elapsed_s": 1228.5,
+  "status": "completed",
+  "response_id": "resp_0f5a7074ca5b79a6006aab17e20a3487d28d49fdb399970331",
+  "when": "2026-09-16T22:48:14Z"
+}

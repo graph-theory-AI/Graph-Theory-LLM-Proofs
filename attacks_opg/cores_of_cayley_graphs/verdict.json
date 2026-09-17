@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "For M = Z/4Z, the Cayley graph C4 has core K2, which cannot be a Cayley graph on any direct power of M.",
+  "would_publish": false,
+  "caveats": "This disproves the literal fixed-base direct-power formulation, not the cubelike conjecture or the version allowing a different abelian group.",
+  "id": "cores_of_cayley_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.13401,
+  "eur": 0.138807,
+  "elapsed_s": 85.6,
+  "status": "completed",
+  "response_id": "resp_0470496c7aea816c006aaad02aca4487d2a4f67d04a7767cd0",
+  "when": "2026-09-16T17:23:12Z"
+}

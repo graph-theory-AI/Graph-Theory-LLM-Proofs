@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured bound holds when alpha(G) <= 2 and each nonadjacent pair is contained in at most three induced 5-cycles.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved; no novelty claim is made for the restricted result, and no computational checks are asserted.",
+  "id": "1907.12999__00",
+  "model": "gpt-6-astra",
+  "usd": 1.468855,
+  "eur": 1.521432,
+  "elapsed_s": 1085.8,
+  "status": "completed",
+  "response_id": "resp_0c4fe3667bddd917006aaafb7b10a887d2949fbec6bb810b18",
+  "when": "2026-09-16T20:44:40Z"
+}

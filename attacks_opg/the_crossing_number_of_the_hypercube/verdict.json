@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The normalized crossing numbers converge and admit an explicit finite-dimensional upper envelope, but their limit is not determined here.",
+  "would_publish": false,
+  "caveats": "No numerical improvement to the quoted asymptotic interval; the convergence observation may be standard, and no novelty claim is made.",
+  "id": "the_crossing_number_of_the_hypercube",
+  "model": "gpt-6-astra",
+  "usd": 0.786075,
+  "eur": 0.814212,
+  "elapsed_s": 617.9,
+  "status": "completed",
+  "response_id": "resp_0e6bfdec6199b154006aaade37a39087d2a5eb5a2418cec4bf",
+  "when": "2026-09-16T18:32:01Z"
+}

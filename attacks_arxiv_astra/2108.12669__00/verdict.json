@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An exponential lower bound is proved for connected triangle-free planar graphs admitting an embedding with at most two odd faces.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not proved; novelty of this special case has not been checked.",
+  "id": "2108.12669__00",
+  "model": "gpt-6-astra",
+  "usd": 1.395715,
+  "eur": 1.445674,
+  "elapsed_s": 1276.0,
+  "status": "completed",
+  "response_id": "resp_0af699c87b58e536006aaaf638eb8887d292c5729ee95b7781",
+  "when": "2026-09-16T20:25:24Z"
+}

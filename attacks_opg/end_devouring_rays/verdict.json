@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The supplied catalog records the resolution, and a minimum-distance prefix construction gives a self-contained proof.",
+  "would_publish": false,
+  "caveats": "No novelty is claimed; bibliographic attribution follows the supplied catalog.",
+  "id": "end_devouring_rays",
+  "model": "gpt-6-astra",
+  "usd": 1.61045,
+  "eur": 1.668096,
+  "elapsed_s": 1016.9,
+  "status": "completed",
+  "response_id": "resp_0685027c6f8c036a006aaac066d09887d2850c137255030e29",
+  "when": "2026-09-16T16:31:26Z"
+}

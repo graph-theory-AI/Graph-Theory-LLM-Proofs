@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 10,
+    "score": 4.85,
+    "tier": 5,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2009.13319__02",
+    "title_md": "[Conjecture 4.4](https://arxiv.org/abs/2009.13319)",
+    "paper": "Extension of Gyarfas-Sumner conjecture to digraphs",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2009.13319__02/"
+  },
+  "dossier_meta": {
+    "id": "2009.13319__02",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2009.13319__02/",
+    "arxiv_id": "2009.13319",
+    "tier": 5,
+    "score": 4.85,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Extension of Gyarfas-Sumner conjecture to digraphs",
+    "catalog_title": "Conjecture 4.4",
+    "statement_text": "Given an oriented forest $F$ and for every integer $k$, $\\{\\overleftrightarrow{K_2}, K_k, F\\}$ is heroic.",
+    "context_text": "This conjecture is equivalent to the special case of Conjecture 4.2 where $H = TT_k$ is a transitive tournament, since every tournament on at least $2k$ vertices contains $TT_k$ as an induced subdigraph. It generalises the heroic-set result for $\\{\\overleftrightarrow{K_2}, K_k, P^+(3)\\}$ proved in Theorem 4.3, where $K_k$ denotes the digraph on $k$ vertices with no arc."
+  },
+  "started": "2026-09-16T20:24:29Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

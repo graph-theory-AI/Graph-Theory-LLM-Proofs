@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Partition of a cubic 3-connected graphs into paths of length 2.",
+    "paper": "http://www.openproblemgarden.org/op/partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Paths"
+  },
+  "dossier_meta": {
+    "id": "partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2",
+    "catalog_title": "Partition of a cubic 3-connected graphs into paths of length 2.",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-04",
+    "authors": "Kelmans, Alexander K.",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Paths",
+    "statement_text": "Problem Does every $ 3 $ -connected cubic graph on $ 3k $ vertices admit a partition into $ k $ paths of length $ 2 $ ?",
+    "context_text": "More generally, the following question is posed. Problem Does every $ 3 $ -connected cubic graph on at least $ 3k $ vertices contain $ k $ pairwise vertex-disjoint paths of length $ 2 $ ? In [K1], Kelmans gave a construction that provided infi\fnitely many 2-connected graphs for which the above statement is false.",
+    "references_text": "- [K1] Alexander K. Kelmans, Packing 3-vertex paths in 2-connected graphs\n- *[K2] Alexander K. Kelmans, On --Packing in 3--connected Graphs, RUTCOR Research Report 23--2005, Rutgers University. See also Packing 3-vertex Paths In Cubic 3-connected Graphs"
+  },
+  "started": "2026-09-16T18:07:50Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

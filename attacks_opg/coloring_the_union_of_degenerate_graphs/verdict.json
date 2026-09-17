@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for graphs on at most 11 vertices, and every smallest counterexample must avoid two explicit low-degree clique configurations.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not resolved; novelty of these reductions and the small-order bound has not been checked.",
+  "id": "coloring_the_union_of_degenerate_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.497905,
+  "eur": 1.551522,
+  "elapsed_s": 1195.4,
+  "status": "completed",
+  "response_id": "resp_0b0a333abd48b2f3006aaacef4b2a487d292300d7907453416",
+  "when": "2026-09-16T17:36:31Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A self-contained construction gives a tower-height lower bound for p=3 throughout \u03b1\u2074\u2264\u03b2\u2264\u03b1\u00b3/2, including the advertised half-random specialization.",
+  "would_publish": false,
+  "caveats": "The other odd primes and the full parameter-by-parameter extension of Theorem 2 are not established here; novelty relative to the source is not claimed.",
+  "id": "1708.08486__01",
+  "model": "gpt-6-astra",
+  "usd": 1.53889,
+  "eur": 1.593974,
+  "elapsed_s": 1179.0,
+  "status": "completed",
+  "response_id": "resp_0a8d19757373816d006aaafff7df1087d2a7b5f1f8c5567c5b",
+  "when": "2026-09-16T21:05:21Z"
+}

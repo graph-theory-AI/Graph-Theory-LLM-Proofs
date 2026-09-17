@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An explicit connected planar family requires c(H) = Omega(|H| log |H|), and this order is tight for disjoint unions of triangles, but polynomial dependence remains unresolved.",
+  "would_publish": false,
+  "caveats": "This rules out linear dependence, not polynomial dependence; no novelty claim is made for the partial bounds.",
+  "id": "1807.04969__00",
+  "model": "gpt-6-astra",
+  "usd": 0.998825,
+  "eur": 1.034578,
+  "elapsed_s": 787.4,
+  "status": "completed",
+  "response_id": "resp_092dc87589d677e8006aab82c77a8087d2bd893823a7ad5b90",
+  "when": "2026-09-17T06:16:58Z"
+}

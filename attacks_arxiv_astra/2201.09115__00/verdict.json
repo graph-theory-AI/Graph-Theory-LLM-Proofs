@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove 7-choosability when at most three vertices have degree at least eight in the K_{4,4}-minor-free case, or at most four in the K_{3,5}-minor-free case.",
+  "would_publish": false,
+  "caveats": "Neither unrestricted question is resolved; novelty of these restricted results has not been checked.",
+  "id": "2201.09115__00",
+  "model": "gpt-6-astra",
+  "usd": 1.373075,
+  "eur": 1.422224,
+  "elapsed_s": 1471.1,
+  "status": "completed",
+  "response_id": "resp_0690981e723f0d58006aaaf294f60487d2ab63d2e57f546f23",
+  "when": "2026-09-16T20:13:06Z"
+}

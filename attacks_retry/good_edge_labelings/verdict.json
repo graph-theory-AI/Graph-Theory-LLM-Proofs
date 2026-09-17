@@ -1,0 +1,15 @@
+{
+  "verdict": "unknown",
+  "confidence": "low",
+  "one_line": "",
+  "would_publish": false,
+  "caveats": "no JSON block parsed",
+  "id": "good_edge_labelings",
+  "model": "gpt-6-astra",
+  "usd": 0.0,
+  "eur": 0.0,
+  "elapsed_s": 481.8,
+  "status": "failed",
+  "response_id": "resp_019b748b1db682bd006aab1e6eb86887d29ff670756ee242d9",
+  "when": "2026-09-16T23:03:44Z"
+}

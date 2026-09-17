@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove majority 3-colourability when deleting at most six vertices leaves a symmetric digraph, and when the graph of unreciprocated arcs is 3-colourable.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not resolved; novelty and optimality of these sufficient conditions are not claimed.",
+  "id": "1608.03040__00",
+  "model": "gpt-6-astra",
+  "usd": 1.315495,
+  "eur": 1.362583,
+  "elapsed_s": 1235.4,
+  "status": "completed",
+  "response_id": "resp_04bd8d3c8f41e3ea006aaaf8cae3c487d284e8c8330d72e878",
+  "when": "2026-09-16T20:35:42Z"
+}

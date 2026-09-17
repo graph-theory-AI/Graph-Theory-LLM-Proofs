@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 42,
+    "score": 4.1,
+    "tier": 4,
+    "lean": "prove",
+    "status": "open",
+    "id": "2206.13635__00",
+    "title_md": "[Conjecture 2](https://arxiv.org/abs/2206.13635)",
+    "paper": "Coloring hypergraphs with excluded minors",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2206.13635__00/"
+  },
+  "dossier_meta": {
+    "id": "2206.13635__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2206.13635__00/",
+    "arxiv_id": "2206.13635",
+    "tier": 4,
+    "score": 4.1,
+    "lean": "prove",
+    "status": "open",
+    "paper": "Coloring hypergraphs with excluded minors",
+    "catalog_title": "Conjecture 2",
+    "statement_text": "For every integer $t\\geq 2$ we have $h(t)=\\left\\lceil\\frac{3}{2}(t-1)\\right\\rceil$. In other words, if a hypergraph $H$ does not contain $K_{t}$ as a minor, then $\\chi(H)\\leq\\left\\lceil\\frac{3}{2}(t-1)\\right\\rceil$.",
+    "context_text": "The function $h(t)$ is the smallest integer such that every $K_t$-minor-free hypergraph is $h(t)$-colorable. The paper proves the lower bound $h(t)\\geq\\left\\lceil\\frac{3}{2}(t-1)\\right\\rceil$ by an explicit construction, and conjectures this lower bound is tight. The conjecture remains open even for $t=3$, where the best known upper bound is $4$."
+  },
+  "started": "2026-09-16T19:53:08Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

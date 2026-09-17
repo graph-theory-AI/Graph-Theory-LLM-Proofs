@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Explicit constructions verify the conjecture for every m\u226420, also for m=30,32, and throughout a general near-diagonal range, but do not settle arbitrary m.",
+  "would_publish": false,
+  "caveats": "I do not claim these special cases are new; their novelty relative to the older papers has not been checked.",
+  "id": "exact_colorings_of_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.6032,
+  "eur": 1.660586,
+  "elapsed_s": 1211.8,
+  "status": "completed",
+  "response_id": "resp_0d042387c5e8d9c2006aaad3f2d2b087d29445732c7fbb123a",
+  "when": "2026-09-16T17:58:06Z"
+}

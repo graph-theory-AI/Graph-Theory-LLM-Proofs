@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A constructive Cartesian-product closure theorem gives Hamiltonian extensions for an infinite family of noncompletable matchings using every coordinate direction.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved, and novelty of the closure theorem has not been checked.",
+  "id": "matchings_extends_to_hamilton_cycles_in_hypercubes",
+  "model": "gpt-6-astra",
+  "usd": 1.44408,
+  "eur": 1.495771,
+  "elapsed_s": 1348.8,
+  "status": "completed",
+  "response_id": "resp_0a3ca4071fc7f1f8006aab23b8c44887d290c0987c56375dd0",
+  "when": "2026-09-16T23:40:45Z"
+}

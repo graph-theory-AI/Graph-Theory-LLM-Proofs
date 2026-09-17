@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 44,
+    "score": 4.1,
+    "tier": 4,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1804.01060__00",
+    "title_md": "[Conjecture 2.4](https://arxiv.org/abs/1804.01060)",
+    "paper": "Pure pairs. II. Excluding all subdivisions of a graph",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1804.01060__00/"
+  },
+  "dossier_meta": {
+    "id": "1804.01060__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1804.01060__00/",
+    "arxiv_id": "1804.01060",
+    "tier": 4,
+    "score": 4.1,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Pure pairs. II. Excluding all subdivisions of a graph",
+    "catalog_title": "Conjecture 2.4",
+    "statement_text": "Let $H$ be a graph and let $P$ be a forest of $H$. Then every coherent ideal contains a $P$-filleting of $H$.",
+    "context_text": "The paper's main theorem (2.3) proves the statement when $P$ is a path of $H$. The authors propose this strengthening, noting it would be best possible since the conclusion fails when $P$ contains a cycle of $H$ (as coherent ideals can have arbitrarily large girth). If true, it would imply the main theorem of [8] (strong Erd\u0151s-Hajnal property for all forests) in the same way Theorem 2.3 implies the main theorem of [18]."
+  },
+  "started": "2026-09-16T19:48:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

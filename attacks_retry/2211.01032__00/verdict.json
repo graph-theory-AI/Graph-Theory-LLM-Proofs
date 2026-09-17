@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "Under the source's normalized face count, p=1/(2n) gives a uniformly bounded expected number of faces, whereas ln(pn^2) tends to infinity.",
+  "would_publish": false,
+  "caveats": "This refutes the unrestricted p(n) statement supplied; it does not settle a version restricted to the supercritical or dense regime.",
+  "id": "2211.01032__00",
+  "model": "gpt-6-astra",
+  "usd": 0.212845,
+  "eur": 0.220464,
+  "elapsed_s": 145.8,
+  "status": "completed",
+  "response_id": "resp_0c927020672ac235006aaafffb0f3c87d28ecd5c62b00bce46",
+  "when": "2026-09-16T20:48:08Z"
+}

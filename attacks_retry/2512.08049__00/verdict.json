@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An explicit eight-partite construction and a quantitative two-moment obstruction give 21274/25281 <= rho_hat <= 10/11 - 10^(-42).",
+  "would_publish": false,
+  "caveats": "The exact constant is not determined; the numerical upper improvement is tiny, and literature novelty has not been independently checked.",
+  "id": "2512.08049__00",
+  "model": "gpt-6-astra",
+  "usd": 1.367995,
+  "eur": 1.416962,
+  "elapsed_s": 1627.4,
+  "status": "completed",
+  "response_id": "resp_08125a6b4e94a40e006aab07821dcc87d2943525a0134aa99b",
+  "when": "2026-09-16T21:45:01Z"
+}

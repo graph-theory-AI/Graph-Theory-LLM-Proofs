@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An exact K5-padding operation realizes every four-term sequence (a,b,c,0) with a >= b+c, in both surface categories, and yields further arbitrary-length families.",
+  "would_publish": false,
+  "caveats": "Uses the established three-term results quoted in the question; the general conjecture remains unresolved here, and no novelty claim is made.",
+  "id": "crossing_sequences",
+  "model": "gpt-6-astra",
+  "usd": 1.044555,
+  "eur": 1.081945,
+  "elapsed_s": 1109.7,
+  "status": "completed",
+  "response_id": "resp_0ba782d6b6182956006aaad053579087d28c2f00492a20d53f",
+  "when": "2026-09-16T17:40:56Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For fixed k and c, I prove polynomial-time solvability on graphs with no induced cycle longer than c, including chordal bipartite graphs.",
+  "would_publish": false,
+  "caveats": "The unrestricted k>=3 question remains unresolved here; the novelty of this bounded-chordality special case has not been checked.",
+  "id": "2005.12861__00",
+  "model": "gpt-6-astra",
+  "usd": 1.10167,
+  "eur": 1.141104,
+  "elapsed_s": 879.1,
+  "status": "completed",
+  "response_id": "resp_03df0232e091aadc006aab773ba36c87d2a4c8eb3e5532c281",
+  "when": "2026-09-17T05:29:14Z"
+}

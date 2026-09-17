@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for the substitution-and-clique-sum closure of triangle-free graphs, and no polynomial degree in \u03ba independent of \u2113 can suffice in general.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved; the upper bound uses the quoted triangle-free theorem, and no novelty is claimed for these partial results.",
+  "id": "1705.04609__00",
+  "model": "gpt-6-astra",
+  "usd": 0.8158,
+  "eur": 0.845001,
+  "elapsed_s": 678.0,
+  "status": "completed",
+  "response_id": "resp_006ebbe2c88bf20b006aaafb35648c87d28c9e7ab52f63e4c8",
+  "when": "2026-09-16T20:36:43Z"
+}

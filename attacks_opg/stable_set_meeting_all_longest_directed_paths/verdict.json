@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for digraphs made acyclic by deleting one vertex, even for maximum-weight paths with arbitrary positive vertex weights.",
+  "would_publish": false,
+  "caveats": "The general case is not resolved; novelty of this special case has not been verified.",
+  "id": "stable_set_meeting_all_longest_directed_paths",
+  "model": "gpt-6-astra",
+  "usd": 0.851075,
+  "eur": 0.881539,
+  "elapsed_s": 803.1,
+  "status": "completed",
+  "response_id": "resp_0144e7db51580cd2006aaadc6d868c87d28a8a7478065b9e43",
+  "when": "2026-09-16T18:27:28Z"
+}

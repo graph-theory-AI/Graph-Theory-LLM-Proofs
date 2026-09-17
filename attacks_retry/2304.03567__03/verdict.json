@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An explicit gap reduction shows that RFCPP has no polynomial-time o(log |V|)-approximation unless P=NP, and hence rules out constant-factor approximation under that assumption.",
+  "would_publish": true,
+  "caveats": "This is a complexity-theoretic negative answer, not a proof of P\u2260NP; it uses standard NP-completeness of directed two-linkage, and novelty has not been independently checked.",
+  "id": "2304.03567__03",
+  "model": "gpt-6-astra",
+  "usd": 1.743475,
+  "eur": 1.805882,
+  "elapsed_s": 1884.3,
+  "status": "completed",
+  "response_id": "resp_0d6352ba0c8419f9006aab5c4da9d887d29de9baf26eb095e2",
+  "when": "2026-09-17T03:51:05Z"
+}

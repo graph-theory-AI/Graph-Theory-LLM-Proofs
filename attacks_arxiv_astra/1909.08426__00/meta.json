@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 53,
+    "score": 4.05,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1909.08426__00",
+    "title_md": "[Classical MIS Dichotomy Conjecture](https://arxiv.org/abs/1909.08426)",
+    "paper": "When Maximum Stable Set can be solved in FPT time",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1909.08426__00/"
+  },
+  "dossier_meta": {
+    "id": "1909.08426__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1909.08426__00/",
+    "arxiv_id": "1909.08426",
+    "tier": 4,
+    "score": 4.05,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "When Maximum Stable Set can be solved in FPT time",
+    "catalog_title": "Classical MIS Dichotomy Conjecture",
+    "statement_text": "For every connected graph $H$, Maximum Independent Set in $H$-free graphs is in $\\mathsf{P}$ if and only if $H \\in \\{P_\\ell\\}_{\\ell} \\cup \\{S_{i,j,k}\\}_{i \\leq j \\leq k}$.",
+    "context_text": "The polynomial-time complexity of MIS in $H$-free graphs has been studied since the early 1980s. Alekseev showed that if $H$ is neither a path nor a subdivided claw then MIS is NP-complete on $H$-free graphs, motivating this conjecture about the full dichotomy. The authors note that an even stronger conjecture is postulated by Lozin [28]."
+  },
+  "started": "2026-09-16T19:48:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

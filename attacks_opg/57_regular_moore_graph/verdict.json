@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Any putative graph forces a primitive, nonsolvable permutation group on 56 labels in its rooted matching model, excluding all constructions whose matching maps lie in a common solvable group.",
+  "would_publish": false,
+  "caveats": "A conditional structural obstruction only; existence remains unresolved, and no novelty claim is made.",
+  "id": "57_regular_moore_graph",
+  "model": "gpt-6-astra",
+  "usd": 0.70889,
+  "eur": 0.734265,
+  "elapsed_s": 584.6,
+  "status": "completed",
+  "response_id": "resp_0b4f51772b0e5f94006aaae0a1e03087d28770729316edfaa9",
+  "when": "2026-09-16T18:41:46Z"
+}

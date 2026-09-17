@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Closure holds when one summand is an oriented tree with at most one vertex of in-degree at least two; for arbitrary summands, an explicit maximum-in-degree condition also suffices.",
+  "would_publish": false,
+  "caveats": "This does not resolve Conjecture 7; novelty of the partial results below has not been established.",
+  "id": "1610.00876__02",
+  "model": "gpt-6-astra",
+  "usd": 1.14238,
+  "eur": 1.183271,
+  "elapsed_s": 937.5,
+  "status": "completed",
+  "response_id": "resp_04c10279af79ec8c006aaaf5a4c70487d28953933591857b31",
+  "when": "2026-09-16T20:17:18Z"
+}

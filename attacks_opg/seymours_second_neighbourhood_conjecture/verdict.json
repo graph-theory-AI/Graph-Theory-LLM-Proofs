@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A completion argument proves the conjecture for a concrete forbidden-missing-subgraph class and gives an additive bound controlled by a vertex cover of the unsafe missing pairs.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not resolved, and novelty of these structural partial results is not claimed.",
+  "id": "seymours_second_neighbourhood_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.463235,
+  "eur": 0.479816,
+  "elapsed_s": 504.8,
+  "status": "completed",
+  "response_id": "resp_0c0772fdf273da7e006aaac97eca2887d2aff8ad90982f776c",
+  "when": "2026-09-16T17:01:43Z"
+}

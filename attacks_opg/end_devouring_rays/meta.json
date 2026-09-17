@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "end_devouring_rays",
+    "tier": 1,
+    "score": 1.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "End-Devouring Rays",
+    "paper": "http://www.openproblemgarden.org/op/end_devouring_rays",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/end_devouring_rays/",
+    "importance": "Low",
+    "undergrad": true,
+    "subject": "Infinite Graphs"
+  },
+  "dossier_meta": {
+    "id": "end_devouring_rays",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/end_devouring_rays/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 1,
+    "score": 1.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/end_devouring_rays",
+    "catalog_title": "End-Devouring Rays",
+    "importance": "Low \u272d",
+    "posted": "2008-02-03",
+    "authors": "Georgakopoulos, Agelos",
+    "subject": "Graph Theory \u00bb Infinite Graphs",
+    "statement_text": "Problem Let $ G $ be a graph, $ \\omega $ a countable end of $ G $ , and $ K $ an infinite set of pairwise disjoint $ \\omega $ -rays in $ G $ . Prove that there is a set $ K' $ of pairwise disjoint $ \\omega $ -rays that devours $ \\omega $ such that the set of starting vertices of rays in $ K' $ equals the set of starting vertices of rays in $ K $ .",
+    "context_text": "We say that a set of rays $ K $ devours the end $ \\omega $ if every ray in $ \\omega $ meets some ray in $ K $ . An end is countable if there is a countable set of rays devouring it. If $ K $ is a finite set of rays then it is not hard to prove (see [G]) that this problem has a positive answer: Theorem For every graph $ G $ and every countable end $ \\omega $ of $ G $ , if $ G $ has a set $ K $ of $ k\\in \\mathcal N $ pairwise disjoint $ \\omega $ -rays, then it also has a set $ K' $ of $ k $ pairwise disjoint $ \\omega $ -rays that devours $ \\omega $ . Moreover, $ K' $ can be chosen so that its rays have the same starting vertices as the rays in~ $ K $ .",
+    "references_text": "- *[G] A. Georgakopoulos, Infinite Hamilton Cycles in Squares of Locally Finite Graphs, Preprint."
+  },
+  "started": "2026-09-16T16:14:29Z",
+  "model": "gpt-6-astra",
+  "service_tier": "default",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

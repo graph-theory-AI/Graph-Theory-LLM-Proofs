@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I give constructive strong-immersion proofs for clique blow-ups of C5 and all their iterated Mycielski graphs.",
+  "would_publish": false,
+  "caveats": "This does not resolve arbitrary graphs; novelty of these special-case and closure results is not claimed.",
+  "id": "coloring_and_immersion",
+  "model": "gpt-6-astra",
+  "usd": 1.02205,
+  "eur": 1.058634,
+  "elapsed_s": 862.9,
+  "status": "completed",
+  "response_id": "resp_069e1f007e5a422d006aaac7e577c887d29bd4731d4a2ebb2b",
+  "when": "2026-09-16T17:00:52Z"
+}

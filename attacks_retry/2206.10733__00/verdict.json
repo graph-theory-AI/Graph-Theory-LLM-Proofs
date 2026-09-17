@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A five-cycle construction gives an asymptotically sharp 5ell^2/4 threshold for eventual equality in the degree bound, and new exact transition values complete the ell=4 case.",
+  "would_publish": false,
+  "caveats": "The general transition window remains unresolved; the happy-triple definition is taken from the supplied attempt, and novelty has not been independently checked.",
+  "id": "2206.10733__00",
+  "model": "gpt-6-astra",
+  "usd": 1.31824,
+  "eur": 1.365426,
+  "elapsed_s": 1108.7,
+  "status": "completed",
+  "response_id": "resp_04907ca98264abd7006aab40d392b487d2956f6e49726a0829",
+  "when": "2026-09-17T01:40:56Z"
+}

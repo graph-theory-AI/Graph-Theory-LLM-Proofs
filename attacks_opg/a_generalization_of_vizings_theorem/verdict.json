@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "A probabilistic construction gives a simple 100-uniform hypergraph with maximum 99-codegree at most 200 that requires at least 451 colors, contradicting the proposed bound of 299.",
+  "would_publish": true,
+  "caveats": "Nonconstructive counterexamples of very large order; no claim of literature priority or resolution of the small-uniformity cases.",
+  "id": "a_generalization_of_vizings_theorem",
+  "model": "gpt-6-astra",
+  "usd": 1.08968,
+  "eur": 1.128685,
+  "elapsed_s": 938.2,
+  "status": "completed",
+  "response_id": "resp_0507bf114b998ee8006aaacb0f2cdc87d2af567c122e817586",
+  "when": "2026-09-16T17:15:37Z"
+}

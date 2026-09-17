@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A support\u2013parity argument gives sharp rich-edge bounds and characterizes the 15-rich-edge case, but does not establish existence in general.",
+  "would_publish": false,
+  "caveats": "These are self-contained structural results, not a solution or an improvement of the abnormal-edge bound; novelty is not claimed.",
+  "id": "petersen_coloring_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.9846,
+  "eur": 1.019844,
+  "elapsed_s": 879.8,
+  "status": "completed",
+  "response_id": "resp_098bcd98787f9b20006aaae9e8143087d2bea2b9923bdb8007",
+  "when": "2026-09-16T19:26:15Z"
+}

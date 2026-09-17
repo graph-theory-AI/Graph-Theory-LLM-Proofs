@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A substitution-based attack gives a sharp polynomial bound for graphs assembled from templates of at most five vertices and explicit upper bounds on possible exponents for prime forbidden graphs.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not resolved; no new unrestricted forbidden-graph case or novelty for these restricted results is claimed.",
+  "id": "the_erdos_hajnal_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.82318,
+  "eur": 0.852646,
+  "elapsed_s": 676.4,
+  "status": "completed",
+  "response_id": "resp_082fba74648a6624006aaaed2f4ed487d285cb2d05e0043bda",
+  "when": "2026-09-16T19:36:51Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove obs(G) <= 1 + binom(b,2) - e(G[B]), where B is the set of b vertices of degree at least three, including a one-obstacle theorem when B is a clique.",
+  "would_publish": false,
+  "caveats": "The universal planar bound remains unresolved here; novelty is not claimed, and the supplied computer-assisted lower bound is not independently reverified.",
+  "id": "obstacle_number_of_planar_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.57237,
+  "eur": 1.628653,
+  "elapsed_s": 1592.6,
+  "status": "completed",
+  "response_id": "resp_00c0f241f65b0894006aab03bdb0a087d2ae063ba10a0721bd",
+  "when": "2026-09-16T21:28:22Z"
+}

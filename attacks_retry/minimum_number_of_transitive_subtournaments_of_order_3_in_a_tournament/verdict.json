@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An explicit construction proves the conjectured bound for every uniform blow-up of the regular cyclic tournament on 3^r vertices, and for its arbitrary one-vertex extensions when the part size is odd.",
+  "would_publish": false,
+  "caveats": "The general conjecture remains unresolved; no universal asymptotic improvement is obtained, and novelty of the special-case constructions is unchecked.",
+  "id": "minimum_number_of_transitive_subtournaments_of_order_3_in_a_tournament",
+  "model": "gpt-6-astra",
+  "usd": 1.626165,
+  "eur": 1.684373,
+  "elapsed_s": 1607.1,
+  "status": "completed",
+  "response_id": "resp_0c63dab864875916006aab24c9c19c87d2a71bcd04c78c758c",
+  "when": "2026-09-16T23:49:36Z"
+}

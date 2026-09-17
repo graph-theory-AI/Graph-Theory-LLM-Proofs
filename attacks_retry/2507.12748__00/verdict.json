@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture remains unresolved, but c must be at least 1, and the coefficient 4/3 holds with an explicit O(n^2) additive term.",
+  "would_publish": false,
+  "caveats": "The additive term is not uniform in n; the supplied Theorem 1.1 is used, and literature novelty has not been checked.",
+  "id": "2507.12748__00",
+  "model": "gpt-6-astra",
+  "usd": 1.299085,
+  "eur": 1.345585,
+  "elapsed_s": 1308.8,
+  "status": "completed",
+  "response_id": "resp_05fc94aaba78de1c006aab061e792887d2a22bcb64f822bfe2",
+  "when": "2026-09-16T21:33:47Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For every fixed-order shift-graph family, I prove the stronger estimate E[chi(G_{1/2})] >= chi(G) - O(log chi(G)), but the general conjecture remains unresolved.",
+  "would_publish": false,
+  "caveats": "The constants depend on the fixed order; novelty of this special-family estimate has not been verified.",
+  "id": "coloring_random_subgraphs",
+  "model": "gpt-6-astra",
+  "usd": 0.84232,
+  "eur": 0.872471,
+  "elapsed_s": 720.8,
+  "status": "completed",
+  "response_id": "resp_04b8dd0628c8a91b006aaaceb9cda087d2963d149168ff0401",
+  "when": "2026-09-16T17:27:38Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Triangle-free graphs are reconstructible, and the random-graph failure probability admits the stronger bound 2^{-3n^2/16+O(n log n)}.",
+  "would_publish": false,
+  "caveats": "The general case n divisible by four remains unresolved; novelty of these partial results has not been verified.",
+  "id": "switching_reconstruction_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.787465,
+  "eur": 1.851447,
+  "elapsed_s": 1743.9,
+  "status": "completed",
+  "response_id": "resp_08e4c00b7586f4d1006aab2a2094f087d2a15b38d47265212e",
+  "when": "2026-09-17T00:14:40Z"
+}

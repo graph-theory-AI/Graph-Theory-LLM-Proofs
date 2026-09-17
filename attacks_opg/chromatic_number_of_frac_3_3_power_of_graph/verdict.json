@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured bound holds for every finite simple graph of maximum degree at least 9, by a self-contained local-lemma argument.",
+  "would_publish": false,
+  "caveats": "Degrees 5\u20138 are not resolved here; the novelty of this threshold and the supplied literature have not been independently verified.",
+  "id": "chromatic_number_of_frac_3_3_power_of_graph",
+  "model": "gpt-6-astra",
+  "usd": 1.2792,
+  "eur": 1.324989,
+  "elapsed_s": 990.4,
+  "status": "completed",
+  "response_id": "resp_0052a1647735878f006aaace493d9487d2ad1c7f30e7fa464a",
+  "when": "2026-09-16T17:30:15Z"
+}

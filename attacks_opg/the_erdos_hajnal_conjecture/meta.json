@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "the_erdos_hajnal_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "The Erd\u00f6s-Hajnal Conjecture",
+    "paper": "http://www.openproblemgarden.org/op/the_erdos_hajnal_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/the_erdos_hajnal_conjecture/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Extremal Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "the_erdos_hajnal_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/the_erdos_hajnal_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/the_erdos_hajnal_conjecture",
+    "catalog_title": "The Erd\u00f6s-Hajnal Conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-03-18",
+    "authors": "Erdos, Paul, Hajnal, Andras",
+    "subject": "Graph Theory \u00bb Extremal Graph Theory",
+    "statement_text": "Conjecture For every fixed graph $ H $ , there exists a constant $ \\delta(H) $ , so that every graph $ G $ without an induced subgraph isomorphic to $ H $ contains either a clique or an independent set of size $ |V(G)|^{\\delta(H)} $ .",
+    "context_text": "There are numerous interesting classes of graphs which are based upon forbidding one or more induced subgraphs. For instance: chordal graphs , split graphs , and claw-free graphs. Numerous other natural classes of graphs have been proved to have such characterizations, most famously perfect graphs , but also line graphs and comparability graphs . All of these classes are very well structured (far from random) and their members all either have large cliques or independent sets. On the flip side of this are random graphs . It is well known that a random graph on $ n $ vertices has both clique and independence number highly concentrated around $ 2 \\log_2 n $ . The Erdos-Hajnal conjecture suggests a fundamental separation between these two worlds in terms of independence/clique sizes. Erd\u00f6s and Hajnal proved that this conjecture is true for the recursive class of graphs $ {\\mathcal C} $ defined as follows. The one vertex graph is in $ {\\mathcal C} $ , and if $ G_1 $ and $ G_2 $ lie in $ {\\mathcal C} $ , then the disjoint union of $ G_1 $ and $ G_2 $ lies in $ {\\mathcal C} $ , as does the graph obtained from the disjoint union by adding an edge between $ v_1 $ and $ v_2 $ for every $ v_1 \\in V(G_1) $ and $ v_2 \\in V(G_2) $ . More generally, Alon, Pach, and Solymosi proved that if $ F $ is a graph with $ V(F) = \\{v_1,v_2,\\ldots,v_n\\} $ for which the Erd\u00f6s-Hajnal conjecture holds, and $ H_1,\\ldots,H_n $ are graphs for which the Erdos-Hajnal conjecture holds, then the graph obtained from $ F $ by blowing up each vertex $ v_i $ with a copy of $ H_i $ (more precisely, starting from the disjoint union of $ H_1,H_2,\\ldots,H_n $ , we add all possible edges between the vertices of $ V(H_i) $ and $ V(H_j) $ if $ ij \\in E(F) $ ) also satisfies the Erdos-Hajnal conjecture. The Erd\u00f6s-Hajnal property is known to hold for a number of small graphs (and using the above result this may be easily bootstrapped). For instance, the conjecture is known to hold when $ H $ is a path of three edges, and recently M. Chudnovsky and S. Safra have announced a proof when $ H $ is a bull (a triangle plus two pendant edges). However, our knowledge here is still quite limited. In particular, Lovasz has suggested the following very special case which remains open. Question Is the Erd\u00f6s-Hajnal conjecture true when $ H \\cong C_5 $ ?",
+    "references_text": "- [APS] N. Alon, J. Pach, and J. Solymosi, Ramsey-type theorems with forbidden subgraphs, Combinatorica 21 (2001), 155-170.\n- [EH] P. Erd\u00f6s and A. Hajnal, Ramsey-type theorems, Discrete Appl. Math. 25 (1989), 37-52 MathSciNet"
+  },
+  "started": "2026-09-16T19:25:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

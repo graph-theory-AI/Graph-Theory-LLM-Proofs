@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "hamiltonian_cycles_in_powers_of_infinite_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Hamiltonian cycles in powers of infinite graphs",
+    "paper": "http://www.openproblemgarden.org/op/hamiltonian_cycles_in_powers_of_infinite_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonian_cycles_in_powers_of_infinite_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Infinite Graphs"
+  },
+  "dossier_meta": {
+    "id": "hamiltonian_cycles_in_powers_of_infinite_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonian_cycles_in_powers_of_infinite_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/hamiltonian_cycles_in_powers_of_infinite_graphs",
+    "catalog_title": "Hamiltonian cycles in powers of infinite graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-07-24",
+    "authors": "Georgakopoulos, Agelos",
+    "subject": "Graph Theory \u00bb Infinite Graphs",
+    "statement_text": "Conjecture \\item If $ G $ is a countable connected graph then its third power is hamiltonian. \\item If $ G $ is a 2-connected countable graph then its square is hamiltonian.",
+    "context_text": "(Reproduced from [M].) Both results are known to be true for finite graphs (the second part is the celebrated result of Fleischner) and also for locally finite graphs [G].",
+    "references_text": "- [G] A. Georgakopoulos, Oberwolfach reports, 2007.\n- [M] Bojan Mohar, Problem of the Month"
+  },
+  "started": "2026-09-16T17:45:41Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For series-parallel hexagonal graphs, the sharp bound chi(G,p) <= floor((9 omega(G,p)+6)/8) holds.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not settled; novelty of this special case is not claimed.",
+  "id": "weighted_colouring_of_hexagonal_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.88233,
+  "eur": 0.913913,
+  "elapsed_s": 813.1,
+  "status": "completed",
+  "response_id": "resp_0cbc4a05af9bb275006aaae016431487d296428bfdd3ec4a00",
+  "when": "2026-09-16T18:43:14Z"
+}

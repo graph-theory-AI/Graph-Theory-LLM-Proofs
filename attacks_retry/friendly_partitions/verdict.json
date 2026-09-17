@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every triangle-free odd-regular graph of degree at least three whose 4-cycles are pairwise edge-disjoint has a friendly partition.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not settled; novelty of this stronger special case is not claimed.",
+  "id": "friendly_partitions",
+  "model": "gpt-6-astra",
+  "usd": 1.10566,
+  "eur": 1.145237,
+  "elapsed_s": 982.4,
+  "status": "completed",
+  "response_id": "resp_0108331dffb42f2f006aab1e47f07c87d29957aa8f86c53126",
+  "when": "2026-09-16T23:11:26Z"
+}

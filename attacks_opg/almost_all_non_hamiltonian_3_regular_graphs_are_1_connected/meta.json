@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "almost_all_non_hamiltonian_3_regular_graphs_are_1_connected",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Almost all non-Hamiltonian 3-regular graphs are 1-connected",
+    "paper": "http://www.openproblemgarden.org/op/almost_all_non_hamiltonian_3_regular_graphs_are_1_connected",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/almost_all_non_hamiltonian_3_regular_graphs_are_1_connected/",
+    "importance": "Medium",
+    "undergrad": true,
+    "subject": "Basic Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "almost_all_non_hamiltonian_3_regular_graphs_are_1_connected",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/almost_all_non_hamiltonian_3_regular_graphs_are_1_connected/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/almost_all_non_hamiltonian_3_regular_graphs_are_1_connected",
+    "catalog_title": "Almost all non-Hamiltonian 3-regular graphs are 1-connected",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-08-23",
+    "authors": "Haythorpe, Michael",
+    "subject": "Graph Theory \u00bb Basic Graph Theory",
+    "statement_text": "Conjecture Denote by $ NH(n) $ the number of non-Hamiltonian 3-regular graphs of size $ 2n $ , and similarly denote by $ NHB(n) $ the number of non-Hamiltonian 3-regular 1-connected graphs of size $ 2n $ . Is it true that $ \\lim\\limits_{n \\rightarrow \\infty} \\displaystyle\\frac{NHB(n)}{NH(n)} = 1 $ ?",
+    "context_text": "A stronger version of this conjecture asks whether it is also the case that $ \\displaystyle\\frac{NHB(n)}{NH(n)} > \\displaystyle\\frac{NHB(k)}{NH(k)} $ for all $ n > k $ . Experimental data was given by Filar et al [FHN] demonstrating that the strong conjecture is satisfied for all $ n \\leq 12 $ , and with sampled data provided for $ n = 20 $ and $ n = 25 $ . No further results have been forthcoming. The experimental data can be viewed at http://dx.doi.org/10.7151/dmgt.1485 Packers And Movers Chandigarh Packers And Movers Hyderabad Packers And Movers Bangalore",
+    "references_text": "- [FHN] Jerzy A Filar, Giang T Nguyen, Michael Haythorpe, \"A conjecture on the prevalence of cubic bridge graphs\", Discussiones Mathematicae Graph Theory 30(1):175--179 (2010)."
+  },
+  "started": "2026-09-16T16:42:24Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

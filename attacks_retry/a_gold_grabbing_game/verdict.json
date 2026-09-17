@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Optimal play is polynomial-time computable for every fixed number k of gold-bearing vertices, using an exact n^{O(k)}-state compression on arbitrary trees.",
+  "would_publish": false,
+  "caveats": "This does not give a polynomial-time algorithm for unrestricted k; novelty and the current literature status of this parameterized result have not been verified.",
+  "id": "a_gold_grabbing_game",
+  "model": "gpt-6-astra",
+  "usd": 1.30029,
+  "eur": 1.346834,
+  "elapsed_s": 1270.4,
+  "status": "completed",
+  "response_id": "resp_015c89204f027996006aab1130efdc87d29ca9aa0c056d3060",
+  "when": "2026-09-16T22:20:22Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "For a uniformly chosen unlabelled polyhedral graph with k edges, \u03b2 converges to 1/2 and \u221ak(\u03b2\u22121/2) converges to a normal law of variance 1/32.",
+  "would_publish": false,
+  "caveats": "Uses the classical exact enumeration of rooted 3-connected planar maps; no claim of novelty or literature priority is made.",
+  "id": "asymptotic_distribution_of_form_of_polyhedra",
+  "model": "gpt-6-astra",
+  "usd": 0.916955,
+  "eur": 0.949777,
+  "elapsed_s": 1196.7,
+  "status": "completed",
+  "response_id": "resp_0c97ea57943f4954006aaace06af4487d29710e5f4eec3634e",
+  "when": "2026-09-16T17:32:35Z"
+}

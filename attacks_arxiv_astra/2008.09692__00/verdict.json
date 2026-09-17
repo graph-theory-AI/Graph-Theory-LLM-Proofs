@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured implication holds, without the excluded-subcontraction hypothesis, for graphs with at most four odd-degree vertices.",
+  "would_publish": false,
+  "caveats": "The general conjecture remains unresolved; novelty of this special case has not been checked.",
+  "id": "2008.09692__00",
+  "model": "gpt-6-astra",
+  "usd": 1.09651,
+  "eur": 1.135759,
+  "elapsed_s": 1080.8,
+  "status": "completed",
+  "response_id": "resp_02bf5ae0cd5ead45006aaaf7c8e6b487d2a210dd5cd59169e5",
+  "when": "2026-09-16T20:28:48Z"
+}

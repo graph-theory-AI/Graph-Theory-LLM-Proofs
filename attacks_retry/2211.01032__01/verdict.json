@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A uniform exponential-moment bound for configuration-model maps proves the conjectured a.a.s. logarithmic bound when np=O(sqrt(log n)).",
+  "would_publish": false,
+  "caveats": "The general density range remains unresolved by this argument; no priority claim is made for the sparse-range consequence.",
+  "id": "2211.01032__01",
+  "model": "gpt-6-astra",
+  "usd": 0.928515,
+  "eur": 0.961751,
+  "elapsed_s": 814.2,
+  "status": "completed",
+  "response_id": "resp_023bb8389a10a738006aaafff8c62887d2b9bb577e8f1270db",
+  "when": "2026-09-16T20:59:16Z"
+}

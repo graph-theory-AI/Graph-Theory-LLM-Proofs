@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I construct optimal P3-packings for every generalized Petersen graph and a larger periodically interleaved class, even after deleting any one outer-cycle edge.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not settled here; no novelty claim is made for this elementary special case.",
+  "id": "partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2",
+  "model": "gpt-6-astra",
+  "usd": 0.848645,
+  "eur": 0.879022,
+  "elapsed_s": 832.1,
+  "status": "completed",
+  "response_id": "resp_0b940cf79a67212a006aaadaf7134c87d29327762da1f92be3",
+  "when": "2026-09-16T18:21:43Z"
+}

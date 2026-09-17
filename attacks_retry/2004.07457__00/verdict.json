@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain sharp fixed-cap exponents, an additive-two window for private palettes, and the exact (2,3) boundary when Delta_A=2.",
+  "would_publish": false,
+  "caveats": "The full characterization is not obtained; the unrestricted factorial-factor gap persists, and literature novelty is not claimed.",
+  "id": "2004.07457__00",
+  "model": "gpt-6-astra",
+  "usd": 1.35593,
+  "eur": 1.404465,
+  "elapsed_s": 1166.7,
+  "status": "completed",
+  "response_id": "resp_02681fce05252e1f006aab3f2d8d4c87d2b8a938aa4e3899d4",
+  "when": "2026-09-17T01:34:52Z"
+}

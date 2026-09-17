@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "unions_of_triangle_free_graphs",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Unions of triangle free graphs",
+    "paper": "http://www.openproblemgarden.org/op/unions_of_triangle_free_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/unions_of_triangle_free_graphs/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Infinite Graphs"
+  },
+  "dossier_meta": {
+    "id": "unions_of_triangle_free_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/unions_of_triangle_free_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/unions_of_triangle_free_graphs",
+    "catalog_title": "Unions of triangle free graphs",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-06-04",
+    "authors": "Erdos, Paul, Hajnal, Andras",
+    "subject": "Graph Theory \u00bb Infinite Graphs",
+    "statement_text": "Problem Does there exist a graph with no subgraph isomorphic to $ K_4 $ which cannot be expressed as a union of $ \\aleph_0 $ triangle free graphs?",
+    "context_text": "Shelah [S] has proved that the existence of such a graph is consistent with ZFC.",
+    "references_text": "- *[EH] P. Erdos and A. Hajnal, On decomposition of graphs, Acta Math. Acad. Sci. Hungar. 18 (1967), 359\u2013377.\n- [S] S. Shelah, Consistency of positive partition theorems for graphs and models, in Set Theory and Applications, Springer Lecture Notes 1401, (Toronto, ON, 1987), 167\u2013193."
+  },
+  "started": "2026-09-16T19:26:38Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

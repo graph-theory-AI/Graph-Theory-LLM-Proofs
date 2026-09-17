@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I determine the optimal affine-linear codes over F7 for block lengths at most 12, but do not determine the unrestricted Shannon capacity of C7.",
+  "would_publish": false,
+  "caveats": "Restricted-family result, not claimed new; it does not improve the general capacity bounds supplied in the question.",
+  "id": "shannon_capacity_of_the_seven_cycle",
+  "model": "gpt-6-astra",
+  "usd": 0.79481,
+  "eur": 0.82326,
+  "elapsed_s": 683.0,
+  "status": "completed",
+  "response_id": "resp_00182e1c7941f30e006aaaeaf5bff887d2a32c11e7718c8e21",
+  "when": "2026-09-16T19:27:28Z"
+}

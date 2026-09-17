@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A truncated-tail inequality for edge imbalances implies every Erd\u0151s\u2013Gallai inequality and proves the conjecture.",
+  "would_publish": true,
+  "caveats": "The argument is self-contained apart from the standard Erd\u0151s\u2013Gallai criterion; publication novelty has not been checked.",
+  "id": "imbalance_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.001505,
+  "eur": 1.037354,
+  "elapsed_s": 808.6,
+  "status": "completed",
+  "response_id": "resp_04006836838cbb4d006aaad5fe769087d296eacbd68c36cf41",
+  "when": "2026-09-16T18:00:06Z"
+}

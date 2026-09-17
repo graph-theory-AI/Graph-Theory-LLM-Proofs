@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "pentagon_problem",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Pentagon problem",
+    "paper": "http://www.openproblemgarden.org/op/pentagon_problem",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/pentagon_problem/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Homomorphisms"
+  },
+  "dossier_meta": {
+    "id": "pentagon_problem",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/pentagon_problem/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/pentagon_problem",
+    "catalog_title": "Pentagon problem",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-03-24",
+    "authors": "Nesetril, Jaroslav",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Homomorphisms",
+    "statement_text": "Question Let $ G $ be a 3-regular graph that contains no cycle of length shorter than $ g $ . Is it true that for large enough~ $ g $ there is a homomorphism $ G \\to C_5 $ ?",
+    "context_text": "This question was asked by Nesetril at numerous problem sessions (and also appears as [N]). By Brook's theorem any triangle-free cubic graph is 3-colorable. Does a stronger assumption on girth of the graph imply stronger coloring properties? This problem is motivated by complexity considerations [GHN] and also by exploration of density of the homomorphism order: We write $ G \\prec H $ if there is a homomorphism $ G \\to H $ but there is no homomorphism $ H \\to G $ . It is known that whenever $ G \\prec H $ holds and $ H $ ~is not bipartite, there is a graph~ $ K $ satisfying $ G \\prec K \\prec H $ . A negative solution to the Pentagon problem would have the following density consequence: for each cubic graph~ $ H $ for which~ $ C_5 \\prec H $ holds, there exists a cubic graph~ $ K $ satisfying $ C_5 \\prec K \\prec H $ (see [N]). If we replaced $ C_5 $ in the statement of the problem by a longer odd cycle, we would get a stronger statement. It is known that no such strenghthening is true. This was proved by Kostochka, Nesetril, and Smolikova [KNS] for $ C_{11} $ (hence for all $ C_l $ with $ l \\ge 11 $ ), by Wanless and Wormald [WW] for $ C_9 $ , and recently by Hatami [H] for $ C_7 $ . Each of these results uses probabilistic arguments (random regular graphs), no constructive proof is known. Haggkvist and Hell [HH] proved that for every integer~ $ g $ there is a graph~ $ U_g $ with odd girth at least~ $ g $ (that is, $ U_g $ does not contain odd cycle of length less than~ $ g $ ) such that every cubic graph of odd girth at least~ $ g $ maps homomorphically to~ $ U_g $ . Here, the graph~ $ U_g $ may have large degrees. This leads to a weaker version of the Pentagon problem: Question Is it true that for every $ k $ there exists a cubic graph $ H_k $ of girth~ $ k $ and an integer~ $ g $ such that every cubic graph of girth at least~ $ g $ maps homomorphically to~ $ H_k $ ? A particular question in this direction: does a high-girth cubic graph map to the Petersen graph? As an approach to this, we mention a result of DeVos and Samal [DS]: a cubic graph of girth at least~ $ 17 $ admits a homomorphism to the Clebsch graph. In context of the Pentagon problem, the following reformulation is particularly appealing: If $ G $ ~is a cubic graph of girth at least~ $ 17 $ , then there is a cut-continuous mapping from~ $ G $ to~ $ C_5 $ ; that is, there is a mapping $ f: E(G) \\to E(C_5) $ such that for any cut $ X \\subseteq E(C_5) $ the preimage $ f^{-1}(X) $ is a cut. (Here by cut we mean the edge-set of a spanning bipartite subgraph. A more thorough exposition of cut-continuous mappings can be found in~[DNR].)",
+    "references_text": "- [DNR] Matt DeVos, Jaroslav Nesetril, and Andre Raspaud, On edge-maps whose inverse preverses flows and tensions, Graph Theory in Paris: Proceedings of a Conference in Memory of Claude Berge, Birkh\u00e4user 2006.\n- [DS] Matt DeVos and Robert Samal, High girth cubic graphs map to the Clebsch graph\n- [GHN] Anna Galluccio, Pavol Hell, and Jaroslav Nesetril, The complexity of -colouring of bounded degree graphs, Discrete Math. 222 (2000), no.~1-3, 101--109, MathSciNet\n- [HH] Roland Haggkvist and Pavol Hell, Universality of -mote graphs, European J. Combin. 14 (1993), no.~1, 23--27.\n- [H] Hamed Hatami, Random cubic graphs are not homomorphic to the cycle of size~7, J. Combin. Theory Ser. B 93 (2005), no.~2, 319--325, MathSciNet\n- [KNS] Alexandr~V. Kostochka, Jaroslav Nesetril, and Petra Smolikova, Colorings and homomorphisms of degenerate and bounded degree graphs, Discrete Math. 233 (2001), no.~1-3, 257--276, Fifth Czech-Slovak International Symposium on Combinatorics, Graph Theory, Algorithms and Applications, (Prague, 1998), MathSciNet\n- *[N] Jaroslav Nesetril, Aspects of structural combinatorics (graph homomorphisms and their use), Taiwanese J. Math. 3 (1999), no.~4, 381--423, MathSciNet\n- [WW] I.M. Wanless and N.C. Wormald, Regular graphs with no homomorphisms onto cycles, J. Combin. Theory Ser. B 82 (2001), no.~1, 155--160, MathSciNet"
+  },
+  "started": "2026-09-16T19:11:15Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

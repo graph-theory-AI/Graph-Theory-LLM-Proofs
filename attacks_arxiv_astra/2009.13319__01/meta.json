@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 51,
+    "score": 4.05,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "2009.13319__01",
+    "title_md": "[Conjecture 4.2](https://arxiv.org/abs/2009.13319)",
+    "paper": "Extension of Gyarfas-Sumner conjecture to digraphs",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2009.13319__01/"
+  },
+  "dossier_meta": {
+    "id": "2009.13319__01",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/2009.13319__01/",
+    "arxiv_id": "2009.13319",
+    "tier": 4,
+    "score": 4.05,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Extension of Gyarfas-Sumner conjecture to digraphs",
+    "catalog_title": "Conjecture 4.2",
+    "statement_text": "Let $H$ be a hero and let $F$ be an oriented forest. The set $\\{\\overleftrightarrow{K_2}, H, F\\}$ is heroic if and only if: either $F$ is the disjoint union of oriented stars, or $H$ is a transitive tournament.",
+    "context_text": "This is the main conjecture of the paper, a digraph analog of the Gy\u00e1rf\u00e1s-Sumner conjecture for oriented graphs. The 'only if' direction is proved in Section 6.1. The case where both conditions hold simultaneously (H a transitive tournament and F a disjoint union of oriented stars) is already settled by Chudnovsky, Scott and Seymour [6]."
+  },
+  "started": "2026-09-16T19:48:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

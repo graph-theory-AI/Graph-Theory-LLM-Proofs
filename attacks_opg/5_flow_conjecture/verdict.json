@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A two-matching construction gives a rigorous oddness/connectivity bound and an exact polynomial-time search within this construction when a prescribed 2-factor has four odd cycles.",
+  "would_publish": false,
+  "caveats": "The conjecture remains unresolved here; no novelty is claimed, and the polynomial-time search covers only a restricted family of flows.",
+  "id": "5_flow_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.05164,
+  "eur": 1.089283,
+  "elapsed_s": 790.5,
+  "status": "completed",
+  "response_id": "resp_02a8f018cf34feb8006aaaee03e33c87d28dd904a9e6fc4322",
+  "when": "2026-09-16T19:42:18Z"
+}

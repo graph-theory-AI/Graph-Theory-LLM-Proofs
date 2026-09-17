@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove a polynomial bound under a restriction on imperfect prime induced subgraphs, and a sharp asymptotic exponent for perfect/pentagon substitutions.",
+  "would_publish": false,
+  "caveats": "These are modularly restricted special cases, not a solution for all P5-free graphs; novelty is not claimed.",
+  "id": "2110.00278__00",
+  "model": "gpt-6-astra",
+  "usd": 1.21955,
+  "eur": 1.263204,
+  "elapsed_s": 1004.2,
+  "status": "completed",
+  "response_id": "resp_046e76db6facb668006aaafbc1ea7087d2a888cc6063f57d97",
+  "when": "2026-09-16T20:44:29Z"
+}

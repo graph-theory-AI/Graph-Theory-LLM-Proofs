@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every loopless 6-regular cellular triangulation has a 5-local-tension, and edge-width at least 4 suffices for graphs of maximum degree at most 5.",
+  "would_publish": false,
+  "caveats": "Only special cases are proved; no constant for unrestricted embeddings is established, and no literature novelty is claimed.",
+  "id": "5_local_tensions",
+  "model": "gpt-6-astra",
+  "usd": 1.211345,
+  "eur": 1.254705,
+  "elapsed_s": 1014.7,
+  "status": "completed",
+  "response_id": "resp_0c117cbcd751cbc9006aaacb0e758c87d2b96b78a241dd35e1",
+  "when": "2026-09-16T17:16:52Z"
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "acyclic_list_colouring_of_planar_graphs",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Acyclic list colouring of planar graphs.",
+    "paper": "http://www.openproblemgarden.org/op/acyclic_list_colouring_of_planar_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/acyclic_list_colouring_of_planar_graphs/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "acyclic_list_colouring_of_planar_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/acyclic_list_colouring_of_planar_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/acyclic_list_colouring_of_planar_graphs",
+    "catalog_title": "Acyclic list colouring of planar graphs.",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2013-03-07",
+    "authors": "Borodin, Oleg V., Fon-Der-Flasss, D. G., Kostochka, Alexandr V., Raspaud, Andr\u00e9, Sopena, Eric",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Conjecture Every planar graph is acyclically 5-choosable.",
+    "context_text": "This conjecture would imply to celebrated 5-colour theorems: one due toBorodin [B] stating that every planar graph is acyclically 5-colourable, and one due to Thomassen [T] stating that every plaanar graph is 5-choosable. This two theorems are best possible, because there are planar graphs which are not acyclically 4-colourable and others which are not 4-choosable. Borodin et al. [BFKRS] showed that every planar graph is acyclically 7-choosable.",
+    "references_text": "- [B] O.V. Borodin, On acyclic colorings of planar graphs, Discrete Math. 25 (1979) 211-236.\n- *[BFKRS] O.V. Borodin, D.G. Fon-Der Flaass, A.V. Kostochka, A. Raspaud, and E. Sopena, Acyclic list 7-coloring of planar graphs, J. of Graph Theory 40-2 (2002) 83-90.\n- [T] C. Thomassen. Every planar graph is 5-choosable. J. Combin. Theory Ser. B, 62(1994), no. 1, 180\u2013181.\n- [V] M. Voigt. List colourings of planar graphs. Discrete Math., 120(1993):no. 1-3, 215\u2013219."
+  },
+  "started": "2026-09-16T18:32:09Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

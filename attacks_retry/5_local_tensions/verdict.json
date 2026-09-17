@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every embedded graph of girth at least four admits a 4-local-tension, settling the triangle-free special case but not the full conjecture.",
+  "would_publish": false,
+  "caveats": "No novelty claim; the stronger girth hypothesis excludes contractible triangles, which remain untreated.",
+  "id": "5_local_tensions",
+  "model": "gpt-6-astra",
+  "usd": 0.87837,
+  "eur": 0.909811,
+  "elapsed_s": 1231.8,
+  "status": "completed",
+  "response_id": "resp_03c7db92662caa5c006aab1115809887d2a774f1e79b8b7f28",
+  "when": "2026-09-16T22:19:17Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A polynomial-time algorithm is proved when the determinant bound is fixed and deleting some nonsingular row basis leaves bounded rank, covering in particular a fixed excess of inequalities over variables.",
+  "would_publish": false,
+  "caveats": "The unrestricted IP conjecture is not settled; no novelty is claimed, and the graph-clause literature status is taken from the supplied review.",
+  "id": "1908.06300__00",
+  "model": "gpt-6-astra",
+  "usd": 0.8487,
+  "eur": 0.879079,
+  "elapsed_s": 834.2,
+  "status": "completed",
+  "response_id": "resp_03c603405b5de2d4006aaaf58827dc87d2b069ddd5cb7f8fc2",
+  "when": "2026-09-16T20:15:06Z"
+}

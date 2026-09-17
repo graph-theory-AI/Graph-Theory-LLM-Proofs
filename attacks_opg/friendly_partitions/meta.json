@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "friendly_partitions",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Friendly partitions",
+    "paper": "http://www.openproblemgarden.org/op/friendly_partitions",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/friendly_partitions/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Basic Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "friendly_partitions",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/friendly_partitions/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/friendly_partitions",
+    "catalog_title": "Friendly partitions",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2009-11-08",
+    "authors": "DeVos, Matt",
+    "subject": "Graph Theory \u00bb Basic Graph Theory",
+    "statement_text": "A friendly partition of a graph is a partition of the vertices into two sets so that every vertex has at least as many neighbours in its own class as in the other. Problem Is it true that for every $ r $ , all but finitely many $ r $ -regular graphs have friendly partitions?",
+    "context_text": "Let me say at the start, that I (M. DeVos) suspect this problem has been considered previously, so I await a more correct attribution. An unfriendly partition of a graph is a partition of the vertices into two sets so that every vertex has at least as many neighbours in the opposite class as its own. It is an easy fact that every (finite) graph has an unfriendly partition; for instance, any maximum size edge-cut gives a partition with this property. Finding friendly partitions appears to be considerably more difficult. Perhaps one reason why is that there exist graphs without unfriendly partitions. For instance, $ K_{2n} $ and $ K_{2n+1,2n+1} $ have no unfriendly partitions. However, it appears possible that the only graphs which fail to have friendly partitions are fairly dense. When $ r=3 $ , the above problem is fairly easy to solve, as it reduces to the problem of finding two vertex disjoint cycles. Every cubic graph other than $ K_4 $ or $ K_{3,3} $ has two disjoint cycles, and thus has a friendly partition. The case when $ r=4 $ is also not terribly complicated. However, the next step up, $ r=5 $ looks like a tricky problem which requires something new.",
+    "references_text": ""
+  },
+  "started": "2026-09-16T17:39:20Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

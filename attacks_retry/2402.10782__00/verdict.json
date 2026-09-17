@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For every fixed prime modular quotient size q, the conjectured gap algorithm exists with f_q(k)=q^(k-2).",
+  "would_publish": false,
+  "caveats": "This is a bounded-modular-width special case; that width is unbounded even when the tournament clique number is two, and novelty has not been checked.",
+  "id": "2402.10782__00",
+  "model": "gpt-6-astra",
+  "usd": 1.362365,
+  "eur": 1.411131,
+  "elapsed_s": 1482.5,
+  "status": "completed",
+  "response_id": "resp_07377397265ae872006aab607d7f8487d296b5829efd8774fb",
+  "when": "2026-09-17T04:02:15Z"
+}

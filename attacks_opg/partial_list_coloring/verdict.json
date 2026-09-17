@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds, even with nonnegative vertex weights, for graphs whose every block becomes bipartite after deleting at most one vertex.",
+  "would_publish": false,
+  "caveats": "The general conjecture remains unresolved here; novelty of this structural special case has not been checked.",
+  "id": "partial_list_coloring",
+  "model": "gpt-6-astra",
+  "usd": 0.996155,
+  "eur": 1.031812,
+  "elapsed_s": 840.6,
+  "status": "completed",
+  "response_id": "resp_05fb6eb9cc0f8288006aaae8cbbc7487d2a2887b16b433a341",
+  "when": "2026-09-16T19:20:52Z"
+}

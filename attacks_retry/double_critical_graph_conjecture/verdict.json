@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every noncomplete double-critical t-chromatic graph has at least t+7 vertices, one more than the bound in the supplied attempt.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not resolved, and novelty of this partial result has not been checked.",
+  "id": "double_critical_graph_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.34972,
+  "eur": 1.398033,
+  "elapsed_s": 1184.3,
+  "status": "completed",
+  "response_id": "resp_003125f0b9e653af006aab1b4b4e5487d2ad715a47b33e639b",
+  "when": "2026-09-16T23:02:03Z"
+}

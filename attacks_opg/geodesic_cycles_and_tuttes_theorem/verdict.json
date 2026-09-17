@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "The eight-vertex graph obtained by inserting a degree-three vertex into every face of a tetrahedron is a counterexample.",
+  "would_publish": true,
+  "caveats": "Peripheral has its standard induced, vertex-nonseparating meaning; bibliographical novelty has not been checked.",
+  "id": "geodesic_cycles_and_tuttes_theorem",
+  "model": "gpt-6-astra",
+  "usd": 0.73589,
+  "eur": 0.762231,
+  "elapsed_s": 887.1,
+  "status": "completed",
+  "response_id": "resp_0d1ba2af23729b3c006aaac6f1b18087d2a646fc98a053a819",
+  "when": "2026-09-16T16:57:11Z"
+}

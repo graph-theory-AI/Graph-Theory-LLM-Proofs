@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "All three inequalities hold for induced-2K2-free graphs; in fact, these graphs satisfy the ordinary Hadwiger inequality with branch sets of size at most two.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjectures remain unresolved here; the restricted result uses Gallai's classical critical-graph theorem, and novelty is not claimed.",
+  "id": "fractional_hadwiger",
+  "model": "gpt-6-astra",
+  "usd": 0.772335,
+  "eur": 0.799981,
+  "elapsed_s": 1010.2,
+  "status": "completed",
+  "response_id": "resp_0a1e3d9b74606665006aab1d15b00c87d29dfb73e3b287f3d9",
+  "when": "2026-09-16T23:06:47Z"
+}

@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 16,
+    "score": 4.75,
+    "tier": 5,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1604.07976__01",
+    "title_md": "[Conjecture 2](https://arxiv.org/abs/1604.07976)",
+    "paper": "Smaller Extended Formulations for the Spanning Tree Polytope of Bounded\u2026",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1604.07976__01/"
+  },
+  "dossier_meta": {
+    "id": "1604.07976__01",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1604.07976__01/",
+    "arxiv_id": "1604.07976",
+    "tier": 5,
+    "score": 4.75,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Smaller Extended Formulations for the Spanning Tree Polytope of Bounded\u2026",
+    "catalog_title": "Conjecture 2",
+    "statement_text": "If $\\mathcal{C}$ is a proper minor-closed family of graphs and $G = (V, E)$ is a connected graph in $\\mathcal{C}$, then $\\mathrm{xc}(P_{\\mathrm{sp.trees}}(G)) = O(|V|)$.",
+    "context_text": "Following Conjecture 1, the authors suggest the linear bound may hold even more generally for all proper minor-closed families. They note the conjecture is known to hold when graphs in $\\mathcal{C}$ have bounded treewidth, and they prove it for $k$-apex graphs (Theorem 4) as additional supporting evidence."
+  },
+  "started": "2026-09-16T20:19:05Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

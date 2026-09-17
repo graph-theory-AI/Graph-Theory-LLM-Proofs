@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "multicolour_erdos_hajnal_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Multicolour Erd\u0151s--Hajnal Conjecture",
+    "paper": "http://www.openproblemgarden.org/op/multicolour_erdos_hajnal_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/multicolour_erdos_hajnal_conjecture/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Extremal Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "multicolour_erdos_hajnal_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/multicolour_erdos_hajnal_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/multicolour_erdos_hajnal_conjecture",
+    "catalog_title": "Multicolour Erd\u0151s--Hajnal Conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2019-10-10",
+    "authors": "Erdos, Paul, Hajnal, Andras",
+    "subject": "Graph Theory \u00bb Extremal Graph Theory",
+    "statement_text": "Conjecture For every fixed $ k\\geq2 $ and fixed colouring $ \\chi $ of $ E(K_k) $ with $ m $ colours, there exists $ \\varepsilon>0 $ such that every colouring of the edges of $ K_n $ contains either $ k $ vertices whose edges are coloured according to $ \\chi $ or $ n^\\varepsilon $ vertices whose edges are coloured with at most $ m-1 $ colours.",
+    "context_text": "See [FGP].",
+    "references_text": "- [FGP] Jacob Fox, Andrey Grinshpun and J\u00e1nos Pach: The Erd\u0151s\u2013Hajnal conjecture for rainbow triangles, J. Combin. Theory, Series B. 111 (2016), 75--125."
+  },
+  "started": "2026-09-16T19:03:18Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

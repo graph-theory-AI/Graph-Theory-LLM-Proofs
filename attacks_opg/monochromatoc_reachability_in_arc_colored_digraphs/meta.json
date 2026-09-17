@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "monochromatoc_reachability_in_arc_colored_digraphs",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Monochromatic reachability in arc-colored digraphs",
+    "paper": "http://www.openproblemgarden.org/op/monochromatoc_reachability_in_arc_colored_digraphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/monochromatoc_reachability_in_arc_colored_digraphs/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "monochromatoc_reachability_in_arc_colored_digraphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/monochromatoc_reachability_in_arc_colored_digraphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/monochromatoc_reachability_in_arc_colored_digraphs",
+    "catalog_title": "Monochromatic reachability in arc-colored digraphs",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2017-04-04",
+    "authors": "Sands, Bill, Sauer, Norbert W., Woodrow, Robert E.",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "Conjecture For every $ k $ , there exists an integer $ f(k) $ such that if $ D $ is a digraph whose arcs are colored with $ k $ colors, then $ D $ has a $ S $ set which is the union of $ f(k) $ stables sets so that every vertex has a monochromatic path to some vertex in $ S $ .",
+    "context_text": "In the particular case of tournaments (and more generally when the stabilty number of $ D $ is bounded), it has been proved by Bousquet, Lochet, and Thomass\u00e9 [BLT].",
+    "references_text": "- [BLT] Nicolas Bousquet, William Lochet, St\u00e9phan Thomass\u00e9: A proof of the Erd\u0151s-Sands-Sauer-Woodrow conjecture,\n- [SSW] B. Sands, N. Sauer and R. Woodrow, On monochromatic paths in edge-coloured digraphs. Journal of Combinatorial Theory, Series B, 33, (1982), 271--275."
+  },
+  "started": "2026-09-16T19:02:13Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

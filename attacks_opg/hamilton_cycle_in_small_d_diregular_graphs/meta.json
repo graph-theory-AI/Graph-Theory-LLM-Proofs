@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "hamilton_cycle_in_small_d_diregular_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Hamilton cycle in small d-diregular graphs",
+    "paper": "http://www.openproblemgarden.org/op/hamilton_cycle_in_small_d_diregular_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/hamilton_cycle_in_small_d_diregular_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "hamilton_cycle_in_small_d_diregular_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/hamilton_cycle_in_small_d_diregular_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/hamilton_cycle_in_small_d_diregular_graphs",
+    "catalog_title": "Hamilton cycle in small d-diregular graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-08",
+    "authors": "Jackson, Bill",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "An directed graph is $ k $ -diregular if every vertex has indegree and outdegree at least $ k $ . Conjecture For $ d >2 $ , every $ d $ -diregular oriented graph on at most $ 4d+1 $ vertices has a Hamilton cycle.",
+    "context_text": "The disjoint union of two regular tournaments on $ 2d+1 $ vertices shows that this would be best possible. For $ d $ -diregular oriented graphs with an arbitrary order of vertices, Jackson conjectured the existence of a long cycle . K\u00fchn and Osthus [KO] conjectured that it may actually be possible to increase the size of the graph even further if we assume that the graph is strongly 2-connected. Problem Is it true that for each $ d >2 $ , every $ d $ -regular strongly $ 2 $ -connected oriented graph $ G $ on at most $ 6d $ vertices has a Hamilton cycle?",
+    "references_text": "- *[J] B. Jackson. Long paths and cycles in oriented graphs, J. Graph Theory 5 (1981), 145-157.\n- [KO] D. Osthus and D. K\u00fchn, A survey on Hamilton cycles in directed graphs, European J. Combinatorics 33 (2012), 750-766."
+  },
+  "started": "2026-09-16T17:44:34Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

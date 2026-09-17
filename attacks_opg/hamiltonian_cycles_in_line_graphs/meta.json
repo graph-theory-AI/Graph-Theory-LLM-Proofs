@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "hamiltonian_cycles_in_line_graphs",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Hamiltonian cycles in line graphs",
+    "paper": "http://www.openproblemgarden.org/op/hamiltonian_cycles_in_line_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonian_cycles_in_line_graphs/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Cycles"
+  },
+  "dossier_meta": {
+    "id": "hamiltonian_cycles_in_line_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonian_cycles_in_line_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/hamiltonian_cycles_in_line_graphs",
+    "catalog_title": "Hamiltonian cycles in line graphs",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-07-24",
+    "authors": "Thomassen, Carsten",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Cycles",
+    "statement_text": "Conjecture Every 4-connected line graph is hamiltonian .",
+    "context_text": "\\item It is known that if $ G $ is 4-edge-connected, then its line graph $ L(G) $ is hamiltonian. \\item Thomassen's is a special case of a conjecture due to Matthews and Sumner: every 4-connected claw-free graph is hamiltonian. \\item However, by a result of Ryjacek [R] conjectures of Thomassen and of Matthews and Sumner are equivalent. \\item Moreover [R], one may restrict to 4-connected line graphs of triangle-free graphs.",
+    "references_text": "- [R] Zdenek Ryjacek: On a closure concept in claw-free graphs. J. Combin. Theory Ser. B 70 (1997), no. 2, 217--224, MathSciNet\n- *[T] Carsten Thomassen, Reflections on graph theory, J. Graph Theory 10 (1986) 309-324, MathSciNet"
+  },
+  "started": "2026-09-16T18:55:31Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

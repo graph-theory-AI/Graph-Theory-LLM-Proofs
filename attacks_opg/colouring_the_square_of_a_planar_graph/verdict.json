@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the conjectured list bounds for planar graphs with vertex cover at most four, and disprove the separately stated minor-closed extension as worded.",
+  "would_publish": false,
+  "caveats": "The unrestricted planar conjecture is not resolved; the auxiliary counterexample is nonplanar, and novelty of the restricted-class result is not claimed.",
+  "id": "colouring_the_square_of_a_planar_graph",
+  "model": "gpt-6-astra",
+  "usd": 1.057675,
+  "eur": 1.095534,
+  "elapsed_s": 794.6,
+  "status": "completed",
+  "response_id": "resp_093b503d74ef851e006aaacf057e9087d2ace5a2bf01f38c3d",
+  "when": "2026-09-16T17:30:07Z"
+}

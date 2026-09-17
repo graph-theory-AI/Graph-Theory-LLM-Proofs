@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured threshold holds for every antidirected spider whose legs have length at most two, with an exact extremal classification in the non-star cases.",
+  "would_publish": false,
+  "caveats": "The general conjecture remains unresolved; the novelty of this independently proved special case has not been checked.",
+  "id": "antidirected_trees_in_digraphs",
+  "model": "gpt-6-astra",
+  "usd": 0.938835,
+  "eur": 0.97244,
+  "elapsed_s": 932.6,
+  "status": "completed",
+  "response_id": "resp_064e56eb93d18164006aab1287af7487d2a266395497f1b1ba",
+  "when": "2026-09-16T22:20:28Z"
+}

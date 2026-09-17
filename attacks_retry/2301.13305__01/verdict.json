@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A Fano-plane argument gives d_{K_4}(n) <= 11/32 for n >= 7, and codes determined by boundedly many quadratic tests are eventually empty.",
+  "would_publish": false,
+  "caveats": "The unrestricted o(1) claim is not settled; novelty relative to all follow-up literature has not been verified.",
+  "id": "2301.13305__01",
+  "model": "gpt-6-astra",
+  "usd": 1.0051,
+  "eur": 1.041077,
+  "elapsed_s": 1220.3,
+  "status": "completed",
+  "response_id": "resp_0b3e297475c9b424006aab5af730b487d2ad051413e66319bd",
+  "when": "2026-09-17T03:34:19Z"
+}

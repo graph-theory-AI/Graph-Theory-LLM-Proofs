@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "finding_k_edge_outerplanar_graph_embeddings",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Finding k-edge-outerplanar graph embeddings",
+    "paper": "http://www.openproblemgarden.org/op/finding_k_edge_outerplanar_graph_embeddings",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/finding_k_edge_outerplanar_graph_embeddings/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "finding_k_edge_outerplanar_graph_embeddings",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/finding_k_edge_outerplanar_graph_embeddings/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/finding_k_edge_outerplanar_graph_embeddings",
+    "catalog_title": "Finding k-edge-outerplanar graph embeddings",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2010-04-18",
+    "authors": "Bentz, Cedric",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture It has been shown that a $ k $ -outerplanar embedding for which $ k $ is minimal can be found in polynomial time. Does a similar result hold for $ k $ -edge-outerplanar graphs?",
+    "context_text": "A $ k $ -outerplanar graph [Baker] with $ k > 0 $ is a planar graph having an embedding with at most $ k $ layers of vertices such that after removing iteratively the vertices (and their adjacent edges) lying on the outer face $ k $ times, we obtain the empty graph. A $ k $ -edge-outerplanar graph [Bentz] is defined to be a planar graph having an embedding with at most $ k $ layers of edges such that after removing iteratively the edges lying on the outer face $ k $ times, we obtain a graph with no edge. All $ k $ -edge-outerplanar graphs are $ k $ -outerplanar graphs. Given a planar graph, Bienstock and Monma have shown that a $ k $ -outerplanar embedding for which $ k $ is minimal can be found in polynomial time. Does a similar result hold for $ k $ -edge-outerplanar graphs?",
+    "references_text": "- C. Bentz, \u201cDisjoint paths in sparse graphs,\u201d Discrete Appl. Math., vol. 157, no. 17, pp. 3558\u20133568, 2009\n- D. Bienstock and C. L. Monma, \u201cOn the complexity of embedding planar graphs to minimize certain distance measures,\u201d Algorithmica, vol. 5, no. 1\u20134, pp. 93\u2013109, 1990\n- B. S. Baker, \u201cApproximation algorithms for np-complete problems on planar graphs,\u201d J. ACM, vol. 41, no. 1, pp. 153\u2013180, 1994"
+  },
+  "started": "2026-09-16T17:38:19Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

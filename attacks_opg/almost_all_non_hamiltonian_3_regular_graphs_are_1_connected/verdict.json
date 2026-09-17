@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Sharp bridge enumeration and Petersen-fragment constructions give precise asymptotic bounds, but not the upper bound needed for the intended connected-graph conjecture.",
+  "would_publish": false,
+  "caveats": "Connected simple graphs are assumed, and no novelty claim is made. If disconnected graphs are included in NH(n), the stated limit is false.",
+  "id": "almost_all_non_hamiltonian_3_regular_graphs_are_1_connected",
+  "model": "gpt-6-astra",
+  "usd": 1.182935,
+  "eur": 1.225278,
+  "elapsed_s": 1125.4,
+  "status": "completed",
+  "response_id": "resp_0363f8374da49ca4006aaac6f2828087d2ba0fc0ace94e69c8",
+  "when": "2026-09-16T17:01:09Z"
+}

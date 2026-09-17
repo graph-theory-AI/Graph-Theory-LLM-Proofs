@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "An explicit simple cubic ordered two-stage graph has F(L)=3 but R(L)\u22659, contradicting R(L)\u22642F(L).",
+  "would_publish": false,
+  "caveats": "This refutes the formulation supplied; I have not checked whether this counterexample is already known or whether other versions impose additional hypotheses.",
+  "id": "bene_conjecture_graph_theoretic_form_0",
+  "model": "gpt-6-astra",
+  "usd": 0.50048,
+  "eur": 0.518395,
+  "elapsed_s": 384.4,
+  "status": "completed",
+  "response_id": "resp_0ea136ed00c50265006aaae25fe35087d28dba963c51d7b788",
+  "when": "2026-09-16T18:45:52Z"
+}

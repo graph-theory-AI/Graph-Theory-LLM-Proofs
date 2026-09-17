@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For the intended non-bipartite problem, I obtain a parameter sieve excluding new parameter sets below 162 vertices and rule out Cayley realizations of the degree-57 candidate.",
+  "would_publish": false,
+  "caveats": "No novelty or graph-uniqueness claim; these necessary conditions do not resolve existence, and the literal definition admits every K_{m,m}.",
+  "id": "triangle_free_strongly_regular_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.804895,
+  "eur": 0.833706,
+  "elapsed_s": 602.0,
+  "status": "completed",
+  "response_id": "resp_02513ba99022caf1006aaaed4d875887d28180bdaec8fba069",
+  "when": "2026-09-16T19:36:07Z"
+}

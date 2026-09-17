@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "arc_disjoint_out_branching_and_in_branching",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Arc-disjoint out-branching and in-branching",
+    "paper": "http://www.openproblemgarden.org/op/arc_disjoint_out_branching_and_in_branching",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/arc_disjoint_out_branching_and_in_branching/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "arc_disjoint_out_branching_and_in_branching",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/arc_disjoint_out_branching_and_in_branching/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/arc_disjoint_out_branching_and_in_branching",
+    "catalog_title": "Arc-disjoint out-branching and in-branching",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-02",
+    "authors": "Thomassen, Carsten",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "Conjecture There exists an integer $ k $ such that every $ k $ -arc-strong digraph $ D $ with specified vertices $ u $ and $ v $ contains an out-branching rooted at $ u $ and an in-branching rooted at $ v $ which are arc-disjoint.",
+    "context_text": "Thomassen [T] showed that, given a digraph $ D $ and two vertices $ u $ and $ v $ , deciding whether there are an out-branching rooted at $ u $ and an in-branching rooted at $ v $ which are arc-disjoint is NP-complete. In contrast, one can decide in polynomial time whether there are $ k $ arc-disjoint out-branchings with specified roots $ s_1, \\dots , s_k $ (some of which may be identical). This is a consequence of Edmonds\u2019 well known branching theorem [E] states that a digraph $ D $ has $ k $ arc-disjoint out-branchings rooted at some fixed vertex $ s $ if and only if there are $ k $ arc-disjoint paths from $ s $ to every other vertex of $ D $ . Bang-Jensen [B] proved this conjecture for tournaments. A similar question can be asked about arc-disjoint strongly connected spanning subdigraphs . Several related problems are mentioned in the survey of Bang-Jensen and Kriesell [BK].",
+    "references_text": "- [B] J. Bang-Jensen, Edge-disjoint in- and out-branching in tournaments and related path problems. J. Combin. Theory Ser. B 51 (1991), 1-23.\n- [BK] J. Bang-Jensen, M. Kriesell, Disjoint sub(di)graphs in digraphs, Electronic Notes in Discrete Mathematics 34 (2009), 179-183.\n- [E] J. Edmonds, Edge-disjoint branchings. In Combinatorial Algorithms, B. Rustin, ed., Acad. Press, New York (1973), 91-96.\n- *[T] C. Thomassen, Configurations in Graphs, Annals of The New York Acad. Sci. 555 (1989), 402-412."
+  },
+  "started": "2026-09-16T17:07:27Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

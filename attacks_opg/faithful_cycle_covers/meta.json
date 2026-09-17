@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "faithful_cycle_covers",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Faithful cycle covers",
+    "paper": "http://www.openproblemgarden.org/op/faithful_cycle_covers",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/faithful_cycle_covers/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Cycles"
+  },
+  "dossier_meta": {
+    "id": "faithful_cycle_covers",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/faithful_cycle_covers/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/faithful_cycle_covers",
+    "catalog_title": "Faithful cycle covers",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-03-07",
+    "authors": "Seymour, Paul D.",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Cycles",
+    "statement_text": "Conjecture If $ G = (V,E) $ is a graph, $ p : E \\rightarrow {\\mathbb Z} $ is admissable, and $ p(e) $ is even for every $ e \\in E(G) $ , then $ (G,p) $ has a faithful cover.",
+    "context_text": "Definition: Let $ G=(V,E) $ be a graph and let $ p:E \\rightarrow {\\mathbb Z} $ . A list $ L $ of cycles of $ G $ is a faithful (cycle) cover of $ (G,p) $ if every edge $ e $ of $ G $ occurs in exactly $ p(e) $ cycles of $ L $ . Thus, the cycle double cover conjecture is equivalent to the statement that $ (G,2) $ has a faithful cover for every graph $ G $ with no bridge . We define the map $ p $ to be admissable if $ p(e) $ satisfies the following properties: i $ p $ is nonnegative. ii $ p(S) $ is even for every edge-cut $ S $ . iii $ p(e) \\le p(S)/2 $ for every edge-cut $ S $ and edge $ e \\in S $ . It is easy to see that $ G $ has a faithful cover only if $ p $ is admissable. However, the converse is false. A counterexample is obtained by taking the Petersen graph, putting weight $ 2 $ on the edges of a perfect matching, and $ 1 $ elsewhere. More generally, for a graph G=(V,E), one may consider the vector space of real numbers indexed by E. We associate every circuit C with its incidence vector. Most of the basic questions about this space are solved. Seymour [S] has shown that a vector p can be written as a nonnegative rational combination of cycles if and only if it satisfies conditions (i) and (iii) in the definition of admissable. It is an easy exercise to show that for a 3-edge-connected graph G, a vector p can be written as an integer combination of cycles if and only if p satisfies (ii) in the definition of admissable. Seymour's conjecture is equivalent to the statement that every admissable map may be realized as a half-integer combination of circuits. Note the similarity of this to The Berge-Fulkerson conjecture . The most interesting result about faithful covers is a theorem of Alspach, Goddyn, and Zhang which resolved a conjecture of Seymour. They prove that whenever $ G $ has no minor isomorphic to Petersen , every admissable map has a corresponding faithful cover. For a general graph $ G $ with no bridge, Bermond, Jackson, and Jaeger [BJJ] proved that $ (G,4) $ has a faithful cover and Fan [F] proveed that $ (G,6) $ has a faithful cover. DeVos, Johnson, and Seymour [DJS] proved that $ (G,p) $ has a faithful cover whenever $ p $ is admissable and there is a nonnegative integer $ k $ such that $ 32k+83 < p(e) < 36k+88 $ holds for every edge $ e $ . However, little else seems to be known. In particular, it does not appear to be known if there exist integers $ a,b $ with $ a-b $ arbitrarily large so that $ (G,p) $ has a faithful cover whenever $ p $ is an admissable function taking on only the values $ a,b $ . Such a result would appear to require an idea not contained in any of the aforementioned papers. The analogous problem for oriented circuit covers does not appear to be very promising. It is easy to see that for an orientation of a series parallel graph G and a map $ p:E(G) \\rightarrow G $ which satisfies the obvious conditions, that $ (G,p) $ will have a circuit cover using every edge in its given direction. However, even with a $ K_4 $ minor, there is a great deal of forcing, and nothing much looks like it would be true.",
+    "references_text": "- \\[AGZ] B. Alspach, L. Goddyn, and C-Q Zhang, Graphs with the circuit cover property, Trans. Amer. Math. Soc., 344 (1994), 131-154. MathSciNet\n- [BJJ] J.C. Bermond, B. Jackson, and F. Jaeger, Shortest covering of graphs with cycles, J. Combinatorial Theory Ser. B 35 (1983), 297-308. MathSciNet\n- [DJS] M. DeVos, T. Johnson, P.D. Seymour, Cut-coloring and circuit covering\n- [F] G. Fan, Integer flows and cycle covers, J. Combinatorial Theory Ser. B 54 (1992), 113-122. MathSciNet\n- [S] P.D. Seymour, Sums of circuits in Graph Theory and Related Topics edited by J.A. Bondy and U.S.R. Murty, Academic Press, New York/Berlin (1979), 341-355. MathSciNet"
+  },
+  "started": "2026-09-16T18:49:57Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

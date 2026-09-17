@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A polynomial-time completion criterion extends the supplied partial result to four of the five two-branch topologies and all three-branch subcubic trees, but does not resolve the dichotomy.",
+  "would_publish": false,
+  "caveats": "Uses the established Three-in-a-Tree theorem; novelty is not claimed, and neither general direction of the dichotomy is proved.",
+  "id": "2502.05289__00",
+  "model": "gpt-6-astra",
+  "usd": 0.969195,
+  "eur": 1.003887,
+  "elapsed_s": 974.1,
+  "status": "completed",
+  "response_id": "resp_0d451dc18fd0527b006aab30f0984c87d287d9fd0dd948bd7d",
+  "when": "2026-09-17T00:30:54Z"
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "woodalls_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Woodall's Conjecture",
+    "paper": "http://www.openproblemgarden.org/op/woodalls_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/woodalls_conjecture/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "woodalls_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/woodalls_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/woodalls_conjecture",
+    "catalog_title": "Woodall's Conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-04-05",
+    "authors": "Woodall, Douglas R.",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "Conjecture If $ G $ is a directed graph with smallest directed cut of size $ k $ , then $ G $ has $ k $ disjoint dijoins.",
+    "context_text": "Definitions: Let $ G $ be a directed graph. A directed cut of $ G $ is an edge-cut in which all edges are directed the same way. A dijoin is a set of edges which intersect every directed cut. There is an important theorem of Lucchesi and Younger [LY] which asserts that the dual problem has an optimum integer packing. That is, for every digraph $ G $ in which the smallest dijoin has size $ k $ , there exist $ k $ pairwise disjoint directed cuts. This result implies more generally (in the terminology of Corneujols [C]) that the clutter of (minimal) directed cuts has the max-flow min-cut property (MFMC). It follows from this and Lehman's theorem [L] that the clutter of (minimal) dijoins is ideal. Therefore, if the smallest directed cut of $ G $ has size $ k $ , then there exist nonnegative rational numbers $ x_1,x_2,\\ldots,x_m $ summing to $ k $ and dijoins $ J_1,J_2,\\ldots,J_m $ so that if each dijoin $ J_i $ is taken with weight $ x_i $ , the total weight of the dijoins containing any edge is at most 1. The above conjecture asserts that such a combination exists with $ x_1,x_2,\\ldots,x_m $ integral. Schrijver [Sc80] has found a digraph in which the clutter of (minimal) dijoins does not have the MFMC property. Thus, the weighted version of Woodall's conjecture is not true in general. However, this clutter does have the MFMC property in a number of interesting special cases. One such example (due to Schrijver [Sc82] and Feofiloff, Younger [FY]) is when the digraph is acyclic and every source is joined to every sink by a directed path. Since every such digraph has the MFMC property, every such digraph must satisfy Woodall's conjecture. There seem to be few positive results towards Woodall's conjecture for general digraphs. Although this was probably already known, Seymour and I (M. DeVos) observed that the conjecture is true for $ k=2 $ . To see this, note that the underlying graph is 2-edge-connected, so it may be oriented to give a strongly connected digraph, call it $ H $ . Now partition the edges into two sets $ \\{X,Y\\} $ where $ X $ consists of those edges which have the same orientation in both $ H $ and $ G $ , and $ Y $ consists of those edges with different orientations in the two graphs. It is immediate that both $ X $ and $ Y $ meet every directed cut, so each is a dijoin. Extending this to $ k=3 $ appears difficult. Indeed, I believe the following weak version of this is still open. Conjecture Prove that there exists a fixed integer $ k $ so that every digraph with all directed cuts of size $ \\ge k $ contains three pairwise disjoint dijoins. The restriction of this conjecture to the special case of planar graphs is also open. Here we can use duality to restate the conjecture. Call a set of edges $ A $ a feedback arc-set if $ A $ intersects every directed cycle (or equivalently, $ G-A $ is acyclic). Conjecture If $ G $ is a planar digraph with all directed cycles of length $ \\ge k $ , then $ G $ contains $ k $ pairwise disjoint feedback arc-sets. The above conjecture is known to fail when the assumption of planarity is removed. On the other hand, it does hold for digraphs which are orientations of series-parallel graphs [LW]. It is also still open for $ k=3 $ .",
+    "references_text": "- [C] G. Cornuejols, Combinatorial Optimization, Packing and Covering SIAM, Philadelphia (2001). MathSciNet\n- [FY] P. Feofiloff and D. H. Younger, Directed cut transversal packing for source-sink connected graphs. Combinatorica 7 (1987), no. 3, 255--263. MathSciNet\n- [LW] O. Lee, Y. Wakabayashi, Note on a min-max conjecture of Woodall. J. Graph Theory 38 (2001), no. 1, 36--41. MathSciNet\n- [LY] C.L. Lucchesi and D. H. Younger A minimax theorem for directed graphs, Journal of the London Math. Soc. (2) 17 (1978) 369-374. MathSciNet\n- [Sc80] A. Schrijver, A counterexample to a conjecture of Edmonds and Giles, Discrete Math. 32 (1980) 213-214. MathSciNet\n- [Sc82] A. Schrijver, Min-max relations for directed graphs, Annals of Discrete Math. 16 (1982) 261-280. MathSciNet\n- [W] D. R. Woodall, Menger and K\u00f6nig systems. Theory and applications of graphs (Proc. Internat. Conf., Western Mich. Univ., Kalamazoo, Mich., 1976), pp. 620--635, Lecture Notes in Math., 642, Springer, Berlin, 1978. MathSciNet"
+  },
+  "started": "2026-09-16T19:27:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

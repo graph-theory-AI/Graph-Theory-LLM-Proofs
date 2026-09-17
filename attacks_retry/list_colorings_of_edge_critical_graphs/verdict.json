@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds whenever all but at most \u0394+1 edges have the same list, by a more general sparse-perturbation theorem for vertex-critical graphs.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture remains unresolved here; finite simple graphs are assumed, and novelty is not claimed.",
+  "id": "list_colorings_of_edge_critical_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.51072,
+  "eur": 1.564796,
+  "elapsed_s": 1617.2,
+  "status": "completed",
+  "response_id": "resp_0e42695befc5b820006aab2123ce5c87d2bcbc5ea4081c3afb",
+  "when": "2026-09-16T23:34:12Z"
+}

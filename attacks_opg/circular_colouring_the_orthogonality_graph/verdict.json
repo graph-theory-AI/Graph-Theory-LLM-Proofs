@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Any value of \u03c7_c(O) below 4 must be 4\u22121/k for an integer k\u22652, while every finite subgraph of O has circular chromatic number strictly below 4.",
+  "would_publish": false,
+  "caveats": "This does not improve the supplied 7/2 lower bound or resolve the equality; novelty of these structural observations is not asserted.",
+  "id": "circular_colouring_the_orthogonality_graph",
+  "model": "gpt-6-astra",
+  "usd": 1.383295,
+  "eur": 1.43281,
+  "elapsed_s": 1035.3,
+  "status": "completed",
+  "response_id": "resp_0d2795e55b38ecd4006aaace7be4fc87d28285c21c903c3f31",
+  "when": "2026-09-16T17:31:50Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain quantitative color-preserving regularization and a degree-6 construction of order O(5^g), but do not settle degree 4.",
+  "would_publish": false,
+  "caveats": "Auxiliary results only, with no claim of novelty; no degree-4 construction or nonexistence theorem is obtained.",
+  "id": "high_girth_low_degree_4_chromatic_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.01436,
+  "eur": 1.050669,
+  "elapsed_s": 1139.9,
+  "status": "completed",
+  "response_id": "resp_087fe35cb8c3ca36006aaad5c6e35487d283f8d76d86f1483b",
+  "when": "2026-09-16T18:04:42Z"
+}

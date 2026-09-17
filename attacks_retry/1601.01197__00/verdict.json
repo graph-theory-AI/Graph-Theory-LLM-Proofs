@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "There is a linear-time output algorithm for bounded-precoloring extension in bipartite toroidal quadrangulations, including instances with forced nonzero winding.",
+  "would_publish": false,
+  "caveats": "This does not resolve the general surface problem; novelty of the special case and subsequent literature have not been established.",
+  "id": "1601.01197__00",
+  "model": "gpt-6-astra",
+  "usd": 1.1114,
+  "eur": 1.151182,
+  "elapsed_s": 1076.0,
+  "status": "completed",
+  "response_id": "resp_080876e1ba675be0006aab3ed4bc1087d2b8897631e8525473",
+  "when": "2026-09-17T01:31:52Z"
+}

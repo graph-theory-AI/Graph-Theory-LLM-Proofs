@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "There is an explicit polynomial kernel under a stronger diamond-type exclusion, while most clique-blown-up path cases admit an OR-composition ruling out polynomial kernels unless NP is contained in coNP/poly.",
+  "would_publish": false,
+  "caveats": "These are kernelization results, not a resolution of the FPT conjecture; the P7-free case is untouched, and novelty is not claimed.",
+  "id": "1909.08426__03",
+  "model": "gpt-6-astra",
+  "usd": 0.982305,
+  "eur": 1.017466,
+  "elapsed_s": 979.6,
+  "status": "completed",
+  "response_id": "resp_0e5b7f5f421c5163006aab85dad27c87d2a5ce9b275974a062",
+  "when": "2026-09-17T06:33:18Z"
+}

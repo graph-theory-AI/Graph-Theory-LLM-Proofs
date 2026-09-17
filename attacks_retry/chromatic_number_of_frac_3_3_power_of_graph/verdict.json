@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A self-contained entropy-compression argument proves the conjecture for every maximum degree at least 8 and gives a 16-color bound when the maximum degree is 7.",
+  "would_publish": false,
+  "caveats": "Degrees 5\u20137 are not settled here; novelty and the supplied literature have not been independently verified.",
+  "id": "chromatic_number_of_frac_3_3_power_of_graph",
+  "model": "gpt-6-astra",
+  "usd": 1.254795,
+  "eur": 1.29971,
+  "elapsed_s": 1339.8,
+  "status": "completed",
+  "response_id": "resp_04f53d1ecf1701ff006aab153e8f2c87d2bcfebae64c236b82",
+  "when": "2026-09-16T22:38:50Z"
+}

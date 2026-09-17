@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "A connected simple bridgeless cubic graph on 30 vertices has every 2-factor of type 5+5+5+15, and therefore has oddness 4.",
+  "would_publish": false,
+  "caveats": "The counterexample has cyclic 3-edge cuts; no novelty claim or resolution of a cyclically 4-edge-connected variant is made.",
+  "id": "odd_cycles_and_low_oddness",
+  "model": "gpt-6-astra",
+  "usd": 0.634835,
+  "eur": 0.657559,
+  "elapsed_s": 582.2,
+  "status": "completed",
+  "response_id": "resp_05d0f634f455258f006aaada73610087d282f1f75cf1df7974",
+  "when": "2026-09-16T18:15:21Z"
+}

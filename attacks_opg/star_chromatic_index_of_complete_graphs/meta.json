@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "star_chromatic_index_of_complete_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Star chromatic index of complete graphs",
+    "paper": "http://www.openproblemgarden.org/op/star_chromatic_index_of_complete_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/star_chromatic_index_of_complete_graphs/",
+    "importance": "Medium",
+    "undergrad": true,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "star_chromatic_index_of_complete_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/star_chromatic_index_of_complete_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/star_chromatic_index_of_complete_graphs",
+    "catalog_title": "Star chromatic index of complete graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2010-11-16",
+    "authors": "Dvorak, Zdenek, Mohar, Bojan, Samal, Robert",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture Is it possible to color edges of the complete graph $ K_n $ using $ O(n) $ colors, so that the coloring is proper and no 4-cycle and no 4-edge path is using only two colors? Equivalently: is the star chromatic index of $ K_n $ linear in $ n $ ?",
+    "context_text": "The star chromatic index $ \\chi_s'(G) $ of a graph $ G $ is the minimum number of colors needed to properly color the edges of $ G $ so that no path or cycle of length four is bi-colored. An equivalent definition is that $ \\chi_s'(G) $ is the star chromatic number of the line graph $ L(G) $ . Dvo\u0159\u00e1k, Mohar, and \u0160\u00e1mal [DMS] show that $ \\chi_s'(G) \\ge (2+o(1))n $ . On the other hand, the best known upper bound (also in \\cite{DMS]) is superlinear: $$ \\chi_s'(K_n) \\le n \\cdot \\frac{ 2^{ 2\\sqrt2(1+o(1)) \\sqrt{\\log n} } }{(\\log n)^{1/4}} \\,. $$ It may be possible to decrease the upper bound by elementary methods.",
+    "references_text": "- *[DMS] Dvo\u0159\u00e1k, Zden\u011bk; Mohar, Bojan; \u0160\u00e1mal, Robert: Star chromatic index, arXiv:1011.3376."
+  },
+  "started": "2026-09-16T16:45:56Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

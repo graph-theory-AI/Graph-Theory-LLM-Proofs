@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 25,
+    "score": 4.45,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1810.00058__02",
+    "title_md": "[Conjecture 3.4](https://arxiv.org/abs/1810.00058)",
+    "paper": "Sparse graphs with no polynomial-sized anticomplete pairs",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1810.00058__02/"
+  },
+  "dossier_meta": {
+    "id": "1810.00058__02",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1810.00058__02/",
+    "arxiv_id": "1810.00058",
+    "tier": 4,
+    "score": 4.45,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Sparse graphs with no polynomial-sized anticomplete pairs",
+    "catalog_title": "Conjecture 3.4",
+    "statement_text": "For every graph $H$ there exist $\\varepsilon, s > 0$ such that for every $H$-free $\\varepsilon$-bounded graph $G$ with $|G| > 1$, and every $c$ with $0 \\leq c \\leq 1$, there is a $c$-sparse $(\\varepsilon c^s |G|,\\, \\varepsilon|G|)$-pair in $G$.",
+    "context_text": "This is the $\\varepsilon$-bounded specialization of Conjecture 3.3; for $\\varepsilon$-bounded graphs the dense outcome is excluded. The implications $3.3 \\Rightarrow 3.4 \\Rightarrow 1.4$ hold. By analogy with 1.3 and 1.4, a theorem of R\u00f6dl implies that $H$ satisfies 3.3 if and only if both $H$ and $\\bar{H}$ satisfy 3.4."
+  },
+  "started": "2026-09-16T20:08:47Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

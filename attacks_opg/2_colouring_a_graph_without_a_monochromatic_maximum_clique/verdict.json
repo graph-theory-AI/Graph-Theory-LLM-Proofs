@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for odd-hole-free K4-free graphs whose deletion of some induced complement of C7 leaves a disjoint union of cliques.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not resolved; novelty of this special case has not been checked. Graphs with no edges are excluded.",
+  "id": "2_colouring_a_graph_without_a_monochromatic_maximum_clique",
+  "model": "gpt-6-astra",
+  "usd": 1.024815,
+  "eur": 1.061498,
+  "elapsed_s": 942.6,
+  "status": "completed",
+  "response_id": "resp_01c524bb99a139a9006aaaca9a52d087d29ccb5b32c92d6470",
+  "when": "2026-09-16T17:13:44Z"
+}

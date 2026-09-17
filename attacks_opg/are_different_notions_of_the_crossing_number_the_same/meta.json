@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "are_different_notions_of_the_crossing_number_the_same",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Are different notions of the crossing number the same?",
+    "paper": "http://www.openproblemgarden.org/op/are_different_notions_of_the_crossing_number_the_same",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/are_different_notions_of_the_crossing_number_the_same/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Crossing numbers"
+  },
+  "dossier_meta": {
+    "id": "are_different_notions_of_the_crossing_number_the_same",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/are_different_notions_of_the_crossing_number_the_same/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/are_different_notions_of_the_crossing_number_the_same",
+    "catalog_title": "Are different notions of the crossing number the same?",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2009-11-03",
+    "authors": "Pach, J\u00e1nos, T\u00f3th, G\u00e9za",
+    "subject": "Graph Theory \u00bb Topological Graph Theory \u00bb Crossing numbers",
+    "statement_text": "Problem Does the following equality hold for every graph $ G $ ? \\[ \\text{pair-cr}(G) = \\text{cr}(G) \\] The crossing number $ \\text{cr}(G) $ of a graph $ G $ is the minimum number of edge crossings in any drawing of $ G $ in the plane. In the pairwise crossing number $ \\text{pair-cr}(G) $ , we minimize the number of pairs of edges that cross.",
+    "context_text": "Obviously we have $ \\text{pair-cr}(G) \\leq \\text{cr}(G) $ . The problem was first posed by Pach and T\u00f3th in~[PT], who first spotted the possibility that the pairwise crossing number might be different from the crossing number. They proved $ \\text{cr}(G) \\leq 2k^2 $ for graphs with pairwise crossing number $ k $ , which was later improved by Valtr~[V05] to $ O(k^2/ \\log(k)) $ and by T\u00f3th~[T08] to $ O(k^2/ \\log^2(k)) $ .",
+    "references_text": "- *[PT] J\u00e1nos Pach, G\u00e9za T\u00f3th, Which crossing number is it anyway?, Journal of Combinatorial Theory Series B 80 (2000), no. 2, 225--246. MathSciNet\n- [V05] Pavel Valtr, On the pair-crossing number, Combinatorial and computational geometry, 52 (2005), 569--575. MathSciNet\n- [T08] G\u00e9za T\u00f3th, Note on the pair-crossing number and the odd-crossing number, Discrete Comput. Geom., 39 (2008), no. 4, 791--799. MathSciNet"
+  },
+  "started": "2026-09-16T18:34:06Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

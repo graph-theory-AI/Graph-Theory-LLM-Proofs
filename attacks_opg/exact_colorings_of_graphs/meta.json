@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "exact_colorings_of_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Exact colorings of graphs",
+    "paper": "http://www.openproblemgarden.org/op/exact_colorings_of_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/exact_colorings_of_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "exact_colorings_of_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/exact_colorings_of_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/exact_colorings_of_graphs",
+    "catalog_title": "Exact colorings of graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2010-06-29",
+    "authors": "Erickson, Martin",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture For $ c \\geq m \\geq 1 $ , let $ P(c,m) $ be the statement that given any exact $ c $ -coloring of the edges of a complete countably infinite graph (that is, a coloring with $ c $ colors all of which must be used at least once), there exists an exactly $ m $ -colored countably infinite complete subgraph. Then $ P(c,m) $ is true if and only if $ m=1 $ , $ m=2 $ , or $ c=m $ .",
+    "context_text": "Stacey and Weidl have shown that given $ m \\geq 3 $ , there is an integer $ C(m) $ such that $ P(c,m) $ is false for all $ c \\geq C(m) $ .",
+    "references_text": "- * M. Erickson, ``A Conjecture Concerning Ramsey's Theorem,'' Discrete Mathematics 126, 395--398 (1994); MR 95b:05209\n- A. Stacey and P. Weidl, \"The Existence of Exactly m-Coloured Complete Subgraphs,\" J. of Combinatorial Theory, Series B 75, 1-18 (1999)"
+  },
+  "started": "2026-09-16T17:37:54Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

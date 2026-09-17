@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "splitting_a_digraph_with_minimum_outdegree_constraints",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Splitting a digraph with minimum outdegree constraints",
+    "paper": "http://www.openproblemgarden.org/op/splitting_a_digraph_with_minimum_outdegree_constraints",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/splitting_a_digraph_with_minimum_outdegree_constraints/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Directed Graphs"
+  },
+  "dossier_meta": {
+    "id": "splitting_a_digraph_with_minimum_outdegree_constraints",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/splitting_a_digraph_with_minimum_outdegree_constraints/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/splitting_a_digraph_with_minimum_outdegree_constraints",
+    "catalog_title": "Splitting a digraph with minimum outdegree constraints",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2013-03-01",
+    "authors": "Alon, Noga",
+    "subject": "Graph Theory \u00bb Directed Graphs",
+    "statement_text": "Problem Is there a minimum integer $ f(d) $ such that the vertices of any digraph with minimum outdegree $ d $ can be partitioned into two classes so that the minimum outdegree of the subgraph induced by each class is at least $ d $ ?",
+    "context_text": "Thomassen [T] proved the conjecture when $ d=1 $ and showed $ f(1)=3 $ . In fact, this case is equivalent to the case $ k=2 $ of the Bermond-Thomassen Conjecture . The existence of the corresponding function $ f $ for the undirected analogue is easy and has been observed by many authors. Stiebitz [S] even proved the following tight result: if the minimum degree of an undirected graph $ G $ is $ d_1+d_2+ \\cdots + d_k $ , where each $ d_i $ is a non-negative integer, then the vertex set of $ G $ can be partitioned into $ k $ pairwise disjoint sets $ V_1,\\dots , V_k $ , so that for all $ i $ , the induced subgraph on $ V_i $ has minimum degree at least $ d_i $ . This is clearly tight, as shown by an appropriate complete graph.",
+    "references_text": "- *[A] Noga Alon, Disjoint Directed Cycles, Journal of Combinatorial Theory, Series B, 68 (1996), no. 2, 167-178.\n- [S] M. Stiebitz, Decomposing graphs under degree constraints, J. Graph Theory 23 (1996), 31-324.\n- [T] C. Thomassen, Disjoint cycles in digraphs, Combinatorica 3 (1983), 393 - 396."
+  },
+  "started": "2026-09-16T19:20:52Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

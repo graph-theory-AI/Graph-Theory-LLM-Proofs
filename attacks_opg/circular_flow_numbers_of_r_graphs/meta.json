@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "circular_flow_numbers_of_r_graphs",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Circular flow numbers of $r$-graphs",
+    "paper": "http://www.openproblemgarden.org/op/circular_flow_numbers_of_r_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/circular_flow_numbers_of_r_graphs/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "circular_flow_numbers_of_r_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/circular_flow_numbers_of_r_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/circular_flow_numbers_of_r_graphs",
+    "catalog_title": "Circular flow numbers of $r$-graphs",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2015-08-06",
+    "authors": "Steffen, Eckhard",
+    "subject": "Graph Theory",
+    "statement_text": "A nowhere-zero $ r $ -flow $ (D(G),\\phi) $ on $ G $ is an orientation $ D $ of $ G $ together with a function $ \\phi $ from the edge set of $ G $ into the real numbers such that $ 1 \\leq |\\phi(e)| \\leq r-1 $ , for all $ e \\in E(G) $ , and $ \\sum_{e \\in E^+(v)}\\phi(e) = \\sum_{e \\in E^-(v)}\\phi(e), \\textrm{ for all } v \\in V(G) $ . A $ (2t+1) $ -regular graph $ G $ is a $ (2t+1) $ -graph if $ |\\partial_G(X)| \\geq 2t+1 $ for every $ X \\subseteq V(G) $ with $ |X| $ odd. Conjecture Let $ t > 1 $ be an integer. If $ G $ is a $ (2t+1) $ -graph, then $ F_c(G) \\leq 2 + \\frac{2}{t} $ .",
+    "context_text": "Since every $ (2t+1) $ -regular class 1 graph is a $ (2t+1) $ -graph, the truth of this conjecture would imply the truth of the conjecture on the circular flow number of regular class 1 graphs. If it is true for even $ t $ , say $ t=2t' $ , then Jaeger's modular orientation conjecture is true for $ (4t'+1) $ -regular graphs and hence, by a result of Jaeger, it would imply the truth of Tutte's 5-flow conjecture. For $ t=2 $ it is Tutte's 3-flow conjecture.",
+    "references_text": "- *[ES_2015]E. Steffen, Edge-colorings and circular flow numbers on regular graphs, J. Graph Theory 79, 1\u20137, 2015"
+  },
+  "started": "2026-09-16T17:15:08Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

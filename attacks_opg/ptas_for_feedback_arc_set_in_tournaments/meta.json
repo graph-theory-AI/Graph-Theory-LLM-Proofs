@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "ptas_for_feedback_arc_set_in_tournaments",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "PTAS for feedback arc set in tournaments",
+    "paper": "http://www.openproblemgarden.org/op/ptas_for_feedback_arc_set_in_tournaments",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/ptas_for_feedback_arc_set_in_tournaments/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Algorithms"
+  },
+  "dossier_meta": {
+    "id": "ptas_for_feedback_arc_set_in_tournaments",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/ptas_for_feedback_arc_set_in_tournaments/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/ptas_for_feedback_arc_set_in_tournaments",
+    "catalog_title": "PTAS for feedback arc set in tournaments",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-15",
+    "authors": "Ailon, Nir, Alon, Noga",
+    "subject": "Graph Theory \u00bb Graph Algorithms",
+    "statement_text": "Question Is there a polynomial time approximation scheme for the feedback arc set problem for the class of tournaments?",
+    "context_text": "A tournament is an orientation of a complete graph. A feedback arc set is a set of arcs in a digraph whose removal leave the digraph acyclic. The feedback arc set problem consists in finding a feedback arc set of minimum size. A polynomial time approximation scheme is an algorithm which takes an instance of an optimization problem and a parameter $ \\epsilon > 0 $ and, in polynomial time, produces a solution that is within a factor $ 1+\\epsilon $ of being optimal. The feedback arc set problem has been proved NP-hard. See [ACM, A, CTY, C]. It was shown in [RS] that the feedback arc set problem is fixed parameter tractable for tournaments.",
+    "references_text": "- *[AA] N. Ailon, N. Alon, link, Inform. and Comput. 205 (8) (2007) 1117\u20131129.\n- [ACM] N. Alion, M. Charikar, A. Newman, Aggregating inconsistent information: Ranking and clustering, in: Proceedings of the 37th Symposium on the Theory of Computing, STOC, ACM Press, 2005, pp. 684\u2013693.\n- [A] N. Alon, Ranking tournaments, SIAM J. Discrete Math. 20 (2006) 137\u2013142.\n- [CTY] P. Charbit, P. Thomass\u00e9, A. Yeo, The minimum Feedback arc set problem is NP-hard for tournaments, Combin. Probab. Comput. 16 (1) (2007) 1\u20134.\n- [C] V. Conitzer, Computing Slater rankings using similarities among candidates, in: Proceedings, The Twenty-First National Conference on Artificial Intelligence and the Eighteenth Innovative Applications of Artificial Intelligence Conference, July 16\u201320, AAAI Press, Boston, Massachusetts, USA, 2006.\n- [RS] V. Raman, S. Saurabh, Parameterized complexity of directed feedback arc set problems in tournaments, in: Algorithms and Data Structures, in: Lecture Notes in Computer Science, vol. 2748, Springer, Berlin, 2003, pp. 484\u2013492."
+  },
+  "started": "2026-09-16T18:11:54Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

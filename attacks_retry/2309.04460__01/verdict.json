@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I construct properly coloured regular graphs with arbitrarily large degree/log n and strong vanishing-profile robustness, but no colour-separated connected spanning pair.",
+  "would_publish": false,
+  "caveats": "The source's quantitative definition of robust sublinear expander is not supplied or verified; constant-fraction cut resilience instead gives an affirmative theorem.",
+  "id": "2309.04460__01",
+  "model": "gpt-6-astra",
+  "usd": 1.064505,
+  "eur": 1.102609,
+  "elapsed_s": 866.0,
+  "status": "completed",
+  "response_id": "resp_0c5d8f92f467386d006aab032627a087d29fcdd941ea029c83",
+  "when": "2026-09-16T21:13:42Z"
+}

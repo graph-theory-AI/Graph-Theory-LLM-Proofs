@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The full conjecture was disproved by Kochol (2009), using snarks with polyhedral embeddings in orientable surfaces.",
+  "would_publish": false,
+  "caveats": "Literature-based resolution using the published result identified in the supplied catalog; no explicit embedding is reconstructed here.",
+  "id": "grunbaums_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.11591,
+  "eur": 0.120059,
+  "elapsed_s": 118.0,
+  "status": "completed",
+  "response_id": "resp_092ed7b162fed05f006aaae5dc762c87d2bbd480c70ce3f746",
+  "when": "2026-09-16T18:56:18Z"
+}

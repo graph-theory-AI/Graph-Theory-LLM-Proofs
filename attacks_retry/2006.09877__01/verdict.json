@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove bounded twin-width for subgraphs of bounded-ply Euclidean ball-intersection graphs with arbitrary radii, and an elementary O(sqrt(n)) bound for arbitrary polynomial-expansion classes.",
+  "would_publish": false,
+  "caveats": "The geometric special case does not cover arbitrary polynomial-expansion classes; no novelty claim is made.",
+  "id": "2006.09877__01",
+  "model": "gpt-6-astra",
+  "usd": 0.933425,
+  "eur": 0.966837,
+  "elapsed_s": 1068.0,
+  "status": "completed",
+  "response_id": "resp_03db8ab7797f9772006aab4ea3e47487d29b06e9c0dbe79ea0",
+  "when": "2026-09-17T02:39:11Z"
+}

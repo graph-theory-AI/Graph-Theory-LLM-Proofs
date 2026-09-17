@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For cographs, I prove the conjecture with C=4 and d=8, with optimal asymptotic powers for the set size and edit tolerance when multiplicative constants are allowed.",
+  "would_publish": false,
+  "caveats": "The arbitrary hereditary-family case remains unresolved; constants are not optimized, and novelty of this special-case result is not asserted.",
+  "id": "2403.08303__00",
+  "model": "gpt-6-astra",
+  "usd": 0.752275,
+  "eur": 0.779203,
+  "elapsed_s": 728.8,
+  "status": "completed",
+  "response_id": "resp_00567401219fff38006aaaf8d9793487d2a701aa986542cd7b",
+  "when": "2026-09-16T20:27:30Z"
+}

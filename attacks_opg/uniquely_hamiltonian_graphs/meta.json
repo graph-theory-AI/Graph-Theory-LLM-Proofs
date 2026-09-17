@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "uniquely_hamiltonian_graphs",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "r-regular graphs are not uniquely hamiltonian.",
+    "paper": "http://www.openproblemgarden.org/op/uniquely_hamiltonian_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/uniquely_hamiltonian_graphs/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Cycles"
+  },
+  "dossier_meta": {
+    "id": "uniquely_hamiltonian_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/uniquely_hamiltonian_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/uniquely_hamiltonian_graphs",
+    "catalog_title": "r-regular graphs are not uniquely hamiltonian.",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-07-24",
+    "authors": "Sheehan, John",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Cycles",
+    "statement_text": "Conjecture If $ G $ is a finite $ r $ -regular graph, where $ r > 2 $ , then $ G $ is not uniquely hamiltonian.",
+    "context_text": "(Reproduced from [M].) A graph $ G $ is said to be uniquely hamiltonian if it contains precisely one Hamiltonian cycle . This conjecture has been proved for all odd values of $ r $ [T] and for all even values of $ r > 23 $ [H]. By Petersen's theorem, it would suffice to prove it for $ r = 4 $ .",
+    "references_text": "- [H] P. Haxell, Oberwolfach reports, 2006.\n- [M] Bojan Mohar, Problem of the Month\n- *[S] John Sheehan: The multiplicity of Hamiltonian circuits in a graph. Recent advances in graph theory (Proc. Second Czechoslovak Sympos., Prague, 1974), pp. 477-480. Academia, Prague, 1975, MathSciNet\n- [T] A.G. Thomason, Hamiltonian cycles and uniquely edge colourable graphs. Advances in graph theory (Cambridge Combinatorial Conf., Trinity College, Cambridge, 1977). Ann. Discrete Math. 3 (1978), Exp. No. 13, 3 pp."
+  },
+  "started": "2026-09-16T19:27:25Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

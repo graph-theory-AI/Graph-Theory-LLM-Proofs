@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The conjecture is true in full, as the supplied catalog reports, and a self-contained proof is given below.",
+  "would_publish": false,
+  "caveats": "Finite simple undirected graphs are assumed; no novelty is claimed, and historical attribution follows the supplied catalog.",
+  "id": "laplacian_degrees_of_a_graph",
+  "model": "gpt-6-astra",
+  "usd": 0.914705,
+  "eur": 0.947447,
+  "elapsed_s": 690.0,
+  "status": "completed",
+  "response_id": "resp_09b3eaf8e284ae54006aaad72b5ad487d2b047ce76a337f3f4",
+  "when": "2026-09-16T18:03:09Z"
+}

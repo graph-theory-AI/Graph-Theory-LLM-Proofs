@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I determine phi(3,b) for 2 <= b <= 9, including phi(3,7)=phi(3,8)=2 and phi(3,9)=3, but do not obtain a general formula.",
+  "would_publish": false,
+  "caveats": "Novelty relative to the cited preprint is unverified; the general problem, and even phi(3,10), remain unresolved here.",
+  "id": "list_colourings_of_complete_multipartite_graphs_with_2_big_parts",
+  "model": "gpt-6-astra",
+  "usd": 1.906955,
+  "eur": 1.975214,
+  "elapsed_s": 1750.6,
+  "status": "completed",
+  "response_id": "resp_0111946cc0149a74006aab21cd1cac87d282d038f9ceda74f7",
+  "when": "2026-09-16T23:39:15Z"
+}

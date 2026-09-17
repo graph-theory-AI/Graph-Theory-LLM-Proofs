@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For k=4, I prove an O(n^{2/3}) robustness bound and exclude graphs with independence number at most 4, without resolving existence.",
+  "would_publish": false,
+  "caveats": "Only necessary conditions are proved; novelty and the catalog's 2025 literature update are not independently verified.",
+  "id": "2310.12891__00",
+  "model": "gpt-6-astra",
+  "usd": 1.126715,
+  "eur": 1.167046,
+  "elapsed_s": 822.5,
+  "status": "completed",
+  "response_id": "resp_050ae2a9c0893bd0006aaaf5a2710487d2b3d84d7385459dcf",
+  "when": "2026-09-16T20:15:20Z"
+}

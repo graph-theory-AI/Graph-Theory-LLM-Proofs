@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "turan_number_of_a_finite_family",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Tur\u00e1n number of a finite family.",
+    "paper": "http://www.openproblemgarden.org/op/turan_number_of_a_finite_family",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/turan_number_of_a_finite_family/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "turan_number_of_a_finite_family",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/turan_number_of_a_finite_family/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/turan_number_of_a_finite_family",
+    "catalog_title": "Tur\u00e1n number of a finite family.",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2013-03-05",
+    "authors": "Erdos, Paul, Simonovits, Miklos",
+    "subject": "Graph Theory",
+    "statement_text": "Given a finite family $ {\\cal F} $ of graphs and an integer $ n $ , the Tur\u00e1n number $ ex(n,{\\cal F}) $ of $ {\\cal F} $ is the largest integer $ m $ such that there exists a graph on $ n $ vertices with $ m $ edges which contains no member of $ {\\cal F} $ as a subgraph. Conjecture For every finite family $ {\\cal F} $ of graphs there exists an $ F\\in {\\cal F} $ such that $ ex(n, F ) = O(ex(n, {\\cal F})) $ .",
+    "context_text": "For the case when $ {\\cal F} $ consists of even cycles, this would mean that (up to constants) the Tur\u00e1n number of $ {\\cal F} $ is given by that of the longest cycle in $ {\\cal F} $ . Verstra\u00ebte (see [KO]) conjectured something stronger: Conjecture For all integers $ k < \\ell $ there exists a positive c = c(\\ell) such that every $ C_{2\\ell} $ -free graph $ G $ has a $ C_{2k} $ -free subgraph $ H $ with $ e(H) \u2265 e(G)/c $ . This conjecture was motivated by a result of Gy\u00f6ri [G] who showed that every bipartite $ C_6 $ -free graph $ G $ has a $ C_4 $ -free subgraph which contains at least half of the edges of $ G $ . The case $ k=2 $ was proved in [KO].",
+    "references_text": "- *[ES] P.Erd\u00f6s and M. Simonovits, Compactness results in extremal graph theory, Combinatorica 2 (1982), 275\u2013288.\n- [KO] D. K\u00fchn and D. Osthus, 4-cycles in graphs without a given even cycle, J. Graph Theory 48 (2005), 147-156.\n- [G] E. Gy\u00f6ri, -free bipartite graphs and product representation of squares, Discrete Math. 165/166 (1997), 371-375."
+  },
+  "started": "2026-09-16T18:26:27Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

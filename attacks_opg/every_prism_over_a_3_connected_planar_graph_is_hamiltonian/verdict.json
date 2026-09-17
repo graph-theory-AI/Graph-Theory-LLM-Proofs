@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The conjecture is false: the supplied literature record identifies \u0160pacapan\u2019s published construction of a 3-connected planar graph with a non-Hamiltonian prism.",
+  "would_publish": false,
+  "caveats": "This is a literature-based resolution; I have not independently inspected or reconstructed the counterexample.",
+  "id": "every_prism_over_a_3_connected_planar_graph_is_hamiltonian",
+  "model": "gpt-6-astra",
+  "usd": 0.14459,
+  "eur": 0.149766,
+  "elapsed_s": 143.1,
+  "status": "completed",
+  "response_id": "resp_0a20977e35028fd2006aaad3a115d087d2b7b6f9c84c2333d3",
+  "when": "2026-09-16T17:38:55Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An induced-matching reformulation gives a polynomial saving in every fixed-characteristic vector-space analogue, but not an unconditional saving for subsets of [n].",
+  "would_publish": false,
+  "caveats": "The integer problem remains unresolved; the saving is not uniform in the characteristic, and no novelty claim is made for the finite-field result.",
+  "id": "2004.10180__01",
+  "model": "gpt-6-astra",
+  "usd": 1.165905,
+  "eur": 1.207638,
+  "elapsed_s": 943.4,
+  "status": "completed",
+  "response_id": "resp_0c2348109aa499e6006aab4e7c4e4887d2a1c87e95601b98ac",
+  "when": "2026-09-17T02:36:27Z"
+}

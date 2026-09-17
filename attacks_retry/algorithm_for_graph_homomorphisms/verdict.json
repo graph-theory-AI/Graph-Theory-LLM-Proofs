@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "There is a polynomial-time reduction from N-vertex maximum-degree-five 3-coloring to balanced, connected homomorphism instances of order \u0398(N/log N).",
+  "would_publish": false,
+  "caveats": "This is an unconditional reduction, not an unconditional nonexistence proof; its ETH interpretation is conditional, and no literature novelty is claimed.",
+  "id": "algorithm_for_graph_homomorphisms",
+  "model": "gpt-6-astra",
+  "usd": 0.87275,
+  "eur": 0.90399,
+  "elapsed_s": 783.8,
+  "status": "completed",
+  "response_id": "resp_089667be62d1cd98006aab121a402887d2af7488fe45b62f7f",
+  "when": "2026-09-16T22:16:09Z"
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "jaegers_modular_orientation_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Jaeger's modular orientation conjecture",
+    "paper": "http://www.openproblemgarden.org/op/jaegers_modular_orientation_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/jaegers_modular_orientation_conjecture/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Nowhere-zero flows"
+  },
+  "dossier_meta": {
+    "id": "jaegers_modular_orientation_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/jaegers_modular_orientation_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/jaegers_modular_orientation_conjecture",
+    "catalog_title": "Jaeger's modular orientation conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-03-07",
+    "authors": "Jaeger, Francois",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Nowhere-zero flows",
+    "statement_text": "Conjecture Every $ 4k $ - edge-connected graph can be oriented so that $ {\\mathit indegree}(v) - {\\mathit outdegree}(v) \\cong 0 $ (mod $ 2k+1 $ ) for every vertex $ v $ .",
+    "context_text": "Jaeger called an orientation with the above property a modular $ (2k+1) $ - orientation , and observed that a graph has a modular $ (2k+1) $ -orientation if and only if it has a $ (2+\\frac{1}{k}) $ -flow. Thus, this conjecture may be seen as a sharp form of the 2+epsilon flow conjecture . For k=1, this problem is precisely the 3-flow conjecture , and for k=2, Jaeger showed that this conjecture (if true) would imply the 5-flow conjecture . If true, this conjecture would be best possible for every value of k. The restriction of this conjecture to planar graphs is open, and has a dual formulation. See Mapping planar graphs to odd cycles .",
+    "references_text": "- [J] F. Jaeger, On circular flows in graphs. Finite and infinite sets, Vol. I, II (Eger, 1981), 391--402, Colloq. Math. Soc. J\u00e1nos Bolyai, 37, North-Holland, Amsterdam, 1984.. MathSciNet"
+  },
+  "started": "2026-09-16T18:58:25Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

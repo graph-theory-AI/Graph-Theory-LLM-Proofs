@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For fixed d >= 2, any polynomial bound for P_p-free graphs with p >= 5 must have degree at least floor(p/2), and a bounded-independence special case is proved.",
+  "would_publish": false,
+  "caveats": "General existence is not proved; no novelty or verification of the catalog's later-paper lead is claimed.",
+  "id": "2202.05557__01",
+  "model": "gpt-6-astra",
+  "usd": 1.14417,
+  "eur": 1.185125,
+  "elapsed_s": 899.8,
+  "status": "completed",
+  "response_id": "resp_01170211cb29e2a7006aaaf294f66087d2bca6aa3a6758c942",
+  "when": "2026-09-16T20:03:35Z"
+}

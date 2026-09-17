@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "good_edge_labelings",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Good Edge Labelings",
+    "paper": "http://www.openproblemgarden.org/op/good_edge_labelings",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/good_edge_labelings/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Labeling"
+  },
+  "dossier_meta": {
+    "id": "good_edge_labelings",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/good_edge_labelings/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/good_edge_labelings",
+    "catalog_title": "Good Edge Labelings",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2011-06-30",
+    "authors": "Ara\u00fajo, Julio, Cohen, Nathann, Giroire, Fr\u00e9d\u00e9ric, Havet, Fr\u00e9d\u00e9ric",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Labeling",
+    "statement_text": "Question What is the maximum edge density of a graph which has a good edge labeling? We say that a graph is good-edge-labeling critical , if it has no good edge labeling, but every proper subgraph has a good edge labeling. Conjecture For every $ c<4 $ , there is only a finite number of good-edge-labeling critical graphs with average degree less than $ c $ .",
+    "context_text": "Let $ G $ be a finite undirected simple graph. A good edge labeling of $ G $ is an assignment of distinct numbers to the edges such that every cycle has at least two local maxima. (The distinctness of the labels is required only to make the term `local maximum' unambiguous.) Equivalently, a labeling of the edges is good, if for every pair of distinct vertices $ u,v $ , there is at most one increasing path from $ u $ to $ v $ . Having a good edge labeling is inherited by subgraphs. It is easy to verify that the graphs $ K_3 $ and $ K_{2,3} $ have no good edge labeling. In [ACGH2] an infinite class of graphs without good edge labelings is given, none of whom is a subgraph of the other. In [BFT] contains an example of a minimal graph without good edge labeling which as average degree < 3 (thus refuting an earlier conjecture saying that a good-edge-labeling critical graph with average degree less than three is either $ K_3 $ or $ K_{2,3} $ ). In that same paper it is shown that every such graph must have girth at most 4. Good edge labeling of graphs was introduced in [BCP] in the context of the so-called Routing and Wavelength Assignment (RWA) problem. The problems above are proposed in [ACGH1] and [ACGH2]. There the algorithmic problem of determining whether a graph has a good edge labeling is shown to be NP-hard. Moreover, the authors also prove that every planar graph with girth at least six has a good edge labeling.",
+    "references_text": "- [BCP] J-C. Bermond, M. Cosnard, and S. P\u00e9rennes. Directed acyclic graphs with unique path property. Technical report 6932, INRIA, May 2009\n- [ACGH1] J. Ara\u00fajo, N. Cohen, F. Giroire, F. Havet. Good edge-labelling of graphs. (English summary) LAGOS'09\u2014V Latin-American Algorithms, Graphs and Optimization Symposium, 275\u2013280, Electron. Notes Discrete Math., 35, Elsevier Sci. B. V., Amsterdam, 2009. MathSciNet\n- [ACGH2*] J. Araujo, N. Cohen, F. Giroire, and F. Havet. Good edge-labelling of graphs. Research Report 6934, INRIA, 2009.\n- [BFT] M. Bode, B. Farzad, D.O. Theis. Good edge-labelings and graphs of girth at least 5. (arXiv:1109.1125)"
+  },
+  "started": "2026-09-16T17:40:11Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

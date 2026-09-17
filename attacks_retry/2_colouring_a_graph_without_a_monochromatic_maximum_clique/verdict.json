@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove that every four-colouring of an induced seven-antihole extends over a 2-choosable remainder in a (K4,C5)-free graph, giving a restricted case that includes arbitrary forest remainders.",
+  "would_publish": false,
+  "caveats": "The full conjecture remains unresolved here; novelty of the extension theorem has not been checked, and the substantive statement excludes edgeless graphs.",
+  "id": "2_colouring_a_graph_without_a_monochromatic_maximum_clique",
+  "model": "gpt-6-astra",
+  "usd": 1.5906,
+  "eur": 1.647535,
+  "elapsed_s": 1164.7,
+  "status": "completed",
+  "response_id": "resp_04f9a8416fcec057006aab10b1bc0087d299a2eed5242e88df",
+  "when": "2026-09-16T22:16:30Z"
+}

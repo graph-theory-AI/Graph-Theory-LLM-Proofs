@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove that deleting at most half of the degree-at-least-five vertices of the 4-core makes a planar graph partitionable into two induced forests, improving the previous core-sensitive bound.",
+  "would_publish": false,
+  "caveats": "This is not a uniform improvement on 2n/5 and does not resolve the conjecture; novelty of the partial result is not claimed.",
+  "id": "large_induced_forest_in_a_planar_graph",
+  "model": "gpt-6-astra",
+  "usd": 1.33408,
+  "eur": 1.381833,
+  "elapsed_s": 1750.2,
+  "status": "completed",
+  "response_id": "resp_026e7d566f1036e8006aab20b5826c87d28a40fe84fc8efbdc",
+  "when": "2026-09-16T23:34:35Z"
+}

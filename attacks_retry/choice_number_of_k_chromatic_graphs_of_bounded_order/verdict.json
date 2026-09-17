@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The exact m=4 bound holds when the total shortfall of color classes smaller than four is sufficiently large compared with both the number of oversized classes and log k.",
+  "would_publish": false,
+  "caveats": "This is a sufficient condition on color-class sizes, not a resolution of m=4 or the full conjecture; no novelty claim is made.",
+  "id": "choice_number_of_k_chromatic_graphs_of_bounded_order",
+  "model": "gpt-6-astra",
+  "usd": 1.05777,
+  "eur": 1.095633,
+  "elapsed_s": 902.5,
+  "status": "completed",
+  "response_id": "resp_0d3cea148d631304006aab152a2cdc87d2bc195b39f8310a9e",
+  "when": "2026-09-16T22:31:12Z"
+}

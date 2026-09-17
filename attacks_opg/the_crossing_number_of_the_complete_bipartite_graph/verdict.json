@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured lower bound holds for drawings with at most four rotation types left after reverse-rotation cancellation, but the unrestricted conjecture is not resolved.",
+  "would_publish": false,
+  "caveats": "Structural special case only; no novelty claim or improvement of the unrestricted bounds.",
+  "id": "the_crossing_number_of_the_complete_bipartite_graph",
+  "model": "gpt-6-astra",
+  "usd": 0.79574,
+  "eur": 0.824223,
+  "elapsed_s": 640.2,
+  "status": "completed",
+  "response_id": "resp_0f95fb47db21d160006aaaecf53a5087d2bcb3067474fab955",
+  "when": "2026-09-16T19:35:17Z"
+}

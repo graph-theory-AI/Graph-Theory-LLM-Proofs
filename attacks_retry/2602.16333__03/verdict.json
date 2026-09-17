@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The ratio is less than 4 for every connected Cayley digraph of a finite group with an abelian subgroup of index two, and less than 2 for the subclass described below.",
+  "would_publish": false,
+  "caveats": "This does not settle arbitrary vertex-transitive digraphs, and novelty of these special cases has not been checked.",
+  "id": "2602.16333__03",
+  "model": "gpt-6-astra",
+  "usd": 1.502805,
+  "eur": 1.556598,
+  "elapsed_s": 1383.5,
+  "status": "completed",
+  "response_id": "resp_038805dd4849ceea006aab3b6bf6a487d2a21849c309e855aa",
+  "when": "2026-09-17T01:22:27Z"
+}

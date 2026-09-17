@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured order holds when the graph order is a fixed multiple of its minimum degree, with a sharp leading asymptotic in the dense Dirac regime.",
+  "would_publish": false,
+  "caveats": "The constants are not uniform as |V(G)|/\u03b4(G) grows, so the unrestricted conjecture remains unresolved; literature novelty of these special cases has not been checked.",
+  "id": "2502.04726__00",
+  "model": "gpt-6-astra",
+  "usd": 1.01145,
+  "eur": 1.047655,
+  "elapsed_s": 1412.0,
+  "status": "completed",
+  "response_id": "resp_00d17c447f5e0407006aab0d038ab487d2899746a4612e7d3f",
+  "when": "2026-09-16T22:04:55Z"
+}

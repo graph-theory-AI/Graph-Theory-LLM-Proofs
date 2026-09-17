@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A stronger transversal theorem holds when each strongly connected component is Hamiltonian or becomes acyclic after deleting one vertex.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not resolved; novelty of these special cases has not been verified.",
+  "id": "stable_set_meeting_all_longest_directed_paths",
+  "model": "gpt-6-astra",
+  "usd": 1.15403,
+  "eur": 1.195338,
+  "elapsed_s": 1107.6,
+  "status": "completed",
+  "response_id": "resp_0d2285996e2a54f9006aab278bcae087d284aed034a275f01a",
+  "when": "2026-09-16T23:53:03Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A thin-tree and circulation argument gives an explicit O(log n / log log n) connectivity bound for Eulerian digraphs, but does not yield an absolute bound for general digraphs.",
+  "would_publish": false,
+  "caveats": "The result is restricted to Eulerian digraphs and its bound grows with n; novelty of this partial result is not claimed.",
+  "id": "arc_disjoint_strongly_connected_spanning_subdigraphs",
+  "model": "gpt-6-astra",
+  "usd": 1.119955,
+  "eur": 1.160044,
+  "elapsed_s": 845.7,
+  "status": "completed",
+  "response_id": "resp_08009434299db9df006aaacd2d2cf887d29bbfeaf3bfdd852f",
+  "when": "2026-09-16T17:23:06Z"
+}

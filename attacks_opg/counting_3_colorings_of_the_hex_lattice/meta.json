@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "counting_3_colorings_of_the_hex_lattice",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Counting 3-colorings of the hex lattice",
+    "paper": "http://www.openproblemgarden.org/op/counting_3_colorings_of_the_hex_lattice",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/counting_3_colorings_of_the_hex_lattice/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "counting_3_colorings_of_the_hex_lattice",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/counting_3_colorings_of_the_hex_lattice/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/counting_3_colorings_of_the_hex_lattice",
+    "catalog_title": "Counting 3-colorings of the hex lattice",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2008-07-05",
+    "authors": "Thomassen, Carsten",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Problem Find $ \\lim_{n \\rightarrow \\infty} (\\chi( H_n , 3)) ^{ 1 / |V(H_n)| } $ .",
+    "context_text": "We'll begin by putting in place the necessary notation. Let $ {\\mathcal T} $ be the regular triangular tiling of the plane. For every $ n \\ge 1 $ there is a regular map which triangulates the torus, denoted $ T_n $ , which may be obtained from a regular hexagonal piece of $ {\\mathcal T} $ of side-length $ n $ by identifying points on opposite edges of this hexagon. Let $ H_n $ be the dual of $ T_n $ (on the torus). Then $ H_n $ is a regular map on the torus - a hexagonal tiling. One last definition: for any graph $ G $ and any positive integer $ k $ we let $ \\chi(G,k) $ denote the number of proper $ k $ -coloring of $ G $ . A famous theorem of Lieb [L] shows that $ \\lim_{n \\rightarrow \\infty} (\\chi(Q_n,3))^{1 / |V(Q_n)|} = (\\frac{4}{3})^{3/2} $ where $ Q_n $ denotes the $ n \\times n $ quadrangulation of the torus. This theorem is usually stated in terms of Eulerian orientations, and is of interest to physicists as the constant $ (\\frac{4}{3})^{3/2} $ (called Lieb's Ice Constant) determines the \"residual entropy for square ice\". Thomassen proved that every planar graph $ G $ with girth $ \\ge 5 $ has exponentially many proper 3-colorings. More precisely, he showed that $ (\\chi(G,3))^{ 1 / |V(G)| } \\ge 2 ^{1 / 10000} $ . This gives a lower bound on the limit in the above problem (assuming it exists).",
+    "references_text": "- [L] E. H. Lieb, Exact Solution of the Problem of the Entropy of Two-Dimensional Ice. Phys. Rev. Lett. 18, 692-694, 1967."
+  },
+  "started": "2026-09-16T17:22:00Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

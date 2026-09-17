@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A switching argument proves BEC when G1 is k-degenerate and (k\u22121)\u0394(G2)\u2264\u0394(G1), and yields a stronger degree-sequence criterion.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved, and no novelty claim is made for these elementary sufficient conditions.",
+  "id": "the_bollobas_eldridge_catlin_conjecture_on_graph_packing",
+  "model": "gpt-6-astra",
+  "usd": 0.717065,
+  "eur": 0.742732,
+  "elapsed_s": 722.6,
+  "status": "completed",
+  "response_id": "resp_0a1b3670fd07705f006aaaec4f1d4c87d28942d7707936ae77",
+  "when": "2026-09-16T19:33:53Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the conjectured upper-bound order for covers supported by fixed bounded-degree conflict templates, even with arbitrary changes on a bounded-degeneracy edge set, but not for unrestricted covers.",
+  "would_publish": false,
+  "caveats": "The templates must be fixed before sampling the graph; the unrestricted conjecture remains unresolved, and novelty of this restricted-model result is not claimed.",
+  "id": "2307.15048__00",
+  "model": "gpt-6-astra",
+  "usd": 0.74734,
+  "eur": 0.774091,
+  "elapsed_s": 948.9,
+  "status": "completed",
+  "response_id": "resp_07bb9761fd3688ff006aaafff7ef1487d2b446ff52e29c19d7",
+  "when": "2026-09-16T21:01:31Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove that a minimal counterexample has at most 18 vertices; the reported small-case verification further reduces the task to 1,584 explicit eighteen-vertex graphs.",
+  "would_publish": false,
+  "caveats": "The remaining finite verification was not executed here, and the referee report's alleged later full solution was not independently verified.",
+  "id": "2409.18220__00",
+  "model": "gpt-6-astra",
+  "usd": 1.576875,
+  "eur": 1.633319,
+  "elapsed_s": 1193.7,
+  "status": "completed",
+  "response_id": "resp_03e6362111e0c9d4006aaafff7e06487d290cacbfebc9bfbd9",
+  "when": "2026-09-16T21:05:35Z"
+}

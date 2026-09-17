@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A polynomial-time SPQR dynamic program, using a two-bin scheduling recurrence at parallel nodes, computes a minimum edge-outerplanar embedding.",
+  "would_publish": true,
+  "caveats": "Uses the standard SPQR decomposition theorem; novelty and current literature status have not been independently checked.",
+  "id": "finding_k_edge_outerplanar_graph_embeddings",
+  "model": "gpt-6-astra",
+  "usd": 0.972785,
+  "eur": 1.007606,
+  "elapsed_s": 1348.0,
+  "status": "completed",
+  "response_id": "resp_0cc08bbd940483c2006aaad40b63f487d29617d5477b402d74",
+  "when": "2026-09-16T18:00:47Z"
+}

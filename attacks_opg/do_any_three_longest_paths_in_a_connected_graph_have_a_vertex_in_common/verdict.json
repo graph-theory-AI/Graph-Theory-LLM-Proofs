@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for graphs of cyclomatic number at most three, and for any triple in which two paths have at most two common vertices.",
+  "would_publish": false,
+  "caveats": "Self-contained special cases only; no general resolution or novelty claim.",
+  "id": "do_any_three_longest_paths_in_a_connected_graph_have_a_vertex_in_common",
+  "model": "gpt-6-astra",
+  "usd": 0.916665,
+  "eur": 0.949477,
+  "elapsed_s": 713.0,
+  "status": "completed",
+  "response_id": "resp_0e2697444c2c826d006aaad1d60c2087d2835e1704b45098f4",
+  "when": "2026-09-16T17:40:46Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For s >= 1, only r = 2s+1, 2s+2, or 2s+3 are possible, with exact design characterizations and strong arithmetic restrictions in the latter two cases.",
+  "would_publish": false,
+  "caveats": "The supplied structural reduction checks out, but the residual design-existence families are not settled here; their current literature status has not been verified.",
+  "id": "2308.15387__04",
+  "model": "gpt-6-astra",
+  "usd": 1.108875,
+  "eur": 1.148567,
+  "elapsed_s": 829.2,
+  "status": "completed",
+  "response_id": "resp_084ed5291323cc18006aab02e1bd2087d281506f296917f13f",
+  "when": "2026-09-16T21:11:58Z"
+}

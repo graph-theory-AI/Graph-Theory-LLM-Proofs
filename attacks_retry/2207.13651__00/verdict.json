@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A half-interval decomposition of the vertex labels, followed by read-d H\u00f6lder bounds for uniform spacings, proves Property (*) throughout d = o(n/log n).",
+  "would_publish": true,
+  "caveats": "Literature priority has not been independently checked; graphs are finite, simple, and undirected.",
+  "id": "2207.13651__00",
+  "model": "gpt-6-astra",
+  "usd": 0.63215,
+  "eur": 0.654778,
+  "elapsed_s": 618.1,
+  "status": "completed",
+  "response_id": "resp_0597b8f0f8953d2b006aab588d149c87d2ace9e3f52768efc1",
+  "when": "2026-09-17T03:13:58Z"
+}

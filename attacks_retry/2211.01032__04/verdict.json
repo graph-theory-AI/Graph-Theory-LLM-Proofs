@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for every connected graph of cyclomatic number at most five, and a minimum-cycle-rank counterexample would have a bridgeless simple triangle-free cubic representative.",
+  "would_publish": false,
+  "caveats": "This uses the standard labelled signed-rotation-system model; cycle rank at least six remains unresolved, and literature novelty of the auxiliary identities has not been checked.",
+  "id": "2211.01032__04",
+  "model": "gpt-6-astra",
+  "usd": 1.51582,
+  "eur": 1.570078,
+  "elapsed_s": 2246.9,
+  "status": "completed",
+  "response_id": "resp_0acfab75070d65b5006aab0869bc1087d2b867756c75e205f3",
+  "when": "2026-09-16T21:59:12Z"
+}

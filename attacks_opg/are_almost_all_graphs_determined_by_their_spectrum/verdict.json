@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "With high probability, any orthogonal conjugation supported on at most n/2 - 3n/log n vertices that produces another graph is just a relabelling.",
+  "would_publish": false,
+  "caveats": "Only localized similarities are excluded; globally supported cospectral mates remain uncontrolled, and novelty is not claimed.",
+  "id": "are_almost_all_graphs_determined_by_their_spectrum",
+  "model": "gpt-6-astra",
+  "usd": 1.14651,
+  "eur": 1.187549,
+  "elapsed_s": 889.7,
+  "status": "completed",
+  "response_id": "resp_0afea944a64a842d006aaae102616487d2ac000ad22721b476",
+  "when": "2026-09-16T18:48:27Z"
+}

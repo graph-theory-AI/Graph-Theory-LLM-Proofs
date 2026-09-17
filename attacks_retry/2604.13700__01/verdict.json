@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every finite simple r-regular digraph satisfies dtw(D) >= ceil(3r/11), giving the improved interval 3/11 <= epsilon_* <= 1.",
+  "would_publish": false,
+  "caveats": "The optimal constant remains undetermined; simplicity is essential, and novelty against the full source paper has not been independently checked.",
+  "id": "2604.13700__01",
+  "model": "gpt-6-astra",
+  "usd": 1.286245,
+  "eur": 1.332286,
+  "elapsed_s": 1026.0,
+  "status": "completed",
+  "response_id": "resp_0b67c3413240f2a5006aab3ba0b93087d28199d0c34b101942",
+  "when": "2026-09-17T01:17:22Z"
+}

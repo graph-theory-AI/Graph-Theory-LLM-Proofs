@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "hamiltonicity_of_cayley_graphs",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Hamiltonicity of Cayley graphs",
+    "paper": "http://www.openproblemgarden.org/op/hamiltonicity_of_cayley_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonicity_of_cayley_graphs/",
+    "importance": "High",
+    "undergrad": true,
+    "subject": "Cycles"
+  },
+  "dossier_meta": {
+    "id": "hamiltonicity_of_cayley_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonicity_of_cayley_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/hamiltonicity_of_cayley_graphs",
+    "catalog_title": "Hamiltonicity of Cayley graphs",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2008-09-25",
+    "authors": "Rapaport-Strasser, E.",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Cycles",
+    "statement_text": "Question Is every Cayley graph Hamiltonian?",
+    "context_text": "This problem seems to have been first considered by Rapaport-Strasser [R]. Lovasz [L] conjectured more generally that every vertex-transitive graph is Hamiltonian. For a survey of results up to 1996, see [CG]. Although many specific Cayley graphs have been shown to be Hamiltonian, there are few general results. One exception is the theorem by Pak and Radoi\u010di\u0107 [PR] that every finite group $ G $ with at least three elements has a generating set $ S $ of size $ |S| \\le \\log_2|G| $ , such that the corresponding Cayley graph is Hamiltonian.",
+    "references_text": "- [CG] S. J. Curran, J. A. Gallian, Hamiltonian cycles and paths in Cayley graphs and digraphs\u2014a survey, Discrete Math. 156 (1996), 1\u201318.\n- [L] L. Lovasz, Problem 11, in \u201cCombinatorial structures and their applications,\u201d University of Calgary, Calgary, Alberta, Canada (1970), Gordon and Breach, New York.\n- [PR] I. Pak and R. Radoi\u010di\u0107, Hamiltonian paths in Cayley graphs, preprint.\n- *[R] E. Rapaport-Strasser, Cayley color groups and Hamilton lines, Scripta Math. 24 (1959), 51\u201358."
+  },
+  "started": "2026-09-16T16:47:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A direct argument gives an explicit \u03c7-bound for every forest whose nontrivial components are brooms, but does not settle arbitrary forests.",
+  "would_publish": false,
+  "caveats": "This addresses ordinary undirected chromatic number; no novelty or improvement over the best known bounds is claimed.",
+  "id": "1605.07411__00",
+  "model": "gpt-6-astra",
+  "usd": 0.71107,
+  "eur": 0.736523,
+  "elapsed_s": 623.5,
+  "status": "completed",
+  "response_id": "resp_03525284aa4d61dd006aaafbae305487d299f6584671f2b904",
+  "when": "2026-09-16T20:37:49Z"
+}

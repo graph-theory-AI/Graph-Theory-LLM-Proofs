@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A randomly sparsified directed-triangle blow-up gives the necessary bound f(k) >= (68/441)k^2 - O(k^(3/2)sqrt(log k)), improving the supplied obstruction constant.",
+  "would_publish": false,
+  "caveats": "This is only a lower bound, not a proof that f(k) exists; the constant is not claimed optimal, and novelty has not been checked.",
+  "id": "subdivision_of_a_transitive_tournament_in_digraphs_with_large_outdegree",
+  "model": "gpt-6-astra",
+  "usd": 1.27834,
+  "eur": 1.324098,
+  "elapsed_s": 1321.5,
+  "status": "completed",
+  "response_id": "resp_0fd8a7bca045c1e3006aab291187f887d2a224127ca858d02b",
+  "when": "2026-09-17T00:03:06Z"
+}

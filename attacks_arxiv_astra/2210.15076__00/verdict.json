@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An exact eventual finite-core reduction holds for general H, and a closed formula is obtained for K_{2,t} when s >= 12 and n is explicitly large.",
+  "would_publish": false,
+  "caveats": "This is not an all-parameter structural classification; overlap with the exact results in the listed follow-ups has not been verified.",
+  "id": "2210.15076__00",
+  "model": "gpt-6-astra",
+  "usd": 1.16016,
+  "eur": 1.201688,
+  "elapsed_s": 1037.4,
+  "status": "completed",
+  "response_id": "resp_00ff25400fda5cb7006aaaf29501b487d29de1b4c5fcd63f50",
+  "when": "2026-09-16T20:05:53Z"
+}

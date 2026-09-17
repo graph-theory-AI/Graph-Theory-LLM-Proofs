@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "weak_saturation_of_the_cube_in_the_clique",
+    "tier": 1,
+    "score": 1.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Weak saturation of the cube in the clique",
+    "paper": "http://www.openproblemgarden.org/op/weak_saturation_of_the_cube_in_the_clique",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/weak_saturation_of_the_cube_in_the_clique/",
+    "importance": "Low",
+    "undergrad": true,
+    "subject": "Extremal Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "weak_saturation_of_the_cube_in_the_clique",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/weak_saturation_of_the_cube_in_the_clique/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 1,
+    "score": 1.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/weak_saturation_of_the_cube_in_the_clique",
+    "catalog_title": "Weak saturation of the cube in the clique",
+    "importance": "Low \u272d",
+    "posted": "2016-04-06",
+    "authors": "Morrison, Natasha, Noel, Jonathan A.",
+    "subject": "Graph Theory \u00bb Extremal Graph Theory",
+    "statement_text": "Problem Determine $ \\text{wsat}(K_n,Q_3) $ .",
+    "context_text": "Given graphs $ G $ and $ H $ , let $ \\text{wsat}(G,H) $ denote the minimum number of edges in a subgraph $ F $ of $ G $ such that the edges of $ E(G)\\setminus E(F) $ can be added to $ F $ , one edge at a time, so that each edge completes a copy of $ H $ when it is added. Of course, if one can solve the problem above, then a natural next step is to determine $ \\text{wsat}(K_n,Q_m) $ for all $ n $ and $ m $ . Morrison, Noel and Scott [MNS] solved the related problem of determining $ \\text{wsat}(Q_d,Q_m) $ for all $ d $ and $ m $ .",
+    "references_text": "- [MNS] N. Morrison, J. A. Noel, A. Scott. Saturation in the hypercube and bootstrap percolation. To appear in Combin. Probab. Comput."
+  },
+  "started": "2026-09-16T16:42:24Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

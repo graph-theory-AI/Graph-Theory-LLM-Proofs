@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain a 12n\u00b2/\u03b4 rainbow path cover when the minimum degree \u03b4 is positive, and a 19n cover for every split graph, but not the unrestricted linear bound.",
+  "would_publish": false,
+  "caveats": "Finite simple graphs; connector edges may be reused between paths; novelty has not been checked.",
+  "id": "2301.08707__01",
+  "model": "gpt-6-astra",
+  "usd": 1.24181,
+  "eur": 1.28626,
+  "elapsed_s": 936.1,
+  "status": "completed",
+  "response_id": "resp_09d7278d20f0dc47006aab41d0159887d297e04c47446c9ae1",
+  "when": "2026-09-17T01:42:15Z"
+}

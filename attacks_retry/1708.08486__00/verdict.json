@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured exponential base 3 holds for affine images of low-degree polynomial graphs, but the unrestricted problem remains unresolved here.",
+  "would_publish": false,
+  "caveats": "The degree bound must be independent of the ambient dimension; no reduction of arbitrary extremal sets to this class is proved, and no novelty is claimed.",
+  "id": "1708.08486__00",
+  "model": "gpt-6-astra",
+  "usd": 1.07266,
+  "eur": 1.111056,
+  "elapsed_s": 850.2,
+  "status": "completed",
+  "response_id": "resp_03cb9a17382ea539006aab4468bafc87d2bdfaf45c067b3e42",
+  "when": "2026-09-17T01:51:54Z"
+}

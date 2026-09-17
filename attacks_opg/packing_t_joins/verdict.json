@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An exact formula yields the sharp bound floor((2k+1)/3) for four-terminal grafts with independent nonterminals, but does not resolve the general conjecture.",
+  "would_publish": false,
+  "caveats": "Restricted special case; no claim of novelty or improvement of the general bound.",
+  "id": "packing_t_joins",
+  "model": "gpt-6-astra",
+  "usd": 0.822885,
+  "eur": 0.85234,
+  "elapsed_s": 810.5,
+  "status": "completed",
+  "response_id": "resp_0cc86152c11ae00f006aaadac9082887d298633cd3f86747c3",
+  "when": "2026-09-16T18:20:35Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Burr\u2019s bound holds for all oriented trees of diameter at most three, with the sharp family-wide threshold 2k-4 for genuine antidirected double-stars.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not resolved here; novelty of these self-contained special-case arguments is not claimed.",
+  "id": "oriented_trees_in_n_chromatic_digraphs",
+  "model": "gpt-6-astra",
+  "usd": 1.147205,
+  "eur": 1.188269,
+  "elapsed_s": 880.6,
+  "status": "completed",
+  "response_id": "resp_00491d530cff913f006aaae8aef06c87d2aee46b46d4cf3e26",
+  "when": "2026-09-16T19:21:02Z"
+}

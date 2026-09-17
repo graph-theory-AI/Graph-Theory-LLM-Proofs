@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured bound holds for hypergraphs with no 2-edges and no two vertex-disjoint independent triples.",
+  "would_publish": false,
+  "caveats": "This proves only a restricted dense case, not the general t=3 case; novelty of the special case has not been checked.",
+  "id": "2206.13635__00",
+  "model": "gpt-6-astra",
+  "usd": 0.992415,
+  "eur": 1.027938,
+  "elapsed_s": 938.3,
+  "status": "completed",
+  "response_id": "resp_067f4a045c1b4798006aaaf3a4b0b887d2898cb42544482ebd",
+  "when": "2026-09-16T20:08:46Z"
+}

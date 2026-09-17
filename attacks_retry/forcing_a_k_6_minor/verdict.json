@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Matching contraction and Tutte\u2013Berge give a local short-cycle criterion for minimum degree seven, and show that minimum degree five suffices at girth at least five and six suffices without 4-cycles.",
+  "would_publish": false,
+  "caveats": "Neither unrestricted conjecture is resolved; the argument uses classical Mader and Tutte\u2013Berge theorems, and no novelty claim is made.",
+  "id": "forcing_a_k_6_minor",
+  "model": "gpt-6-astra",
+  "usd": 1.464515,
+  "eur": 1.516937,
+  "elapsed_s": 1284.4,
+  "status": "completed",
+  "response_id": "resp_0dd36e51e0b2a6c5006aab1cc8a02087d2bfd4e42e75c7fdde",
+  "when": "2026-09-16T23:10:04Z"
+}

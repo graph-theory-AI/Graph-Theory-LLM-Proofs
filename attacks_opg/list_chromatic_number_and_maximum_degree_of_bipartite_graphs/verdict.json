@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The logarithmic bound holds for bipartite graphs whose tree-partition width is bounded by a fixed polynomial in the maximum degree, with a sharper bound available in terms of bandwidth.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved; novelty of these special-case results has not been checked.",
+  "id": "list_chromatic_number_and_maximum_degree_of_bipartite_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.91807,
+  "eur": 0.950932,
+  "elapsed_s": 812.8,
+  "status": "completed",
+  "response_id": "resp_090b53272bbbfefa006aaad8763d0887d299e8275feb9cecb8",
+  "when": "2026-09-16T18:10:42Z"
+}

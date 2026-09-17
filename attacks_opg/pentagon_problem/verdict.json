@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove a bounded-odd-cycle-transversal case and give an explicit girth-seven obstruction, but do not establish a uniform girth threshold.",
+  "would_publish": false,
+  "caveats": "No claim of novelty or optimal constants; the unrestricted conjecture remains unresolved here.",
+  "id": "pentagon_problem",
+  "model": "gpt-6-astra",
+  "usd": 0.97471,
+  "eur": 1.0096,
+  "elapsed_s": 858.9,
+  "status": "completed",
+  "response_id": "resp_007d1ac2aa70c45f006aaae9d41a5887d2907c6530eee7c198",
+  "when": "2026-09-16T19:25:34Z"
+}

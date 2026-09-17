@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for k\u22643 or n\u2264k+4, and its bound is attained by every directed power of a cycle.",
+  "would_publish": false,
+  "caveats": "Standard loopless convention; no general resolution or claim that these special cases are new.",
+  "id": "arc_disjoint_directed_cycles_in_regular_directed_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.02886,
+  "eur": 1.065688,
+  "elapsed_s": 898.4,
+  "status": "completed",
+  "response_id": "resp_072eb1f06c71aaac006aaaccb5e1d887d284690ea48f8d6436",
+  "when": "2026-09-16T17:22:00Z"
+}

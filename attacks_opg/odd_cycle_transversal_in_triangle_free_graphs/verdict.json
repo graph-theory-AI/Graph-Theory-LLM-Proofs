@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The sharp bound holds for every graph homomorphic to the Clebsch graph, with equality characterized, and a separate argument proves the stronger bound n^2/26 for odd girth at least 13.",
+  "would_publish": false,
+  "caveats": "Special cases only; novelty is not claimed, and no improved general upper bound is established.",
+  "id": "odd_cycle_transversal_in_triangle_free_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.07792,
+  "eur": 1.116504,
+  "elapsed_s": 920.8,
+  "status": "completed",
+  "response_id": "resp_0342fd79d9442ada006aaada4a572887d2a521a8b381c16a73",
+  "when": "2026-09-16T18:20:18Z"
+}

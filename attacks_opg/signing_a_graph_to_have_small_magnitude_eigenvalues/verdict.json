@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Explicit Hadamard constructions prove the conjectured bound for sufficiently thick independent-set blow-ups and for a near-complete regime, but do not resolve arbitrary regular graphs.",
+  "would_publish": false,
+  "caveats": "No novelty claim; blow-ups are not lifts and change the degree. The substantive conjecture is interpreted for d >= 2.",
+  "id": "signing_a_graph_to_have_small_magnitude_eigenvalues",
+  "model": "gpt-6-astra",
+  "usd": 0.69735,
+  "eur": 0.722312,
+  "elapsed_s": 955.8,
+  "status": "completed",
+  "response_id": "resp_03ec93d97e7b4f5b006aaadc59bcd487d298979939ce63aab5",
+  "when": "2026-09-16T18:29:41Z"
+}

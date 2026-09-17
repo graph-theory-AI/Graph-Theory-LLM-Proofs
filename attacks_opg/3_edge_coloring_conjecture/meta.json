@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "3_edge_coloring_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "3-Edge-Coloring Conjecture",
+    "paper": "http://www.openproblemgarden.org/op/3_edge_coloring_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/3_edge_coloring_conjecture/",
+    "importance": "High",
+    "undergrad": true,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "3_edge_coloring_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/3_edge_coloring_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/3_edge_coloring_conjecture",
+    "catalog_title": "3-Edge-Coloring Conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2020-04-28",
+    "authors": "Arthur, Hoffmann-Ostenhof",
+    "subject": "Graph Theory",
+    "statement_text": "Conjecture Suppose $ G $ with $ |V(G)|>2 $ is a connected cubic graph admitting a $ 3 $ -edge coloring. Then there is an edge $ e \\in E(G) $ such that the cubic graph homeomorphic to $ G-e $ has a $ 3 $ -edge coloring.",
+    "context_text": "Reformulation via 4-flows: Conjecture Suppose $ G $ is a cubic graph with a nowhere-zero $ 4 $ -flow, then there is an edge $ e \\in E(G) $ such that $ G-e $ has a nowhere-zero $ 4 $ -flow.",
+    "references_text": ""
+  },
+  "started": "2026-09-16T16:46:04Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

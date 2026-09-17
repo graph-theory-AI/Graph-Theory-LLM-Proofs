@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The conjecture is false: an explicit two-ended highly arc-transitive digraph has connected, noncomplete bipartite tiles.",
+  "would_publish": false,
+  "caveats": "The supplied catalog already records a disproof; the construction below is verified directly, with no claim of novelty.",
+  "id": "highly_arc_transitive_two_ended_digraphs",
+  "model": "gpt-6-astra",
+  "usd": 0.206275,
+  "eur": 0.213659,
+  "elapsed_s": 220.0,
+  "status": "completed",
+  "response_id": "resp_04b5a3857d9ba2a9006aaad5d34d8887d2a05dbd41c8f3de76",
+  "when": "2026-09-16T17:49:34Z"
+}

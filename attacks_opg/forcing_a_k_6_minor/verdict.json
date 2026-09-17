@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Minimum degree six suffices at girth at least five, and any counterexample to the original conjecture must have at least 20 degree-seven vertices contained in no K_5 subgraph.",
+  "would_publish": false,
+  "caveats": "These are special cases and structural restrictions, not a resolution of either conjecture; they use Mader's established extremal bound, and no novelty claim is made.",
+  "id": "forcing_a_k_6_minor",
+  "model": "gpt-6-astra",
+  "usd": 1.393325,
+  "eur": 1.443199,
+  "elapsed_s": 1056.0,
+  "status": "completed",
+  "response_id": "resp_0be7470d601dcf51006aaad42a610c87d2b107b521f793e402",
+  "when": "2026-09-16T17:56:26Z"
+}

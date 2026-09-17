@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "jones_conjecture",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Jones' conjecture",
+    "paper": "http://www.openproblemgarden.org/op/jones_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/jones_conjecture/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Cycles"
+  },
+  "dossier_meta": {
+    "id": "jones_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/jones_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/jones_conjecture",
+    "catalog_title": "Jones' conjecture",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-10-09",
+    "authors": "Kloks, Ton, Lee, Chuan-Min, Liu, Jiping",
+    "subject": "Graph Theory \u00bb Basic Graph Theory \u00bb Cycles",
+    "statement_text": "For a graph $ G $ , let $ cp(G) $ denote the cardinality of a maximum cycle packing (collection of vertex disjoint cycles) and let $ cc(G) $ denote the cardinality of a minimum feedback vertex set (set of vertices $ X $ so that $ G-X $ is acyclic). Conjecture For every planar graph $ G $ , $ cc(G)\\leq 2cp(G) $ .",
+    "context_text": "In [KLL], the authors mention that there exists a family of nonplanar graphs for which $ cc(G) = \\Theta( cp(G) \\log cp(G) ) $ , so no such result could hold for general graphs. They also point out that the conjecture is tight for wheels, and they prove it for the special case of outerplanar graphs.",
+    "references_text": "- *[KLL] Ton Kloks, Chuan-Min Lee, and Jiping Liu, New Algorithms for -Face Cover, -Feedback Vertex Set, and -Disjoint Cycles on Plane and Planar Graphs, in Proceedings of the 28th International Workshop on Graph-Theoretic Concepts in Computer Science (WG2002), LNCS 2573, pp. 282--295, 2002."
+  },
+  "started": "2026-09-16T17:49:34Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

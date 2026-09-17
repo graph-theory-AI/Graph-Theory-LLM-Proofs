@@ -82,10 +82,9 @@ if pgrep -f '[a]ttack.py sweep' >/dev/null; then
   exit 0
 fi
 
-if ! pgrep -f '[c]ommit-loop.sh' >/dev/null; then
-  nohup env INTERVAL=600 "$ROOT/scripts/commit-loop.sh" >>"$ROOT/attacks/commit-loop.log" 2>&1 &
-  echo "commit-loop pid $!"
-fi
+# Artifacts are committed by hand. To commit periodically instead, run the loop
+# yourself in another shell:
+#   INTERVAL=900 COMMIT_SCRIPT=scripts/commit-attacks.sh scripts/commit-loop.sh
 
 echo "launching sweep jobs=24 hours=16 $(date -Is)"
 exec "$ROOT/.venv/bin/python" -u "$ROOT/attack.py" sweep --jobs 24 --hours 16

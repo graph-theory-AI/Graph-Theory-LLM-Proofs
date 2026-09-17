@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds when |V(G)| \u2264 2\u0394(G)\u22121; at \u0394=8 and |V(G)|\u226415, the only exception to the same bound is C5[K3].",
+  "would_publish": false,
+  "caveats": "This is an order-restricted result, not a resolution of the conjecture; no novelty is claimed, and the proof uses Gallai's classical decomposition theorem.",
+  "id": "the_borodin_kostochka_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.85584,
+  "eur": 0.886475,
+  "elapsed_s": 782.2,
+  "status": "completed",
+  "response_id": "resp_06708c073f595593006aaaddf3da9c87d2a5bb84543c487c48",
+  "when": "2026-09-16T18:33:37Z"
+}

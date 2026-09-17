@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "crossing_numbers_and_coloring",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Crossing numbers and coloring",
+    "paper": "http://www.openproblemgarden.org/op/crossing_numbers_and_coloring",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/crossing_numbers_and_coloring/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Crossing numbers"
+  },
+  "dossier_meta": {
+    "id": "crossing_numbers_and_coloring",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/crossing_numbers_and_coloring/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/crossing_numbers_and_coloring",
+    "catalog_title": "Crossing numbers and coloring",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2009-09-04",
+    "authors": "Albertson, Michael O.",
+    "subject": "Graph Theory \u00bb Topological Graph Theory \u00bb Crossing numbers",
+    "statement_text": "We let $ cr(G) $ denote the crossing number of a graph $ G $ . Conjecture Every graph $ G $ with $ \\chi(G) \\ge t $ satisfies $ cr(G) \\ge cr(K_t) $ .",
+    "context_text": "This conjecture is an interesting weakening of the disproved Hajos Conjecture which asserted that $ \\chi(G) \\ge t $ implies that $ G $ contains a subdivision of $ K_t $ . A minimal counterexample to Albertson's conjecture is critical, with minimum degree $ \\ge t $ . Using this and the crossing lemma, Albertson, Cranston and Fox showed that a minimum counterexample has at most $ 4t $ vertices. They then analyzed small cases to show that the conjecture holds for $ t \\le 12 $ . More recently, Barat and Toth [BT] sharpened these arguments to show that the conjecture holds for $ t \\le 16 $ .",
+    "references_text": "- [BT] J. Barat and G. Toth, Towards the Albertson Conjecture"
+  },
+  "started": "2026-09-16T18:44:51Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

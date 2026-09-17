@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The hypotheses force F to be an oriented linear forest, and the transfer holds under a bounded neighborhood clique-cover condition, but the general implication remains unresolved.",
+  "would_publish": false,
+  "caveats": "Uses the oriented-graph and disjoint-union conventions; no novelty claim is made for the auxiliary probabilistic construction.",
+  "id": "2202.13306__01",
+  "model": "gpt-6-astra",
+  "usd": 1.382205,
+  "eur": 1.431681,
+  "elapsed_s": 1121.2,
+  "status": "completed",
+  "response_id": "resp_0781f2543263313a006aab40d01f2487d292465bf563f67fcd",
+  "when": "2026-09-17T01:41:05Z"
+}

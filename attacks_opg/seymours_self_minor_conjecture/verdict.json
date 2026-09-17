@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A finite-terminal pumping argument establishes proper contraction self-minors for graphs with a one-ended, locally finite, thin component behind a finite separator.",
+  "would_publish": false,
+  "caveats": "Special case only; no novelty claim, and the catalog's literature-status assertions were not independently verified.",
+  "id": "seymours_self_minor_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.79701,
+  "eur": 0.825539,
+  "elapsed_s": 771.3,
+  "status": "completed",
+  "response_id": "resp_064d7af7a83e9761006aaaeaa4699887d2adef65c7ebf8464e",
+  "when": "2026-09-16T19:27:35Z"
+}

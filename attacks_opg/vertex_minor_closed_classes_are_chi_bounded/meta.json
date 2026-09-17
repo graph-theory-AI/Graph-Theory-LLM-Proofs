@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "vertex_minor_closed_classes_are_chi_bounded",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Are vertex minor closed classes chi-bounded?",
+    "paper": "http://www.openproblemgarden.org/op/vertex_minor_closed_classes_are_chi_bounded",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/vertex_minor_closed_classes_are_chi_bounded/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Vertex coloring"
+  },
+  "dossier_meta": {
+    "id": "vertex_minor_closed_classes_are_chi_bounded",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/vertex_minor_closed_classes_are_chi_bounded/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/vertex_minor_closed_classes_are_chi_bounded",
+    "catalog_title": "Are vertex minor closed classes chi-bounded?",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2009-05-16",
+    "authors": "Geelen, Jim",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Vertex coloring",
+    "statement_text": "Question Is every proper vertex-minor closed class of graphs chi-bounded?",
+    "context_text": "We say that a family of graphs $ {\\mathcal F} $ is $ \\chi $ - bounded if there is a function $ f : {\\mathbb N} \\rightarrow {\\mathbb N} $ so that $ \\chi(G) \\le f( \\omega(G)) $ for every $ G \\in {\\mathcal F} $ . If $ G $ is a simple graph, a vertex minor of $ G $ is any graph which can be obtained by a sequence of the following operations: \\item delete a vertex \\item choose a vertex $ v $ and complement the neighborhood of $ v $ (i.e. whenever $ u,w $ are neighbors of $ v $ , switch $ u,w $ between adjacent/non-adjacent). Dvorak and Kral [DK] showed that this conjecture is true for class of graphs of bounded rank-width, and the class of graphs having no vertex-minor isomorphic to the wheel $ W_5 $ on $ 6 $ vertices.",
+    "references_text": "- [DK] Z. Dvorak and D. Kr\u00e1l. Classes of graphs with small rank decompositions are \u03c7-bounded. European J. Combin., 33(4):679\u2013-683, 2012. MathSciNet"
+  },
+  "started": "2026-09-16T18:28:45Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "frankls_union_closed_sets_conjecture",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Frankl's union-closed sets conjecture",
+    "paper": "http://www.openproblemgarden.org/op/frankls_union_closed_sets_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/frankls_union_closed_sets_conjecture/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Hypergraphs"
+  },
+  "dossier_meta": {
+    "id": "frankls_union_closed_sets_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/frankls_union_closed_sets_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/frankls_union_closed_sets_conjecture",
+    "catalog_title": "Frankl's union-closed sets conjecture",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2008-09-25",
+    "authors": "Frankl, Peter",
+    "subject": "Graph Theory \u00bb Hypergraphs",
+    "statement_text": "Conjecture Let $ F $ be a finite family of finite sets, not all empty, that is closed under taking unions. Then there exists $ x $ such that $ x $ is an element of at least half the members of $ F $ .",
+    "context_text": "This conjecture is notoriously difficult, even though (or should we say `because'?) it involves almost no mathematical structure whatsoever. It was posed by Frankl in the late 1970's. The recent paper of Morris [M] provides a good illustration of the kind of partial results known: Morris extends earlier work to show that the conjecture holds for families containing three 3-subsets of a 5-set, four 3-subsets of a 6-set, or eight 4-subsets of a 6-set. In a different direction, Cz\u00e9dli [C] has proved the conjecture in the case when $ |F| \\ge 2^n - 2^{n/2} $ where $ n = |\\bigcup F| \\ge 3 $ .",
+    "references_text": "- [C] G. Cz\u00e9dli, On averaging Frankl's conjecture for large union-closed-sets, J. Combin. Theory Ser. A, to appear.\n- [M] R. Morris, FC-families and improved bounds for Frankl's conjecture, European J. Combin. 27 (2006), no. 2, 269\u2013282.\n- [P] B. Poonen, Union-closed families, J. Combin. Theory Ser. A 59 (1992), no. 2, 253\u2013268.\n- [V] T. P. Vaughan, Three-sets in a union-closed family, J. Combin. Math. Combin. Comput. 49 (2004), 73\u201384.\n- [W] P. W\u00f3jcik, Union-closed families of sets, Discrete Math. 199 (1999), no. 1\u20133, 173\u2013182."
+  },
+  "started": "2026-09-16T17:38:55Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

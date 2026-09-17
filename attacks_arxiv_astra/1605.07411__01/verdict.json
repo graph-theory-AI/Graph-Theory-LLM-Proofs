@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove chi-boundedness for cyclic-triangle-free orientations and, using the quoted TT3-free theorem, bounded chromatic number for all K4-free oriented graphs avoiding a fixed oriented star.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not proved; the K4-free result uses the source theorem as quoted, and novelty of these special cases is not asserted.",
+  "id": "1605.07411__01",
+  "model": "gpt-6-astra",
+  "usd": 1.130505,
+  "eur": 1.170971,
+  "elapsed_s": 839.4,
+  "status": "completed",
+  "response_id": "resp_06e1fef15197da2c006aaafbaabfac87d29f239a5598ca61ef",
+  "when": "2026-09-16T20:41:21Z"
+}

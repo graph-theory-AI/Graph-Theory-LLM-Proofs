@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove a uniform high-probability obstruction to low-defect random alterations, but do not close the Ramsey logarithmic gap.",
+  "would_publish": false,
+  "caveats": "No unrestricted Ramsey bound is improved; rare successful outcomes and the full random-greedy process are not ruled out.",
+  "id": "2210.03545__02",
+  "model": "gpt-6-astra",
+  "usd": 1.48413,
+  "eur": 1.537254,
+  "elapsed_s": 1378.2,
+  "status": "completed",
+  "response_id": "resp_0e592a95d79d6679006aab59fa85dc87d2a988d70c879821bd",
+  "when": "2026-09-17T03:32:44Z"
+}

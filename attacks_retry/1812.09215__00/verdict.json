@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "No: every such bijection satisfies n <= 1+(k-1)+...+(k-1)^(D-1), where D is its inverse Lipschitz constant, and linear 2-Lipschitz tree maps attain the resulting bound.",
+  "would_publish": true,
+  "caveats": "Uses full-cube bijections and global k-junta locality; literature priority has not been independently checked.",
+  "id": "1812.09215__00",
+  "model": "gpt-6-astra",
+  "usd": 0.555165,
+  "eur": 0.575037,
+  "elapsed_s": 499.9,
+  "status": "completed",
+  "response_id": "resp_0dec0a9adb25df77006aab35e3fb4887d2840c9c50b0fcafea",
+  "when": "2026-09-17T00:44:07Z"
+}

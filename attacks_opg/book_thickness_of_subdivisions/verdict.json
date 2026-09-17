@@ -1,0 +1,15 @@
+{
+  "verdict": "already_resolved",
+  "confidence": "high",
+  "one_line": "The conjecture is false even for exact one-subdivisions: graphs of unbounded book thickness can have one-subdivisions of book thickness at most 5.",
+  "would_publish": false,
+  "caveats": "Uses the published bounded-queue, unbounded-stack theorem cited in the question; no optimality of 5 is claimed.",
+  "id": "book_thickness_of_subdivisions",
+  "model": "gpt-6-astra",
+  "usd": 0.343495,
+  "eur": 0.35579,
+  "elapsed_s": 245.3,
+  "status": "completed",
+  "response_id": "resp_0fcab7e01dc42a7b006aaac6f1a58887d2bc58622eb39aa17c",
+  "when": "2026-09-16T16:46:28Z"
+}

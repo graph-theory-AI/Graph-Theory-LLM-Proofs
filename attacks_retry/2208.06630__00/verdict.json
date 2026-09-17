@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain L_3(n)=3n/2+sqrt(n)/2+O(1), L_3^star(n)=5n/3+O(1), and L_4(n)=7n/4+O(sqrt(n)), but not the general minimum.",
+  "would_publish": false,
+  "caveats": "The proofs below are independent deductions; novelty relative to the full source text is unverified, and general t remains unresolved.",
+  "id": "2208.06630__00",
+  "model": "gpt-6-astra",
+  "usd": 1.67351,
+  "eur": 1.733413,
+  "elapsed_s": 1752.1,
+  "status": "completed",
+  "response_id": "resp_02fbdf8e95bed1ef006aab3065775487d2b3cf1147212840df",
+  "when": "2026-09-17T00:41:33Z"
+}

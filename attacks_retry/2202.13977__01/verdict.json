@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the desired linear pure-pair bound for every three-backedge target when the host admits an ordering with uniformly bounded backedge codegrees.",
+  "would_publish": false,
+  "caveats": "Bounded backedge codegrees are an additional host hypothesis; the unrestricted question, including the D5 case, is not settled.",
+  "id": "2202.13977__01",
+  "model": "gpt-6-astra",
+  "usd": 0.869025,
+  "eur": 0.900132,
+  "elapsed_s": 909.0,
+  "status": "completed",
+  "response_id": "resp_0a570f0c65507545006aab566d7ef087d29a9e05d752c039bd",
+  "when": "2026-09-17T03:09:46Z"
+}

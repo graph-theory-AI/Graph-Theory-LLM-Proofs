@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain self-contained exact values through M_6, including mir(M_5)=1/3 and mir(M_6)=3/10, but not a general formula.",
+  "would_publish": false,
+  "caveats": "Uses M_2=K_2; the catalog's value mir(M_3)=1/5 is erroneous under the standard definition. Novelty of these finite evaluations is not asserted.",
+  "id": "1907.11429__00",
+  "model": "gpt-6-astra",
+  "usd": 1.30535,
+  "eur": 1.352075,
+  "elapsed_s": 991.9,
+  "status": "completed",
+  "response_id": "resp_0995f71ab3a69cc5006aaaf8a95ec887d285cb781d14bc88cb",
+  "when": "2026-09-16T20:31:05Z"
+}

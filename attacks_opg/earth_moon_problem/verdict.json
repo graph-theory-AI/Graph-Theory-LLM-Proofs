@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For every positive k, the clique blowup H[K_{2k}] is a union of k planar graphs if and only if H is a forest.",
+  "would_publish": false,
+  "caveats": "This is an exact special case, not a solution of the Earth\u2013Moon problem; the general 9\u201312 gap is unchanged, and novelty is not claimed.",
+  "id": "earth_moon_problem",
+  "model": "gpt-6-astra",
+  "usd": 1.333085,
+  "eur": 1.380803,
+  "elapsed_s": 1054.7,
+  "status": "completed",
+  "response_id": "resp_0726d3cb24ec09ed006aaac6f1afdc87d287fcb56900367d40",
+  "when": "2026-09-16T16:59:57Z"
+}

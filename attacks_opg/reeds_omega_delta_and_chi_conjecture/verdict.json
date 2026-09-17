@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Reed's bound holds if \u03b1(G) \u2264 2 or \u0394(G)+\u03b1(G) \u2265 |V(G)|\u22122, and consequently whenever \u0394(G) \u2265 |V(G)|\u22125.",
+  "would_publish": false,
+  "caveats": "No general proof or counterexample is obtained, and no novelty is claimed for these sufficient conditions.",
+  "id": "reeds_omega_delta_and_chi_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.73754,
+  "eur": 0.76394,
+  "elapsed_s": 750.6,
+  "status": "completed",
+  "response_id": "resp_0ac62e50b2924043006aaaea05fb2487d2840e60ad5a6ece74",
+  "when": "2026-09-16T19:24:36Z"
+}

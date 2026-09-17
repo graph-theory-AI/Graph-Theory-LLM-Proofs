@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I establish a unit-vector-flow construction using noncommuting rotations and prove that every bounded Borel map satisfying the second conjecture's identities must be linear.",
+  "would_publish": false,
+  "caveats": "The unrestricted first conjecture is not settled; the Borel obstruction does not address arbitrary maps, and novelty is not claimed.",
+  "id": "unit_vector_flows",
+  "model": "gpt-6-astra",
+  "usd": 1.45417,
+  "eur": 1.506222,
+  "elapsed_s": 1545.7,
+  "status": "completed",
+  "response_id": "resp_097ae8104828c49d006aab2c3e65c887d29e81da4c4bbd94a6",
+  "when": "2026-09-17T00:20:23Z"
+}

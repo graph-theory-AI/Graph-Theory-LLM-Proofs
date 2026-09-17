@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for every nontrivial join, using only cycles of length exactly k; this also settles graphs of order at most 2k.",
+  "would_publish": false,
+  "caveats": "Intended range k\u22653; no novelty claim for these partial results, and the general case k\u22654 remains unresolved.",
+  "id": "cycles_in_graphs_of_large_chromatic_number",
+  "model": "gpt-6-astra",
+  "usd": 1.253,
+  "eur": 1.297851,
+  "elapsed_s": 887.3,
+  "status": "completed",
+  "response_id": "resp_0a96a0631030d701006aaad07b2f0c87d28473350c0c1a4cc6",
+  "when": "2026-09-16T17:37:54Z"
+}

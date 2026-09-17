@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds in the stronger two-forest partition form when each component of the 4-core has at most two vertices of degree at least five within that core.",
+  "would_publish": false,
+  "caveats": "The general conjecture remains unresolved by this argument; novelty of the structural special case is not claimed.",
+  "id": "large_induced_forest_in_a_planar_graph",
+  "model": "gpt-6-astra",
+  "usd": 1.41919,
+  "eur": 1.46999,
+  "elapsed_s": 1161.5,
+  "status": "completed",
+  "response_id": "resp_023bc7b1707dc205006aaad7d9332487d28a6b8ef531817ea1",
+  "when": "2026-09-16T18:13:54Z"
+}

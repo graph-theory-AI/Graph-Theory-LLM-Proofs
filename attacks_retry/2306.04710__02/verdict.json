@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove a sharp four-color bound for recursively transitive/cyclically decomposable members of the class, using a stronger corner-support lemma, but do not settle the unrestricted conjecture.",
+  "would_publish": false,
+  "caveats": "The required decomposition is not established for arbitrary members of the class; novelty of these elementary partial results has not been checked.",
+  "id": "2306.04710__02",
+  "model": "gpt-6-astra",
+  "usd": 1.295975,
+  "eur": 1.342364,
+  "elapsed_s": 1146.3,
+  "status": "completed",
+  "response_id": "resp_03b5eb91290d53a2006aab5fbb976c87d28826558968a5980f",
+  "when": "2026-09-17T03:53:25Z"
+}

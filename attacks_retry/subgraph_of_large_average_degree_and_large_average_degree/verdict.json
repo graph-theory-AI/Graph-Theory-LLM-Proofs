@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain an all-g partial theorem with a linear local degree-scale loss, and confirm that the supplied C4-free result already settles g=5.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved; no novelty claim is made for the partial theorem.",
+  "id": "subgraph_of_large_average_degree_and_large_average_degree",
+  "model": "gpt-6-astra",
+  "usd": 1.346505,
+  "eur": 1.394703,
+  "elapsed_s": 1251.0,
+  "status": "completed",
+  "response_id": "resp_037426df2c9a76a0006aab2958b53487d29559c0aa6e560d2f",
+  "when": "2026-09-17T00:03:07Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A replication-and-thinning argument proves the conjecture for a class containing every oriented double star, but does not resolve it for arbitrary oriented trees.",
+  "would_publish": false,
+  "caveats": "Uses the in-arborescence theorem supplied in the question; novelty of this consequence has not been verified.",
+  "id": "1610.00876__01",
+  "model": "gpt-6-astra",
+  "usd": 0.9935,
+  "eur": 1.029062,
+  "elapsed_s": 986.2,
+  "status": "completed",
+  "response_id": "resp_0f48473151e45af4006aaaf294f15c87d2b0f87fd876c69edc",
+  "when": "2026-09-16T20:05:01Z"
+}

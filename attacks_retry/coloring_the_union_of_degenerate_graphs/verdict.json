@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every graph in the conjectured class on at most 12 vertices is 5-colourable, and a smallest counterexample with exactly four vertices of degree at least six must have a disconnected degree-five subgraph.",
+  "would_publish": false,
+  "caveats": "The general conjecture is unresolved here; novelty and the current literature status have not been independently checked.",
+  "id": "coloring_the_union_of_degenerate_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.830275,
+  "eur": 1.895789,
+  "elapsed_s": 1697.4,
+  "status": "completed",
+  "response_id": "resp_0eae9f4a64e9b278006aab1627397487d2b8cfc90c6674bc32",
+  "when": "2026-09-16T22:48:40Z"
+}

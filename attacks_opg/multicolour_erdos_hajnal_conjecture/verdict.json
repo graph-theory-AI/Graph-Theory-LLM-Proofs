@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For a fixed three-colour palette, I prove a polynomial two-colour-set bound for every forbidden pattern built from coloured edges and triangles by vertex substitution.",
+  "would_publish": false,
+  "caveats": "The full conjecture is not settled; the host palette is fixed, and no novelty is claimed.",
+  "id": "multicolour_erdos_hajnal_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.735615,
+  "eur": 0.761946,
+  "elapsed_s": 769.4,
+  "status": "completed",
+  "response_id": "resp_0f66de499329ac08006aaae7f692cc87d28e9f7d117100869c",
+  "when": "2026-09-16T19:16:07Z"
+}

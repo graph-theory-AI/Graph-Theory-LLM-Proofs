@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For even k, I obtain a sharp spanning bridge-count criterion and an explicit nearly spanning bound when every bridge-block has o(r^2) vertices.",
+  "would_publish": false,
+  "caveats": "The general conjecture and odd k >= 3 remain unresolved; novelty of these factor-theoretic consequences has not been checked.",
+  "id": "nearly_spanning_regular_subgraphs",
+  "model": "gpt-6-astra",
+  "usd": 1.099995,
+  "eur": 1.139369,
+  "elapsed_s": 1039.7,
+  "status": "completed",
+  "response_id": "resp_030ee2eada67d230006aaae83f2aa887d281b77754e4daa8d6",
+  "when": "2026-09-16T19:21:50Z"
+}

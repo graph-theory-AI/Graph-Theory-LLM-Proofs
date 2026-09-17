@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I give explicit counterexamples for arc-connectivity and sharp special-case bounds for vertex-connectivity, without resolving the general \u03ba question.",
+  "would_publish": false,
+  "caveats": "The negative arc-connectivity conclusion is already recorded in the supplied review; no novelty or complete \u03ba result is claimed.",
+  "id": "1610.00876__05",
+  "model": "gpt-6-astra",
+  "usd": 0.87941,
+  "eur": 0.910888,
+  "elapsed_s": 751.8,
+  "status": "completed",
+  "response_id": "resp_09784c7b0b928bb5006aaaf8bdf18c87d2a66f5207c5591201",
+  "when": "2026-09-16T20:27:25Z"
+}

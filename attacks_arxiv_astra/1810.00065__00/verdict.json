@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every triangle-free graph with no induced 6-cycle and at most two vertices of degree at least four is 3-colourable.",
+  "would_publish": false,
+  "caveats": "This settles only a restricted case; novelty has not been checked, and the full ternary-graph conjecture is not resolved.",
+  "id": "1810.00065__00",
+  "model": "gpt-6-astra",
+  "usd": 1.398325,
+  "eur": 1.448378,
+  "elapsed_s": 1107.7,
+  "status": "completed",
+  "response_id": "resp_0cb703b9d6fd07c0006aaaf5c667c887d2aea9717cb331d3f6",
+  "when": "2026-09-16T20:20:41Z"
+}

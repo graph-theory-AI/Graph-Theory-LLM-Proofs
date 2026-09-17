@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "ramsey_properties_of_cayley_graphs",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Ramsey properties of Cayley graphs",
+    "paper": "http://www.openproblemgarden.org/op/ramsey_properties_of_cayley_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/ramsey_properties_of_cayley_graphs/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Algebraic Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "ramsey_properties_of_cayley_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/ramsey_properties_of_cayley_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/ramsey_properties_of_cayley_graphs",
+    "catalog_title": "Ramsey properties of Cayley graphs",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-06-10",
+    "authors": "Alon, Noga",
+    "subject": "Graph Theory \u00bb Algebraic Graph Theory",
+    "statement_text": "Conjecture There exists a fixed constant $ c $ so that every abelian group $ G $ has a subset $ S \\subseteq G $ with $ -S = S $ so that the Cayley graph $ {\\mathit Cayley}(G,S) $ has no clique or independent set of size $ > c \\log |G| $ .",
+    "context_text": "The classic bounds from Ramsey theory show that every $ n $ vertex graph must have either a clique or an independent set of size $ c \\log n $ and further random graphs almost surely have this property (using different values of $ c $ ). The above conjecture asserts that every group has a Cayley graph with similar behavior. Improving upon some earlier results of Agarwal et. al. [AAAS], Green [G] proved that there exists a constant $ c $ so that whenever a set $ S \\subseteq {\\mathbb Z}_n $ is chosen at random, and we form the graph with vertex set $ {\\mathbb Z}_n $ and two vertices $ i $ , $ j $ joined if $ i+j \\in S $ , then this graph almost surely has both maximum clique size and maximum independent size $ O(\\log n) $ . The reader should note that such graphs are not generally Cayley graphs - although the definition is similar. As a word of caution, Green [G] also shows that a randomly chosen subset of the group $ {\\mathbb Z}_2^n $ almost surely has both max. clique and max. independent set of size $ \\Theta( \\log N \\log \\log N ) $ where $ N = 2^n $ .",
+    "references_text": "- [AAAS] P. K. Agarwal, N. Alon, B. Aronov, S. Suri, Can visibility graphs be represented compactly? Discrete Comput. Geom. 12 (1994), no. 3, 347--365. MathSciNet\n- *[C] Problem BCC14.6 from the BCC Problem List (edited by Peter Cameron)\n- [G] B. Green, Counting sets with small sumset, and the clique number of random Cayley graphs, Combinatorica 25 (2005), no. 3, 307--326. MathSciNet"
+  },
+  "started": "2026-09-16T19:12:05Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

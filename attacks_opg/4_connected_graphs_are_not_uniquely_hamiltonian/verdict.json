@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Any counterexample must satisfy n \u2265 3\u03b4 \u2265 12 and \u0394 \u2264 n \u2212 2\u03b4 + 3, and deleting its unique Hamilton cycle must leave at least three components.",
+  "would_publish": false,
+  "caveats": "The conjecture is not resolved; these self-contained partial bounds are not claimed to be new or best known.",
+  "id": "4_connected_graphs_are_not_uniquely_hamiltonian",
+  "model": "gpt-6-astra",
+  "usd": 1.12014,
+  "eur": 1.160235,
+  "elapsed_s": 897.1,
+  "status": "completed",
+  "response_id": "resp_0a263e54fff20c29006aaacafa826487d2acc172d2563c0e5b",
+  "when": "2026-09-16T17:14:35Z"
+}

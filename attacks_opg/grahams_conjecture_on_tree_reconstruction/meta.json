@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "grahams_conjecture_on_tree_reconstruction",
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Graham's conjecture on tree reconstruction",
+    "paper": "http://www.openproblemgarden.org/op/grahams_conjecture_on_tree_reconstruction",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/grahams_conjecture_on_tree_reconstruction/",
+    "importance": "Medium",
+    "undergrad": false,
+    "subject": "Basic Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "grahams_conjecture_on_tree_reconstruction",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/grahams_conjecture_on_tree_reconstruction/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 2,
+    "score": 2.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/grahams_conjecture_on_tree_reconstruction",
+    "catalog_title": "Graham's conjecture on tree reconstruction",
+    "importance": "Medium \u272d\u272d",
+    "posted": "2007-03-18",
+    "authors": "Graham, Ronald L.",
+    "subject": "Graph Theory \u00bb Basic Graph Theory",
+    "statement_text": "Problem for every graph $ G $ , we let $ L(G) $ denote the line graph of $ G $ . Given that $ G $ is a tree, can we determine it from the integer sequence $ |V(G)|, |V(L(G))|, |V(L(L(G)))|, \\ldots $ ?",
+    "context_text": "Graph reconstruction is a notoriously difficult subject. This conjecture is an unusual type of reconstruction problem where our class of graphs is very limited - just trees, but we are also given relatively little information - just a sequence of integers.",
+    "references_text": "- [GR] C. Godsil and G. Royle, Algebraic graph theory. Graduate Texts in Mathematics, 207. Springer-Verlag, New York, 2001 (page 18)."
+  },
+  "started": "2026-09-16T17:40:47Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

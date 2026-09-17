@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 54,
+    "score": 4.05,
+    "tier": 4,
+    "lean": "prove",
+    "status": "partial",
+    "id": "1802.04179__00",
+    "title_md": "[Problem 1.3](https://arxiv.org/abs/1802.04179)",
+    "paper": "Planar graphs without cycles of length 4 or 5 are (11:3)-colorable",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1802.04179__00/"
+  },
+  "dossier_meta": {
+    "id": "1802.04179__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1802.04179__00/",
+    "arxiv_id": "1802.04179",
+    "tier": 4,
+    "score": 4.05,
+    "lean": "prove",
+    "status": "partial",
+    "paper": "Planar graphs without cycles of length 4 or 5 are (11:3)-colorable",
+    "catalog_title": "Problem 1.3",
+    "statement_text": "What is the infimum of fractional chromatic numbers of planar graphs without cycles of length 4 or 5?",
+    "context_text": "The authors prove that every planar graph without cycles of length 4 or 5 is $(11:3)$-colorable, giving an upper bound of $\\frac{11}{3}$ on the fractional chromatic number. They note the counterexample to Steinberg's conjecture from [4] is $(6:2)$-colorable, so the answer could be as low as $3$."
+  },
+  "started": "2026-09-16T19:48:35Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

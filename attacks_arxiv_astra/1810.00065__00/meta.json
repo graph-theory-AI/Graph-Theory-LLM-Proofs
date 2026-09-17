@@ -1,0 +1,35 @@
+{
+  "record": {
+    "rank_hardest": 34,
+    "score": 4.2,
+    "tier": 4,
+    "lean": "balanced",
+    "status": "open",
+    "id": "1810.00065__00",
+    "title_md": "[Open Problem: 3-colourability of ternary graphs](https://arxiv.org/abs/1810.00065)",
+    "paper": "Proof of the Kalai-Meshulam conjecture",
+    "source": "arxiv",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1810.00065__00/"
+  },
+  "dossier_meta": {
+    "id": "1810.00065__00",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/arxiv/1810.00065__00/",
+    "arxiv_id": "1810.00065",
+    "tier": 4,
+    "score": 4.2,
+    "lean": "balanced",
+    "status": "open",
+    "paper": "Proof of the Kalai-Meshulam conjecture",
+    "catalog_title": "Open Problem: 3-colourability of ternary graphs",
+    "statement_text": "It may be that all ternary graphs are 3-colourable.",
+    "context_text": "Bonamy, Charbit and Thomass\u00e9 proved that every ternary graph is $c$-colourable for some absolute constant $c$, and a stronger result by two of the present authors shows bounded chromatic number whenever clique number is bounded and no induced cycle has length $p\\bmod q$. The paper notes that whether the bound can be taken to be 3 for ternary graphs specifically remains open."
+  },
+  "started": "2026-09-16T20:02:14Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "arxiv",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "obstacle_number_of_planar_graphs",
+    "tier": 1,
+    "score": 1.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "Obstacle number of planar graphs",
+    "paper": "http://www.openproblemgarden.org/op/obstacle_number_of_planar_graphs",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/obstacle_number_of_planar_graphs/",
+    "importance": "Low",
+    "undergrad": true,
+    "subject": "Graph Theory"
+  },
+  "dossier_meta": {
+    "id": "obstacle_number_of_planar_graphs",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/obstacle_number_of_planar_graphs/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 1,
+    "score": 1.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/obstacle_number_of_planar_graphs",
+    "catalog_title": "Obstacle number of planar graphs",
+    "importance": "Low \u272d",
+    "posted": "2011-11-23",
+    "authors": "Alpert, Hanna, Koch, Christina, Laison, Joshua D.",
+    "subject": "Graph Theory",
+    "statement_text": "Does there exist a planar graph with obstacle number greater than 1? Is there some $ k $ such that every planar graph has obstacle number at most $ k $ ?",
+    "context_text": "A $ k $ -obstacle drawing of a graph $ G $ is a mapping of the vertices of $ G $ to points in the plane, along with a set of polygonal obstacles $ P_1,\\ldots, P_k $ , such that two vertices are adjacent precisely if the line segment connecting their corresponding points in $ \\mathbb R^2 $ does not intersect any obstacle. The {\\em obstacle number} of a graph $ G $ is the minimum $ k $ such that $ G $ has a $ k $ -obstacle drawing. This invariant was recently introduced by Alpert, Koch, and Laison [AKL], who proved that every outerplanar graph has obstacle number 1. The next question, then, follows naturally: what is the obstacle number of a planar graph? So far no planar graph has been proved to have obstacle number greater than 1. Alpert, Koch, and Laison specifically ask what the obstacle numbers of the icosahedron and dodecahedron are [AKL].",
+    "references_text": "- [AKL] Hannah Alpert, Christina Koch, and Joshua D. Laison: Obstacle numbers of graphs. Discrete Comput. Geom. (2010) 44:223-244."
+  },
+  "started": "2026-09-16T16:14:29Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}

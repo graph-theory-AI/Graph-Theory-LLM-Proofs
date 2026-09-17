@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Rigorous special cases include one-ended even-degree graphs and exact-4-edge-connected tree products, but neither full conjecture is settled.",
+  "would_publish": false,
+  "caveats": "Special-case deductions only; novelty and an updated literature status are not claimed.",
+  "id": "hamiltonian_cycles_in_line_graphs_of_infinite_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.864085,
+  "eur": 0.895015,
+  "elapsed_s": 1033.9,
+  "status": "completed",
+  "response_id": "resp_0f7aa784440c3199006aaad5af831487d2b9635fe9a42e717e",
+  "when": "2026-09-16T18:02:33Z"
+}

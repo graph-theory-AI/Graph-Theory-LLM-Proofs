@@ -1,0 +1,43 @@
+{
+  "record": {
+    "id": "4_flow_conjecture",
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "title_md": "4-flow conjecture",
+    "paper": "http://www.openproblemgarden.org/op/4_flow_conjecture",
+    "source": "opg",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/4_flow_conjecture/",
+    "importance": "High",
+    "undergrad": false,
+    "subject": "Nowhere-zero flows"
+  },
+  "dossier_meta": {
+    "id": "4_flow_conjecture",
+    "url": "https://graph-theory-ai.github.io/graph-conjectures/op/4_flow_conjecture/",
+    "source": "opg",
+    "arxiv_id": null,
+    "tier": 3,
+    "score": 3.0,
+    "lean": null,
+    "status": "open",
+    "paper": "http://www.openproblemgarden.org/op/4_flow_conjecture",
+    "catalog_title": "4-flow conjecture",
+    "importance": "High \u272d\u272d\u272d",
+    "posted": "2007-03-07",
+    "authors": "Tutte, William T.",
+    "subject": "Graph Theory \u00bb Coloring \u00bb Nowhere-zero flows",
+    "statement_text": "Conjecture Every bridgeless graph with no Petersen minor has a nowhere-zero 4-flow.",
+    "context_text": "It is a consequence of a theorem of Tutte that a cubic graph has a nowhere-zero 4-flow if and only if it is 3- edge-colorable . Thus, the 4-flow conjecture implies that every bridgeless cubic graph with no Petersen minor is 3-edge-colorable (another conjecture of Tutte). Note that the Four Color Theorem is equivalent to the assertion that planar cubic graphs without bridges are 3-edge-colorable, so even this weaker conjecture is a strengthening of the Four Color Theorem. This weaker conjecture was recently proved by Robertson, Seymour, and Thomas [RST]. Their proof involves a reduction to the case of nearly planar graphs, and then an application of 4-color-theorem type techniques (computer assisted) to color these graphs. Most conjectures about flows can be easily reduced to the case of cubic graphs by splitting arguments. The idea is to take a vertex $ v $ incident with edges $ e_1,\\ldots,e_k $ and \"split\" $ v $ , that is, replace $ v $ by two new vertices $ v_1 $ and $ v_2 $ , and for every edge $ e_i $ join it to either $ v_1 $ or $ v_2 $ (sometimes the edge $ v_1 v_2 $ is also added). For instance, this technique can be used to reduce the general 5-flow conjecture down to the special case of cubic graphs. Unfortunately, that technique does not apply here, since splitting a vertex may introduce a Petersen minor. Petersen's graph is not an apex graph (deleting any vertex still leaves a nonplanar graph). It follows that no apex graph can have a Petersen minor, so the above conjecture implies that every bridgeless apex graph has a nowhere-zero 4-flow. By splitting the vertices which lie in the plane this can be reduced to the special case where all vertices which lie in the plane have degree 3. This is then equivalent to the following old conjecture of Gr\\\"{o}tzsch. Conjecture (Gr\\\"{o}tzsch) If $ G $ is a 2-connected connected planar graph of maximum degree 3, then $ G $ is 3-edge-colorable unless it has exactly one vertex of degree 2.",
+    "references_text": "- [AH] K. Appel, W. Haken, Every Planar Map is Four Colorable, Bull. Amer. Math. Soc. 82 (1976) 711-712. MathSciNet\n- [RSST] N. Robertson, D.P. Sanders, P.D. Seymour, and R. Thomas, A New Proof of the Four-Color Theorem, Electron. Res. Announc., Am. Math. Soc. 02, no 1 (1996) 17-25. MathSciNet\n- [RST] N. Robertson, P.D. Seymour, and R. Thomas, Tutte's edge-colouring conjecture. J. Combin. Theory Ser. B 70 (1997), no. 1, 166--183. MathSciNet\n- [Tut54] W.T. Tutte, A Contribution on the Theory of Chromatic Polynomials, Canad. J. Math. 6 (1954) 80-91. MathSciNet\n- [Tut66] W.T. Tutte, On the Algebraic Theory of Graph Colorings, J. Combinatorial Theory 1 (1966) 15-50. MathSciNet"
+  },
+  "started": "2026-09-16T18:31:42Z",
+  "model": "gpt-6-astra",
+  "service_tier": "flex",
+  "corpus": "opg",
+  "reasoning": {
+    "effort": "max",
+    "mode": "pro"
+  }
+}
