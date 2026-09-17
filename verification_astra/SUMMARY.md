@@ -1,8 +1,8 @@
 # Adversarial verification of the gpt-6-astra campaign's publishable claims
 
-Generated 2026-09-17T12:56:09Z from the per-target reports in this directory. See `REFEREE_PROMPT.md` for the review protocol, `verdicts.json` for machine-readable verdicts, `targets.json` for the claim each report answers, and `scripts/<id>/` for the reproducible computational checks.
+Generated 2026-09-17T13:00:45Z from the per-target reports in this directory. See `REFEREE_PROMPT.md` for the review protocol, `verdicts.json` for machine-readable verdicts, `targets.json` for the claim each report answers, and `scripts/<id>/` for the reproducible computational checks.
 
-The gpt-6-astra campaign produced 31 claims that the model itself flagged `would_publish: true`, across `attacks_opg/`, `attacks_arxiv_astra/` and `attacks_retry/`. Each is reviewed here by an independent adversarial referee agent instructed to assume the writeup wrong, re-derive every step, verify every citation against fetched sources, and brute-force every finite construction. **23 of 31 reviews are complete.**
+The gpt-6-astra campaign produced 31 claims that the model itself flagged `would_publish: true`, across `attacks_opg/`, `attacks_arxiv_astra/` and `attacks_retry/`. Each is reviewed here by an independent adversarial referee agent instructed to assume the writeup wrong, re-derive every step, verify every citation against fetched sources, and brute-force every finite construction. **26 of 31 reviews are complete.**
 
 A formal verdict is not a result. `CONFIRMED` means one LLM referee could not break one LLM writeup; novelty was checked only against what could be found online, and several reports flag that a load-bearing lemma turned out to be an existing named theorem. Human review is still wanted.
 
@@ -10,35 +10,35 @@ A formal verdict is not a result. `CONFIRMED` means one LLM referee could not br
 
 | review verdict | n | share |
 | --- | ---: | ---: |
-| CONFIRMED | 11 | 48% |
-| MINOR_GAPS | 9 | 39% |
-| ALREADY_KNOWN | 3 | 13% |
-| **total** | **23** | |
+| CONFIRMED | 11 | 42% |
+| MINOR_GAPS | 9 | 35% |
+| ALREADY_KNOWN | 6 | 23% |
+| **total** | **26** | |
 
 ## By model's claimed verdict
 
 | | CONFIRMED | MINOR_GAPS | MAJOR_GAP | FATAL_ERROR | ALREADY_KNOWN | total |
 | --- | ---: | ---: | ---: | ---: | ---: | ---:
-| proved | 2 | 6 | 0 | 0 | 3 | 11 |
-| disproved | 7 | 1 | 0 | 0 | 0 | 8 |
+| proved | 2 | 6 | 0 | 0 | 5 | 13 |
+| disproved | 7 | 1 | 0 | 0 | 1 | 9 |
 
 ## By model's claimed confidence
 
 | | CONFIRMED | MINOR_GAPS | MAJOR_GAP | FATAL_ERROR | ALREADY_KNOWN | total |
 | --- | ---: | ---: | ---: | ---: | ---: | ---:
-| high | 11 | 8 | 0 | 0 | 3 | 22 |
+| high | 11 | 8 | 0 | 0 | 6 | 25 |
 | medium | 0 | 1 | 0 | 0 | 0 | 1 |
 
 ## By model's would_publish flag
 
 | | CONFIRMED | MINOR_GAPS | MAJOR_GAP | FATAL_ERROR | ALREADY_KNOWN | total |
 | --- | ---: | ---: | ---: | ---: | ---: | ---:
-| True | 11 | 9 | 0 | 0 | 3 | 23 |
+| True | 11 | 9 | 0 | 0 | 6 | 26 |
 | False | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## Headline reading
 
-- **11 claims fully CONFIRMED** (correct, fairly interpreted, apparently new), plus 9 MINOR_GAPS (correct modulo routine repairs). Of the model's 23 would_publish claims, 11 were fully confirmed.
+- **11 claims fully CONFIRMED** (correct, fairly interpreted, apparently new), plus 9 MINOR_GAPS (correct modulo routine repairs). Of the model's 26 would_publish claims, 11 were fully confirmed.
 - **Every FATAL_ERROR is an interpretation failure, not a computational error**: all 14 refute catalog transcription artifacts (lost overlines, > vs ≥, dropped hypotheses, inverted inequalities) or degenerate literal readings (p=1, p=2, K₁, tiny spheres); the internal mathematics was verified correct in every one.
 - **The ALREADY_KNOWN pile (26) indicts catalog freshness more than the model**: most were scooped by 2024–2026 papers the 2026-05 auto-review missed or misjudged, several by mere weeks; a few statements were already settled inside the source papers themselves.
 
@@ -61,8 +61,11 @@ A formal verdict is not a result. `CONFIRMED` means one LLM referee could not br
 
 ## Correct but already known
 
+- `2510.11311__04` (disproved) — The proof is correct and I verified it by exhaustive/MILP search on D_2 and D_3, but it is Theorem 1.3 of Lei, Wang, Xu and Yang, arXiv:2609.14368 (13 Sep 2026) — the same layered Eulerian construction with the same parameters, posted four days before this attack ran.
+- `2603.02786__01` (proved) — The proof is correct as written (every step re-derived, Lemma 2 verified exhaustively by computer), but Conjecture 4 had already been proved ten days earlier by Hou, Liu and Zhao, arXiv:2609.07487 (7 Sep 2026), Theorem 1.2, by a different (lattice-covering) route.
 - `2603.02786__04` (proved) — The proof is, as far as I can check, correct and complete, but Conjecture 7 was already solved — with the same random-permutation/composition fractional-packing mechanism — by Mao, Wang, Wei and Yang, arXiv:2607.06113 (7 July 2026), two months before this attack ran.
 - `finding_k_edge_outerplanar_graph_embeddings` (proved) — The SPQR dynamic program is, as far as I could check, correct — every recurrence (S, P, Q, R, the two-arm P-node scheduling DP, the block-cut gluing lemma) reproduces brute force on thousands of small instances — but the theorem was already published two months earlier as arXiv:2607.08110 (H. Yu, 9 July 2026), which resolves Bentz's question by a different route.
+- `imbalance_conjecture` (proved) — The proof is mathematically correct in every step I could check, but the identical theorem and the identical load-bearing "capacity"/truncated-tail lemma were posted to arXiv as 2608.09191 (Schreib & Yavari, v1 10 Aug 2026, v2 17 Aug 2026), five weeks before this attack ran.
 - `three_chromatic_0_2_graphs` (proved) — The proof is correct — I could not break any step, and exhaustive enumeration of all (0,2)-graphs on at most 9 vertices (all graphs, 63 of them), all connected ones up to 14 vertices, and 500+ cube-like (0,2)-graphs up to 64 vertices found chi in {1,2,4} only and confirmed the load-bearing lemma every time — but the identical theorem, with the same two-lemma architecture (unique-4-cycle matching plus "square-closed edge label is a gradient" via a divergence argument), was posted to arXiv as 2607.10125 (Christopher Williamson, 11 July 2026), two months before this attack.
 
 ## Full table
@@ -82,12 +85,15 @@ A formal verdict is not a result. `CONFIRMED` means one LLM referee could not br
 | [`2304.03567__03`](2304.03567__03.md) | partial | high | yes | MINOR_GAPS | y | y | y |
 | [`2506.08810__03`](2506.08810__03.md) | disproved | high | yes | CONFIRMED | y | y | y |
 | [`2507.10840__01`](2507.10840__01.md) | proved | high | yes | CONFIRMED | y | y | y |
+| [`2510.11311__04`](2510.11311__04.md) | disproved | high | yes | ALREADY_KNOWN | y | y | y |
+| [`2603.02786__01`](2603.02786__01.md) | proved | high | yes | ALREADY_KNOWN | y | y | y |
 | [`2603.02786__04`](2603.02786__04.md) | proved | high | yes | ALREADY_KNOWN | y | y | y |
 | [`a_generalization_of_vizings_theorem`](a_generalization_of_vizings_theorem.md) | disproved | high | yes | MINOR_GAPS | y | y | y |
 | [`chromatic_number_of_random_lifts_of_complete_graphs`](chromatic_number_of_random_lifts_of_complete_graphs.md) | proved | high | yes | MINOR_GAPS | y | y | y |
 | [`covering_powers_of_cycles_with_equivalence_subgraphs`](covering_powers_of_cycles_with_equivalence_subgraphs.md) | disproved | high | yes | CONFIRMED | y | y | y |
 | [`finding_k_edge_outerplanar_graph_embeddings`](finding_k_edge_outerplanar_graph_embeddings.md) | proved | high | yes | ALREADY_KNOWN | y | y | y |
 | [`geodesic_cycles_and_tuttes_theorem`](geodesic_cycles_and_tuttes_theorem.md) | disproved | high | yes | CONFIRMED | y | y | y |
+| [`imbalance_conjecture`](imbalance_conjecture.md) | proved | high | yes | ALREADY_KNOWN | y | y | y |
 | [`melnikovs_valency_variety_problem`](melnikovs_valency_variety_problem.md) | disproved | high | yes | CONFIRMED | y | y | y |
 | [`mixing_circular_colourings_0`](mixing_circular_colourings_0.md) | proved | high | yes | MINOR_GAPS | y | y | y |
 | [`random_stable_roommates`](random_stable_roommates.md) | partial | medium | yes | MINOR_GAPS | y | y | y |
