@@ -1,0 +1,1 @@
+n=11 graphs=15721537 non-exceptional-min-eta=29 (attained by J?`@dPSiV~_) below-bound=0

@@ -1,0 +1,24 @@
+C6: n=6 E_(n+1)=['2', '3', '4', '5', '5/2', '6', '7', '7/2', '7/3']
+   max bad ratio tested = 15/4; min good ratio above = 4
+   E_(n+1) points in [maxbad, mingood] (threshold must be one): ['4']
+   representation-dependent ratios: []
+   local-constancy (Prop 4) violations: [] count=0
+   any bad ratio >= n+1 (would break Sec.5): []
+C7: n=7 E_(n+1)=['2', '3', '4', '5', '5/2', '6', '7', '7/2', '7/3', '8', '8/3']
+   max bad ratio tested = 15/4; min good ratio above = 4
+   E_(n+1) points in [maxbad, mingood] (threshold must be one): ['4']
+   representation-dependent ratios: []
+   local-constancy (Prop 4) violations: [] count=0
+   any bad ratio >= n+1 (would break Sec.5): []
+K5: n=5 E_(n+1)=['2', '3', '4', '5', '5/2', '6']
+   max bad ratio tested = 11/2; min good ratio above = 6
+   E_(n+1) points in [maxbad, mingood] (threshold must be one): ['6']
+   representation-dependent ratios: []
+   local-constancy (Prop 4) violations: [] count=0
+   any bad ratio >= n+1 (would break Sec.5): []
+prism: n=6 E_(n+1)=['2', '3', '4', '5', '5/2', '6', '7', '7/2', '7/3']
+   max bad ratio tested = 15/4; min good ratio above = 4
+   E_(n+1) points in [maxbad, mingood] (threshold must be one): ['4']
+   representation-dependent ratios: []
+   local-constancy (Prop 4) violations: [] count=0
+   any bad ratio >= n+1 (would break Sec.5): []
