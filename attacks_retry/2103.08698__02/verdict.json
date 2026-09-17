@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain the desired approximation for arbitrary monotone FO objectives on subpolynomial-degree graphs, and for weighted fixed-distance packing on every nowhere-dense class.",
+  "would_publish": false,
+  "caveats": "The unrestricted nowhere-dense metatheorem remains unproved; no novelty claim is made for the special cases.",
+  "id": "2103.08698__02",
+  "model": "gpt-6-astra",
+  "usd": 1.000405,
+  "eur": 1.036214,
+  "elapsed_s": 1348.1,
+  "status": "completed",
+  "response_id": "resp_0588e17ce86d5099006aab357f2ac487d2a69aa602f375be5b",
+  "when": "2026-09-17T00:56:35Z"
+}

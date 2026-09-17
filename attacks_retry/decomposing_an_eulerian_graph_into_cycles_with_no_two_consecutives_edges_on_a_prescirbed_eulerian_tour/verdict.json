@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for every K_{a,b} with even a,b at least four, even for arbitrary forbidden transition pairings.",
+  "would_publish": false,
+  "caveats": "No general resolution; novelty and current literature status are unverified.",
+  "id": "decomposing_an_eulerian_graph_into_cycles_with_no_two_consecutives_edges_on_a_prescirbed_eulerian_tour",
+  "model": "gpt-6-astra",
+  "usd": 1.28663,
+  "eur": 1.332685,
+  "elapsed_s": 1558.3,
+  "status": "completed",
+  "response_id": "resp_0054d17f273e790b006aab193fb68887d2a132c4a27aacfe6b",
+  "when": "2026-09-16T22:59:33Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "medium",
+  "one_line": "For the subset-incidence model in the previous attempt, I prove faithful convex unit-distance realizability of G_3 and realizability of G_4 with one core edge deleted.",
+  "would_publish": false,
+  "caveats": "The excerpt omits G_k's adjacency definition, so identification with that model remains conditional; the full k>=4 question is unresolved.",
+  "id": "1903.11287__00",
+  "model": "gpt-6-astra",
+  "usd": 2.306435,
+  "eur": 2.388993,
+  "elapsed_s": 2547.0,
+  "status": "completed",
+  "response_id": "resp_0cdd0c389f16b0ec006aab09c30ab887d290a62307df037ce0",
+  "when": "2026-09-16T22:09:57Z"
+}

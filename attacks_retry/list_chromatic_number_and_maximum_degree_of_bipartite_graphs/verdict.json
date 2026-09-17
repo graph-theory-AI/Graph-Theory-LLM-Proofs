@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Controlled metric growth gives a logarithmic list-colouring bound, with an optimal leading term under polynomial growth, but the unrestricted maximum-degree conjecture is not resolved.",
+  "would_publish": false,
+  "caveats": "The proof requires a growth hypothesis; novelty and current literature status have not been checked.",
+  "id": "list_chromatic_number_and_maximum_degree_of_bipartite_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.013375,
+  "eur": 1.049649,
+  "elapsed_s": 1147.8,
+  "status": "completed",
+  "response_id": "resp_0cd4ccc2f540b122006aab2107ef4487d2a6a8844eb33f148d",
+  "when": "2026-09-16T23:25:55Z"
+}

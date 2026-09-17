@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Graph-power obstructions exclude an infinite family missed by the quoted degree bound, including a nine-vertex tree that passes every multicoloring test from the previous attempt.",
+  "would_publish": false,
+  "caveats": "No characterization or sufficiency theorem is obtained; novelty relative to the full source paper and subsequent literature is unverified.",
+  "id": "2111.00532__02",
+  "model": "gpt-6-astra",
+  "usd": 1.022795,
+  "eur": 1.059406,
+  "elapsed_s": 852.9,
+  "status": "completed",
+  "response_id": "resp_064a76ed441b078f006aab89ae845887d29f3c658f2b80801a",
+  "when": "2026-09-17T06:47:31Z"
+}

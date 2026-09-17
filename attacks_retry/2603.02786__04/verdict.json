@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A random-composition fractional tiling, rounded by edge-colouring and a reservoir, proves M_k(n)=nk+o(k) for every fixed n.",
+  "would_publish": true,
+  "caveats": "Uses the classical Pippenger\u2013Spencer edge-colouring theorem; no explicit convergence rate is obtained.",
+  "id": "2603.02786__04",
+  "model": "gpt-6-astra",
+  "usd": 0.885965,
+  "eur": 0.917678,
+  "elapsed_s": 732.4,
+  "status": "completed",
+  "response_id": "resp_0a0a7de165415eb7006aab479fe2b887d2b80acfd9a79e09e2",
+  "when": "2026-09-17T02:03:39Z"
+}

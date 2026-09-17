@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Recognition lies in coNP, and a 6\u03b1\u22122 obstruction bound gives polynomial recognition at every fixed independence number.",
+  "would_publish": false,
+  "caveats": "Unrestricted polynomial-time recognition and hardness remain unresolved here; the novelty of these partial results has not been checked.",
+  "id": "1904.06184__00",
+  "model": "gpt-6-astra",
+  "usd": 1.080485,
+  "eur": 1.119161,
+  "elapsed_s": 1008.2,
+  "status": "completed",
+  "response_id": "resp_09259534f44451c9006aab36d6041c87d2b85ed79276dff514",
+  "when": "2026-09-17T00:56:38Z"
+}

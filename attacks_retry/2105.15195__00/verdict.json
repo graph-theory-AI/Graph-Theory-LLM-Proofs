@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A prime-based reduction closes the interlacing gap and proves c_r = b_0^(r-1)/(2r) for every r >= 2.",
+  "would_publish": true,
+  "caveats": "The intended denominator is 2r b_0-r; the literal 2^r b_0-r transcription is false for r >= 3.",
+  "id": "2105.15195__00",
+  "model": "gpt-6-astra",
+  "usd": 0.9,
+  "eur": 0.932215,
+  "elapsed_s": 1011.0,
+  "status": "completed",
+  "response_id": "resp_0a073e884c842666006aab3f82b1ec87d2931639663a33eb44",
+  "when": "2026-09-17T01:33:41Z"
+}

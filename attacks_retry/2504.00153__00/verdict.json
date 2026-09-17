@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain exact characterizations for hereditary cograph classes and for classes of line graphs, but not for arbitrary graph classes.",
+  "would_publish": false,
+  "caveats": "The general characterization remains unresolved here; overlap of these special-case results with the full source paper has not been checked.",
+  "id": "2504.00153__00",
+  "model": "gpt-6-astra",
+  "usd": 1.08457,
+  "eur": 1.123392,
+  "elapsed_s": 1183.5,
+  "status": "completed",
+  "response_id": "resp_0d4987e188c5e280006aab3144723487d28ba3c7cd4c4f8de3",
+  "when": "2026-09-17T00:35:47Z"
+}

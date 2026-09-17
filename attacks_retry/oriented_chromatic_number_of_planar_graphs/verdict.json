@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the sharp bound 16 for planar graphs of treewidth at most three, with an explicit 540-vertex example, but do not determine the unrestricted planar maximum.",
+  "would_publish": false,
+  "caveats": "The supplied interval [18,80] is unchanged; novelty of the subclass result is not claimed.",
+  "id": "oriented_chromatic_number_of_planar_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.178045,
+  "eur": 1.220213,
+  "elapsed_s": 1117.4,
+  "status": "completed",
+  "response_id": "resp_06ca48230c1a34d6006aab25c32e6087d2bf4f7ffe58f0168e",
+  "when": "2026-09-16T23:45:36Z"
+}

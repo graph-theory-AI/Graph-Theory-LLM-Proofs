@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An explicit asymptotically regular C4-free construction disproves Petersen countability; the dodecahedral case remains unresolved here.",
+  "would_publish": true,
+  "caveats": "The dodecahedral case is not settled, and literature priority for the Petersen construction has not been checked.",
+  "id": "2106.03261__01",
+  "model": "gpt-6-astra",
+  "usd": 1.097255,
+  "eur": 1.136531,
+  "elapsed_s": 950.7,
+  "status": "completed",
+  "response_id": "resp_0aa319a0e014b369006aab3fd868bc87d2a9e65090d6869117",
+  "when": "2026-09-17T01:34:06Z"
+}

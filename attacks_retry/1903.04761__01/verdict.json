@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Finding a largest induced prism is W[1]-hard even when a valid larger prism-free promise is supplied, while minimal separators have small clique witnesses; neither result settles FPT MWIS.",
+  "would_publish": false,
+  "caveats": "The hardness concerns prism preprocessing, not MWIS; no novelty claim is made, and the exact Abrishami et al. result was not verified.",
+  "id": "1903.04761__01",
+  "model": "gpt-6-astra",
+  "usd": 1.29676,
+  "eur": 1.343177,
+  "elapsed_s": 1349.9,
+  "status": "completed",
+  "response_id": "resp_0418857d135acbfa006aab3c424a7c87d28c371e84a4d3660b",
+  "when": "2026-09-17T01:25:27Z"
+}

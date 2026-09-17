@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the sharp asymptotic factor 2^k for trees with any fixed number of non-leaf vertices, but leave the unrestricted infimum undetermined.",
+  "would_publish": false,
+  "caveats": "Both k and the non-leaf core bound are fixed as n grows; novelty of this restricted result has not been checked.",
+  "id": "2410.23566__02",
+  "model": "gpt-6-astra",
+  "usd": 1.276265,
+  "eur": 1.321949,
+  "elapsed_s": 1109.2,
+  "status": "completed",
+  "response_id": "resp_0217426d3d2e9ba9006aab64687d7087d28013ed478f61c68b",
+  "when": "2026-09-17T04:12:45Z"
+}

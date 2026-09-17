@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For planar instances with distinct terminals, a set of h vertices whose deletion makes the supply graph subcubic gives a tilde-O(n^(9/19)) + 2h approximation.",
+  "would_publish": false,
+  "caveats": "Uses the planar MaxNDP approximation theorem quoted in the question; no improvement for all planar graphs or novelty claim is made.",
+  "id": "approximation_ratio_for_maximum_edge_disjoint_paths_problem",
+  "model": "gpt-6-astra",
+  "usd": 0.91259,
+  "eur": 0.945256,
+  "elapsed_s": 1128.2,
+  "status": "completed",
+  "response_id": "resp_069591985324e173006aab1379cbb887d2984cb8689811f437",
+  "when": "2026-09-16T22:27:45Z"
+}

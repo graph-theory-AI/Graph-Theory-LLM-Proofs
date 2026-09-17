@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For every infinite connected locally finite H, I prove that L(H \u25a1 K2) has a Hamilton circle, yielding exact-4-edge-connected special cases.",
+  "would_publish": false,
+  "caveats": "Neither general conjecture is resolved; novelty and an updated literature status are not claimed.",
+  "id": "hamiltonian_cycles_in_line_graphs_of_infinite_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.14849,
+  "eur": 1.1896,
+  "elapsed_s": 1671.7,
+  "status": "completed",
+  "response_id": "resp_08c825216c4f9320006aab1f3b5d5c87d28f240534432661c5",
+  "when": "2026-09-16T23:26:58Z"
+}

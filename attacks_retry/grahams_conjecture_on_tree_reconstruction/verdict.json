@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every tree with exactly one branching vertex of degree three, four, or five is reconstructible among all trees, and I determine the optimal finite-prefix bound for these classes.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved; novelty of these special-case results has not been checked.",
+  "id": "grahams_conjecture_on_tree_reconstruction",
+  "model": "gpt-6-astra",
+  "usd": 1.27878,
+  "eur": 1.324554,
+  "elapsed_s": 1089.9,
+  "status": "completed",
+  "response_id": "resp_0bf769915125d059006aab1e7f0fe087d2aa25daee4a4b5ec5",
+  "when": "2026-09-16T23:14:08Z"
+}

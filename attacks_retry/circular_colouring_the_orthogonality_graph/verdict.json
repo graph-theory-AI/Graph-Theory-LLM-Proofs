@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A geometric odd-walk lemma excludes every homomorphism from O to a finite locally bipartite graph, and consequently proves \u03c7_c(O)=4.",
+  "would_publish": true,
+  "caveats": "Literature priority has not been checked; the argument below is self-contained.",
+  "id": "circular_colouring_the_orthogonality_graph",
+  "model": "gpt-6-astra",
+  "usd": 1.19645,
+  "eur": 1.239277,
+  "elapsed_s": 1301.0,
+  "status": "completed",
+  "response_id": "resp_03d18173d7495a0e006aab15c8c21087d2a630322d25831e3c",
+  "when": "2026-09-16T22:40:29Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds when the cyclic classes have prime size or size four, and pairwise intersection forces the stronger bound 3n <= 2c(D)^2.",
+  "would_publish": false,
+  "caveats": "No general proof or counterexample is obtained; these are self-contained partial results, with no claim of literature novelty.",
+  "id": "2602.16333__02",
+  "model": "gpt-6-astra",
+  "usd": 1.216635,
+  "eur": 1.260184,
+  "elapsed_s": 1125.3,
+  "status": "completed",
+  "response_id": "resp_01fac50aa57d1dd3006aab3b1cd72087d2ac08d067ecc6a005",
+  "when": "2026-09-17T01:16:49Z"
+}

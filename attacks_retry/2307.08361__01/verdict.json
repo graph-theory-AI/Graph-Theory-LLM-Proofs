@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A finite-field construction gives quadratic bounds for sidewise almost-regular graphs and a stronger degree-scale-dependent estimate, but does not settle the unrestricted conjecture.",
+  "would_publish": false,
+  "caveats": "These are non-induced subgraphs; dependence on the number of degree scales remains, and novelty is not claimed.",
+  "id": "2307.08361__01",
+  "model": "gpt-6-astra",
+  "usd": 0.979615,
+  "eur": 1.01468,
+  "elapsed_s": 688.4,
+  "status": "completed",
+  "response_id": "resp_0c62e86721c12a00006aab4cc3bcdc87d2968804925a98cec4",
+  "when": "2026-09-17T02:24:51Z"
+}

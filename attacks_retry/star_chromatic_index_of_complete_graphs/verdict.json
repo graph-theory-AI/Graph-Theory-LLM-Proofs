@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The 3n-O(1) packing lower bound is valid, and star colorings refining the Boolean one-factorization necessarily use superlinearly many colors.",
+  "would_publish": false,
+  "caveats": "Unrestricted linearity is not resolved; novelty and current literature status have not been independently checked.",
+  "id": "star_chromatic_index_of_complete_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.049355,
+  "eur": 1.086916,
+  "elapsed_s": 1148.0,
+  "status": "completed",
+  "response_id": "resp_066a216be67d1a9d006aab289d237087d2b521a65ed948c143",
+  "when": "2026-09-16T23:58:16Z"
+}

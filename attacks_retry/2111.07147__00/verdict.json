@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For a fixed number q of witness faces, I prove the explicit weak-diameter bound 6q(2r+1)-1, which has optimal order in r, but I do not settle the unrestricted conjecture.",
+  "would_publish": false,
+  "caveats": "The bound depends on q; the case of unboundedly many witness faces remains unresolved here, and novelty of the quantitative special case has not been assessed.",
+  "id": "2111.07147__00",
+  "model": "gpt-6-astra",
+  "usd": 1.504145,
+  "eur": 1.557986,
+  "elapsed_s": 1611.3,
+  "status": "completed",
+  "response_id": "resp_07052e0836c83d37006aab2ec27b0c87d2996591a43abc8bc5",
+  "when": "2026-09-17T00:32:13Z"
+}

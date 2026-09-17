@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For N=2^d, the partition counts satisfy log f(d) = log f_{<=2}(d) + o(N) = (N/2) log d + C N + o(N), where C = -1 + sqrt(3)/4 - log(sqrt(3)-1)/2.",
+  "would_publish": false,
+  "caveats": "Exponential-scale estimates only; f_{<=2} is interpreted as allowing dimensions 0,1,2. Novelty relative to the full source and subsequent literature has not been verified.",
+  "id": "2401.00299__00",
+  "model": "gpt-6-astra",
+  "usd": 1.228925,
+  "eur": 1.272914,
+  "elapsed_s": 1040.8,
+  "status": "completed",
+  "response_id": "resp_0030b1a1167d192a006aab4df44c9487d29d62a5893ddd95e1",
+  "when": "2026-09-17T02:35:48Z"
+}

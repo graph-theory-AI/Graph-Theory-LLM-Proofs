@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The sharp exponent holds when a bounded vertex set exposes linearly many bounded components, and fixed repeated-piece families have an exact computable polynomial-growth exponent.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture remains unresolved; constants depend on the fixed structural parameters, and novelty of these partial results has not been checked.",
+  "id": "2603.17630__01",
+  "model": "gpt-6-astra",
+  "usd": 1.050805,
+  "eur": 1.088418,
+  "elapsed_s": 929.7,
+  "status": "completed",
+  "response_id": "resp_0831f9627b92b23a006aab47baf78487d28781215d9fa7b98a",
+  "when": "2026-09-17T02:07:24Z"
+}

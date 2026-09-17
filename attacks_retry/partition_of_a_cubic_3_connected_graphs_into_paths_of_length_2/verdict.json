@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the conjecture, with any prescribed edge forbidden, for a periodic two-family cycle class containing all connected I-graphs.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not settled; novelty of this special case has not been checked.",
+  "id": "partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2",
+  "model": "gpt-6-astra",
+  "usd": 1.087085,
+  "eur": 1.125997,
+  "elapsed_s": 1376.2,
+  "status": "completed",
+  "response_id": "resp_03af0b405fa08476006aab268f546c87d2ab1a4a0f7ecd24eb",
+  "when": "2026-09-16T23:53:19Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Haj\u00f3s' bound is proved here for L(H) whenever H is simple, connected and Eulerian with |E(H)| <= 2|V(H)| + 5, including all line graphs of connected simple 4-regular graphs.",
+  "would_publish": false,
+  "caveats": "This is a restricted-class result; novelty has not been checked, and the general conjecture is not resolved.",
+  "id": "decomposing_an_eulerian_graph_into_cycles",
+  "model": "gpt-6-astra",
+  "usd": 0.97697,
+  "eur": 1.01194,
+  "elapsed_s": 1292.6,
+  "status": "completed",
+  "response_id": "resp_0326b09fbb1ded59006aab18b0ae9487d2aca674bdc238649c",
+  "when": "2026-09-16T22:52:45Z"
+}

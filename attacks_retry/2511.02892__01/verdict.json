@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain the second-moment asymptotic for uniform simple graphs and prove that it is dominated by atypical graphs, but the probability of an exactly zero coefficient remains uncontrolled.",
+  "would_publish": false,
+  "caveats": "No anti-concentration at zero is proved; novelty of these partial results has not been checked.",
+  "id": "2511.02892__01",
+  "model": "gpt-6-astra",
+  "usd": 1.084535,
+  "eur": 1.123356,
+  "elapsed_s": 1652.6,
+  "status": "completed",
+  "response_id": "resp_08ff682ea58f3d40006aab6d4c27c087d2947627643d1fe1c4",
+  "when": "2026-09-17T04:59:44Z"
+}

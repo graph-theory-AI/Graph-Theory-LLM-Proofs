@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The weighted vertex-cover PTAS is valid and extends to every fixed FO-definable binary covering problem, but the unrestricted FO minimization conjecture is not resolved.",
+  "would_publish": false,
+  "caveats": "Explicit-support efficient fragility is assumed; only special cases are proved, and their novelty has not been independently checked.",
+  "id": "2103.08698__01",
+  "model": "gpt-6-astra",
+  "usd": 1.028825,
+  "eur": 1.065652,
+  "elapsed_s": 952.0,
+  "status": "completed",
+  "response_id": "resp_0e8e31c03931e3d9006aab4f7423a487d2bc2f7869e6e6ba6a",
+  "when": "2026-09-17T02:40:43Z"
+}

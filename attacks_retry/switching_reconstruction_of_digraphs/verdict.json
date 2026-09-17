@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I construct a twelve-vertex counterexample with antiparallel pairs and prove a rigid equality-case theorem for the oriented-graph problem.",
+  "would_publish": false,
+  "caveats": "The explicit example is not oriented; the no-digon problem remains unresolved here, and novelty of the structural theorem is unchecked.",
+  "id": "switching_reconstruction_of_digraphs",
+  "model": "gpt-6-astra",
+  "usd": 1.26215,
+  "eur": 1.307328,
+  "elapsed_s": 1519.0,
+  "status": "completed",
+  "response_id": "resp_0f7643a541e65825006aab2a43288c87d2b4257a8d58117d3c",
+  "when": "2026-09-17T00:11:30Z"
+}

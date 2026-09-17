@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For H=C4+K1 and its complement I construct explicit hypercube components for every n\u226512, and I give uniform sufficient conditions covering all odd cycles, all stars, and further infinite families.",
+  "would_publish": false,
+  "caveats": "The full characterization and optimal thresholds remain unresolved; novelty has not been checked.",
+  "id": "2506.08810__01",
+  "model": "gpt-6-astra",
+  "usd": 1.70044,
+  "eur": 1.761307,
+  "elapsed_s": 1728.4,
+  "status": "completed",
+  "response_id": "resp_0739e94b8d24670a006aab31d1463487d2bfe8e34838cbbb49",
+  "when": "2026-09-17T00:47:13Z"
+}

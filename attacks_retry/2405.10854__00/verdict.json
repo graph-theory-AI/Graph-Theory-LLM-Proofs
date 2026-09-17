@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Unimodality holds for every connected graph with maximum orientable embedding genus at most two, so any counterexample must have cycle rank at least six.",
+  "would_publish": false,
+  "caveats": "The general conjecture is unresolved here; novelty of the partial results has not been checked, and counts use the fixed-graph rotation-system convention.",
+  "id": "2405.10854__00",
+  "model": "gpt-6-astra",
+  "usd": 1.27256,
+  "eur": 1.318111,
+  "elapsed_s": 2022.4,
+  "status": "completed",
+  "response_id": "resp_07e07b01b0f4016a006aab08cb4b2087d29a8e8505b3b0d245",
+  "when": "2026-09-16T21:57:05Z"
+}

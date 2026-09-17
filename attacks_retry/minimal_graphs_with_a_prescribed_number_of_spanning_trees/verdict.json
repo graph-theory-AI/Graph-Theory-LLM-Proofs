@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A complete-bipartite correction gives optimal-order bounds under an explicit 2-adic reservoir condition, including sharp asymptotics beyond the supplied smoothness criteria.",
+  "would_publish": false,
+  "caveats": "The reservoir condition is restrictive; prime inputs remain untreated, and novelty is not claimed.",
+  "id": "minimal_graphs_with_a_prescribed_number_of_spanning_trees",
+  "model": "gpt-6-astra",
+  "usd": 1.19705,
+  "eur": 1.239898,
+  "elapsed_s": 1168.5,
+  "status": "completed",
+  "response_id": "resp_0f42fa290cade498006aab24c8216087d29bdce489b3afa4d2",
+  "when": "2026-09-16T23:42:16Z"
+}

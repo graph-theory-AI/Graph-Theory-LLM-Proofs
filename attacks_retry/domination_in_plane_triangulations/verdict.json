@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I establish a degree-sensitive domination bound and prove the n/4 inequality for triangulated augmentations of at least two vertex-disjoint octahedra.",
+  "would_publish": false,
+  "caveats": "The general conjecture is not settled; novelty and current literature status have not been independently checked.",
+  "id": "domination_in_plane_triangulations",
+  "model": "gpt-6-astra",
+  "usd": 1.076055,
+  "eur": 1.114572,
+  "elapsed_s": 1191.5,
+  "status": "completed",
+  "response_id": "resp_0528e2549325eefc006aab1ade805087d29ead773ac3f4f289",
+  "when": "2026-09-16T23:00:21Z"
+}

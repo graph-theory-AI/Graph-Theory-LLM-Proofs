@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds for finite loopless multigraphs with maximum average degree at most 4 and maximum degree at least 8.",
+  "would_publish": false,
+  "caveats": "A self-contained special case only; no novelty claim, and the general conjecture remains unresolved.",
+  "id": "list_total_colouring_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.03612,
+  "eur": 1.073208,
+  "elapsed_s": 1177.7,
+  "status": "completed",
+  "response_id": "resp_00cc094b1af65fe7006aab221e605c87d2b89cae4f7c383374",
+  "when": "2026-09-16T23:31:03Z"
+}

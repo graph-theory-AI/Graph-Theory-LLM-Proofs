@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I identify explicit excluded minors on eight and nine vertices, both of treewidth four, and prove that eight is the minimum order of an obstruction of treewidth at most four.",
+  "would_publish": false,
+  "caveats": "The full excluded-minor set and the planar case are not determined; novelty of these partial results has not been checked.",
+  "id": "1907.00351__00",
+  "model": "gpt-6-astra",
+  "usd": 1.69709,
+  "eur": 1.757837,
+  "elapsed_s": 1265.1,
+  "status": "completed",
+  "response_id": "resp_03a4ffe46c0ade09006aab4e50d7b087d2b02da5fbd01086cb",
+  "when": "2026-09-17T02:41:05Z"
+}

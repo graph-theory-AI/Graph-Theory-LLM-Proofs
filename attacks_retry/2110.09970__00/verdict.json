@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I characterize all K4-minor-free graphs in the three classes and prove that every triangle-free 5- or 6-holed graph is K4-minor-free.",
+  "would_publish": false,
+  "caveats": "Graphs with K4 minors are not classified; novelty of the special-case characterization has not been checked.",
+  "id": "2110.09970__00",
+  "model": "gpt-6-astra",
+  "usd": 1.01963,
+  "eur": 1.056127,
+  "elapsed_s": 901.6,
+  "status": "completed",
+  "response_id": "resp_0b6956edf30f0188006aab52b7a15887d280a55644aa910642",
+  "when": "2026-09-17T02:53:49Z"
+}

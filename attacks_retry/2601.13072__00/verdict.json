@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A degree\u2013codegree counting inequality gives a polynomial-time algorithm in a near-uniform regime, while explicit affine-plane graphs show that the previous small-parameter approach leaves a genuine middle-degree core.",
+  "would_publish": false,
+  "caveats": "The general quasi-polynomial question remains open; novelty of the special-case criterion has not been checked.",
+  "id": "2601.13072__00",
+  "model": "gpt-6-astra",
+  "usd": 1.113965,
+  "eur": 1.153839,
+  "elapsed_s": 1136.2,
+  "status": "completed",
+  "response_id": "resp_0714ad51e37f2c08006aab7e57162487d28ec7d2b9b3bc3aa2",
+  "when": "2026-09-17T06:03:51Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A matching-based sufficient condition gives six colours with arbitrarily long residual cycles, and every subcubic graph with a spanning 4-cycle factor admits a sharp five-colour bound.",
+  "would_publish": false,
+  "caveats": "These sufficient conditions are not universal; the original conjecture is unresolved here, and no novelty claim is made.",
+  "id": "star_chromatic_index_of_cubic_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.178655,
+  "eur": 1.220845,
+  "elapsed_s": 1566.6,
+  "status": "completed",
+  "response_id": "resp_04e47e352d102e8a006aab28a3efb087d29acbd7844e369d28",
+  "when": "2026-09-17T00:05:22Z"
+}

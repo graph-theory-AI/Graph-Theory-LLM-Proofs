@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Dense strongly connected digraphs require \u03a9(n\u00b2) list probes to output a DFS tree even when both incoming and outgoing lists are sorted, but the minimally strong adjacency-list case remains unresolved.",
+  "would_publish": false,
+  "caveats": "This is an input-access lower bound, not a new algorithm or a superlinear lower bound for sparse minimally strong inputs.",
+  "id": "2304.03567__02",
+  "model": "gpt-6-astra",
+  "usd": 0.54404,
+  "eur": 0.563514,
+  "elapsed_s": 709.9,
+  "status": "completed",
+  "response_id": "resp_0f41b019d1f757b1006aab2f9afdb487d2bcff394a2119433e",
+  "when": "2026-09-17T00:20:48Z"
+}

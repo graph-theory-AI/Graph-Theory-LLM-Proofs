@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove exact balance for every single binary coarsening, including zero imbalance for k=2, but not simultaneous constant-error balance for arbitrarily many colours.",
+  "would_publish": false,
+  "caveats": "The multicolour conjecture remains unresolved; no novelty claim is made for the binary result.",
+  "id": "2604.09449__01",
+  "model": "gpt-6-astra",
+  "usd": 1.061735,
+  "eur": 1.09974,
+  "elapsed_s": 877.6,
+  "status": "completed",
+  "response_id": "resp_04d3498d364a2e85006aab47c5f0c087d2a7b6e2e95f64ae5b",
+  "when": "2026-09-17T02:06:43Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Both bounds hold under explicit partition/codegree conditions, and direct proofs verify the unrestricted cases n \u2264 3 and n \u2264 4, respectively.",
+  "would_publish": false,
+  "caveats": "Neither full conjecture is settled; no improvement to the best unrestricted asymptotic bounds or literature novelty is claimed.",
+  "id": "turans_problem_for_hypergraphs",
+  "model": "gpt-6-astra",
+  "usd": 1.268545,
+  "eur": 1.313952,
+  "elapsed_s": 1424.7,
+  "status": "completed",
+  "response_id": "resp_0a274d19d2811f43006aab2bef9a0887d2af647cb4471b37a7",
+  "when": "2026-09-17T00:17:04Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds with the stronger bound n^2/32 when G has no 5-cycle, and it also holds whenever G has at most n^5/224000 copies of C5.",
+  "would_publish": false,
+  "caveats": "Self-contained special cases only; no novelty claim, and the unrestricted conjecture is not settled.",
+  "id": "odd_cycle_transversal_in_triangle_free_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.905275,
+  "eur": 0.937679,
+  "elapsed_s": 1166.4,
+  "status": "completed",
+  "response_id": "resp_07e6d5965e2df40a006aab25b4c18487d2bbbe0b0895e6b7bb",
+  "when": "2026-09-16T23:46:10Z"
+}

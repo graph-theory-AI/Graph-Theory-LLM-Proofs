@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove that every 4-regular graph of girth at least 34 has fractional chromatic number at most 1875/628 < 3, but do not settle the ordinary 4-chromatic existence question.",
+  "would_publish": false,
+  "caveats": "This is a fractional-coloring result only; no construction or nonexistence theorem for the original problem is obtained, and novelty is not asserted.",
+  "id": "high_girth_low_degree_4_chromatic_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.929265,
+  "eur": 0.962528,
+  "elapsed_s": 1636.4,
+  "status": "completed",
+  "response_id": "resp_0113a4601b506799006aab1f856a2887d290006224cc41278f",
+  "when": "2026-09-16T23:27:37Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "At the natural q^n|S|^n scale, a polynomial removal lemma holds for coordinate-permutation-invariant colored sets whenever every nontrivial additive character takes at least three values on S.",
+  "would_publish": false,
+  "caveats": "Arbitrary colored sets remain untreated; the character condition is automatic under the stated size hypothesis in characteristic at least 5, but not always in characteristic 3.",
+  "id": "2605.13628__01",
+  "model": "gpt-6-astra",
+  "usd": 1.226875,
+  "eur": 1.270791,
+  "elapsed_s": 2215.8,
+  "status": "completed",
+  "response_id": "resp_0ad4f5212900de67006aab07fd3b2487d29226ebe7eb926b6e",
+  "when": "2026-09-16T21:56:52Z"
+}

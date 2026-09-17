@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The intended conjecture holds for every properly edge-coloured target and for every colouring of K4 except, possibly, one explicit three-colour pattern.",
+  "would_publish": false,
+  "caveats": "These results concern the intended C-free formulation; the exceptional K4 pattern and the general higher-order case are not settled here.",
+  "id": "2506.08810__05",
+  "model": "gpt-6-astra",
+  "usd": 1.76235,
+  "eur": 1.825433,
+  "elapsed_s": 1765.3,
+  "status": "completed",
+  "response_id": "resp_0cd94c17dc326a81006aab320bd16887d281fec529c7237d0e",
+  "when": "2026-09-17T00:48:48Z"
+}

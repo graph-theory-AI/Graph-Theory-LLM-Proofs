@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "The conjectured asymptotic follows from an exact packing lemma for arithmetic-progression blocks of differences and the dense-subset Green\u2013Tao theorem.",
+  "would_publish": true,
+  "caveats": "Uses the established relative-density Green\u2013Tao theorem; novelty has not been checked against the full source paper.",
+  "id": "2603.02786__01",
+  "model": "gpt-6-astra",
+  "usd": 0.737035,
+  "eur": 0.763417,
+  "elapsed_s": 925.0,
+  "status": "completed",
+  "response_id": "resp_0e7ff8f7847cf22d006aab32bcf90087d2bb348bcfa6f54912",
+  "when": "2026-09-17T00:37:45Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under binary end-padding, I classify all unavoidable one-run languages and prove that unavoidability for context-free input languages is \u03a3\u2070\u2082-complete.",
+  "would_publish": false,
+  "caveats": "The padding definition is made explicit but has not been independently checked in the source; the unrestricted structural characterization and novelty remain unsettled.",
+  "id": "2311.05066__00",
+  "model": "gpt-6-astra",
+  "usd": 1.076185,
+  "eur": 1.114707,
+  "elapsed_s": 1221.0,
+  "status": "completed",
+  "response_id": "resp_05e7309775200843006aab30325c9887d29eecbd823248c8fe",
+  "when": "2026-09-17T00:31:51Z"
+}

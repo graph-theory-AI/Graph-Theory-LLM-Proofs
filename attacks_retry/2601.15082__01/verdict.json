@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Excluding one apex\u2013incidence clique exactly characterizes tied domination for bounded-treewidth cores with bounded-degree peripheral vertices, and such classes can require exponentially growing tying functions.",
+  "would_publish": false,
+  "caveats": "The general bounded-degeneracy case remains unresolved; novelty relative to the full source paper has not been checked.",
+  "id": "2601.15082__01",
+  "model": "gpt-6-astra",
+  "usd": 1.178895,
+  "eur": 1.221093,
+  "elapsed_s": 1282.2,
+  "status": "completed",
+  "response_id": "resp_062a3473493eaff2006aab32ab31b487d2a6f1d23e6a649c0b",
+  "when": "2026-09-17T00:43:25Z"
+}

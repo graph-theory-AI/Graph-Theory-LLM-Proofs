@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The biclique-free converse holds with a sharper extraction bound, while no fixed finite family of transductions suffices to test bounded merge-width, even on 2-degenerate C4-free classes.",
+  "would_publish": false,
+  "caveats": "The unrestricted dense case remains unresolved; standard monadic one-dimensional transductions are assumed; novelty has not been literature-checked.",
+  "id": "2504.08266__01",
+  "model": "gpt-6-astra",
+  "usd": 0.936025,
+  "eur": 0.96953,
+  "elapsed_s": 956.8,
+  "status": "completed",
+  "response_id": "resp_08150e50e2f3b446006aab6648332087d2abc7b4ea257c2f3b",
+  "when": "2026-09-17T04:18:12Z"
+}

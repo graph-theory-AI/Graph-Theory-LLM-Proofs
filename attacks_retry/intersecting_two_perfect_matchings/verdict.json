@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A cut-count refinement extends the verified 68-vertex result to additional conditional cases and imposes explicit restrictions on any 70-vertex counterexample.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved; the extensions beyond 68 vertices are conditional, and novelty is not claimed.",
+  "id": "intersecting_two_perfect_matchings",
+  "model": "gpt-6-astra",
+  "usd": 1.452985,
+  "eur": 1.504994,
+  "elapsed_s": 1616.7,
+  "status": "completed",
+  "response_id": "resp_089e320300aa79a6006aab2050a3b487d28829f1bc2dacef86",
+  "when": "2026-09-16T23:30:41Z"
+}

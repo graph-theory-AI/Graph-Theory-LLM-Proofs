@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A matching-based extension of the treewidth-three argument proves Jones\u2019 inequality for an additional unbounded-treewidth class, including radial completions of plane triangulations.",
+  "would_publish": false,
+  "caveats": "The unrestricted planar case is not resolved; novelty of these special-case results has not been checked.",
+  "id": "jones_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.168155,
+  "eur": 1.209969,
+  "elapsed_s": 1140.2,
+  "status": "completed",
+  "response_id": "resp_0d8f5743d73e0abb006aab2053e03c87d2a18722d868439aee",
+  "when": "2026-09-16T23:22:47Z"
+}

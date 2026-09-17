@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A local extension lemma and two shrinking reductions give a seven-unit internal-curvature bound for a smallest counterexample, while an explicit family shows that the required degree-four vertex can be unique and arbitrarily far from the crossing.",
+  "would_publish": false,
+  "caveats": "The conjecture is not resolved; novelty is not assessed, and the reported enumeration through 28 vertices was not rerun.",
+  "id": "2504.08327__02",
+  "model": "gpt-6-astra",
+  "usd": 1.34811,
+  "eur": 1.396365,
+  "elapsed_s": 1283.7,
+  "status": "completed",
+  "response_id": "resp_0aadfc4c9edda431006aab68485a4887d2869a68ac79cccf2d",
+  "when": "2026-09-17T04:32:11Z"
+}

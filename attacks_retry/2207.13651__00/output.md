@@ -1,0 +1,479 @@
+```json
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A half-interval decomposition of the vertex labels, followed by read-d Hölder bounds for uniform spacings, proves Property (*) throughout d = o(n/log n).",
+  "would_publish": true,
+  "caveats": "Literature priority has not been independently checked; graphs are finite, simple, and undirected."
+}
+```
+
+# Property \((*)\) in the conjectured range
+
+## 1. Statement and the key observation
+
+Let \(G\) be a \(d\)-regular graph on \(n\) vertices. Independently assign \(X_v\sim\mathrm{Unif}[0,1]\), and retain \(uv\in E(G)\) exactly when \(X_u+X_v\ge1\). Write
+\[
+m_k=\bigl|\{v:\deg_H(v)=k\}\bigr|,
+\qquad
+\mu=\frac{n}{d+1}.
+\]
+
+We prove the following.
+
+### Theorem
+For every sequence of \(d\)-regular graphs with
+\[
+d=o(n/\log n),
+\]
+with probability tending to \(1\),
+\[
+\max_{0\le k\le d}|m_k-\mu|=o(\mu).
+\]
+The probability estimates are uniform over the choice of \(G\).
+
+More quantitatively, there is an absolute constant \(C\) such that, for all sufficiently large \(n\), whenever \(d\ge64\log n\),
+\[
+\Pr\left(
+\max_{0\le k\le d}|m_k-\mu|
+>
+C\left(\sqrt{\frac nd\log n}+\log n\right)
+\right)
+\le Cn^{-3}.
+\tag{1}
+\]
+
+The useful idea is to record whether each label belongs to the lower or upper half of \([0,1]\). Conditional on these bits:
+
+- every lower–lower edge is absent;
+- every upper–upper edge is present;
+- only edges across the resulting bipartition remain random.
+
+Thus one can use the independent-side argument from the supplied earlier attempt **without properly coloring \(G\)**. The additional random conditional mean is a sum of bounded local functions of independent bits, and a read-\((d+1)\) Hölder inequality controls it.
+
+We verify all these steps below.
+
+---
+
+## 2. Two elementary tools
+
+### 2.1. Product-space Hölder inequality
+
+Suppose \(Z_1,\ldots,Z_N\) are independent, and each nonnegative function \(f_i\) depends on some subset of these coordinates. If every coordinate occurs in at most \(R\) functions, then
+\[
+\mathbb E\prod_i f_i
+\le
+\prod_i\left(\mathbb E f_i^R\right)^{1/R}.
+\tag{2}
+\]
+
+For completeness, integrate one coordinate at a time. At a coordinate occurring in \(q\le R\) factors, apply Hölder with exponent \(R\) to those \(q\) factors, adding a constant factor when \(q<R\). The resulting factors have the form
+\[
+\left(\mathbb E_{Z_j} f_i^R\right)^{1/R}.
+\]
+Repeating over the remaining coordinates gives (2).
+
+In particular, if \(Y_i\) are functions with this read-\(R\) property, then
+\[
+\log\mathbb E e^{\lambda\sum_i(Y_i-\mathbb EY_i)}
+\le
+\frac1R\sum_i
+\log\mathbb E e^{\lambda R(Y_i-\mathbb EY_i)}.
+\tag{3}
+\]
+
+### 2.2. Uniform spacings
+
+Let \(B_r\) be any specified spacing between \(r\) independent uniform points in \([0,1]\), including the two endpoint spacings. Then
+\[
+B_r\sim\operatorname{Beta}(1,r),
+\qquad
+\mathbb E B_r=\frac1{r+1},
+\]
+and, for every integer \(j\ge1\),
+\[
+\mathbb E B_r^j
+=
+\frac{j!}{(r+1)(r+2)\cdots(r+j)}.
+\tag{4}
+\]
+These identities follow directly from the constant density of the spacing vector on the simplex.
+
+If \(r\ge d/4\), then
+\[
+\mathbb E(dB_r)^j\le 4^j j!.
+\]
+Consequently, for \(|\theta|\le1/8\), expansion of the exponential gives
+\[
+\begin{aligned}
+\log\mathbb E e^{\theta dB_r}
+&\le
+\mathbb E e^{\theta dB_r}-1\\
+&\le
+\theta\frac{d}{r+1}
++\sum_{j\ge2}(4|\theta|)^j\\
+&\le
+\theta\frac{d}{r+1}+32\theta^2.
+\end{aligned}
+\tag{5}
+\]
+The same bound holds for a variable identically zero, with its mean replacing \(d/(r+1)\).
+
+---
+
+## 3. Exposing the half-interval bits
+
+Generate the labels as
+\[
+X_v=\frac{C_v+U_v}{2},
+\]
+where all \(C_v\sim\operatorname{Bernoulli}(1/2)\) and \(U_v\sim\mathrm{Unif}[0,1]\) are mutually independent.
+
+Put
+\[
+V_a=\{v:C_v=a\},\qquad a\in\{0,1\}.
+\]
+For each vertex, define its degree across this random cut by
+\[
+r_v=\bigl|\{u\in N_G(v):C_u\ne C_v\}\bigr|,
+\]
+and define
+\[
+b_v=
+\begin{cases}
+0,&C_v=0,\\
+d-r_v,&C_v=1.
+\end{cases}
+\]
+
+Almost surely, the degree in \(H\) is
+\[
+\deg_H(v)
+=
+b_v+
+\sum_{\substack{u\in N_G(v)\\ C_u\ne C_v}}
+\mathbf 1_{\{U_u+U_v\ge1\}}.
+\tag{6}
+\]
+Indeed, monochromatic edges are deterministic after exposing the bits, while a cross-edge is retained exactly when \(U_u+U_v\ge1\).
+
+For a fixed bit configuration, let
+\[
+q_{v,k}(C)
+=
+\frac{\mathbf 1_{\{b_v\le k\le b_v+r_v\}}}{r_v+1},
+\qquad
+Q_k(C)=\sum_v q_{v,k}(C).
+\tag{7}
+\]
+The spacing identity, or integration of a binomial distribution, shows that
+\[
+q_{v,k}(C)=\Pr(\deg_H(v)=k\mid C).
+\]
+Thus
+\[
+Q_k(C)=\mathbb E[m_k\mid C].
+\tag{8}
+\]
+
+We will use the event
+\[
+\mathcal E=\{r_v\ge d/4\text{ for every }v\}.
+\]
+Conditional on either value of \(C_v\), the variable \(r_v\) is \(\operatorname{Bin}(d,1/2)\). The elementary binomial lower-tail bound therefore gives
+\[
+\Pr(r_v<d/4)\le e^{-d/16},
+\qquad
+\Pr(\mathcal E^c)\le ne^{-d/16}.
+\tag{9}
+\]
+
+---
+
+## 4. Concentration conditional on the bits
+
+Fix a bit configuration belonging to \(\mathcal E\), and fix \(k\). Define
+\[
+M_{a,k}=\sum_{v\in V_a}\mathbf 1_{\{\deg_H(v)=k\}},
+\qquad
+Q_{a,k}=\sum_{v\in V_a}q_{v,k}.
+\]
+Thus \(m_k=M_{0,k}+M_{1,k}\) and \(Q_k=Q_{0,k}+Q_{1,k}\).
+
+We first bound the moment-generating function of \(M_{a,k}\).
+
+Condition additionally on all \(U_u\) with \(u\in V_{1-a}\). The degree indicators for vertices in \(V_a\) are then independent: by (6), each is a function only of its own remaining label \(U_v\).
+
+Let their conditional success probabilities be \(p_{v,k}\). If
+\[
+0\le k-b_v\le r_v,
+\]
+then \(p_{v,k}\) is the corresponding spacing among the \(r_v\) points
+\[
+(1-U_u)_{\substack{u\in N_G(v)\\C_u\ne C_v}}.
+\]
+Otherwise \(p_{v,k}=0\). Consequently,
+\[
+\mathbb E[p_{v,k}\mid C]=q_{v,k},
+\tag{10}
+\]
+and, in the nonzero case, its marginal conditional distribution is \(\operatorname{Beta}(1,r_v)\).
+
+For real \(\lambda\), set \(\eta=e^\lambda-1\). Conditional independence gives
+\[
+\begin{aligned}
+\mathbb E[e^{\lambda M_{a,k}}\mid C]
+&=
+\mathbb E_{U_{V_{1-a}}}
+\prod_{v\in V_a}(1+\eta p_{v,k})\\
+&\le
+\mathbb E_{U_{V_{1-a}}}
+\exp\left(\eta\sum_{v\in V_a}p_{v,k}\right).
+\end{aligned}
+\tag{11}
+\]
+This inequality is valid for either sign of \(\lambda\), since \(\eta>-1\).
+
+Each opposite-side label is used in at most \(d\) of the functions \(p_{v,k}\). Applying (2) with \(R=d\), and then (5), yields, for \(|\eta|\le1/8\),
+\[
+\begin{aligned}
+\log\mathbb E[e^{\lambda M_{a,k}}\mid C]
+&\le
+\frac1d\sum_{v\in V_a}
+\log\mathbb E[e^{\eta d p_{v,k}}\mid C]\\
+&\le
+\eta Q_{a,k}+32\frac{|V_a|}{d}\eta^2.
+\end{aligned}
+\tag{12}
+\]
+On \(\mathcal E\),
+\[
+Q_{a,k}\le \frac{4|V_a|}{d}.
+\]
+Since \(e^\lambda-1-\lambda=O(\lambda^2)\), equation (12) implies that, for absolute constants \(C_0,\lambda_0>0\),
+\[
+\log\mathbb E\!\left[
+e^{\lambda(M_{a,k}-Q_{a,k})}\mid C
+\right]
+\le
+C_0\frac{|V_a|}{d}\lambda^2,
+\qquad |\lambda|\le\lambda_0.
+\tag{13}
+\]
+
+The two sides need not be independent. Cauchy–Schwarz nevertheless gives
+\[
+\begin{aligned}
+\mathbb E[e^{\lambda(m_k-Q_k)}\mid C]
+&\le
+\left(
+\mathbb E[e^{2\lambda(M_{0,k}-Q_{0,k})}\mid C]
+\right)^{1/2}\\
+&\quad{}\times
+\left(
+\mathbb E[e^{2\lambda(M_{1,k}-Q_{1,k})}\mid C]
+\right)^{1/2}.
+\end{aligned}
+\]
+Hence, after adjusting absolute constants,
+\[
+\log\mathbb E[e^{\lambda(m_k-Q_k)}\mid C]
+\le C_1\frac nd\lambda^2,
+\qquad |\lambda|\le\lambda_1.
+\tag{14}
+\]
+
+Chernoff optimization proves the following estimate, uniformly over every bit configuration in \(\mathcal E\):
+\[
+\Pr\bigl(|m_k-Q_k|\ge t\mid C\bigr)
+\le
+2\exp\left[
+-c\min\left\{\frac{dt^2}{n},t\right\}
+\right].
+\tag{15}
+\]
+
+This handles both tails and all degree values, including \(k=0,d\).
+
+---
+
+## 5. Concentration of the random conditional mean
+
+We next control \(Q_k(C)\). It is important here **not** to condition the independent bits on \(\mathcal E\).
+
+Instead, define local truncations
+\[
+\bar q_{v,k}
+=
+q_{v,k}\mathbf 1_{\{r_v\ge d/4\}},
+\qquad
+\bar Q_k=\sum_v\bar q_{v,k}.
+\]
+For every bit configuration,
+\[
+0\le\bar q_{v,k}\le\frac4d.
+\tag{16}
+\]
+Moreover, \(\bar q_{v,k}\) depends only on the bits in \(N_G[v]\). Each bit belongs to exactly \(d+1\) such closed neighborhoods.
+
+Apply (3) with \(R=d+1\), followed by the elementary Hoeffding moment-generating-function bound for a variable in an interval of length \(4/d\). For every real \(\lambda\),
+\[
+\begin{aligned}
+\log\mathbb E e^{\lambda(\bar Q_k-\mathbb E\bar Q_k)}
+&\le
+\frac1{d+1}\sum_v
+\log\mathbb E
+e^{\lambda(d+1)(\bar q_{v,k}-\mathbb E\bar q_{v,k})}\\
+&\le
+\frac{n(d+1)}8\left(\frac4d\right)^2\lambda^2\\
+&\le
+4\frac nd\lambda^2.
+\end{aligned}
+\]
+Therefore
+\[
+\Pr\bigl(|\bar Q_k-\mathbb E\bar Q_k|\ge t\bigr)
+\le
+2\exp\left(-\frac{dt^2}{16n}\right).
+\tag{17}
+\]
+
+We also need its mean. Conditional on \(X_v=x\), the original degree is \(\operatorname{Bin}(d,x)\), so
+\[
+\Pr(\deg_H(v)=k)
+=
+\int_0^1\binom dk x^k(1-x)^{d-k}\,dx
+=
+\frac1{d+1}.
+\tag{18}
+\]
+Thus \(\mathbb Em_k=\mathbb EQ_k=\mu\). Since \(0\le q_{v,k}\le1\), equations (9) and (18) give
+\[
+0\le
+\mu-\mathbb E\bar Q_k
+=
+\sum_v\mathbb E\!\left[
+q_{v,k}\mathbf 1_{\{r_v<d/4\}}
+\right]
+\le ne^{-d/16}.
+\tag{19}
+\]
+Finally, on \(\mathcal E\),
+\[
+Q_k=\bar Q_k
+\qquad\text{for every }k.
+\tag{20}
+\]
+
+---
+
+## 6. Simultaneous concentration for \(d\ge64\log n\)
+
+Put \(B=ne^{-d/16}\). Combining (15), (17), (19), and (20), and taking a union bound over the \(d+1\) degree values, gives
+\[
+\boxed{
+\Pr\left(
+\max_{0\le k\le d}|m_k-\mu|\ge 2t+B
+\right)
+\le
+B+
+4(d+1)\exp\left[
+-c\min\left\{\frac{dt^2}{n},t\right\}
+\right].
+}
+\tag{21}
+\]
+Here the bad event \(\mathcal E^c\), which is common to all \(k\), is counted only once. This inequality is valid for every \(d\ge1\), although it is useful in this form when \(d\) is at least a sufficiently large multiple of \(\log n\).
+
+Suppose now that \(d\ge64\log n\). Then
+\[
+B\le n^{-3}.
+\]
+Choose
+\[
+t=A\left(\sqrt{\frac nd\log n}+\log n\right),
+\]
+where \(A\ge1\) is a sufficiently large absolute constant. We have
+\[
+\frac{dt^2}{n}\ge A^2\log n,
+\qquad
+t\ge A\log n.
+\]
+Thus (21) proves (1).
+
+Under the conjectured hypothesis \(d=o(n/\log n)\),
+\[
+\frac{
+\sqrt{(n/d)\log n}+\log n
+}{
+n/(d+1)
+}
+=
+O\left(
+\sqrt{\frac{d\log n}{n}}
++
+\frac{d\log n}{n}
+\right)
+=o(1).
+\tag{22}
+\]
+This proves Property \((*)\) in the large-degree case.
+
+---
+
+## 7. The remaining small degrees
+
+For completeness, we handle all \(d<64\log n\) directly.
+
+For fixed \(k\), let
+\[
+I_{v,k}=\mathbf 1_{\{\deg_H(v)=k\}}.
+\]
+Each indicator depends on the independent labels in \(N_G[v]\), so these functions have the read-\(R\) property with
+\[
+R=d+1.
+\]
+Each indicator is Bernoulli with mean \(p=1/(d+1)\), by (18). Hence (2) gives
+\[
+\mathbb E e^{\lambda m_k}
+\le
+\left(1-p+p e^{\lambda R}\right)^{n/R}.
+\]
+The usual elementary Chernoff calculation therefore yields, for \(0<\varepsilon\le1\),
+\[
+\Pr(|m_k-\mu|\ge\varepsilon\mu)
+\le
+2\exp\left(
+-\frac{\varepsilon^2 n}{3(d+1)^2}
+\right).
+\tag{23}
+\]
+Taking a union bound,
+\[
+\Pr\left(
+\max_k|m_k-\mu|\ge\varepsilon\mu
+\right)
+\le
+2(d+1)\exp\left(
+-\frac{\varepsilon^2 n}{3(d+1)^2}
+\right).
+\tag{24}
+\]
+
+For \(d<64\log n\), choose
+\[
+\varepsilon_n=4(d+1)\sqrt{\frac{\log n}{n}}.
+\]
+Uniformly throughout this degree range, \(\varepsilon_n=o(1)\), and (24) tends to zero. The case \(d=0\) is deterministic: \(m_0=n\).
+
+Together with Section 6, this covers every sequence \(d=o(n/\log n)\), completing the proof. \(\square\)
+
+---
+
+## 8. Scope and relation to the earlier obstruction
+
+The supplied attempt's read-\(R\) argument is valid, but a proper coloring of \(G\) is unnecessary. Exposing the half-interval bit of every label makes the **random part** of the model bipartite, regardless of \(\chi_f(G)\). The monochromatic edges contribute only the deterministic offsets \(b_v\).
+
+The remaining conditional mean is controlled because, outside exponentially unlikely local cut imbalances, each of its summands is at most \(4/d\) and reads only \(d+1\) independent bits. This removes the chromatic-number loss and avoids the unresolved residual estimate in the earlier approach.
+
+There is no remaining mathematical gap for the stated simple-graph model. The argument does not establish failure beyond the conjectured range, and literature priority remains unchecked.

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A punctured-coset obstruction gives T(G) <= 3 sqrt(|G|) - 4 for every abelian group of square order at least 16, and a sharp packing criterion gives square-root-scale lower bounds for structured sets.",
+  "would_publish": false,
+  "caveats": "The universal lower bound and prime-order upper bound are not obtained; novelty of the partial results has not been checked.",
+  "id": "2006.00534__00",
+  "model": "gpt-6-astra",
+  "usd": 1.240885,
+  "eur": 1.285302,
+  "elapsed_s": 1334.5,
+  "status": "completed",
+  "response_id": "resp_09f1f576c4fd3189006aab350de57487d2bf9494ffae178f6b",
+  "when": "2026-09-17T00:54:28Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The sharp conjectured bound holds for independent-set blow-ups of graphs formed by clique-sums of cycles and cliques, including all outerplanar base graphs.",
+  "would_publish": false,
+  "caveats": "This is a structural special case, not a general solution; novelty is not claimed, and the clique-gluing step does not establish a list-colouring version.",
+  "id": "strong_edge_colouring_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 0.847025,
+  "eur": 0.877344,
+  "elapsed_s": 965.6,
+  "status": "completed",
+  "response_id": "resp_03d2a069e3ec0779006aab28fda01887d2a760b44ded2014dd",
+  "when": "2026-09-16T23:56:51Z"
+}

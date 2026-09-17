@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove uniform Theta(log k) bounds for forbidden layered patterns whose layers have size at most two, and their symmetries, but do not obtain a worst-case polynomial bound.",
+  "would_publish": false,
+  "caveats": "No improvement to the general upper bound on F(k); novelty of these partial results has not been checked.",
+  "id": "2308.02981__00",
+  "model": "gpt-6-astra",
+  "usd": 1.44682,
+  "eur": 1.498609,
+  "elapsed_s": 1142.9,
+  "status": "completed",
+  "response_id": "resp_0dc82e4024d3143b006aab43754f2487d28304157f27aae67d",
+  "when": "2026-09-17T01:52:43Z"
+}

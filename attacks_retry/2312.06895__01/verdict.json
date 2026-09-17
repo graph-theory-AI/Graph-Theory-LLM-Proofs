@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain a uniform lower bound, including 500 \u2264 r_{K_3}^{(3)}(K_3) \u2264 680, and prove the conjectured lower bound whenever an R_q(t)-critical core has independence number at most two.",
+  "would_publish": false,
+  "caveats": "The full conjecture remains unresolved; no exhaustive search was run, and novelty of these partial bounds has not been checked.",
+  "id": "2312.06895__01",
+  "model": "gpt-6-astra",
+  "usd": 1.17172,
+  "eur": 1.213661,
+  "elapsed_s": 1276.4,
+  "status": "completed",
+  "response_id": "resp_08ab1dea79f619af006aab3a31081087d2be25f78325b5dd28",
+  "when": "2026-09-17T01:15:25Z"
+}

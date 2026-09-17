@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A sum-of-squares identity proves the conjecture for every bridgeless graph formed from two identical halves joined by at most six corresponding edges.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved; no novelty or current-literature-status claim is made.",
+  "id": "half_integral_flow_polynomial_values",
+  "model": "gpt-6-astra",
+  "usd": 0.91146,
+  "eur": 0.944086,
+  "elapsed_s": 815.0,
+  "status": "completed",
+  "response_id": "resp_0f7965ef0a6af39f006aab1ec2c5f487d2b8e3772e55ec7d60",
+  "when": "2026-09-16T23:10:41Z"
+}

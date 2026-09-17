@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The equivalence holds with at most 15 contractible triangles, and a separate argument proves 5-choosability for an infinite family of 6-regular toroidal triangulations.",
+  "would_publish": false,
+  "caveats": "The full conjecture is not settled; novelty of these partial results has not been checked against the literature.",
+  "id": "2407.18800__00",
+  "model": "gpt-6-astra",
+  "usd": 1.22717,
+  "eur": 1.271096,
+  "elapsed_s": 1628.4,
+  "status": "completed",
+  "response_id": "resp_0d0013ffd31f0bda006aab0b3ba1fc87d2acea48e201141e85",
+  "when": "2026-09-16T22:00:55Z"
+}

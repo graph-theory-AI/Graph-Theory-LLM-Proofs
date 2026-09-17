@@ -12,8 +12,8 @@ runs were not used.
 ## Counts
 
 Finished attacks with a verdict: **227**.
-Spend (promo ledger × prepaid FX): **€307.73** billed USD
-**$297.10** / budget €600
+Spend (promo ledger × prepaid FX): **€584.88** billed USD
+**$564.66** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
@@ -101,4 +101,4 @@ fixes). Open Problem Garden entries were **not** attacked.
 
 Queue records not yet attacked: **0** (plus 0 skipped without a model call).
 
-Generated 2026-09-16T21:48:27Z.
+Generated 2026-09-17T06:49:36Z.

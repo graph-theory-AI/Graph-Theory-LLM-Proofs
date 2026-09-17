@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "The anti-directed C4 is not Eulerian-avoidable: Eulerian oriented graphs can have arbitrarily large minimum out-degree while having no anti-directed-C4-free subdigraph of minimum out-degree 2.",
+  "would_publish": true,
+  "caveats": "The counterexamples have very large degree spread; this does not classify the other orientations of C4.",
+  "id": "2510.11311__04",
+  "model": "gpt-6-astra",
+  "usd": 0.915355,
+  "eur": 0.94812,
+  "elapsed_s": 862.7,
+  "status": "completed",
+  "response_id": "resp_065f6071d55ab279006aab3a578a1887d2bd8460bafa7e08f8",
+  "when": "2026-09-17T01:09:10Z"
+}

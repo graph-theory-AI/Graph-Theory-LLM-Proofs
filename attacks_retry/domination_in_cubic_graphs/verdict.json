@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the conjectured bound when deleting vertex-disjoint triangles and at most one additional vertex leaves a forest.",
+  "would_publish": false,
+  "caveats": "Structural special case only; novelty is not verified, and the general 3-connected case is not resolved.",
+  "id": "domination_in_cubic_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.330435,
+  "eur": 1.378058,
+  "elapsed_s": 1216.9,
+  "status": "completed",
+  "response_id": "resp_0e6a4a98c0c4e138006aab1a7a621487d2b4a779e1a19b1260",
+  "when": "2026-09-16T22:59:07Z"
+}

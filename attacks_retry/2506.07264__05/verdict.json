@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Ear-incidence and common-neighbor estimates extend the fourth-moment approach to maximum degrees 23 and 7, respectively, and give stronger results for 5-connected triangulations.",
+  "would_publish": false,
+  "caveats": "Neither conjecture is settled in full; no exhaustive computation or independent literature-status verification was performed.",
+  "id": "2506.07264__05",
+  "model": "gpt-6-astra",
+  "usd": 1.719085,
+  "eur": 1.780619,
+  "elapsed_s": 1579.0,
+  "status": "completed",
+  "response_id": "resp_08dd18631acb1398006aab47992d7487d28d1b5d8757ca0a14",
+  "when": "2026-09-17T02:17:39Z"
+}

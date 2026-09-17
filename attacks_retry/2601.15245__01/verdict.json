@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A quantitative high-girth construction of extremal degenerate graphs is proved, but the requested super-exponential colorability threshold remains unresolved.",
+  "would_publish": false,
+  "caveats": "No improved lower bound for fixed girth is obtained, and no novelty is claimed for the auxiliary construction.",
+  "id": "2601.15245__01",
+  "model": "gpt-6-astra",
+  "usd": 1.031015,
+  "eur": 1.06792,
+  "elapsed_s": 1545.8,
+  "status": "completed",
+  "response_id": "resp_0c8ffcd6bbcb708d006aab3ac644b087d2a134f7bd343dcece",
+  "when": "2026-09-17T01:22:23Z"
+}

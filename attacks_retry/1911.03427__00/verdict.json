@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove linear induced removal for non-affine polynomial-identity families of arbitrarily high Cauchy\u2013Schwarz complexity, uniformly over finite abelian groups.",
+  "would_publish": false,
+  "caveats": "Only special algebraic forbidden families are handled; arbitrary-pattern removal and the interval-Z direction remain unresolved, and novelty is not claimed.",
+  "id": "1911.03427__00",
+  "model": "gpt-6-astra",
+  "usd": 0.89762,
+  "eur": 0.92975,
+  "elapsed_s": 849.7,
+  "status": "completed",
+  "response_id": "resp_01be86c7662da4f3006aab36df3d7887d2a2eec299a9db0673",
+  "when": "2026-09-17T00:54:08Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "An explicitly defined substitution-closed infinite class has exactly four exceptions, of orders 4, 10, 16 and 22, but the unrestricted finiteness conjecture is not settled.",
+  "would_publish": false,
+  "caveats": "Only a generated subclass is classified; the proper-neighborhood definition is used, and literature novelty is unchecked.",
+  "id": "2511.02892__05",
+  "model": "gpt-6-astra",
+  "usd": 1.256735,
+  "eur": 1.30172,
+  "elapsed_s": 1450.4,
+  "status": "completed",
+  "response_id": "resp_05a705f54230a543006aab3ac362c487d2af92eb06c0dce0b1",
+  "when": "2026-09-17T01:20:45Z"
+}

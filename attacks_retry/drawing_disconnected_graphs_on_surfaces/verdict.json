@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjecture holds on the torus when one summand has plane crossing number at most 10; in fact, two connected components in an optimal torus drawing cannot cross between one and ten times.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture is not resolved here, and the novelty of these special cases has not been checked.",
+  "id": "drawing_disconnected_graphs_on_surfaces",
+  "model": "gpt-6-astra",
+  "usd": 1.27737,
+  "eur": 1.323093,
+  "elapsed_s": 1260.7,
+  "status": "completed",
+  "response_id": "resp_0b67343891e51f3d006aab1ba6f72887d294278e25dfcf0fab",
+  "when": "2026-09-16T23:04:51Z"
+}

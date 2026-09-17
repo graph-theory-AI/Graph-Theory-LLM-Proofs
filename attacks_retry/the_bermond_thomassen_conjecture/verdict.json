@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For k\u22654, I prove the conjecture when n=2k+s, s\u2264k+3, and s(s+1)\u226428(k\u22122), extending the boundary cases of the supplied attempt.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture remains unresolved; this uses the established three-cycle and tournament cases, and novelty is unchecked.",
+  "id": "the_bermond_thomassen_conjecture",
+  "model": "gpt-6-astra",
+  "usd": 1.08514,
+  "eur": 1.123982,
+  "elapsed_s": 1280.1,
+  "status": "completed",
+  "response_id": "resp_029407011d5e22be006aab2b10f09487d2b72affa11976eda5",
+  "when": "2026-09-17T00:10:56Z"
+}

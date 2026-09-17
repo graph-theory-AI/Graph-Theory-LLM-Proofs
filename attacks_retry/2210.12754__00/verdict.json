@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For induced-diamond-free subgraphs, I prove an exact sparse-end criterion and confine the unresolved dense-end range to 1-p of order 1/n.",
+  "would_publish": false,
+  "caveats": "The arbitrary-property characterization remains unresolved; the sparse argument uses the established random triangle Tur\u00e1n theorem, and novelty has not been checked.",
+  "id": "2210.12754__00",
+  "model": "gpt-6-astra",
+  "usd": 1.1307,
+  "eur": 1.171173,
+  "elapsed_s": 967.5,
+  "status": "completed",
+  "response_id": "resp_07b441a53a0a50fc006aab4c25bfcc87d284f8cdfc543ab2b1",
+  "when": "2026-09-17T02:26:53Z"
+}

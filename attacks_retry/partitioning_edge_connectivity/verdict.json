@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove the conjecture in a dense simple-graph regime and strengthen the order-dependent sufficient bound, but do not settle the general case.",
+  "would_publish": false,
+  "caveats": "The exact results require density or bounded order; the general bound depends on n, and no novelty is claimed.",
+  "id": "partitioning_edge_connectivity",
+  "model": "gpt-6-astra",
+  "usd": 1.316115,
+  "eur": 1.363225,
+  "elapsed_s": 1323.3,
+  "status": "completed",
+  "response_id": "resp_09aeb527931e1666006aab26a16a8c87d2bc4a5978cd64e1eb",
+  "when": "2026-09-16T23:52:44Z"
+}

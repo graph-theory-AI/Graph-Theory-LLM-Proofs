@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Under the supplied rotation definition, I characterize all paths with at most two chords, prove that every noncrossing path is active, and obtain a linear kernel in the number of chords.",
+  "would_publish": false,
+  "caveats": "The unrestricted characterization remains unresolved; the full-paper definition and literature novelty were not independently checked.",
+  "id": "2502.04726__01",
+  "model": "gpt-6-astra",
+  "usd": 1.127375,
+  "eur": 1.167729,
+  "elapsed_s": 1432.7,
+  "status": "completed",
+  "response_id": "resp_047aa75fb4015dab006aab3a3f9b3087d28ef57d7e73c82306",
+  "when": "2026-09-17T01:18:16Z"
+}

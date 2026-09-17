@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A strengthened doubling inequality proves convergence and makes a drawing of Q_7 with at most 1687 crossings a finite certificate against the proposed limit, but no qualifying drawing is constructed.",
+  "would_publish": false,
+  "caveats": "No improvement to the quoted asymptotic interval; novelty and the full formulas in the later literature have not been checked.",
+  "id": "the_crossing_number_of_the_hypercube",
+  "model": "gpt-6-astra",
+  "usd": 1.308155,
+  "eur": 1.35498,
+  "elapsed_s": 1501.9,
+  "status": "completed",
+  "response_id": "resp_0f4711a4976a28a7006aab2b66b95087d2beddfe4e64d0b89a",
+  "when": "2026-09-17T00:16:04Z"
+}

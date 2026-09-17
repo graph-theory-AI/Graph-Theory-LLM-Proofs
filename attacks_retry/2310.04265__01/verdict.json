@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove a quasipolynomial bound for the full substitution closure, polynomial bounds for bounded-dichromatic generators, and a quadratic bound for the transitive/triangle-generated class.",
+  "would_publish": false,
+  "caveats": "The full polynomial-preservation conjecture remains unsettled here; novelty of the sharper bounds has not been checked.",
+  "id": "2310.04265__01",
+  "model": "gpt-6-astra",
+  "usd": 1.29383,
+  "eur": 1.340142,
+  "elapsed_s": 990.2,
+  "status": "completed",
+  "response_id": "resp_028a030aaa8d8fbb006aab438f14d887d2a23d9e605c7081ee",
+  "when": "2026-09-17T01:50:37Z"
+}

@@ -1,0 +1,240 @@
+```json
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "An odd regular polygon with a central cluster yields point sets requiring at least 3n/4 - O(sqrt(n)) crossing-free paths.",
+  "would_publish": true,
+  "caveats": "The optimal leading constant is not determined; paths have their standard graph-theoretic meaning."
+}
+```
+
+# An affirmative construction
+
+Write \(\pi(A)\) for the minimum number of crossing-free paths covering all edges of \(K_n[A]\). Covering paths may overlap, and they need not be Hamiltonian.
+
+We prove the following.
+
+**Theorem.**
+1. For every positive integer \(q\), there is a \(6q\)-point set \(A\) in general position such that
+   \[
+   \pi(A)\ge 4q=\frac23|A|.
+   \]
+2. More strongly, for every sufficiently large \(n\), there is an \(n\)-point set \(A\) in general position such that
+   \[
+   \pi(A)\ge \frac34n-O(\sqrt n).
+   \]
+
+Thus \(c=2/3\) answers the question affirmatively. In fact, every fixed \(c<3/4\) works for all sufficiently large \(n\).
+
+The key is a simultaneous incompatibility between long chords of an odd polygon and edges incident with points near its center. The geometric and counting claims needed below are proved directly.
+
+## 1. The geometric gadget
+
+Let
+\[
+h=2m+1\ge 5
+\]
+be odd, and let
+\[
+v_j=\left(\cos\frac{2\pi j}{h},\ \sin\frac{2\pi j}{h}\right),
+\qquad 0\le j<h.
+\]
+Indices are taken modulo \(h\). Put \(V=\{v_0,\ldots,v_{h-1}\}\), and define the following set of \(h\) chords:
+\[
+D=\{v_i v_{i+m}:0\le i<h\}.
+\]
+
+We need two properties.
+
+### Property 1: disjoint edges of \(D\) cross
+
+Fix \(v_0v_m\). Any edge of \(D\) disjoint from it has one endpoint in
+\[
+\{v_1,\ldots,v_{m-1}\}
+\]
+and the other in
+\[
+\{v_{m+1},\ldots,v_{2m}\}.
+\]
+This follows immediately by checking the indices in \(v_i v_{i+m}\). Its endpoints therefore alternate with \(v_0,v_m\) around the convex polygon, so the two chords cross. Rotation gives the assertion for every edge of \(D\).
+
+Consequently, every crossing-free path contains at most two edges of \(D\): any three edges of a simple path contain two vertex-disjoint edges. If a crossing-free path contains two edges of \(D\), they must share a vertex.
+
+The two edges of \(D\) incident with \(v_i\) are precisely
+\[
+v_i v_{i+m}
+\quad\text{and}\quad
+v_i v_{i+m+1}.
+\]
+
+### Property 2: two incident chords trap a central region
+
+Define
+\[
+T_i=\operatorname{conv}\{v_i,v_{i+m},v_{i+m+1}\}.
+\]
+The origin lies strictly inside every \(T_i\). Indeed, after rotating \(v_i\) to \((1,0)\), the other two vertices have coordinates
+\[
+\left(-\cos\frac{\pi}{h},\ \sin\frac{\pi}{h}\right),
+\qquad
+\left(-\cos\frac{\pi}{h},\ -\sin\frac{\pi}{h}\right).
+\]
+Hence
+\[
+U=\bigcap_{i=0}^{h-1}\operatorname{int}(T_i)
+\]
+is an open neighborhood of the origin.
+
+Suppose that a crossing-free path contains
+\[
+v_i a,\ v_i b,
+\qquad a=v_{i+m},\quad b=v_{i+m+1}.
+\]
+For any \(x\in U\) and any
+\[
+z\in V\setminus\{v_i,a,b\},
+\]
+the segment \(xz\) crosses one of these two chords.
+
+To see this, \(x\) lies inside \(T_i\), whereas \(z\), being another vertex of a strictly convex polygon, lies outside \(T_i\). The segment \(xz\) must leave \(T_i\). It cannot cross \(ab\), since \(ab\) is a side of the outer convex polygon and both \(x\) and \(z\) lie strictly on its inner side. It must therefore cross \(v_i a\) or \(v_i b\). With the points in general position, this is a proper crossing.
+
+Thus, when both chords are present, edges from central points to outer vertices are possible only at the three vertices \(v_i,a,b\).
+
+## 2. A particularly simple proof with \(c=2/3\)
+
+Take
+\[
+A=V\cup\{o\},
+\qquad o=(0,0),
+\]
+and let
+\[
+S=\{ov_j:0\le j<h\}
+\]
+be the central star.
+
+This point set is in general position. Three points on the circle cannot be collinear, and a line through the origin contains two of the polygon vertices only if they are antipodal, which is impossible because \(h\) is odd.
+
+We claim that every crossing-free path \(P\) satisfies
+\[
+|E(P)\cap(D\cup S)|\le 3. \tag{1}
+\]
+
+If \(P\) contains at most one edge of \(D\), this follows from
+\[
+\deg_P(o)\le 2.
+\]
+
+Otherwise, its two edges of \(D\) are \(v_i a,v_i b\), as above. Property 2 says that a spoke in \(P\) can only be one of
+\[
+ov_i,\quad oa,\quad ob.
+\]
+The edge \(ov_i\) is impossible because \(v_i\) already has degree two in \(P\). Moreover, \(oa\) and \(ob\) cannot both occur, since together with \(v_i a,v_i b\) they form the cycle
+\[
+o,a,v_i,b,o.
+\]
+A simple path cannot contain a cycle. Hence \(P\) contains at most one spoke, proving (1).
+
+Now \(D\) and \(S\) are disjoint and each has \(h\) edges. If \(k\) crossing-free paths cover \(K_{h+1}[A]\), then, even allowing overlaps,
+\[
+3k\ge |D\cup S|=2h.
+\]
+Therefore
+\[
+\pi(A)\ge \left\lceil\frac{2h}{3}\right\rceil. \tag{2}
+\]
+
+Choose \(h=6q-1\). Then \(n=h+1=6q\), and (2) gives
+\[
+\pi(A)\ge
+\left\lceil\frac{12q-2}{3}\right\rceil
+=4q
+=\frac23n.
+\]
+This already proves the requested assertion.
+
+## 3. A central cluster improves the coefficient to \(3/4-o(1)\)
+
+We now replace the single center by \(r\ge2\) points.
+
+Choose a set \(B\subset U\) of \(r\) points such that
+\[
+A=V\cup B
+\]
+is in general position. This is possible by choosing the points successively in the open set \(U\), avoiding the finitely many lines determined by previously chosen points.
+
+Let
+\[
+S=\{vx:v\in V,\ x\in B\},
+\]
+so that
+\[
+|S|=hr.
+\]
+
+For a crossing-free path \(P\), write
+\[
+d(P)=|E(P)\cap D|,
+\qquad
+s(P)=|E(P)\cap S|.
+\]
+We have
+\[
+d(P)\le2,\qquad s(P)\le2r. \tag{3}
+\]
+The second inequality follows by summing the path degrees at the \(r\) central vertices.
+
+There is a much stronger bound when \(d(P)=2\):
+\[
+d(P)=2\quad\Longrightarrow\quad s(P)\le2. \tag{4}
+\]
+Indeed, let the two chords be \(v_i a,v_i b\). Property 2 restricts all spokes in \(P\) to outer endpoints in \(\{v_i,a,b\}\). The vertex \(v_i\) already has degree two, while \(a\) and \(b\) each already have degree one. Thus at most one spoke can use \(a\), and at most one can use \(b\).
+
+Assign weight \(2r-2\) to each edge of \(D\), weight \(1\) to each edge of \(S\), and weight \(0\) to every other edge. All other edges remain allowed in the paths.
+
+By (3)–(4), every crossing-free path has weight at most \(4r-2\). Explicitly,
+\[
+(2r-2)d(P)+s(P)\le
+\begin{cases}
+2r,&d(P)=0,\\
+(2r-2)+2r=4r-2,&d(P)=1,\\
+2(2r-2)+2=4r-2,&d(P)=2.
+\end{cases}
+\]
+The total edge weight is
+\[
+(2r-2)|D|+|S|
+=(2r-2)h+hr
+=(3r-2)h.
+\]
+Summing weights over any covering family therefore proves
+\[
+\boxed{\displaystyle
+\pi(A)\ge
+\left\lceil\frac{(3r-2)h}{4r-2}\right\rceil.}
+\tag{5}
+\]
+
+Finally, for each sufficiently large \(n\), choose an integer
+\[
+r=\sqrt n+O(1)
+\]
+such that \(h=n-r\) is odd. Then \(r\ge2\) and \(h\ge5\), so the construction applies. Since
+\[
+\frac{3r-2}{4r-2}
+=\frac34-\frac{1}{8r-4},
+\]
+equation (5) yields
+\[
+\begin{aligned}
+\pi(A)
+&\ge
+\left(\frac34-\frac{1}{8r-4}\right)(n-r)\\
+&=
+\frac34n-\frac34r-\frac{n-r}{8r-4}\\
+&=
+\frac34n-O(\sqrt n).
+\end{aligned}
+\]
+
+This proves the stronger assertion. The argument covers arbitrary crossing-free paths, including short paths, and allows arbitrary overlap between covering paths. No assumption of a Hamilton-path decomposition is needed.

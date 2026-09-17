@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A rigidity lemma gives R_l(K_r,2) >= (r-1)^2+2, improving the earlier elementary bound by one, but the proposed equality remains unresolved.",
+  "would_publish": false,
+  "caveats": "The partial result is self-contained; its novelty and whether stronger lower bounds are known have not been checked.",
+  "id": "1902.07018__01",
+  "model": "gpt-6-astra",
+  "usd": 0.954525,
+  "eur": 0.988692,
+  "elapsed_s": 1468.0,
+  "status": "completed",
+  "response_id": "resp_0b7a0659768a35a6006aab3ee702bc87d2938c4ecfdb3d6150",
+  "when": "2026-09-17T01:38:42Z"
+}

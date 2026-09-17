@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain polynomial weighted MIS when \u0394 log(\u0394+1)=O(log n), and separately on O_k-free graphs with bounded neighborhood independence.",
+  "would_publish": false,
+  "caveats": "The unrestricted dense case remains untreated; novelty of these special cases has not been checked.",
+  "id": "2206.00594__00",
+  "model": "gpt-6-astra",
+  "usd": 0.86345,
+  "eur": 0.894357,
+  "elapsed_s": 839.1,
+  "status": "completed",
+  "response_id": "resp_01b6c7962fb54aea006aab4b5cc3d887d2957b2912057d21e8",
+  "when": "2026-09-17T02:21:23Z"
+}

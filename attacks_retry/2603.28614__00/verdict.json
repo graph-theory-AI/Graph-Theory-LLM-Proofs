@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every sufficiently long uniform subdivision of an arbitrary connected graph admits a pivot Gray code, without assuming a code exists for the original graph.",
+  "would_publish": false,
+  "caveats": "The original conjecture remains open; the subdivision bound is not optimized, and literature novelty has not been checked.",
+  "id": "2603.28614__00",
+  "model": "gpt-6-astra",
+  "usd": 1.183915,
+  "eur": 1.226293,
+  "elapsed_s": 1118.0,
+  "status": "completed",
+  "response_id": "resp_05c719d5f331a796006aab749e5cdc87d2985598c7375705c7",
+  "when": "2026-09-17T05:22:04Z"
+}

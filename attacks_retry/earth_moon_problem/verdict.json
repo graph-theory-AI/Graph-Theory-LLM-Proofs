@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every biplanar graph obtained by replacing the vertices of an outerplanar graph by nonempty cliques is 9-colourable.",
+  "would_publish": false,
+  "caveats": "This is a restricted upper bound, not a solution; the general 9\u201312 gap is unchanged, and neither novelty nor sharpness is claimed.",
+  "id": "earth_moon_problem",
+  "model": "gpt-6-astra",
+  "usd": 1.01513,
+  "eur": 1.051466,
+  "elapsed_s": 1233.2,
+  "status": "completed",
+  "response_id": "resp_0f3f181546640ffd006aab1be462b487d29f8342b0b4eefb15",
+  "when": "2026-09-16T23:05:25Z"
+}

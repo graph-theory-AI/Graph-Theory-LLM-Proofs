@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The conjectured bound holds for k\u22644 and, by an exact complementation identity, whenever n\u2264k+5.",
+  "would_publish": false,
+  "caveats": "Finite loopless digraphs; the unrestricted case k\u22655 remains unresolved here, and novelty is not claimed.",
+  "id": "arc_disjoint_directed_cycles_in_regular_directed_graphs",
+  "model": "gpt-6-astra",
+  "usd": 1.106485,
+  "eur": 1.146091,
+  "elapsed_s": 891.8,
+  "status": "completed",
+  "response_id": "resp_07a6e68613084c32006aab13b6248087d2826bf49221aa86b2",
+  "when": "2026-09-16T22:24:49Z"
+}

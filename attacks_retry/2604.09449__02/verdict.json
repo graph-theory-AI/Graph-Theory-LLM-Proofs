@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A palette argument gives sharp large-host single-star bounds for infinitely many k, while projective-plane colourings force an Omega(sqrt(k) Delta) recolouring obstruction.",
+  "would_publish": false,
+  "caveats": "The extract omits the definition of f_h; no upper-bound improvement for arbitrary spanning forests, or claim of literature novelty, is made.",
+  "id": "2604.09449__02",
+  "model": "gpt-6-astra",
+  "usd": 1.0806,
+  "eur": 1.11928,
+  "elapsed_s": 1159.1,
+  "status": "completed",
+  "response_id": "resp_07bacd6c8cb53eef006aab330a701087d2b1fb3d0a44774327",
+  "when": "2026-09-17T00:42:57Z"
+}

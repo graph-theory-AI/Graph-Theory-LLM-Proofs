@@ -1,0 +1,655 @@
+```json
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A prime-based reduction closes the interlacing gap and proves c_r = b_0^(r-1)/(2r) for every r >= 2.",
+  "would_publish": true,
+  "caveats": "The intended denominator is 2r b_0-r; the literal 2^r b_0-r transcription is false for r >= 3."
+}
+```
+
+# Exact value of the upper logarithmic density constant
+
+For \(A\subseteq\mathbb N\), write
+\[
+\Sigma(A)=
+\left\{\sum_{a\in F}a:
+\varnothing\ne F\subseteq A,\ F\text{ finite}\right\},
+\]
+and put
+\[
+\overline d_{\log}(S)
+=\limsup_{x\to\infty}
+\frac{1}{\log x}\sum_{\substack{n\le x\\n\in S}}\frac1n.
+\]
+Thus the constant in question is
+\[
+c_r=\inf_{\mathbb N=A_1\sqcup\cdots\sqcup A_r}
+\max_{i\in[r]}\overline d_{\log}(\Sigma(A_i)).
+\]
+
+The key addition to the previous attempt is an additive lemma for **dense sets of primes**. It provides the required intervals of subset sums without requiring any monochromatic interval of integers. I also give a complete proof of the geometric lemma, including its boundary accounting.
+
+## Theorem
+
+Let \(r\ge2\), and let \(b>1\) be the unique root of
+\[
+b^r-2rb+r-1=0.
+\]
+Then
+\[
+\boxed{\displaystyle
+c_r=\frac{b^{r-1}}{2r}
+=\frac{1-\frac1{2b}}{1-b^{-r}}
+=\left(1-\frac1{2b}\right)
+ \left(1+\frac1{2rb-r}\right).}
+\tag{1}
+\]
+
+In particular, this proves the intended tightness conjecture. The distinction between \(2r\) and \(2^r\) is substantive; it is addressed explicitly at the end.
+
+---
+
+## 1. A geometric covering lemma
+
+For \(r\ge2\) and \(\lambda>1\), define
+\[
+D_{r,\lambda}(q)
+=\frac{1-\frac1{\lambda q}}{1-q^{-r}},
+\qquad q>1,
+\]
+and
+\[
+C_{r,\lambda}=\inf_{q>1}D_{r,\lambda}(q).
+\tag{2}
+\]
+Notice that \(0<C_{r,\lambda}<1\). Positivity follows from
+\(D_{r,\lambda}(q)\ge1-1/\lambda\), while \(D_{r,\lambda}(q)<1\) whenever
+\(q^{r-1}>\lambda\).
+
+### Lemma 1
+
+Suppose
+\[
+0<t_0<t_1<\cdots,\qquad t_k\longrightarrow\infty,
+\]
+and assign each \(k\ge0\) a label \(\gamma_k\in[r]\). Set
+\[
+J_k=[t_k,\lambda t_{k+1}],
+\qquad
+U_i=\bigcup_{\gamma_k=i}J_k.
+\]
+Then
+\[
+\max_{i\in[r]}
+\limsup_{T\to\infty}\frac{|U_i\cap[0,T]|}{T}
+\ge C_{r,\lambda},
+\tag{3}
+\]
+where \(|\cdot|\) is Lebesgue measure.
+
+### Proof
+
+Suppose otherwise. Choose \(D\) satisfying
+\[
+\max_i\limsup_{T\to\infty}\frac{|U_i\cap[0,T]|}{T}
+<D<C_{r,\lambda}.
+\tag{4}
+\]
+For all sufficiently large \(T\), therefore,
+\[
+|U_i\cap[0,T]|\le DT
+\qquad(i\in[r]).
+\tag{5}
+\]
+
+No \(U_i\) has an unbounded connected component, since that would give density \(1\). Every component is consequently a finite interval of the form
+\[
+C=[t_f,\lambda t_{\ell+1}],
+\]
+where \(f\) and \(\ell\) are the first and last indices of intervals belonging to that component.
+
+For a component \(C\) of \(U_i\), define
+\[
+e_C=\lambda t_{\ell+1},\qquad
+Q_C=\frac{t_{\ell+1}}{t_f},\qquad
+a_C=\frac{|C|}{e_C}=1-\frac1{\lambda Q_C},
+\]
+and
+\[
+d_C=\frac{|U_i\cap[0,e_C]|}{e_C}.
+\]
+If \(C^-\) is its preceding component of the same color and
+\[
+R_C=\frac{e_C}{e_{C^-}},
+\]
+then
+\[
+d_C=a_C+\frac{d_{C^-}}{R_C}.
+\tag{6}
+\]
+
+Discard finitely many components so that all components under consideration have a predecessor and satisfy \(d_C\le D\). For these components,
+\[
+1-\frac1\lambda<a_C<d_C\le D,
+\]
+and thus
+\[
+1<Q_C<Q_{\max}:=\frac1{\lambda(1-D)}.
+\tag{7}
+\]
+
+Equation (6) gives
+\[
+\log\frac{d_{C^-}}{d_C}
+=\log R_C+\log\left(1-\frac{a_C}{d_C}\right)
+\le \log R_C+\log\left(1-\frac{a_C}{D}\right).
+\tag{8}
+\]
+
+Consider, on \(1\le q<Q_{\max}\),
+\[
+F(q)=r\log q+
+\log\left(1-\frac{1-\frac1{\lambda q}}{D}\right).
+\]
+For \(q>1\), the inequality \(F(q)\ge0\) is equivalent to
+\[
+D\ge D_{r,\lambda}(q),
+\]
+contrary to \(D<C_{r,\lambda}\). Moreover,
+\[
+F(1)<0,\qquad
+F(q)\longrightarrow-\infty
+\quad\text{as }q\uparrow Q_{\max}.
+\]
+Continuity therefore supplies \(\eta>0\) such that
+\[
+\log\left(1-\frac{a_C}{D}\right)
+\le-r\log Q_C-\eta
+\tag{9}
+\]
+for every component under consideration.
+
+Sum (8) and (9) over the retained components whose last index \(\ell\) is at most \(N\). Let their number be \(m_N\).
+
+For each color, the left side telescopes. Since
+\[
+1-\frac1\lambda\le d_C\le D
+\]
+for retained components, its total is bounded independently of \(N\):
+\[
+\sum_C\log\frac{d_{C^-}}{d_C}=O(1).
+\tag{10}
+\]
+Likewise, telescoping the endpoint ratios gives
+\[
+\sum_C\log R_C\le r\log t_{N+1}+O(1).
+\tag{11}
+\]
+
+The essential covering estimate is
+\[
+\sum_C\log Q_C\ge\log t_{N+1}-O(1).
+\tag{12}
+\]
+Here is the boundary justification. We have
+\[
+\log Q_C
+=\sum_{k=f(C)}^{\ell(C)}
+\log\frac{t_{k+1}}{t_k}.
+\]
+Every index \(k\) belongs to the span of its own color-component. The finitely many discarded components account for only a fixed initial contribution. At the right boundary \(N\), at most one component of each color has
+\(f(C)\le N<\ell(C)\). By (7), the total logarithmic span of each such component is at most \(\log Q_{\max}\). Thus the total omitted contribution is bounded independently of \(N\), proving (12).
+
+Combining (8)–(12) yields
+\[
+O(1)
+\le r\log t_{N+1}-r\sum_C\log Q_C-\eta m_N+O(1)
+\le O(1)-\eta m_N.
+\]
+But \(m_N\to\infty\): there are infinitely many intervals, each finite component contains only finitely many of them, and no component is unbounded. This is a contradiction. ∎
+
+### Evaluation of \(C_{r,\lambda}\)
+
+Differentiation gives
+\[
+D_{r,\lambda}'(q)=0
+\quad\Longleftrightarrow\quad
+q^r-\lambda rq+r-1=0.
+\tag{13}
+\]
+The polynomial on the right decreases until
+\(q=\lambda^{1/(r-1)}\), then increases, and is negative at \(q=1\).
+It therefore has a unique root \(b_{r,\lambda}>1\), satisfying
+\[
+b_{r,\lambda}>\lambda^{1/(r-1)}.
+\]
+This root is the unique minimizer in (2). Since
+\[
+b_{r,\lambda}^r-1
+=r(\lambda b_{r,\lambda}-1),
+\]
+we obtain
+\[
+C_{r,\lambda}
+=\frac{b_{r,\lambda}^{r-1}}{\lambda r}.
+\tag{14}
+\]
+In particular,
+\[
+\lim_{\lambda\uparrow2}C_{r,\lambda}
+=C_{r,2}
+=\frac{b^{r-1}}{2r}.
+\tag{15}
+\]
+
+---
+
+## 2. A restricted-sum fact modulo a prime
+
+The following standard restricted-sum fact is included with a proof so that the additive reduction is explicit.
+
+### Lemma 2
+
+Let \(p\) be prime and \(B\subseteq\mathbb F_p\), with \(|B|=s\). If
+\[
+1\le k\le s,\qquad k(s-k)\ge p-1,
+\]
+then every element of \(\mathbb F_p\) is a sum of \(k\) distinct members of \(B\).
+
+### Proof
+
+Suppose \(c\in\mathbb F_p\) is not such a sum. The polynomial
+\[
+P(x_1,\ldots,x_k)
+=
+\left((x_1+\cdots+x_k-c)^{p-1}-1\right)
+\prod_{i<j}(x_j-x_i)
+\]
+vanishes on \(B^k\). Indeed, repeated coordinates annihilate the Vandermonde factor; otherwise the sum differs from \(c\), and Fermat's theorem annihilates the first factor.
+
+Choose distinct integers
+\[
+0\le d_1<\cdots<d_k\le s-1
+\]
+with
+\[
+\sum_{i=1}^k d_i=p-1+\binom{k}{2}.
+\tag{16}
+\]
+Such a choice exists because the sums of \(k\) distinct integers from
+\(\{0,\ldots,s-1\}\) fill the interval
+\[
+\left[\binom{k}{2},\,
+k(s-k)+\binom{k}{2}\right].
+\]
+For example, writing \(p-1=kq+u\), \(0\le u<k\), one may take
+\(d_i=i-1+q\) for the first \(k-u\) indices and \(d_i=i+q\) for the last \(u\).
+
+The coefficient of \(\prod_i x_i^{d_i}\) in \(P\) is
+\[
+\frac{(p-1)!}{\prod_i d_i!}
+\prod_{i<j}(d_j-d_i),
+\tag{17}
+\]
+as follows by expanding the Vandermonde determinant. This is nonzero in
+\(\mathbb F_p\), since all \(d_i<p\) and the \(d_i\) are distinct.
+
+On the other hand, a polynomial of total degree \(\sum_i d_i\) with this coefficient nonzero cannot vanish on \(B^k\), because \(|B|>d_i\) for every \(i\). This coefficient form of multivariate interpolation follows by choosing sets \(X_i\subseteq B\) of size \(d_i+1\): the coefficient equals
+\[
+\sum_{x_i\in X_i}
+\frac{P(x_1,\ldots,x_k)}
+{\displaystyle\prod_i
+ \prod_{y\in X_i\setminus\{x_i\}}(x_i-y)}.
+\]
+It would be zero if \(P\) vanished on \(B^k\), contradicting (17). ∎
+
+---
+
+## 3. Dense prime blocks have long intervals of subset sums
+
+This is the step that removes the restriction to interval-block colorings.
+
+### Lemma 3 — Prime-block interval lemma
+
+For every fixed \(\kappa>0\), the following holds for all sufficiently large integers \(n\).
+
+If \(A\) is a set of primes in \([n,2n]\) and
+\[
+|A|\ge \kappa\frac{n}{\log n},
+\]
+then
+\[
+\left[n(\log n)^3,\,
+\frac{n^2}{(\log n)^3}\right]\cap\mathbb Z
+\subseteq\Sigma(A).
+\tag{18}
+\]
+
+### Proof
+
+Write \(m=|A|\). Choose, by Bertrand's postulate, a prime
+\[
+2n<p<4n.
+\]
+All members of \(A\) are distinct modulo \(p\).
+
+Partition \(A\) into a group-building set \(A^{(0)}\), of size
+\(\lfloor m/2\rfloor\), and a reserve set \(A^{(1)}\).
+Put
+\[
+h=\left\lceil\frac{8p}{m}\right\rceil
+=O_\kappa(\log n).
+\]
+For sufficiently large \(n\), we have \(h\le m/8\).
+
+### Step 1: Build a long arithmetic progression of subset sums
+
+As long as at least \(m/4\) elements of \(A^{(0)}\) remain, Lemma 2 supplies an \(h\)-element subset whose sum is \(0\pmod p\). Indeed, if the remaining size is \(v\), then
+\[
+h(v-h)\ge h\frac m8\ge p.
+\]
+Remove such a subset and continue.
+
+This produces at least \(m/(8h)\) disjoint groups. Each group sum has the form
+\[
+\ell p,\qquad 1\le\ell\le h,
+\]
+because every group contains \(h\) integers between \(n\) and \(2n<p\).
+Consequently, for some \(\ell\), at least
+\[
+L\ge \frac{m}{8h^2}
+\]
+of the groups have the same sum
+\[
+d=\ell p.
+\]
+Their subset sums contain
+\[
+0,d,2d,\ldots,Ld.
+\tag{19}
+\]
+Here and below \(0\) is allowed temporarily as an empty sum.
+
+Since \(d\ge hn\), the upper endpoint satisfies
+\[
+T:=Ld\ge\frac{mn}{8h}
+\gg_\kappa \frac{n^2}{(\log n)^2}.
+\tag{20}
+\]
+
+### Step 2: Represent every residue modulo \(d\) by a small reserve sum
+
+All primes in \(A^{(1)}\) exceed \(\ell\), for sufficiently large \(n\).
+Thus every occupied residue class modulo \(\ell\) is coprime to \(\ell\).
+Choose a residue \(c\pmod\ell\) for which
+\[
+B:=\{a\in A^{(1)}:a\equiv c\pmod\ell\}
+\]
+has size
+\[
+s\ge\frac{m}{2\ell}
+\ge\frac{m}{2h}
+\gg_\kappa\frac{n}{(\log n)^2}.
+\tag{21}
+\]
+When \(\ell=1\), the same statements have their usual trivial interpretation.
+
+Set
+\[
+H=\left\lceil\frac{2p}{s}\right\rceil
+=O_\kappa((\log n)^2).
+\]
+For sufficiently large \(n\),
+\[
+H+\ell\le \frac s2.
+\]
+For every
+\[
+t\in\{H,H+1,\ldots,H+\ell-1\},
+\]
+we therefore have
+\[
+t(s-t)\ge H\frac s2\ge p.
+\]
+Lemma 2 says that the sums of \(t\) distinct members of \(B\) cover all residues modulo \(p\).
+
+Every such sum is also congruent to \(tc\pmod\ell\). Since
+\(\gcd(c,\ell)=1\), these \(\ell\) consecutive choices of \(t\) cover all residues modulo \(\ell\). Also \(\gcd(p,\ell)=1\), because \(\ell\le h<p\).
+The Chinese remainder theorem now shows that **every residue modulo**
+\(d=\ell p\) has a representative in \(\Sigma(B)\) of size at most
+\[
+M:=2n(H+\ell)=O_\kappa(n(\log n)^2).
+\tag{22}
+\]
+
+### Step 3: Fill an integer interval
+
+Let \(x\) be any integer with \(M\le x\le T\).
+Choose a reserve sum \(b_x\le M\) with
+\[
+b_x\equiv x\pmod d.
+\]
+Then
+\[
+x-b_x=qd
+\qquad\text{for some }0\le q\le L.
+\]
+Use \(q\) of the disjoint groups from Step 1, together with the reserve subset representing \(b_x\). These use disjoint elements of \(A\), so
+\[
+[M,T]\cap\mathbb Z\subseteq\Sigma(A).
+\]
+
+Finally, (20) and (22) imply, for sufficiently large \(n\),
+\[
+M\le n(\log n)^3,\qquad
+T\ge\frac{n^2}{(\log n)^3}.
+\]
+This proves (18). ∎
+
+The role of primes is precise: they make the reserve elements units modulo the small integer \(\ell\). No claim about arbitrary dense integer sets is needed.
+
+---
+
+## 4. Applying the geometric lemma to an arbitrary coloring
+
+Let
+\[
+\mathbb N=A_1\sqcup\cdots\sqcup A_r
+\]
+be arbitrary. Put \(n_k=2^k\).
+
+By the prime number theorem, for all sufficiently large \(k\), the interval
+\([n_k,2n_k]\) contains at least
+\[
+\frac{n_k}{2\log n_k}
+\]
+primes. Some color \(\gamma_k\) therefore contains at least
+\[
+\frac{n_k}{2r\log n_k}
+\]
+of these primes. Apply Lemma 3 with \(\kappa=1/(2r)\). We obtain
+\[
+\left[n_k(\log n_k)^3,\,
+\frac{n_k^2}{(\log n_k)^3}\right]\cap\mathbb Z
+\subseteq\Sigma(A_{\gamma_k}).
+\tag{23}
+\]
+
+Fix \(1<\lambda<2\), and define
+\[
+t_k=\log n_k+3\log\log n_k.
+\]
+For sufficiently large \(k\),
+\[
+\lambda t_{k+1}
+\le 2\log n_k-3\log\log n_k.
+\tag{24}
+\]
+Indeed, the difference has leading term
+\((2-\lambda)k\log2\), while all remaining terms are \(O_\lambda(\log k)\).
+
+It follows from (23)–(24) that every integer whose logarithm lies in
+\[
+J_k=[t_k,\lambda t_{k+1}]
+\]
+belongs to \(\Sigma(A_{\gamma_k})\). Set
+\[
+U_i=\bigcup_{\gamma_k=i}J_k,
+\]
+starting at a sufficiently large index.
+
+We now make the comparison with logarithmic density precise. For
+\(E_i=\Sigma(A_i)\), let
+\[
+W_i=\bigcup_{n\in E_i}[\log n,\log(n+1)).
+\]
+For a block \(J_k\) assigned to color \(i\), all its points except possibly an initial interval of length at most \(e^{-t_k}\) belong to \(W_i\). Hence
+\[
+|U_i\setminus W_i|
+\le\sum_k e^{-t_k}<\infty.
+\]
+For every \(T>0\), consequently,
+\[
+\begin{aligned}
+|U_i\cap[0,T]|
+&\le |W_i\cap[0,T]|+O(1)\\
+&\le\sum_{\substack{n\le e^T\\n\in E_i}}
+       \log\left(1+\frac1n\right)+O(1)\\
+&\le\sum_{\substack{n\le e^T\\n\in E_i}}\frac1n+O(1).
+\end{aligned}
+\tag{25}
+\]
+Thus
+\[
+\overline d_{\log}(\Sigma(A_i))
+\ge
+\limsup_{T\to\infty}\frac{|U_i\cap[0,T]|}{T}.
+\]
+
+Lemma 1 now gives
+\[
+\max_i\overline d_{\log}(\Sigma(A_i))
+\ge C_{r,\lambda}.
+\]
+This holds for every \(\lambda<2\). Letting \(\lambda\uparrow2\) and using (15),
+\[
+\max_i\overline d_{\log}(\Sigma(A_i))
+\ge\frac{b^{r-1}}{2r}.
+\tag{26}
+\]
+The coloring was arbitrary, so
+\[
+c_r\ge\frac{b^{r-1}}{2r}.
+\tag{27}
+\]
+
+This is the unrestricted lower bound; no interval-block assumption remains.
+
+---
+
+## 5. Matching upper bound
+
+For completeness, the matching construction can also be proved directly.
+
+Let \(b>1\) solve
+\[
+b^r-2rb+r-1=0,
+\]
+and, for all sufficiently large \(k\), put
+\[
+N_k=\left\lceil e^{b^k}\right\rceil.
+\]
+Color
+\[
+[N_k,N_{k+1})\cap\mathbb N
+\]
+by \(k\bmod r\), and color the finite initial interval arbitrarily.
+
+If a monochromatic subset sum has its largest summand in block \(k\), then it is at least \(N_k\), and it is less than
+\[
+\sum_{n<N_{k+1}}n<N_{k+1}^2.
+\]
+Therefore, apart from finitely many subset sums,
+\[
+\Sigma(A_i)
+\subseteq
+\bigcup_{k\equiv i\;(\mathrm{mod}\ r)}
+[N_k,N_{k+1}^2].
+\tag{28}
+\]
+
+On the logarithmic scale, these intervals have endpoints
+\[
+b^k+O(e^{-b^k}),
+\qquad
+2b^{k+1}+O(e^{-b^{k+1}}).
+\]
+The errors are summable. Harmonic sums over the corresponding integer intervals likewise differ from their logarithmic lengths by a summable error. It is therefore enough to calculate the upper density of
+\[
+V_i=\bigcup_{k\equiv i\;(\mathrm{mod}\ r)}
+[b^k,2b^{k+1}].
+\]
+
+By the minimizer calculation in Section 1,
+\[
+b>2^{1/(r-1)}.
+\]
+Thus consecutive intervals of the same color are disjoint. At the right endpoint \(2b^{k+1}\), their accumulated density tends to
+\[
+\begin{aligned}
+\frac{\sum_{j\ge0}(2b-1)b^{k-rj}}{2b^{k+1}}
+&=\frac{1-\frac1{2b}}{1-b^{-r}}\\
+&=\frac{b^{r-1}}{2r}.
+\end{aligned}
+\tag{29}
+\]
+Within an occupied interval the density ratio increases, and within a gap it decreases. Hence (29) is the upper density of \(V_i\).
+
+Equation (28) consequently gives
+\[
+\max_i\overline d_{\log}(\Sigma(A_i))
+\le\frac{b^{r-1}}{2r}.
+\tag{30}
+\]
+Together with (27), this proves the theorem.
+
+---
+
+## 6. Constant correction and conclusion
+
+The defining equation implies
+\[
+b^r-1=2rb-r.
+\]
+Therefore
+\[
+\frac{b^{r-1}}{2r}
+=
+\left(1-\frac1{2b}\right)
+\left(1+\frac1{2rb-r}\right).
+\]
+For \(r=2\), \(b=2+\sqrt3\), giving
+\[
+c_2=\frac{2+\sqrt3}{4},
+\]
+as required.
+
+For \(r\ge3\), however, \(2^r>2r\), so
+\[
+\left(1-\frac1{2b}\right)
+\left(1+\frac1{2^rb-r}\right)
+<
+\left(1-\frac1{2b}\right)
+\left(1+\frac1{2rb-r}\right)
+=c_r.
+\]
+Thus the catalog formula with \(2^r\), if interpreted literally, is false even as an upper bound. The theorem proves the intended \(2r\) version.
+
+The gap in the previous attempt is closed by Lemma 3: at every dyadic scale, one color contains enough primes to generate an integer interval with logarithmic endpoints
+\[
+\log n+O(\log\log n)
+\quad\text{and}\quad
+2\log n-O(\log\log n).
+\]
+That is exactly what the geometric argument needs. Arbitrary interlacing of the color classes is therefore allowed, and no unproved reduction to block colorings is used.

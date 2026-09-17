@@ -1,0 +1,15 @@
+{
+  "verdict": "unknown",
+  "confidence": "low",
+  "one_line": "",
+  "would_publish": false,
+  "caveats": "no JSON block parsed",
+  "id": "2306.04710__00",
+  "model": "gpt-6-astra",
+  "usd": 0.0,
+  "eur": 0.0,
+  "elapsed_s": 676.7,
+  "status": "failed",
+  "response_id": "resp_02140c8fb6dddd1e006aab5f5cc27887d2aff243b64c6c2dc7",
+  "when": "2026-09-17T03:44:01Z"
+}

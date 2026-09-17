@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain a complete two-cycle normal form for two digon components, including planarity and the sharp arc bound m <= 3n - 4.",
+  "would_publish": false,
+  "caveats": "This does not establish membership in H_2; the prescribed join decomposition and the case of three or more digon components remain unresolved, and novelty relative to the full paper is unverified.",
+  "id": "2304.04690__00",
+  "model": "gpt-6-astra",
+  "usd": 1.298055,
+  "eur": 1.344519,
+  "elapsed_s": 1174.8,
+  "status": "completed",
+  "response_id": "resp_04afae990266bd8d006aab43090a7887d29b1ad6954e1ec84c",
+  "when": "2026-09-17T01:51:27Z"
+}

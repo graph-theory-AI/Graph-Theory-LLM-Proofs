@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The LP-core reduction yields a PTAS under effective fractional treewidth fragility, and a fully explicit PTAS also follows for bounded-degree hereditary classes with strongly sublinear separators.",
+  "would_publish": false,
+  "caveats": "Unrestricted separator classes and general distance-1 minimization remain unresolved; no claim of literature novelty.",
+  "id": "2105.01780__00",
+  "model": "gpt-6-astra",
+  "usd": 1.275875,
+  "eur": 1.321545,
+  "elapsed_s": 1128.3,
+  "status": "completed",
+  "response_id": "resp_009f396770124d4a006aab520536e087d29b0e901dd1033994",
+  "when": "2026-09-17T02:54:37Z"
+}

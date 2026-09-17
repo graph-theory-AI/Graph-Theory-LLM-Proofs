@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove a uniform additive-two high-probability bound for shift graphs of order at least three, but do not resolve the conjecture for arbitrary graphs.",
+  "would_publish": false,
+  "caveats": "Special family only; novelty of the resulting bounds has not been checked.",
+  "id": "coloring_random_subgraphs",
+  "model": "gpt-6-astra",
+  "usd": 0.93725,
+  "eur": 0.970799,
+  "elapsed_s": 951.9,
+  "status": "completed",
+  "response_id": "resp_00d9e805c13221d0006aab15e5673887d29f1f1b6424f6c754",
+  "when": "2026-09-16T22:35:09Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For one-ended cubic graphs of end-degree four and eventual cutwidth at most five, the number of Hamilton circles is finite and even or continuum, and therefore is never one.",
+  "would_publish": false,
+  "caveats": "This strengthens a restricted case of the previous attempt, not the unrestricted existence problem; literature novelty is not claimed.",
+  "id": "infinite_uniquely_hamiltonian_graphs",
+  "model": "gpt-6-astra",
+  "usd": 0.95521,
+  "eur": 0.989402,
+  "elapsed_s": 973.0,
+  "status": "completed",
+  "response_id": "resp_0ec8bf27518cade3006aab1febb35c87d2905ebdc2cf3cc4e9",
+  "when": "2026-09-16T23:18:16Z"
+}

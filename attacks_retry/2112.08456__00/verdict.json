@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A self-contained bound gives tau_k(n) = n/sqrt(2k) + O(n/k + 1), settling the large-k leading constant but not fixed-k tightness.",
+  "would_publish": false,
+  "caveats": "The exact leading coefficient for each fixed k remains undetermined; literature novelty has not been independently checked.",
+  "id": "2112.08456__00",
+  "model": "gpt-6-astra",
+  "usd": 1.27211,
+  "eur": 1.317645,
+  "elapsed_s": 1060.2,
+  "status": "completed",
+  "response_id": "resp_04b4a1649491faba006aab532c59bc87d2b5e5a1de1831c701",
+  "when": "2026-09-17T02:58:24Z"
+}

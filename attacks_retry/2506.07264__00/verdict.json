@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Every connected graph with m=n+1 satisfies the stronger bound s^+(G) >= n+5-2sqrt(5) > n, but the general conjecture remains unresolved here.",
+  "would_publish": false,
+  "caveats": "The proof covers all bicyclic graphs, including arbitrary pendant trees; novelty of this special case has not been independently checked.",
+  "id": "2506.07264__00",
+  "model": "gpt-6-astra",
+  "usd": 0.86211,
+  "eur": 0.892969,
+  "elapsed_s": 1057.6,
+  "status": "completed",
+  "response_id": "resp_0e18acfec4917e27006aab3180726887d284ed6e74a4190479",
+  "when": "2026-09-17T00:34:41Z"
+}

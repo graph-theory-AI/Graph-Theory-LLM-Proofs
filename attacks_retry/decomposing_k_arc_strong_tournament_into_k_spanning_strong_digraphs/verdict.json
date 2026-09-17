@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A one-vertex repair lemma implies that every counterexample contains an induced counterexample on at most (k+1)(k+2) vertices.",
+  "would_publish": false,
+  "caveats": "The semidegree-critical case, including regular tournaments, remains untreated; novelty of these partial results is unverified.",
+  "id": "decomposing_k_arc_strong_tournament_into_k_spanning_strong_digraphs",
+  "model": "gpt-6-astra",
+  "usd": 0.992155,
+  "eur": 1.027669,
+  "elapsed_s": 1249.7,
+  "status": "completed",
+  "response_id": "resp_07af826bd8f96003006aab199d681887d2a33e0fc2dc22f3fa",
+  "when": "2026-09-16T22:55:58Z"
+}

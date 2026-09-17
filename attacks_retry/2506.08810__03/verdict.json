@@ -1,0 +1,15 @@
+{
+  "verdict": "disproved",
+  "confidence": "high",
+  "one_line": "The five-vertex tournament C3[TT2,TT2,1] is a counterexample: every countable tournament avoiding it has a distinct locally finite perturbation that still avoids it.",
+  "would_publish": true,
+  "caveats": "Perturbations are understood to be nonempty; the argument does not settle the weaker single-arc saturation question.",
+  "id": "2506.08810__03",
+  "model": "gpt-6-astra",
+  "usd": 0.986035,
+  "eur": 1.02133,
+  "elapsed_s": 982.0,
+  "status": "completed",
+  "response_id": "resp_0c382130aa8ca955006aab68bdc51087d2b29a5ae8e705d8fd",
+  "when": "2026-09-17T04:29:07Z"
+}

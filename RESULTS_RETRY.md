@@ -11,36 +11,53 @@ runs were not used.
 
 ## Counts
 
-Finished attacks with a verdict: **38**.
-Spend (promo ledger × prepaid FX): **€307.73** billed USD
-**$297.10** / budget €600
+Finished attacks with a verdict: **278**.
+Spend (promo ledger × prepaid FX): **€584.88** billed USD
+**$564.66** / budget €600
 (safety margin €5).
 
 | verdict | n | would_publish |
 | --- | ---: | ---: |
-| proved | 3 | 3 |
-| disproved | 1 | 0 |
-| already_resolved | 1 | 0 |
-| partial | 33 | 0 |
+| proved | 12 | 12 |
+| disproved | 6 | 5 |
+| already_resolved | 2 | 0 |
+| partial | 242 | 3 |
+| unknown | 15 | 0 |
+| no_progress | 1 | 0 |
 
-## Claimed proofs (3)
+## Claimed proofs (12)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
+| [`1602.05184__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1602.05184__00/) · [artifact](attacks_retry/1602.05184__00/) | high | yes | Every 2-connected graph outside the three exceptional families satisfies η(G) ≥ min{2n, 3n−10}, proving the conjecture for n ≥ 10. |
+| [`1904.02595__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1904.02595__00/) · [artifact](attacks_retry/1904.02595__00/) | high | yes | A tensor-rank bound retaining the lonely vertices, combined with rank-nonincreasing coordinate compression, proves the conjecture for all complete multipartite factors. |
+| [`2105.15195__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2105.15195__00/) · [artifact](attacks_retry/2105.15195__00/) | high | yes | A prime-based reduction closes the interlacing gap and proves c_r = b_0^(r-1)/(2r) for every r >= 2. |
+| [`2207.13651__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2207.13651__00/) · [artifact](attacks_retry/2207.13651__00/) | high | yes | A half-interval decomposition of the vertex labels, followed by read-d Hölder bounds for uniform spacings, proves Property (*) throughout d = o(n/log n). |
 | [`2211.01032__03`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2211.01032__03/) · [artifact](attacks_retry/2211.01032__03/) | high | yes | A fixed-vertex decomposition proves E[F_n] <= ln n + O(1), with the stronger upper bound ln n + 1/4 + gamma/2 + o(1). |
 | [`2402.10782__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2402.10782__01/) · [artifact](attacks_retry/2402.10782__01/) | high | yes | The path-FAS problem is NP-complete, whereas the maximum-degree-1 FAS problem is polynomial-time solvable. |
+| [`2507.10840__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2507.10840__01/) · [artifact](attacks_retry/2507.10840__01/) | high | yes | An odd regular polygon with a central cluster yields point sets requiring at least 3n/4 - O(sqrt(n)) crossing-free paths. |
 | [`2603.02786__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2603.02786__00/) · [artifact](attacks_retry/2603.02786__00/) | high | yes | Fixed-size CRT-generic prime blocks, together with clustered residue classes for their multiples and a tail decomposition, give m(n) ~ (4/3)n^(3/2)/log n. |
+| [`2603.02786__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2603.02786__01/) · [artifact](attacks_retry/2603.02786__01/) | high | yes | The conjectured asymptotic follows from an exact packing lemma for arithmetic-progression blocks of differences and the dense-subset Green–Tao theorem. |
+| [`2603.02786__04`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2603.02786__04/) · [artifact](attacks_retry/2603.02786__04/) | high | yes | A random-composition fractional tiling, rounded by edge-colouring and a reservoir, proves M_k(n)=nk+o(k) for every fixed n. |
+| [`2604.09449__03`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2604.09449__03/) · [artifact](attacks_retry/2604.09449__03/) | high | yes | The requested O(k^2) bound improves to O(k log(k+1)) for Hamilton cycles in both complete and complete bipartite graphs, including for bounded vector labels in an arbitrary norm. |
+| [`circular_colouring_the_orthogonality_graph`](https://graph-theory-ai.github.io/graph-conjectures/op/circular_colouring_the_orthogonality_graph/) · [artifact](attacks_retry/circular_colouring_the_orthogonality_graph/) | high | yes | A geometric odd-walk lemma excludes every homomorphism from O to a finite locally bipartite graph, and consequently proves χ_c(O)=4. |
 
-## Claimed counterexamples (1)
+## Claimed counterexamples (6)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
+| [`1812.09215__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1812.09215__00/) · [artifact](attacks_retry/1812.09215__00/) | high | yes | No: every such bijection satisfies n <= 1+(k-1)+...+(k-1)^(D-1), where D is its inverse Lipschitz constant, and linear 2-Lipschitz tree maps attain the resulting bound. |
+| [`2008.03587__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2008.03587__00/) · [artifact](attacks_retry/2008.03587__00/) | high | yes | A 59-vertex cactus requires at least three zombies, but adding one leaf produces a graph requiring exactly two. |
 | [`2211.01032__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2211.01032__00/) · [artifact](attacks_retry/2211.01032__00/) | high | no | Under the source's normalized face count, p=1/(2n) gives a uniformly bounded expected number of faces, whereas ln(pn^2) tends to infinity. |
+| [`2506.08810__03`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2506.08810__03/) · [artifact](attacks_retry/2506.08810__03/) | high | yes | The five-vertex tournament C3[TT2,TT2,1] is a counterexample: every countable tournament avoiding it has a distinct locally finite perturbation that still avoids it. |
+| [`2509.09031__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2509.09031__00/) · [artifact](attacks_retry/2509.09031__00/) | high | yes | A finite counterexample is obtained from a contraction- and subdivision-closed class whose branch vertices are pairwise joined by internally degree-two paths. |
+| [`2510.11311__04`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2510.11311__04/) · [artifact](attacks_retry/2510.11311__04/) | high | yes | The anti-directed C4 is not Eulerian-avoidable: Eulerian oriented graphs can have arbitrarily large minimum out-degree while having no anti-directed-C4-free subdigraph of minimum out-degree 2. |
 
-## Already resolved (model says the literature already closed it) (1)
+## Already resolved (model says the literature already closed it) (2)
 
 | id | conf. | publish? | one line |
 | --- | --- | --- | --- |
+| [`1611.02400__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.02400__01/) · [artifact](attacks_retry/1611.02400__01/) | high | no | The Janzer–Sudakov regular-subgraph theorem implies that constant multitasking capacity forces average degree O_alpha(log log n), ruling out the proposed logarithmic degree. |
 | [`1611.03196__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.03196__00/) · [artifact](attacks_retry/1611.03196__00/) | high | no | The intended fair-splitting conjecture is covered by Alishahi–Meunier's theorem, whereas the displayed integer-budget formulation is inequivalent and false. |
 
 ## Ill-posed / no determinate statement as supplied (0)
@@ -54,250 +71,10 @@ The sweep queue is the easiest-first open/partial arXiv ranking (702
 records, including a handful of questions restored after catalog extraction
 fixes). Open Problem Garden entries were **not** attacked.
 
-Queue records not yet attacked: **664** (plus 0 skipped without a model call).
+Queue records not yet attacked: **424** (plus 0 skipped without a model call).
 
 | id | tier | score | paper |
 | --- | ---: | ---: | --- |
-| [`2605.13628__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2605.13628__01/) | 2 | 1.75 | A note on arithmetic progressions with restricted differences |
-| [`2211.01032__04`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2211.01032__04/) | 2 | 1.85 | Random Embeddings of Graphs: The Expected Number of Faces in Most Graph… |
-| [`2405.10854__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2405.10854__00/) | 2 | 1.85 | Strong log-convexity of genus sequences |
-| [`2506.08810__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2506.08810__00/) | 2 | 1.85 | Infinite induced-saturated graphs |
-| [`2509.09035__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2509.09035__00/) | 2 | 1.85 | Asymptotic structure. III. Excluding a fat tree |
-| [`1903.11287__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1903.11287__00/) | 2 | 1.95 | Convexly independent subsets of Minkowski sums of convex polygons |
-| [`2004.05942__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2004.05942__00/) | 2 | 1.95 | Pentagon contact representations |
-| [`2201.00328__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2201.00328__01/) | 2 | 1.95 | Implicit representation of sparse hereditary families |
-| [`2308.05208__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2308.05208__00/) | 2 | 1.95 | Ordering Candidates via Vantage Points |
-| [`2311.00779__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2311.00779__01/) | 2 | 1.95 | Shortest paths on polymatroids and hypergraphic polytopes |
-| [`2407.18800__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2407.18800__00/) | 2 | 1.95 | Towards Characterization of 5-List-Colorability of Toroidal Graphs |
-| [`2407.18800__03`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2407.18800__03/) | 2 | 1.95 | Towards Characterization of 5-List-Colorability of Toroidal Graphs |
-| [`2502.04726__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2502.04726__00/) | 2 | 1.95 | Lollipops, dense cycles and chords |
-| [`2506.08810__04`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2506.08810__04/) | 2 | 1.95 | Infinite induced-saturated graphs |
-| [`2508.08703__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2508.08703__00/) | 2 | 1.95 | Critical edge sets in vertex-critical graphs |
-| [`2601.15245__03`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2601.15245__03/) | 2 | 1.95 | Coloring small locally sparse degenerate graphs and related problems |
-| [`1904.02595__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1904.02595__00/) | 2 | 2.0 | Isoperimetry, Stability, and Irredundance in Direct Products |
-| [`2_colouring_a_graph_without_a_monochromatic_maximum_clique`](https://graph-theory-ai.github.io/graph-conjectures/op/2_colouring_a_graph_without_a_monochromatic_maximum_clique/) | 2 | 2.0 | http://www.openproblemgarden.org/op/2_colouring_a_graph_without_a_monochromatic_maximum_clique |
-| [`3_colourability_of_arrangements_of_great_circles`](https://graph-theory-ai.github.io/graph-conjectures/op/3_colourability_of_arrangements_of_great_circles/) | 2 | 2.0 | http://www.openproblemgarden.org/op/3_colourability_of_arrangements_of_great_circles |
-| [`4_connected_graphs_are_not_uniquely_hamiltonian`](https://graph-theory-ai.github.io/graph-conjectures/op/4_connected_graphs_are_not_uniquely_hamiltonian/) | 2 | 2.0 | http://www.openproblemgarden.org/op/4_connected_graphs_are_not_uniquely_hamiltonian |
-| [`5_local_tensions`](https://graph-theory-ai.github.io/graph-conjectures/op/5_local_tensions/) | 2 | 2.0 | http://www.openproblemgarden.org/op/5_local_tensions |
-| [`a_gold_grabbing_game`](https://graph-theory-ai.github.io/graph-conjectures/op/a_gold_grabbing_game/) | 2 | 2.0 | http://www.openproblemgarden.org/op/a_gold_grabbing_game |
-| [`a_homomorphism_problem_for_flows`](https://graph-theory-ai.github.io/graph-conjectures/op/a_homomorphism_problem_for_flows/) | 2 | 2.0 | http://www.openproblemgarden.org/op/a_homomorphism_problem_for_flows |
-| [`acyclic_edge_coloring`](https://graph-theory-ai.github.io/graph-conjectures/op/acyclic_edge_coloring/) | 2 | 2.0 | http://www.openproblemgarden.org/op/acyclic_edge_coloring |
-| [`algorithm_for_graph_homomorphisms`](https://graph-theory-ai.github.io/graph-conjectures/op/algorithm_for_graph_homomorphisms/) | 2 | 2.0 | http://www.openproblemgarden.org/op/algorithm_for_graph_homomorphisms |
-| [`almost_all_non_hamiltonian_3_regular_graphs_are_1_connected`](https://graph-theory-ai.github.io/graph-conjectures/op/almost_all_non_hamiltonian_3_regular_graphs_are_1_connected/) | 2 | 2.0 | http://www.openproblemgarden.org/op/almost_all_non_hamiltonian_3_regular_graphs_are_1_connected |
-| [`antidirected_trees_in_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/antidirected_trees_in_digraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/antidirected_trees_in_digraphs |
-| [`approximation_ratio_for_k_outerplanar_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/approximation_ratio_for_k_outerplanar_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/approximation_ratio_for_k_outerplanar_graphs |
-| [`approximation_ratio_for_maximum_edge_disjoint_paths_problem`](https://graph-theory-ai.github.io/graph-conjectures/op/approximation_ratio_for_maximum_edge_disjoint_paths_problem/) | 2 | 2.0 | http://www.openproblemgarden.org/op/approximation_ratio_for_maximum_edge_disjoint_paths_problem |
-| [`arc_disjoint_directed_cycles_in_regular_directed_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/arc_disjoint_directed_cycles_in_regular_directed_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/arc_disjoint_directed_cycles_in_regular_directed_graphs |
-| [`arc_disjoint_out_branching_and_in_branching`](https://graph-theory-ai.github.io/graph-conjectures/op/arc_disjoint_out_branching_and_in_branching/) | 2 | 2.0 | http://www.openproblemgarden.org/op/arc_disjoint_out_branching_and_in_branching |
-| [`arc_disjoint_strongly_connected_spanning_subdigraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/arc_disjoint_strongly_connected_spanning_subdigraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/arc_disjoint_strongly_connected_spanning_subdigraphs |
-| [`bounding_the_chromatic_number_of_triangle_free_graphs_with_fixed_maximum_degree`](https://graph-theory-ai.github.io/graph-conjectures/op/bounding_the_chromatic_number_of_triangle_free_graphs_with_fixed_maximum_degree/) | 2 | 2.0 | http://www.openproblemgarden.org/op/bounding_the_chromatic_number_of_triangle_free_graphs_with_fixed_maximum_degree |
-| [`choice_number_of_k_chromatic_graphs_of_bounded_order`](https://graph-theory-ai.github.io/graph-conjectures/op/choice_number_of_k_chromatic_graphs_of_bounded_order/) | 2 | 2.0 | http://www.openproblemgarden.org/op/choice_number_of_k_chromatic_graphs_of_bounded_order |
-| [`choosability_of_graph_powers`](https://graph-theory-ai.github.io/graph-conjectures/op/choosability_of_graph_powers/) | 2 | 2.0 | http://www.openproblemgarden.org/op/choosability_of_graph_powers |
-| [`chromatic_number_of_frac_3_3_power_of_graph`](https://graph-theory-ai.github.io/graph-conjectures/op/chromatic_number_of_frac_3_3_power_of_graph/) | 2 | 2.0 | http://www.openproblemgarden.org/op/chromatic_number_of_frac_3_3_power_of_graph |
-| [`circular_chromatic_number_of_triangle_free_planar_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/circular_chromatic_number_of_triangle_free_planar_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/circular_chromatic_number_of_triangle_free_planar_graphs |
-| [`circular_colouring_the_orthogonality_graph`](https://graph-theory-ai.github.io/graph-conjectures/op/circular_colouring_the_orthogonality_graph/) | 2 | 2.0 | http://www.openproblemgarden.org/op/circular_colouring_the_orthogonality_graph |
-| [`coloring_random_subgraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/coloring_random_subgraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/coloring_random_subgraphs |
-| [`coloring_the_union_of_degenerate_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/coloring_the_union_of_degenerate_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/coloring_the_union_of_degenerate_graphs |
-| [`colouring_the_square_of_a_planar_graph`](https://graph-theory-ai.github.io/graph-conjectures/op/colouring_the_square_of_a_planar_graph/) | 2 | 2.0 | http://www.openproblemgarden.org/op/colouring_the_square_of_a_planar_graph |
-| [`complete_bipartite_subgraphs_of_perfect_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/complete_bipartite_subgraphs_of_perfect_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/complete_bipartite_subgraphs_of_perfect_graphs |
-| [`complexity_of_the_h_factor_problem`](https://graph-theory-ai.github.io/graph-conjectures/op/complexity_of_the_h_factor_problem/) | 2 | 2.0 | http://www.openproblemgarden.org/op/complexity_of_the_h_factor_problem |
-| [`counting_3_colorings_of_the_hex_lattice`](https://graph-theory-ai.github.io/graph-conjectures/op/counting_3_colorings_of_the_hex_lattice/) | 2 | 2.0 | http://www.openproblemgarden.org/op/counting_3_colorings_of_the_hex_lattice |
-| [`crossing_sequences`](https://graph-theory-ai.github.io/graph-conjectures/op/crossing_sequences/) | 2 | 2.0 | http://www.openproblemgarden.org/op/crossing_sequences |
-| [`cycles_in_graphs_of_large_chromatic_number`](https://graph-theory-ai.github.io/graph-conjectures/op/cycles_in_graphs_of_large_chromatic_number/) | 2 | 2.0 | http://www.openproblemgarden.org/op/cycles_in_graphs_of_large_chromatic_number |
-| [`decomposing_an_eulerian_graph_into_cycles`](https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_an_eulerian_graph_into_cycles/) | 2 | 2.0 | http://www.openproblemgarden.org/op/decomposing_an_eulerian_graph_into_cycles |
-| [`decomposing_an_eulerian_graph_into_cycles_with_no_two_consecutives_edges_on_a_prescirbed_eulerian_tour`](https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_an_eulerian_graph_into_cycles_with_no_two_consecutives_edges_on_a_prescirbed_eulerian_tour/) | 2 | 2.0 | http://www.openproblemgarden.org/op/decomposing_an_eulerian_graph_into_cycles_with_no_two_consecutives_edges_on_a_prescirbed_eulerian_tour |
-| [`decomposing_k_arc_strong_tournament_into_k_spanning_strong_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_k_arc_strong_tournament_into_k_spanning_strong_digraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/decomposing_k_arc_strong_tournament_into_k_spanning_strong_digraphs |
-| [`decomposing_the_prism_of_a_3_connected_cubic_planar_graphs_in_hamilton_cycles`](https://graph-theory-ai.github.io/graph-conjectures/op/decomposing_the_prism_of_a_3_connected_cubic_planar_graphs_in_hamilton_cycles/) | 2 | 2.0 | http://www.openproblemgarden.org/op/decomposing_the_prism_of_a_3_connected_cubic_planar_graphs_in_hamilton_cycles |
-| [`do_any_three_longest_paths_in_a_connected_graph_have_a_vertex_in_common`](https://graph-theory-ai.github.io/graph-conjectures/op/do_any_three_longest_paths_in_a_connected_graph_have_a_vertex_in_common/) | 2 | 2.0 | http://www.openproblemgarden.org/op/do_any_three_longest_paths_in_a_connected_graph_have_a_vertex_in_common |
-| [`does_the_symmetric_chromatic_function_distinguish_trees`](https://graph-theory-ai.github.io/graph-conjectures/op/does_the_symmetric_chromatic_function_distinguish_trees/) | 2 | 2.0 | http://www.openproblemgarden.org/op/does_the_symmetric_chromatic_function_distinguish_trees |
-| [`domination_in_cubic_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/domination_in_cubic_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/domination_in_cubic_graphs |
-| [`domination_in_plane_triangulations`](https://graph-theory-ai.github.io/graph-conjectures/op/domination_in_plane_triangulations/) | 2 | 2.0 | http://www.openproblemgarden.org/op/domination_in_plane_triangulations |
-| [`double_critical_graph_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/double_critical_graph_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/double_critical_graph_conjecture |
-| [`drawing_disconnected_graphs_on_surfaces`](https://graph-theory-ai.github.io/graph-conjectures/op/drawing_disconnected_graphs_on_surfaces/) | 2 | 2.0 | http://www.openproblemgarden.org/op/drawing_disconnected_graphs_on_surfaces |
-| [`earth_moon_problem`](https://graph-theory-ai.github.io/graph-conjectures/op/earth_moon_problem/) | 2 | 2.0 | http://www.openproblemgarden.org/op/earth_moon_problem |
-| [`every_4_connected_toroidal_graph_has_a_hamilton_cycle`](https://graph-theory-ai.github.io/graph-conjectures/op/every_4_connected_toroidal_graph_has_a_hamilton_cycle/) | 2 | 2.0 | http://www.openproblemgarden.org/op/every_4_connected_toroidal_graph_has_a_hamilton_cycle |
-| [`exact_colorings_of_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/exact_colorings_of_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/exact_colorings_of_graphs |
-| [`forcing_a_k_6_minor`](https://graph-theory-ai.github.io/graph-conjectures/op/forcing_a_k_6_minor/) | 2 | 2.0 | http://www.openproblemgarden.org/op/forcing_a_k_6_minor |
-| [`fractional_hadwiger`](https://graph-theory-ai.github.io/graph-conjectures/op/fractional_hadwiger/) | 2 | 2.0 | http://www.openproblemgarden.org/op/fractional_hadwiger |
-| [`frankls_union_closed_sets_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/frankls_union_closed_sets_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/frankls_union_closed_sets_conjecture |
-| [`friendly_partitions`](https://graph-theory-ai.github.io/graph-conjectures/op/friendly_partitions/) | 2 | 2.0 | http://www.openproblemgarden.org/op/friendly_partitions |
-| [`good_edge_labelings`](https://graph-theory-ai.github.io/graph-conjectures/op/good_edge_labelings/) | 2 | 2.0 | http://www.openproblemgarden.org/op/good_edge_labelings |
-| [`grahams_conjecture_on_tree_reconstruction`](https://graph-theory-ai.github.io/graph-conjectures/op/grahams_conjecture_on_tree_reconstruction/) | 2 | 2.0 | http://www.openproblemgarden.org/op/grahams_conjecture_on_tree_reconstruction |
-| [`half_integral_flow_polynomial_values`](https://graph-theory-ai.github.io/graph-conjectures/op/half_integral_flow_polynomial_values/) | 2 | 2.0 | http://www.openproblemgarden.org/op/half_integral_flow_polynomial_values |
-| [`hamiltonian_cycles_in_line_graphs_of_infinite_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonian_cycles_in_line_graphs_of_infinite_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/hamiltonian_cycles_in_line_graphs_of_infinite_graphs |
-| [`hamiltonian_cycles_in_powers_of_infinite_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/hamiltonian_cycles_in_powers_of_infinite_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/hamiltonian_cycles_in_powers_of_infinite_graphs |
-| [`high_girth_low_degree_4_chromatic_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/high_girth_low_degree_4_chromatic_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/high_girth_low_degree_4_chromatic_graphs |
-| [`infinite_uniquely_hamiltonian_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/infinite_uniquely_hamiltonian_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/infinite_uniquely_hamiltonian_graphs |
-| [`intersecting_two_perfect_matchings`](https://graph-theory-ai.github.io/graph-conjectures/op/intersecting_two_perfect_matchings/) | 2 | 2.0 | http://www.openproblemgarden.org/op/intersecting_two_perfect_matchings |
-| [`jones_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/jones_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/jones_conjecture |
-| [`kriesells_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/kriesells_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/kriesells_conjecture |
-| [`large_induced_forest_in_a_planar_graph`](https://graph-theory-ai.github.io/graph-conjectures/op/large_induced_forest_in_a_planar_graph/) | 2 | 2.0 | http://www.openproblemgarden.org/op/large_induced_forest_in_a_planar_graph |
-| [`linear_hypergraphs_with_dimension_3`](https://graph-theory-ai.github.io/graph-conjectures/op/linear_hypergraphs_with_dimension_3/) | 2 | 2.0 | http://www.openproblemgarden.org/op/linear_hypergraphs_with_dimension_3 |
-| [`list_chromatic_number_and_maximum_degree_of_bipartite_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/list_chromatic_number_and_maximum_degree_of_bipartite_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/list_chromatic_number_and_maximum_degree_of_bipartite_graphs |
-| [`list_colorings_of_edge_critical_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/list_colorings_of_edge_critical_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/list_colorings_of_edge_critical_graphs |
-| [`list_colourings_of_complete_multipartite_graphs_with_2_big_parts`](https://graph-theory-ai.github.io/graph-conjectures/op/list_colourings_of_complete_multipartite_graphs_with_2_big_parts/) | 2 | 2.0 | http://www.openproblemgarden.org/op/list_colourings_of_complete_multipartite_graphs_with_2_big_parts |
-| [`list_hadwiger_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/list_hadwiger_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/list_hadwiger_conjecture |
-| [`list_total_colouring_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/list_total_colouring_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/list_total_colouring_conjecture |
-| [`lovasz_path_removal_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/lovasz_path_removal_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/lovasz_path_removal_conjecture |
-| [`matchings_extends_to_hamilton_cycles_in_hypercubes`](https://graph-theory-ai.github.io/graph-conjectures/op/matchings_extends_to_hamilton_cycles_in_hypercubes/) | 2 | 2.0 | http://www.openproblemgarden.org/op/matchings_extends_to_hamilton_cycles_in_hypercubes |
-| [`minimal_graphs_with_a_prescribed_number_of_spanning_trees`](https://graph-theory-ai.github.io/graph-conjectures/op/minimal_graphs_with_a_prescribed_number_of_spanning_trees/) | 2 | 2.0 | http://www.openproblemgarden.org/op/minimal_graphs_with_a_prescribed_number_of_spanning_trees |
-| [`minimum_number_of_transitive_subtournaments_of_order_3_in_a_tournament`](https://graph-theory-ai.github.io/graph-conjectures/op/minimum_number_of_transitive_subtournaments_of_order_3_in_a_tournament/) | 2 | 2.0 | http://www.openproblemgarden.org/op/minimum_number_of_transitive_subtournaments_of_order_3_in_a_tournament |
-| [`negative_association_in_uniform_forests`](https://graph-theory-ai.github.io/graph-conjectures/op/negative_association_in_uniform_forests/) | 2 | 2.0 | http://www.openproblemgarden.org/op/negative_association_in_uniform_forests |
-| [`odd_cycle_transversal_in_triangle_free_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/odd_cycle_transversal_in_triangle_free_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/odd_cycle_transversal_in_triangle_free_graphs |
-| [`oriented_chromatic_number_of_planar_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/oriented_chromatic_number_of_planar_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/oriented_chromatic_number_of_planar_graphs |
-| [`packing_t_joins`](https://graph-theory-ai.github.io/graph-conjectures/op/packing_t_joins/) | 2 | 2.0 | http://www.openproblemgarden.org/op/packing_t_joins |
-| [`partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2`](https://graph-theory-ai.github.io/graph-conjectures/op/partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2/) | 2 | 2.0 | http://www.openproblemgarden.org/op/partition_of_a_cubic_3_connected_graphs_into_paths_of_length_2 |
-| [`partitioning_edge_connectivity`](https://graph-theory-ai.github.io/graph-conjectures/op/partitioning_edge_connectivity/) | 2 | 2.0 | http://www.openproblemgarden.org/op/partitioning_edge_connectivity |
-| [`partitioning_planar_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/partitioning_planar_digraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/partitioning_planar_digraphs |
-| [`signing_a_graph_to_have_small_magnitude_eigenvalues`](https://graph-theory-ai.github.io/graph-conjectures/op/signing_a_graph_to_have_small_magnitude_eigenvalues/) | 2 | 2.0 | http://www.openproblemgarden.org/op/signing_a_graph_to_have_small_magnitude_eigenvalues |
-| [`simultaneous_partition_of_hypergraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/simultaneous_partition_of_hypergraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/simultaneous_partition_of_hypergraphs |
-| [`stable_set_meeting_all_longest_directed_paths`](https://graph-theory-ai.github.io/graph-conjectures/op/stable_set_meeting_all_longest_directed_paths/) | 2 | 2.0 | http://www.openproblemgarden.org/op/stable_set_meeting_all_longest_directed_paths |
-| [`star_chromatic_index_of_complete_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/star_chromatic_index_of_complete_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/star_chromatic_index_of_complete_graphs |
-| [`star_chromatic_index_of_cubic_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/star_chromatic_index_of_cubic_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/star_chromatic_index_of_cubic_graphs |
-| [`strong_edge_colouring_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/strong_edge_colouring_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/strong_edge_colouring_conjecture |
-| [`subdivision_of_a_transitive_tournament_in_digraphs_with_large_outdegree`](https://graph-theory-ai.github.io/graph-conjectures/op/subdivision_of_a_transitive_tournament_in_digraphs_with_large_outdegree/) | 2 | 2.0 | http://www.openproblemgarden.org/op/subdivision_of_a_transitive_tournament_in_digraphs_with_large_outdegree |
-| [`subgraph_of_large_average_degree_and_large_average_degree`](https://graph-theory-ai.github.io/graph-conjectures/op/subgraph_of_large_average_degree_and_large_average_degree/) | 2 | 2.0 | http://www.openproblemgarden.org/op/subgraph_of_large_average_degree_and_large_average_degree |
-| [`switching_reconstruction_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/switching_reconstruction_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/switching_reconstruction_conjecture |
-| [`switching_reconstruction_of_digraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/switching_reconstruction_of_digraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/switching_reconstruction_of_digraphs |
-| [`the_bermond_thomassen_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/the_bermond_thomassen_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/the_bermond_thomassen_conjecture |
-| [`the_borodin_kostochka_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/the_borodin_kostochka_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/the_borodin_kostochka_conjecture |
-| [`the_crossing_number_of_the_hypercube`](https://graph-theory-ai.github.io/graph-conjectures/op/the_crossing_number_of_the_hypercube/) | 2 | 2.0 | http://www.openproblemgarden.org/op/the_crossing_number_of_the_hypercube |
-| [`three_4_flows_conjecture`](https://graph-theory-ai.github.io/graph-conjectures/op/three_4_flows_conjecture/) | 2 | 2.0 | http://www.openproblemgarden.org/op/three_4_flows_conjecture |
-| [`triangle_packing_vs_triangle_edge_transversal`](https://graph-theory-ai.github.io/graph-conjectures/op/triangle_packing_vs_triangle_edge_transversal/) | 2 | 2.0 | http://www.openproblemgarden.org/op/triangle_packing_vs_triangle_edge_transversal |
-| [`turans_problem_for_hypergraphs`](https://graph-theory-ai.github.io/graph-conjectures/op/turans_problem_for_hypergraphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/turans_problem_for_hypergraphs |
-| [`unit_vector_flows`](https://graph-theory-ai.github.io/graph-conjectures/op/unit_vector_flows/) | 2 | 2.0 | http://www.openproblemgarden.org/op/unit_vector_flows |
-| [`universal_steiner_triple_systems`](https://graph-theory-ai.github.io/graph-conjectures/op/universal_steiner_triple_systems/) | 2 | 2.0 | http://www.openproblemgarden.org/op/universal_steiner_triple_systems |
-| [`weak_pentagon_problem`](https://graph-theory-ai.github.io/graph-conjectures/op/weak_pentagon_problem/) | 2 | 2.0 | http://www.openproblemgarden.org/op/weak_pentagon_problem |
-| [`weighted_colouring_of_hexagonal_graphs`](https://graph-theory-ai.github.io/graph-conjectures/op/weighted_colouring_of_hexagonal_graphs/) | 2 | 2.0 | http://www.openproblemgarden.org/op/weighted_colouring_of_hexagonal_graphs |
-| [`2004.07214__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2004.07214__01/) | 2 | 2.05 | Enumerating minimal dominating sets in the (in)comparability graphs of … |
-| [`2109.09205__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2109.09205__01/) | 2 | 2.05 | Ramsey goodness of books revisited |
-| [`2111.07147__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2111.07147__00/) | 2 | 2.05 | Weak diameter coloring of graphs on surfaces |
-| [`2304.03567__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2304.03567__02/) | 2 | 2.05 | Temporalizing digraphs via linear-size balanced bi-trees |
-| [`2308.02981__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2308.02981__01/) | 2 | 2.05 | Factoring Pattern-Free Permutations into Separable ones |
-| [`2311.05066__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2311.05066__00/) | 2 | 2.05 | Induced subgraphs and tree decompositions XIII. Basic obstructions in $… |
-| [`2208.06630__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2208.06630__00/) | 2 | 2.1 | Short reachability networks |
-| [`2502.05289__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2502.05289__00/) | 2 | 2.1 | Induced Disjoint Paths Without an Induced Minor |
-| [`2504.00153__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2504.00153__00/) | 2 | 2.1 | Intersections of graphs and $χ$-boundedness |
-| [`2506.07264__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2506.07264__00/) | 2 | 2.1 | Refinement of a conjecture on positive square energy of graphs |
-| [`2506.08810__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2506.08810__01/) | 2 | 2.1 | Infinite induced-saturated graphs |
-| [`2506.08810__05`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2506.08810__05/) | 2 | 2.1 | Infinite induced-saturated graphs |
-| [`2507.10840__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2507.10840__01/) | 2 | 2.1 | Covering Complete Geometric Graphs by Monotone Paths |
-| [`2511.02892__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2511.02892__02/) | 2 | 2.1 | Open problems of the 33rd Workshop on Cycles and Colourings |
-| [`2601.15082__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2601.15082__00/) | 2 | 2.1 | Characterization of sparse monotone graph classes with bounded dominati… |
-| [`2601.15082__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2601.15082__01/) | 2 | 2.1 | Characterization of sparse monotone graph classes with bounded dominati… |
-| [`2603.02786__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2603.02786__01/) | 2 | 2.1 | Packing arithmetic progressions |
-| [`2604.09449__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2604.09449__02/) | 2 | 2.1 | Colour-balanced subgraphs |
-| [`2604.13700__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2604.13700__00/) | 2 | 2.1 | Openly disjoint cycles and directed tree-width of regular digraphs |
-| [`2001.09679__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2001.09679__01/) | 2 | 2.15 | A note on sublinear separators and expansion |
-| [`2006.00534__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2006.00534__00/) | 2 | 2.15 | Inverse problems for minimal complements and maximal supplements |
-| [`2103.08698__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2103.08698__02/) | 2 | 2.15 | Approximation metatheorems for classes with bounded expansion |
-| [`2212.05133__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2212.05133__01/) | 2 | 2.15 | New bounds on the maximum number of neighborly boxes in R^d |
-| [`1812.09215__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1812.09215__00/) | 2 | 2.2 | Lipschitz bijections between boolean functions |
-| [`1903.11685__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1903.11685__00/) | 2 | 2.2 | Mixing properties of colorings of the $\mathbb{Z}^d$ lattice |
-| [`1904.06184__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1904.06184__00/) | 2 | 2.2 | The Perfect Matching Reconfiguration Problem |
-| [`1911.03427__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1911.03427__00/) | 2 | 2.2 | Induced arithmetic removal: complexity 1 patterns over finite fields |
-| [`2001.01607__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2001.01607__02/) | 2 | 2.2 | (Theta, triangle)-free and (even hole, $K_4$)-free graphs. Part 2 : bou… |
-| [`2106.03261__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2106.03261__00/) | 2 | 2.2 | Which graphs can be counted in $C_4$-free graphs? |
-| [`2107.02882__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2107.02882__00/) | 2 | 2.2 | Twin-width and polynomial kernels |
-| [`2204.01938__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2204.01938__01/) | 2 | 2.2 | Extremal results on feedback arc sets in digraphs |
-| [`2204.12330__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2204.12330__02/) | 2 | 2.2 | Twin-width VII: groups |
-| [`2204.12683__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2204.12683__00/) | 2 | 2.2 | 11/4-colorability of subcubic triangle-free graphs |
-| [`2206.00594__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2206.00594__02/) | 2 | 2.2 | Sparse graphs with bounded induced cycle packing number have logarithmi… |
-| [`2208.06858__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2208.06858__02/) | 2 | 2.2 | The success probability in Levine's hat problem, and independent sets i… |
-| [`2308.05208__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2308.05208__01/) | 2 | 2.2 | Ordering Candidates via Vantage Points |
-| [`2312.06895__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2312.06895__01/) | 2 | 2.2 | Triangle Ramsey numbers of complete graphs |
-| [`2405.10854__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2405.10854__01/) | 2 | 2.2 | Strong log-convexity of genus sequences |
-| [`2411.13812__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2411.13812__01/) | 2 | 2.2 | When are off-diagonal hypergraph Ramsey numbers polynomial? |
-| [`2502.04726__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2502.04726__01/) | 2 | 2.2 | Lollipops, dense cycles and chords |
-| [`2504.08266__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2504.08266__00/) | 2 | 2.2 | $χ$-Boundedness and Neighbourhood Complexity of Bounded Merge-Width Gra… |
-| [`2504.08327__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2504.08327__00/) | 2 | 2.2 | On a conjecture concerning 4-coloring of graphs with one crossing |
-| [`2506.07264__04`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2506.07264__04/) | 2 | 2.2 | Refinement of a conjecture on positive square energy of graphs |
-| [`2506.08810__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2506.08810__02/) | 2 | 2.2 | Infinite induced-saturated graphs |
-| [`2510.11311__04`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2510.11311__04/) | 2 | 2.2 | Extending Thomassen's conjecture to directed graphs |
-| [`2511.02892__05`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2511.02892__05/) | 2 | 2.2 | Open problems of the 33rd Workshop on Cycles and Colourings |
-| [`2601.15245__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2601.15245__01/) | 2 | 2.2 | Coloring small locally sparse degenerate graphs and related problems |
-| [`2601.15245__04`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2601.15245__04/) | 2 | 2.2 | Coloring small locally sparse degenerate graphs and related problems |
-| [`2602.16333__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2602.16333__02/) | 2 | 2.2 | Long cycles in vertex transitive digraphs |
-| [`2602.16333__03`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2602.16333__03/) | 2 | 2.2 | Long cycles in vertex transitive digraphs |
-| [`2604.13700__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2604.13700__01/) | 2 | 2.2 | Openly disjoint cycles and directed tree-width of regular digraphs |
-| [`1903.04761__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1903.04761__01/) | 2 | 2.25 | On the Maximum Weight Independent Set Problem in graphs without induced… |
-| [`1909.08426__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1909.08426__02/) | 2 | 2.25 | When Maximum Stable Set can be solved in FPT time |
-| [`1909.12175__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1909.12175__00/) | 2 | 2.25 | Entropic matroids and their representation |
-| [`1601.01197__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1601.01197__00/) | 2 | 2.3 | Three-coloring triangle-free graphs on surfaces VII. A linear-time algo… |
-| [`1902.07018__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1902.07018__01/) | 2 | 2.3 | List Ramsey numbers |
-| [`2004.07457__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2004.07457__00/) | 2 | 2.3 | Asymmetric list sizes in bipartite graphs |
-| [`2009.05691__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2009.05691__01/) | 2 | 2.3 | Detecting a long even hole |
-| [`2105.15195__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2105.15195__00/) | 2 | 2.3 | The upper logarithmic density of monochromatic subset sums |
-| [`2106.03261__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2106.03261__01/) | 2 | 2.3 | Which graphs can be counted in $C_4$-free graphs? |
-| [`2202.01006__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2202.01006__00/) | 2 | 2.3 | Chordal directed graphs are not $χ$-bounded |
-| [`2202.13306__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2202.13306__01/) | 2 | 2.3 | Heroes in oriented complete multipartite graphs |
-| [`2206.10733__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2206.10733__00/) | 2 | 2.3 | Improved bounds for the triangle case of Aharoni's rainbow generalizati… |
-| [`2208.06858__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2208.06858__00/) | 2 | 2.3 | The success probability in Levine's hat problem, and independent sets i… |
-| [`2301.08707__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2301.08707__01/) | 2 | 2.3 | Separating the edges of a graph by a linear number of paths |
-| [`2304.04690__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2304.04690__00/) | 2 | 2.3 | Digraph Colouring and Arc-Connectivity |
-| [`2308.02981__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2308.02981__00/) | 2 | 2.3 | Factoring Pattern-Free Permutations into Separable ones |
-| [`2310.04265__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2310.04265__01/) | 2 | 2.3 | Clique number of tournaments |
-| [`2405.14795__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2405.14795__01/) | 2 | 2.3 | Rainbow Stackings of Random Edge-Colorings |
-| [`1708.08486__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1708.08486__00/) | 2 | 2.45 | Popular progression differences in vector spaces II |
-| [`1812.09752__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1812.09752__01/) | 2 | 2.45 | The hat guessing number of graphs |
-| [`2004.12166__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2004.12166__01/) | 2 | 2.45 | An algorithmic weakening of the Erdős-Hajnal conjecture |
-| [`2305.16258__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2305.16258__00/) | 2 | 2.45 | Tree independence number I. (Even hole, diamond, pyramid)-free graphs |
-| [`2502.04177__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2502.04177__00/) | 2 | 2.45 | Shallow brambles |
-| [`2502.04726__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2502.04726__02/) | 2 | 2.45 | Lollipops, dense cycles and chords |
-| [`2504.01548__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2504.01548__00/) | 2 | 2.45 | Defective coloring of blowups |
-| [`2506.07264__05`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2506.07264__05/) | 2 | 2.45 | Refinement of a conjecture on positive square energy of graphs |
-| [`2603.02786__04`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2603.02786__04/) | 2 | 2.45 | Packing arithmetic progressions |
-| [`2603.17630__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2603.17630__01/) | 2 | 2.45 | Anticoncentration of random spanning trees in graphs with large minimum… |
-| [`2604.09449__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2604.09449__01/) | 2 | 2.45 | Colour-balanced subgraphs |
-| [`2604.09449__03`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2604.09449__03/) | 2 | 2.45 | Colour-balanced subgraphs |
-| [`1602.05184__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1602.05184__00/) | 2 | 2.5 | On the difference between the Szeged and Wiener index |
-| [`1611.02400__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.02400__00/) | 2 | 2.5 | A Graph-Theoretic Approach to Multitasking |
-| [`1611.02400__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.02400__01/) | 2 | 2.5 | A Graph-Theoretic Approach to Multitasking |
-| [`1707.09402__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1707.09402__00/) | 2 | 2.5 | Independent Feedback Vertex Set for $P_5$-free Graphs |
-| [`2001.01552__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2001.01552__01/) | 2 | 2.5 | Sublinear separators in intersection graphs of convex shapes |
-| [`2206.00594__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2206.00594__00/) | 2 | 2.5 | Sparse graphs with bounded induced cycle packing number have logarithmi… |
-| [`2210.12754__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.12754__00/) | 2 | 2.5 | Largest subgraph from a hereditary property in a random graph |
-| [`2307.08361__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2307.08361__01/) | 2 | 2.5 | Induced $C_4$-free subgraphs with large average degree |
-| [`2401.00299__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2401.00299__00/) | 2 | 2.5 | Partitioning the hypercube into smaller hypercubes |
-| [`1907.00351__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1907.00351__00/) | 3 | 2.55 | A Note on Graphs of Dichromatic Number 2 |
-| [`2004.10180__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2004.10180__01/) | 3 | 2.55 | The regularity method for graphs with few 4-cycles |
-| [`2006.09877__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2006.09877__01/) | 3 | 2.55 | Twin-width II: small classes |
-| [`2008.03587__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2008.03587__00/) | 3 | 2.55 | A note on deterministic zombies |
-| [`2103.08698__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2103.08698__01/) | 3 | 2.55 | Approximation metatheorems for classes with bounded expansion |
-| [`2105.01780__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2105.01780__00/) | 3 | 2.55 | Approximation schemes for bounded distance problems on fractionally tre… |
-| [`2109.00618__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2109.00618__00/) | 3 | 2.55 | Rank of matrices with entries from a multiplicative group |
-| [`2110.09970__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2110.09970__00/) | 3 | 2.55 | Graphs with all holes the same length |
-| [`2112.02378__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2112.02378__00/) | 3 | 2.55 | Quasiplanar Graphs, String Graphs, and the Erdos-Gallai Problem |
-| [`2112.08456__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2112.08456__00/) | 3 | 2.55 | Edge Partitions of Complete Geometric Graphs (Part 2) |
-| [`2202.06810__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2202.06810__00/) | 3 | 2.55 | Structured Codes of Graphs |
-| [`2202.07293__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2202.07293__00/) | 3 | 2.55 | Asymptotic dimension of intersection graphs |
-| [`2202.13977__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2202.13977__01/) | 3 | 2.55 | Pure pairs. X. Tournaments and the strong Erdos-Hajnal property |
-| [`2204.12330__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2204.12330__01/) | 3 | 2.55 | Twin-width VII: groups |
-| [`2207.13651__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2207.13651__00/) | 3 | 2.55 | On random irregular subgraphs |
-| [`2210.03545__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.03545__02/) | 3 | 2.55 | Hypergraph Ramsey numbers of cliques versus stars |
-| [`2301.13305__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2301.13305__01/) | 3 | 2.55 | Graph-codes |
-| [`2301.13305__03`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2301.13305__03/) | 3 | 2.55 | Graph-codes |
-| [`2304.03567__03`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2304.03567__03/) | 3 | 2.55 | Temporalizing digraphs via linear-size balanced bi-trees |
-| [`2306.04710__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2306.04710__00/) | 3 | 2.55 | On heroes in digraphs with forbidden induced forests |
-| [`2306.04710__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2306.04710__02/) | 3 | 2.55 | On heroes in digraphs with forbidden induced forests |
-| [`2402.10782__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2402.10782__00/) | 3 | 2.55 | Finding forest-orderings of tournaments is NP-complete |
-| [`2403.02298__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2403.02298__01/) | 3 | 2.55 | Minimum acyclic number and maximum dichromatic number of oriented trian… |
-| [`2407.08927__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2407.08927__01/) | 3 | 2.55 | Tree Independence Number IV. Even-hole-free Graphs |
-| [`2410.23566__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2410.23566__02/) | 3 | 2.55 | Blow-ups and extensions of trees in tournaments |
-| [`2504.08266__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2504.08266__01/) | 3 | 2.55 | $χ$-Boundedness and Neighbourhood Complexity of Bounded Merge-Width Gra… |
-| [`2504.08327__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2504.08327__02/) | 3 | 2.55 | On a conjecture concerning 4-coloring of graphs with one crossing |
-| [`2506.08810__03`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2506.08810__03/) | 3 | 2.55 | Infinite induced-saturated graphs |
-| [`2509.09031__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2509.09031__00/) | 3 | 2.55 | Asymptotic structure. II. Path-width and additive quasi-isometry |
-| [`2511.02892__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2511.02892__01/) | 3 | 2.55 | Open problems of the 33rd Workshop on Cycles and Colourings |
-| [`2511.03864__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2511.03864__00/) | 3 | 2.55 | Induced matching treewidth and tree-independence number, revisited |
-| [`2601.15245__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2601.15245__00/) | 3 | 2.55 | Coloring small locally sparse degenerate graphs and related problems |
-| [`2603.28614__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2603.28614__00/) | 3 | 2.55 | A Gray code for arborescences of tournaments |
-| [`2005.12861__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2005.12861__00/) | 3 | 2.6 | Finding an induced path that is not a shortest path |
-| [`2201.08204__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2201.08204__00/) | 3 | 2.6 | A counterexample to a conjecture about triangle-free induced subgraphs … |
-| [`2601.13072__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2601.13072__00/) | 3 | 2.6 | Faster 3-colouring algorithm for graphs of diameter 3 |
-| [`1807.04969__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1807.04969__00/) | 3 | 2.65 | H\\ |
-| [`1909.08426__03`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1909.08426__03/) | 3 | 2.65 | When Maximum Stable Set can be solved in FPT time |
-| [`2111.00532__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2111.00532__02/) | 3 | 2.65 | Pure pairs. IX. Transversal trees |
 | [`2203.03612__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2203.03612__00/) | 3 | 2.65 | Induced subgraphs of induced subgraphs of large chromatic number |
 | [`2207.07775__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2207.07775__01/) | 3 | 2.65 | Ramsey multiplicity and the Turán coloring |
 | [`2210.09227__01`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.09227__01/) | 3 | 2.65 | A multidimensional Ramsey Theorem |
@@ -723,4 +500,4 @@ Queue records not yet attacked: **664** (plus 0 skipped without a model call).
 | [`2210.09227__00`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2210.09227__00/) | 4 | 3.75 | A multidimensional Ramsey Theorem |
 | [`2404.02021__02`](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2404.02021__02/) | 4 | 3.85 | On off-diagonal hypergraph Ramsey numbers |
 
-Generated 2026-09-16T21:48:28Z.
+Generated 2026-09-17T06:49:36Z.

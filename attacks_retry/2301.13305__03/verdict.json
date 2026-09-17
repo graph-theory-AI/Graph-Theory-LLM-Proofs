@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The exact maximum is determined for n \u2264 342, and a modulus-91 construction improves the supplied lower-bound exponent to 0.1383182203.",
+  "would_publish": false,
+  "caveats": "The asymptotic order remains unresolved; novelty of these partial results has not been checked.",
+  "id": "2301.13305__03",
+  "model": "gpt-6-astra",
+  "usd": 1.1748,
+  "eur": 1.216852,
+  "elapsed_s": 1137.3,
+  "status": "completed",
+  "response_id": "resp_096b6da4aa5af7df006aab5c0c2ed887d2909fd205b9f8c3ce",
+  "when": "2026-09-17T03:37:33Z"
+}

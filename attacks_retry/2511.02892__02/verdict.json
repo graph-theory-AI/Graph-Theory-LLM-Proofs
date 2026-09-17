@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove 4-colourability whenever the K4-interaction graph has treewidth at most 2, including all cactus interaction graphs without restrictions on their edge bundles.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture remains unresolved here; novelty of the structural reduction has not been checked.",
+  "id": "2511.02892__02",
+  "model": "gpt-6-astra",
+  "usd": 1.276385,
+  "eur": 1.322073,
+  "elapsed_s": 1390.2,
+  "status": "completed",
+  "response_id": "resp_0c46924f12711734006aab3248232887d2a5ac9222c55014aa",
+  "when": "2026-09-17T00:43:34Z"
+}

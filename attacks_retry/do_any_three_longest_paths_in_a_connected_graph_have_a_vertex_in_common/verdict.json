@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Counterexamples of bounded cycle rank have explicitly bounded-size witnesses, giving an exact finite search, while cycle rank at most three is excluded.",
+  "would_publish": false,
+  "caveats": "The general conjecture remains unresolved; no kernel enumeration was executed, and no novelty claim is made.",
+  "id": "do_any_three_longest_paths_in_a_connected_graph_have_a_vertex_in_common",
+  "model": "gpt-6-astra",
+  "usd": 1.06659,
+  "eur": 1.104768,
+  "elapsed_s": 1173.1,
+  "status": "completed",
+  "response_id": "resp_0dd619c14ee6c5bb006aab19d98fe487d291dc76463b8df04c",
+  "when": "2026-09-16T22:55:42Z"
+}

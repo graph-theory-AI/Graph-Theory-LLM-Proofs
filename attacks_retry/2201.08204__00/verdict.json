@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Recognizing the required triangle-free-induced-subgraph condition is \u03a0\u2082^P-complete even for 4-chromatic K\u2084-free graphs whose triangles are vertex-disjoint.",
+  "would_publish": false,
+  "caveats": "This does not settle unbounded chromatic number; novelty of the complexity classification has not been checked.",
+  "id": "2201.08204__00",
+  "model": "gpt-6-astra",
+  "usd": 0.921835,
+  "eur": 0.954832,
+  "elapsed_s": 940.2,
+  "status": "completed",
+  "response_id": "resp_009f277e6f4be895006aab7aaae55087d2a39cfb5c372e2e9d",
+  "when": "2026-09-17T05:44:54Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "proved",
+  "confidence": "high",
+  "one_line": "A tensor-rank bound retaining the lonely vertices, combined with rank-nonincreasing coordinate compression, proves the conjecture for all complete multipartite factors.",
+  "would_publish": true,
+  "caveats": "Literature priority is unchecked; the proof below is self-contained.",
+  "id": "1904.02595__00",
+  "model": "gpt-6-astra",
+  "usd": 0.92419,
+  "eur": 0.957271,
+  "elapsed_s": 690.8,
+  "status": "completed",
+  "response_id": "resp_073b9c8914fa4a66006aab10a5182c87d2904fa9e55a4e60d6",
+  "when": "2026-09-16T22:08:23Z"
+}

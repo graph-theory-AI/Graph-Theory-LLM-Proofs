@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A refined construction gives speed below 2^(n^(1+epsilon)) and label complexity Theta(n^((1+epsilon)/2)), ruling out epsilon>1/3 but leaving the intended small-epsilon assertion unresolved.",
+  "would_publish": false,
+  "caveats": "Speed bounds are interpreted asymptotically; the general case for sufficiently small epsilon is not resolved, and no originality claim is made.",
+  "id": "2201.00328__01",
+  "model": "gpt-6-astra",
+  "usd": 1.04434,
+  "eur": 1.081722,
+  "elapsed_s": 1699.6,
+  "status": "completed",
+  "response_id": "resp_083632c421481f83006aab09f65c0c87d2b00582b8bfe1d01a",
+  "when": "2026-09-16T21:56:41Z"
+}

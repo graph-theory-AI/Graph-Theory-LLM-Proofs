@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I prove a sharp k=3 special case for line digraphs of Eulerian digraphs, via a stronger constructive strong-decomposition theorem.",
+  "would_publish": false,
+  "caveats": "The unrestricted conjecture remains unresolved here; novelty of the special-case construction has not been checked.",
+  "id": "arc_disjoint_out_branching_and_in_branching",
+  "model": "gpt-6-astra",
+  "usd": 0.976805,
+  "eur": 1.01177,
+  "elapsed_s": 917.0,
+  "status": "completed",
+  "response_id": "resp_0f2ffc3678a0aa81006aab13f4932887d29c22ecabdc68091b",
+  "when": "2026-09-16T22:26:17Z"
+}

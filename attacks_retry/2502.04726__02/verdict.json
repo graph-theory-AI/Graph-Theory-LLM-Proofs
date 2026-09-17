@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For spanning-path activity, exact computation is NP-hard even with a supplied optimal lollipop and only constantly many active vertices, while the number of chords gives an exact fixed-parameter algorithm.",
+  "would_publish": false,
+  "caveats": "The supplied excerpts omit the source definition of activity; the hardness result is not a result about rotation reachability, and 'simple' is not a formal running-time requirement.",
+  "id": "2502.04726__02",
+  "model": "gpt-6-astra",
+  "usd": 1.186235,
+  "eur": 1.228696,
+  "elapsed_s": 1187.4,
+  "status": "completed",
+  "response_id": "resp_02e9fc15281cd6f5006aab458474d487d29e9e6cdf7ea795e0",
+  "when": "2026-09-17T02:02:15Z"
+}

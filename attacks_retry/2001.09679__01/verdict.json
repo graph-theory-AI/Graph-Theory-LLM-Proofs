@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "A verified stretching construction proves the desired reduction for almost-monotone normalized separator profiles and yields a quantitative monotonicity inequality for b_epsilon, but does not settle arbitrary one-sided profiles.",
+  "would_publish": false,
+  "caveats": "The general oscillatory-profile case remains unresolved; novelty of the partial results has not been checked.",
+  "id": "2001.09679__01",
+  "model": "gpt-6-astra",
+  "usd": 1.177555,
+  "eur": 1.219705,
+  "elapsed_s": 1266.2,
+  "status": "completed",
+  "response_id": "resp_0a8d4befd2bdfd5c006aab34f74afc87d29ebb324a046cd177",
+  "when": "2026-09-17T00:52:57Z"
+}

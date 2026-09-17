@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "The univariate bound improves to O_Delta(m r^3), and sums of absolute affine functions admit a sharp O_N((mr)^N) bound in every fixed dimension.",
+  "would_publish": false,
+  "caveats": "General multivariate radicals remain unresolved, as does the sharp univariate r-exponent; literature novelty has not been established.",
+  "id": "2308.05208__00",
+  "model": "gpt-6-astra",
+  "usd": 1.014225,
+  "eur": 1.050529,
+  "elapsed_s": 1710.4,
+  "status": "completed",
+  "response_id": "resp_03213a78241a217e006aab0a40153087d2b250dfbf86c089b3",
+  "when": "2026-09-16T21:58:06Z"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "For off-diagonal entries in 2^Z and diagonal entries outside 2^Z, I prove n <= d + 3^(d-1)d!, while the zero-diagonal minimum rank is sqrt(2n)+O(1).",
+  "would_publish": false,
+  "caveats": "The sharp bound for arbitrary excluded diagonals and the uniform rank-r problem remain open; literature novelty has not been independently checked.",
+  "id": "2109.00618__00",
+  "model": "gpt-6-astra",
+  "usd": 1.18057,
+  "eur": 1.222828,
+  "elapsed_s": 893.4,
+  "status": "completed",
+  "response_id": "resp_090447aa0aa51235006aab522bcf8087d2b5e9bca3a3612063",
+  "when": "2026-09-17T02:51:20Z"
+}

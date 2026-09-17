@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "I obtain a self-contained deterministic exact 2^{O_k(n^{2/3}(log n)^{2/3})}-time algorithm, improving the supplied subexponential bound but not proving polynomial-time tractability.",
+  "would_publish": false,
+  "caveats": "The polynomial-time conjecture is not resolved here, and the novelty of these refinements has not been checked.",
+  "id": "2206.00594__02",
+  "model": "gpt-6-astra",
+  "usd": 1.15845,
+  "eur": 1.199916,
+  "elapsed_s": 1315.4,
+  "status": "completed",
+  "response_id": "resp_062a7355d0064585006aab38f11f6c87d29ddaf8eae5f14944",
+  "when": "2026-09-17T01:10:44Z"
+}

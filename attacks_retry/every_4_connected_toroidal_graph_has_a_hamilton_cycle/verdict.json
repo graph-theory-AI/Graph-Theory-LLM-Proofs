@@ -1,0 +1,15 @@
+{
+  "verdict": "partial",
+  "confidence": "high",
+  "one_line": "Constructive proofs cover the flat extremal cases, and a residue argument excludes exactly one triangular face, but the general conjecture remains unresolved here.",
+  "would_publish": false,
+  "caveats": "No novelty claim; the general minimum-degree-four or five case with multiple triangular faces is not solved.",
+  "id": "every_4_connected_toroidal_graph_has_a_hamilton_cycle",
+  "model": "gpt-6-astra",
+  "usd": 1.12084,
+  "eur": 1.16096,
+  "elapsed_s": 1122.6,
+  "status": "completed",
+  "response_id": "resp_0e9e5e70637b364d006aab1c9d4a6487d2aec41ab2bda39b23",
+  "when": "2026-09-16T23:06:39Z"
+}
