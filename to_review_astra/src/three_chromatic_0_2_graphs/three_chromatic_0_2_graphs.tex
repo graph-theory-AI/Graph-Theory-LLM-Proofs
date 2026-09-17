@@ -1,0 +1,318 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+  10pt,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Libertinus Serif}
+  \setmonofont[Scale=0.85]{Latin Modern Mono}
+  \setmathfont[]{Latin Modern Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\providecommand{\E}{\mathbb{E}}
+\providecommand{\N}{\mathbb{N}}
+\providecommand{\Z}{\mathbb{Z}}
+\providecommand{\R}{\mathbb{R}}
+\providecommand{\eps}{\varepsilon}
+\providecommand{\ceil}[1]{\left\lceil #1\right\rceil}
+\providecommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage[most]{tcolorbox}
+\newtcolorbox{warning}{colback=red!5,colframe=red!65!black,boxrule=0.8pt,arc=2pt,left=6pt,right=6pt,top=5pt,bottom=5pt}
+\usepackage{etoolbox}
+\AtBeginEnvironment{longtable}{\small}
+\setlength{\emergencystretch}{3em}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\bfseries UNREFEREED GPT-6 ASTRA OUTPUT}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Three-chromatic (0{,}2)-graphs},
+  pdfauthor={Writeup: gpt-6-astra (single model pass)},
+  colorlinks=true,
+  linkcolor={blue!50!black},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue!50!black},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Three-chromatic (0,2)-graphs}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Unrefereed candidate proof by GPT-6 Astra}
+\author{Writeup: \texttt{gpt-6-astra} (single model pass)}
+\date{Catalog id \texttt{three\_chromatic\_0\_2\_graphs} --- generated
+2026-09-16}
+
+\begin{document}
+\maketitle
+
+\begin{warning}
+
+\textbf{UNREFEREED MODEL OUTPUT.} This document was selected solely
+because GPT-6 Astra labelled its own result
+\texttt{would\_publish:\ true} and returned \texttt{proved} or
+\texttt{disproved}. It has not passed the adversarial LLM referee used
+for the earlier Sol campaign, has not been checked by a human
+mathematician, and has not been checked for novelty. Treat every
+mathematical and bibliographic claim below as unverified.
+
+\end{warning}
+
+\section{Summary and provenance}\label{summary-and-provenance}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Catalog id & \texttt{three\_chromatic\_0\_2\_graphs} \\
+Catalog entry &
+\href{https://graph-theory-ai.github.io/graph-conjectures/op/three_chromatic_0_2_graphs/}{Three-chromatic
+(0,2)-graphs} \\
+Source corpus & opg \\
+Campaign leg & OpenProblemGarden first pass (\texttt{attacks\_opg}) \\
+Source paper / entry &
+http://www.openproblemgarden.org/op/three\_chromatic\_0\_2\_graphs \\
+Model verdict & \textbf{proved} (confidence: high) \\
+Model's one-line claim & Every finite 3-colourable (0,2)-graph is
+bipartite, so none has chromatic number exactly three. \\
+Model & \texttt{gpt-6-astra}, reasoning effort \texttt{max},
+\texttt{mode=pro}, flex service tier \\
+Original artifact &
+\texttt{attacks\_opg/three\_chromatic\_0\_2\_graphs/output.md} \\
+Independent review & \textbf{None} \\
+Model's caveats & For finite simple undirected graphs; literature
+priority has not been independently checked. \\
+\end{longtable}
+}
+
+\section{Problem statement}\label{problem-statement}
+
+Question Are there any (0,2)-graphs with chromatic number exactly three?
+
+\subsection{Catalog context}\label{catalog-context}
+
+A (0,2)-graph is a graph such that every pair of distinct vertices has
+either 0 or 2 common neighbours. It is fairly easy to see that a
+(0,2)-graph is necessarily regular and a variety of other properties can
+be shown to hold. Although (0,2)-graphs with chromatic number 2, 4 and 5
+are known it is open as to whether there can be any (0,2)-graphs with
+chromatic number exactly three.
+
+\section{Astra writeup}\label{astra-writeup}
+
+\emph{The text below is the model output verbatim, apart from moving its
+machine-readable verdict block into the summary above and shifting
+Markdown heading levels for this document. Mechanical TeX defects and
+equation tags were normalized where needed for compilation.}
+
+\subsubsection{Statement}\label{statement}
+
+\textbf{Theorem.} Let \(G\) be a finite simple graph in which every pair
+of distinct vertices has either zero or two common neighbours. If \(G\)
+admits a proper colouring with three colours, then \(G\) is bipartite.
+
+The proof uses a neighbourhood-matching property to show that every
+real-valued edge function whose sum around each quadrangle is zero is a
+vertex-potential difference. A proper three-colouring supplies precisely
+such an edge function.
+
+\subsubsection{1. The neighbourhood-matching
+property}\label{the-neighbourhood-matching-property}
+
+For an edge \(uv\), put \[
+A=N(u)\setminus\{v\},\qquad B=N(v)\setminus\{u\}.
+\]
+
+For each \(a\in A\), the vertices \(v,a\) have the common neighbour
+\(u\), and hence have a unique second common neighbour \(b\). Define
+\(\phi(a)=b\). Then \(b\in B\), \(ab\in E(G)\), and \[
+u,v,b,a,u
+\] is a quadrangle with four distinct vertices.
+
+This map is a bijection. Indeed, \(u,b\) have \(v,a\) as their two
+common neighbours. Consequently, the analogous construction from \(B\)
+to \(A\)---taking the common neighbour of \(u,b\) other than \(v\)---is
+its inverse.
+
+Thus, for every edge \(uv\), there is a bijection \[
+\phi:N(u)\setminus\{v\}\longrightarrow N(v)\setminus\{u\}
+\quad\text{with}\quad a\phi(a)\in E(G).
+\qquad\text{(1)}
+\] In particular, adjacent vertices have equal degrees, so each
+connected component is regular. The matching property itself, rather
+than regularity, is what we need.
+
+\subsubsection{2. A lemma about edge
+functions}\label{a-lemma-about-edge-functions}
+
+An \textbf{antisymmetric edge function} assigns a real number
+\(\omega(x,y)\) to every ordered adjacent pair, with \[
+\omega(y,x)=-\omega(x,y).
+\] Say it is \textbf{square-closed} if its sum around every quadrangle
+is zero.
+
+\textbf{Lemma.} Suppose a finite connected graph satisfies (1). Every
+square-closed antisymmetric edge function \(\omega\) has the form \[
+\omega(x,y)=h(y)-h(x)
+\qquad\text{(2)}
+\] for some \(h:V(G)\to\mathbb R\).
+
+\textbf{Proof.} Define \[
+\operatorname{div}\omega(x)=\sum_{y\in N(x)}\omega(x,y),
+\qquad
+\Delta h(x)=\sum_{y\in N(x)}(h(y)-h(x)).
+\] Antisymmetry gives \[
+\sum_x\operatorname{div}\omega(x)=0.
+\] The Laplacian of a finite connected graph has image equal to the
+space of zero-sum functions. For completeness, it is symmetric, and \[
+\langle h,-\Delta h\rangle
+=\sum_{\{x,y\}\in E(G)}(h(x)-h(y))^2
+\] shows that its kernel consists exactly of the constants. Hence there
+exists \(h\) satisfying \[
+\Delta h=\operatorname{div}\omega.
+\]
+
+Set \[
+\eta(x,y)=\omega(x,y)-(h(y)-h(x)).
+\] Then \(\eta\) is antisymmetric, square-closed, and divergence-free:
+\[
+\sum_{y\in N(x)}\eta(x,y)=0
+\quad\text{for every }x.
+\qquad\text{(3)}
+\]
+
+Suppose \(\eta\) is not identically zero. By finiteness and
+antisymmetry, its maximum over ordered edges is some \(M>0\). Choose an
+ordered edge \(uv\) with \[
+\eta(u,v)=M.
+\]
+
+Use the matching (1). For \(a\in A\), write \(b=\phi(a)\).
+Square-closedness on \(u,v,b,a,u\) gives \[
+\eta(u,v)+\eta(v,b)-\eta(a,b)-\eta(u,a)=0.
+\] Therefore \[
+\eta(v,b)-\eta(u,a)=\eta(a,b)-M\le 0.
+\] Summing over the matching yields \[
+\sum_{b\in B}\eta(v,b)
+\le
+\sum_{a\in A}\eta(u,a).
+\qquad\text{(4)}
+\] But (3) and antisymmetry identify the two sides as \[
+\sum_{b\in B}\eta(v,b)=-\eta(v,u)=M,
+\qquad
+\sum_{a\in A}\eta(u,a)=-\eta(u,v)=-M.
+\] Thus (4) says \(M\le -M\), contradicting \(M>0\).
+
+Consequently \(\eta=0\), proving (2). \(\square\)
+
+\subsubsection{3. Applying the lemma to a
+three-colouring}\label{applying-the-lemma-to-a-three-colouring}
+
+Work in a connected component of \(G\); a one-vertex component is
+harmless. Let \[
+c:V(G)\longrightarrow \mathbb Z/3\mathbb Z
+\] be a proper colouring. For each ordered edge \(xy\), define
+\(\omega(x,y)\) to be the unique number in \(\{-1,1\}\) satisfying \[
+\omega(x,y)\equiv c(y)-c(x)\pmod 3.
+\qquad\text{(5)}
+\] This is well-defined and antisymmetric.
+
+Consider any quadrangle. The sum of \(\omega\) around it is:
+
+\begin{itemize}
+\tightlist
+\item
+  divisible by \(3\), by telescoping (5); and
+\item
+  an even integer between \(-4\) and \(4\), being a sum of four numbers
+  from \(\{-1,1\}\).
+\end{itemize}
+
+The only possibility is zero. Thus \(\omega\) is square-closed.
+
+The lemma now provides \(h:V(G)\to\mathbb R\) such that, on every edge,
+\[
+h(y)-h(x)=\omega(x,y)\in\{-1,1\}.
+\qquad\text{(6)}
+\] Subtract a constant so that \(h(r)=0\) at one chosen vertex.
+Connectivity and (6) then imply that every \(h(x)\) is an integer.
+Moreover, adjacent vertices have opposite parities. Hence \[
+x\longmapsto h(x)\pmod 2
+\] is a proper two-colouring.
+
+Applying this independently to every component proves that \(G\) is
+bipartite. Therefore \textbf{no finite \((0,2)\)-graph has chromatic
+number exactly three}. \(\square\)
+
+\subsubsection{Scope and gaps}\label{scope-and-gaps}
+
+All finite simple graphs in the question are covered, including
+disconnected graphs by the componentwise argument. No Cayley-graph or
+cube-like hypothesis is used, and there is no remaining mathematical
+case in the proof. I have not independently checked whether this
+argument or the resulting theorem has already appeared in the
+literature.
+
+\end{document}

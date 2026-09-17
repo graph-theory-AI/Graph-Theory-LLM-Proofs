@@ -1,0 +1,463 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+  10pt,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Libertinus Serif}
+  \setmonofont[Scale=0.85]{Latin Modern Mono}
+  \setmathfont[]{Latin Modern Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\providecommand{\E}{\mathbb{E}}
+\providecommand{\N}{\mathbb{N}}
+\providecommand{\Z}{\mathbb{Z}}
+\providecommand{\R}{\mathbb{R}}
+\providecommand{\eps}{\varepsilon}
+\providecommand{\ceil}[1]{\left\lceil #1\right\rceil}
+\providecommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage[most]{tcolorbox}
+\newtcolorbox{warning}{colback=red!5,colframe=red!65!black,boxrule=0.8pt,arc=2pt,left=6pt,right=6pt,top=5pt,bottom=5pt}
+\usepackage{etoolbox}
+\AtBeginEnvironment{longtable}{\small}
+\setlength{\emergencystretch}{3em}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\bfseries UNREFEREED GPT-6 ASTRA OUTPUT}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Covering powers of cycles with equivalence subgraphs},
+  pdfauthor={Writeup: gpt-6-astra (single model pass)},
+  colorlinks=true,
+  linkcolor={blue!50!black},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue!50!black},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Covering powers of cycles with equivalence subgraphs}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Unrefereed candidate disproof by GPT-6 Astra}
+\author{Writeup: \texttt{gpt-6-astra} (single model pass)}
+\date{Catalog id
+\texttt{covering\_powers\_of\_cycles\_with\_equivalence\_subgraphs} ---
+generated 2026-09-16}
+
+\begin{document}
+\maketitle
+
+\begin{warning}
+
+\textbf{UNREFEREED MODEL OUTPUT.} This document was selected solely
+because GPT-6 Astra labelled its own result
+\texttt{would\_publish:\ true} and returned \texttt{proved} or
+\texttt{disproved}. It has not passed the adversarial LLM referee used
+for the earlier Sol campaign, has not been checked by a human
+mathematician, and has not been checked for novelty. Treat every
+mathematical and bibliographic claim below as unverified.
+
+\end{warning}
+
+\section{Summary and provenance}\label{summary-and-provenance}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Catalog id &
+\texttt{covering\_powers\_of\_cycles\_with\_equivalence\_subgraphs} \\
+Catalog entry &
+\href{https://graph-theory-ai.github.io/graph-conjectures/op/covering_powers_of_cycles_with_equivalence_subgraphs/}{Covering
+powers of cycles with equivalence subgraphs} \\
+Source corpus & opg \\
+Campaign leg & OpenProblemGarden first pass (\texttt{attacks\_opg}) \\
+Source paper / entry &
+http://www.openproblemgarden.org/op/covering\_powers\_of\_cycles\_with\_equivalence\_subgraphs \\
+Model verdict & \textbf{disproved} (confidence: high) \\
+Model's one-line claim & Noncomplete powers of cycles have equivalence
+covering number Θ(log(k+1)), contradicting the proposed Ω(k) lower
+bound. \\
+Model & \texttt{gpt-6-astra}, reasoning effort \texttt{max},
+\texttt{mode=pro}, flex service tier \\
+Original artifact &
+\texttt{attacks\_opg/covering\_powers\_of\_cycles\_with\_equivalence\_subgraphs/output.md} \\
+Independent review & \textbf{None} \\
+Model's caveats & Bibliographic novelty is unverified; an exact formula
+is obtained when k+1 divides n, but not for every n. \\
+\end{longtable}
+}
+
+\section{Problem statement}\label{problem-statement}
+
+Conjecture Given \(k\) and \(n\) , the graph \(C_{n}^k\) has equivalence
+covering number \(\Omega(k)\) .
+
+\subsection{Catalog context}\label{catalog-context}
+
+Given a graph \(G\) , a subgraph \(H\) of \(G\) is an equivalence
+subgraph of \(G\) if \(H\) a disjoint union of cliques. The quivalence
+covering number of \(G\) , denoted \(eq(G)\) , is the least number of
+equivalence subgraphs needed to cover the edges of \(G\) . This problem
+has been studied by various people since the 80s {[}A{]}. For line
+graphs, the equivalence covering number is known to within a constant
+factor {[}EGK{]}. It is therefore tempting to examine the situation for
+quasi-line graphs and claw-free graphs. Powers of cycles are perhaps the
+simplest interesting class of claw-free graphs that are not necessarily
+line graphs. However, even for \(n\) very large compared to \(k\) , no
+upper bound is known beyond trivial linear bounds of order \(\Theta(k)\)
+. Furthermore, it is not even certain that a nontrivial lower bound
+(i.e.~going to infinity as \(k\) goes to infinity) is known. It is
+possible that this can be related somehow to a known result, but for now
+it seems at least superficially that this problem is wide open.
+
+\section{Astra writeup}\label{astra-writeup}
+
+\emph{The text below is the model output verbatim, apart from moving its
+machine-readable verdict block into the summary above and shifting
+Markdown heading levels for this document. Mechanical TeX defects and
+equation tags were normalized where needed for compilation.}
+
+\subsubsection{Result}\label{result}
+
+The linear conjecture is false under the definition in the question. The
+following bounds are uniform in \(n\), so the counterexample does not
+depend on taking \(n\) small relative to \(k\).
+
+\textbf{Theorem.} Let \(k\ge 1\), put \[
+s=k+1,\qquad r=\left\lceil\log_2 s\right\rceil.
+\] For every \(n\ge 2k+2\), \[
+\boxed{\quad r+1\le \operatorname{eq}(C_n^k)\le 2r+1.\quad}
+\] Moreover, if \(s\mid n\), then \[
+\boxed{\quad \operatorname{eq}(C_n^k)=r+1.\quad}
+\]
+
+The remaining regime \(n\le 2k+1\), with \(n\ge3\), consists of complete
+graphs and has equivalence covering number \(1\).
+
+In particular, for \[
+k=2^q-1,\qquad n=m2^q,\qquad m\ge2,
+\] the exact value is \[
+\operatorname{eq}(C_n^k)=q+1.
+\] Here \(m\) can be arbitrarily large. For example, taking \(m=2^q\)
+gives \(n/k\to\infty\), while \[
+\frac{\operatorname{eq}(C_n^k)}{k}
+=\frac{q+1}{2^q-1}\longrightarrow0.
+\]
+
+All equivalence subgraphs below may be made spanning by adding isolated
+vertices. Edges of the ambient graph between different chosen cliques
+are simply omitted from that equivalence subgraph.
+
+\subsubsection{1. Binary splitting of a
+boundary}\label{binary-splitting-of-a-boundary}
+
+Write each integer \(x\in\{0,\dots,s-1\}\) using \(r\) binary digits,
+most significant first: \[
+x=x_1x_2\cdots x_r.
+\] For a position \(h\in\{1,\dots,r\}\), a binary prefix \(p\) of length
+\(h-1\), and \(\varepsilon\in\{0,1\}\), define \[
+I_h^\varepsilon(p)
+=
+\{x\in\{0,\dots,s-1\}:
+(x_1,\dots,x_{h-1})=p,\ x_h=\varepsilon\}.
+\]
+
+Two elementary properties will be used:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  If \(x\in I_h^1(p)\) and \(y\in I_h^0(p)\), then \(x>y\).
+\item
+  Whenever \(x>y\), their first differing binary digit gives an \(h,p\)
+  such that \[
+  x\in I_h^1(p),\qquad y\in I_h^0(p).
+  \]
+\end{enumerate}
+
+Thus the relation \(x>y\) is covered by these binary comparisons, using
+\(r\) levels.
+
+\subsubsection{\texorpdfstring{2. An \((r+1)\)-cover when
+\(s\mid n\)}{2. An (r+1)-cover when s\textbackslash mid n}}\label{an-r1-cover-when-smid-n}
+
+Suppose \(n=ms\), where \(m\ge2\). Partition the cycle into consecutive
+blocks \[
+B_i=\{v_{i,0},\dots,v_{i,s-1}\},
+\qquad i\in\mathbb Z/m\mathbb Z.
+\] The cyclic order runs through the local indices \(0,\dots,s-1\) in
+each block.
+
+Let \(H_0\) be the disjoint union of the cliques on the blocks \(B_i\).
+These are valid cliques because each block consists of \(s=k+1\)
+consecutive vertices.
+
+For each binary position \(h\), and for every block \(i\) and prefix
+\(p\), form \[
+Q_{i,h,p}
+=
+\{v_{i,x}:x\in I_h^1(p)\}
+\ \cup\
+\{v_{i+1,y}:y\in I_h^0(p)\}.
+\] Let \(H_h\) be the union of the complete graphs on these sets,
+omitting empty sets.
+
+\paragraph{\texorpdfstring{Each \(Q_{i,h,p}\) is a
+clique}{Each Q\_\{i,h,p\} is a clique}}\label{each-q_ihp-is-a-clique}
+
+Pairs in the same block are adjacent. For a cross-block pair, its local
+indices satisfy \(x>y\). The clockwise distance from \(v_{i,x}\) to
+\(v_{i+1,y}\) is \[
+s+y-x\le s-1=k.
+\] Hence every cross-block pair is also adjacent.
+
+\paragraph{\texorpdfstring{The cliques in \(H_h\) are
+vertex-disjoint}{The cliques in H\_h are vertex-disjoint}}\label{the-cliques-in-h_h-are-vertex-disjoint}
+
+Fix \(h\). A vertex \(v_{i,x}\) has one binary prefix \(p\) of length
+\(h-1\).
+
+\begin{itemize}
+\tightlist
+\item
+  If \(x_h=1\), it belongs to \(Q_{i,h,p}\).
+\item
+  If \(x_h=0\), it belongs to \(Q_{i-1,h,p}\).
+\end{itemize}
+
+It belongs to no other such set. Consequently, \(H_h\) is an equivalence
+subgraph.
+
+This is the key compatibility: at a given binary level, a vertex
+participates across its right boundary or its left boundary, but never
+both.
+
+\paragraph{All edges are covered}\label{all-edges-are-covered}
+
+An edge of \(C_n^{s-1}\) has a cyclic arc of length at most \(s-1\)
+joining its endpoints. Such an arc cannot cross two block boundaries.
+
+If its endpoints lie in one block, \(H_0\) covers it. Otherwise, orient
+its short arc from \(B_i\) to \(B_{i+1}\), and write the endpoints as
+\(v_{i,x},v_{i+1,y}\). Adjacency gives \[
+s+y-x\le s-1,
+\] so \(x>y\). At their first differing binary digit, the two endpoints
+belong to the same \(Q_{i,h,p}\).
+
+Therefore \[
+\operatorname{eq}(C_{ms}^{s-1})\le r+1.
+\]
+
+Some of these cliques have gaps in the cyclic order. That is allowed:
+they are cliques, though not necessarily consecutive or maximal cliques.
+
+\subsubsection{\texorpdfstring{3. A uniform upper bound for arbitrary
+\(n\)}{3. A uniform upper bound for arbitrary n}}\label{a-uniform-upper-bound-for-arbitrary-n}
+
+We first record the linear version of the preceding construction.
+
+\paragraph{Path-power cover}\label{path-power-cover}
+
+For every \(N\), the graph on \(0,\dots,N-1\) with edges \[
+uv\in E\quad\Longleftrightarrow\quad 0<|u-v|\le s-1
+\] has an equivalence cover of size at most \(r+1\).
+
+Indeed, partition the linear order into blocks of size \(s\), with the
+last block possibly shorter. Use the block-clique layer \(H_0\), and use
+the same binary construction across every consecutive pair of blocks. At
+each binary level, the cliques remain vertex-disjoint by the same
+left/right membership argument.
+
+Every edge lies within one block or crosses one boundary. Across a
+boundary, the local indices again satisfy \(x>y\), so the first
+differing binary digit covers the edge. Missing vertices in the final
+block cause no difficulty.
+
+\paragraph{Closing the cycle}\label{closing-the-cycle}
+
+Now label the vertices of \(C_n^{s-1}\) by \(0,\dots,n-1\), where
+\(n\ge2s\).
+
+The non-wrapping edges, namely those with ordinary index difference at
+most \(s-1\), are covered by the preceding path-power construction using
+\(r+1\) layers.
+
+Every remaining edge wraps across the cut between \(n-1\) and \(0\).
+Consider the disjoint sets \[
+A=\{n-s,\dots,n-1\},\qquad
+B=\{0,\dots,s-1\}.
+\] Both are cliques. Write their vertices as \[
+a_x=n-s+x,\qquad b_y=y,
+\qquad 0\le x,y<s.
+\] A wrap-around edge satisfies \[
+n-a_x+b_y=s+y-x\le s-1,
+\] equivalently \(x>y\). Conversely, every pair with \(x>y\) is an edge
+across this boundary.
+
+For each \(h,p\), take the clique \[
+\{a_x:x\in I_h^1(p)\}
+\ \cup\
+\{b_y:y\in I_h^0(p)\}.
+\] For fixed \(h\), these cliques are vertex-disjoint, and the \(r\)
+binary levels cover all wrap-around edges.
+
+Combining the two covers gives \[
+\operatorname{eq}(C_n^{s-1})
+\le (r+1)+r=2r+1.
+\]
+
+\subsubsection{4. A logarithmic lower bound by matrix
+rank}\label{a-logarithmic-lower-bound-by-matrix-rank}
+
+The following elementary rank argument proves the lower bound, including
+the exact value in the divisible case.
+
+Let \[
+t=\operatorname{eq}(C_n^{s-1}),\qquad n\ge2s.
+\] Since \(s\ge2\), this graph has edges and \(t\ge1\).
+
+For each layer \(\ell\in\{1,\dots,t\}\), assign distinct real labels to
+its clique components, and let \(c_\ell(v)\) be the label of the
+component containing \(v\). Then, for distinct vertices, \[
+uv\in E(C_n^{s-1})
+\quad\Longleftrightarrow\quad
+c_\ell(u)=c_\ell(v)\text{ for some }\ell.
+\]
+
+Define an \(n\times n\) real matrix \[
+M_{uv}
+=
+\prod_{\ell=1}^{t}\bigl(c_\ell(u)-c_\ell(v)\bigr).
+\] Thus \(M_{uv}=0\) exactly when \(u=v\) or \(uv\) is an edge.
+
+\paragraph{Rank upper bound}\label{rank-upper-bound}
+
+For \(S\subseteq[t]\), let \[
+a_S(v)=\prod_{\ell\in S}c_\ell(v),
+\] using the empty-product convention. Expanding the product gives \[
+M
+=
+\sum_{S\subseteq[t]}
+(-1)^{t-|S|}\,a_Sa_{[t]\setminus S}^{\,T}.
+\] Each summand has rank at most one, so \[
+\operatorname{rank}M\le2^t.
+\]
+
+\paragraph{\texorpdfstring{A nonsingular minor of order
+\(2s\)}{A nonsingular minor of order 2s}}\label{a-nonsingular-minor-of-order-2s}
+
+Use cyclic vertex labels modulo \(n\), and consider the ordered
+submatrix \[
+N_{ij}=M_{\,i,\,(s+j)\bmod n},
+\qquad 0\le i,j<2s.
+\] Its row indices are distinct and its column indices are distinct,
+since \(2s\le n\).
+
+If \(i>j\), then \[
+1-s\le s+j-i\le s-1.
+\] Therefore the corresponding vertices are equal or have cyclic
+distance at most \(s-1\), and \[
+N_{ij}=0.
+\]
+
+On the diagonal, the two vertices have cyclic distance exactly \(s\),
+because \(n\ge2s\). They are distinct and nonadjacent, so \[
+N_{ii}\ne0.
+\]
+
+Hence \(N\) is upper triangular with nonzero diagonal. It follows that
+\[
+2s=\operatorname{rank}N
+\le\operatorname{rank}M
+\le2^t.
+\] Consequently, \[
+t\ge\left\lceil\log_2(2s)\right\rceil
+=1+\left\lceil\log_2s\right\rceil
+=r+1.
+\]
+
+Together with the construction in Section 2, this proves \[
+\operatorname{eq}(C_{ms}^{s-1})
+=1+\left\lceil\log_2s\right\rceil
+\qquad(m\ge2).
+\]
+
+\subsubsection{Conclusion and scope}\label{conclusion-and-scope}
+
+The bounds establish \[
+\operatorname{eq}(C_n^k)=\Theta(\log(k+1))
+\] uniformly over all positive \(k\) and all \(n\ge2k+2\). Thus the
+proposed \(\Omega(k)\) lower bound fails even when \(n\) is arbitrarily
+large relative to \(k\).
+
+No unproved conjecture or external theorem is used. The exact value for
+every nondivisible \(n\) is not determined here. I have also not
+verified whether this binary construction and rank argument already
+appear in the literature; the conclusion is a self-contained disproof of
+the stated conjecture, not a claim of historical novelty.
+
+\end{document}

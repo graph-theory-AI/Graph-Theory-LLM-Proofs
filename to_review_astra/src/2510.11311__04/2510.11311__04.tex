@@ -1,0 +1,414 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+  10pt,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Libertinus Serif}
+  \setmonofont[Scale=0.85]{Latin Modern Mono}
+  \setmathfont[]{Latin Modern Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\providecommand{\E}{\mathbb{E}}
+\providecommand{\N}{\mathbb{N}}
+\providecommand{\Z}{\mathbb{Z}}
+\providecommand{\R}{\mathbb{R}}
+\providecommand{\eps}{\varepsilon}
+\providecommand{\ceil}[1]{\left\lceil #1\right\rceil}
+\providecommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage[most]{tcolorbox}
+\newtcolorbox{warning}{colback=red!5,colframe=red!65!black,boxrule=0.8pt,arc=2pt,left=6pt,right=6pt,top=5pt,bottom=5pt}
+\usepackage{etoolbox}
+\AtBeginEnvironment{longtable}{\small}
+\setlength{\emergencystretch}{3em}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\bfseries UNREFEREED GPT-6 ASTRA OUTPUT}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Question 6.4},
+  pdfauthor={Writeup: gpt-6-astra (single model pass)},
+  colorlinks=true,
+  linkcolor={blue!50!black},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue!50!black},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Question 6.4}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Unrefereed candidate disproof by GPT-6 Astra}
+\author{Writeup: \texttt{gpt-6-astra} (single model pass)}
+\date{Catalog id \texttt{2510.11311\_\_04} --- generated 2026-09-17}
+
+\begin{document}
+\maketitle
+
+\begin{warning}
+
+\textbf{UNREFEREED MODEL OUTPUT.} This document was selected solely
+because GPT-6 Astra labelled its own result
+\texttt{would\_publish:\ true} and returned \texttt{proved} or
+\texttt{disproved}. It has not passed the adversarial LLM referee used
+for the earlier Sol campaign, has not been checked by a human
+mathematician, and has not been checked for novelty. Treat every
+mathematical and bibliographic claim below as unverified.
+
+\end{warning}
+
+\section{Summary and provenance}\label{summary-and-provenance}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Catalog id & \texttt{2510.11311\_\_04} \\
+Catalog entry &
+\href{https://graph-theory-ai.github.io/graph-conjectures/arxiv/2510.11311__04/}{Question
+6.4} \\
+Source corpus & arxiv \\
+Campaign leg & selected second attempts (\texttt{attacks\_retry}) \\
+Source paper / entry & Extending Thomassen's conjecture to directed
+graphs \\
+Model verdict & \textbf{disproved} (confidence: high) \\
+Model's one-line claim & The anti-directed C4 is not Eulerian-avoidable:
+Eulerian oriented graphs can have arbitrarily large minimum out-degree
+while having no anti-directed-C4-free subdigraph of minimum out-degree
+2. \\
+Model & \texttt{gpt-6-astra}, reasoning effort \texttt{max},
+\texttt{mode=pro}, flex service tier \\
+Original artifact &
+\texttt{attacks\_retry/2510.11311\_\_04/output.md} \\
+Independent review & \textbf{None} \\
+Model's caveats & The counterexamples have very large degree spread;
+this does not classify the other orientations of C4. \\
+\end{longtable}
+}
+
+\section{Problem statement}\label{problem-statement}
+
+\emph{No extracted statement was stored in the artifact metadata.}
+
+\section{Astra writeup}\label{astra-writeup}
+
+\emph{The text below is the model output verbatim, apart from moving its
+machine-readable verdict block into the summary above and shifting
+Markdown heading levels for this document. Mechanical TeX defects and
+equation tags were normalized where needed for compilation.}
+
+\subsection{A counterexample for the anti-directed
+orientation}\label{a-counterexample-for-the-anti-directed-orientation}
+
+Let \(F=\vec K_{2,2}\), with arcs \[
+u\to x,\qquad u\to y,\qquad v\to x,\qquad v\to y.
+\] All digraphs below are finite and simple, and copies need not be
+induced.
+
+\textbf{Theorem.} For every integer \(d\ge 2\), there is a strongly
+connected Eulerian oriented graph \(D_d\) with \[
+\delta^+(D_d)=d
+\] such that no nonempty subdigraph of \(D_d\) has both minimum
+out-degree at least \(2\) and no copy of \(F\).
+
+Thus the answer to the question is \textbf{no}.
+
+The construction combines a small terminal bottleneck with a long
+sequence of regular, high-girth bipartite layers. Avoiding \(F\) bounds
+the number of surviving vertices immediately before the bottleneck. The
+high-girth layers then force these numbers to decrease strictly when
+traced backwards, eventually giving a contradiction. In particular,
+deleting vertices cannot circumvent the obstruction.
+
+\subsubsection{1. A small-target growth
+lemma}\label{a-small-target-growth-lemma}
+
+\textbf{Lemma 1.} Let \(Q\) be a bipartite graph with parts \(X,Y\) and
+girth greater than \(2M\). Suppose that nonempty sets \(P\subseteq X\)
+and \(R\subseteq Y\) satisfy \[
+|R|\le M
+\] and every vertex of \(P\) has at least two neighbors in \(R\). Then
+\[
+|P|\le |R|-1.
+\]
+
+\textbf{Proof.} Any cycle in \(Q[P,R]\) would have length at most
+\(2|R|\le 2M\), because a bipartite cycle uses equally many distinct
+vertices from each part. Consequently, \(Q[P,R]\) is a forest. Therefore
+\[
+2|P|
+\le e(Q[P,R])
+\le |P|+|R|-1,
+\] which proves the claim. \(\square\)
+
+We will use regular bipartite graphs of arbitrarily large prescribed
+girth. A fully explicit, self-contained construction is given in Section
+4.
+
+\subsubsection{2. Construction of the Eulerian
+host}\label{construction-of-the-eulerian-host}
+
+Fix \(d\ge 2\), and put \[
+M=\binom d2,\qquad L=M+1.
+\] Choose a simple \(d\)-regular bipartite graph \(Q\), with \(n\)
+vertices in each part, whose girth is greater than \(2M\).
+
+Take disjoint vertex sets \[
+B,A_1,A_2,\ldots,A_L,
+\qquad |B|=d,\qquad |A_i|=n.
+\] Define \(D_d\) by the following arcs:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  All arcs from \(B\) to \(A_1\).
+\item
+  For each \(1\le i<L\), a copy of \(Q\) between \(A_i\) and
+  \(A_{i+1}\), with every edge directed from \(A_i\) to \(A_{i+1}\).
+\item
+  All arcs from \(A_L\) to \(B\).
+\end{enumerate}
+
+There are no other arcs. Schematically, \[
+B\ \longrightarrow\ A_1\ \overset{Q}{\longrightarrow}\ A_2\
+\overset{Q}{\longrightarrow}\ \cdots\
+\overset{Q}{\longrightarrow}\ A_L\ \longrightarrow\ B.
+\]
+
+Every vertex of \(B\) has in-degree and out-degree \(n\). Every vertex
+of every \(A_i\) has in-degree and out-degree \(d\). Since \(n\ge d\),
+\[
+d^-_{D_d}(z)=d^+_{D_d}(z)\quad\text{for all }z,
+\qquad
+\delta^+(D_d)=d.
+\] Also, \(L\ge2\), so this is an oriented graph: there are no
+antiparallel pairs.
+
+The digraph is strongly connected. Every vertex in an \(A_i\) can reach
+\(B\) by following the layers forwards. Conversely, tracing predecessors
+backwards through the regular layers shows that every vertex in an
+\(A_i\) is reachable from \(A_1\), and hence from every vertex of \(B\).
+Thus the construction satisfies even the convention that an Eulerian
+digraph must be connected.
+
+\subsubsection{\texorpdfstring{3. No \(F\)-free subdigraph can have
+minimum out-degree
+\(2\)}{3. No F-free subdigraph can have minimum out-degree 2}}\label{no-f-free-subdigraph-can-have-minimum-out-degree-2}
+
+Suppose, for a contradiction, that a nonempty subdigraph
+\(H\subseteq D_d\) is \(F\)-free and satisfies \[
+\delta^+(H)\ge2.
+\] Set \[
+T=V(H)\cap B,\qquad S_i=V(H)\cap A_i.
+\]
+
+All these sets are nonempty. Indeed, every arc goes to the next class in
+the cyclic sequence \[
+B,A_1,\ldots,A_L,B.
+\] Starting at any vertex of \(H\) and repeatedly following an outgoing
+arc therefore visits every class.
+
+\paragraph{The final layer is small}\label{the-final-layer-is-small}
+
+For each \(z\in S_L\), choose two distinct out-neighbors of \(z\) in
+\(H\). Both belong to \(T\); denote their unordered pair by \(P_z\).
+
+If two distinct vertices \(z,z'\in S_L\) had \(P_z=P_{z'}\), these two
+sources and their two common heads would form a copy of
+\(\vec K_{2,2}\). Hence the pairs \(P_z\) are all distinct, and \[
+|S_L|
+\le \binom{|T|}{2}
+\le \binom d2
+=M.
+\qquad\text{(3.1)}
+\]
+
+This is the elementary pair-counting obstruction from the supplied lead,
+now applied at a designated final layer.
+
+\paragraph{Every preceding layer is strictly
+smaller}\label{every-preceding-layer-is-strictly-smaller}
+
+Suppose \(1\le i<L\) and \(|S_{i+1}|\le M\). Every vertex of \(S_i\) has
+at least two out-neighbors in \(S_{i+1}\), since these are its only
+possible out-neighbors in \(H\).
+
+The underlying graph between \(A_i\) and \(A_{i+1}\) is a copy of \(Q\).
+Lemma 1 therefore gives \[
+|S_i|\le |S_{i+1}|-1.
+\qquad\text{(3.2)}
+\]
+
+Starting from (3.1) and applying (3.2) backwards through the \(L-1=M\)
+intermediate transitions yields \[
+|S_1|
+\le |S_L|-(L-1)
+\le M-M
+=0,
+\] contradicting the nonemptiness of \(S_1\).
+
+This proves the theorem. Notice that \(H\) was not assumed to be
+spanning or Eulerian.
+
+If an Eulerian-avoidability function \(d_F\) existed, choosing \[
+d\ge\max\{2,d_F(2)\}
+\] and applying its defining property to \(D_d\) would contradict the
+theorem. Therefore \(\vec K_{2,2}\) is not Eulerian-avoidable.
+\(\square\)
+
+\subsubsection{4. An explicit construction of the high-girth
+layers}\label{an-explicit-construction-of-the-high-girth-layers}
+
+For completeness, the required regular bipartite graph can be
+constructed without invoking any external existence theorem.
+
+\textbf{Lemma 2.} For every \(d\ge2\) and \(g\ge2\), one can explicitly
+construct a finite simple \(d\)-regular bipartite graph of girth greater
+than \(g\).
+
+\textbf{Proof.} Let \(W\) consist of the empty word and all words of
+length at most \(g\) over the alphabet \([d]\) in which consecutive
+letters differ.
+
+For each \(j\in[d]\), define a permutation \(\sigma_j\) of \(W\) as
+follows:
+
+\begin{itemize}
+\tightlist
+\item
+  If a word ends in \(j\), delete its final letter.
+\item
+  Otherwise, if its length is less than \(g\), append \(j\).
+\item
+  Otherwise, fix it.
+\end{itemize}
+
+Each \(\sigma_j\) is an involution. We use right actions for permutation
+multiplication.
+
+If \[
+j_1j_2\cdots j_\ell,\qquad 1\le\ell\le g,
+\] has consecutive letters distinct, then \[
+\varnothing\,\sigma_{j_1}\sigma_{j_2}\cdots\sigma_{j_\ell}
+=j_1j_2\cdots j_\ell.
+\] In particular, \[
+\sigma_{j_1}\sigma_{j_2}\cdots\sigma_{j_\ell}\ne 1.
+\qquad\text{(4.1)}
+\]
+
+Let \(\Gamma=\operatorname{Sym}(W)\). Form a bipartite graph \(Q\) whose
+two parts are copies \(\Gamma_0,\Gamma_1\) of \(\Gamma\), with edges \[
+\pi_0\,(\pi\sigma_j)_1
+\qquad
+(\pi\in\Gamma,\ j\in[d]).
+\] The generators \(\sigma_1,\ldots,\sigma_d\) are distinct, so \(Q\) is
+simple and \(d\)-regular. Give each displayed edge color \(j\). Each
+color class is a perfect matching.
+
+Suppose \(Q\) had a simple cycle of length \(\ell\le g\). Reading its
+edge colors in order gives a sequence \(j_1,\ldots,j_\ell\) with
+consecutive colors distinct: using the same color twice consecutively
+would immediately traverse the same matching edge backwards. Since every
+\(\sigma_j\) is an involution, returning to the starting vertex gives \[
+\sigma_{j_1}\sigma_{j_2}\cdots\sigma_{j_\ell}=1,
+\] contrary to (4.1). Hence \(Q\) has girth greater than \(g\).
+\(\square\)
+
+For the counterexample, take \(g=2M=d(d-1)\). This gives a completely
+specified family. More explicitly, one may use \[
+|W|=1+d\sum_{r=0}^{d(d-1)-1}(d-1)^r,
+\qquad n=|W|!,
+\] so that \[
+|V(D_d)|=d+\left(\binom d2+1\right)n.
+\] These sizes are deliberately unoptimized.
+
+\subsubsection{5. Scope and a
+generalization}\label{scope-and-a-generalization}
+
+The same construction proves a broader statement:
+
+\textbf{Corollary.} For all \(s,t\ge2\), the one-directed complete
+bipartite digraph \(\vec K_{s,t}\), directed from its \(s\)-vertex part
+to its \(t\)-vertex part, is not Eulerian-avoidable.
+
+To see this, fix \(d\ge t\), use target minimum out-degree \(k=t\), and
+replace the parameters by \[
+M=(s-1)\binom dt,\qquad L=M+1.
+\] In a \(\vec K_{s,t}\)-free subdigraph, choosing a \(t\)-set of
+out-neighbors for each final-layer vertex assigns any particular
+\(t\)-set to at most \(s-1\) sources. Thus the final layer again has at
+most \(M\) vertices. Since \(t\ge2\), Lemma 1 again forces strict growth
+forwards through every small intermediate layer, giving the same
+contradiction.
+
+For the original question, only \(s=t=2\) is needed. The crucial
+distinction from complete cyclic blow-ups is that the intermediate
+high-girth layers cannot support a small \(2\)-out core. This removes
+the vertex-deletion escape available in the supplied attempt and gives a
+counterexample to Eulerian-avoidability itself, not merely to a spanning
+version.
+
+\end{document}

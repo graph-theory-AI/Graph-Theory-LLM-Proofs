@@ -6,22 +6,32 @@ AI-assisted attempts at the open graph-theory problems catalogued by Marc
 Lelarge and Laurent Viennot at
 [graph-theory-ai.github.io/graph-conjectures](https://graph-theory-ai.github.io/graph-conjectures).
 
-For each problem, [GPT-5.6 Sol](https://openai.com) is asked to look for a
-proof, a counterexample, or a meaningful partial result. It may also report
-that it could not make progress. These outputs are research artifacts, not
-established mathematics: a `proved` or `disproved` label is the model's own
-assessment.
+For each problem, [GPT-5.6 Sol and GPT-6 Astra](https://openai.com) are asked
+to look for a proof, a counterexample, or a meaningful partial result. They may
+also report that they could not make progress. These outputs are research
+artifacts, not established mathematics: a `proved` or `disproved` label is the
+model's own assessment.
 
-[Claude Fable](https://www.anthropic.com/claude/fable) was asked to act as an adversarial reviewer: look for errors, check cited sources, and reproduce computational
-claims where possible. This is not human peer review, but its classification
-is the status used in this repository. The reports, methodology, and
-reproducible checks are in [`verification/`](verification/).
+[Claude Fable](https://www.anthropic.com/claude/fable) was asked to act as an
+adversarial reviewer for the original GPT-5.6 Sol campaign: look for errors,
+check cited sources, and reproduce computational claims where possible. This
+is not human peer review, but its classification is the status used for that
+campaign in this repository. The newer GPT-6 Astra results have not yet been
+through this referee pass. The existing reports, methodology, and reproducible
+checks are in [`verification/`](verification/).
 
-For an overview of the campaign, see [RESULTS.md](RESULTS.md).
+For the complete generated indexes, see the
+[original Sol results](RESULTS.md), [Astra OpenProblemGarden results](RESULTS_OPG.md),
+[Astra arXiv additions](RESULTS_ARXIV_ASTRA.md), and
+[Astra retry results](RESULTS_RETRY.md).
 
 ## Results
 
-The model completed 633 attacks. Claude Fable reviewed the 77 cases in which GPT-5.6 Sol reported a proof or a counterexample; the remaining categories were not independently reviewed.
+### Original GPT-5.6 Sol campaign
+
+GPT-5.6 Sol completed 633 attacks. Claude Fable reviewed the 77 cases in which
+the model reported a proof or a counterexample; the remaining categories were
+not independently reviewed.
 
 | GPT-5.6 Sol verdict | Records | Claude Fable review |
 | --- | ---: | --- |
@@ -32,12 +42,43 @@ The model completed 633 attacks. Claude Fable reviewed the 77 cases in which GPT
 | ill_posed | 23 | not reviewed |
 | unknown | 37 | not reviewed |
 
-### PDFs for human review
+### New GPT-6 Astra campaign
+
+GPT-6 Astra completed 563 attacks at reasoning effort `max` and `mode=pro` on
+the flex service tier. These cover 466 distinct problems: all 227
+OpenProblemGarden entries in the catalog and only 239 of the 692 arXiv records
+in the ranked queue. Astra did **not** rerun the complete arXiv corpus: it
+attacked 58 records that Sol had not reached and made a second attempt at 181
+Sol outputs that remained open. The retry leg also revisited 97
+OpenProblemGarden problems.
+
+| Astra campaign leg | Progress | proved | disproved | already resolved | partial | unknown / no progress |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| OpenProblemGarden first pass | 227 / 227 | 6 | 15 | 29 | 177 | 0 |
+| Previously unattacked arXiv records | 58 / 58 | 0 | 6 | 1 | 51 | 0 |
+| Second attempts (97 OPG + 181 arXiv) | 278 / 593 | 12 | 6 | 2 | 242 | 16 |
+
+These verdicts are model self-reports and have not been independently
+reviewed. Astra marked 31 outputs `would_publish`, including four partial
+results; that flag is also the model's own assessment, not a validation or a
+claim of literature priority. Full writeups, metadata, token usage, and
+verdicts are stored under [`attacks_opg/`](attacks_opg/),
+[`attacks_arxiv_astra/`](attacks_arxiv_astra/), and
+[`attacks_retry/`](attacks_retry/).
+
+PDF renderings are available for the 27 Astra outputs marked
+`would_publish: true` with verdict `proved` or `disproved`; see
+[`to_review_astra/`](to_review_astra/). These are unrefereed candidate
+writeups, not validated notes. The four `would_publish` partial results are not
+included.
+
+### PDFs from the original Sol campaign
 
 These 16 notes survived the LLM referee pass with `CONFIRMED` or
 `MINOR_GAPS`, but have not yet been reviewed by a human mathematician.
 Independent review is welcome; full provenance and referee reports are included
-in each PDF.
+in each PDF. No Astra output has yet passed the referee stage; its separate PDF
+collection consists of unverified renderings of the original model writeups.
 
 Five of them now also have machine-checked Rocq/MathComp proofs in the
 companion repository
@@ -85,27 +126,32 @@ required to reproduce and inspect the campaign.
 <details>
 <summary><strong>Method</strong></summary>
 
-- **Queue.** Easiest-first open/partial arXiv records from Lelarge's difficulty
-  ranking, plus six questions restored after
+- **Queues.** The original Sol campaign attacked easiest-first open/partial
+  arXiv records from Lelarge's difficulty ranking, plus six questions restored
+  after
   [catalog extraction fixes](https://github.com/mlelarge/graph-conjectures/pull/3).
-  Open Problem Garden entries were not attacked.
-- **Prompt.** Catalog page + extracted statement JSON + arXiv abstract.
-- **Attack model.** [GPT-5.6 Sol](https://openai.com), one Responses API call
-  per record with effort `max`, `reasoning.mode=pro`, and
-  `max_output_tokens=128000`.
+  The Astra campaign then covered all 227 OpenProblemGarden entries, but not
+  the full arXiv queue: it attacked 58 arXiv records the first campaign had not
+  reached and made 181 selected arXiv retries. A further 97 retries came from
+  OpenProblemGarden, for 278 second attempts in total.
+- **Prompt.** Catalog page + extracted statement JSON + arXiv abstract where
+  applicable.
+- **Attack models.** [GPT-5.6 Sol and GPT-6 Astra](https://openai.com), one
+  Responses API call per attempt with effort `max`, `reasoning.mode=pro`, and
+  `max_output_tokens=128000`. Astra ran on the flex service tier.
 - **Review model.** The 77 claimed proofs/counterexamples were adversarially
   reviewed with [Claude Fable](https://www.anthropic.com/claude/fable); see
-  [`verification/`](verification/) for the review protocol and reports.
-- **Budget.** Hard euro cap in `attacks/spend.json`, with a per-call USD
-  reserve so parallel jobs cannot overspend. Pricing is the Sol promo schedule
-  through 2026-11-21 ($4 / $0.40 cached / $20 per 1M tokens; reasoning bills as
-  output). Prepaid EUR→USD is taken from the first wallet (€250 credit ≈
-  $241.36 API), not from a market FX rate.
-- **Artifact.** `attacks/<id>/{prompt.md,output.md,verdict.json,usage.json}`.
+  [`verification/`](verification/) for the review protocol and reports. The
+  Astra claims are not yet reviewed.
+- **Budget.** Each campaign has a hard euro cap and a per-call USD reserve so
+  parallel jobs cannot overspend. The Astra legs shared one €600 wallet and
+  spent €584.88 ($564.66) across 563 calls. Prepaid EUR→USD accounting is
+  taken from the API wallet rather than a market FX rate.
+- **Artifact.** Each attempt stores `prompt.md`, `output.md`, `verdict.json`,
+  `usage.json`, and `meta.json` in its campaign directory.
 
-A single call is capped at 128k output tokens (~$2.56 of output at promo
-rates). The preflight reserve is a conservative **$3.50** because `mode=pro`
-can do extra internal work.
+Each call is capped at 128k output tokens. The preflight reserve is $3.50 for
+Sol and $8.00 for Astra because `mode=pro` can do extra internal work.
 
 </details>
 
@@ -117,6 +163,11 @@ attack.py          # queue / run / sweep / summary
 catalog/           # snapshot of the Lelarge catalog (not authored here)
 attacks/<id>/      # one directory per attempted record
 RESULTS.md         # generated index of verdicts
+attacks_opg/        # Astra OpenProblemGarden first pass
+attacks_arxiv_astra/# Astra arXiv records not reached by Sol
+attacks_retry/      # Astra second attempts across both sources
+RESULTS_*.md        # generated indexes for the Astra legs
+to_review_astra/    # unrefereed Astra candidate-writeup PDFs
 verification/      # adversarial reviews of claimed proofs/counterexamples
 scripts/           # commit loop and campaign ops
 ```

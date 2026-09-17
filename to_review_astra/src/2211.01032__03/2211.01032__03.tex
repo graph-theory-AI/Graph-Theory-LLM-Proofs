@@ -1,0 +1,620 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+  10pt,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Libertinus Serif}
+  \setmonofont[Scale=0.85]{Latin Modern Mono}
+  \setmathfont[]{Latin Modern Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\providecommand{\E}{\mathbb{E}}
+\providecommand{\N}{\mathbb{N}}
+\providecommand{\Z}{\mathbb{Z}}
+\providecommand{\R}{\mathbb{R}}
+\providecommand{\eps}{\varepsilon}
+\providecommand{\ceil}[1]{\left\lceil #1\right\rceil}
+\providecommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage[most]{tcolorbox}
+\newtcolorbox{warning}{colback=red!5,colframe=red!65!black,boxrule=0.8pt,arc=2pt,left=6pt,right=6pt,top=5pt,bottom=5pt}
+\usepackage{etoolbox}
+\AtBeginEnvironment{longtable}{\small}
+\setlength{\emergencystretch}{3em}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\bfseries UNREFEREED GPT-6 ASTRA OUTPUT}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Conjecture 9.5},
+  pdfauthor={Writeup: gpt-6-astra (single model pass)},
+  colorlinks=true,
+  linkcolor={blue!50!black},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue!50!black},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Conjecture 9.5}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Unrefereed candidate proof by GPT-6 Astra}
+\author{Writeup: \texttt{gpt-6-astra} (single model pass)}
+\date{Catalog id \texttt{2211.01032\_\_03} --- generated 2026-09-16}
+
+\begin{document}
+\maketitle
+
+\begin{warning}
+
+\textbf{UNREFEREED MODEL OUTPUT.} This document was selected solely
+because GPT-6 Astra labelled its own result
+\texttt{would\_publish:\ true} and returned \texttt{proved} or
+\texttt{disproved}. It has not passed the adversarial LLM referee used
+for the earlier Sol campaign, has not been checked by a human
+mathematician, and has not been checked for novelty. Treat every
+mathematical and bibliographic claim below as unverified.
+
+\end{warning}
+
+\section{Summary and provenance}\label{summary-and-provenance}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Catalog id & \texttt{2211.01032\_\_03} \\
+Catalog entry &
+\href{https://graph-theory-ai.github.io/graph-conjectures/arxiv/2211.01032__03/}{Conjecture
+9.5} \\
+Source corpus & arxiv \\
+Campaign leg & selected second attempts (\texttt{attacks\_retry}) \\
+Source paper / entry & Random Embeddings of Graphs: The Expected Number
+of Faces in Most Graph\ldots{} \\
+Model verdict & \textbf{proved} (confidence: high) \\
+Model's one-line claim & A fixed-vertex decomposition proves E{[}F\_n{]}
+\textless= ln n + O(1), with the stronger upper bound ln n + 1/4 +
+gamma/2 + o(1). \\
+Model & \texttt{gpt-6-astra}, reasoning effort \texttt{max},
+\texttt{mode=pro}, flex service tier \\
+Original artifact &
+\texttt{attacks\_retry/2211.01032\_\_03/output.md} \\
+Independent review & \textbf{None} \\
+Model's caveats & The proof uses exactly the stated uniform-rotation,
+independent-fair-signature model; literature priority has not been
+checked. \\
+\end{longtable}
+}
+
+\section{Problem statement}\label{problem-statement}
+
+\emph{No extracted statement was stored in the artifact metadata.}
+
+\section{Astra writeup}\label{astra-writeup}
+
+\emph{The text below is the model output verbatim, apart from moving its
+machine-readable verdict block into the summary above and shifting
+Markdown heading levels for this document. Mechanical TeX defects and
+equation tags were normalized where needed for compilation.}
+
+\subsection{A fixed-vertex proof}\label{a-fixed-vertex-proof}
+
+Let \(F_n\) denote the number of faces in the random signed-rotation
+embedding of \(K_n\) specified in the question.
+
+The key is to separate faces meeting one fixed vertex from faces
+avoiding it. Each class has expected size at most \(\frac12\ln n+O(1)\).
+For the avoiding faces, an unvisited vertex supplies an escape option at
+every exploration step. This controls local congestion and removes the
+long-face obstruction in the previous attempt.
+
+The flag-matching representation from that attempt is valid and is
+justified below. Its short-face enumeration is not needed.
+
+\subsubsection{Theorem}\label{theorem}
+
+As \(n\to\infty\), \[
+\boxed{
+\mathbb E F_n
+\le
+\ln n+\frac14+\frac{\gamma}{2}
++O\!\left(\frac{(\ln n)^2}{n}\right),
+}
+\] where \(\gamma\) is Euler's constant. In particular, \[
+\mathbb E F_n\le \ln n+O(1).
+\]
+
+All logarithms below are natural unless a base is indicated.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{1. The matching model and its exposure
+rule}\label{the-matching-model-and-its-exposure-rule}
+
+Put \(d=n-1\). For each incidence of an edge \(uv\) at \(u\), introduce
+two flags \[
+(u,v,0),\qquad (u,v,1).
+\] Thus there are \(2d\) flags at each vertex and \(2n(n-1)\) flags
+altogether.
+
+Use the following matchings:
+
+\begin{itemize}
+\tightlist
+\item
+  \(J_u\) pairs the two flags of each incidence at \(u\).
+\item
+  \(A\) pairs corresponding flags at opposite ends of an edge: \[
+  (u,v,s)\longleftrightarrow(v,u,s).
+  \]
+\item
+  \(V_u\) is a matching on the flags at \(u\), describing the arcs
+  between consecutive edge attachments around its vertex-disc.
+\end{itemize}
+
+The boundary components of the resulting ribbon graph are exactly the
+connected components of \[
+A\cup V,\qquad V=\bigcup_u V_u.
+\] A face of length \(k\) contains \(k\) matching edges from \(A\),
+\(k\) from \(V\), and \(2k\) flags. Consequently, \[
+\sum_{\text{faces }f}|f|=n(n-1).
+\]
+
+\paragraph{Distribution of the local
+matchings}\label{distribution-of-the-local-matchings}
+
+Let \[
+\mathcal H_d
+=
+\{W:\ W\text{ is a perfect matching and }J_u\cup W
+       \text{ is one alternating }2d\text{-cycle}\}.
+\] In the stated random-embedding model, we may take the \(V_u\) to be
+independent and uniform on \(\mathcal H_d\), with \(A\) fixed as above.
+
+Here is a verification. Choose independent fair bits \(b_{u,e}\) at all
+incidences, and define the signature of \(e=uv\) by \[
+\varepsilon_e=b_{u,e}\oplus b_{v,e},
+\] with an immaterial fixed adjustment if the opposite sign convention
+is used. These signatures are independent and fair. Relabelling the
+flags at incidence \((u,e)\) using \(b_{u,e}\) makes the edge matching
+canonical.
+
+At a vertex, a cyclic order and the \(d\) incidence bits specify an
+element of \(\mathcal H_d\). Every element has exactly two such
+representations, corresponding to the two directions around its
+alternating cycle. Hence \[
+|\mathcal H_d|=2^{d-1}(d-1)!,
+\] and the local matchings are independent and uniform, as asserted.
+
+\paragraph{Local exposure lemma}\label{local-exposure-lemma}
+
+Suppose \(r<d\) pairs of \(V_u\) have been exposed, forming a matching
+\(Q_u\).
+
+Because \(J_u\cup V_u\) is one cycle, \(J_u\cup Q_u\) consists of
+\(d-r\) alternating paths. Its endpoints are exactly the flags whose
+\(V_u\)-mates are still unexposed.
+
+If \(r\le d-2\), then, for any such flag \(x\), its mate is uniform
+among \[
+2(d-r-1)
+\qquad\text{(1)}
+\] possible flags: all the other free flags except the opposite endpoint
+of the same \(J_u\cup Q_u\)-path. If \(r=d-1\), the last pair is forced.
+
+Indeed, contracting the alternating paths reduces the conditional
+completion problem to a uniform element of \(\mathcal H_{d-r}\). Joining
+two different paths is allowed, while closing a proper local cycle is
+forbidden. All allowed partners have the same number of completions.
+
+This rule remains valid under adaptive exposure using only previously
+revealed information.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{2. Faces meeting a fixed
+vertex}\label{faces-meeting-a-fixed-vertex}
+
+Fix a vertex \(o\). Write \[
+F_n=F_n^{\mathrm{hit}}+F_n^{\mathrm{avoid}},
+\] where the two terms count faces meeting and avoiding \(o\),
+respectively.
+
+Expose all local matchings except \(V_o\). The components of the exposed
+boundary graph are:
+
+\begin{itemize}
+\tightlist
+\item
+  cycles, which are precisely the faces avoiding \(o\);
+\item
+  paths whose endpoints are flags at \(o\).
+\end{itemize}
+
+The latter paths induce a perfect matching \(P\) on the \(2d\) flags at
+\(o\). Conditional on this exposure, \(V_o\) is still uniform on
+\(\mathcal H_d\), and the faces meeting \(o\) correspond exactly to the
+components of \(P\cup V_o\).
+
+Expose \(V_o\) pair by pair. After \(r\le d-2\) pairs have been exposed,
+select any free flag \(x\). At most one possible mate closes a component
+of \(P\) together with the exposed pairs: the opposite endpoint of the
+current \(P\)-path containing \(x\). By (1), the conditional probability
+of completing a component is at most \[
+\frac{1}{2(d-r-1)}.
+\] The final forced pair completes at most one component. Every
+component is counted when its last pair is exposed. Therefore \[
+\boxed{
+\mathbb E F_n^{\mathrm{hit}}
+\le
+1+\frac12 H_{d-1}
+=
+1+\frac12 H_{n-2}.
+}
+\qquad\text{(2)}
+\]
+
+The remainder of the proof bounds \(F_n^{\mathrm{avoid}}\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{3. Exploring one face while avoiding
+\(o\)}{3. Exploring one face while avoiding o}}\label{exploring-one-face-while-avoiding-o}
+
+We now use a different exposure order, analyzing one starting flag at a
+time and revealing no other faces.
+
+Choose a flag \(a_0\) on an edge not incident with \(o\), and put \[
+b_0=A(a_0).
+\] Start with the \(A\)-edge \(a_0b_0\), treating \(a_0\) as the active
+flag and \(b_0\) as a fixed terminal.
+
+At each step:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  reveal the \(V\)-mate \(z\) of the active flag;
+\item
+  if \(z=b_0\), the face closes;
+\item
+  otherwise, make \(A(z)\) the new active flag;
+\item
+  stop if the new active flag is at \(o\).
+\end{enumerate}
+
+Until closure, all exposed \(V\)-pairs lie on one path with endpoints
+the active flag and \(b_0\). All other components of \(A\) together with
+these exposed pairs are isolated \(A\)-edges. Thus every query is to a
+previously unexposed mate.
+
+If the trace closes after \(k\) queries, its face has length \(k\).
+
+\paragraph{The escape probability}\label{the-escape-probability}
+
+Suppose the process is alive, its active flag is at \(u\ne o\), and
+\(r_u\) pairs have been exposed at \(u\).
+
+Neither flag of incidence \((u,uo)\) has been used. Otherwise the trace
+would already have visited \(o\). Consequently those two flags form an
+isolated \(J_u\)-path, different from the path containing the active
+flag. Both are allowed choices in the local exposure lemma.
+
+In particular, there are at least two unfinished local paths, so the
+forced-last-pair case cannot occur while the trace avoids \(o\). The
+conditional probability of moving next to \(o\) is exactly \[
+p_o=\frac{2}{2(d-r_u-1)}
+=\frac{1}{n-2-r_u}.
+\qquad\text{(3)}
+\] For any other vertex \(w\), there are at most two flags at \(u\)
+whose \(A\)-partners lie at \(w\). Some might already be unavailable,
+and choosing the terminal may instead close the face. Thus the
+conditional probability \(p_w\) of making \(w\) the next active vertex
+satisfies \[
+p_w\le p_o.
+\qquad\text{(4)}
+\]
+
+Let \(T\) be the number of queries until closure or the first visit to
+\(o\). Set \[
+q=1-\frac{1}{n-2}.
+\] Equation (3) gives \[
+\boxed{\Pr(T>t)\le q^t.}
+\qquad\text{(5)}
+\]
+
+\paragraph{A geometric bound on repeated
+visits}\label{a-geometric-bound-on-repeated-visits}
+
+Fix \(w\ne o\). While the trace is alive, let \(N_w(t)\) count its
+active visits to \(w\), including the current active position and the
+initial position if applicable.
+
+Define \[
+M_t=
+\begin{cases}
+2^{N_w(t)},&t<T,\\
+0,&t\ge T.
+\end{cases}
+\] Let \(p_{\mathrm{cl}}\) denote the conditional probability of closing
+at the next query. While alive, \[
+\mathbb E[M_{t+1}\mid\mathcal F_t]
+=
+M_t(1-p_o-p_{\mathrm{cl}}+p_w)
+\le M_t
+\] by (4). Hence \(M_t\) is a nonnegative supermartingale, with
+\(M_0\le2\).
+
+Stop it on reaching \(L\) active visits to \(w\), or on termination.
+There are at most \(n(n-1)\) queries, so bounded stopping gives \[
+\boxed{
+\Pr\bigl(N_w(t)\ge L\text{ for some }t<T\bigr)
+\le 2^{1-L}.
+}
+\qquad\text{(6)}
+\]
+
+This controls local congestion throughout the entire trace, not merely
+up to a predetermined length.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{4. Bounding all faces avoiding
+\(o\)}{4. Bounding all faces avoiding o}}\label{bounding-all-faces-avoiding-o}
+
+For sufficiently large \(n\), choose \[
+R=\left\lceil4\log_2 n\right\rceil,
+\qquad
+D=n-2-R>0.
+\qquad\text{(7)}
+\] Call an avoiding face \textbf{good} if it uses at most \(R\) local
+pairs at every vertex, and \textbf{bad} otherwise.
+
+Let \(S\) be the flags on edges not incident with \(o\). Then \[
+|S|=4\binom{n-1}{2}=2(n-1)(n-2).
+\qquad\text{(8)}
+\]
+
+\paragraph{\texorpdfstring{4.1. Bad avoiding faces contribute
+\(o(1)\)}{4.1. Bad avoiding faces contribute o(1)}}\label{bad-avoiding-faces-contribute-o1}
+
+If the face of a starting flag avoids \(o\) and is bad, its trace
+reaches \(R+1\) active visits to some vertex before terminating. By (6)
+and a union bound, \[
+\Pr(\text{the starting flag lies in a bad avoiding face})
+\le (n-1)2^{-R}.
+\qquad\text{(9)}
+\]
+
+For a flag \(a\), let \(L(a)\) be its face length. Every length-\(k\)
+face has \(2k\) flags, so the number \(B\) of bad avoiding faces is
+exactly \[
+B=
+\sum_{a\in S}
+\frac{\mathbf 1_{\{a\text{ lies in a bad avoiding face}\}}}{2L(a)}.
+\] Using \(L(a)\ge1\), (8), and (9), \[
+\mathbb E B
+\le
+(n-1)^2(n-2)2^{-R}
+\le n^3\,2^{-R}
+\le \frac1n.
+\qquad\text{(10)}
+\]
+
+No independence between traces from different starting flags is used.
+
+\paragraph{4.2. Closing probabilities for good
+faces}\label{closing-probabilities-for-good-faces}
+
+Fix a starting flag, and let \(w_0\) be the vertex containing its
+terminal \(b_0\).
+
+For the trace to close at query \(k\), it must:
+
+\begin{itemize}
+\tightlist
+\item
+  remain alive after query \(k-2\);
+\item
+  at query \(k-1\), move to \(w_0\);
+\item
+  at query \(k\), choose the particular terminal flag \(b_0\).
+\end{itemize}
+
+When a revealed history has used at most \(R\) local pairs at every
+vertex, the exposure rule gives at least \(2D\) possible partners at
+every relevant query. Therefore:
+
+\begin{itemize}
+\tightlist
+\item
+  the probability of moving next to \(w_0\) is at most \(2/(2D)=1/D\);
+\item
+  once there, the probability of choosing \(b_0\) is at most \(1/(2D)\).
+\end{itemize}
+
+These are bounds conditional on the revealed history, \textbf{not} on
+eventual goodness. To estimate a good-face event, discard continuations
+whose histories cease to satisfy the load restriction. Applying the two
+bounds successively, and then (5), gives, for \(k\ge2\), \[
+\boxed{
+\Pr(\text{the starting flag lies in a good avoiding face of length }k)
+\le
+\frac{q^{k-2}}{2D^2}.
+}
+\qquad\text{(11)}
+\]
+
+This estimate applies to every possible face length.
+
+\paragraph{4.3. Summation over lengths}\label{summation-over-lengths}
+
+For \(n\ge3\), there are no faces of length one or two.
+
+Length one is impossible because \(K_n\) has no loops. A length-two face
+would have to use both sides of one edge \(uv\). At each endpoint, this
+would require \(V_u\) or \(V_v\) to pair the two flags of that same
+incidence. Such a pair would form a proper alternating cycle with
+\(J_u\) or \(J_v\), contrary to membership in \(\mathcal H_d\) when
+\(d>1\).
+
+Let \(G_k\) count good avoiding faces of length \(k\). Rooting at flags,
+(8) and (11) give \begin{equation*}
+\begin{aligned}
+\mathbb E G_k
+&=
+\frac1{2k}
+\sum_{a\in S}
+\Pr(a\text{ lies in such a face})\\
+&\le
+\frac{(n-1)(n-2)}{2D^2}\,
+\frac{q^{k-2}}{k}.
+\end{aligned}
+\end{equation*} Together with (10), \[
+\boxed{
+\mathbb E F_n^{\mathrm{avoid}}
+\le
+\frac{(n-1)(n-2)}{2(n-2-R)^2}
+\sum_{k=3}^{\infty}\frac{q^{k-2}}{k}
++\frac1n.
+}
+\qquad\text{(12)}
+\]
+
+The series is explicit: \begin{equation*}
+\begin{aligned}
+\sum_{k=3}^{\infty}\frac{q^{k-2}}{k}
+&=
+q^{-2}\left(-\ln(1-q)-q-\frac{q^2}{2}\right)\\
+&=
+q^{-2}\left(\ln(n-2)-q-\frac{q^2}{2}\right)\\
+&=
+\ln n-\frac32+O\!\left(\frac{\ln n}{n}\right).
+\end{aligned}
+\qquad\text{(13)}
+\end{equation*} Also, because \(R=O(\ln n)\), \[
+\frac{(n-1)(n-2)}{2(n-2-R)^2}
+=
+\frac12+O\!\left(\frac{\ln n}{n}\right).
+\qquad\text{(14)}
+\] Consequently, \[
+\boxed{
+\mathbb E F_n^{\mathrm{avoid}}
+\le
+\frac12\ln n-\frac34
++O\!\left(\frac{(\ln n)^2}{n}\right).
+}
+\qquad\text{(15)}
+\]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{5. Conclusion}\label{conclusion}
+
+From (2), \[
+\mathbb E F_n^{\mathrm{hit}}
+\le
+1+\frac12H_{n-2}
+=
+\frac12\ln n+1+\frac{\gamma}{2}+O(1/n).
+\] Adding (15) proves \[
+\mathbb E F_n
+\le
+\ln n+\frac14+\frac{\gamma}{2}
++O\!\left(\frac{(\ln n)^2}{n}\right).
+\]
+
+This establishes the conjecture. The argument was stated for
+sufficiently large \(n\); finitely many smaller values are absorbed into
+the \(O(1)\) in the conjecture.
+
+\paragraph{If one conditions on
+non-orientability}\label{if-one-conditions-on-non-orientability}
+
+The stipulated independent-signature model also produces orientable
+embeddings with a very small probability. If ``non-orientable random
+embedding'' is instead intended to mean conditioning on
+non-orientability, the conclusion remains unchanged.
+
+For a connected graph, precisely \(2^{n-1}\) signatures are orientable:
+these are obtained by switching vertex orientations from an
+all-orientable signature. Thus, for \(K_n\), the orientability
+probability is \[
+p_n=2^{n-1-\binom n2}
+=2^{-(n-1)(n-2)/2}.
+\] Since \(F_n\ge0\), \[
+\mathbb E[F_n\mid\text{non-orientable}]
+\le
+\frac{\mathbb E F_n}{1-p_n},
+\] which preserves the displayed asymptotic upper bound.
+
+The long-face gap is therefore closed: faces meeting the fixed vertex
+are controlled by a single local matching exposure, while avoiding faces
+admit both an exponential survival bound and a geometric
+local-congestion bound. No additional assumption about mixing or long
+facial walks is required.
+
+\end{document}
