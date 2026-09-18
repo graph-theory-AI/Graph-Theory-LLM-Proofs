@@ -3,12 +3,13 @@
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 \documentclass[
-  10pt,
+  11pt,
+  a4paper,
 ]{article}
 \usepackage{xcolor}
-\usepackage[margin=2.4cm]{geometry}
+\usepackage[margin=2.6cm]{geometry}
 \usepackage{amsmath,amssymb}
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\setcounter{secnumdepth}{5}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -73,15 +74,15 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small\bfseries UNREFEREED GPT-6 ASTRA OUTPUT}
+\fancyhead[L]{\small\itshape Candidate result melnikovs\_valency\_variety\_problem --- GPT-6 Astra, awaiting review}
 \fancyhead[R]{\small\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.2pt}
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Melnikov's valency-variety problem},
-  pdfauthor={Writeup: gpt-6-astra (single model pass)},
+  pdftitle={A candidate counterexample to Melnikov's valency-variety problem},
+  pdfauthor={github.com/graph-theory-AI --- machine-generated candidate writeup},
   colorlinks=true,
   linkcolor={blue!50!black},
   filecolor={Maroon},
@@ -89,67 +90,32 @@
   urlcolor={blue!50!black},
   pdfcreator={LaTeX via pandoc}}
 
-\title{Melnikov's valency-variety problem}
-\usepackage{etoolbox}
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
-\subtitle{Unrefereed candidate disproof by GPT-6 Astra}
-\author{Writeup: \texttt{gpt-6-astra} (single model pass)}
-\date{Catalog id \texttt{melnikovs\_valency\_variety\_problem} ---
-generated 2026-09-16}
+\title{A candidate counterexample to Melnikov's valency-variety problem}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}
+--- machine-generated candidate writeup}
+\date{16 September 2026}
 
 \begin{document}
 \maketitle
+\begin{abstract}
+A 37-vertex graph has chromatic number 3 and degree set
+\{0,1,\ldots,29\}, making the proposed right-hand side equal to 3;
+moreover, 37 vertices is minimum. This candidate disproof was generated
+by GPT-6 Astra in a single model pass for the Graph Theory AI project.
+It was selected from the campaign because the model marked it
+\texttt{would\_publish:\ true}; it has not been checked by the
+adversarial referee, a human mathematician, or a novelty search.
+\end{abstract}
 
-\begin{warning}
+\section{The problem and the claimed
+result}\label{the-problem-and-the-claimed-result}
 
-\textbf{UNREFEREED MODEL OUTPUT.} This document was selected solely
-because GPT-6 Astra labelled its own result
-\texttt{would\_publish:\ true} and returned \texttt{proved} or
-\texttt{disproved}. It has not passed the adversarial LLM referee used
-for the earlier Sol campaign, has not been checked by a human
-mathematician, and has not been checked for novelty. Treat every
-mathematical and bibliographic claim below as unverified.
-
-\end{warning}
-
-\section{Summary and provenance}\label{summary-and-provenance}
-
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Catalog id & \texttt{melnikovs\_valency\_variety\_problem} \\
-Catalog entry &
+This document concerns
 \href{https://graph-theory-ai.github.io/graph-conjectures/op/melnikovs_valency_variety_problem/}{Melnikov's
-valency-variety problem} \\
-Source corpus & opg \\
-Campaign leg & OpenProblemGarden first pass (\texttt{attacks\_opg}) \\
-Source paper / entry &
-http://www.openproblemgarden.org/op/melnikovs\_valency\_variety\_problem \\
-Model verdict & \textbf{disproved} (confidence: high) \\
-Model's one-line claim & A 37-vertex graph has chromatic number 3 and
-degree set \{0,1,\ldots,29\}, making the proposed right-hand side equal
-to 3; moreover, 37 vertices is minimum. \\
-Model & \texttt{gpt-6-astra}, reasoning effort \texttt{max},
-\texttt{mode=pro}, flex service tier \\
-Original artifact &
-\texttt{attacks\_opg/melnikovs\_valency\_variety\_problem/output.md} \\
-Independent review & \textbf{None} \\
-Model's caveats & The counterexample has one isolated vertex, which the
-statement permits; bibliographic novelty has not been independently
-checked. \\
-\end{longtable}
-}
+valency-variety problem} from
+\emph{http://www.openproblemgarden.org/op/melnikovs\_valency\_variety\_problem}.
 
-\section{Problem statement}\label{problem-statement}
+\subsection{Problem statement}\label{problem-statement}
 
 Problem The valency-variety \(w(G)\) of a graph \(G\) is the number of
 different degrees in \(G\) . Is the chromatic number of any graph \(G\)
@@ -166,12 +132,24 @@ chromatic number in terms of \(|V(G)|\) and \(w(G)\) is
 \(|V(G)| - \floor{ w(G) / 2 }\) as proved by Nettleton {[}N{]} and Dirac
 {[}D{]}.
 
-\section{Astra writeup}\label{astra-writeup}
+\subsection{Claimed result}\label{claimed-result}
 
-\emph{The text below is the model output verbatim, apart from moving its
+\textbf{Model verdict: disproved} (confidence: high).
+
+A 37-vertex graph has chromatic number 3 and degree set
+\{0,1,\ldots,29\}, making the proposed right-hand side equal to 3;
+moreover, 37 vertices is minimum.
+
+\emph{The model's own caveat:} The counterexample has one isolated
+vertex, which the statement permits; bibliographic novelty has not been
+independently checked.
+
+\section{Model writeup}\label{model-writeup}
+
+The text below is the model output verbatim, apart from moving its
 machine-readable verdict block into the summary above and shifting
 Markdown heading levels for this document. Mechanical TeX defects and
-equation tags were normalized where needed for compilation.}
+equation tags were normalized where needed for compilation.
 
 \subsection{A smallest counterexample}\label{a-smallest-counterexample}
 
@@ -578,5 +556,55 @@ construction does not by itself refute a version restricted to connected
 graphs. No computational search or unverified literature result is used
 in the argument; whether this counterexample or its minimality has
 previously appeared remains a bibliographic question.
+
+\appendix
+
+\section{Provenance and review
+status}\label{provenance-and-review-status}
+
+\begin{warning}
+
+\textbf{UNREFEREED MODEL OUTPUT.} This document was selected solely
+because GPT-6 Astra labelled its own result
+\texttt{would\_publish:\ true} and returned \texttt{proved} or
+\texttt{disproved}. It has not passed the adversarial LLM referee used
+for the earlier Sol campaign, has not been checked by a human
+mathematician, and has not been checked for novelty. Treat every
+mathematical and bibliographic claim as unverified.
+
+\end{warning}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Catalog id & \texttt{melnikovs\_valency\_variety\_problem} \\
+Catalog entry &
+\href{https://graph-theory-ai.github.io/graph-conjectures/op/melnikovs_valency_variety_problem/}{Melnikov's
+valency-variety problem} \\
+Source corpus & opg \\
+Campaign leg & OpenProblemGarden first pass (\texttt{attacks\_opg}) \\
+Source paper / entry &
+http://www.openproblemgarden.org/op/melnikovs\_valency\_variety\_problem \\
+Model verdict & \textbf{disproved} (confidence: high) \\
+Selection criterion & \texttt{would\_publish:\ true} and verdict
+\texttt{proved} or \texttt{disproved} \\
+Model & \texttt{gpt-6-astra}, reasoning effort \texttt{max},
+\texttt{mode=pro}, flex service tier \\
+Original artifact &
+\texttt{attacks\_opg/melnikovs\_valency\_variety\_problem/output.md} \\
+Independent review & \textbf{None} \\
+Model's caveats & The counterexample has one isolated vertex, which the
+statement permits; bibliographic novelty has not been independently
+checked. \\
+\end{longtable}
+}
+
+The generated Markdown and LaTeX sources for this PDF are stored under
+\texttt{to\_review\_astra/src/melnikovs\_valency\_variety\_problem/}.
 
 \end{document}
