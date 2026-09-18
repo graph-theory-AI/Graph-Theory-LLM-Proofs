@@ -1,0 +1,387 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\IR}{\operatorname{IR}}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cI}{\mathcal I}
+\newcommand{\Om}{\Omega}
+\newcommand{\rk}{\rho}
+\newcommand{\alw}{\alpha_w}
+\newcommand{\spn}{\operatorname{span}}
+\newcommand{\lab}{\lambda}
+\newcommand{\Kmp}[1]{K[#1]}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 1904.02595\_\_00 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{Upper irredundance equals independence in direct products of complete multipartite graphs:\\ a proof of Conjecture~1.2 of Alon and Defant}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $H_1,\dots,H_n$ be finite complete multipartite graphs and let $G=\prod_{i=1}^nH_i$ be their direct (tensor) product. We prove that the upper irredundance number of $G$ equals its independence number, $\IR(G)=\alpha(G)$, with no balance assumption on the factors. This is Conjecture~1.2 of Alon and Defant, who proved the balanced case conjectured by Burcroff in all but $37$ explicitly listed products; the present argument covers those $37$ products as well, and also gives $\alpha(G)=\Gamma(G)$ for the upper domination number, as conjectured by Defant and Iyer for balanced factors. The proof refines the Alon--Defant bound $|\mathrm{Soc}(S)|\le 2^n$ on the number of social vertices of an irredundant set $S$ to $|\mathrm{Soc}(S)|+2\rk\le 2^n$, where $\rk$ is the rank of a tensor representation of the lonely vertices, and matches it with a weight-deficit inequality $\alpha(G)-W(\cA)\ge 2^n-2\rk$ for independent label families $\cA$, proved by a rank-nonincreasing compression to a down-set and a count of maximal intersecting families.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+
+All graphs are finite and simple. The \emph{direct product} $G=\prod_{i=1}^nH_i$ of graphs $H_1,\dots,H_n$ has vertex set $V(H_1)\times\dots\times V(H_n)$, two vertices $(g_1,\dots,g_n)$ and $(g_1',\dots,g_n')$ being adjacent if and only if $g_ig_i'\in E(H_i)$ for \emph{every} $i$. A graph is \emph{complete multipartite} if its vertex set is partitioned into nonempty \emph{parts} such that two vertices are adjacent exactly when they lie in different parts; following \cite{AD20} we write $\Kmp{u,t}$ for the \emph{balanced} complete multipartite graph with $t$ parts of size $u$, so that $\Kmp{1,t}=K_t$.
+
+For a graph $G$ and $S\subseteq V(G)$ let $N[S]$ denote the closed neighbourhood of $S$, the union of $S$ with all neighbours of its vertices. Following \cite{AD20}, $S$ is \emph{irredundant} if $N[S\setminus\{v\}]\neq N[S]$ for every $v\in S$; the \emph{upper irredundance number} $\IR(G)$ is the maximum size of an irredundant set, the \emph{upper domination number} $\Gamma(G)$ is the maximum size of an irredundant dominating set, and $\alpha(G)$ is the independence number. Every maximal independent set is an irredundant dominating set, so
+\begin{equation}\label{eq:chain}
+\alpha(G)\le\Gamma(G)\le\IR(G)
+\end{equation}
+for every graph $G$, the upper part of the domination chain. Unwinding the definition (\cref{obs:irred}), $S$ is irredundant if and only if every $v\in S$ has a \emph{private neighbour} $p$ with $N[p]\cap S=\{v\}$; taking $p=v$ shows that every independent set is irredundant.
+
+The question of when equality $\alpha(G)=\IR(G)$ holds in direct products of complete multipartite graphs arose from the study of unitary Cayley graphs. Defant and Iyer \cite{DI18} conjectured that $\alpha(G)=\Gamma(G)$ whenever $G=\prod_{i=1}^n\Kmp{u_i,t_i}$ is a direct product of balanced complete multipartite graphs, and proved it when $\min_it_i\le2$ or $n\le3$. Burcroff \cite{Bur23} observed that these proofs never use the domination hypothesis, and conjectured the stronger statement $\alpha(G)=\IR(G)$ for all such balanced products (\cite[Conjecture~1.1]{AD20}). Alon and Defant \cite{AD20} proved Burcroff's conjecture for every balanced product except $37$ explicitly listed graphs, namely $K_3^4$, $\Kmp{2,3}\times K_3^3$, $\Kmp{3,3}\times K_3^3$, $K_4\times K_3^3$, \dots, $K_3^5$, $K_3^6$ and $K_4\times K_3^5$ (\cite[Theorem~1.2 and Section~3]{AD20}), by combining an isoperimetric inequality, a stability theorem for large independent sets, and the following bound, proved there by the polynomial method:
+
+\begin{theorem}[{\cite[Theorem~1.3]{AD20}}]\label{thm:AD13}
+Let $G=\prod_{i=1}^nH_i$, where each $H_i$ is complete multipartite. If $S\subseteq V(G)$ is irredundant, then $S$ is the disjoint union of an independent set $\mathrm{Lon}(S)$ and a set $\mathrm{Soc}(S)$ with $|\mathrm{Soc}(S)|\le2^n$. In particular $\IR(G)\le\alpha(G)+2^n$.
+\end{theorem}
+
+\noindent At the end of their introduction they propose the unbalanced strengthening which is the subject of this note. We quote it verbatim from the problem statement supplied to the model \cite{AD20}.
+
+\begin{conjecture}[{\cite[Conjecture~1.2]{AD20}}]\label{conj:AD12}
+If $H_1,\ldots,H_n$ are complete multipartite graphs and $G=\prod_{i=1}^nH_i$, then $\alpha(G)=\IR(G)$.
+\end{conjecture}
+
+The referee's literature search (\cref{app:referee}) and the catalog's earlier review found no published resolution of \cref{conj:AD12}; the source paper's journal version \cite{AD20} leaves it open. We prove it in full.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+Let $n\ge1$ and let $H_1,\dots,H_n$ be complete multipartite graphs. Then
+\[
+\IR\Bigl(\prod_{i=1}^nH_i\Bigr)=\alpha\Bigl(\prod_{i=1}^nH_i\Bigr).
+\]
+\end{restatable}
+
+\begin{corollary}\label{cor:main}
+\Cref{conj:AD12} holds. Consequently Burcroff's conjecture \cite[Conjecture~1.1]{AD20} holds for all balanced products, including the $37$ graphs left open in \cite{AD20}, and $\alpha(G)=\Gamma(G)=\IR(G)$ for every direct product $G$ of complete multipartite graphs; in particular the Defant--Iyer conjecture \cite{DI18} holds.
+\end{corollary}
+\begin{proof}
+The first two statements are \cref{thm:main} and its special case. The third follows from \cref{thm:main} and the chain \eqref{eq:chain}.
+\end{proof}
+
+\begin{proofidea}
+Fix an irredundant set $S$ and split it into its \emph{lonely} vertices $L$ (no neighbour in $S$) and its $t$ \emph{social} vertices, as in \cite{AD20}. Vertices of $G$ are labelled by the parts they occupy in each coordinate, and adjacency depends only on labels; the labels form the quotient graph $Q=\prod K_{q_i}$ with cell weights $w(x)$, and $\alpha(G)$ is the maximum weight $\alw(Q)$ of an independent family of labels (\cref{sec:quotient}). Encoding the label $x$ as the tensor $z_x=\bigotimes_i(1,x_i)\in(\R^2)^{\otimes n}$, adjacency in $Q$ becomes non-vanishing of the tensor product $\beta$ of the $2\times2$ determinant forms. The Alon--Defant argument for \cref{thm:AD13} shows that the $t$ social labels are linearly independent; the refinement here (\cref{lem:rank}) is that they stay independent modulo the span $M(\cA)$ of the lonely labels $\cA$, and that everything lies in the $\beta$-orthogonal of $M(\cA)$, giving $t+2\rk(\cA)\le2^n$ with $\rk(\cA)=\dim M(\cA)$. Complementing this, \cref{lem:defect} shows that a nonempty independent label family of rank $\rk$ misses the maximum weight by at least $2^n-2\rk$: one compresses $\cA$ coordinatewise to a down-set without decreasing weight or increasing rank (\cref{lem:compress}), identifies the rank of a down-set with the number of its $\{1,2\}$-points, hence with the size of an intersecting family $\cF\subseteq2^{[n]}$, and extends $\cF$ to a maximal intersecting family of size $2^{n-1}$, each added set contributing weight at least $2$ because every factor has at least three parts. The two inequalities fit together exactly: $|S|\le W(\cA)+t\le W(\cA)+2^n-2\rk(\cA)\le\alw(Q)=\alpha(G)$ whenever $L\ne\varnothing$. If $L=\varnothing$ then $|S|\le2^n$, which is at most $\alpha(G)$ for $n\ge3$; the cases $n=1$, $n=2$ are settled by hand, the only delicate one being $K_3\times K_3$. Products with a factor having at most two parts are edgeless or bipartite, and bipartite graphs satisfy $\IR=\alpha$ (\cref{lem:bip}).\fullproofref{pf:main}
+\end{proofidea}
+
+\section{The reduction and the weighted quotient}\label{sec:quotient}
+
+\begin{observation}\label{obs:irred}
+For a graph $G$ and $S\subseteq V(G)$, $N[S\setminus\{v\}]\ne N[S]$ holds if and only if there is a vertex $p$ with $N[p]\cap S=\{v\}$. If $v$ has a neighbour in $S$ then any such $p$ lies outside $S$ and is adjacent to $v$.
+\end{observation}
+\begin{proof}
+Since $N[S\setminus\{v\}]\subseteq N[S]$, inequality means some $p\in N[v]$ is not in $N[w]$ for any $w\in S\setminus\{v\}$; by symmetry of adjacency this says exactly $N[p]\cap S=\{v\}$. If $p\in S$ then $p\in N[p]\cap S=\{v\}$ forces $p=v$, whose closed neighbourhood meets $S$ only in $v$, so $v$ has no neighbour in $S$.
+\end{proof}
+
+Let $S$ be irredundant. Following \cite{AD20} we call $v\in S$ \emph{lonely} if it has no neighbour in $S$ and \emph{social} otherwise; write $L$ for the set of lonely vertices and $t=|S\setminus L|$. By \cref{obs:irred} every social vertex $v$ has an \emph{external private neighbour} $p_v\notin S$, adjacent to $v$ and to no other vertex of $S$. Private neighbours chosen for distinct social vertices are distinct, since a common one would have two neighbours in $S$.
+
+\begin{restatable}{lemma}{lembip}\label{lem:bip}
+Every bipartite graph $G$ satisfies $\IR(G)=\alpha(G)$.
+\end{restatable}
+\begin{proofidea}
+With bipartition $X\sqcup Y$ and $S$ irredundant, replace each social vertex of $S\cap Y$ by its external private neighbour in $X$. The result is an independent set of the same size.\fullproofref{pf:bip}
+\end{proofidea}
+
+If some factor $H_i$ has no vertices, $G$ is empty; if some $H_i$ has one part, it is edgeless and so is $G$; if some $H_i$ has two parts, $G$ is bipartite (colour a vertex by the part its $i$-th coordinate lies in). In all three cases $\IR(G)=\alpha(G)$, the last by \cref{lem:bip}. \emph{From now on every factor has $q_i\ge3$ parts.} Note that this reduction disposes of the whole product, not merely of the small factor: the lemmas below are stated for $q_i\ge3$ only.
+
+\paragraph{Labels, cells and weights.}
+Write the parts of $H_i$ as $P_{i,1},\dots,P_{i,q_i}$ with sizes $s_{i,a}=|P_{i,a}|$, \emph{ordered so that} $s_{i,1}\ge s_{i,2}\ge\dots\ge s_{i,q_i}\ge1$. Put $\Om=\prod_{i=1}^n[q_i]$. The \emph{label} of a vertex $v$ is $\lab(v)\in\Om$ with $\lab(v)_i=a$ when $v_i\in P_{i,a}$; the \emph{cell} of $x\in\Om$ is $C_x=\lab^{-1}(x)=\prod_iP_{i,x_i}$, of \emph{weight} $w(x)=|C_x|=\prod_is_{i,x_i}\ge1$. Two vertices are adjacent in $G$ if and only if their labels differ in every coordinate. Hence each cell is independent, and two distinct cells are either completely joined (labels differing everywhere) or completely non-adjacent. Call $x,y\in\Om$ \emph{adjacent} if they differ in every coordinate; this makes $\Om$ the vertex set of $Q=\prod_iK_{q_i}$. A family $\cA\subseteq\Om$ is \emph{independent} if any two distinct members agree in some coordinate; its weight is $W(\cA)=\sum_{x\in\cA}w(x)$, and
+\begin{equation}\label{eq:alphaw}
+\alpha(G)=\alw(Q):=\max\{W(\cI):\cI\subseteq\Om\text{ independent}\},
+\end{equation}
+because an independent set of $G$ may be enlarged to the union of the cells it meets, and conversely $\bigcup_{x\in\cI}C_x$ is independent of size $W(\cI)$ for every independent $\cI$.
+
+\paragraph{The tensor model.}
+For each coordinate $i$ and label $a\in[q_i]$ put $u_{i,a}=(1,a)\in\R^2$, and for $x\in\Om$ put
+\[
+z_x=\bigotimes_{i=1}^nu_{i,x_i}\in V:=(\R^2)^{\otimes n},\qquad \dim V=2^n .
+\]
+For $\cA\subseteq\Om$ let $M(\cA)=\spn\{z_x:x\in\cA\}$ and $\rk(\cA)=\dim M(\cA)$. Equip $V$ with the bilinear form $\beta$ which is the tensor product of the determinant forms,
+\[
+\beta\Bigl(\bigotimes_iv_i,\bigotimes_iv_i'\Bigr)=\prod_{i=1}^n\det(v_i,v_i'),
+\qquad\text{so that}\qquad
+\beta(z_x,z_y)=\prod_{i=1}^n(y_i-x_i).
+\]
+Thus $\beta(z_x,z_y)\ne0$ if and only if $x$ and $y$ are adjacent in $Q$, and $\beta(z_x,z_x)=0$. The form is nondegenerate, its Gram matrix in the basis $\{e_{b_1}\otimes\dots\otimes e_{b_n}\}$ being the tensor power $J^{\otimes n}$ of the invertible matrix $J=\bigl(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\bigr)$; it is symmetric for even $n$ and alternating for odd $n$, and in either case $\beta(v,v')=0$ iff $\beta(v',v)=0$ and $\dim U^\perp=2^n-\dim U$ for every subspace $U\le V$, where $U^\perp=\{v:\beta(v,u)=0\ \forall u\in U\}$.
+
+\begin{remark}[Labelling dependence]\label{rem:labelling}
+The rank $\rk(\cA)$ depends on the identification of the parts of $H_i$ with $[q_i]$, and \cref{lem:compress}\ref{it:weight} uses the decreasing-size ordering fixed above. This is harmless because all statements below refer to one fixed labelling; the referee asked that this be said explicitly (\cref{app:referee}).
+\end{remark}
+
+\section{The two inequalities}
+
+\begin{restatable}[Rank-refined social bound]{lemma}{lemrank}\label{lem:rank}
+Let $q_i\ge3$ for all $i$, let $S\subseteq V(G)$ be irredundant with lonely set $L$ and $t$ social vertices, and let $\cA=\lab(L)\subseteq\Om$. Then
+\begin{equation}\label{eq:rank}
+t+2\rk(\cA)\le2^n .
+\end{equation}
+In particular $t\le2^n$, which is \cref{thm:AD13} of Alon and Defant; and distinct social vertices lie in distinct cells.
+\end{restatable}
+\begin{proofidea}
+Let $x_1,\dots,x_t$ be the labels of the social vertices and $y_1,\dots,y_t$ those of their external private neighbours. Privacy says $\beta(z_{y_j},z_{x_k})\ne0$ iff $j=k$, and every $z_{y_j}$ is $\beta$-orthogonal to $M(\cA)$, since a private neighbour is non-adjacent to every lonely vertex. Pairing a relation $\sum_kc_kz_{x_k}\in M(\cA)$ with $z_{y_j}$ gives $c_j=0$, so $\dim(M(\cA)+\spn\{z_{x_k}\})=\rk(\cA)+t$. On the other hand this whole space lies in $M(\cA)^\perp$: lonely vertices are pairwise non-adjacent and non-adjacent to social ones. Nondegeneracy gives $\rk(\cA)+t\le2^n-\rk(\cA)$. The case $\cA=\varnothing$ is the linear-independence argument of \cite[proof of Theorem~1.3]{AD20}, there phrased with the multilinear polynomials $f_v=\prod_i(x_i-c_v(i))$, which are the linear functionals $\beta(z_{\lab(v)},\cdot)$ of the present model.\fullproofref{pf:rank}
+\end{proofidea}
+
+For a coordinate $i$ write $\Om_{-i}=\prod_{j\ne i}[q_j]$, and for $\hat x\in\Om_{-i}$ and $a\in[q_i]$ write $(\hat x,a)\in\Om$ for the label with $i$-th coordinate $a$ and remaining coordinates $\hat x$. The \emph{fibre} of $\cA\subseteq\Om$ over $\hat x$ is $A_{\hat x}=\{a\in[q_i]:(\hat x,a)\in\cA\}$. The \emph{compression} $C_i\cA$ replaces each fibre by an initial segment of the same size: $(C_i\cA)_{\hat x}=\{1,\dots,|A_{\hat x}|\}$. Clearly $|C_i\cA|=|\cA|$.
+
+\begin{restatable}[Compression]{lemma}{lemcompress}\label{lem:compress}
+For every $\cA\subseteq\Om$ and every coordinate $i$:
+\begin{enumerate}[label=(\alph*),itemsep=1pt]
+\item\label{it:indep} if $\cA$ is independent then so is $C_i\cA$;
+\item\label{it:weight} $W(C_i\cA)\ge W(\cA)$;
+\item\label{it:rank} $\rk(C_i\cA)\le\rk(\cA)$.
+\end{enumerate}
+Consequently, repeatedly compressing coordinates that change the family terminates in a \emph{down-set} $\cD$ (closed under coordinatewise decrease) with $|\cD|=|\cA|$, $W(\cD)\ge W(\cA)$, $\rk(\cD)\le\rk(\cA)$, and $\cD$ independent if $\cA$ is.
+\end{restatable}
+\begin{proofidea}
+\ref{it:indep}: two members of $C_i\cA$ whose other coordinates differ everywhere come from two fibres each of which, by independence of $\cA$, is the same singleton; both are sent to $1$. \ref{it:weight}: a fibre of size $k$ contributes $\sum_{a\in A_{\hat x}}s_{i,a}\le s_{i,1}+\dots+s_{i,k}$ in coordinate $i$, by the decreasing order of part sizes. \ref{it:rank}: write $V=\R^2\otimes V_{-i}$ and let $T$, $E$ be the spans in $V_{-i}$ of the tensors of the rest-tuples with nonempty, respectively at least two-element, fibres. Projecting along $\ell(a,b)=a$ maps $M(\cA)$ onto $T$, while differences within a fibre put $(0,1)\otimes E$ into $M(\cA)\cap\ker(\ell\otimes\mathrm{id})$, so $\rk(\cA)\ge\dim T+\dim E$ by rank--nullity; after compression $M(C_i\cA)=u_{i,1}\otimes T\oplus(0,1)\otimes E$ has dimension exactly $\dim T+\dim E$. Termination: each effective compression strictly decreases $\sum_{x\in\cA}\sum_ix_i$.\fullproofref{pf:compress}
+\end{proofidea}
+
+\begin{restatable}[Weighted rank-deficit inequality]{lemma}{lemdefect}\label{lem:defect}
+Let $q_i\ge3$ for all $i$. For every nonempty independent family $\cA\subseteq\Om$,
+\begin{equation}\label{eq:defect}
+\alw(Q)-W(\cA)\ge2^n-2\rk(\cA).
+\end{equation}
+\end{restatable}
+\begin{proofidea}
+Compress $\cA$ to a down-set $\cD$. Since $\{z_b:b\in\{1,2\}^n\}$ is a basis of $V$ and $u_{i,a}=(2-a)u_{i,1}+(a-1)u_{i,2}$, every $z_x$ with $x\in\cD$ expands over $z_b$ with $b\le x$, hence $b\in\cD$; so $\rk(\cD)=|\cD\cap\{1,2\}^n|$. Encoding $T\subseteq[n]$ by $b(T)\in\{1,2\}^n$ with $b(T)_i=1$ iff $i\in T$, the family $\cF=\{T:b(T)\in\cD\}$ has $|\cF|=\rk(\cD)$, is upward closed, contains $[n]$, and is intersecting (two disjoint members would give two members of $\cD$ differing everywhere). For an intersecting $\cH$ the family $E(\cH)=\{x\in\Om:\{i:x_i=1\}\in\cH\}$ is independent, and $\cD\subseteq E(\cF)$. Extend $\cF$ to a maximal intersecting family $\cF^*$, of size $2^{n-1}$ (it contains exactly one of each complementary pair). Each $T\in\cF^*\setminus\cF$ misses some coordinate $i$, so the labels with $\{i:x_i=1\}=T$ have total weight $m(T)=\prod_{i\in T}s_{i,1}\prod_{i\notin T}\sum_{a\ge2}s_{i,a}\ge q_i-1\ge2$. Hence $\alw(Q)-W(\cA)\ge W(E(\cF^*))-W(E(\cF))\ge2(2^{n-1}-|\cF|)=2^n-2\rk(\cD)\ge2^n-2\rk(\cA)$.\fullproofref{pf:defect}
+\end{proofidea}
+
+\begin{remark}[Tightness]\label{rem:tight}
+Both inequalities are sharp. A full coordinate fibre $\cI=\{x:x_1=1\}$ has $\rk(\cI)=2^{n-1}$ and $W(\cI)=\alw(Q)$ when $s_{1,1}$ is the largest part size overall, so \eqref{eq:defect} holds with equality, and for $S=\bigcup_{x\in\cI}C_x$ (all lonely, $t=0$) \eqref{eq:rank} reads $2\cdot2^{n-1}\le2^n$. The referee's exhaustive sweeps found slack exactly $0$ at these families and nowhere smaller (\cref{rem:computation}).
+\end{remark}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[What is new relative to \cite{AD20}]\label{rem:novelty}
+The $\rk=0$ case of \cref{lem:rank} is exactly \cref{thm:AD13}, and its proof is the Alon--Defant polynomial-method proof transposed into tensor language; it is \emph{not} new and is attributed accordingly (the original writeup proved it afresh without citation, a defect noted by the referee). The new ingredients are the term $2\rk(\cA)$ in \eqref{eq:rank}, which retains information about the lonely vertices instead of discarding them, and the deficit inequality \eqref{eq:defect} with its compression proof, whose lower bound $2^n-2\rk(\cA)$ is precisely what \eqref{eq:rank} needs. The argument uses neither the isoperimetric inequality nor the stability theorem of \cite{AD20}, and it makes no use of balance, so it applies verbatim to the $37$ balanced products listed in \cite[Section~3]{AD20}.
+\end{remark}
+
+\begin{remark}[Scope of the hypotheses]\label{rem:scope}
+\Cref{lem:rank,lem:defect} are stated for $q_i\ge3$; the inequality \eqref{eq:defect} uses $q_i\ge3$ exactly once, in the bound $m(T)\ge2$. Products with a factor having at most two parts are handled globally by \cref{lem:bip}, and one cannot simply delete such a factor and apply the lemmas to the rest. The degenerate cases $n=0$, an empty factor, and $n=1$, $2$ are all covered: in the lonely-free case $n\ge3$ uses $3^{n-1}\ge2^n$; $n=1$ uses that a complete graph has no irredundant set of size $2$; and $n=2$ reduces to the single graph $K_3\times K_3$, whose $4$-element all-social irredundant sets are excluded by a short case analysis in \cref{pf:main} (brute force gives $\IR(K_3\times K_3)=3=\alpha$). At the level of labels alone, a configuration with $t=4=2^2$ social labels and $\cA=\varnothing$ does exist in $K_3\times K_3$; it is excluded only because the required private neighbour would have to be a selected vertex. This is why $K_3\times K_3$ needs a separate argument.
+\end{remark}
+
+\begin{remark}[Relation to the earlier attempt]\label{rem:retry}
+This is a retry target (\cref{sec:provenance}). The first attempt, by \texttt{gpt-5.6-sol}, established \cref{conj:AD12} for $n\le3$, for products with a factor having at most two parts, and under the arithmetic condition $\prod_i\gcd_as_{i,a}\ge2^n$, via a ``blocker inequality'' $W(\cA)+W(B(\cA))\le2\alw$ valid in three coordinates; it recorded as an obstruction that this inequality fails for $\cA=\{(0,0,0,0),(1,0,0,0)\}$ in $K_3^4$, where $|\cA|+|B(\cA)|=59>54$. The present argument does not use blockers, and the referee checked that the obstruction is irrelevant to it: that family has $\rk(\cA)=2$, and \eqref{eq:defect} asks only $27-2\ge16-4$. What the two attempts share is the quotient reduction, the bipartite lemma (\cref{lem:bip}, essentially the same proof in both) and the tensor formulation of the bound $t\le2^n$; these are inherited and, as said above, the last is due to \cite{AD20}.
+\end{remark}
+
+\begin{remark}[The referee's computational checks]\label{rem:computation}
+The adversarial referee (\cref{app:referee}; scripts in \nolinkurl{verification_astra/scripts/1904.02595__00/}) computed $\IR$ by exhaustive search over irredundant sets, which is complete because irredundance is hereditary, and $\alpha$ by maximum-weight clique in the complement of $Q$. It found $\IR=\alpha$ in $76$ products with at most $18$ vertices (one to three factors, balanced and unbalanced) and in four larger exhaustive runs: $K_3^3$ ($27$ vertices, $207{,}244$ irredundant sets, $\alpha=\IR=9$), $\Kmp{2,1,1}\times K_3\times K_2$ ($24$ vertices, $140{,}016$ sets, $\alpha=\IR=12$), $\Kmp{2,2}\times K_3\times K_3$ ($36$ vertices, $4{,}223{,}278$ sets, $\alpha=\IR=18$) and $\Kmp{2,1,1}\times K_3\times K_3$ ($36$ vertices, $2{,}020{,}728$ sets, $\alpha=\IR=18$); here $\Kmp{2,1,1}$ denotes the complete multipartite graph with parts of sizes $2,1,1$. Inequality \eqref{eq:rank} was verified, with exact rational ranks, over all $207{,}244$ irredundant sets of $K_3^3$ and over adversarially built label configurations in $K_3^2$, $K_3^3$ and $K_3^4$, with minimum slack $0$. \Cref{lem:compress} was checked on $300$ random families and the identity $\rk(\cD)=|\cD\cap\{1,2\}^n|$ on $400$ random down-sets, with no failure. Inequality \eqref{eq:defect} was checked exhaustively over all independent families for $n\le2$ ($q_i\le5$), over all families of size $\le3$ for $n=3$ and $\le2$ for $n=4$, and over random maximal families, with unit and random weights: no violation, minimum slack $0$ attained at maximum independent families with $\rk=2^{n-1}$. For two of the $37$ open cases of \cite{AD20}, $K_3^4$ and $K_3^5$, a local search for $\max(|\cA|-2\rk(\cA))$ returned exactly $\alpha-2^n=11$ and $49$, so \eqref{eq:defect} is tight there; a seeded search for a large irredundant set in $K_3^4$ found nothing beyond $|S|=27=\alpha$.
+\end{remark}
+
+\begin{remark}[Status]\label{rem:status}
+The referee could not find an error and every load-bearing inequality survived exhaustive attack, including inside the exceptional cases of \cite{AD20}. It nevertheless stressed, and we repeat, that a three-page argument superseding the main theorem of a published paper of Alon and Defant should receive independent human verification before being relied upon. Nothing in this note has been checked by a human mathematician.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+
+(1)~The argument was found by the language model \texttt{gpt-6-astra} (reasoning effort \emph{max}, single autonomous pass, flex service tier) on 2026-09-16, as part of a sweep over open problems catalogued from arXiv (catalog id \texttt{1904.02595\_\_00}, leg \texttt{attacks\_retry}; original writeup in \nolinkurl{attacks_retry/1904.02595__00/output.md}). This was a \emph{second} attempt at the problem: the first, by \texttt{gpt-5.6-sol} (\texttt{attacks/1904.02595\_\_00}, self-reported verdict \emph{partial}), was supplied verbatim in the prompt as an unverified lead, without a referee report on it. Its content is summarised in \cref{rem:retry}. The second writeup inherits from the first the quotient reduction, the bipartite lemma and the tensor formulation of the bound $t\le2^n$, and states that it reproves everything it uses; its new steps are the rank refinement \eqref{eq:rank}, the compression lemma and the deficit inequality \eqref{eq:defect}, and the lonely-free case analysis. Nothing inherited is presented here as new.
+
+(2)~An independent adversarial referee agent (\texttt{claude-opus-5}) reviewed the writeup on 2026-09-17. It fetched \cite{AD20}, confirmed the definitions of irredundance and $\IR$, the statements of Conjectures~1.1 and 1.2 and of Theorem~1.3 and the list of $37$ exceptional graphs; verified that the writeup's private-neighbour definition is equivalent to the source's; re-derived all $21$ numbered steps and rated each \textsc{valid}; ran the computational checks summarised in \cref{rem:computation}; searched for prior or concurrent resolutions and found none; and returned the verdict \textsc{confirmed} with high confidence. Its only findings were expository (the implicit ``distinct social vertices lie in distinct cells'' and the labelling dependence of $\rk$) and one of scholarship (the $\rk=0$ case of the rank bound is Theorem~1.3 of \cite{AD20} and must be cited). Its report is reproduced verbatim in \cref{app:referee}.
+
+(3)~On 2026-09-17 the writeup was rewritten into the present note by \texttt{claude-fable-5-1}. The text was reorganised, with statements and proof ideas in the main text and full proofs in \cref{app:proofs}. Every deviation from the original writeup is listed here.
+\begin{itemize}[itemsep=1pt]
+\item \Cref{thm:AD13} is stated and cited, and \cref{lem:rank} is presented as its refinement rather than as a new result; the relation between the polynomial-method proof of \cite{AD20} and the tensor model is stated in the proof idea and in \cref{rem:novelty}. (Scholarship repair named by the referee.)
+\item The statement that distinct social vertices occupy distinct cells, implicit in the writeup's enumeration of social labels, is made explicit in \cref{lem:rank} and proved in \cref{pf:rank}. (Clarification named by the referee.)
+\item \Cref{rem:labelling} on the labelling dependence of $\rk$ and the load-bearing role of the decreasing-size ordering was added. (Clarification named by the referee.)
+\item \Cref{obs:irred}, proving the equivalence of the source's definition of irredundance with the private-neighbour form used in the writeup, was added from the referee's interpretation check.
+\item The historical context (Defant--Iyer \cite{DI18}, Burcroff \cite{Bur23}, the $37$ cases of \cite{AD20}) and \cref{cor:main}, which records the consequences for Burcroff's and the Defant--Iyer conjectures noted by the referee, were added; the writeup stated only \cref{conj:AD12}.
+\item In the proof of \cref{lem:compress}\ref{it:indep}, the case in which the two compressed labels have identical remaining coordinates is spelled out; in \ref{it:rank}, the directness of the sum $u_{i,1}\otimes T\oplus(0,1)\otimes E$ is justified; in \cref{lem:defect}, the extension of $\cF$ to a maximal intersecting family and the inequality chain in the last display are written out in full. These are the writeup's arguments with the steps the referee verified made explicit.
+\item \Cref{rem:tight,rem:scope,rem:retry,rem:computation,rem:status} were added from the referee report.
+\end{itemize}
+No other mathematical content was changed. \textbf{No human mathematician has checked this argument.} We circulate it for human review, not as a claim to a resolution.
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+Throughout, $G=\prod_{i=1}^nH_i$ with $H_i$ complete multipartite, and the notation of \cref{sec:quotient} is in force.
+
+\phantomsection\label{pf:bip}
+\lembip*
+\begin{proof}
+Let $V(G)=X\sqcup Y$ be a bipartition and let $S$ be irredundant. Let $L_Y$ be the set of lonely vertices of $S\cap Y$, and for each social $y\in S\cap Y$ choose an external private neighbour $p_y$; as $p_y$ is adjacent to $y\in Y$, $p_y\in X\setminus S$. Put
+\[
+I=(S\cap X)\cup L_Y\cup\{p_y:y\in S\cap Y\text{ social}\}.
+\]
+We claim $I$ is independent. The vertices of $S\cap X$ and the $p_y$ all lie in $X$, so no edge joins two of them. A vertex of $L_Y$ has no neighbour in $S$, in particular none in $S\cap X$, and two vertices of $L_Y\subseteq Y$ are non-adjacent. Finally $p_y$ is non-adjacent to every vertex of $S$ other than $y$, in particular to every vertex of $L_Y$ (note $y\notin L_Y$ as $y$ is social). The private neighbours $p_y$ are pairwise distinct and lie outside $S$, so
+\[
+|I|=|S\cap X|+|L_Y|+|\{y\in S\cap Y\text{ social}\}|=|S\cap X|+|S\cap Y|=|S|.
+\]
+Hence $|S|\le\alpha(G)$, and $\IR(G)\le\alpha(G)$. The reverse inequality holds since every independent set is irredundant.
+\end{proof}
+
+\phantomsection\label{pf:rank}
+\lemrank*
+\begin{proof}
+Enumerate the social vertices as $v_1,\dots,v_t$ with labels $x_k=\lab(v_k)$, and choose external private neighbours $p_1,\dots,p_t$ with labels $y_k=\lab(p_k)$. Since adjacency in $G$ is adjacency of labels in $Q$, and $\beta(z_x,z_y)\ne0$ iff $x,y$ are adjacent in $Q$:
+\begin{enumerate}[label=(\roman*),itemsep=1pt]
+\item\label{i:priv} $\beta(z_{y_j},z_{x_k})\ne0$ if $j=k$, because $p_j$ is adjacent to $v_j$; and $\beta(z_{y_j},z_{x_k})=0$ if $j\ne k$, because $p_j$ is not adjacent to $v_k\in S\setminus\{v_j\}$.
+\item\label{i:privlon} $\beta(z_{y_j},z_x)=0$ for every $x\in\cA$: a lonely vertex in $C_x$ belongs to $S\setminus\{v_j\}$, so it is not adjacent to $p_j$. Hence $\beta(z_{y_j},m)=0$ for all $m\in M(\cA)$.
+\item\label{i:iso} $\beta(z_x,z_{x'})=0$ for all $x,x'\in\cA$: for $x=x'$ every factor $x'_i-x_i$ vanishes, and for $x\ne x'$ two lonely vertices in $C_x$, $C_{x'}$ are non-adjacent, so the labels agree in some coordinate. Thus $M(\cA)\subseteq M(\cA)^\perp$.
+\item\label{i:soclon} $\beta(z_{x_k},z_x)=0$ for all $k$ and $x\in\cA$: a social vertex adjacent to a lonely vertex would make the latter non-lonely. Thus $z_{x_k}\in M(\cA)^\perp$.
+\end{enumerate}
+By \ref{i:priv}, distinct social vertices have distinct labels: if $x_j=x_k$ with $j\ne k$ then $\beta(z_{y_j},z_{x_k})=\beta(z_{y_j},z_{x_j})$ would be both zero and nonzero. (Equivalently: a private neighbour of one of two vertices in the same cell would be adjacent to the other.)
+
+The vectors $z_{x_1},\dots,z_{x_t}$ are linearly independent modulo $M(\cA)$. Indeed, suppose $\sum_{k=1}^tc_kz_{x_k}\in M(\cA)$. Applying $\beta(z_{y_j},\cdot)$ and using \ref{i:privlon} and \ref{i:priv},
+\[
+0=\beta\Bigl(z_{y_j},\sum_kc_kz_{x_k}\Bigr)=\sum_kc_k\,\beta(z_{y_j},z_{x_k})=c_j\,\beta(z_{y_j},z_{x_j}),
+\]
+so $c_j=0$ for every $j$. Therefore
+\begin{equation}\label{eq:dimsum}
+\dim\bigl(M(\cA)+\spn\{z_{x_1},\dots,z_{x_t}\}\bigr)=\rk(\cA)+t.
+\end{equation}
+By \ref{i:iso} and \ref{i:soclon} the subspace in \eqref{eq:dimsum} is contained in $M(\cA)^\perp$, and by nondegeneracy of $\beta$, $\dim M(\cA)^\perp=2^n-\rk(\cA)$. Hence $\rk(\cA)+t\le2^n-\rk(\cA)$, which is \eqref{eq:rank}. When $\cA=\varnothing$ this reads $t\le2^n$, the bound of \cref{thm:AD13}.
+\end{proof}
+
+\phantomsection\label{pf:compress}
+\lemcompress*
+\begin{proof}
+Fix the coordinate $i$ and write labels as $(\hat x,a)$ with $\hat x\in\Om_{-i}$, $a\in[q_i]$.
+
+\ref{it:indep} Let $(\hat x,a)\ne(\hat y,a')$ be two members of $C_i\cA$. If $\hat x$ and $\hat y$ agree in some coordinate $j\ne i$, the two labels agree there and we are done. Otherwise $\hat x$ and $\hat y$ differ in every coordinate $j\ne i$ (if $n=1$ this is vacuous and $\hat x=\hat y$). Both original fibres $A_{\hat x}$, $A_{\hat y}$ are nonempty. For $b\in A_{\hat x}$ and $b'\in A_{\hat y}$, the labels $(\hat x,b),(\hat y,b')\in\cA$ must agree in some coordinate, which can only be $i$, so $b=b'$. Hence $A_{\hat x}=A_{\hat y}=\{b\}$ for a single $b$ (if $\hat x=\hat y$ this says the fibre is a singleton). Compression sends both fibres to $\{1\}$, so $a=a'=1$; the two labels agree in coordinate $i$ (and if $\hat x=\hat y$ they coincide, contrary to assumption). Thus $C_i\cA$ is independent.
+
+\ref{it:weight} Grouping by rest-tuples,
+\[
+W(\cA)=\sum_{\hat x\in\Om_{-i}}\Bigl(\prod_{j\ne i}s_{j,\hat x_j}\Bigr)\sum_{a\in A_{\hat x}}s_{i,a},
+\]
+and for a fibre of size $k$, $\sum_{a\in A_{\hat x}}s_{i,a}\le s_{i,1}+\dots+s_{i,k}$, because $s_{i,1}\ge\dots\ge s_{i,q_i}$ and the right side is the sum of the $k$ largest part sizes. The right side is the contribution of the compressed fibre, so $W(C_i\cA)\ge W(\cA)$.
+
+\ref{it:rank} Identify $V=\R^2\otimes V_{-i}$ with $V_{-i}=\bigotimes_{j\ne i}\R^2$, so that $z_{(\hat x,a)}=u_{i,a}\otimes\hat z_{\hat x}$ with $\hat z_{\hat x}=\bigotimes_{j\ne i}u_{j,\hat x_j}$. Put
+\[
+T=\spn\{\hat z_{\hat x}:A_{\hat x}\ne\varnothing\},\qquad E=\spn\{\hat z_{\hat x}:|A_{\hat x}|\ge2\}\le T,
+\]
+let $M=M(\cA)$, let $\ell:\R^2\to\R$, $\ell(a,b)=a$, and $\pi=\ell\otimes\mathrm{id}:V\to V_{-i}$. Since $\ell(u_{i,a})=1$ for every $a$, $\pi(z_{(\hat x,a)})=\hat z_{\hat x}$, whence $\pi(M)=T$. If $|A_{\hat x}|\ge2$, pick $a\ne a'$ in $A_{\hat x}$; then $z_{(\hat x,a)}-z_{(\hat x,a')}=(u_{i,a}-u_{i,a'})\otimes\hat z_{\hat x}=(0,a-a')\otimes\hat z_{\hat x}\in M$, so $e_2\otimes\hat z_{\hat x}\in M$ with $e_2=(0,1)$. Hence $e_2\otimes E\subseteq M$, and $e_2\otimes E\subseteq\ker\pi$ as $\ell(e_2)=0$. Rank--nullity for $\pi|_M$ gives
+\[
+\rk(\cA)=\dim M=\dim\pi(M)+\dim(M\cap\ker\pi)\ge\dim T+\dim(e_2\otimes E)=\dim T+\dim E,
+\]
+the map $\hat z\mapsto e_2\otimes\hat z$ being injective. After compression, a rest-tuple with a fibre of size $1$ contributes $u_{i,1}\otimes\hat z_{\hat x}$, and one with a fibre of size $k\ge2$ contributes $u_{i,1}\otimes\hat z_{\hat x},\dots,u_{i,k}\otimes\hat z_{\hat x}$, whose span is $\spn\{u_{i,1},u_{i,2}\}\otimes\hat z_{\hat x}=\spn\{u_{i,1},e_2\}\otimes\hat z_{\hat x}$ since $u_{i,2}-u_{i,1}=e_2$ and $\{u_{i,1},u_{i,2}\}$ spans $\R^2$. Therefore
+\[
+M(C_i\cA)=(u_{i,1}\otimes T)+(e_2\otimes E),
+\]
+and the sum is direct: $\pi$ restricted to $u_{i,1}\otimes V_{-i}$ is the injective map $u_{i,1}\otimes\hat z\mapsto\hat z$, while $\pi$ vanishes on $e_2\otimes V_{-i}$. So $\rk(C_i\cA)=\dim T+\dim E\le\rk(\cA)$.
+
+\emph{Termination and the down-set.} Compression maps a fibre $\{a_1<\dots<a_k\}$ to $\{1,\dots,k\}$ with $a_j\ge j$; if the fibre changes then $\sum_ja_j>\sum_jj$. Hence every compression that changes the family strictly decreases the positive integer $\sum_{x\in\cA}\sum_ix_i$, and the process stops after finitely many steps at a family $\cD$ all of whose fibres, in every coordinate, are initial segments. Such a family is a down-set: if $x\in\cD$ and $y\le x$ coordinatewise, decreasing one coordinate at a time stays within the initial-segment fibres, so $y\in\cD$. Compression preserves cardinality (it is a bijection on each fibre and preserves rest-tuples), and the three properties \ref{it:indep}--\ref{it:rank} persist along the iteration.
+\end{proof}
+
+\phantomsection\label{pf:defect}
+\lemdefect*
+\begin{proof}
+By \cref{lem:compress}, compress $\cA$ to a down-set $\cD$, which is nonempty and independent with $W(\cD)\ge W(\cA)$ and $\rk(\cD)\le\rk(\cA)$. It suffices to prove $\alw(Q)-W(\cD)\ge2^n-2\rk(\cD)$.
+
+\emph{Step 1: $\rk(\cD)=|\cD\cap\{1,2\}^n|$.} Since $u_{i,1}=(1,1)$ and $u_{i,2}=(1,2)$ form a basis of $\R^2$, the tensors $z_b$, $b\in\{1,2\}^n$, form a basis of $V$. For $a\in[q_i]$, $u_{i,a}=(2-a)u_{i,1}+(a-1)u_{i,2}$; when $a=1$ only $u_{i,1}$ occurs, and when $a\ge2$ both $u_{i,1},u_{i,2}$ have $i$-th label $\le a$. Expanding the tensor product, $z_x$ is a linear combination of the $z_b$ with $b\in\{1,2\}^n$ and $b\le x$ coordinatewise. For $x\in\cD$ all such $b$ lie in $\cD$, because $\cD$ is a down-set. Hence $M(\cD)=\spn\{z_b:b\in\cD\cap\{1,2\}^n\}$, and these $z_b$ are linearly independent as a subset of a basis.
+
+\emph{Step 2: the intersecting family.} For $T\subseteq[n]$ let $b(T)\in\{1,2\}^n$ have $b(T)_i=1$ for $i\in T$ and $b(T)_i=2$ for $i\notin T$, and put $\cF=\{T\subseteq[n]:b(T)\in\cD\}$. By Step~1, $|\cF|=\rk(\cD)$. If $T\subseteq U$ then $b(U)\le b(T)$ coordinatewise, so $\cF$ is upward closed. As $\cD$ is a nonempty down-set it contains $(1,\dots,1)=b([n])$, so $[n]\in\cF$. Finally $\cF$ is intersecting: if $T,U\in\cF$ were disjoint then $T\subseteq[n]\setminus U$, so $[n]\setminus U\in\cF$ by upward closure, and $b(U),b([n]\setminus U)$ would be two members of $\cD$ differing in every coordinate, contradicting independence of $\cD$.
+
+\emph{Step 3: pattern classes.} For an intersecting family $\cH\subseteq2^{[n]}$ put $E(\cH)=\{x\in\Om:\{i:x_i=1\}\in\cH\}$. Two members of $E(\cH)$ have $1$-patterns in $\cH$, which intersect, so they share a coordinate equal to $1$; thus $E(\cH)$ is independent. Moreover $\cD\subseteq E(\cF)$: for $x\in\cD$ let $T=\{i:x_i=1\}$; then $b(T)\le x$ coordinatewise ($b(T)_i=1=x_i$ on $T$, and $b(T)_i=2\le x_i$ off $T$), so $b(T)\in\cD$ and $T\in\cF$. For $T\subseteq[n]$ the labels with $1$-pattern exactly $T$ have total weight
+\[
+m(T)=\prod_{i\in T}s_{i,1}\prod_{i\notin T}\Bigl(\sum_{a=2}^{q_i}s_{i,a}\Bigr),
+\qquad\text{so}\qquad W(E(\cH))=\sum_{T\in\cH}m(T).
+\]
+
+\emph{Step 4: maximal intersecting families.} Since $\cF$ is intersecting and $2^{[n]}$ is finite, $\cF$ is contained in an inclusion-maximal intersecting family $\cF^*$. We use the well-known fact $|\cF^*|=2^{n-1}$, with its short proof. A maximal intersecting family is upward closed: if $T\in\cF^*$ and $U\supseteq T$ then $U$ meets every member of $\cF^*$, so $\cF^*\cup\{U\}$ is intersecting and $U\in\cF^*$ by maximality. If $T\notin\cF^*$, maximality gives $U\in\cF^*$ with $T\cap U=\varnothing$, i.e.\ $U\subseteq[n]\setminus T$, whence $[n]\setminus T\in\cF^*$. An intersecting family contains at most one of $T$ and $[n]\setminus T$. So $\cF^*$ contains exactly one set from each of the $2^{n-1}$ complementary pairs.
+
+\emph{Step 5: the bound.} Let $T\in\cF^*\setminus\cF$. Since $[n]\in\cF$, $T\ne[n]$, so some $i\notin T$; the corresponding factor of $m(T)$ is $\sum_{a=2}^{q_i}s_{i,a}\ge q_i-1\ge2$, and all other factors are at least $1$. Thus $m(T)\ge2$, and
+\[
+W(E(\cF^*))-W(E(\cF))=\sum_{T\in\cF^*\setminus\cF}m(T)\ge2\bigl(2^{n-1}-|\cF|\bigr)=2^n-2\rk(\cD).
+\]
+Since $E(\cF^*)$ is independent, $\alw(Q)\ge W(E(\cF^*))$; since $\cD\subseteq E(\cF)$ and weights are positive, $W(E(\cF))\ge W(\cD)$. Therefore
+\[
+\alw(Q)-W(\cD)\ \ge\ W(E(\cF^*))-W(E(\cF))\ \ge\ 2^n-2\rk(\cD)\ \ge\ 2^n-2\rk(\cA),
+\]
+and combining with $W(\cD)\ge W(\cA)$ gives \eqref{eq:defect}.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+Every independent set is irredundant, so $\alpha(G)\le\IR(G)$ and it suffices to show $|S|\le\alpha(G)$ for every irredundant $S$. By the reduction of \cref{sec:quotient} (empty factor; a factor with one part makes $G$ edgeless, in which case every set is independent; a factor with two parts makes $G$ bipartite, and \cref{lem:bip} applies) we may assume $q_i\ge3$ for all $i$. Let $S$ be irredundant with lonely set $L$, $t$ social vertices, and $\cA=\lab(L)$.
+
+\emph{Case 1: $L\ne\varnothing$.} Then $\cA$ is nonempty, and independent in $Q$: two lonely vertices in distinct cells are non-adjacent, so their labels agree somewhere. As $L\subseteq\bigcup_{x\in\cA}C_x$, $|L|\le W(\cA)$. By \cref{lem:rank,lem:defect} and \eqref{eq:alphaw},
+\[
+|S|=|L|+t\le W(\cA)+\bigl(2^n-2\rk(\cA)\bigr)\le\alw(Q)=\alpha(G).
+\]
+
+\emph{Case 2: $L=\varnothing$.} Then $\cA=\varnothing$ and \cref{lem:rank} gives $|S|=t\le2^n$.
+
+\emph{Case 2a: $n\ge3$.} The set $P_{1,1}\times V(H_2)\times\dots\times V(H_n)$ is independent, so $\alpha(G)\ge\prod_{i\ge2}|V(H_i)|\ge3^{n-1}\ge2^n\ge|S|$, using $3^{n-1}\ge2^n$ for $n\ge3$.
+
+\emph{Case 2b: $n=1$.} Then $|S|\le2$ and $G=H_1$. If some part has size at least $2$ then $\alpha(G)\ge2\ge|S|$. Otherwise $G$ is a complete graph $K_{q_1}$, in which no set of size at least $2$ is irredundant: a vertex $v$ of such a set $S$ has a neighbour in $S$, so it needs a private neighbour $p$ with $N[p]\cap S=\{v\}$, but $N[p]=V(G)$. Hence $|S|\le1=\alpha(G)$.
+
+\emph{Case 2c: $n=2$.} Then $|S|\le4$, and $\alpha(G)\ge\max\{|V(H_1)|,|V(H_2)|\}$ by the fibres $P_{1,1}\times V(H_2)$ and $V(H_1)\times P_{2,1}$. As $q_i\ge3$, $|V(H_i)|\ge3$ with equality only for $H_i=K_3$; so $\alpha(G)\ge4\ge|S|$ unless $H_1=H_2=K_3$. It remains to show that $K_3\times K_3$, whose independence number is $3$, has no irredundant set of $4$ social vertices. Identify $V(K_3\times K_3)$ with the cells $(r,c)$ of a $3\times3$ array; $(r,c)$ and $(r',c')$ are adjacent iff $r\ne r'$ and $c\ne c'$. Let $S$ be such a set. Each $(r,c)\in S$ has an external private neighbour $(r',c')\notin S$ with $r'\ne r$, $c'\ne c$, which is non-adjacent to the other three members of $S$: each of them lies in row $r'$ or in column $c'$ (``is covered by $(r',c')$'').
+
+No row contains three members of $S$: if $(r,a),(r,b),(r,c)\in S$ with $a,b,c$ distinct, a private neighbour $(r',c')$ of $(r,a)$ has $r'\ne r$, so it must cover $(r,b)$ and $(r,c)$ by its column, forcing $c'=b$ and $c'=c$. Hence the numbers of members of $S$ in the three rows are $(2,2,0)$ or $(2,1,1)$ in some order.
+
+\emph{Pattern $(2,2,0)$.} Say $(i,a),(i,b)\in S$ with $a\ne b$, the other two members lie in row $j\ne i$, and row $k$ is empty. A private neighbour $(r',c')$ of $(i,a)$ has $r'\ne i$; to cover $(i,b)$ it needs $c'=b$; to cover the two members in row $j$, which have distinct columns, it needs $r'=j$. So the private neighbour is $(j,b)$, and it lies outside $S$. Symmetrically the private neighbour of $(i,b)$ is $(j,a)\notin S$. Then the two members of $S$ in row $j$ avoid columns $a$ and $b$, so both equal $(j,c)$ for the third column $c$, which is absurd.
+
+\emph{Pattern $(2,1,1)$.} Say $(i,a),(i,b)\in S$ with $a\ne b$, and $(j,c),(k,d)\in S$ with $i,j,k$ distinct. A private neighbour of $(i,a)$ has row $\ne i$ and so has column $b$; it covers whichever of $(j,c),(k,d)$ is not in its row only through column $b$, so $b\in\{c,d\}$. Likewise, from the private neighbour of $(i,b)$, $a\in\{c,d\}$. Hence $\{c,d\}=\{a,b\}$, and after renaming $j,k$ we may assume $(j,a),(k,b)\in S$. Now a private neighbour $(r',c')$ of $(j,a)$ must cover both $(i,a)$ and $(i,b)$; a single column cannot, so $r'=i$. It must have $c'\ne a$ and cover $(k,b)$, which is not in row $i$, so $c'=b$. Thus the private neighbour is $(i,b)\in S$, contradicting the requirement that it be external (it would satisfy $\{(i,b),(j,a)\}\subseteq N[(i,b)]\cap S$).
+
+So every irredundant set of $K_3\times K_3$ has at most $3=\alpha(K_3\times K_3)$ elements, and Case~2c is complete.
+
+In every case $|S|\le\alpha(G)$. Hence $\IR(G)\le\alpha(G)\le\IR(G)$.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup. Its step, lemma and equation numbers refer to that writeup, not to this note (the writeup's Lemmas~1--4 are \cref{lem:bip,lem:rank,lem:compress,lem:defect} here). The scripts it mentions are in \nolinkurl{verification_astra/scripts/1904.02595__00/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{AD20} N.~Alon and C.~Defant, Isoperimetry, stability, and irredundance in direct products, \emph{Discrete Math.}\ 343 (2020), no.~7, 111902; \href{https://arxiv.org/abs/1904.02595}{arXiv:1904.02595}.
+\bibitem{Bur23} A.~Burcroff, Domination parameters of the unitary Cayley graph of $\mathbb Z/n\mathbb Z$, \emph{Discuss.\ Math.\ Graph Theory} 43 (2023), 95--114; \href{https://arxiv.org/abs/1809.04769}{arXiv:1809.04769}.
+\bibitem{DI18} C.~Defant and S.~Iyer, Domination and upper domination of direct product graphs, \emph{Discrete Math.}\ 341 (2018), 2742--2752; \href{https://arxiv.org/abs/1708.01305}{arXiv:1708.01305}.
+\end{thebibliography}
+
+\end{document}

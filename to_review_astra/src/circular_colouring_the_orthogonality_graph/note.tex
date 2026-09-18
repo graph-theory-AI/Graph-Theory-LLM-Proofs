@@ -1,0 +1,387 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\cO}{\mathcal O}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\chic}{\chi_c}
+\newcommand{\Kc}[2]{K_{#1/#2}}
+\newcommand{\Nb}{N_{\cO}}
+\newcommand{\Jm}[1]{J_{#1}}
+\newcommand{\Pl}[1]{P_{#1}}
+\newcommand{\Fin}[1]{F_{#1}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result circular\_colouring\_the\_orthogonality\_graph --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{The circular chromatic number of the orthogonality graph of $\R^3$ is $4$\\[4pt]
+\large A proof of Conjecture~4.41 of Ghebleh, answering a problem of DeVos, Ghebleh, Goddyn, Mohar and Naserasr}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $\cO$ be the graph whose vertices are the lines through the origin of $\R^3$, two lines being adjacent when they are perpendicular. We prove that $\cO$ admits no homomorphism to any \emph{finite} graph in which every vertex neighbourhood induces a bipartite graph. Since the circular clique $\Kc pq$ has this property exactly when $p<4q$, it follows that the circular chromatic number of $\cO$ is $\chic(\cO)=4$; this answers a problem of DeVos, Ghebleh, Goddyn, Mohar and Naserasr posed on the Open Problem Garden and proves Conjecture~4.41 of Ghebleh's 2007 thesis, where the best published lower bound, $\chic(\cO)\ge 11/3$, was obtained by computer search. The proof rests on one elementary geometric lemma: for any three linearly independent vectors $a,b,c$, the lines contained in $a^\perp\cup b^\perp\cup c^\perp$ induce a non-bipartite subgraph of $\cO$, an odd closed walk being produced by iterating cross products until a $2\times2$ matrix acquires a real eigenvector.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+
+\paragraph{The graph.} Throughout, $\cO$ denotes the \emph{orthogonality graph} of $\R^3$: its vertex set is the set of one-dimensional subspaces (lines through the origin) of $\R^3$, and two lines are adjacent when they are perpendicular. For a nonzero vector $x$ we write $[x]$ for the line it spans. Adjacent lines are distinct, so $\cO$ is a simple graph; it is infinite, indeed its vertex set is the real projective plane. Coloring properties of $\cO$ are of interest in the foundations of quantum mechanics: Kochen and Specker \cite{KS67} showed that $\cO$, and even certain finite subgraphs of it, has no independent set meeting every triangle, which gives $\chi(\cO)\ge4$; a proper $4$-colouring (credited in \cite{Ghebleh07} to Godsil and Zaks \cite{GZ88}) shows $\chi(\cO)=4$.
+
+\paragraph{Circular colourings.} For a real $r\ge1$, a \emph{circular $r$-colouring} of a graph $G$ assigns to each vertex a point of the circle $\R/r\Z$ of circumference $r$ so that adjacent vertices are at circular distance at least $1$. For integers $p\ge2q>0$ the \emph{circular clique} $\Kc pq$ has vertex set $\Z_p$ and
+\[
+a\sim b \iff q\le (b-a \bmod p)\le p-q .
+\]
+A homomorphism $G\to\Kc pq$ is the same as a circular $p/q$-colouring using only the $p$ colours $\tfrac1q\Z_p\subseteq\R/\tfrac pq\Z$. The circular chromatic number can be defined either as
+\[
+\chic(G)=\inf\{\,r : G \text{ has a circular } r\text{-colouring}\,\}
+\qquad\text{or as}\qquad
+\chic(G)=\inf\{\,p/q : G\to\Kc pq\,\},
+\]
+and for finite graphs the two agree and the infimum is attained (see Zhu's survey \cite{Zhu01}). For infinite graphs such as $\cO$ the two agree as well, and the direction we need is proved in \cref{lem:round}: a circular $r$-colouring with $r<4$ yields a homomorphism to some $\Kc pq$ with $p/q<4$. In every case $\chic(G)\le\chi(G)$, and $\chic(G)\ge3$ when $G$ contains a triangle. Hence $3\le\chic(\cO)\le4$, and the question is which.
+
+\paragraph{The problem.} The following was posted on the Open Problem Garden on 23 September 2008.
+
+\begin{question}[{DeVos, Ghebleh, Goddyn, Mohar, Naserasr \cite{OPG}}]\label{q:opg}
+Let ${\mathcal O}$ denote the graph with vertex set consisting of all lines through the origin in ${\mathbb R}^3$ and two vertices adjacent in ${\mathcal O}$ if they are perpendicular. Is $\chi_c({\mathcal O}) = 4$?
+\end{question}
+
+The Open Problem Garden entry records the bound $\chic(\cO)\ge 3.5$, obtained ``by investigating certain finite subgraphs of $\cO$'', and this is also the state of the art recorded in the catalog page from which the problem was taken.\footnote{\url{https://graph-theory-ai.github.io/graph-conjectures/op/circular_colouring_the_orthogonality_graph/}} Both are out of date, and the catalog's guess at a reference is wrong; see \cref{par:ghebleh}.
+
+\paragraph{The origin of the conjecture: Ghebleh's thesis.}\label{par:ghebleh}
+The LLM referee's priority search (\cref{app:referee}) located the actual source. Section~4.4 of Ghebleh's 2007 doctoral thesis \cite{Ghebleh07}, ``The Projective Plane Orthogonality Graph'', is devoted to exactly the graph $\cO$, with the Kochen--Specker motivation. Writing $G_n$ for the subgraph of $\cO$ induced by the primitive integer vectors of sup-norm at most $n$, the thesis proves $\chi(\cO)=4$ (Theorem~4.37), $\chic(\cO)\ge 7/2$ via $\chic(G_1)=7/2$ on the $13$-vertex graph $G_1$ (Proposition~4.39) --- this is the ``$3.5$'' of the Open Problem Garden entry --- and, by computer, $\chic(\cO)\ge 11/3$ via a $44$-vertex subgraph $H_2\subseteq G_2$ with $\chic(H_2)=11/3$ (Theorem~4.40). It also exhibits a $(27,7)$-colouring of the $145$-vertex graph $G_3$, so that $11/3\le\chic(G_3)\le 27/7$, and states:
+
+\begin{conjecture}[{Ghebleh \cite[Conjecture~4.41]{Ghebleh07}}]\label{conj:441}
+$\chic(\cO)=4$.
+\end{conjecture}
+
+Thus the published record lower bound before this note was $11/3$, not $7/2$, and the statement proved below is a named published conjecture, posed a year before the Open Problem Garden entry. The catalog page attributes the bound $3.5$ to the paper with DOI \texttt{10.1137/050639715}, ``Coloring an orthogonality graph''; that paper is Godsil and Newman \cite{GN08} and concerns the \emph{ordinary} chromatic number of the orthogonality graph on the vertices of the $\pm1$ hypercube, a different graph, and it is not the source of the bound. The related paper ``Circular coloring the plane'' of DeVos, Ebrahimi, Ghebleh, Goddyn, Mohar and Naserasr \cite{DEGGMN07} (Section~4.3 of the thesis) concerns the unit-distance graph of the plane, not $\cO$; its argument is a supremum over $\sqrt3$-pairs with a $K_4-e$ gadget and does not use the obstruction of this note, which could not work there since in the plane unit-distance graph every vertex neighbourhood induces a disjoint union of $6$-cycles and is bipartite.
+
+\paragraph{What is new.} The odd-walk lemma (\cref{lem:oddwalk}), the reduction of circular colourings below $4$ to homomorphisms into finite locally bipartite graphs, and the resulting proof of \cref{conj:441} are, to the best of the referee's search, not in the literature: Section~4.4 of \cite{Ghebleh07} proceeds entirely by computation on the finite graphs $G_n$, and the referee found nothing else on $\chic(\cO)$ in zbMATH, OpenAlex, Crossref, Semantic Scholar or arXiv. Novelty is thus unrefuted rather than established; see \cref{rem:novelty}.
+
+\paragraph{Locally bipartite graphs.} We call a graph $H$ \emph{locally bipartite} if for every vertex $\alpha$ the open neighbourhood $N_H(\alpha)$ induces a bipartite subgraph $H[N_H(\alpha)]$. (The same words are used by Illingworth \cite{Ill22} for an unrelated extremal question; the collision is terminological only.) For $S\subseteq V(\cO)$ we write $\Nb(S)=\bigcup_{L\in S}\Nb(L)$, and note that $\Nb([a])$ is precisely the set of lines contained in the plane $\Pl a:=a^\perp$.
+
+\section{Main result}
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+There is no homomorphism from $\cO$ to a finite locally bipartite graph.
+\end{restatable}
+
+Equivalently, every finite homomorphic image of $\cO$ has a vertex whose neighbourhood contains an odd cycle, i.e.\ contains an odd wheel. The word \emph{finite} cannot be dropped: $\cO$ is itself locally bipartite (\cref{rem:finite}).
+
+\begin{restatable}{corollary}{cormain}\label{cor:main}
+$\chic(\cO)=4$, for either definition of the circular chromatic number. In particular the answer to \cref{q:opg} is yes, and \cref{conj:441} holds.
+\end{restatable}
+\begin{proof}
+By \cref{lem:locbip} the circular clique $\Kc pq$ is locally bipartite whenever $p<4q$, so by \cref{thm:main} there is no homomorphism $\cO\to\Kc pq$ with $p/q<4$; this gives $\chic(\cO)\ge4$ for the homomorphism definition. If $\cO$ had a circular $r$-colouring with $r<4$, \cref{lem:round} would produce a homomorphism $\cO\to\Kc pq$ with $p/q<4$, so $\chic(\cO)\ge4$ for the real-circle definition as well. The proper $4$-colouring of \cref{prop:fourcol} gives $\chic(\cO)\le\chi(\cO)\le4$.
+\end{proof}
+
+\begin{proofidea}
+Let $h\colon\cO\to H$ be a homomorphism to a finite locally bipartite graph, and for $\alpha\in V(H)$ let $S_\alpha=h^{-1}(\alpha)$ be the fibre. Every neighbour of a line in $S_\alpha$ is mapped into $N_H(\alpha)$, so $h$ restricts to a homomorphism $\cO[\Nb(S_\alpha)]\to H[N_H(\alpha)]$; the target is bipartite, hence so is the source. The odd-walk lemma (\cref{lem:oddwalk}) says that if $S$ contains three linearly independent lines $[a],[b],[c]$ then $\cO[\Nb(S)]\supseteq\cO[\text{lines in }\Pl a\cup\Pl b\cup\Pl c]$ is \emph{not} bipartite. So every fibre spans a subspace of dimension at most $2$. But if $m=|V(H)|$, three of the $2m+1$ moment-curve lines $[(1,j,j^2)]$, $1\le j\le 2m+1$, lie in a common fibre, and any three of them are linearly independent by the Vandermonde determinant. The only use of finiteness is this pigeonhole step.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{The odd-walk lemma}
+
+For a nonzero vector $a\in\R^3$ put $\Pl a=a^\perp$ and $\Jm a(x)=a\times x$. When $\Jm a(x)\ne0$ the line $[\Jm a(x)]$ is perpendicular to $[x]$ and lies in $\Pl a$; so each application of a cross product is one edge of $\cO$, landing in a prescribed plane. The kernel of $\Jm a$ is $\R a$, so the restriction $\Jm d\colon\Pl e\to\Pl d$ is injective whenever $d\cdot e\ne0$.
+
+\begin{restatable}[Odd-walk lemma]{lemma}{lemoddwalk}\label{lem:oddwalk}
+Let $a,b,c\in\R^3$ be linearly independent. The subgraph of $\cO$ induced by the lines contained in $\Pl a\cup\Pl b\cup\Pl c$ is not bipartite.
+\end{restatable}
+
+\begin{proofidea}
+If two of the normals are perpendicular, say $a\perp b$, then $[a],[b],[a\times b]$ is a triangle inside the union. Otherwise normalise so that $a=(0,0,1)$, $b=(s,0,t)$ with $s>0$, $0<t<1$, and $c=(u,v,w)$; linear independence and pairwise non-orthogonality mean $v\ne0$, $w\ne0$, $su+tw\ne0$. Identify $\Pl a$ with $\R^2$ and consider the two linear operators on $\Pl a$
+\[
+E=\Jm a^2\Jm b^2=\begin{pmatrix}t^2&0\\0&1\end{pmatrix},\qquad
+F=\Jm a\Jm c\Jm b=\begin{pmatrix}0&su+tw\\-tw&sv\end{pmatrix}.
+\]
+$F$ is a $3$-edge walk $\Pl a\to\Pl b\to\Pl c\to\Pl a$ and $E$ is a $4$-edge walk $\Pl a\to\Pl b\to\Pl b\to\Pl a\to\Pl a$, all of whose vertices lie in the union and none of whose vectors vanish, by the injectivity remark. The discriminant of the characteristic polynomial of $E^nF$ is $(sv)^2-4t^{2n}\,tw(su+tw)\to(sv)^2>0$, so for some $n$ the invertible matrix $E^nF$ has a real eigenvector $x_0\ne0$. Starting at $[x_0]$ and performing the $3+4n$ cross-product steps returns to $[E^nFx_0]=[x_0]$: a closed walk of odd length.
+
+In geometric language (the referee's): the lines of each plane form a projective line $\R\mathrm P^1$, the cross products are projective-linear maps between these circles, and an odd cycle is a real fixed point of an odd-length composite. The $3$-step composite $F$ may be elliptic, with no real fixed point, so one pads it with powers of the hyperbolic $4$-step composite $E$, which preserves parity and drives the discriminant positive.\fullproofref{pf:oddwalk}
+\end{proofidea}
+
+\begin{restatable}{corollary}{corfibre}\label{cor:fibre}
+If $S\subseteq V(\cO)$ and $\cO[\Nb(S)]$ is bipartite, then the lines in $S$ span a subspace of $\R^3$ of dimension at most $2$.
+\end{restatable}
+\begin{proof}
+Otherwise $S$ contains lines $[a],[b],[c]$ with $a,b,c$ linearly independent. The set of lines contained in $\Pl a\cup\Pl b\cup\Pl c$ is $\Nb([a])\cup\Nb([b])\cup\Nb([c])\subseteq\Nb(S)$, so the non-bipartite graph of \cref{lem:oddwalk} is an induced subgraph of $\cO[\Nb(S)]$.
+\end{proof}
+
+\section{Circular cliques and the four-colouring}
+
+\begin{restatable}{lemma}{lemlocbip}\label{lem:locbip}
+Let $p\ge2q>0$. If $p<4q$ then $\Kc pq$ is locally bipartite.
+\end{restatable}
+\begin{proofidea}
+By translation symmetry it suffices to treat $N(0)=\{q,\dots,p-q\}$. Since $p-q<3q$, the two blocks $\{q,\dots,2q-1\}$ and $\{2q,\dots,3q-1\}$ cover $N(0)$, and any $q$ consecutive residues are pairwise non-adjacent in $\Kc pq$.\fullproofref{pf:locbip}
+\end{proofidea}
+The referee verified exhaustively for $q\le12$, $2q\le p\le6q$ that $\Kc pq$ is locally bipartite \emph{if and only if} $p<4q$, so the lemma is sharp; equivalently, $\chic$ of every odd wheel is $4$ \cite{Zhu01}.
+
+\begin{restatable}[From real-circle to finite-palette colourings]{lemma}{lemround}\label{lem:round}
+Let $G$ be a graph, finite or infinite, with a circular $r$-colouring for some real $r$ with $2\le r<4$. Then there are integers $p\ge2q>0$ with $p/q<4$ and a homomorphism $G\to\Kc pq$.
+\end{restatable}
+\begin{proofidea}
+Choose a rational $R$ with $r<R<4$ and rescale the colouring to circumference $R$; every edge now has circular distance at least $R/r>1$. Write $R=p/q$ with $q$ so large that $2/q<R/r-1$ (the fraction need not be in lowest terms) and round every colour to the grid $\tfrac1q\Z_p$. Each colour moves by less than $1/q$, so every edge keeps distance at least $1$, which is exactly adjacency in $\Kc pq$. The estimate is uniform in the vertex, so the number of vertices is irrelevant.\fullproofref{pf:round}
+\end{proofidea}
+
+\begin{restatable}[Explicit proper $4$-colouring]{proposition}{propfourcol}\label{prop:fourcol}
+Represent each line by the unit vector $u=(x,y,z)$ with $z>0$, or $y>0$ if $z=0$, or $x>0$ if $y=z=0$. For $[u]\ne[e_3]$ the planar vector $(x,y)$ is nonzero; colour $[u]$ by the half-open quadrant containing $(x,y)$, i.e.\ by which of the argument intervals $[0,\tfrac\pi2)$, $[\tfrac\pi2,\pi)$, $[\pi,\tfrac{3\pi}2)$, $[\tfrac{3\pi}2,2\pi)$ contains $\arg(x,y)$; colour the pole $[e_3]$ with the third colour, that of $[\pi,\tfrac{3\pi}2)$. This is a proper $4$-colouring of $\cO$; hence $\chi(\cO)=4$.
+\end{restatable}
+\begin{proofidea}
+Two nonzero planar vectors in the same half-open quadrant have positive inner product, and all chosen representatives have $z\ge0$, so two non-pole lines of the same colour have $u\cdot v=(x,y)\cdot(x',y')+zz'>0$. Equatorial representatives have argument in $[0,\pi)$, so no equatorial line gets the third colour, and every other third-colour line has $z>0$ and is not perpendicular to $e_3$.\fullproofref{pf:fourcol}
+\end{proofidea}
+The $4$-colourability of $\cO$ is of course classical \cite{GZ88,Ghebleh07,OPG}; the octahedron colouring of \cite{OPG} leaves a choice on the boundaries, and the point of \cref{prop:fourcol} is only to fix one explicitly.
+
+\begin{restatable}[Finite witnesses]{proposition}{propwitness}\label{prop:witness}
+For every integer $m\ge1$ there is a finite induced subgraph $\Fin m\subseteq\cO$ with no homomorphism to any locally bipartite graph on at most $m$ vertices; in particular $\Fin m\nrightarrow\Kc pq$ for every $p\le m$ with $p/q<4$. Explicitly, $\Fin m$ is induced by the $2m+1$ lines $[(1,j,j^2)]$, $1\le j\le 2m+1$, together with, for each triple of them, the lines of the odd closed walk supplied by \cref{lem:oddwalk} (the triangle $[a],[b],[a\times b]$ when two of the three normals are perpendicular, and otherwise the walk of length $3+4n$ for the least $n\ge0$ with positive discriminant).
+\end{restatable}
+\begin{proofidea}
+This is the finite shadow of the proof of \cref{thm:main}: under a homomorphism to a locally bipartite graph on at most $m$ vertices, three of the $2m+1$ initial lines share a fibre, and their odd walk lies in the neighbourhood of that fibre, which must map into a bipartite neighbourhood.\fullproofref{pf:witness}
+\end{proofidea}
+
+\section{Remarks}
+
+\begin{remark}[The finiteness hypothesis is essential]\label{rem:finite}
+The graph $\cO$ is itself locally bipartite: $\Nb(L)$ is the set of lines of the plane $L^\perp$, and within that plane every line has exactly one perpendicular line, so $\cO[\Nb(L)]$ is a perfect matching. Since the identity $\cO\to\cO$ is a homomorphism, \cref{thm:main} is false without the word \emph{finite}, and the pigeonhole step of its proof is genuinely load-bearing. The original writeup states the hypothesis correctly but does not comment on it; the referee checked the claim on the $577$ primitive integer directions of sup-norm at most $5$ (every neighbourhood bipartite, maximum degree $1$ inside each neighbourhood). Relatedly, the theorem does \emph{not} say that some finite subgraph of $\cO$ has circular chromatic number $4$; the opposite is true, see \cref{rem:previous}.
+\end{remark}
+
+\begin{remark}[Size of the witnesses]\label{rem:size}
+In \cref{lem:oddwalk} the least admissible $n$ is unbounded. With the notation of the proof, $\Delta_n=(sv)^2-4t^{2n+1}w(su+tw)$, so $n=0$ works when $w(su+tw)\le0$, and otherwise the least $n$ is the least integer with $2n+1>\log\bigl((sv)^2/(4w(su+tw))\bigr)/\log t$, which blows up as $a\cdot b\to\pm1$ (nearly parallel normals) or as $sv\to0$. The referee's construction of $\Fin 7$ (the case of the smallest palette $\Kc72$) from the $15$ moment-curve lines processed all $\binom{15}{3}=455$ triples: $311$ walks were fully built with zero violations, of lengths $39$ to $11\,927$ (median $639$), and $144$ triples needed $n>3000$, the largest being $n=1\,037\,597$, a walk of about $4.15$ million edges; so $|V(\Fin 7)|$ is of order $10^7$. By contrast the first attempt's Proposition~2 (\cref{rem:previous}) shows that at least $11$ vertices are needed to block $\Kc72$, and Ghebleh's $49$-vertex $G_2$ already does so. The moment curve is a poor choice of starting lines for a small witness; any $2m+1$ lines in general position would do, and the writeup's phrase ``a terminating search for $n$'' undersells how large $\Fin m$ becomes. This is a size issue, not a soundness issue.
+\end{remark}
+
+\begin{remark}[Relation to the first attempt and to the earlier finite computations]\label{rem:previous}
+This result is the second attack on the problem within the campaign (\cref{sec:provenance}). The first, by the same model, reported only partial results, which the referee of that writeup checked and confirmed: \emph{Proposition~1}, if $\chic(\cO)<4$ then $\chic(\cO)=4-1/k$ for an integer $k\ge2$ and $\cO\to\Kc{(4k-1)}{k}$ (from the facts that any two lines have a common perpendicular and that an optimal colouring of a finite graph contains a regular $p$-gon of colours); and \emph{Proposition~2}, every finite subgraph $F\subseteq\cO$ satisfies $\chic(F)<4$, indeed $\chic(F)\le 4-1/\lfloor(|V(F)|+1)/4\rfloor$, by projecting the lines to a generic plane. Neither is used in the present proof. Proposition~2 is consistent with \cref{prop:witness}: $\Fin m$ does map to some $\Kc pq$ with $p/q<4$, but only with $p>m$.
+
+That earlier referee report (\texttt{verification\_astra/circular\_colouring\_the\_orthogonality\_graph.OPG-PARTIAL.md}) also ran exact SAT computations on the subgraphs $\cO_n$ of $\cO$ induced by the primitive integer directions of sup-norm at most $n$ (these are Ghebleh's $G_n$): $\cO_2$ ($49$ lines, $138$ edges) has $\chic(\cO_2)=11/3$; $\cO_3$ ($145$ lines, $546$ edges) admits no homomorphism to $\Kc{11}{3}$ or $\Kc{15}{4}$; and $\cO_4$, the $289$ lines of sup-norm at most $4$ ($1326$ edges), admits no homomorphism to $\Kc{19}{5}$, while $\cO_4\to K_4$. This gave $\chic(\cO)>19/5$ unconditionally and, combined with Proposition~1, $\chic(\cO)\ge 23/6$, already above Ghebleh's published $11/3$. That referee observed the monotone pattern ($\cO_2$ excludes $7/2$, $\cO_3$ excludes $15/4$, $\cO_4$ excludes $19/5$) and named a uniform construction realising it for every $k$ as the missing ingredient; \cref{prop:witness} is that construction, and \cref{cor:main} supersedes all of these bounds.
+\end{remark}
+
+\begin{remark}[The referee's computational checks]\label{rem:checks}
+The referee of the present writeup (\cref{app:referee}) verified every finite object in code, the core lemma in exact arithmetic.
+\begin{enumerate}[nosep]
+\item \emph{Odd-walk lemma, exactly.} For seven explicit integer triples $(a,b,c)$ the matrices $E,F$ were computed as exact integer matrices in the basis $(a\times b,\,a\times(a\times b))$ of $\Pl a$, and the eigenvector and the whole walk were carried out in the quadratic field $\mathbb Q(\sqrt{\Delta_n})$ with no floating point; every orthogonality, non-vanishing, plane membership and the projective closure held as exact identities. Walk lengths: $3$ (the perpendicular case), $63$, $135$, $59$, $3$, $19$, $3$; the two length-$3$ walks for pairwise non-orthogonal normals show that $n=0$ can occur even then.
+\item \emph{Odd-walk lemma, randomly.} $3988$ random triples were fully built (three exceeded a cap of $n\le4000$) with zero failures; every walk had length exactly $3+4n$, $2097$ of them triangles, the longest $9607$ edges. A stress test with $a\cdot b\to1$ gave $67$ further successes, longest walk $15\,183$.
+\item \emph{Local bipartiteness of $\Kc pq$.} Exhaustive for $q\le12$, $2q\le p\le6q$: locally bipartite iff $p<4q$, with the writeup's blocks $A,B$ checked to cover $N(0)$ and to be independent. Cross-checked from the other side with an independent exact $\chic$ solver: $\chic(W_3)=\chic(W_5)=\chic(W_7)=\chic(W_9)=4$.
+\item \emph{The $4$-colouring.} On the $865$ primitive integer directions of sup-norm at most $6$ ($5502$ exactly orthogonal pairs, integer arithmetic): $0$ monochromatic edges, class sizes $228/228/205/204$, the $48$ equatorial lines using only the first two colours and the pole the third; also $0$ monochromatic among $200\,000$ random exactly perpendicular real pairs.
+\item \emph{Ghebleh's data.} His $G_1,G_2,G_3$ were rebuilt from scratch ($13/24$, $49/138$, $145/546$ vertices/edges, matching the thesis) and the homomorphism questions re-run with z3, calibrated on eight clique-to-clique instances: $G_2\nrightarrow\Kc72$, $G_3\nrightarrow\Kc72,\Kc{11}3$, $G_3\to\Kc{27}7$ (every satisfying colouring re-verified edge by edge). This reproduces Theorem~4.40 of \cite{Ghebleh07} and his $(27,7)$-colouring, and shows $11/3<\chic(G_3)\le27/7$. The existence of $G_3\to\Kc{27}7$ is a genuine test the theorem passes: $G_3$ is finite and contains none of the (generally irrational) lines of the odd walks.
+\end{enumerate}
+No computational check failed.
+\end{remark}
+
+\begin{remark}[A natural objection that does not apply]\label{rem:objection}
+$\Kc72$ is locally bipartite, yet for its triangle $\{0,2,4\}$ the union $N(0)\cup N(2)\cup N(4)$ is all of $\Z_7$ and is not bipartite; so one might think an odd walk inside a union of three neighbourhoods cannot obstruct a homomorphism to $\Kc72$. The argument is not of that form: the three lines $[a],[b],[c]$ are taken in a single fibre $h^{-1}(\alpha)$, so the union of their neighbourhoods maps into the single neighbourhood $N_H(\alpha)$, which is bipartite by hypothesis. The pigeonhole is applied to fibres, not to triangles.
+\end{remark}
+
+\begin{remark}[Minor points in the writeup, left as they are]\label{rem:minor}
+(i)~In \cref{lem:round} the writeup's constant $2/q$ and the phrase ``changes each colour by less than $1/q$'' are safe over-estimates: nearest-grid rounding moves a colour by at most $1/(2q)$ and a distance by at most $1/q$. (ii)~Writing $R=p/q$ ``choosing a sufficiently large common multiple'' means $p/q$ is not in lowest terms, which is harmless since $\Kc pq$ is defined for all $p\ge2q$. (iii)~For $p/q<2$ the circular clique is undefined, but $\cO$ contains triangles so $\chic(\cO)\ge3$ anyway. (iv)~A loop in the target $H$ is excluded automatically, since a loop at $\alpha$ makes $H[N_H(\alpha)]$ non-bipartite; and the case $V(H)=\emptyset$ is trivial.
+\end{remark}
+
+\begin{remark}[Novelty]\label{rem:novelty}
+Correctness and priority are separate. The writeup's own caveat field says ``literature priority has not been checked''. The referee searched zbMATH Open, OpenAlex (including full text), Crossref, Semantic Scholar and arXiv, the citers of \cite{DEGGMN07}, Ghebleh's complete publication list (Section~4.4 of the thesis was never turned into a paper), and the Open Problem Garden entry itself (still listed open, bibliography empty, last comment 2009), and found no proof of $\chic(\cO)=4$ and no improvement on $11/3$; but no general web search engine was reachable from its session, so an unindexed preprint on a personal page would have been missed. The result should be regarded as correct and apparently new, with novelty unconfirmed.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+
+(1)~The argument was found by the language model \texttt{gpt-6-astra} (reasoning effort \emph{max}) in a single autonomous pass started on 2026-09-16, as part of the campaign's \texttt{attacks\_retry} leg (catalog id \texttt{circular\_colouring\_the\_orthogonality\_graph}, an OpenProblemGarden problem; original writeup in \texttt{attacks\_retry/circular\_colouring\_the\_orthogonality\_graph/output.md}). This was a \emph{second} attempt: the prompt contained, as unverified context, the first attempt by the same model in the \texttt{attacks\_opg} leg, which had reported only the partial results summarised in \cref{rem:previous} (no referee report on that attempt was supplied). The new writeup discards the first attempt's discrete-spectrum route and introduces the odd-walk lemma; the material in \cref{rem:previous} attributed to the first attempt is inherited and is not claimed as new here.
+
+(2)~An independent adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) re-derived every step, found none to be a gap or an error, ran the computational checks listed in \cref{rem:checks} (the odd-walk lemma in exact arithmetic over a real quadratic field; exhaustive verification of \cref{lem:locbip} and its sharpness; the $4$-colouring on $865$ integer directions; reconstruction of Ghebleh's $G_1,G_2,G_3$ and re-derivation of his Theorem~4.40 by SAT), carried out the priority search that located \cite{Ghebleh07}, and returned the verdict \textsc{confirmed} with high confidence, the sole reservation being that novelty is unrefuted rather than established. Its report is reproduced verbatim in \cref{app:referee}. A separate, earlier referee review of the weaker first attempt (\texttt{verification\_astra/circular\_colouring\_the\_orthogonality\_graph.OPG-PARTIAL.md}) is summarised in \cref{rem:previous}.
+
+(3)~On 2026-09-17 the writeup was rewritten into the present note by \texttt{claude-fable-5-1}. The text was reorganised, with proof ideas in the main text and full proofs in \cref{app:proofs}. Every deviation from the writeup is listed here.
+\begin{itemize}[nosep]
+\item \emph{No repairs.} No mathematical step was changed; the referee found none needing repair. The statements of \cref{thm:main}, \cref{lem:oddwalk}, \cref{lem:locbip}, \cref{lem:round} and \cref{prop:fourcol} are those of the writeup (the writeup states the last three inline rather than as numbered results).
+\item \emph{Clarification in the proof of \cref{lem:oddwalk}.} The writeup's normalisation ``choose their signs and an orthonormal coordinate system'' is spelled out (flip the sign of $b$ so that $t=a\cdot b>0$, rotate about $a$ so that $s\ge0$), following the referee's step~L2.
+\item \emph{Clarification in \cref{prop:witness}.} The writeup's finite-witness construction applies the $E,F$ construction to every triple; triples with two perpendicular normals must instead use the triangle $[a],[b],[a\times b]$, as in the first case of the lemma. Added following the referee's caveat~4; the proposition is otherwise the writeup's Section~5.
+\item \emph{Added remarks, all taken from the referee report:} \cref{rem:finite} (finiteness essential, $\cO$ locally bipartite), \cref{rem:size} (the explicit formula for the least $n$ and the measured sizes), \cref{rem:objection}, \cref{rem:minor}, \cref{rem:checks}, \cref{rem:novelty}, and the odd-wheel reformulation after \cref{thm:main}. The ``projective holonomy'' description in the idea of proof of \cref{lem:oddwalk} is the referee's paraphrase, so labelled.
+\item \emph{Added citations and corrections of the record.} The writeup cites nothing. Added: Ghebleh's thesis \cite{Ghebleh07} as the origin of \cref{conj:441} and of the true prior lower bound $11/3$; \cite{DEGGMN07}; \cite{KS67}, \cite{GZ88} for the classical facts $\chi(\cO)=4$; \cite{GN08} to identify the catalog's mis-citation; \cite{Zhu01} for standard facts on $\chic$; \cite{Ill22} for the terminology collision. The statement that the catalog's recorded state of the art ($7/2$) was wrong is the referee's finding.
+\item \emph{Context from the first attempt} (\cref{rem:previous}) is stated with attribution and without proof; it plays no role in the proof of \cref{cor:main}.
+\end{itemize}
+\textbf{No human mathematician has checked this argument.} We circulate it for human review.
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:oddwalk}
+\lemoddwalk*
+\begin{proof}
+\emph{Case 1: two of the normals are perpendicular}, say $a\perp b$. Then $[a]\subseteq\Pl b$, $[b]\subseteq\Pl a$ and $[a\times b]\subseteq\Pl a\cap\Pl b$, so all three lines lie in $\Pl a\cup\Pl b\cup\Pl c$, and they are pairwise perpendicular: a triangle. (The plane $\Pl c$ is not needed in this case.)
+
+\emph{Case 2: $a,b,c$ are pairwise non-orthogonal.} Replace $a,b,c$ by unit vectors; this changes none of the planes. Since $a\cdot b\ne0$ we may replace $b$ by $-b$ if necessary so that $t:=a\cdot b>0$, and since $b$ is not parallel to $a$ (linear independence) we have $0<t<1$. Choose an orthonormal coordinate system with third axis $a$ and first axis along the component of $b$ orthogonal to $a$ (a rotation about $a$). Then
+\[
+a=(0,0,1),\qquad b=(s,0,t),\qquad c=(u,v,w),\qquad s>0,\quad 0<t<1,\quad s^2+t^2=1 .
+\]
+Since $a,b$ span the $xz$-plane, linear independence of $a,b,c$ is equivalent to $v\ne0$; and $a\cdot c=w\ne0$, $b\cdot c=su+tw\ne0$ by pairwise non-orthogonality. Thus
+\begin{equation}\label{eq:cond}
+v\ne0,\qquad w\ne0,\qquad su+tw\ne0 .
+\end{equation}
+
+\emph{Non-vanishing.} If $d\cdot e\ne0$ then $\Jm d\colon\Pl e\to\Pl d$ is injective, because $\ker\Jm d=\R d$ and $\R d\cap\Pl e=\{0\}$ exactly when $d\notin\Pl e$. The transitions used below are $\Jm b\colon\Pl a\to\Pl b$ and $\Jm a\colon\Pl b\to\Pl a$ (need $a\cdot b\ne0$), $\Jm c\colon\Pl b\to\Pl c$ (need $b\cdot c\ne0$), $\Jm a\colon\Pl c\to\Pl a$ (need $a\cdot c\ne0$), and $\Jm b\colon\Pl b\to\Pl b$, $\Jm a\colon\Pl a\to\Pl a$ (need $b\cdot b,\ a\cdot a\ne0$). All hold, so no vector in any walk below is zero.
+
+\emph{The two operators.} Identify $\Pl a$ with $\R^2$ via $(x_1,x_2,0)\leftrightarrow(x_1,x_2)$. For $x=(x_1,x_2,0)$ one computes
+\begin{align*}
+\Jm b(x)&=b\times x=(-tx_2,\ tx_1,\ sx_2),\\
+\Jm b^2(x)&=b\times(-tx_2,tx_1,sx_2)=(-t^2x_1,\ -(s^2+t^2)x_2,\ stx_1)=(-t^2x_1,\ -x_2,\ stx_1),\\
+\Jm a(y)&=a\times y=(-y_2,\ y_1,\ 0)\quad\text{for any }y=(y_1,y_2,y_3),
+\end{align*}
+so $\Jm a^2\Jm b^2(x)=(t^2x_1,\ x_2,\ 0)$, and
+\begin{align*}
+\Jm c\Jm b(x)&=c\times(-tx_2,tx_1,sx_2)=\bigl(svx_2-twx_1,\ -(su+tw)x_2,\ t(ux_1+vx_2)\bigr),\\
+\Jm a\Jm c\Jm b(x)&=\bigl((su+tw)x_2,\ svx_2-twx_1,\ 0\bigr).
+\end{align*}
+Hence, as operators on $\Pl a\cong\R^2$,
+\begin{equation}\label{eq:EF}
+E:=\Jm a^2\Jm b^2=\begin{pmatrix}t^2&0\\0&1\end{pmatrix},\qquad
+F:=\Jm a\Jm c\Jm b=\begin{pmatrix}0&su+tw\\-tw&sv\end{pmatrix}.
+\end{equation}
+(Operators compose right to left: $F$ applies $\Jm b$ first.) These have a walk interpretation. Applying $F$ to a nonzero $x\in\Pl a$ visits the lines
+\[
+[x]\subseteq\Pl a,\quad [\Jm b x]\subseteq\Pl b,\quad [\Jm c\Jm b x]\subseteq\Pl c,\quad [Fx]\subseteq\Pl a,
+\]
+consecutive lines being perpendicular: a walk of $3$ edges. Applying $E$ visits
+\[
+[x]\subseteq\Pl a,\quad [\Jm b x]\subseteq\Pl b,\quad [\Jm b^2x]\subseteq\Pl b,\quad [\Jm a\Jm b^2x]\subseteq\Pl a,\quad [Ex]\subseteq\Pl a,
+\]
+a walk of $4$ edges. (The step $\Jm b$ applied to a vector already in $\Pl b$ is the rotation of $\Pl b$ by a right angle; it is legitimate because $b\notin\Pl b$.) Every line visited lies in $\Pl a\cup\Pl b\cup\Pl c$ and every vector is nonzero by the non-vanishing paragraph.
+
+\emph{A real eigenvector.} For $n\ge0$, $E^n=\operatorname{diag}(t^{2n},1)$ and
+\[
+E^nF=\begin{pmatrix}0&t^{2n}(su+tw)\\-tw&sv\end{pmatrix},
+\qquad
+\operatorname{tr}(E^nF)=sv,\qquad \det(E^nF)=t^{2n}\,tw\,(su+tw).
+\]
+The discriminant of its characteristic polynomial is
+\begin{equation}\label{eq:disc}
+\Delta_n=(sv)^2-4\,t^{2n}\,tw\,(su+tw).
+\end{equation}
+Since $0<t<1$, $t^{2n}\to0$, and since $s>0$, $v\ne0$ we have $(sv)^2>0$; hence $\Delta_n\to(sv)^2>0$ and we may fix $n\ge0$ with $\Delta_n>0$. Then $E^nF$ has two distinct real eigenvalues and in particular a real eigenvector $x_0\ne0$ in $\Pl a$, $E^nFx_0=\lambda x_0$. By \eqref{eq:cond} and $t>0$, $\det(E^nF)\ne0$, so $\lambda\ne0$.
+
+\emph{The odd closed walk.} Start at $[x_0]$, perform the three steps of $F$, then $n$ times the four steps of $E$. This is a walk in $\cO$ of length $3+4n$ all of whose vertices are lines in $\Pl a\cup\Pl b\cup\Pl c$, and it ends at $[E^nFx_0]=[\lambda x_0]=[x_0]$ since $\lambda\ne0$ (working with lines rather than vectors is what makes a negative $\lambda$ harmless). A closed walk of odd length in a simple graph contains an odd cycle, so the induced subgraph is not bipartite.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+Suppose $h\colon\cO\to H$ is a homomorphism to a finite locally bipartite graph $H$, and put $m=|V(H)|$. (If $m=0$ there is no map from the non-empty $V(\cO)$; if $H$ had a loop at $\alpha$ then $\alpha\in N_H(\alpha)$ and $H[N_H(\alpha)]$ would not be bipartite, so $H$ is loopless.)
+
+For $\alpha\in V(H)$ let $S_\alpha=h^{-1}(\alpha)$. If $L\in\Nb(S_\alpha)$ then $L$ is adjacent to some $M\in S_\alpha$, so $h(L)$ is adjacent to $h(M)=\alpha$, i.e.\ $h(L)\in N_H(\alpha)$; and $h$ maps edges to edges. Hence $h$ restricts to a homomorphism
+\[
+\cO[\Nb(S_\alpha)]\longrightarrow H[N_H(\alpha)] .
+\]
+The target is bipartite by hypothesis, and a graph admitting a homomorphism to a bipartite graph is bipartite (compose with the $2$-colouring). So $\cO[\Nb(S_\alpha)]$ is bipartite, and by \cref{cor:fibre} the lines in $S_\alpha$ span a subspace of dimension at most $2$.
+
+Now consider the $2m+1$ distinct lines
+\[
+L_j=[(1,j,j^2)],\qquad 1\le j\le 2m+1 .
+\]
+Since $2m+1>2m$, some fibre $S_\alpha$ contains three of them, say $L_i,L_j,L_k$ with $i<j<k$. But
+\[
+\det\begin{pmatrix}1&i&i^2\\1&j&j^2\\1&k&k^2\end{pmatrix}=(j-i)(k-i)(k-j)\ne0,
+\]
+so $(1,i,i^2),(1,j,j^2),(1,k,k^2)$ are linearly independent and $S_\alpha$ spans $\R^3$, a contradiction. Hence no such $h$ exists.
+\end{proof}
+
+\phantomsection\label{pf:locbip}
+\lemlocbip*
+\begin{proof}
+The map $x\mapsto x+1$ is an automorphism of $\Kc pq$, so it suffices to show that $N(0)$ induces a bipartite graph. By definition $N(0)=\{q,q+1,\dots,p-q\}$. Put
+\[
+A=N(0)\cap\{q,\dots,2q-1\},\qquad B=N(0)\cap\{2q,\dots,3q-1\}.
+\]
+Since $p<4q$ we have $p-q<3q$, so $A\cup B=N(0)$. Each of $A,B$ lies in a block of $q$ consecutive residues; two distinct elements $x<y$ of such a block have $y-x\in\{1,\dots,q-1\}$ and $x-y\bmod p\in\{p-q+1,\dots,p-1\}$, neither of which lies in $[q,p-q]$ (using $p\ge2q$), so they are non-adjacent. Thus $A$ and $B$ are independent sets covering $N(0)$, which is therefore bipartite.
+\end{proof}
+
+\phantomsection\label{pf:round}
+\lemround*
+\begin{proof}
+Let $f\colon V(G)\to\R/r\Z$ be a circular $r$-colouring, $2\le r<4$. Choose a rational number $R$ with $r<R<4$ and let $f_R=(R/r)f$, a map to $\R/R\Z$ under which every edge has circular distance at least $R/r>1$. Write $R=p/q$ with integers $p,q>0$, taking $q$ (and hence $p=Rq$) large enough that
+\[
+\frac2q<\frac Rr-1 ;
+\]
+$p\ge2q$ since $R\ge r\ge2$, and $p/q=R<4$. Let $g(v)$ be the point of the grid $\tfrac1q\Z/R\Z\cong\tfrac1q\Z_p$ nearest to $f_R(v)$ (any fixed tie-breaking rule); then $g(v)$ differs from $f_R(v)$ by less than $1/q$. For an edge $uv$ the circular distance between $g(u)$ and $g(v)$ is therefore at least $R/r-2/q>1$. Multiplying by $q$ identifies the grid with $\Z_p$, and a circular distance of at least $1$ on the circle of circumference $p/q$ between grid points means that their difference in $\Z_p$ lies in $[q,p-q]$, which is adjacency in $\Kc pq$. So $qg\colon V(G)\to\Z_p$ is a homomorphism $G\to\Kc pq$. The bound on the rounding error does not depend on the vertex, so no finiteness of $V(G)$ is needed.
+\end{proof}
+
+\phantomsection\label{pf:fourcol}
+\propfourcol*
+\begin{proof}
+Each line has exactly one unit representative $u=(x,y,z)$ obeying the stated rule, and $z\ge0$ for all of them. For $[u]\ne[e_3]$ the vector $(x,y)$ is nonzero, so its argument lies in exactly one of the four half-open intervals and the colouring is well defined. Number the colours $1,2,3,4$ in the order of the intervals.
+
+Let $[u]\ne[v]$ be two non-pole lines of the same colour, with representatives $u=(x,y,z)$, $v=(x',y',z')$. The planar vectors $(x,y)$ and $(x',y')$ are nonzero and lie in the same half-open quadrant, so the angle between them is strictly less than $\pi/2$ and $(x,y)\cdot(x',y')>0$. Since $z,z'\ge0$,
+\[
+u\cdot v=(x,y)\cdot(x',y')+zz'>0 ,
+\]
+so $[u]$ and $[v]$ are not perpendicular.
+
+It remains to consider the pole $[e_3]$, of colour $3$. Its neighbours are the equatorial lines ($z=0$), whose representatives have $y>0$, or $y=0$ and $x>0$; their arguments lie in $[0,\pi)$, so equatorial lines have colour $1$ or $2$, never $3$. Every non-pole line of colour $3$ has $z>0$ and so is not perpendicular to $e_3$. Hence no edge is monochromatic, $\chi(\cO)\le4$, and $\chi(\cO)\ge4$ because $\chic(\cO)\ge4$ by \cref{cor:main} (or by Kochen--Specker \cite{KS67}).
+\end{proof}
+
+\phantomsection\label{pf:witness}
+\propwitness*
+\begin{proof}
+Fix $m\ge1$ and let $T=\{[(1,j,j^2)]:1\le j\le 2m+1\}$. For each $3$-subset $\{[a],[b],[c]\}\subseteq T$ the vectors $a,b,c$ are linearly independent (Vandermonde, as in the proof of \cref{thm:main}), so \cref{lem:oddwalk} applies: if two of $a,b,c$ are perpendicular take the triangle $[a],[b],[a\times b]$; otherwise take the least $n\ge0$ with $\Delta_n>0$ in \eqref{eq:disc} --- it exists since $\Delta_n\to(sv)^2>0$ --- an eigenline $[x_0]$ of $E^nF$, and the closed walk of length $3+4n$ through $[x_0]$. Let $W$ be the set of all lines on all these walks and triangles, and let $\Fin m=\cO[T\cup W]$, a finite induced subgraph of $\cO$. Its construction uses only field operations, one square root per triple (for $x_0$) and a terminating search for $n$.
+
+Suppose $h\colon\Fin m\to H$ is a homomorphism to a locally bipartite graph with $|V(H)|\le m$. Three lines $[a],[b],[c]\in T$ have the same image $\alpha$. Every line of their odd closed walk lies in $\Pl a\cup\Pl b\cup\Pl c$, i.e.\ is adjacent in $\Fin m$ to one of $[a],[b],[c]$, hence is mapped by $h$ into $N_H(\alpha)$; and the walk's edges are edges of $\Fin m$. So the odd closed walk maps to a closed walk of odd length in $H[N_H(\alpha)]$, which is bipartite: a contradiction. In particular $\Fin m\nrightarrow\Kc pq$ whenever $p\le m$ and $p/q<4$, by \cref{lem:locbip}.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup (\texttt{attacks\_retry/circular\_colouring\_the\_orthogonality\_graph/output.md}). Its step labels (L*, C, H*, K*, U*, W*) refer to that writeup's sections, not to this note. The scripts it mentions are in \texttt{verification\_astra/scripts/circular\_colouring\_the\_orthogonality\_graph/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{OPG} M.~DeVos, M.~Ghebleh, L.~A.~Goddyn, B.~Mohar and R.~Naserasr, Circular colouring the orthogonality graph, Open Problem Garden, posted 23 September 2008, \url{http://www.openproblemgarden.org/op/circular_colouring_the_orthogonality_graph}.
+\bibitem{Ghebleh07} M.~Ghebleh, Theorems and computations in circular colourings of graphs, Ph.D.\ thesis, Simon Fraser University, 2007, \url{https://summit.sfu.ca/item/8399}; Section~4.4, Theorem~4.40 and Conjecture~4.41.
+\bibitem{DEGGMN07} M.~DeVos, J.~Ebrahimi, M.~Ghebleh, L.~Goddyn, B.~Mohar and R.~Naserasr, Circular coloring the plane, SIAM J.\ Discrete Math.\ 21 (2007) 461--465, \href{https://doi.org/10.1137/060664276}{doi:10.1137/060664276}.
+\bibitem{KS67} S.~Kochen and E.~P.~Specker, The problem of hidden variables in quantum mechanics, J.\ Math.\ Mech.\ 17 (1967) 59--87.
+\bibitem{GZ88} C.~D.~Godsil and J.~Zaks, Colouring the sphere, research report, University of Waterloo, 1988; \href{https://arxiv.org/abs/1201.0486}{arXiv:1201.0486}.
+\bibitem{GN08} C.~D.~Godsil and M.~W.~Newman, Coloring an orthogonality graph, SIAM J.\ Discrete Math.\ 22 (2008) 683--692, \href{https://doi.org/10.1137/050639715}{doi:10.1137/050639715}; \href{https://arxiv.org/abs/math/0509151}{arXiv:math/0509151}. (Concerns the $\pm1$-hypercube orthogonality graph, not $\cO$; cited here only to identify the catalog's mis-citation.)
+\bibitem{Zhu01} X.~Zhu, Circular chromatic number: a survey, Discrete Math.\ 229 (2001) 371--410, \href{https://doi.org/10.1016/S0012-365X(00)00217-X}{doi:10.1016/S0012-365X(00)00217-X}.
+\bibitem{Ill22} F.~Illingworth, The chromatic profile of locally bipartite graphs, J.\ Combin.\ Theory Ser.\ B 156 (2022) 343--388. (Unrelated use of the term ``locally bipartite''.)
+\end{thebibliography}
+
+\end{document}

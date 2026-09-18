@@ -1,0 +1,343 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+\setlength{\emergencystretch}{3em}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\eqc}{\operatorname{eq}}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ceil}[1]{\left\lceil #1\right\rceil}
+\newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result covering\_powers\_of\_cycles\_with\_equivalence\_subgraphs --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{Powers of cycles have equivalence covering number $\Theta(\log k)$:\\ a negative answer to an OpenProblemGarden conjecture}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{18 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For $k\ge1$ and $n\ge2k+2$, we prove
+\[
+  1+\ceil{\log_2(k+1)}\le \eqc(C_n^k)
+  \le 1+2\ceil{\log_2(k+1)},
+\]
+with equality in the lower bound whenever $k+1$ divides $n$.  Thus the equivalence
+covering number of noncomplete powers of cycles is $\Theta(\log(k+1))$, uniformly in
+$n$, disproving the proposed $\Omega(k)$ lower bound even when $n/k\to\infty$.
+
+\medskip\noindent\small This note was produced by AI within
+the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI}
+project: the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician. \Cref{sec:provenance}
+records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+
+An \emph{equivalence graph} is a disjoint union of cliques.  An equivalence cover of a
+graph $G$ is a family of equivalence subgraphs whose edge sets cover $E(G)$, and
+$\eqc(G)$ is the minimum size of such a family.  We allow isolated vertices, so every
+member of a cover may be regarded as spanning.  The graph $C_n^k$ has vertex set
+$\Z/n\Z$, with two vertices adjacent when their cyclic distance is at most $k$.
+
+The OpenProblemGarden entry \cite{OPG}, originating in a problem page of West
+\cite{West}, asks verbatim:
+\begin{conjecture}[OpenProblemGarden]\label{conj:opg}
+Given $k$ and $n$, the graph $C_n^k$ has equivalence covering number $\Omega(k)$.
+\end{conjecture}
+The discussion emphasizes the regime in which $n$ is large compared with $k$.
+Equivalence coverings go back at least to Alon \cite{Alon86}; Esperet, Gimbel and King
+studied the related parameter for line graphs \cite{EGK10}.  The lower bound used here
+is a matrix-rank version of Alon's Theorem~1.1, and the case $n=2k+2$ of our exact
+formula is already Alon's Corollary~1.2.  The contribution of the present argument is
+the binary upper-bound construction for all $n$, especially the divisible cases with
+three or more blocks and hence $n\gg k$.
+
+The source page \cite{West} states that $\eqc(C_n^k)=k+1$ when $k+1\mid n$.  That
+assertion is false: Alon's corollary already gives
+$\eqc(C_{2k+2}^k)=\ceil{\log_2(2k+2)}$, and the construction below extends this
+phenomenon to every multiple $n=m(k+1)$ with $m\ge2$.  Work on the edge clique-cover
+number of cycle powers \cite{JH18} concerns a different parameter.
+
+\section{Main result}
+
+\begin{restatable}[Uniform bounds and an exact divisible case]{theorem}{thmmain}\label{thm:main}
+Let $k\ge1$, set $s=k+1$ and $r=\ceil{\log_2s}$.  For every $n\ge2s$,
+\[
+ r+1\le \eqc(C_n^k)\le2r+1.
+\]
+If $s\mid n$, then $\eqc(C_n^k)=r+1$.  For $3\le n\le2k+1$, one has
+$C_n^k=K_n$ and $\eqc(C_n^k)=1$.
+\end{restatable}
+\begin{proofidea}
+Divide the cycle into blocks of $s$ consecutive vertices.  One layer covers edges
+inside blocks.  At each of $r$ binary levels, vertices whose first differing bit is
+$1$ on the left and $0$ on the right form disjoint cliques across every block boundary.
+This gives $r+1$ layers when the blocks close cyclically and, after treating the final
+cut separately, $2r+1$ layers for arbitrary $n$.  Alon's rank obstruction, applied to
+two sequences of $2s$ vertices at cyclic offset $s$, yields $2s\le2^{\eqc(C_n^k)}$.
+\fullproofref{pf:main}
+\end{proofidea}
+
+\begin{restatable}{corollary}{cordisproof}\label{cor:disproof}
+The conjecture in \cref{conj:opg} is false, even along families with $n/k\to\infty$.
+\end{restatable}
+\begin{proofidea}
+Take $k=2^q-1$ and $n=2^{2q}$.  Then $k+1\mid n$ and \cref{thm:main} gives
+$\eqc(C_n^k)=q+1$, whereas $(q+1)/(2^q-1)\to0$ and $n/k\to\infty$.
+\fullproofref{pf:disproof}
+\end{proofidea}
+
+\section{Binary layers and Alon's obstruction}
+
+Write every $x\in\{0,\ldots,s-1\}$ with $r$ binary digits, most significant first.
+For a position $h$, a prefix $p$ of length $h-1$, and $\varepsilon\in\{0,1\}$, put
+\[
+ I_h^\varepsilon(p)=\{x:(x_1,\ldots,x_{h-1})=p,\ x_h=\varepsilon\}.
+\]
+Every element of $I_h^1(p)$ is larger than every element of $I_h^0(p)$; conversely,
+if $x>y$, their first differing bit supplies such $h,p$.
+
+\begin{restatable}[Binary boundary cover]{lemma}{lembinary}\label{lem:binary}
+If $n=ms$ with $m\ge2$, then $C_n^{s-1}$ has an equivalence cover with $r+1$ layers.
+For arbitrary $n\ge2s$, it has an equivalence cover with at most $2r+1$ layers.
+\end{restatable}
+\begin{proofidea}
+For $n=ms$, use the block cliques and, at level $h$, join the $1$-half of each prefix
+in block $i$ to its $0$-half in block $i+1$.  A vertex chooses exactly one of its two
+adjacent boundaries at each level, so the resulting cliques are disjoint.  For arbitrary
+$n$, the same construction on a line covers all non-wrapping edges and $r$ additional
+levels cover the wrap-around cut.\fullproofref{pf:binary}
+\end{proofidea}
+
+\begin{restatable}[Alon's rank obstruction]{lemma}{lemrank}\label{lem:rank}
+For $n\ge2s$,
+\[
+ \eqc(C_n^{s-1})\ge\ceil{\log_2(2s)}=1+\ceil{\log_2s}.
+\]
+\end{restatable}
+\begin{proofidea}
+Encode each cover layer by component labels and multiply their pairwise differences.
+The resulting matrix is a sum of at most $2^t$ rank-one matrices, where $t$ is the
+number of layers.  Its submatrix with rows $0,\ldots,2s-1$ and columns shifted by $s$
+is triangular with nonzero diagonal, so it has rank $2s$.  This is the specialization
+of Alon's Theorem~1.1 used here.\fullproofref{pf:rank}
+\end{proofidea}
+
+\section{Remarks}
+
+\begin{remark}[Nondivisible cases]
+The exact value is not determined when $k+1\nmid n$.  The referee's exhaustive search
+found, for example, $\eqc(C_7^2)=4>3$ and
+$\eqc(C_9^3)=\eqc(C_{10}^3)=\eqc(C_{11}^3)=4>3$, so the lower bound need not be tight.
+The upper bound $2r+1$ is not claimed to be tight.
+\end{remark}
+
+\begin{remark}[Conventions]
+The covering cliques need not be induced, maximal, or consecutive.  This is the
+standard definition in \cite{Alon86,EGK10,OPG}.  Some binary sets are empty or
+singletons when $s$ is not a power of two; deleting empty sets and retaining or deleting
+singletons does not affect the edge cover.  The case $k=0$ is outside the theorem and
+has $\eqc(C_n^0)=0$.
+\end{remark}
+
+\begin{remark}[Computational audit]
+The referee independently checked the constructions for $7{,}390$ pairs with
+$k\le24$ and $n\le300$, with no failure.  Exact set-cover computations gave
+\[
+ \eqc(C_8^3)=\eqc(C_{12}^3)=3,
+ \qquad \eqc(C_{10}^4)=4,
+\]
+contradicting the $k+1$ assertion on the source page.  It also checked the matrix zero
+pattern, the triangular $2s\times2s$ minor and the rank inequalities for all tested
+$m\in\{2,3\}$ and $k\le15$.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by \texttt{gpt-6-astra}, reasoning effort
+\texttt{max}, in a single pass started on 2026-09-16, for OpenProblemGarden catalog id
+\texttt{covering\_powers\_of\_cycles\_with\_equivalence\_subgraphs}, campaign leg
+\texttt{attacks\_opg}.
+(2)~An independent adversarial referee agent (\texttt{claude-opus-5}) checked every
+step, compared the claim with the source literature, and ran the computations described
+above on 2026-09-17; its verdict was \textsc{confirmed}.  Its report is reproduced
+verbatim in \cref{app:referee}.
+(3)~On 2026-09-17 \texttt{claude-fable-5-1} began the rewrite but left only a
+compilable skeleton containing the preamble, title and section headings.
+(4)~On 2026-09-18 \texttt{Codex} completed the present note.  It reorganised the
+original argument with full proofs in \cref{app:proofs}, attributed the lower bound and
+the $n=2k+2$ case to Alon, explained the erroneous assertion on West's source page,
+added the related-work citations and computational audit, and made explicit why deleting
+out-of-range indices in a short final block preserves the cover.  No other mathematical
+content was changed.  \textbf{No human mathematician has checked the argument.}
+
+\appendix
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:binary}
+\lembinary*
+\begin{proof}
+First suppose $n=ms$.  Partition the cyclic order into blocks
+\[
+ B_i=\{v_{i,0},\ldots,v_{i,s-1}\},\qquad i\in\Z/m\Z.
+\]
+Let $H_0$ be the union of the cliques on the $B_i$.  For $1\le h\le r$ and every
+prefix $p$ of length $h-1$, define
+\[
+ Q_{i,h,p}=\{v_{i,x}:x\in I_h^1(p)\}
+ \cup\{v_{i+1,y}:y\in I_h^0(p)\},
+\]
+and let $H_h$ be the union of the nonempty cliques $Q_{i,h,p}$.
+
+Each $Q_{i,h,p}$ is a clique.  Pairs within one block have cyclic distance at most
+$s-1$.  For a cross-block pair, $x>y$ and the clockwise distance is
+$s+y-x\le s-1$.  For a fixed $h$, the cliques are vertex-disjoint: if $x_h=1$ then
+$v_{i,x}$ occurs only in $Q_{i,h,p}$, while if $x_h=0$ it occurs only in
+$Q_{i-1,h,p}$, with $p$ its unique prefix.
+
+Every edge is covered.  A short cyclic arc of length at most $s-1$ crosses at most one
+block boundary.  Edges inside a block lie in $H_0$.  Across the boundary from $B_i$ to
+$B_{i+1}$, adjacency of $v_{i,x}$ and $v_{i+1,y}$ gives $s+y-x\le s-1$, hence $x>y$;
+their first differing bit places them together in some $Q_{i,h,p}$.  Thus
+$H_0,H_1,\ldots,H_r$ form a cover.
+
+For arbitrary $n\ge2s$, first label the vertices linearly by $0,\ldots,n-1$ and divide
+them into consecutive blocks of size $s$, allowing the last block to be shorter.  Apply
+the same construction across consecutive block boundaries.  More explicitly, define
+the construction as though the last block had $s$ local indices and then delete every
+out-of-range vertex.  Intersecting each clique with the actual vertex set preserves
+cliqueness and pairwise disjointness.  An actual edge either lies in one block or crosses
+one boundary; in the latter case both of its actual endpoints remain, so its first-bit
+witness remains as well.  Hence $r+1$ layers cover all edges whose ordinary index
+difference is at most $s-1$.
+
+It remains to cover wrapping edges.  Put
+\[
+ A=\{n-s,\ldots,n-1\},\qquad B=\{0,\ldots,s-1\};
+\]
+these sets are disjoint cliques because $n\ge2s$.  Write $a_x=n-s+x$ and $b_y=y$.
+The pair $a_xb_y$ is a wrapping edge exactly when
+$n-a_x+b_y=s+y-x\le s-1$, equivalently $x>y$.  At every binary level use the cliques
+\[
+ \{a_x:x\in I_h^1(p)\}\cup\{b_y:y\in I_h^0(p)\}.
+\]
+For fixed $h$ these are disjoint, and the first differing bit covers every wrapping
+edge.  These $r$ layers together with the $r+1$ linear layers give $2r+1$ layers.
+\end{proof}
+
+\phantomsection\label{pf:rank}
+\lemrank*
+\begin{proof}
+Let $t=\eqc(C_n^{s-1})$.  Make every cover layer spanning by adding isolated vertices.
+In layer $\ell$, assign distinct real labels to its clique components and let
+$c_\ell(v)$ be the label of the component containing $v$.  Because each component is
+a clique and every edge is covered, for distinct vertices $u,v$,
+\[
+ uv\in E(C_n^{s-1})\quad\Longleftrightarrow\quad
+ c_\ell(u)=c_\ell(v)\text{ for some }\ell.
+\]
+Define
+\[
+ M_{uv}=\prod_{\ell=1}^t(c_\ell(u)-c_\ell(v)).
+\]
+Thus $M_{uv}=0$ exactly when $u=v$ or $uv$ is an edge.  For $S\subseteq[t]$ put
+$a_S(v)=\prod_{\ell\in S}c_\ell(v)$.  Expanding gives
+\[
+ M=\sum_{S\subseteq[t]}(-1)^{t-|S|}a_Sa_{[t]\setminus S}^{T},
+\]
+a sum of $2^t$ rank-one matrices, so $\operatorname{rank}M\le2^t$.
+
+With vertex labels modulo $n$, take the submatrix
+\[
+ N_{ij}=M_{i,(s+j)\bmod n},\qquad0\le i,j<2s.
+\]
+Both index lists are injective because $2s\le n$.  If $i>j$, then
+$1-s\le s+j-i\le s-1$, so the corresponding vertices are equal or adjacent and
+$N_{ij}=0$.  On the diagonal their cyclic distance is $s$ (also when $n=2s$), so they
+are distinct and nonadjacent and $N_{ii}\ne0$.  Therefore $N$ is upper triangular with
+nonzero diagonal.  Hence $2s=\operatorname{rank}N\le\operatorname{rank}M\le2^t$, which
+implies $t\ge\ceil{\log_2(2s)}=1+\ceil{\log_2s}$.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+The upper bounds are \cref{lem:binary}, and the lower bound is \cref{lem:rank}.  When
+$s\mid n$, the two bounds $\eqc(C_n^{s-1})\le r+1$ and
+$\eqc(C_n^{s-1})\ge r+1$ coincide.  Finally, if $3\le n\le2k+1$, the largest cyclic
+distance is $\floor{n/2}\le k$, so $C_n^k=K_n$, which is covered by one clique.
+\end{proof}
+
+\phantomsection\label{pf:disproof}
+\cordisproof*
+\begin{proof}
+For $q\ge1$, take $k=2^q-1$ and $n=2^{2q}$.  Then $s=2^q$ divides $n$ and
+\cref{thm:main} gives $\eqc(C_n^k)=q+1$.  Meanwhile
+\[
+ \frac{\eqc(C_n^k)}k=\frac{q+1}{2^q-1}\longrightarrow0,
+ \qquad \frac nk=\frac{2^{2q}}{2^q-1}\longrightarrow\infty.
+\]
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent
+(\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup.  Its step numbers
+refer to that writeup, not to this note.  The scripts it mentions are in
+\texttt{verification\_astra/scripts/covering\_powers\_of\_cycles\_with\_equivalence\_subgraphs/}.
+Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{99}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{OPG} OpenProblemGarden, \emph{Covering powers of cycles with equivalence subgraphs}, posted 7 July 2011, \url{http://www.openproblemgarden.org/op/covering_powers_of_cycles_with_equivalence_subgraphs}.
+\bibitem{West} D.~B. West, \emph{Equivalence covering of cycle-powers}, REGS problem page (2010/2011), \url{https://dwest.web.illinois.edu/regs/eqcov.html}.
+\bibitem{Alon86} N.~Alon, Covering graphs by the minimum number of equivalence relations, \emph{Combinatorica} \textbf{6} (1986), 201--206.
+\bibitem{EGK10} L.~Esperet, J.~Gimbel and A.~King, Covering line graphs with equivalence relations, \emph{Discrete Applied Mathematics} \textbf{158} (2010), 1902--1907.
+\bibitem{JH18} R.~Javadi and S.~Hajebi, Edge clique covering of powers of cycles and paths, \emph{Journal of Graph Theory} (2018), arXiv:1608.07723.
+\end{thebibliography}
+
+\end{document}

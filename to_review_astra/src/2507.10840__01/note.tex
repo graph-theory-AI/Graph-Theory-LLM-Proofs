@@ -1,0 +1,342 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\inte}{\operatorname{int}}
+\newcommand{\pipath}{\pi}
+\newcommand{\chicross}{\chi_{\mathrm{cross}}}
+\newcommand{\dP}{d}
+\newcommand{\sP}{s}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2507.10840\_\_01 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{Point sets whose complete geometric graph needs $\tfrac34 n-O(\sqrt n)$ crossing-free paths:\\ an affirmative answer to Problem~9 of Dumitrescu, Pach, Saghafian and Scott}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $A$ be a set of $n$ points in the plane in general position and let $\pipath(A)$ be the least number of crossing-free paths of the complete geometric graph $K_n[A]$ whose union contains every edge. A path has at most $n-1$ edges, so $\pipath(A)\ge\lceil n/2\rceil$, and this is attained in convex position. Dumitrescu, Pach, Saghafian and Scott asked (Problem~9 of \cite{DPSS26}) whether some constant $c>1/2$ satisfies $\pipath(A)\ge cn$ for infinitely many $n$. We answer this affirmatively. The vertices of a regular $(6q-1)$-gon together with its centre form a $6q$-point set with $\pipath(A)\ge 4q=\tfrac23 n$, and an odd regular $h$-gon with a cluster of $r$ points near its centre satisfies $\pipath(A)\ge\lceil (3r-2)h/(4r-2)\rceil$; taking $r\approx\sqrt n$ gives $n$-point sets with $\pipath(A)\ge\tfrac34 n-\sqrt n-1$ for every $n\ge9$, so every $c<3/4$ works. The engine is a simultaneous incompatibility: the $h$ long chords of the polygon pairwise cross unless they share a vertex, so a plane path contains at most two of them, and then only as a wedge that encloses the cluster and blocks every spoke from the cluster to any other polygon vertex. No matching upper bound is given, so the constant $3/4$ is not shown to be optimal.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+
+A finite point set $A\subset\R^2$ is in \emph{general position} if no three of its points are collinear. The \emph{complete geometric graph} $K_n[A]$ on an $n$-point set $A$ has vertex set $A$ and all $\binom n2$ straight segments between points of $A$ as edges. Two edges \emph{cross} if they share a point that is interior to both; a set of edges is \emph{plane} or \emph{crossing-free} if no two of its edges cross. A \emph{path} is an ordinary simple graph-theoretic path $x_0x_1\cdots x_\ell$ on distinct points of $A$, drawn with straight edges; it need not visit every point of $A$. We write
+\begin{align*}
+ \pipath(A)=\min\bigl\{k:\ &\text{there are crossing-free paths }P_1,\dots,P_k\text{ of }K_n[A]\\
+ &\text{with }E(P_1)\cup\dots\cup E(P_k)=E(K_n[A])\bigr\}.
+\end{align*}
+Covering paths may share edges and may be short. This is the most permissive reading of ``covering the edge set by crossing-free paths'', and therefore the reading under which a lower bound is hardest to prove: a lower bound on $\pipath(A)$ implies the same bound for partitions into plane paths and for covers by plane spanning (Hamiltonian) paths.
+
+Since a path on at most $n$ vertices has at most $n-1$ edges, every point set satisfies the trivial bound
+\begin{equation}\label{eq:trivial}
+ \pipath(A)\ \ge\ \Bigl\lceil \binom n2\Big/(n-1)\Bigr\rceil=\Bigl\lceil\frac n2\Bigr\rceil ,
+\end{equation}
+and for points in convex position this is an equality: the classical zig-zag Hamiltonian paths, used by Bernhart and Kainen \cite{BK79} to compute the book thickness of $K_n$, partition the edges of a convex $2m$-gon into $m$ plane paths (the referee re-verified $\pipath=\lceil n/2\rceil$ for convex $n=4,\dots,8$ by exhaustive search, \cref{app:referee}).
+
+Dumitrescu, Pach, Saghafian and Scott \cite{DPSS26} study coverings of complete geometric graphs by crossing-free paths and matchings: the edge set of every complete geometric graph can be partitioned into $O(n^{3/2})$ crossing-free paths (or matchings), a random $n$-point set admits a cover by $O(n\log n)$ crossing-free paths with high probability, while some point sets need a quadratic number of \emph{monotone} paths. In their concluding remarks (Section~5, remark~2) they ask:
+
+\begin{question}[{\cite[Problem~9]{DPSS26}}]\label{q:main}
+Does there exist a constant $c>1/2$ with the property that, for infinitely many values of $n$, there are $n$-element point sets $A$ in the plane such that every covering of the edge set of $K_{n}[A]$ by crossing-free paths requires at least $cn$ paths?
+\end{question}
+
+(The problem catalog from which this target was drawn lists the question as ``Problem~5.1''; that label is a section-based renumbering artefact, and the statement above is verbatim from the source.) In \cite{DPSS26} \cref{q:main} is presented as a first step towards their Problem~1, which asks for linear \emph{upper} bounds; an affirmative answer to \cref{q:main} says nothing about that problem.
+
+\paragraph{Related work.} The closest well-studied quantity is the minimum number $\chicross(A)$ of plane subgraphs into which $E(K_n[A])$ can be partitioned. A cover by $k$ plane paths yields a partition into at most $k$ plane subgraphs (assign each edge to one path containing it), so
+\begin{equation}\label{eq:dominates}
+ \chicross(A)\le\pipath(A)\qquad\text{for every }A,
+\end{equation}
+and a large value of $\pipath$ carries no information about $\chicross$. For $\chicross$ the trivial bound is again $\lceil n/2\rceil$; the best lower bound in the literature is the additive $n/2+1$ of Obenaus and Orthaber \cite{OO21} for their ``bumpy wheel'' point sets, continued in \cite{AOO22} and complemented by upper bounds for dense point sets by Dumitrescu and Pach \cite{DP24}. Pach, Saghafian and Schnider \cite{PSS23} prove that decomposing the complete \emph{convex} geometric graph into plane \emph{star-forests} requires $n-1$ of them. (The catalog entry for this problem attributes to \cite{PSS23} an upper bound of $n/2+o(n)$ plane subgraphs for convex point sets; that is a misreading of the source: the figure $n/2+o(n)$ is the speculation of the authors of \cite{DPSS26} about plane subgraphs of general point sets, and \cite{PSS23} proves the $n-1$ lower bound for star-forests just stated.) The paper \cite{AAB25} on ``plane covering paths'' concerns covering the \emph{points} of a set by the vertices of few plane paths, a different problem. The referee found no linear lower bound with a constant exceeding $1/2$ for either $\pipath$ or $\chicross$ in any independent source, so the point sets below appear to be the first with $\pipath(A)\ge cn$ for some $c>1/2$. Consistently with \eqref{eq:dominates}, they do \emph{not} beat $n/2$ for $\chicross$ (\cref{rem:subgraphs}).
+
+\section{The construction and the main result}\label{sec:main}
+
+Fix an odd integer $h=2m+1\ge5$ and let
+\[
+ v_j=\Bigl(\cos\frac{2\pi j}{h},\ \sin\frac{2\pi j}{h}\Bigr),\qquad 0\le j<h,
+\]
+be the vertices of the regular $h$-gon inscribed in the unit circle, with indices read modulo $h$, and $V=\{v_0,\dots,v_{h-1}\}$. The \emph{long chords} are
+\[
+ D=\{\,v_iv_{i+m}:\ 0\le i<h\,\},
+\]
+a set of $h$ distinct segments (for $h=5$, the pentagram). Because $-m\equiv m+1\pmod h$, the two long chords at $v_i$ are $v_iv_{i+m}$ and $v_iv_{i+m+1}$, and their endpoints $v_{i+m},v_{i+m+1}$ are adjacent on the polygon. Put
+\[
+ T_i=\conv\{v_i,v_{i+m},v_{i+m+1}\},\qquad U=\bigcap_{i=0}^{h-1}\inte(T_i).
+\]
+For a finite set $B\subset U$ (the \emph{cluster}) put $A=V\cup B$ and call the edges
+\[
+ S=\{\,vx:\ v\in V,\ x\in B\,\}
+\]
+the \emph{spokes}. For a path $P$ of $K_n[A]$ write $\dP(P)=|E(P)\cap D|$ and $\sP(P)=|E(P)\cap S|$.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+Let $h\ge5$ be odd and let $V$, $D$, $U$, $S$ be as above.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em]
+\item\label{it:one} The set $A=V\cup\{o\}$, $o=(0,0)$, is in general position, has $n=h+1$ points, and satisfies
+ \[
+  \pipath(A)\ \ge\ \Bigl\lceil\frac{2h}{3}\Bigr\rceil .
+ \]
+ In particular, for $h=6q-1$ the set $A$ has $n=6q$ points and $\pipath(A)\ge4q=\tfrac23n$, for every $q\ge1$.
+\item\label{it:two} Let $r\ge2$. There is an $r$-point set $B\subset U$ such that $A=V\cup B$ is in general position, and every such $A$ (with $n=h+r$ points) satisfies
+ \[
+  \pipath(A)\ \ge\ \Bigl\lceil\frac{(3r-2)\,h}{4r-2}\Bigr\rceil .
+ \]
+\item\label{it:three} Consequently, for every $n\ge9$ there is an $n$-point set $A$ in general position with
+ \[
+  \pipath(A)\ \ge\ \frac34\,n-\sqrt n-1 ,
+ \]
+ so in particular $\pipath(A)\ge\tfrac34n-O(\sqrt n)$.
+\end{enumerate}
+\end{restatable}
+
+\begin{corollary}\label{cor:main}
+The answer to \cref{q:main} is affirmative. The constant $c=2/3$ works for every $n=6q$, $q\ge1$, and every constant $c<3/4$ works for all sufficiently large $n$. The trivial bound \eqref{eq:trivial} is therefore not tight up to a constant factor for general point sets.
+\end{corollary}
+\begin{proof}
+Part~\ref{it:one} of \cref{thm:main} gives $6q$-point sets with $\pipath(A)\ge\tfrac23\cdot 6q$ for every $q\ge1$, which is the assertion for $c=2/3$ and infinitely many $n$. For $c<3/4$, part~\ref{it:three} gives $\pipath(A)\ge\tfrac34n-\sqrt n-1\ge cn$ as soon as $(\tfrac34-c)n\ge\sqrt n+1$, which holds for all large $n$.
+\end{proof}
+
+\begin{proofidea}
+The long chords of an odd polygon pairwise cross unless they share a vertex (\cref{lem:chords}), so a plane path contains at most two of them, and if it contains two they form a \emph{wedge} $v_iv_{i+m},v_iv_{i+m+1}$ at a common vertex. The wedge together with the polygon side $v_{i+m}v_{i+m+1}$ bounds the triangle $T_i$, which contains the whole cluster $B\subset U$; hence a segment from a cluster point to any polygon vertex other than the three vertices of the wedge must leave $T_i$ through one of the two chords and crosses it (\cref{lem:wedge}). So a plane path may be rich in chords or rich in spokes, but never both: with two chords it has at most two spokes, since $v_i$ is already saturated and $v_{i+m},v_{i+m+1}$ can each take one more edge (\cref{lem:budget}). For $r=1$ this already gives $|E(P)\cap(D\cup S)|\le3$ for every plane path $P$, while $|D\cup S|=2h$, whence $\pipath\ge\lceil2h/3\rceil$. For general $r$ one weights chords by $2r-2$ and spokes by $1$: every plane path has weight at most $4r-2$, whereas the total weight is $(3r-2)h$, and the standard fractional-cover bound (\cref{lem:weights}) gives $\pipath\ge\lceil(3r-2)h/(4r-2)\rceil$. Since $(3r-2)/(4r-2)=\tfrac34-\tfrac1{8r-4}$, choosing $r\approx\sqrt n$ with $h=n-r$ odd balances the loss $\tfrac34r$ from the cluster against the loss $(n-r)/(8r-4)$ from the weighting and yields $\tfrac34n-O(\sqrt n)$.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{The four lemmas}\label{sec:lemmas}
+
+\begin{restatable}[Long chords]{lemma}{lemchords}\label{lem:chords}
+Let $h=2m+1\ge5$. Two vertex-disjoint edges of $D$ cross. Consequently every crossing-free path $P$ of $K_n[A]$ (for any $A\supseteq V$) satisfies $\dP(P)\le2$, and if $\dP(P)=2$ then the two chords of $P$ in $D$ are $v_iv_{i+m}$ and $v_iv_{i+m+1}$ for some $i$.
+\end{restatable}
+\begin{proofidea}
+By rotational symmetry it suffices to look at $v_0v_m$. A chord $v_iv_{i+m}$ vertex-disjoint from it has $i\notin\{0,m,m+1\}$, and a check of the indices shows that one of its endpoints lies in $\{v_1,\dots,v_{m-1}\}$ and the other in $\{v_{m+1},\dots,v_{2m}\}$; the endpoints alternate with $v_0,v_m$ around the strictly convex polygon, so the chords cross. Among any three edges of a simple path two are vertex-disjoint (the path has maximum degree $2$ and contains no triangle), so a plane path holds at most two chords, and two chords in it must share a vertex.\fullproofref{pf:chords}
+\end{proofidea}
+
+\begin{restatable}[Wedge]{lemma}{lemwedge}\label{lem:wedge}
+Let $h=2m+1\ge5$. The origin lies in the interior of every $T_i$, so $U$ is an open neighbourhood of the origin. Let $x\in U$ be such that $V\cup\{x\}$ has no three collinear points, let $0\le i<h$, and put $a=v_{i+m}$, $b=v_{i+m+1}$. Then for every $z\in V\setminus\{v_i,a,b\}$ the segment $xz$ crosses $v_ia$ or $v_ib$.
+\end{restatable}
+\begin{proofidea}
+Rotating $v_i$ to $(1,0)$ puts $a,b$ at $(-\cos\frac\pi h,\pm\sin\frac\pi h)$, and the origin is visibly inside that triangle. The point $z$ is a vertex of the convex polygon other than $v_i,a,b$, hence outside $T_i$, while $x$ is inside; so $xz$ leaves $T_i$ through one of its sides. It cannot leave through $ab$, a side of the outer polygon with $x$ and $z$ both strictly on its inner side. So it meets $v_ia$ or $v_ib$, and general position makes this a proper crossing.\fullproofref{pf:wedge}
+\end{proofidea}
+
+\begin{restatable}[Weighted counting]{lemma}{lemweights}\label{lem:weights}
+Let $w\colon E(K_n[A])\to\R_{\ge0}$, let $W=\sum_e w(e)$, and suppose every crossing-free path $P$ satisfies $\sum_{e\in E(P)}w(e)\le L$ for some $L>0$. Then $\pipath(A)\ge\lceil W/L\rceil$.
+\end{restatable}
+\begin{proofidea}
+If $P_1,\dots,P_k$ cover every edge, then $W\le\sum_j w(P_j)\le kL$. This is the dual certificate of the fractional covering linear program; it is standard and was already recorded, as Proposition~4.1, in the first attempt on this problem described in \cref{sec:provenance}.\fullproofref{pf:weights}
+\end{proofidea}
+
+\begin{restatable}[Path budget]{lemma}{lembudget}\label{lem:budget}
+Let $h\ge5$ be odd, $r\ge1$, and let $B\subset U$ with $|B|=r$ be such that $A=V\cup B$ is in general position. Every crossing-free path $P$ of $K_n[A]$ satisfies
+\begin{enumerate}[label=(\roman*),leftmargin=2.2em]
+\item\label{it:d} $\dP(P)\le2$;
+\item\label{it:s} $\sP(P)\le2r$;
+\item\label{it:ds} if $\dP(P)=2$ then $\sP(P)\le2$;
+\item\label{it:r1} if $r=1$ then $|E(P)\cap(D\cup S)|\le3$.
+\end{enumerate}
+\end{restatable}
+\begin{proofidea}
+\ref{it:d} is \cref{lem:chords}; \ref{it:s} holds because every spoke has exactly one endpoint in $B$ and $P$ has degree at most $2$ there. For \ref{it:ds}, the two chords are $v_ia,v_ib$ by \cref{lem:chords}, and by \cref{lem:wedge} every spoke of $P$ ends at $v_i$, $a$ or $b$; $v_i$ already has degree $2$ in $P$, and $a,b$ have degree $1$, so at most one spoke each. For \ref{it:r1} with $B=\{o\}$: if $\dP(P)\le1$ then $\sP(P)=\deg_P(o)\le2$; if $\dP(P)=2$ then the spokes $oa,ob$ cannot both lie in $P$, since $o,a,v_i,b,o$ would be a cycle.\fullproofref{pf:budget}
+\end{proofidea}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[Interpretation]\label{rem:interp}
+The referee checked the statement of \cref{q:main} verbatim against arXiv:2507.10840v2 (Problem~9, Section~5, p.~8; also Comb.\ Number Th.\ 15 (2026) 73--82). The writeup uses the weakest available notion of $\pipath$: covering paths may overlap, need not be spanning, and are ordinary simple paths drawn plane. Allowing overlaps makes $\pipath$ smaller than the partition version and allowing short paths makes it smaller than a spanning-path version, so \cref{thm:main} implies the corresponding bounds for every stricter version. The constructed sets are in general position, the standing hypothesis of \cite{DPSS26}, and this was verified in exact arithmetic (\cref{rem:comp}).
+\end{remark}
+
+\begin{remark}[Lower bound only]\label{rem:upper}
+No upper bound on $\pipath(A)$ for these point sets, or on $\max_A\pipath(A)$, is given, so the constant $3/4$ is not shown to be optimal. It is an artefact of the three constraints $\dP\le2$, $\sP\le2r$, $\dP=2\Rightarrow\sP\le2$ and of the weighting that balances them; the true value of $\max_{|A|=n}\pipath(A)$ remains open between $\tfrac34n-O(\sqrt n)$ and the $O(n^{3/2})$ of \cite{DPSS26}.
+\end{remark}
+
+\begin{remark}[Quantifying ``sufficiently large'']\label{rem:quant}
+The original writeup states part~\ref{it:three} as $\pipath(A)\ge\tfrac34n-O(\sqrt n)$ for all sufficiently large $n$. The explicit form $\tfrac34n-\sqrt n-1$ for $n\ge9$ in \cref{thm:main} comes from the concrete choice $r\in\{\lfloor\sqrt n\rfloor,\lfloor\sqrt n\rfloor+1\}$ making $h=n-r$ odd (\cref{pf:main}); it is not optimised. Optimising $r$ (the optimum is $r\approx\sqrt{n/6}$) the referee obtained $\pipath(A)\ge\tfrac34n-0.61\sqrt n$ throughout $n=10^2,\dots,10^6$, and the thresholds $c=0.6$ from $n\ge13$, $c=0.7$ from $n\ge120$, $c=0.74$ from $n\ge3600$, $c=0.749$ from $n\ge373\,753$. None of this is needed for \cref{q:main}, which part~\ref{it:one} answers with $c=2/3$ for every $n=6q$, $q\ge1$, starting at $n=6$.
+\end{remark}
+
+\begin{remark}[The two parts are separate arguments]\label{rem:r1}
+The bound of part~\ref{it:two} is valid for $r=1$ as well, but then the chord weight $2r-2$ vanishes and it degenerates to $\lceil h/2\rceil$, weaker than the $\lceil2h/3\rceil$ of part~\ref{it:one}. Part~\ref{it:one} uses the extra fact \cref{lem:budget}\ref{it:r1}, that with two chords a single centre admits only \emph{one} spoke (two would close a $4$-cycle), and is not a special case of part~\ref{it:two}. Oddness of $h$ is load-bearing in two places: it makes the two long chords at each vertex distinct, and it keeps the centre off every line through two polygon vertices (for even $h$ the centre is collinear with each antipodal pair; the referee's harness confirms $h=6$ is degenerate). The region $U$ shrinks with $h$ (it contains the disc of radius $\sin\frac{\pi}{2h}$ about the origin, the distance from the centre to a long chord), but no quantitative bound is needed: for each fixed $h$ it is a fixed non-empty open set.
+\end{remark}
+
+\begin{remark}[Computational checks by the referee]\label{rem:comp}
+The referee's scripts are in the repository directory \path{verification_astra/scripts/2507.10840__01/}. All geometric predicates were verified in exact arithmetic twice: once on the true regular polygon with sympy algebraic numbers, and once, in an independent implementation, on rational near-regular coordinates (denominator $10^7$; cluster points rational, in the disc of radius $\tfrac12\sin\frac{\pi}{2h}$) where every test is an integer determinant. Since the properties in \cref{lem:chords,lem:wedge} are open conditions, the rational configurations that pass are themselves witnesses, so \cref{thm:main} also has witnesses with rational coordinates. The checks (no three collinear, convexity, both directions of \cref{lem:chords}, every cluster point strictly inside every $T_i$, and the crossing conclusion of \cref{lem:wedge} for all triples $x,i,z$) pass for $(h,r)=(5,1)$, $(5,2)$, $(7,1)$, $(7,2)$, $(7,3)$, $(9,1)$, $(9,2)$, $(9,3)$, $(11,1)$, $(13,1)$, $(15,3)$, $(21,4)$, $(25,5)$. Exhaustive enumeration of all crossing-free paths for $(h,r)=(5,1)$, $(7,1)$, $(9,1)$, $(11,1)$, $(5,2)$, $(7,2)$, $(9,2)$, $(7,3)$ found $\max\dP(P)=2$, $\max\sP(P)=2r$ (attained for $\dP\in\{0,1\}$), $\max\{\sP(P):\dP(P)=2\}=2$ for $r\ge2$ and $=1$ for $r=1$, maximum weight exactly $4r-2$, and $\max|E(P)\cap(D\cup S)|=3$ for $r=1$: every inequality of \cref{lem:budget} holds with equality. Finally, exact integer set cover over all maximal crossing-free paths ($130$, $1449$ and $15\,723$ of them) gives
+\[
+ \pipath(A)=4,\ 5,\ 6\qquad\text{for the }5\text{-, }7\text{-, }9\text{-gon with centre }(n=6,8,10),
+\]
+against the trivial bounds $3,4,5$ and matching $\lceil2h/3\rceil$ exactly; for the $5$-gon with two cluster points ($n=7$, $633$ maximal paths) $\pipath=4=\lceil n/2\rceil$. The values for $n=6,8$ were obtained by two independent solvers (scipy \texttt{milp} on the exact geometry and a branch-and-bound set-cover solver on the rational geometry); the value for $n=10$ rests on scipy \texttt{milp} alone, because the branch-and-bound cross-check hit its wall-clock cap. The branch-and-bound solver returns $\pipath=2,3,3,4,4$ for convex $n=4,\dots,8$, the known value $\lceil n/2\rceil$.
+\end{remark}
+
+\begin{remark}[No conflict with the plane-subgraph record]\label{rem:subgraphs}
+By \eqref{eq:dominates}, $\pipath$ dominates the plane-subgraph partition number, and the gain here is specific to paths: the referee computed exactly $\chicross=3=n/2$ for the $5$-gon with centre and $\chicross=4=n/2$ for the $7$-gon with centre, while $\pipath=4$ and $5$ respectively. These point sets therefore do not improve on the $n/2+1$ of Obenaus and Orthaber \cite{OO21} for plane subgraphs, and the result is not in tension with that record.
+\end{remark}
+
+\begin{remark}[Relation to the first attempt]\label{rem:first}
+The first attempt on this problem (by \texttt{gpt-5.6-sol}, supplied as context; see \cref{sec:provenance}) proved no lower bound above $n/2$ but isolated why elementary arguments stop there: nonnegative combinations of vertex-degree constraints and of ``at most one edge from a pairwise-crossing matching'' constraints, each bounded separately, never exceed $n/2$. The present argument is consistent with that obstruction and explains how it is bypassed: $D$ is not a matching (every polygon vertex lies on two long chords), and \cref{lem:budget}\ref{it:ds} is precisely the simultaneous incompatibility between two constraint families that the first attempt identified as the missing ingredient.
+\end{remark}
+
+\begin{remark}[Novelty]\label{rem:novelty}
+Novelty was checked only against what could be found online on 2026-09-17. arXiv:2507.10840 had no recorded citations in Semantic Scholar or OpenAlex, and the referee ruled out \cite{OO21,AOO22,DP24,PSS23,AAB25} and arXiv:2508.17277, arXiv:2510.22365, arXiv:2402.11044 as containing the construction or the bound. The single web hit for the construction is a pull request opened by this project on 2026-09-16, which is this campaign's own output and not prior art. A human check of the literature is still required.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-6-astra} (reasoning effort max) in a single autonomous pass started on 2026-09-17, in the \texttt{attacks\_retry} leg of a sweep over open problems catalogued from arXiv (catalog id \texttt{2507.10840\_\_01}; writeup in \texttt{attacks\_retry/2507.10840\_\_01/output.md}). This was a second attempt: the prompt contained an earlier attempt by \texttt{gpt-5.6-sol} (verdict ``partial'', no construction), which proved the convex-position value $\lceil n/2\rceil$, the weighted-counting bound of \cref{lem:weights} (its Proposition~4.1), and the obstruction of \cref{rem:first}. The new writeup shares no argument with it beyond the standard \cref{lem:weights}, and nothing inherited from it is presented here as new.
+(2)~An independent adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) checked the problem statement against the source, re-derived all twenty steps of the writeup, searched the literature for prior resolutions, and verified the geometry and the bounds computationally as described in \cref{rem:comp}; its verdict was \textsc{confirmed}, high confidence, with no step marked as a gap. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-17 the writeup was rewritten into the present note by \texttt{claude-fable-5-1}: the text was reorganised around \cref{thm:main} and the four lemmas of \cref{sec:lemmas}, with full proofs moved to \cref{app:proofs}. Every deviation from the writeup is listed here.
+\begin{itemize}[leftmargin=1.6em]\tightlist
+\item The general-position argument for the cluster read ``avoiding the finitely many lines determined by previously chosen points''; following the referee, it now reads ``lines determined by $V$ and the previously chosen points'' (\cref{pf:main}).
+\item ``For every sufficiently large $n$, $\pipath(A)\ge\tfrac34n-O(\sqrt n)$'' has been quantified as $\pipath(A)\ge\tfrac34n-\sqrt n-1$ for every $n\ge9$, via the explicit choice $r\in\{\lfloor\sqrt n\rfloor,\lfloor\sqrt n\rfloor+1\}$ with $h=n-r$ odd (\cref{pf:main}, \cref{rem:quant}). The writeup's own asymptotic statement is recovered as a special case.
+\item Two steps the writeup stated in a clause are proved in full: that chords of a strictly convex polygon with alternating endpoints cross (\cref{pf:chords}), and that any three edges of a simple path contain two vertex-disjoint ones (\cref{pf:chords}). The proper-crossing conclusion of \cref{lem:wedge} is derived explicitly from general position (\cref{pf:wedge}).
+\item The weighted-counting step, done inline in the writeup, is stated as \cref{lem:weights} and attributed to standard fractional-cover duality and to the first attempt.
+\item Added, from the referee report: the statement that no upper bound is given (\cref{rem:upper}); the interpretation discussion (\cref{rem:interp}); the relation between the two parts and the role of oddness (\cref{rem:r1}); the computational checks (\cref{rem:comp}); the plane-subgraph comparison (\cref{rem:subgraphs}); the literature \cite{BK79,OO21,AOO22,DP24,PSS23,AAB25} and the correction of the catalog's numbering and of its attribution to \cite{PSS23} (\cref{q:main} and the related-work paragraph). The referee report refers to arXiv:2405.17172 as ``Dumitrescu--Toth''; arXiv lists its authors as Dumitrescu and Pach, and it is cited here as \cite{DP24}.
+\end{itemize}
+No other mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it for human review, not as a claim to a new resolution.
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+Throughout, $h=2m+1\ge5$, indices are modulo $h$, and $V,D,T_i,U$ are as in \cref{sec:main}. Since the $v_j$ lie on a circle, no three points of $V$ are collinear, and $V$ is in strictly convex position: for any two vertices $v_p,v_q$, the vertices on the two open arcs between them lie strictly on the two sides of the line $v_pv_q$.
+
+\phantomsection\label{pf:chords}
+\lemchords*
+\begin{proof}
+\emph{$D$ has $h$ elements.} If $v_iv_{i+m}=v_jv_{j+m}$ as sets with $i\ne j$, then $i\equiv j+m$ and $j\equiv i+m$, so $2m\equiv0\pmod h$, impossible for $h=2m+1$. The rotation $v_j\mapsto v_{j+1}$ maps $D$ onto itself.
+
+\emph{Disjoint chords cross.} By rotational symmetry it suffices to treat chords disjoint from $e_0=v_0v_m$. A chord $v_iv_{i+m}$ is vertex-disjoint from $e_0$ iff $i\notin\{0,m\}$ and $i+m\notin\{0,m\}$, i.e.\ iff $i\notin\{0,m,m+1\}$ (using $-m\equiv m+1$). If $1\le i\le m-1$ then $m+1\le i+m\le 2m-1$. If $m+2\le i\le 2m$ then $i+m\equiv i-m-1\in\{1,\dots,m-1\}$. In both cases one endpoint lies in $\{v_1,\dots,v_{m-1}\}$, the open arc from $v_0$ to $v_m$, and the other in $\{v_{m+1},\dots,v_{2m}\}$, the open arc from $v_m$ to $v_0$. By strict convexity these two endpoints lie strictly on opposite sides of the line $\ell$ through $v_0,v_m$, so the chord meets $\ell$ in a single point $p$ interior to the chord. The point $p$ lies in $\conv V\cap\ell$, which is the segment $v_0v_m$ (a chord of a convex polygon), and $p\ne v_0,v_m$ because otherwise three points of $V$ would be collinear. Hence $p$ is interior to both segments, i.e.\ the chords cross.
+
+\emph{Consequences for a plane path $P$.} Let $e,f,g$ be three distinct edges of $P$. If every two of them shared a vertex, then either all three contain a common vertex, which would have degree $3$ in $P$, or the three pairwise intersections are distinct vertices and $e,f,g$ form a triangle, a cycle in $P$; both are impossible in a simple path. So two of $e,f,g$ are vertex-disjoint. If $P$ contained three chords of $D$, two of them would be vertex-disjoint and would cross, contradicting planarity; hence $\dP(P)\le2$. If $P$ contains exactly two chords, they are not vertex-disjoint, so they share a vertex $v_i$ and are the two chords of $D$ at $v_i$, namely $v_iv_{i+m}$ and $v_iv_{i+m+1}$ (the chord $v_{i-m}v_i$ equals $v_{i+m+1}v_i$).
+\end{proof}
+
+\phantomsection\label{pf:wedge}
+\lemwedge*
+\begin{proof}
+\emph{The origin is interior to $T_i$.} Rotate the plane about the origin so that $v_i$ becomes $(1,0)$. Since $a=v_{i+m}$ and $b=v_{i+m+1}$ are at angular distances $2\pi m/h=\pi-\pi/h$ and $2\pi(m+1)/h=\pi+\pi/h$ from $v_i$, they become $(-\cos\frac\pi h,\ \sin\frac\pi h)$ and $(-\cos\frac\pi h,\ -\sin\frac\pi h)$. Write $c=\cos\frac\pi h>0$, $s=\sin\frac\pi h>0$. The triangle with vertices $(1,0),(-c,s),(-c,-s)$ is symmetric about the $x$-axis; the side $ab$ is the vertical segment on the line $x=-c<0$, and the side from $(1,0)$ to $(-c,s)$ passes over $x=0$ at height $s/(1+c)>0$. Hence $(0,0)$ lies strictly between the line $x=-c$ and the two slanted sides, i.e.\ in $\inte(T_i)$. As $U$ is a finite intersection of open sets each containing the origin, $U$ is an open neighbourhood of the origin.
+
+\emph{The crossing.} Let $x\in U$ with $V\cup\{x\}$ having no three collinear points, and let $z\in V\setminus\{v_i,a,b\}$. Every point of $V$ is an extreme point of the convex polygon $\conv V$; since $T_i\subseteq\conv V$ and $z$ is not one of the three vertices of $T_i$, $z\notin T_i$ (an extreme point of $\conv V$ lying in the triangle $T_i$ would be a convex combination of the three vertices of $T_i$, hence equal to one of them). Thus the segment $xz$ joins the interior point $x$ of $T_i$ to the exterior point $z$, and therefore contains a point $p$ of the boundary of $T_i$ with $p\ne x,z$. The boundary of $T_i$ is the union of the three sides $ab$, $v_ia$, $v_ib$. The side $ab$ is a side of the polygon $\conv V$, so its line is a supporting line of $\conv V$ and every other point of $\conv V$ lies strictly on one side of it; both $x$ (an interior point of $\conv V$) and $z$ (a vertex different from $a,b$) do, hence the whole segment $xz$ avoids the line $ab$. So $p$ lies on $v_ia$ or on $v_ib$, say on $v_ia$. If $p$ were an endpoint of $v_ia$, then $x,z$ and that endpoint would be three collinear points of $V\cup\{x\}$, excluded; so $p$ is interior to $v_ia$, and it is interior to $xz$ because $p\ne x,z$. The two segments are not collinear (that would make $x,v_i,a$ collinear), so $p$ is their unique common point and $xz$ crosses $v_ia$.
+\end{proof}
+
+\phantomsection\label{pf:weights}
+\lemweights*
+\begin{proof}
+Let $P_1,\dots,P_k$ be crossing-free paths with $E(P_1)\cup\dots\cup E(P_k)=E(K_n[A])$. Every edge $e$ lies in at least one $P_j$ and $w\ge0$, so $W=\sum_e w(e)\le\sum_{j=1}^k\sum_{e\in E(P_j)}w(e)\le kL$. Hence $k\ge W/L$, and $k$ being an integer, $k\ge\lceil W/L\rceil$. Taking $k=\pipath(A)$ gives the claim.
+\end{proof}
+
+\phantomsection\label{pf:budget}
+\lembudget*
+\begin{proof}
+Let $P$ be a crossing-free path of $K_n[A]$, $A=V\cup B$.
+
+\ref{it:d} is the second assertion of \cref{lem:chords}.
+
+\ref{it:s} Every spoke has exactly one endpoint in $B$, so $\sP(P)\le\sum_{x\in B}\deg_P(x)\le2r$.
+
+\ref{it:ds} Suppose $\dP(P)=2$. By \cref{lem:chords} the two chords are $v_ia$ and $v_ib$ with $a=v_{i+m}$, $b=v_{i+m+1}$. Let $xz\in E(P)$ be a spoke, $x\in B\subset U$, $z\in V$. As $A$ is in general position, $V\cup\{x\}$ has no three collinear points, so if $z\notin\{v_i,a,b\}$ then by \cref{lem:wedge} the edge $xz$ crosses $v_ia$ or $v_ib$, both edges of $P$, contradicting planarity. Hence $z\in\{v_i,a,b\}$. The vertex $v_i$ is incident with the two chords, so $\deg_P(v_i)=2$ and no spoke of $P$ ends at $v_i$. Each of $a$ and $b$ is incident with one chord of $P$ and has degree at most $2$, so at most one spoke of $P$ ends at $a$ and at most one at $b$. Therefore $\sP(P)\le2$.
+
+\ref{it:r1} Let $r=1$, $B=\{o\}$. If $\dP(P)\le1$, then $|E(P)\cap(D\cup S)|\le1+\sP(P)\le1+\deg_P(o)\le3$. If $\dP(P)=2$, with chords $v_ia,v_ib$ as above, the argument of \ref{it:ds} shows that every spoke of $P$ is $oa$ or $ob$. Both cannot belong to $P$: together with $v_ia$ and $v_ib$ they would form the cycle $o,a,v_i,b,o$, and a path contains no cycle. So $\sP(P)\le1$ and $|E(P)\cap(D\cup S)|\le3$.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+\ref{it:one} \emph{General position.} No three points of $V$ are collinear. A line through $o$ and a vertex $v_j$ meets the unit circle exactly in $v_j$ and $-v_j$, and $-v_j\in V$ would require $\pi\equiv2\pi k/h\pmod{2\pi}$ for some integer $k$, i.e.\ $h=2k$ mod $2h$, impossible for odd $h$. So $A=V\cup\{o\}$ is in general position.
+
+\emph{The bound.} Every chord has both endpoints in $V$ and every spoke has an endpoint in $B$, so $D\cap S=\emptyset$ and $|D\cup S|=h+h=2h$. Let $P_1,\dots,P_k$ be crossing-free paths covering $E(K_n[A])$. Each $P_j$ contains at most $3$ edges of $D\cup S$ by \cref{lem:budget}\ref{it:r1}, and every edge of $D\cup S$ lies in some $P_j$, so $3k\ge2h$, i.e.\ $\pipath(A)\ge\lceil2h/3\rceil$. (Equivalently, apply \cref{lem:weights} with the indicator weight of $D\cup S$ and $L=3$.) For $h=6q-1$ we get $n=h+1=6q$ and $\lceil(12q-2)/3\rceil=\lceil4q-\tfrac23\rceil=4q=\tfrac23n$; here $h\ge5$ for every $q\ge1$.
+
+\ref{it:two} \emph{Existence of $B$.} By \cref{lem:wedge}, $U$ is a non-empty open subset of the plane. Choose $x_1,\dots,x_r$ successively: having chosen $x_1,\dots,x_{j-1}$, pick $x_j\in U$ off the finitely many lines determined by pairs of points of $V\cup\{x_1,\dots,x_{j-1}\}$ (the referee noted that the writeup's phrase ``determined by previously chosen points'' must include $V$; a non-empty open set minus finitely many lines is non-empty). Then $x_j$ is distinct from all earlier points (each lies on such a line) and is collinear with no two points of $V\cup\{x_1,\dots,x_{j-1}\}$. Hence $B=\{x_1,\dots,x_r\}\subset U$ has $r$ points and $A=V\cup B$ is in general position.
+
+\emph{The bound.} Let $B\subset U$ be any $r$-point set with $A=V\cup B$ in general position, and define $w(e)=2r-2$ for $e\in D$, $w(e)=1$ for $e\in S$, and $w(e)=0$ for all other edges of $K_n[A]$ (all edges remain available to the covering paths). Since $D\cap S=\emptyset$, $|D|=h$ and $|S|=hr$,
+\[
+ W=(2r-2)h+hr=(3r-2)h .
+\]
+For a crossing-free path $P$, $w(P)=(2r-2)\dP(P)+\sP(P)$, and by \cref{lem:budget}\ref{it:d}--\ref{it:ds}
+\[
+ w(P)\le\begin{cases}
+ 2r, & \dP(P)=0,\\
+ (2r-2)+2r=4r-2, & \dP(P)=1,\\
+ 2(2r-2)+2=4r-2, & \dP(P)=2.
+ \end{cases}
+\]
+As $2r\le4r-2$ for $r\ge1$, every crossing-free path has $w(P)\le L:=4r-2>0$. \Cref{lem:weights} gives $\pipath(A)\ge\lceil(3r-2)h/(4r-2)\rceil$.
+
+\ref{it:three} Let $n\ge9$, put $k=\lfloor\sqrt n\rfloor\ge3$, and let $r=k$ if $n-k$ is odd and $r=k+1$ otherwise; set $h=n-r$. Then $h$ is odd, $r\ge3\ge2$, and
+\[
+ \sqrt n-1<k\le r\le k+1\le\sqrt n+1,\qquad h=n-r\ge n-\sqrt n-1\ge5
+\]
+(the function $n-\sqrt n-1$ is increasing and equals $5$ at $n=9$). By \ref{it:two} there is an $n$-point set $A=V\cup B$ in general position with $\pipath(A)\ge(3r-2)h/(4r-2)$. The identity
+\[
+ \frac{3r-2}{4r-2}=\frac34-\frac{1}{8r-4}
+\]
+(clear denominators: $4(8r-4)\cdot\frac{3r-2}{4r-2}=8(3r-2)=3(8r-4)-4$) gives
+\[
+ \pipath(A)\ \ge\ \Bigl(\frac34-\frac1{8r-4}\Bigr)(n-r)
+ =\frac34n-\frac34r-\frac{n-r}{8r-4}.
+\]
+Now $\tfrac34r\le\tfrac34(\sqrt n+1)$, and since $8r-4>8\sqrt n-12\ge4\sqrt n$ for $n\ge9$, also $\frac{n-r}{8r-4}<\frac{n}{4\sqrt n}=\frac{\sqrt n}4$. Therefore
+\[
+ \pipath(A)\ >\ \frac34n-\frac34\sqrt n-\frac34-\frac{\sqrt n}4=\frac34n-\sqrt n-\frac34\ \ge\ \frac34n-\sqrt n-1 .
+\]
+In particular $\pipath(A)\ge\tfrac34n-O(\sqrt n)$.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup. Its step numbers, equation numbers and section numbers refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification\_astra/scripts/2507.10840\_\_01/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{DPSS26} A.~Dumitrescu, J.~Pach, M.~Saghafian and A.~Scott, Covering complete geometric graphs by monotone paths, Comb.\ Number Th.\ 15 (2026) 73--82; \href{https://arxiv.org/abs/2507.10840}{arXiv:2507.10840} (v1 July 2025, v2 January 2026), Problem~9.
+\bibitem{BK79} F.~Bernhart and P.~C. Kainen, The book thickness of a graph, J.\ Combin.\ Theory Ser.\ B 27 (1979) 320--331.
+\bibitem{OO21} J.~Obenaus and J.~Orthaber, Edge partitions of complete geometric graphs (part 1), \href{https://arxiv.org/abs/2108.05159}{arXiv:2108.05159} (2021).
+\bibitem{AOO22} O.~Aichholzer, J.~Obenaus, J.~Orthaber, R.~Paul, P.~Schnider, R.~Steiner, T.~Taubner and B.~Vogtenhuber, Edge partitions of complete geometric graphs (part 2), \href{https://arxiv.org/abs/2112.08456}{arXiv:2112.08456} (2021).
+\bibitem{PSS23} J.~Pach, M.~Saghafian and P.~Schnider, Decomposition of geometric graphs into star forests, \href{https://arxiv.org/abs/2306.13201}{arXiv:2306.13201} (2023).
+\bibitem{DP24} A.~Dumitrescu and J.~Pach, Partitioning complete geometric graphs on dense point sets into plane subgraphs, \href{https://arxiv.org/abs/2405.17172}{arXiv:2405.17172} (2024); Graph Drawing and Network Visualization (GD 2024), LIPIcs 320, paper 9.
+\bibitem{AAB25} H.~A. Akitaya, G.~Aloupis, A.~Biniaz, P.~Bose, J.-L. De~Carufel, C.~Gavoille, J.~Iacono, L.~Kleist, M.~Smid, D.~Souvaine and L.~Theocharous, An improved bound for plane covering paths, \href{https://arxiv.org/abs/2507.06477}{arXiv:2507.06477} (2025), ESA 2025.
+\end{thebibliography}
+
+\end{document}

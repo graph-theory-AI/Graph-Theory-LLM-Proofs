@@ -1,0 +1,425 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{FreeMono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+\setlength{\emergencystretch}{3em}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Mc}{\mathfrak M_c}
+\newcommand{\Mth}{\mathfrak M}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cQ}{\mathcal Q}
+\newcommand{\chic}{\chi_c}
+\newcommand{\repair}[1]{\begin{tcolorbox}[colback=yellow!7,colframe=gray!60,boxrule=0.3pt,arc=1pt,left=5pt,right=5pt,top=3pt,bottom=3pt]\small\textbf{Repair.} #1\end{tcolorbox}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result mixing\_circular\_colourings\_0 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{The circular mixing threshold is rational:\\ $\Mc(G)$ has reduced numerator at most $|V(G)|+1$}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{18 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For every finite loopless graph $G$ with $n$ vertices and at least one edge, we prove
+that its circular mixing threshold belongs to the finite set of rationals at least $2$
+whose reduced numerator is at most $n+1$.  Edgeless graphs have threshold $1$ under the
+source definition.  Hence the circular mixing threshold is always rational; the proof
+uses integer difference constraints to show that mixing can change only at finitely many
+rational breakpoints.
+
+\medskip\noindent\small This note was produced by AI within
+the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI}
+project: the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician. \Cref{sec:provenance}
+records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+
+For integers $k,q>0$ with $k\ge2q$, a $(k,q)$-colouring of a graph $G$ is a map
+$f:V(G)\to\{0,\ldots,k-1\}$ such that
+\[
+ q\le |f(u)-f(v)|\le k-q\qquad(uv\in E(G)).
+\]
+Let $\cR_{k,q}(G)$ be the graph whose vertices are these colourings, with two adjacent
+when they differ at exactly one vertex.  The graph $G$ is $(k,q)$-mixing when this
+colour graph is connected.  Brewster and Noel define \cite[Definition~1.2]{BN15}
+\[
+ \Mc(G)=\inf\left\{r\in\Q:
+ r\ge\chic(G)\ \text{and $G$ is $(k,q)$-mixing whenever $k/q\ge r$}\right\}.
+\]
+The OpenProblemGarden entry \cite{OPG} asks verbatim:
+\begin{question}\label{q:opg}
+Is $\mathfrak M_c(G)$ always rational?
+\end{question}
+
+The source paper gives bounds relating $\Mc$ to the ordinary mixing threshold
+\cite[Theorem~4.12]{BN15}, but leaves rationality open.  Later work gives a complexity
+dichotomy for fixed circular targets \cite{BMMN16} and characterizes mixing when the
+ratio is below $4$ \cite{BM23}; neither settles \cref{q:opg}.
+
+For $N\ge2$, define the finite set
+\[
+ \cE_N=\left\{\frac ab:a,b\in\Z_{>0},\ 2b\le a\le N\right\}.
+\]
+Membership is unchanged by reducing the fraction, and every member has reduced
+numerator at most $N$.
+
+\repair{The catalog rendering omits the source definition's condition
+$r\ge\chic(G)$, while the original writeup instead declared an empty colour graph to
+be non-mixing.  For a graph with an edge the two formulations are equivalent: if
+$r\ge\chic(G)$, every ratio at least $r$ admits a colouring.  If $2\le r<\chic(G)$,
+a rational circular ratio between them admits none; if $r<2=\chic(G)$, the pair
+$(2,1)$ itself is non-mixing for every graph with an edge.  Here we use
+Brewster--Noel's definition throughout.
+For an edgeless graph $\chic(G)=1$ and every colour graph is connected, so $\Mc(G)=1$;
+the original writeup's suggestion of $-\infty$ came only from the truncated rendering.}
+
+\section{Statement and proof architecture}
+
+\begin{restatable}[Finite set of circular mixing thresholds]{theorem}{thmmain}\label{thm:main}
+Let $G$ be a finite loopless graph on $n$ vertices.  If $G$ has an edge, then
+\[
+ \Mc(G)\in\cE_{n+1}.
+\]
+If $G$ is edgeless, then $\Mc(G)=1$.  In particular, $\Mc(G)$ is always rational; in
+the nonempty case its reduced numerator is at most $n+1$.
+\end{restatable}
+\begin{proofidea}
+Orient every edge from the smaller to the larger colour.  A fixed orientation class is
+the integer-point set of a difference-constraint system with weights $-q$ and $k-q$.
+Away from ratios in $\cE_n$, every such class is connected.  Its feasibility, and the
+feasibility of a transition between two classes, can change only when $k/q$ crosses a
+member of $\cE_{n+1}$.  Hence mixing is constant on every component interval outside
+that finite set.  All ratios at least $n+1$ mix, so the supremum of the bad ratios is a
+member of $\cE_{n+1}$ and equals $\Mc(G)$.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{Difference constraints and orientation classes}
+
+\begin{restatable}[Unit-step connectivity]{lemma}{lemunit}\label{lem:unit}
+Let
+\[
+ P=\{x\in\Z^s:0\le x_i\le K,\ x_j-x_i\le c_{ij}\text{ for }(i,j)\in A\},
+\]
+where all data are integral.  If $P\ne\varnothing$ and the weighted directed graph
+$A$ has no directed simple cycle of total weight zero, then the graph on $P$ obtained
+by changing one coordinate by $1$ at a time is connected.
+\end{restatable}
+\begin{proofidea}
+The set is closed under coordinatewise minimum.  To descend from $x$ to
+$\min(x,y)$, decrease a coordinate above the target.  If every such coordinate were
+blocked by a tight outgoing constraint, following blocking arcs would give a tight
+cycle of total weight zero.\fullproofref{pf:unit}
+\end{proofidea}
+
+Every colouring $f$ induces an orientation $D_f$ by directing $u\to v$ when
+$f(u)<f(v)$.  For an orientation $D$, let $X_D(k,q)$ be the colourings inducing $D$.
+For every arc $u\to v$ these are exactly the integral solutions of
+\[
+ x_u-x_v\le-q,\qquad x_v-x_u\le k-q,
+ \qquad0\le x_v\le k-1.
+\]
+
+\begin{restatable}[Exceptional ratios and feasibility]{lemma}{lemfeasible}\label{lem:feasible}
+Let $D$ be an orientation on $s$ vertices.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item If $k/q\notin\cE_s$, every nonempty $X_D(k,q)$ is connected by unit
+single-vertex recolourings.
+\item Whether $X_D(k,q)$ is nonempty depends only on $k/q$, and is constant on each
+component interval of $(2,\infty)\setminus\cE_s$.
+\end{enumerate}
+\end{restatable}
+\begin{proofidea}
+A simple cycle in the variable constraint graph has weight $ak-bq$ with $b\le s$, so
+zero weight forces $k/q=b/a\in\cE_s$; part (i) follows from \cref{lem:unit}.  For
+feasibility, add a reference vertex encoding the box $0\le x_i\le k-1$.  The resulting
+system is feasible exactly when it has no negative cycle.  Cycles through the reference
+vertex have weight $ak-bq-1$, and integrality turns nonnegativity into the strict ratio
+comparison $k/q>b/a$.\fullproofref{pf:feasible}
+\end{proofidea}
+
+\section{The finite quotient and eventual mixing}
+
+For fixed $k,q$, let $\cQ_{k,q}(G)$ have as vertices the orientations $D$ with
+$X_D(k,q)\ne\varnothing$.  Join $D$ and $D'$ when some colourings in their classes
+differ at one vertex.
+
+\begin{restatable}[Local constancy of mixing]{proposition}{proplocal}\label{prop:local}
+Let $G$ have $n$ vertices and let $I$ be a component interval of
+$(2,\infty)\setminus\cE_{n+1}$.  Then either $G$ is $(k,q)$-mixing for every positive
+integer pair with $k/q\in I$, or it is mixing for none of them.
+\end{restatable}
+\begin{proofidea}
+Class feasibility uses \cref{lem:feasible} on $n$ variables.  A transition changing
+vertex $v$ is tested by splitting $v$ into two nonadjacent twins, one with the old and
+one with the new incident orientations; this is a feasibility test on $n+1$ variables.
+Thus $\cQ_{k,q}(G)$ is constant throughout $I$.  As $I$ also avoids $\cE_n$, every
+class is connected, so the colour graph is connected exactly when the quotient is.
+\fullproofref{pf:local}
+\end{proofidea}
+
+\begin{restatable}[Eventual mixing]{lemma}{lemeventual}\label{lem:eventual}
+Every $n$-vertex graph is $(k,q)$-mixing whenever $k/q\ge n+1$.
+\end{restatable}
+\begin{proofidea}
+The $n+1$ colours $0,q,\ldots,nq$ are pairwise compatible.  Within its orientation
+class, any colouring reaches an injective colouring from this palette; a spare palette
+colour then connects all injective colourings.\fullproofref{pf:eventual}
+\end{proofidea}
+
+\section{Remarks}
+
+\begin{remark}[Scope]
+The theorem proves rationality, but it does not prove that $\Mc(G)$ is integral or that
+the threshold is attained.  The related circular mixing number $\mathfrak m_c(G)$ is
+not treated here.  The theorem concerns finite loopless graphs; parallel edges would
+only duplicate constraints.
+\end{remark}
+
+\begin{remark}[Computational audit]
+The referee reimplemented the quotient algorithm by Bellman--Ford feasibility tests and
+compared it with brute-force recolouring on $360$ parameter pairs across $12$ graphs,
+with zero mismatches.  No representation-dependent ratio or violation of local
+constancy was found.  The observed thresholds include
+\[
+ \Mc(K_3)=4,\quad \Mc(K_4)=5,\quad \Mc(K_5)=6,
+ \quad \Mc(C_5)=\Mc(C_6)=\Mc(C_7)=4.
+\]
+The values for $K_3,K_4,K_5$ show that the index $n+1$ in the finite exceptional set
+cannot in general be replaced by $n$.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The proof was found by \texttt{gpt-6-astra}, reasoning effort \texttt{max}, in a
+single pass started on 2026-09-16, for OpenProblemGarden catalog id
+\texttt{mixing\_circular\_colourings\_0}, campaign leg \texttt{attacks\_opg}.
+(2)~An independent adversarial referee agent (\texttt{claude-opus-5}) re-derived the
+argument, checked the source definition and later literature, and ran the computations
+described above on 2026-09-17; its verdict was \textsc{minor gaps}.  Its report is
+reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-17 \texttt{claude-fable-5-1} began the rewrite but left only a
+compilable skeleton containing the preamble, title and section headings.
+(4)~On 2026-09-18 \texttt{Codex} completed the present note and moved the full proofs
+to \cref{app:proofs}.  It repaired the sole substantive gap by proving equivalence with
+Brewster--Noel's actual definition, restored the omitted $r\ge\chic(G)$ clause,
+corrected the edgeless case from the original writeup's truncated-definition discussion,
+stated the elementary inclusion $\cE_n\subseteq\cE_{n+1}$ where used, and added the
+source and later-work citations.  No other mathematical content was changed.
+\textbf{No human mathematician has checked the argument.}
+
+\appendix
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:unit}
+\lemunit*
+\begin{proof}
+The set $P$ is closed under coordinatewise minimum.  Indeed, for $x,y\in P$ put
+$z_i=\min(x_i,y_i)$.  If $z_i=x_i$, then
+$z_j-z_i\le x_j-x_i\le c_{ij}$; if $z_i=y_i$, use $y$ instead.  The box constraints
+are also preserved.
+
+It therefore suffices to connect $x$ to $z=\min(x,y)$ by coordinate decreases.  At a
+current point, still denoted $x\ge z$, put $D=\{i:x_i>z_i\}$.  Decreasing $x_i$ by one
+cannot violate the lower box bound.  The only possible obstruction is a tight outgoing
+constraint $x_j-x_i=c_{ij}$.  Its endpoint $j$ must lie in $D$: otherwise $x_j=z_j$,
+and since $x_i\ge z_i+1$ we would have
+\[
+ z_j-z_i\ge x_j-(x_i-1)=c_{ij}+1,
+\]
+contrary to $z\in P$.
+
+If every $i\in D$ were blocked, choose one tight blocking arc from each.  Repeatedly
+following these arcs inside the finite set $D$ produces a directed simple cycle.
+Summing the tight equalities around it telescopes to show that its total weight is zero,
+contrary to the hypothesis.  Hence some coordinate in $D$ may be decreased.  Integral
+slack ensures that every nontight inequality remains valid after the unit change.
+Repeating strictly decreases $\sum_i(x_i-z_i)$ until $z$ is reached.  Apply the same
+argument to $y$ and concatenate the two paths.
+\end{proof}
+
+\phantomsection\label{pf:feasible}
+\lemfeasible*
+\begin{proof}
+For each arc $u\to v$ of $D$, the two inequalities defining $X_D(k,q)$ give arcs of
+weights $-q$ and $k-q$ in the variable constraint graph.  A directed simple cycle of
+length $b$ containing $a$ arcs of weight $k-q$ has total weight
+\[
+ a(k-q)+(b-a)(-q)=ak-bq.
+\]
+If it has weight zero, then $a\ge1$ and $k/q=b/a$.  Since $b\le s$ and $k/q\ge2$,
+this ratio lies in $\cE_s$.  Thus when $k/q\notin\cE_s$, \cref{lem:unit} makes every
+nonempty $X_D(k,q)$ connected, proving (i).
+
+For (ii), add a reference vertex $*$ and arcs $*\to i$ of weight $k-1$ and
+$i\to *$ of weight $0$.  With $x_*=0$, these impose exactly $0\le x_i\le k-1$.
+An integral system of difference constraints is feasible if and only if its weighted
+digraph has no negative directed cycle.  Necessity follows by summing constraints.
+For sufficiency, shortest-path distances from $*$ are finite in the absence of a
+negative cycle, are integral, satisfy every constraint, and the incident arcs place
+them in the required box.
+
+It is enough to inspect simple cycles.  A cycle avoiding $*$ has weight $ak-bq$ with
+$1\le b\le s$ and $0\le a\le b$.  When $a=0$ it is always negative; otherwise its
+nonnegativity is the weak comparison $k/q\ge b/a$.  A cycle through $*$ uses its two
+incident arcs exactly once and has weight
+\[
+ ak-bq-1,
+ \qquad0\le b\le s-1,\quad1\le a\le b+1.
+\]
+Because $ak-bq$ is an integer,
+\[
+ ak-bq-1\ge0\quad\Longleftrightarrow\quad ak-bq>0
+ \quad\Longleftrightarrow\quad k/q>b/a.
+\]
+Thus feasibility is a finite Boolean combination of weak and strict comparisons of
+$k/q$ with fixed rationals.  Every comparison point in $[2,\infty)$ belongs to
+$\cE_s$.  This proves both ratio dependence and constancy on the complementary
+intervals.
+\end{proof}
+
+\phantomsection\label{pf:local}
+\proplocal*
+\begin{proof}
+By \cref{lem:feasible}, the vertex set of $\cQ_{k,q}(G)$ is determined by feasibility
+tests on $n$ variables.  We now express each possible edge as a similar test on $n+1$
+variables.  Suppose $D,D'$ differ only on edges incident with a vertex $v$; otherwise
+no one-vertex recolouring can connect them.  Replace $v$ by two nonadjacent twins
+$v_0,v_1$, each with neighbourhood $N_G(v)$.  Orient the edges at $v_0$ as in $D$, the
+edges at $v_1$ as in $D'$, and all remaining edges in their common direction.
+
+A colouring respecting this orientation gives the common colours away from $v$, the
+old colour at $v_0$, and the new colour at $v_1$, hence a transition.  Conversely each
+transition gives such a colouring.  Since $D\ne D'$, some incident edge reverses; its
+inequalities force the two twin colours to differ.  Thus the edge test is exactly
+orientation-class feasibility on this $(n+1)$-vertex graph.
+
+Throughout $I$, all vertex and edge tests are constant by \cref{lem:feasible}; hence
+$\cQ_{k,q}(G)$ itself is constant.  Since $\cE_n\subseteq\cE_{n+1}$, the interval
+$I$ avoids $\cE_n$, and every nonempty orientation class is connected.  A connected
+quotient path lifts by moving within a class to the endpoint of each next transition.
+Conversely, projecting a recolouring path gives a walk in the quotient.  Therefore
+$\cR_{k,q}(G)$ is nonempty and connected exactly when $\cQ_{k,q}(G)$ is, proving the
+claim.
+\end{proof}
+
+\phantomsection\label{pf:eventual}
+\lemeventual*
+\begin{proof}
+Assume $k\ge(n+1)q$.  The palette
+$C=\{0,q,2q,\ldots,nq\}$ lies in $\{0,\ldots,k-1\}$ and any two distinct palette
+colours differ by at least $q$ and at most $nq\le k-q$.  Thus every injective map
+$V(G)\to C$ is a $(k,q)$-colouring.
+
+For an arbitrary colouring $f$, the induced orientation $D_f$ is acyclic because
+colours strictly increase along each arc.  A topological ordering of $D_f$, assigned
+distinct palette colours in increasing order, gives an injective palette colouring in
+$X_{D_f}(k,q)$.  Since every element of $\cE_n$ is at most $n$, the ratio $k/q\ge n+1$
+lies outside $\cE_n$; \cref{lem:feasible}(i) therefore connects $f$ to that palette
+colouring.
+
+All injective maps into $C$ are connected.  To reach a target, fix vertices one at a
+time.  If the desired colour of the next vertex is occupied by an unfixed vertex, move
+that blocker first to an unused colour.  There is always an unused colour because
+$|C|=n+1>|V(G)|$.  Every intermediate map remains injective and hence proper.  Combining
+these paths proves mixing.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+First suppose that $G$ has an edge.  Define the bad-ratio set
+\[
+ B_G=\left\{r\in\Q_{\ge2}:\text{for some representation $r=k/q$, $G$ is not
+ $(k,q)$-mixing}\right\}.
+\]
+The existential quantifier allows arbitrary representation dependence at exceptional
+ratios.  We have $2\in B_G$: if $G$ is nonbipartite it has no $(2,1)$-colouring, while
+if it is bipartite, flipping the two colours on a nontrivial component cannot be done by
+single-vertex recolourings.  By \cref{lem:eventual}, $B_G\cap[n+1,\infty)=\varnothing$.
+
+By \cref{prop:local}, on each component interval of
+$(2,\infty)\setminus\cE_{n+1}$, either every rational belongs to $B_G$ or none does.
+At the finitely many points of $\cE_{n+1}$ arbitrary behaviour is harmless.  Therefore
+$B_G$ is a union of selected rational open intervals between consecutive exceptional
+points, together with a subset of the exceptional points.  It is nonempty and bounded,
+and its supremum is either an included exceptional point or the right endpoint of a
+selected interval.  Hence
+\[
+ \sigma:=\sup B_G\in\cE_{n+1}.
+\]
+
+For every rational $\ell>\sigma$, every pair with $k/q\ge\ell$ mixes; for every
+$\ell<\sigma$, some bad ratio exceeds $\ell$.  Thus the infimum in the universal
+mixing condition is $\sigma$, regardless of behaviour at equality.  Moreover
+$\sigma\ge\chic(G)$.  Indeed, if $\chic(G)>2$, admissible rational ratios approach
+$\chic(G)$ from below and are bad because they admit no colouring; if
+$\chic(G)=2$, then $2\in B_G$.  As explained in the repair in the introduction, for
+thresholds at least $\chic(G)$ the nonempty formulation is exactly Brewster--Noel's.
+Therefore $\Mc(G)=\sigma\in\cE_{n+1}$.
+
+If $G$ is edgeless, $\chic(G)=1$ by the standard convention and changing one vertex at
+a time connects every two colourings.  The source definition then gives $\Mc(G)=1$.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent
+(\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup. Its step numbers
+refer to that writeup, not to this note. The scripts it mentions are in
+\texttt{verification\_astra/scripts/mixing\_circular\_colourings\_0/}. Treat it as
+machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{99}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{OPG} R.~C. Brewster and J.~A. Noel, \emph{Mixing Circular Colourings}, OpenProblemGarden, posted 22 September 2012, \url{http://www.openproblemgarden.org/op/mixing_circular_colourings_0}.
+\bibitem{BN15} R.~C. Brewster and J.~A. Noel, Mixing homomorphisms, recolourings, and extending circular precolourings, \emph{Journal of Graph Theory} \textbf{80} (2015), 173--198; arXiv:1412.3493.
+\bibitem{BMMN16} R.~C. Brewster, S.~McGuinness, B.~Moore and J.~A. Noel, A dichotomy theorem for circular colouring reconfiguration, \emph{Theoretical Computer Science} \textbf{639} (2016), 1--13; arXiv:1508.05573.
+\bibitem{BM23} R.~C. Brewster and B.~Moore, Characterizing circular colouring mixing for $p/q<4$, \emph{Journal of Graph Theory} \textbf{102} (2023), 296--324; arXiv:2008.12185.
+\end{thebibliography}
+
+\end{document}

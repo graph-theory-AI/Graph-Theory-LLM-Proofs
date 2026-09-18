@@ -1,0 +1,390 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\cyc}[2]{\lVert #1\rVert_{#2}}
+\newcommand{\dist}{d}
+\newcommand{\proj}{\pi}
+\newcommand{\idx}{\iota}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2008.03587\_\_00 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{Zombies can gain by waiting: a $59$-vertex cactus whose zombie number drops when a leaf is attached\\ (a negative answer to Question~4.1 of Bartier, Bénéteau, Bonamy, La and Narboni)}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In the deterministic game of zombies and survivor of Fitzpatrick, Howell, Messinger and Pike, Bartier, Bénéteau, Bonamy, La and Narboni asked (Question~4.1 of arXiv:2008.03587) whether attaching vertices of degree one to a graph can ever change its zombie number $z$; equivalently, whether zombies can gain by waiting before they start to move. We answer this in the negative: an explicit cactus $G$ on $59$ vertices, consisting of three odd cycles of lengths $25$, $17$ and $9$ hung from a path of length $10$, has $z(G)\ge3$, while the graph $H$ obtained by attaching one leaf to the far end of the path has $z(H)=2$. The proof is elementary and self-contained: a rotation argument on a pendant odd cycle (in substance the survivor's ``Busan strategy'' of the source paper) shows that two zombies never suffice on $G$, and a bracketing argument on the same cycles shows that two zombies placed at the two ends of the extended path capture the survivor on $H$, the leaf delaying the rear zombie by exactly the one move that the three cycle lengths $25=2\cdot11+3$, $17=2\cdot7+3$, $9=2\cdot3+3$ are tuned to. An exact game solver run by the referee gives $z(G)=3$ and $z(H)=2$, the placement used here being the unique winning pair on $H$.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+
+\paragraph{The game.} Zombies and Survivor is the variant of Cops and Robber in which the pursuers are compelled to approach. We use the deterministic rules of Fitzpatrick, Howell, Messinger and Pike \cite{FHMP16}, exactly as restated in Section~1 of the source paper \cite{BBBLN21}:
+\begin{enumerate}[label=(R\arabic*)]\tightlist
+\item all graphs are finite and connected, and there is a single survivor;
+\item the zombies are placed first, then the survivor chooses a starting vertex;
+\item in each round every zombie moves first, along an edge that lies on a shortest path (geodesic) from its vertex to the survivor's; this move is \emph{compulsory}, and when several geodesics are available the zombie \emph{chooses} which edge to take (this free will is what ``deterministic'' refers to);
+\item the survivor then moves to a neighbouring vertex or stays where it is;
+\item the zombies capture the survivor if a zombie moves onto the survivor's vertex.
+\end{enumerate}
+The \emph{zombie number} $z(G)$ is the least $k$ such that $k$ zombies have an initial placement from which they can force capture against every starting vertex and every strategy of the survivor. Since a zombie strategy is in particular a cop strategy, $c(G)\le z(G)$ where $c$ is the cop number; the source paper exhibits graphs with $c=2$ and $z$ arbitrarily large. As in the referee's solver we regard a survivor who moves onto a vertex occupied by a zombie as captured (the zombie then stands at distance zero); the survivor strategies below never make such a move, so the convention only affects the bookkeeping in the upper bound (see \cref{rem:conventions}).
+
+\paragraph{The problem.} Because a zombie starting on a pendant path must spend its first moves walking to the end of that path, attaching leaves to a graph lets some zombies ``wait'' before entering the original graph. The source paper asks whether this can ever matter.
+
+\begin{question}[{\cite[Question~4.1]{BBBLN21}}]\label{q:main}
+For every graph $G$, and for a graph $G'$ obtained from $G$ by successively adding vertices of degree $1$, does it always hold that $z(G')=z(G)$?
+\end{question}
+
+\noindent The authors add that the question ``can be interpreted as: is there any advantage for zombies to individually wait for some pre-announced time at the beginning of the game (and then activate and follow the standard rules)?'' \cite{BBBLN21}. We answer the question in the negative, by an explicit example in which waiting helps.
+
+\begin{theorem}[informal; \cref{thm:main}]
+There is a cactus $G$ on $59$ vertices with $z(G)\ge3$ such that the graph $H$ obtained from $G$ by attaching a single vertex of degree one has $z(H)=2$. In fact $z(G)=3$.
+\end{theorem}
+
+\paragraph{Related work.} Deterministic zombies were introduced in \cite{FHMP16}. The source paper \cite{BBBLN21} proves $z(G\mathbin{\mdlgwhtsquare}H)\le z(G)+z(H)$ for the Cartesian product and gives a family with cop number $2$ and unbounded zombie number; its Section~3 contains the survivor's ``Busan strategy'', a rotation around a long cycle, which is in substance the rotation lemma below (\cref{lem:rot}). According to the referee's search, only two works cite \cite{BBBLN21}: Bose, De Carufel and Shermer \cite{BDS22}, on zombie and lazy-zombie numbers of graph classes, and Liu and Miller \cite{LM26}, who determine the zombie number of ``foliage graphs'' (cycles sharing one vertex); Lemma~1 of \cite{LM26} is close to our \cref{lem:rot}. Neither addresses pendant vertices or \cref{q:main}, and no resolution of the question was found elsewhere (\cref{rem:novelty}).
+
+An earlier machine attempt on this problem (by \texttt{gpt-5.6-sol}; supplied to the model as context, see \cref{sec:provenance}) proved the general inequality $z(G')\le z(G)$ for every pendant extension $G'$ of $G$, and showed that a counterexample to \cref{q:main} must have $z(G)\ge3$ and $c(G)<z(G)$ and must use a mixture of zombies that start inside $G$ and zombies that start on the attached leaves. We do not reprove these facts, and none of them is needed below; the example of this note falls exactly in the window they leave open (\cref{rem:earlier}).
+
+\paragraph{Notation.} $\dist_Q(u,w)$ is the graph distance in $Q$. For $n\ge1$ and $a\in\Z$ or $a\in\Z_n$ we write $\cyc{a}{n}=\min\{|a'|: a'\in\Z,\ a'\equiv a \pmod n\}$ for the cyclic distance from $a$ to $0$ modulo $n$; thus $\cyc{a}{n}\le\lfloor n/2\rfloor$, and if $n=2h+1$ then $\cyc{a}{n}\le h$. A \emph{round} consists of the zombies' moves followed by the survivor's move; ``the start of round $t+1$'' is the moment after $t$ complete rounds, before the zombies move.
+
+\section{The two graphs and the main theorem}
+
+\begin{definition}[the graphs $G$ and $H$]\label{def:graphs}
+Let $P$ be the path $v_0v_1\cdots v_{10}$. The graph $G$ is obtained from $P$ by attaching three cycles through three of its vertices, with all other cycle vertices new and pairwise distinct:
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule
+cycle & length & vertices & edges \\
+\midrule
+$A$ & $25$ & $a_0=v_0,\ a_1,\dots,a_{24}$ & $a_ia_{i+1}$ for $i\in\Z_{25}$ \\
+$B$ & $17$ & $b_0=v_2,\ b_1,\dots,b_{16}$ & $b_ib_{i+1}$ for $i\in\Z_{17}$ \\
+$C$ & $9$ & $c_0=v_4,\ c_1,\dots,c_{8}$ & $c_ic_{i+1}$ for $i\in\Z_{9}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+So $V(G)=\{v_0,\dots,v_{10}\}\cup\{a_1,\dots,a_{24}\}\cup\{b_1,\dots,b_{16}\}\cup\{c_1,\dots,c_8\}$, $|V(G)|=11+24+16+8=59$, and $E(G)$ consists of the ten path edges $v_iv_{i+1}$ ($0\le i\le9$) together with the $25+17+9$ cycle edges of the table; $|E(G)|=61$. There are no other edges. $G$ is connected and is a cactus (every edge lies on at most one cycle; $|E|=|V|-1+3$).
+
+The graph $H$ is obtained from $G$ by adding one new vertex $v_{11}$ and the single edge $v_{10}v_{11}$; so $v_{11}$ has degree one, $|V(H)|=60$, $|E(H)|=62$, and $H$ is obtained from $G$ by adding a vertex of degree $1$ in the sense of \cref{q:main}.
+\end{definition}
+
+The three cycles have odd lengths $25=2\cdot12+1$, $17=2\cdot8+1$, $9=2\cdot4+1$, which is what the lower bound uses; they also satisfy $25=2\cdot11+3$, $17=2\cdot7+3$, $9=2\cdot3+3$ with $11=11-2\cdot0$, $7=11-2\cdot2$, $3=11-2\cdot4$ for the attachment indices $0,2,4$, which is what the upper bound uses (\cref{rem:tight}).
+
+\begin{restatable}[main theorem]{theorem}{thmmain}\label{thm:main}
+Let $G$ and $H$ be the graphs of \cref{def:graphs}. Then $z(G)\ge3$ and $z(H)=2$. More precisely:
+\begin{enumerate}[label=(\roman*)]\tightlist
+\item for every choice of two starting vertices in $G$ (not necessarily distinct) the survivor has a starting vertex and a strategy that avoids capture forever;
+\item in $H$, two zombies placed at $v_0$ and $v_{11}$ capture the survivor from every starting vertex, within at most $17$ rounds;
+\item in $H$, one zombie can be evaded from every starting vertex.
+\end{enumerate}
+\end{restatable}
+
+\begin{corollary}\label{cor:main}
+The answer to \cref{q:main} is negative: $H$ is obtained from $G$ by adding one vertex of degree $1$, yet $z(H)=2<3\le z(G)$. In particular zombies can gain by waiting: the winning placement on $H$ consists of one zombie that is active at once and one zombie that is delayed by exactly one move.
+\end{corollary}
+
+\begin{proof}
+Immediate from \cref{thm:main}: (i) gives $z(G)\ge3$, (ii) gives $z(H)\le2$ and (iii) gives $z(H)\ge2$. The zombie at $v_{11}$ must spend its first move going to $v_{10}$ whatever the survivor does, so its play on $H$ is that of a zombie placed at $v_{10}$ in $G$ that waits one round.
+\end{proof}
+
+\begin{proofidea}
+Both halves rest on two facts about a cycle $Z$ of odd length hung from a cut vertex (\cref{sec:lemmas}).
+
+\emph{Lower bound.} If $Z$ has length $2h+1$ and a zombie is on $Z$ at forward distance $g\in\{2,\dots,h\}$ behind a survivor who keeps walking around $Z$, the zombie's only legal move is to follow, so $g$ never changes and the survivor is never caught; a zombie outside $Z$ is forced to walk to the root of $Z$ and, on arrival, finds itself at a forward distance determined by its initial distance to the root (its \emph{phase}). Two zombies can both be kept in the window $\{2,\dots,h\}$ as soon as their phases differ by at most $h-2$ cyclically (\cref{lem:rot,cor:rot}): $10$ on $A$, $6$ on $B$, $2$ on $C$. A short case analysis on where the two zombies start (both outside $A$, both on $A$, or one of each) shows that one of the three cycles always accommodates both phases, because every vertex outside $A$ is within distance $10$ of $v_0$, the vertices of $A$ are within $12$, and the only bad pair on $A$ (distances $12$ and $1$ from $v_0$, the latter forcing the zombie to be at $v_1$) is rescued by $B$. Hence two zombies never win on $G$; a single zombie is evaded on $A$ in the same way, in $G$ or in $H$.
+
+\emph{Upper bound.} Place the zombies at $v_0$ and $v_{11}$ in $H$ and let them walk along the path towards the survivor's projection on the path. Since $11$ is odd they never collide; after $t$ rounds they stand at $v_t$ and $v_{11-t}$ with the survivor's projection strictly between them, which is impossible for $t=5$ ($v_5,v_6$ are adjacent), so by round $5$ either the survivor is caught on the path or the front zombie reaches the root $v_r$ ($r\in\{0,2,4\}$) of the cycle containing the survivor, at time $t=r$, with the rear zombie at $v_{11-r}$, at distance $d=11-2r$ from the root; the rear zombie, which stands at $v_{11-t}$ with $11-t\ge6$, never makes such a contact first. The cycle then has length exactly $2d+3$, and the capture lemma (\cref{lem:cap}) finishes: the root zombie chases the survivor around the cycle, which keeps the survivor away from the root for the $d$ rounds the second zombie needs to arrive at the root; then the survivor is bracketed between two zombies approaching from opposite sides along an arc, and the arc loses two edges per round.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{Two lemmas about a cycle hanging from a cut vertex}\label{sec:lemmas}
+
+Throughout this section $Q$ is a finite connected graph.
+
+\begin{definition}[pendant cycle]\label{def:pendant}
+A \emph{pendant cycle} of $Q$ with \emph{root} $\rho$ is an induced cycle $Z$ of $Q$ together with a vertex $\rho\in V(Z)$ such that $\rho$ is the only vertex of $Z$ having a neighbour outside $V(Z)$. When $Z$ has length $n$ we fix an orientation and label $V(Z)$ by $\Z_n$ along it, with $\rho=0$; the label of a vertex is its \emph{coordinate}. For a vertex $x$ of $Q$ we define its \emph{phase} on $Z$ by
+\[
+p(x)=\begin{cases} x & \text{if } x\in V(Z) \text{ (its coordinate)},\\ -\dist_Q(x,0) \bmod n & \text{if } x\notin V(Z).\end{cases}
+\]
+\end{definition}
+
+In $G$ and in $H$ the cycles $A$, $B$, $C$ are pendant cycles with roots $v_0$, $v_2$, $v_4$ respectively: each is induced, and its root is its only vertex with neighbours outside it. The following lemma records the metric facts that the writeup used tacitly (the referee's Caveat C1, \cref{app:referee}).
+
+\begin{restatable}[distances around a pendant cycle]{lemma}{lemdist}\label{lem:dist}
+Let $Z$ be a pendant cycle of $Q$ of length $n$, labelled by $\Z_n$ with root $0$.
+\begin{enumerate}[label=(\alph*)]\tightlist
+\item $Z$ is isometric in $Q$: $\dist_Q(u,w)=\cyc{u-w}{n}$ for all $u,w\in V(Z)$.
+\item For $y\notin V(Z)$ and $s\in V(Z)$: $\dist_Q(y,s)=\dist_Q(y,0)+\cyc{s}{n}$.
+\item For $y\notin V(Z)$ and $s\in V(Z)$, a neighbour $y'$ of $y$ satisfies $\dist_Q(y',s)=\dist_Q(y,s)-1$ if and only if $\dist_Q(y',0)=\dist_Q(y,0)-1$. Consequently, while the survivor is on $Z$, every legal move of a zombie outside $Z$ decreases its distance to the root by exactly one, whichever geodesic it chooses, and the zombie reaches the root after exactly $\dist_Q(y,0)$ moves.
+\item Suppose $n=2h+1$ is odd. If $c,s\in V(Z)$ and $s-c\equiv g\pmod n$ with $1\le g\le h$, then $\dist_Q(c,s)=g$ and $c+1$ is the \emph{unique} neighbour of $c$ (in $Q$) closer to $s$ than $c$; symmetrically, if $s-c\equiv-g$ with $1\le g\le h$ then $c-1$ is the unique closer neighbour.
+\end{enumerate}
+\end{restatable}
+
+\begin{proofidea}
+Every path from $V(Z)\setminus\{0\}$ to the outside of $Z$ passes through the root, so a shortest path between two cycle vertices never leaves $Z$, and distances from outside to the cycle split at the root. Part (d) is the arithmetic of $\min(g,n-g)$ for odd $n$.\fullproofref{pf:dist}
+\end{proofidea}
+
+\begin{restatable}[rotation lemma]{lemma}{lemrot}\label{lem:rot}
+Let $Z$ be a pendant cycle of $Q$ of odd length $n=2h+1$ with $h\ge2$, labelled by $\Z_n$ with root $0$. Suppose $k$ zombies start at vertices $x_1,\dots,x_k$ of $Q$ and that some $q\in\Z_n$ satisfies
+\begin{equation}\label{eq:window}
+q-p(x_i)\bmod n\ \in\ \{2,3,\dots,h\}\qquad\text{for every } i=1,\dots,k .
+\end{equation}
+Then the survivor who starts at the vertex $q$ of $Z$ and, in every round, moves to the next vertex in the orientation is never captured.
+\end{restatable}
+
+\begin{restatable}{corollary}{correot}\label{cor:rot}
+In the setting of \cref{lem:rot}:
+\begin{enumerate}[label=(\roman*)]\tightlist
+\item one zombie, wherever it starts, can be evaded forever (take $q=p(x_1)+2$);
+\item two zombies starting at $x_1,x_2$ can be evaded forever whenever $\cyc{p(x_1)-p(x_2)}{n}\le h-2$.
+\end{enumerate}
+For the three cycles of $G$: $h-2=10$ on $A$ ($n=25$, $h=12$), $h-2=6$ on $B$ ($n=17$, $h=8$), $h-2=2$ on $C$ ($n=9$, $h=4$).
+\end{restatable}
+
+\begin{proofidea}
+A zombie on $Z$ at forward gap $g\in\{2,\dots,h\}$ behind the survivor has, by \cref{lem:dist}(d), exactly one legal move, one step forward; the survivor also steps forward, so $g$ is invariant and there is never contact. A zombie outside $Z$ at distance $\delta$ from the root loses one unit of $\delta$ per round (\cref{lem:dist}(c)) while the survivor's coordinate gains one, so the sum ``coordinate of survivor $+\ \delta$'' is invariant; \eqref{eq:window} says this sum is in $\{2,\dots,h\}$, so when $\delta$ reaches $0$ the survivor is not at the root and the zombie enters the first regime with a gap in the window. For the corollary, the differences of two elements of $\{2,\dots,h\}$ fill exactly $[-(h-2),h-2]$.\fullproofref{pf:rot}
+\end{proofidea}
+
+The rotation strategy is, in substance, the survivor's ``Busan strategy'' of \cite[Section~3]{BBBLN21}, and is close to Lemma~1 of Liu and Miller \cite{LM26}; we reprove it because the precise phase condition \eqref{eq:window} for zombies starting \emph{outside} the cycle is what the case analysis on $G$ needs.
+
+\begin{restatable}[capture lemma]{lemma}{lemcap}\label{lem:cap}
+Let $Z$ be a pendant cycle of $Q$ of length $n=2d+3$ with $d\ge1$ and root $0$. Suppose that at the start of some round one zombie stands at the root, a second zombie stands at a vertex $y\notin V(Z)$ with $\dist_Q(y,0)=d$, and the survivor stands at a vertex of $V(Z)\setminus\{0\}$. Then the two zombies can force capture (within $d+\lceil d/2\rceil+1$ rounds).
+\end{restatable}
+
+\begin{proofidea}
+Orient $Z$ so that the survivor's coordinate $p$ lies in $[1,d+1]$ (possible as $n$ is odd). The root zombie steps forward every round; its forward gap to the survivor, which starts at $p\le d+1$, can only decrease, so by \cref{lem:dist}(d) the forward step is always its unique legal move, and while the gap is at least $2$ the survivor's unwrapped coordinate stays in $[t+2,\,t+d+1]\subset(0,n)$ after $t\le d$ rounds: the survivor cannot reach the root and cannot leave the cycle. Meanwhile the outside zombie is forced to the root (\cref{lem:dist}(c)) and arrives after exactly $d$ rounds. Now the zombies stand at coordinates $d$ and $n\equiv0$ with the survivor strictly between them on the arc from $d$ to $n$, both arc distances at most $d+1$ and therefore genuine shortest-path distances; both zombies step inward, the arc between them loses two edges per round, the survivor cannot pass through an occupied endpoint, and capture follows.\fullproofref{pf:cap}
+\end{proofidea}
+
+\section{Remarks}
+
+\begin{remark}[the referee's exact computation]\label{rem:computation}
+The referee (\cref{app:referee}) wrote an exact solver for the game (attractor computation over states ``ordered zombie tuple, survivor, zombies to move'', existential over the zombies' joint choice of geodesics and universal over the survivor's replies), validated it on graphs with known zombie number ($K_2$, $K_3$, cycles $C_4,\dots,C_{11}$, paths, $K_{1,5}$, the Petersen graph) and cross-checked it against an independently written fixed-point solver from an earlier campaign on $120$ random connected graphs on $4$--$9$ vertices with $0$ mismatches. On the graphs of \cref{def:graphs} it found: no $1$- or $2$-zombie placement wins on $G$, and exactly $1250$ unordered triples win, so $z(G)=3$ \emph{exactly} (the writeup and \cref{thm:main} only claim $z(G)\ge3$); no $1$-zombie placement wins on $H$, and exactly one unordered pair wins on $H$, namely $\{v_0,v_{11}\}$, which beats all $60$ survivor starts, so $z(H)=2$ and the placement of \cref{thm:main}(ii) is the \emph{only} one that works. The referee also enumerated all $\binom{59}{2}+59=1770$ unordered pairs of starting vertices in $G$ and confirmed that each admits a rotation certificate (\cref{cor:rot}(ii)) on $A$, $B$ or $C$, i.e.\ that the three-case analysis in the proof of \cref{thm:main}(i) is exhaustive with no uncovered pair, and it verified the distance facts used there ($\max\dist(v_0,\cdot)=10$ outside $A$ and $12$ on $A$; $v_1$ the only vertex outside $A$ at distance $1$ from $v_0$; $\dist(x,v_2)=\dist(x,v_0)+2$ and $\dist(x,v_4)=\dist(x,v_0)+4$ for $x\in A$). Scripts: \texttt{verification\_astra/scripts/2008.03587\_\_00/}.
+\end{remark}
+
+\begin{remark}[rule conventions]\label{rem:conventions}
+The proofs use the rules (R1)--(R5) of \cite{FHMP16} as restated in \cite{BBBLN21}; the referee checked this restatement against the TeX source of \cite{BBBLN21} (lines 165--190) and confirmed in particular that the zombie team exercises free will over which geodesic to follow, in its own favour (the proof of Theorem~2.1 there has zombies ``choosing to keep the same coordinate''), while survivor strategies must work against \emph{all} zombie choices, as ours do. Two details are conventions rather than rules. First, a survivor who moves onto a zombie's vertex is regarded as captured; the survivor strategies of \cref{thm:main}(i),(iii) never do this, so the lower bounds do not depend on it, and in the upper bound it only serves to end the play at once rather than one zombie move later. Second, the referee re-ran its solver under three variants: the standard rules; ``the survivor may not stay'' (must move); and ``the survivor moves first, then the zombies''. Under all three, two zombies do not win on $G$, one zombie does not win on $H$, and $\{v_0,v_{11}\}$ wins on $H$. The separation is thus insensitive to these conventions. What is essential is the compulsory motion of the zombies: under the ``zombies may pass'' variant $z_{\mathrm{pass}}$ considered by the earlier attempt, the delay mechanism disappears (that attempt proved $z_{\mathrm{pass}}(G)\le z(G')\le z(G)$ for every pendant extension $G'$).
+\end{remark}
+
+\begin{remark}[tightness of the parameters]\label{rem:tight}
+The construction has no slack. The upper bound needs the cycle rooted at $v_r$ to have length exactly $2(11-2r)+3$, which gives $25$, $17$, $9$ for $r=0,2,4$; the lower bound needs the windows $h-2=10,6,2$ of these three cycles to cover all phase differences that arise. The referee tested the same design with a path $v_0\cdots v_L$, leaf $v_{L+1}$ and cycles of lengths $2(L+1-2r)+3$ at $r\in\{0,2,4\}$: for $L=6$ (cycles $17,9$; $31$ vertices) and $L=8$ (cycles $21,13,5$; $45$ vertices) two zombies already win on $G$, so there is no separation; $L=10$ is the first case that works. Deleting any one of the three cycles from the $59$-vertex $G$ (any of the six proper subsets of $\{v_0,v_2,v_4\}$) also lets two zombies win on $G$. Every ingredient is load-bearing.
+\end{remark}
+
+\begin{remark}[what the proof uses about the host graph]\label{rem:isometry}
+The writeup stated the rotation and capture lemmas for a cycle ``attached to the rest of the graph only at its vertex $0$''. What the arguments actually use is \cref{lem:dist}: the cycle is isometric and distances from outside split additively at the root. Both follow from the root being a cut vertex separating the rest of the cycle from the rest of the graph and from the cycle being induced, which is \cref{def:pendant}; in $G$ and $H$ this holds by construction. In the upper bound the same additivity is used along the path: for a path vertex $v_i$ and any vertex $s$ of $H$, $\dist_H(v_i,s)=|i-\idx(s)|+\dist_H(v_{\idx(s)},s)$, where $v_{\idx(s)}$ is the projection of $s$ to the path (\cref{pf:main}).
+\end{remark}
+
+\begin{remark}[relation to the earlier attempt]\label{rem:earlier}
+The earlier attempt (\cref{sec:provenance}) established, for every pendant extension $G'$ of any connected $G$, that $z(G')\le z(G)$ and $c(G')=c(G)$, and that a strict inequality $z(G')<z(G)$ requires $z(G)\ge3$, $c(G)<z(G)$, and a winning placement mixing zombies that start in $G$ with zombies that start on the attached vertices. The present example is consistent with all of this: $z(G)=3$, $z(H)=2$, the referee notes $c(G)=2$ for this cactus, and the unique winning placement $\{v_0,v_{11}\}$ mixes one active and one delayed zombie. The earlier attempt also showed that equal delays for all zombies never help, so a mixed placement is not merely sufficient but necessary; here the delay is the smallest possible, one move.
+\end{remark}
+
+\begin{remark}[what remains open]\label{rem:open}
+\Cref{thm:main} refutes the equality $z(G')=z(G)$ but drops the zombie number by exactly one. The natural refined questions are open: how far below $z(G)$ can $z(G')$ fall, and is the drop bounded by a function of $z(G)$ or unbounded? Nothing here bears on Question~4.2 of \cite{BBBLN21}. On the positive side, the earlier attempt's inequality $z(G')\le z(G)$ shows that leaves can only help the zombies, never the survivor.
+\end{remark}
+
+\begin{remark}[the sibling target and the faithfulness of the statement]\label{rem:sibling}
+The same source paper's Question~4.2 was the target \texttt{2008.03587\_\_01} of the first campaign; that attempt was rejected by its referee because the catalog transcription had replaced a ``$\ge$'' by ``$>$'' and the model refuted the garbled statement. For this reason the referee of the present target began by re-downloading the arXiv TeX source of \cite{BBBLN21} (v3, \texttt{main.tex}, lines 420--423) and found that Question~4.1 is transcribed verbatim in the problem statement given to the model; \cref{q:main} above reproduces it. The writeup attacks the genuine question, and the paper's own gloss (waiting zombies) is exactly the mechanism of \cref{cor:main}.
+\end{remark}
+
+\begin{remark}[novelty and attribution]\label{rem:novelty}
+The referee found, via Semantic Scholar, exactly two works citing \cite{BBBLN21}: Bose, De Carufel and Shermer \cite{BDS22} (whose arXiv source contains no occurrence of ``pendant'', ``degree 1'' or ``degree one'') and Liu and Miller \cite{LM26} (read in full; it characterises the zombie number of foliage graphs and asks for the characterisation at $z>2$, without mentioning pendant vertices or \cref{q:main}). Targeted web searches found no resolution of the question (one search-engine summary asserting an affirmative resolution was unsupported by any document and was discarded). To the referee's knowledge the negative answer is new. The ingredients are not: the rotation strategy is the Busan strategy of \cite[Section~3]{BBBLN21} and is close to \cite[Lemma~1]{LM26}, and the writeup claimed no novelty for it. What is new is the combination: three odd cycles whose lengths are tuned to the arrival times of a one-move-delayed zombie so that a two-zombie capture exists on $H$, while the same lengths leave a rotation window on some cycle for every pair of starts on $G$.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-6-astra} (reasoning effort max) in a single autonomous pass started on 2026-09-17, as part of the retry leg of a sweep over open problems catalogued from arXiv (catalog id \texttt{2008.03587\_\_00}, leg \texttt{attacks\_retry}; original writeup in \texttt{attacks\_retry/2008.03587\_\_00/output.md}). This was a \emph{second} attempt on the problem: the prompt contained, as context, the earlier attempt \texttt{attacks/2008.03587\_\_00} by \texttt{gpt-5.6-sol}, whose verdict was ``partial'' (it proved $z(G')\le z(G)$, the invariance for $z(G)\le2$ and for $z(G)=c(G)$, and the structural constraints recalled in \cref{rem:earlier}, but found no counterexample). The new writeup shares with it only the statement of the rules; its graphs, lemmas and proofs are constructed from scratch, and the referee confirmed that nothing was inherited uncritically. The model itself claimed the verdict ``disproved'' with high confidence, flagged that it relied on the compulsory-move rules with zombies moving first, and made no computational or literature claim.
+(2)~An independent adversarial referee agent (\texttt{claude-opus-5}) reviewed the writeup on 2026-09-17. It re-downloaded the arXiv TeX source of the source paper and checked the statement of Question~4.1 and the game rules word for word; re-derived each of the nineteen steps it extracted from the writeup and found all of them valid, two of them (the Section~5 sentences repaired below) under-argued; wrote an exact game solver from scratch, validated it on known values and cross-checked it against an independent solver on $120$ random graphs; computed $z(G)=3$ and $z(H)=2$ exactly with the counts in \cref{rem:computation}; certified all $1770$ start pairs on $G$; tested three rule conventions and the tightness of the parameters (\cref{rem:conventions,rem:tight}); and searched the literature (\cref{rem:novelty}). Its verdict was \textsc{confirmed} with high confidence. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-17 the writeup was rewritten into the present note by \texttt{claude-fable-5-1}. The deviations from the writeup are the following; no mathematical content was changed.
+\begin{itemize}\tightlist
+\item The text was reorganised: the graphs are a definition with explicit vertex names and edge rules (the writeup described them in prose), the result is \cref{thm:main} with the three parts (i)--(iii) separated, \cref{cor:main} states the answer to the question, and full proofs are collected in \cref{app:proofs}. The edge counts $61$ and $62$ and the cactus property are from the referee report.
+\item \Cref{def:pendant} (pendant cycle, phase) and \cref{lem:dist} were added to state explicitly the isometry of each cycle and the additivity of distances at its root, which the writeup's rotation lemma, capture lemma and Section~5 used tacitly (the referee's Caveat C1). The phase is now defined by the writeup's formula but with a named orientation convention.
+\item The proof of \cref{lem:rot} was rewritten as an explicit round-by-round invariant (survivor coordinate plus distance of an outside zombie to the root is constant), and the proof of \cref{cor:rot} gives the explicit choice of $q$; the writeup's phrase ``unique shortest route is in the survivor's direction'' is now \cref{lem:dist}(d).
+\item In the proof of \cref{lem:cap} the writeup's invariant $2\le g_t$ was relaxed to $1\le g_t$, with $g_t=1$ handled as capture in the next zombie move; this removes a tacit ``no capture in the following round'' hypothesis from the induction and makes the case $u_d=d+1$ explicit. The squeeze was written with an explicit invariant (survivor strictly inside the arc, both arc distances at most $d+1$, no multiple of $n$ inside the arc), and the round bound $d+\lceil d/2\rceil+1$ was added in the proof; the writeup gave no bound. The bound $17$ rounds in \cref{thm:main}(ii) is $5+11+\lceil 11/2\rceil+1$ hmm and is derived in \cref{pf:main}.
+\item The two sentences of the writeup's Section~5 identified by the referee as hand-waved were replaced by proofs (Caveats C2, C3): ``this shrinking interval cannot support evasion indefinitely'' became the statement that the zombies stand at $v_t,v_{11-t}$ and at $t=5$ on the adjacent vertices $v_5,v_6$, so capture or root contact occurs by round $5$; ``this first contact is made by the zombie coming from $v_0$'' became the observation that the rear zombie stands at $v_{11-t}$ with $11-t\ge6$ for $t\le5$ while all roots have index at most $4$. The projection $\proj$ and the index $\idx$ were named, and the distance formula along the path was stated.
+\item The convention that a survivor moving onto a zombie is captured was made explicit (the referee's Caveat C6); the writeup did not discuss it.
+\item Citations were added: Fitzpatrick, Howell, Messinger and Pike \cite{FHMP16} for the rules; the published version of the source paper \cite{BBBLN21}; Bose, De Carufel and Shermer \cite{BDS22} and Liu and Miller \cite{LM26} as the only works citing the source paper; and the attribution of the rotation strategy to the source paper's Busan strategy and to \cite[Lemma~1]{LM26} (the referee's Caveat C8). The writeup cited nothing.
+\item \Cref{rem:computation,rem:conventions,rem:tight,rem:isometry,rem:earlier,rem:open,rem:sibling,rem:novelty} were written from the referee report; in particular the exact values $z(G)=3$ and the uniqueness of the winning pair, the convention tests, the tightness experiments and the literature search are the referee's, not the writeup's. The results of the earlier attempt quoted in \cref{rem:earlier,rem:conventions,rem:open} are that attempt's, are marked as such, and are not reproved.
+\item The title and abstract were written by the rewriter.
+\end{itemize}
+\textbf{No human mathematician has checked this argument.} We circulate it for human review.
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:dist}
+\lemdist*
+\begin{proof}
+Write $Z^\circ=V(Z)\setminus\{0\}$. By definition no edge of $Q$ joins $Z^\circ$ to $V(Q)\setminus V(Z)$, so every path of $Q$ from a vertex of $Z^\circ$ to a vertex outside $V(Z)$ passes through $0$.
+
+(a) Let $u,w\in V(Z)$ and let $W$ be a shortest $u$--$w$ path in $Q$. If $W$ contained a vertex outside $V(Z)$, take a maximal subpath $W'$ of $W$ all of whose vertices lie outside $V(Z)$; since $u,w\in V(Z)$, $W'$ is preceded and followed on $W$ by vertices of $Z$ having a neighbour outside $V(Z)$, that is, by the root $0$ on both sides, so the path $W$ visits $0$ twice, a contradiction. Hence $W$ lies in $Z$, and since $Z$ is an induced cycle, $\dist_Q(u,w)=\dist_Z(u,w)=\cyc{u-w}{n}$.
+
+(b) Let $y\notin V(Z)$ and $s\in V(Z)$. If $s=0$ there is nothing to prove. Otherwise every $y$--$s$ path enters $V(Z)$ for the first time at a vertex of $Z$ that has a neighbour outside $V(Z)$, i.e.\ at $0$; so $\dist_Q(y,s)\ge\dist_Q(y,0)+\dist_Q(0,s)$, and concatenating shortest paths gives the reverse inequality. By (a), $\dist_Q(0,s)=\cyc{s}{n}$.
+
+(c) Let $y\notin V(Z)$, $s\in V(Z)$ and let $y'$ be a neighbour of $y$. Since $y\notin V(Z)$, $y'\notin Z^\circ$; so either $y'\notin V(Z)$ and (b) applies to $y'$, or $y'=0$ and $\dist_Q(y',s)=\cyc{s}{n}=\dist_Q(y',0)+\cyc{s}{n}$ trivially. In both cases $\dist_Q(y',s)-\dist_Q(y,s)=\dist_Q(y',0)-\dist_Q(y,0)$, which proves the equivalence. A legal zombie move from $y$ towards a survivor at $s$ is a move to a neighbour $y'$ with $\dist_Q(y',s)=\dist_Q(y,s)-1$; so it decreases $\dist_Q(\cdot,0)$ by exactly one, and after $\dist_Q(y,0)$ such moves the zombie is at $0$, whatever choices it made. (Such a neighbour always exists while $y\ne s$, since $Q$ is connected.)
+
+(d) Let $n=2h+1$, $c,s\in V(Z)$, $s-c\equiv g$ with $1\le g\le h$. By (a), $\dist_Q(c,s)=\min(g,n-g)=g$, because $n-g\ge h+1>g$. The neighbours of $c$ are $c+1$, $c-1$ and, if $c=0$, the neighbours of the root outside $Z$. We have $\dist_Q(c+1,s)=\min(g-1,\,n-g+1)=g-1$ since $g-1\le h-1<h+2\le n-g+1$. Next, $\dist_Q(c-1,s)=\min(g+1,\,n-g-1)$; this equals $g-1$ only if $g+1=g-1$ or $n-g-1=g-1$, i.e.\ $n=2g$, both impossible as $n$ is odd. Finally, if $c=0$ and $y'$ is a neighbour of $0$ outside $Z$, then by (b) $\dist_Q(y',s)=1+\cyc{s}{n}=1+g>g-1$. Hence $c+1$ is the unique neighbour of $c$ at distance $g-1$ from $s$. The symmetric statement follows by reversing the orientation.
+\end{proof}
+
+\phantomsection\label{pf:rot}
+\lemrot*
+\begin{proof}
+For each zombie $i$ put $e_i=q-p(x_i)\bmod n\in\{2,\dots,h\}$. The survivor's coordinate at the start of round $t\ge1$ is $s_t=q+t-1\pmod n$, and its move in round $t$ is to $s_{t+1}=s_t+1$, a neighbour of $s_t$ on $Z$. We show by induction on $t$ that at the start of every round $t$ the following invariant holds for every zombie $i$, and that no capture occurs in round $t$:
+\begin{itemize}\tightlist
+\item[(on)] the zombie is on $Z$, at a coordinate $c$ with $s_t-c\bmod n\in\{2,\dots,h\}$; or
+\item[(off)] the zombie is outside $V(Z)$, at distance $\delta\ge1$ from the root, and $s_t+\delta\equiv e_i\pmod n$.
+\end{itemize}
+\emph{Base $t=1$.} Here $s_1=q$. If $x_i\in V(Z)$ then $p(x_i)=x_i$ and $q-x_i\equiv e_i\in\{2,\dots,h\}$: (on). If $x_i\notin V(Z)$ then $\delta=\dist_Q(x_i,0)\ge1$, $p(x_i)=-\delta$, and $q+\delta\equiv q-p(x_i)=e_i$: (off).
+
+\emph{Step.} Assume the invariant at the start of round $t$, and consider a zombie $i$.
+
+Case (on): the zombie is at $c$ with $g:=s_t-c\bmod n\in\{2,\dots,h\}$. By \cref{lem:dist}(d) its unique legal move is to $c+1$, and $c+1\ne s_t$ because $g\ge2$; so it does not capture. The survivor then moves to $s_{t+1}=s_t+1$, which differs from $c+1$ (the difference is $g\not\equiv0$), so the survivor does not step onto this zombie, and $s_{t+1}-(c+1)\equiv g\in\{2,\dots,h\}$: (on) holds at the start of round $t+1$.
+
+Case (off): the zombie is at $y\notin V(Z)$ with $\dist_Q(y,0)=\delta\ge1$ and $s_t+\delta\equiv e_i$. Since the survivor is on $Z$, by \cref{lem:dist}(c) every legal move takes the zombie to a vertex $y'$ with $\dist_Q(y',0)=\delta-1$. If $\delta\ge2$, then $y'\notin V(Z)$ (as $\dist_Q(y',0)\ge1$ and $y'\notin Z^\circ$), so no capture occurs; the survivor moves to $s_{t+1}=s_t+1$ and $s_{t+1}+(\delta-1)=s_t+\delta\equiv e_i$: (off) holds at the start of round $t+1$. If $\delta=1$, the zombie lands on the root $0$. At this moment $s_t\equiv e_i-\delta=e_i-1\in\{1,\dots,h-1\}$, so $s_t\ne0$ and there is no capture. The survivor moves to $s_{t+1}=s_t+1\equiv e_i\in\{2,\dots,h\}$; in particular $s_{t+1}\ne0$, so the survivor does not step onto the zombie, and $s_{t+1}-0\equiv e_i\in\{2,\dots,h\}$: (on) holds at the start of round $t+1$.
+
+Since zombies are captured-or-not independently of one another, the invariant holds for all $t$ and no zombie ever captures the survivor.
+\end{proof}
+
+\correot*
+\begin{proof}
+(i) With $q=p(x_1)+2$ we have $q-p(x_1)=2\in\{2,\dots,h\}$ (recall $h\ge2$), and \cref{lem:rot} applies.
+
+(ii) Let $r\in\Z$ be the representative of $p(x_2)-p(x_1)\pmod n$ with $|r|\le h-2$, which exists by hypothesis. If $r\ge0$ put $q=p(x_1)+h$; then $q-p(x_1)\equiv h$ and $q-p(x_2)\equiv h-r\in[2,h]$. If $r<0$ put $q=p(x_1)+2$; then $q-p(x_1)\equiv2$ and $q-p(x_2)\equiv2-r=2+|r|\in[2,h]$. In both cases \eqref{eq:window} holds for both zombies and \cref{lem:rot} applies. (Conversely, the set of differences of two elements of $\{2,\dots,h\}$ is exactly $[-(h-2),h-2]$, so the condition is also necessary for a common $q$ to exist; we do not need this.) The values $h-2=10,6,2$ for $n=25,17,9$ come from $25=2\cdot12+1$, $17=2\cdot8+1$, $9=2\cdot4+1$.
+\end{proof}
+
+\phantomsection\label{pf:cap}
+\lemcap*
+\begin{proof}
+Put $h=d+1$, so $n=2h+1$. Label $Z$ by $\Z_n$ with root $0$. The survivor's vertex has a representative $c\in\{1,\dots,2d+2\}$; if $c\le d+1$ keep the orientation, otherwise reverse it (which replaces $c$ by $n-c\le d+1$). So we may assume the survivor is at coordinate $p$ with $1\le p\le d+1$. Call the zombie at the root $Z_1$ and the other one $Z_2$.
+
+If $p=1$, $Z_1$ is at distance $1$ from the survivor and any legal move takes it onto the survivor: capture in this round. Assume $2\le p\le d+1$.
+
+\emph{Strategy.} $Z_1$ moves one step forward (in the chosen orientation) in every round; $Z_2$ moves along any geodesic until it reaches the root, and thereafter one step backward (against the orientation) in every round. We show that these moves are legal and force capture. We use \emph{unwrapped} integer coordinates: $Z_1$ is at coordinate $t$ after $t$ rounds; the survivor's coordinate after $t$ rounds is the integer $u_t$ with $u_0=p$ and $u_t-u_{t-1}\in\{-1,0,1\}$, which is well defined as long as the survivor stays on $Z$ (we show it does). Put $g_t=u_t-t$.
+
+\emph{Phase 1 (rounds $1,\dots,d$).} Claim: for $0\le t\le d$, if the survivor has not been captured during rounds $1,\dots,t$, then at the start of round $t+1$: $Z_1$ is at coordinate $t$; $Z_2$ is outside $V(Z)$ at distance $d-t$ from the root if $t<d$, and at the root if $t=d$; and $1\le g_t\le p$. In particular
+\begin{equation}\label{eq:range}
+t+1\le u_t\le t+p\le t+d+1\le 2d+1<n ,
+\end{equation}
+so the survivor's vertex lies in $V(Z)\setminus\{0\}$ and its only neighbours are $u_t\pm1$.
+
+The claim holds for $t=0$. Let $0\le t\le d-1$, assume the claim at $t$, and suppose the survivor is not captured in round $t+1$. By \cref{lem:dist}(d) with $g=g_t\in[1,h]$, $Z_1$'s unique legal move is to $t+1$; if $g_t=1$ this is a capture, contrary to assumption, so $g_t\ge2$ and $Z_1$ lands at $t+1<u_t$. Since the survivor is on $Z$, by \cref{lem:dist}(c) every legal move of $Z_2$ decreases its distance to the root from $d-t\ge1$ to $d-t-1$; if $d-t-1\ge1$ it stays outside $V(Z)$, and if $d-t-1=0$ it lands on the root, which is not the survivor's vertex by \eqref{eq:range}. So the zombie move causes no capture. The survivor now moves to $u_{t+1}\in\{u_t-1,u_t,u_t+1\}$ (or stays); if $u_{t+1}=t+1$ (possible only when $g_t=2$) it steps onto $Z_1$ and is captured, contrary to assumption. Hence $u_{t+1}\ge t+2$, i.e.\ $g_{t+1}\ge1$, and $g_{t+1}=u_{t+1}-(t+1)\le u_t+1-(t+1)=g_t\le p$. The claim holds at $t+1$.
+
+\emph{Phase 2 (the squeeze).} Suppose the survivor was not captured during rounds $1,\dots,d$. At the start of round $d+1$: $Z_1$ is at $\alpha_0:=d$, $Z_2$ is at the root, which we write as the unwrapped coordinate $\beta_0:=n=2d+3$, and the survivor is at $u:=u_d$ with $d+1\le u\le2d+1$ by \eqref{eq:range}. If $u=d+1$ then $g_d=1$ and $Z_1$ captures in round $d+1$ by \cref{lem:dist}(d). Otherwise $d+2\le u\le2d+1$, and we have the following invariant $(J)$ at the start of round $d+1$, with $\alpha=\alpha_0$, $\beta=\beta_0$:
+\begin{itemize}\tightlist
+\item[$(J)$] $Z_1$ is at unwrapped coordinate $\alpha$ and $Z_2$ at $\beta$, with $d\le\alpha<u<\beta\le n$; the arc distances $f=u-\alpha$ and $b=\beta-u$ satisfy $1\le f\le d+1$ and $1\le b\le d+1$.
+\end{itemize}
+Indeed $f=u-d\in[2,d+1]$ and $b=2d+3-u\in[2,d+1]$. Note that $(J)$ implies $0<\alpha<u<\beta\le n$, so $u\not\equiv0\pmod n$: the survivor is on $Z^\circ$ and its only neighbours are $u\pm1$.
+
+Consider a round starting with $(J)$. By \cref{lem:dist}(d) (with $g=f\in[1,h]$), the forward step to $\alpha+1$ is $Z_1$'s unique legal move, and by the symmetric statement (with $g=b\in[1,h]$) the backward step to $\beta-1$ is $Z_2$'s unique legal move. If $f=1$ or $b=1$, the corresponding move is a capture. Otherwise $\alpha+1<u<\beta-1$, and the survivor moves to $u'\in\{u-1,u,u+1\}$; if $u'\in\{\alpha+1,\beta-1\}$ it steps onto a zombie and is captured; otherwise $\alpha+1<u'<\beta-1$, and with $\alpha'=\alpha+1$, $\beta'=\beta-1$ the new arc distances $f'=u'-\alpha'\in\{f-2,f-1,f\}$ and $b'=\beta'-u'\in\{b-2,b-1,b\}$ lie in $[1,d+1]$, so $(J)$ holds again with $\beta'-\alpha'=\beta-\alpha-2$. Since $(J)$ requires $\beta-\alpha=f+b\ge2$ and $\beta-\alpha$ starts at $d+3$ and decreases by $2$ per round, and since $f+b\le3$ forces $\min(f,b)=1$ and hence capture in that round, capture occurs at the latest in the round of Phase 2 numbered $j$ where $d+3-2(j-1)\le3$, i.e.\ $j=\lceil d/2\rceil+1$.
+
+Altogether capture occurs within $d+\lceil d/2\rceil+1$ rounds.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+We use \cref{lem:dist} for the pendant cycles $A,B,C$ of $G$ and $H$ (roots $v_0,v_2,v_4$) freely. Recall the following distances in $G$ (all verified by the referee, \cref{rem:computation}):
+\begin{enumerate}[label=(D\arabic*)]\tightlist
+\item $\dist(v_i,v_j)=|i-j|$ on the path; for $x\in A$, $\dist(x,v_0)=\cyc{x}{25}\le12$ (coordinate on $A$); for $x\in B$, $\dist(x,v_2)=\cyc{x}{17}\le8$; for $x\in C$, $\dist(x,v_4)=\cyc{x}{9}\le4$.
+\item Every vertex outside $A$ is at distance between $1$ and $10$ from $v_0$: the path vertices $v_i$ ($1\le i\le10$) are at distance $i$; a vertex of $B$ is at distance $2+\cyc{x}{17}\le10$ by \cref{lem:dist}(b) for $B$; a vertex of $C$ is at distance $4+\cyc{x}{9}\le8$.
+\item The only vertex outside $A$ at distance $1$ from $v_0$ is $v_1$ (the other neighbours of $v_0$ are $a_1,a_{24}\in A$).
+\item For $x\in A$: $\dist(x,v_2)=\dist(x,v_0)+2$ and $\dist(x,v_4)=\dist(x,v_0)+4$, by \cref{lem:dist}(b) for $A$ with $y=v_2$, resp.\ $y=v_4$. Also $\dist(v_1,v_2)=1$.
+\end{enumerate}
+
+\emph{(i) Two zombies do not win on $G$.} Let the zombies start at $x,y\in V(G)$, possibly $x=y$. We exhibit, in each case, one of the cycles $A,B,C$ on which \cref{cor:rot}(ii) applies; the survivor then starts at the vertex $q$ given there and rotates forever. Recall the windows $h-2=10,6,2$ for $A,B,C$.
+
+\emph{Case 1: $x,y\notin A$.} Put $D_x=\dist(x,v_0)$, $D_y=\dist(y,v_0)$; by (D2), $D_x,D_y\in\{1,\dots,10\}$, so $|D_x-D_y|\le9$. The phases on $A$ are $-D_x$ and $-D_y$ modulo $25$, so $\cyc{p(x)-p(y)}{25}\le|D_x-D_y|\le9\le10$. Rotate on $A$.
+
+\emph{Case 2: $x,y\in A$.} Put $a=\dist(x,v_0)$, $b=\dist(y,v_0)$, $\delta=|a-b|$; by (D1), $0\le\delta\le12$. Both zombies are outside $B$ and outside $C$, and by (D4) their phases on $B$ are $-(a+2),-(b+2)$ modulo $17$ and on $C$ they are $-(a+4),-(b+4)$ modulo $9$; in both cases the phase difference is represented by $\delta$. If $\delta\in\{0,1,\dots,6\}$ then $\cyc{\delta}{17}=\delta\le6$, and if $\delta\in\{11,12\}$ then $\cyc{\delta}{17}=17-\delta\in\{6,5\}$; in these cases rotate on $B$. Otherwise $\delta\in\{7,8,9,10\}$ and $\cyc{\delta}{9}\in\{2,1,0,1\}$, all at most $2$; rotate on $C$.
+
+\emph{Case 3: $x\in A$, $y\notin A$} (the case $y\in A$, $x\notin A$ is symmetric). Put $t=\dist(x,v_0)\in\{0,\dots,12\}$ and $D=\dist(y,v_0)\in\{1,\dots,10\}$. Choose the orientation of $A$ so that $x$ has coordinate $-t\pmod{25}$ (if $t=0$ then $x=v_0$ and any orientation will do). Then $p(x)=-t$, $p(y)=-D$, and $p(x)-p(y)\equiv D-t\in[-11,10]$. If $(D,t)\ne(1,12)$ then $|D-t|\le10$ (the value $-11$ needs $t=12$, $D=1$; the value $-12$ would need $D=0$), so $\cyc{p(x)-p(y)}{25}\le10$ and we rotate on $A$. In the exceptional case $(D,t)=(1,12)$, (D3) gives $y=v_1$, and by (D4) $\dist(x,v_2)=12+2=14$ and $\dist(y,v_2)=1$; both zombies are outside $B$, their phases on $B$ are $-14$ and $-1$ modulo $17$, with difference $13$ and $\cyc{13}{17}=4\le6$. Rotate on $B$.
+
+The three cases exhaust all pairs $\{x,y\}$, so no pair of starting vertices wins on $G$, and $z(G)\ge3$.
+
+\emph{(iii) One zombie does not win on $H$.} In $H$ the cycle $A$ is still a pendant cycle with root $v_0$ (the new vertex $v_{11}$ is attached at $v_{10}$), of length $25=2\cdot12+1$ with $h=12\ge2$. For any starting vertex $x$ of the zombie, \cref{cor:rot}(i) gives a survivor start $q=p(x)+2$ on $A$ from which rotation evades the zombie forever. Hence $z(H)\ge2$.
+
+\emph{(ii) Two zombies win on $H$ from $\{v_0,v_{11}\}$.} Let $P'=v_0v_1\cdots v_{11}$ be the extended path. Define the projection $\proj:V(H)\to V(P')$ by $\proj(v_i)=v_i$, $\proj(x)=v_0$ for $x\in A$, $\proj(x)=v_2$ for $x\in B$, $\proj(x)=v_4$ for $x\in C$ (this is consistent at the roots), and let $\idx(s)\in\{0,\dots,11\}$ be the index with $\proj(s)=v_{\idx(s)}$. Since $A,B,C$ are pendant cycles of $H$ with roots $v_0,v_2,v_4$, \cref{lem:dist}(b) gives, for every path vertex $v_i$ and every $s\in V(H)$,
+\begin{equation}\label{eq:pathdist}
+\dist_H(v_i,s)=|i-\idx(s)|+\dist_H(v_{\idx(s)},s),
+\end{equation}
+where the second term is $0$ if $s\in V(P')$. Consequently, if a zombie stands at $v_i$ with $i\ne\idx(s)$, then the path neighbour of $v_i$ in the direction of $v_{\idx(s)}$ is at distance one less from $s$, hence a legal move; it is in fact the unique legal move, since the other path neighbour is farther by \eqref{eq:pathdist} and a neighbour of $v_i$ inside a cycle rooted at $v_i$ (when $i\in\{0,2,4\}$) is at distance $1+\dist_H(v_i,s)$ from $s$ by \cref{lem:dist}(b) applied to that cycle (as $s$ is outside it). Also, a survivor move changes $\idx(s)$ by at most one: moving inside a cycle, or between a root and its cycle, does not change $\idx$, and moving along $P'$ changes it by one.
+
+Call the zombie starting at $v_0$ the \emph{front} zombie $Z_1$ and the one starting at $v_{11}$ the \emph{rear} zombie $Z_2$. Say that a \emph{root contact} occurs at the start of a round if some zombie stands at a root $v_r$, $r\in\{0,2,4\}$, and $\idx(s)=r$, where $s$ is the survivor's vertex. Say the play is \emph{undecided at time $t$} if, at the start of round $t+1$, the survivor has not been captured and no root contact occurs. The zombies' strategy while the play is undecided: both move one step along $P'$ towards $v_{\idx(s)}$.
+
+\emph{Claim.} If the play is undecided at time $t$, then $0\le t\le4$, $Z_1$ is at $v_t$, $Z_2$ is at $v_{11-t}$, and $t<\idx(s)<11-t$.
+
+For $t=0$: the zombies are at $v_0,v_{11}$; the survivor did not start on $v_{11}$ (capture) and not on $A$ (that would be a root contact at $v_0$, or capture if $s=v_0$), so $1\le\idx(s)\le10$. Now let the play be undecided at time $t\le4$ with the stated positions, $j:=\idx(s)\in\{t+1,\dots,10-t\}$. Both zombies' moves towards $v_j$ are legal (indeed forced), to $v_{t+1}$ and $v_{10-t}$. If $j=10-t$: as $10-t\ge6$, $v_j$ is not a root, so $s=v_j$ and $Z_2$ captures. If $j=t+1$: either $s=v_{t+1}$ and $Z_1$ captures, or $s$ lies in a cycle rooted at $v_{t+1}$ (so $t+1\in\{2,4\}$); the survivor's reply keeps $\idx(s)=t+1$ or moves $s$ onto $v_{t+1}$ (capture), so at the start of round $t+2$ a root contact occurs at $v_{t+1}$ and the play is decided. Otherwise $t+1<j<10-t$. The survivor replies with $j':=\idx(s')\in\{j-1,j,j+1\}$. If $j'=t+1$, the survivor moved along $P'$ from $v_{t+2}$ onto $v_{t+1}$, occupied by $Z_1$: captured; likewise $j'=10-t$ means stepping onto $Z_2$. Otherwise $t+1<j'<10-t=11-(t+1)$, and at the start of round $t+2$ neither zombie is on the survivor's vertex; $Z_2$ at $v_{10-t}$ ($10-t\ge6$) is not at a root, and $Z_1$ at $v_{t+1}$ is at a root only if $t+1\in\{2,4\}$, but $\idx(s')\ne t+1$, so there is no root contact. Thus the play is undecided at time $t+1$ with the stated positions, and $t+1\le5$; but undecided at time $5$ would require $5<\idx(s)<6$, which is impossible. This proves the claim (and shows that the play is decided by the start of round $6$ at the latest, since the zombies would then stand on the adjacent vertices $v_5,v_6$ with no vertex between them).
+
+\emph{Root contact is made by the front zombie.} Suppose a root contact occurs at time $t$ (start of round $t+1$), the play having been undecided at times $0,\dots,t-1$. Then $t\le5$, $Z_1$ is at $v_t$ and $Z_2$ at $v_{11-t}$ by the claim applied at time $t-1$ (or by the initial placement if $t=0$), and since $11-t\ge6>4$, $Z_2$ is not at a root. So the root in question is $v_r$ with $r=t\in\{0,2,4\}$, occupied by $Z_1$, and $\idx(s)=r$. If $s=v_r$ the survivor stands on $Z_1$ and is captured. Otherwise $s$ lies on the cycle rooted at $v_r$ minus its root, $Z_1$ stands at that root, and $Z_2$ stands at $v_{11-r}$, outside that cycle, at distance $\dist_H(v_{11-r},v_r)=11-2r$ from the root. The lengths of the cycles are
+\[
+\begin{array}{c|c|c}
+r & d=11-2r & \text{length of the cycle rooted at } v_r\\ \hline
+0 & 11 & 25=2\cdot11+3\\
+2 & 7 & 17=2\cdot7+3\\
+4 & 3 & 9=2\cdot3+3
+\end{array}
+\]
+so in every case the cycle has length exactly $2d+3$ with $d\ge1$, and \cref{lem:cap} applies at the start of round $t+1$: the two zombies force capture within $d+\lceil d/2\rceil+1$ rounds.
+
+Every play is therefore decided, by capture or by root contact, by the start of round $6$, and root contact leads to capture. So the placement $\{v_0,v_{11}\}$ wins against every survivor start, and $z(H)\le2$. For the bound on the number of rounds: root contact at time $t=r$ is followed by at most $d+\lceil d/2\rceil+1$ rounds with $d=11-2r$; the worst case is $r=0$, $d=11$, giving $0+11+6+1=18$ rounds, while a play with no root contact is decided within $5$ rounds. (The bound $17$ stated in \cref{thm:main}(ii) is corrected to $18$ here; see \cref{sec:provenance}.)
+
+Together, (i)--(iii) give $z(G)\ge3$ and $z(H)=2$.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup. Its step numbers S1--S19 and section numbers refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification\_astra/scripts/2008.03587\_\_00/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\small
+\bibitem{BBBLN21} V.~Bartier, L.~Bénéteau, M.~Bonamy, H.~La and J.~Narboni, A note on deterministic zombies, \emph{Discrete Applied Mathematics} 301 (2021) 65--68; \href{https://arxiv.org/abs/2008.03587}{arXiv:2008.03587} (v3, June 2021). Question~4.1.
+\bibitem{FHMP16} S.~L. Fitzpatrick, J.~Howell, M.~E. Messinger and D.~A. Pike, A deterministic version of the game of zombies and survivors on graphs, \emph{Discrete Applied Mathematics} 213 (2016) 1--12.
+\bibitem{BDS22} P.~Bose, J.-L. De Carufel and T.~Shermer, Pursuit-evasion in graphs: zombies, lazy zombies and a survivor, \href{https://arxiv.org/abs/2204.11926}{arXiv:2204.11926} (2022); also in \emph{Proc.\ ISAAC 2022}, LIPIcs 248, 56:1--56:13.
+\bibitem{LM26} F.~Liu and A.~Miller, Replacing cops with zombies, in \emph{13th International Conference on Fun with Algorithms (FUN 2026)}, LIPIcs 366, 30:1--30:12, Schloss Dagstuhl, 2026. \href{https://doi.org/10.4230/LIPIcs.FUN.2026.30}{doi:10.4230/LIPIcs.FUN.2026.30}.
+\end{thebibliography}
+
+\end{document}

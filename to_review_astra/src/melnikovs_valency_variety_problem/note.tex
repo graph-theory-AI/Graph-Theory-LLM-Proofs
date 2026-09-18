@@ -1,0 +1,496 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\cl}{\overrightarrow{\omega}}
+\newcommand{\Z}{\mathbb Z}
+% \Gt is reserved by unicode-math for U+2AA2 (DOUBLE NESTED GREATER-THAN).
+% Defining it here appears to work in the preamble but unicode-math restores its
+% own definition at \begin{document}, so use an unambiguous local name.
+\newcommand{\Gcounter}{G_{37}}
+\AtBeginDocument{\let\Gt\Gcounter}
+\newcommand{\fl}[1]{\lfloor #1\rfloor}
+\newcommand{\ce}[1]{\lceil #1\rceil}
+\newcommand{\RHS}{\operatorname{R}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result melnikovs\_valency\_variety\_problem --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{A smallest counterexample to the valency-variety inequality\\ of Melnikov's problem as stated on the Open Problem Garden}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The valency-variety $w(G)$ of a graph $G$ is the number of distinct vertex degrees of $G$. Melnikov's problem, as recorded in Jensen and Toft's \emph{Graph Coloring Problems} and transcribed on the Open Problem Garden, asks whether every graph $G$ with at least two vertices satisfies $\chi(G)>\bigl\lceil \fl{w(G)/2}/(|V(G)|-w(G))\bigr\rceil$. We exhibit a graph $\Gcounter$ on $37$ vertices with $\chi(\Gcounter)=3$ and degree set exactly $\{0,1,\dots,29\}$, so that $w(\Gcounter)=30$ and the right-hand side equals $\ce{15/7}=3$: the inequality fails. A self-contained counting argument shows that no graph on at most $36$ vertices violates the inequality, so $37$ is the smallest possible order of a counterexample.
+
+\smallskip\noindent
+\textbf{Caveat on interpretation.} The counterexample is powered entirely by one isolated vertex $z$. The graph $\Gt-z$ is a \emph{connected} $36$-vertex graph with $\chi=3$ and degree set $\{1,\dots,29\}$; it satisfies the inequality, and in fact meets the equivalent bound $|V|\le(2\chi-1)(|V|-w)+1$ with equality. Adding $z$ raises $w$ from $29$ to $30$, hence $\fl{w/2}$ from $14$ to $15$, while leaving $|V|-w$ and $\chi$ unchanged. What is refuted is therefore the statement exactly as posed, with ``any graph with at least two vertices'' read literally. The version for connected graphs, or for graphs of minimum degree at least one, which is what most readers would call Melnikov's problem, is untouched by this note and remains open; the referee's mechanisation of our counting method shows that the method cannot decide that version once $|V|-w\ge10$ (\cref{rem:scope}).
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+
+All graphs are finite and simple. For a graph $G$ with vertex set $V(G)$ and $n=|V(G)|$, the \emph{valency-variety} $w(G)$ is the number of distinct values taken by the degree function $d\colon V(G)\to\Z_{\ge0}$; the degree $0$ counts as a value. If $n\ge2$ then two vertices share a degree (the $n$ degrees lie in $\{0,\dots,n-1\}$ and $0$ and $n-1$ cannot both occur), so $w(G)\le n-1$ and
+\begin{equation}\label{eq:t}
+t(G):=n-w(G)\ \ge\ 1 .
+\end{equation}
+The Open Problem Garden \cite{OPG} records the following problem, attributed to L.~S.~Melnikov, in the form below; the statement is quoted verbatim.
+
+\begin{question}[{Melnikov's valency-variety problem, \cite{OPG}}]\label{q:mel}
+The valency-variety $w(G)$ of a graph $G$ is the number of different degrees in $G$. Is the chromatic number of any graph $G$ with at least two vertices greater than
+\[
+\left\lceil \frac{\lfloor w(G)/2\rfloor}{|V(G)|-w(G)} \right\rceil\ ?
+\]
+\end{question}
+
+The accompanying discussion on \cite{OPG} says that, according to Jensen and Toft \cite[p.~90]{JT}, the problem is due to Melnikov and was mentioned by Vizing \cite{V} and Zykov \cite{Z}; that according to Zykov \cite{Z}, Melnikov showed that the suggested lower bound would be best possible; and that a best possible \emph{upper} bound on the chromatic number in terms of $|V(G)|$ and $w(G)$ is $\chi(G)\le |V(G)|-\fl{w(G)/2}$, proved by Nettleton \cite{N} and Dirac \cite{D}. The restriction to graphs with at least two vertices is exactly the well-definedness condition \eqref{eq:t}: $n=1$ is the only case with a zero denominator. The statement imposes no connectivity or minimum-degree hypothesis, and the adversarial referee confirmed (\cref{app:referee}) that the live Open Problem Garden page states the problem word for word as above and still lists it as open. We write
+\[
+\RHS(G):=\left\lceil \frac{\fl{w(G)/2}}{n-w(G)} \right\rceil
+\]
+for the quantity in \cref{q:mel}, so that the question asks whether $\chi(G)>\RHS(G)$ for all $G$ with $n\ge2$.
+
+\paragraph{Results.} \Cref{sec:counterexample} gives a graph $\Gt$ on $37$ vertices with $\chi(\Gt)=3=\RHS(\Gt)$, which answers \cref{q:mel} in the negative as it is stated. \Cref{sec:minimality} proves that every graph on $2\le n\le36$ vertices satisfies $\chi>\RHS$, so the order $37$ is optimal. The proof of minimality is elementary but not short; it rests on a reformulation of the inequality as $n\le(2\chi-1)t+1$ (\cref{lem:reform}), on a comparison between the sum of the degrees in the top half of the degree sequence and in the bottom half, and on a case analysis of four boundary configurations.
+
+\paragraph{What this does and does not settle.} We stress at the outset, and again in \cref{rem:scope}, that the counterexample hinges on an isolated vertex, that $\Gt-z$ satisfies the inequality, and that the connected (or minimum-degree-one) form of Melnikov's question is not addressed. We could not read Jensen and Toft's page 90 verbatim; if their wording, or that of Vizing or Zykov, restricts the problem to connected graphs, then this note refutes only the Open Problem Garden transcription (\cref{rem:risks}). The literature search by the referee found no published resolution of \cref{q:mel} in either form, but the problem is little cited and the search is weak evidence of novelty (\cref{rem:novelty}).
+
+\section{The counterexample}\label{sec:counterexample}
+
+\subsection{The graph}
+
+The vertex set of $\Gt$ is the disjoint union
+\[
+A=\{a_1,\dots,a_5\},\quad B=\{b_0,\dots,b_5\},\quad C=\{c_0,\dots,c_6\},\quad T=\{t_1,\dots,t_6\},\quad U=\{u_1,\dots,u_{12}\},\quad \{z\},
+\]
+of sizes $5+6+7+6+12+1=37$. The edge set is defined by the following rules, with no edges other than those listed.
+\begin{enumerate}[label=(E\arabic*),leftmargin=3em]\tightlist
+\item\label{E1} $A\cup B\cup C$ induces the complete tripartite graph with parts $A,B,C$.
+\item\label{E2} Every vertex of $T$ is joined to every vertex of $B\cup C$.
+\item\label{E3} Each of $u_7,\dots,u_{12}$ is joined to every vertex of $B$.
+\item\label{E4} $N(u_7)\cap A=\{a_5\}$, $N(u_8)\cap A=\{a_4,a_5\}$, $N(u_9)\cap A=\{a_3,a_4,a_5\}$.
+\item\label{E5} For $i\in\{10,11,12\}$, $u_i$ is joined to $c_j$ exactly when $j\ge 13-i$.
+\item\label{E6} For $1\le i\le6$, $u_i$ is joined to $b_j$ exactly when $i+j\ge7$; in addition the six edges $u_1c_4$, $u_2c_5$, $u_3c_5$, $u_4c_6$, $u_5c_6$, $u_6c_6$ are present.
+\end{enumerate}
+In particular $T\cup U$ is an independent set and $z$ is isolated. \Cref{tab:graph} lists the complete neighbourhood of every vertex; it determines the graph and is the reference for all checks below. Vertices with identical neighbourhoods share a row.
+
+\begin{longtable}{@{}l r l@{}}
+\caption{The graph $\Gt$: every vertex with its degree and its full neighbourhood.}\label{tab:graph}\\
+\toprule
+Vertex & Degree & Neighbourhood \\
+\midrule
+\endfirsthead
+\toprule
+Vertex & Degree & Neighbourhood \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+$z$ & $0$ & $\emptyset$ \\
+$u_1$ & $1$ & $\{c_4\}$ \\
+$u_2$ & $2$ & $\{b_5,\,c_5\}$ \\
+$u_3$ & $3$ & $\{b_4,b_5,\,c_5\}$ \\
+$u_4$ & $4$ & $\{b_3,b_4,b_5,\,c_6\}$ \\
+$u_5$ & $5$ & $\{b_2,b_3,b_4,b_5,\,c_6\}$ \\
+$u_6$ & $6$ & $\{b_1,b_2,b_3,b_4,b_5,\,c_6\}$ \\
+$u_7$ & $7$ & $B\cup\{a_5\}$ \\
+$u_8$ & $8$ & $B\cup\{a_4,a_5\}$ \\
+$u_9$ & $9$ & $B\cup\{a_3,a_4,a_5\}$ \\
+$u_{10}$ & $10$ & $B\cup\{c_3,c_4,c_5,c_6\}$ \\
+$u_{11}$ & $11$ & $B\cup\{c_2,c_3,c_4,c_5,c_6\}$ \\
+$u_{12}$ & $12$ & $B\cup\{c_1,c_2,c_3,c_4,c_5,c_6\}$ \\
+$a_1,\ a_2$ & $13$ & $B\cup C$ \\
+$t_1,\dots,t_6$ & $13$ & $B\cup C$ \\
+$a_3$ & $14$ & $B\cup C\cup\{u_9\}$ \\
+$a_4$ & $15$ & $B\cup C\cup\{u_8,u_9\}$ \\
+$a_5$ & $16$ & $B\cup C\cup\{u_7,u_8,u_9\}$ \\
+$c_0$ & $17$ & $A\cup B\cup T$ \\
+$c_1$ & $18$ & $A\cup B\cup T\cup\{u_{12}\}$ \\
+$c_2$ & $19$ & $A\cup B\cup T\cup\{u_{11},u_{12}\}$ \\
+$c_3$ & $20$ & $A\cup B\cup T\cup\{u_{10},u_{11},u_{12}\}$ \\
+$c_4$ & $21$ & $A\cup B\cup T\cup\{u_1,\,u_{10},u_{11},u_{12}\}$ \\
+$c_5$ & $22$ & $A\cup B\cup T\cup\{u_2,u_3,\,u_{10},u_{11},u_{12}\}$ \\
+$c_6$ & $23$ & $A\cup B\cup T\cup\{u_4,u_5,u_6,\,u_{10},u_{11},u_{12}\}$ \\
+$b_0$ & $24$ & $A\cup C\cup T\cup\{u_7,\dots,u_{12}\}$ \\
+$b_1$ & $25$ & $A\cup C\cup T\cup\{u_6,\dots,u_{12}\}$ \\
+$b_2$ & $26$ & $A\cup C\cup T\cup\{u_5,\dots,u_{12}\}$ \\
+$b_3$ & $27$ & $A\cup C\cup T\cup\{u_4,\dots,u_{12}\}$ \\
+$b_4$ & $28$ & $A\cup C\cup T\cup\{u_3,\dots,u_{12}\}$ \\
+$b_5$ & $29$ & $A\cup C\cup T\cup\{u_2,\dots,u_{12}\}$ \\
+\end{longtable}
+
+\subsection{Statement}
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+The graph $\Gt$ of \cref{tab:graph} has $37$ vertices and $263$ edges, its degree set is exactly $\{0,1,\dots,29\}$, so $w(\Gt)=30$ and $t(\Gt)=7$, and $\chi(\Gt)=3$. Consequently
+\[
+\RHS(\Gt)=\left\lceil\frac{\fl{30/2}}{37-30}\right\rceil=\left\lceil\frac{15}{7}\right\rceil=3=\chi(\Gt),
+\]
+and $\Gt$ does not satisfy $\chi(\Gt)>\RHS(\Gt)$.
+\end{restatable}
+
+\begin{corollary}\label{cor:answer}
+The answer to \cref{q:mel}, as stated, is negative.
+\end{corollary}
+
+\begin{proof}
+$\Gt$ has at least two vertices and $\chi(\Gt)=3\not>3=\RHS(\Gt)$ by \cref{thm:main}.
+\end{proof}
+
+\begin{proofidea}
+The degrees are read off \cref{tab:graph}: $|B\cup C|=13$, $|A\cup B|=11$, $|A\cup C|=12$, $|T|=6$, and the vertices of $U$ have been attached so that $u_i$ has degree $i$, $c_j$ gains exactly $j$ neighbours in $U$, and $b_j$ gains exactly $j$ neighbours among $u_1,\dots,u_6$ on top of the six from $u_7,\dots,u_{12}$. The three sets
+\[
+I_1=A\cup T\cup\{u_1,\dots,u_6,u_{10},u_{11},u_{12},z\},\qquad I_2=B,\qquad I_3=C\cup\{u_7,u_8,u_9\}
+\]
+are independent and partition $V(\Gt)$, so $\chi\le3$, and $a_1b_0c_0$ is a triangle. The arithmetic $\ce{15/7}=3$ finishes.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{Minimality}\label{sec:minimality}
+
+Throughout this section $G$ is a graph with $n\ge2$ vertices, $k=\chi(G)$, $w=w(G)$ and $t=n-w\ge1$. We call $G$ \emph{edgeless} if it has no edge (then $k=1$), and we say that $G$ \emph{satisfies \eqref{eq:reform}} when the inequality below holds.
+
+\begin{restatable}[Reformulation]{lemma}{lemreform}\label{lem:reform}
+For every graph $G$ with $n\ge2$,
+\[
+\chi(G)>\RHS(G)\quad\Longleftrightarrow\quad \fl{w/2}\le(k-1)t\quad\Longleftrightarrow\quad
+n\le(2k-1)t+1. \tag{R}\label{eq:reform}
+\]
+\end{restatable}
+
+\begin{proofidea}
+For integers $k$ and real $x$, $k>\ce{x}$ iff $k-1\ge x$; apply this to $x=\fl{w/2}/t$ and then eliminate the floor using $\fl{w/2}\le N\iff w\le2N+1$ and $w=n-t$.\fullproofref{pf:reform}
+\end{proofidea}
+
+\begin{restatable}[Minimality]{theorem}{thmmin}\label{thm:min}
+Every graph $G$ with $2\le|V(G)|\le36$ satisfies $\chi(G)>\RHS(G)$. Hence $37$ is the smallest order of a counterexample to \cref{q:mel}, and $\Gt$ attains it.
+\end{restatable}
+
+\begin{proofidea}
+By \cref{lem:reform} a counterexample violates \eqref{eq:reform}. \Cref{lem:bip} shows that graphs with $k\le2$ satisfy \eqref{eq:reform}, so a counterexample has $k\ge3$ and $n\ge(2k-1)t+2\ge5t+2$; if $n\le36$ this forces $t\le6$. \Cref{prop:t6} shows that every graph with $t\le6$ satisfies \eqref{eq:reform}.\fullproofref{pf:min}
+\end{proofidea}
+
+\subsection{Graphs with at most two colours}
+
+\begin{restatable}[Bipartite graphs]{lemma}{lembip}\label{lem:bip}
+Every edgeless graph and every bipartite graph with $n\ge2$ satisfies \eqref{eq:reform}. More precisely, a bipartite graph with at least one edge and without isolated vertices has $n\le3t$, and one with $r\ge1$ isolated vertices has $n\le 3t-2r+3\le3t+1$.
+\end{restatable}
+
+\begin{proofidea}
+Without isolated vertices, fix a bipartition with parts of sizes $a\le b$: all degrees lie in $\{1,\dots,b\}$, so $w\le b$, and the degrees on the larger side lie in $\{1,\dots,a\}$ while the smaller side has only $a$ vertices, so $w\le2a$; hence $n=a+b\ge\tfrac32 w$, i.e.\ $n\le3t$. Deleting $r\ge1$ isolated vertices changes $(n,w,t)$ to $(n-r,\,w-1,\,t-r+1)$.\fullproofref{pf:bip}
+\end{proofidea}
+
+\subsection{A degree-spread estimate}
+
+For the rest of the section $G$ has even order $n=2m$ and $k\ge2$. List the degrees as $d_1\le d_2\le\dots\le d_{2m}$, let $L$ be a set of $m$ vertices realising $d_1,\dots,d_m$ and $H$ the remaining $m$ vertices, and put
+\[
+b=d_m,\qquad \delta=d_1,\qquad D=\sum_{v\in H}d(v)-\sum_{v\in L}d(v),\qquad D_0=\fl{w^2/4}.
+\]
+
+\begin{restatable}[Degree spread]{lemma}{lemspread}\label{lem:spread}
+With the notation above:
+\begin{enumerate}[label=(\alph*)]\tightlist
+\item\label{it:D} $D=\sum_{i=1}^{2m}|d_i-b|=2e(H)-2e(L)$; in particular $D$ is even.
+\item\label{it:D0} $D\ge D_0=\fl{w^2/4}$.
+\item\label{it:odd} If $w=2r+1$ and $b\le\delta+r$, then $D\ge r(r+1)+(\delta+r-b)^2$.
+\item\label{it:even} If $w=2r$ and $b\le\delta+r-1$, then $D\ge r^2+(\delta+r-1-b)(\delta+r-b)$.
+\end{enumerate}
+\end{restatable}
+
+\begin{proofidea}
+\ref{it:D}: split $|d_i-b|$ according to $i\le m$ or $i>m$, and count the edges inside and between $L$ and $H$. \ref{it:D0}: one occurrence of each of the $w$ distinct degrees already contributes $\sum_i|x_i-b|$ over $w$ distinct integers $x_i$, and at most two integers lie at any given positive distance from $b$, so this is at least $0+1+1+2+2+\dots=\fl{w^2/4}$. \ref{it:odd}, \ref{it:even}: all degrees are at least $\delta$, so at most $b-\delta+1$ of the chosen integers lie at or below $b$; the minimum is attained by $\{\delta,\delta+1,\dots,\delta+w-1\}$ and evaluates to the stated expressions.\fullproofref{pf:spread}
+\end{proofidea}
+
+\subsection{Incorporating a colouring}
+
+Fix a proper $k$-colouring of $G$, let $h_i$ be the number of vertices of colour $i$ in $H$, and put
+\[
+a=\min_i h_i,\qquad e=e(L),\qquad Q_k(m)=\min\Bigl\{\sum_{i=1}^k x_i^2:\ x_i\in\Z_{\ge0},\ \sum_i x_i=m\Bigr\}.
+\]
+The minimum $Q_k(m)$ is attained exactly by the \emph{balanced} vectors, those with $|x_i-x_j|\le1$ for all $i,j$: moving one unit from an entry $x$ to an entry $y\le x-2$ changes $\sum x_i^2$ by $-2(x-y-1)<0$. Set
+\[
+X=D-D_0\ge0,\qquad E=\sum_{i=1}^k h_i^2-Q_k(m)\ge0 .
+\]
+
+\begin{restatable}[Colouring bounds]{lemma}{lemcol}\label{lem:col}
+With the notation above:
+\begin{enumerate}[label=(\alph*)]\tightlist
+\item\label{it:seven} $D+2e+\sum_i h_i^2\le m^2$, equivalently $X+2e+E\le m^2-D_0-Q_k(m)$.
+\item\label{it:eight} $b\le m-a+e$.
+\item\label{it:E} $E$ is even, and $E=0$ forces $(h_i)$ to be balanced, so that $a=\fl{m/k}$.
+\item\label{it:nine} $D_0=m^2-tm+\fl{t^2/4}$ and $\dfrac{m^2}{k}\le Q_k(m)\le tm-\fl{t^2/4}$.
+\item\label{it:table} For $t=1,\dots,6$ respectively, $m\le k,\ 2k-1,\ 3k-1,\ 4k-2,\ 5k-2,\ 6k-2$.
+\end{enumerate}
+\end{restatable}
+
+\begin{proofidea}
+\ref{it:seven}: colour classes are independent, so $2e(H)\le m^2-\sum_ih_i^2$, and $2e(H)=D+2e$ by \cref{lem:spread}\ref{it:D}. \ref{it:eight}: the $m$-th vertex lies in $L$, misses the $\ge a$ vertices of its own colour in $H$, and has at most $e$ neighbours inside $L$. \ref{it:E}: $x^2\equiv x\pmod 2$. \ref{it:nine}: $w=2m-t$ and Cauchy--Schwarz. \ref{it:table}: \ref{it:nine} is a quadratic inequality in $m$; one checks that its left side minus its right side, at $m$ one larger than each listed bound, equals $1+\tfrac1k,\ 1,\ 2,\ \tfrac1k,\ 1+\tfrac1k,\ 3+\tfrac1k$ respectively, and that the quadratic is increasing from there on.\fullproofref{pf:col}
+\end{proofidea}
+
+\begin{table}[ht]\centering
+\caption{The four boundary configurations of \cref{lem:col}\ref{it:table} that need a separate argument. The ``budget'' is $m^2-D_0-Q_k(m)=tm-\fl{t^2/4}-Q_k(m)$, the right-hand side of \cref{lem:col}\ref{it:seven}.}\label{tab:boundary}
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+$t$ & $m$ & $w$ & $Q_k(m)$ & budget & $a$ when $E=0$\\
+\midrule
+$1$ & $k$    & $2(m-1)+1$ & $k$     & $0$ & $1$\\
+$3$ & $3k-1$ & $2(m-2)+1$ & $9k-5$  & $0$ & $2$\\
+$5$ & $5k-2$ & $2(m-3)+1$ & $25k-18$ & $2$ & $4$\\
+$6$ & $6k-2$ & $2(m-3)$   & $36k-22$ & $1$ & $5$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{restatable}[Boundary cases]{lemma}{lemboundary}\label{lem:boundary}
+Let $G$ have even order $2m$, $k\ge2$ and $t\le6$.
+\begin{enumerate}[label=(\alph*)]\tightlist
+\item\label{it:b135} If $t\in\{1,3,5\}$ and $G$ has no isolated vertex, then $m$ is strictly smaller than the bound of \cref{lem:col}\ref{it:table}: $m\le k-1$, $m\le3k-2$, $m\le5k-3$ respectively.
+\item\label{it:b6} If $t=6$ then $m\le6k-3$, whether or not $G$ has isolated vertices.
+\end{enumerate}
+\end{restatable}
+
+\begin{proofidea}
+Suppose $m$ equals the bound. \Cref{tab:boundary} gives the budget $m^2-D_0-Q_k(m)$, and \cref{lem:col}\ref{it:seven} confines $(X,2e,E)$ to it. For $t=1,3$ the budget is $0$, so $X=e=E=0$, $a$ is as in the table, and \cref{lem:col}\ref{it:eight} gives $b\le m-a=r$; but $X=0$ with $\delta\ge1$ contradicts \cref{lem:spread}\ref{it:odd}, which forces $b=\delta+r\ge r+1$. For $t=5$ the budget is $2$; $X$ is even because $D$ and $D_0=r(r+1)$ are, $E\le2$ forces $a\ge3$ by the transfer argument, and both $X=0$ (then $b\le m-3=r$) and $X=2$ (then $b\le m-4$, penalty $\ge4$) contradict \cref{lem:spread}\ref{it:odd}. For $t=6$, $r=6k-5$ is odd, so $D_0=r^2$ is odd and $X$ is odd; the budget $1$ forces $X=1$, $e=E=0$, $a=5$, $b\le r-2$, and \cref{lem:spread}\ref{it:even} with $\delta\ge0$ gives $D\ge r^2+2$, i.e.\ $X\ge2$.\fullproofref{pf:boundary}
+\end{proofidea}
+
+\begin{restatable}{proposition}{propsix}\label{prop:t6}
+Every graph with $n\ge2$ and $t\le6$ satisfies \eqref{eq:reform}. More precisely, if $G$ is not edgeless:
+\begin{enumerate}[label=(\alph*)]\tightlist
+\item\label{it:13} if $n$ is even, then $n\le(2k-1)t$ for even $t$ and $n\le(2k-1)t+1$ for odd $t$, and in the latter case equality forces an isolated vertex;
+\item\label{it:14} if $G$ has no isolated vertex, then $n\le(2k-1)t$;
+\item\label{it:15} if $G$ has $r\ge1$ isolated vertices, then $n\le(2k-1)t-(2k-2)r+(2k-1)\le(2k-1)t+1$.
+\end{enumerate}
+\end{restatable}
+
+\begin{proofidea}
+\ref{it:13} is \cref{lem:col}\ref{it:table} together with \cref{lem:boundary}, read as a statement about $n=2m$. For \ref{it:14} at odd order, add one isolated vertex: $n$ and $w$ both increase by one, $t$ and $k$ are unchanged, and \ref{it:13} applies to the new graph. For \ref{it:15}, delete the isolated vertices and apply \ref{it:14} to what remains, which has $t_0=t-r+1\le6$ and the same chromatic number.\fullproofref{pf:t6}
+\end{proofidea}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[What is refuted, and what is not]\label{rem:scope}
+The whole mechanism of \cref{thm:main} is the isolated vertex $z$. The graph $\Gt-z$ is connected (the referee verified this, and it is visible from \cref{tab:graph}: every vertex other than $z$ has a neighbour in $B\cup C$, and $B\cup C$ is connected through $A$), has $36$ vertices, degree set $\{1,\dots,29\}$, so $w=29$, $t=7$, and $\chi=3$; hence $\RHS(\Gt-z)=\ce{14/7}=2<3$ and $\Gt-z$ \emph{satisfies} the inequality of \cref{q:mel}. It does so with no slack in the reformulation \eqref{eq:reform}: $\fl{w/2}=14=(k-1)t$ and $n=36=(2k-1)t+1$. Adding $z$ raises $w$ from $29$ to $30$ and hence $\fl{w/2}$ from $14$ to $15$, while $t$ and $\chi$ stay fixed; this consumes exactly the unit of slack that the floor grants at odd $w$.
+
+Consequently, a reader who understands ``graph'' in \cref{q:mel} as ``connected graph'' or ``graph without isolated vertices'' (a tacit convention in parts of the Russian school from which the problem comes) is not served by this note: for graphs of minimum degree at least one the inequality $\chi>\RHS$ is, to our knowledge, still open, and \cref{thm:min} says nothing about how large a counterexample with minimum degree one would have to be. Worse for the method, the referee re-implemented the counting scheme of \cref{sec:minimality} (\cref{lem:spread,lem:col} with the parity constraints on $X$ and $E$) as a feasibility test in $(X,e,E)$ and computed, for $k=3$, the largest even order it does not exclude under the additional hypothesis $\delta\ge1$: a counterexample with $\delta\ge1$ is excluded for $t\le9$, but from $t=10$ on it is not (at $t=10$ a counterexample needs $n\ge52$ and the method permits even orders up to $52$; at $t=11$ it needs $57$ and the method permits $58$; asymptotically the permitted order grows like $5.45\,t$ against the required $5t+2$). The method of this note therefore provably cannot decide the minimum-degree-one version of Melnikov's problem. The same mechanisation reproduces \cref{prop:t6}\ref{it:13} exactly for $k=2,\dots,6$ and $t=1,\dots,7$ (for $k=3$: maximal even orders $6,10,16,20,26,30,36$), and shows that $\Gt-z$ realises the largest even order the method permits at $k=3$, $t=7$, $\delta\ge1$: the construction sits exactly on the boundary of the counting bound.
+\end{remark}
+
+\begin{remark}[Two residual risks]\label{rem:risks}
+Neither the model nor the referee could read the primary source. Jensen and Toft \cite[p.~90]{JT} is not freely available, and the papers of Dirac \cite{D}, Nettleton \cite{N}, Vizing \cite{V} and Zykov \cite{Z} could not be obtained in full text. The mathematics of this note is self-contained and invokes no external theorem, so this does not affect the proofs; but it does affect what they refute. The referee fetched the live Open Problem Garden page and found that it reproduces the statement of \cref{q:mel} verbatim as quoted above, with ``any graph $G$ with at least two vertices'' as the only hypothesis. If Jensen and Toft, or Vizing or Zykov, state the problem for connected graphs, the disproof evaporates (\cref{rem:scope}).
+
+Second, the placement of the ceiling is load-bearing. With $(n,w,\chi)=(37,30,3)$ the inequality fails only for the nesting as stated: $\chi>\ce{\fl{w/2}/t}$ reads $3>3$, false; whereas $\chi>\fl{w/2}/t$ reads $3>2.14\ldots$, true; $\chi>\ce{w/2}/t$ is true; and $\chi>\fl{\fl{w/2}/t}$ reads $3>2$, true. Every other floor/ceiling nesting makes $\Gt$ a non-counterexample. The nesting used here is exactly the one on the live Open Problem Garden page and in the problem as posed to the model; a transcription slip at this point would void the whole note.
+\end{remark}
+
+\begin{remark}[The referee's computational checks]\label{rem:checks}
+The adversarial referee (\cref{app:referee}; scripts in \texttt{verification\_astra/scripts/melnikovs\_valency\_variety\_problem/}, run with \texttt{python3} and \texttt{networkx~3.6.1}) rebuilt $\Gt$ from the rules \ref{E1}--\ref{E6} alone, not from the degree table, and found: $37$ vertices, $263$ edges, $603$ triangles, components of sizes $36$ and $1$; degree sequence matching \cref{tab:graph} with zero mismatches, degree set exactly $\{0,1,\dots,29\}$, $w=30$; $I_1,I_2,I_3$ of sizes $21,6,10$ partitioning $V(\Gt)$ with $0$ internal edges each; $\chi\ge3$ established three independent ways (\texttt{networkx} bipartiteness test, exhaustive backtracking $2$-colouring search failing while $3$-colouring succeeds, and a hand-rolled BFS $2$-colouring of the $36$-vertex component forced onto the monochromatic edge $u_3b_4$); $t=7$, $\fl{w/2}=15$, $\RHS=3$; and for $\Gt-z$: $n=36$, $w=29$, $t=7$, $\RHS=2$, connected. For the minimality argument it re-derived by hand every displayed equation of the writeup (its equations (1)--(14), which correspond to \cref{lem:reform,lem:bip,lem:spread,lem:col,lem:boundary,prop:t6} here), checked the equivalence of \cref{lem:reform} exhaustively for all $2\le n\le199$ and all admissible $w,k$ with $0$ disagreements, verified by brute force that the six bounds of \cref{lem:col}\ref{it:table} are the exact integer maxima of the quadratic inequality for every $k\in\{2,\dots,300\}$ and $t\in\{1,\dots,6\}$, and re-implemented the whole counting scheme independently (\cref{rem:scope}), corroborating that no counterexample exists below $37$ vertices. It also checked all $1251$ graphs on $2$ to $7$ vertices (the \texttt{networkx} atlas): every one satisfies the inequality, and the minimum slack $(2k-1)t+1-n$ in \eqref{eq:reform} is $0$ at every order from $2$ to $7$, so the inequality is tight at every small order. The rewriter of this note independently rebuilt $\Gt$ from \ref{E1}--\ref{E6} and reproduced the edge count, the degree table, the three independent sets and the data for $\Gt-z$ before typesetting \cref{tab:graph}; as a sanity check, the degree sum from \cref{tab:graph} is $0+78+8\cdot13+45+140+159=526=2\cdot263$.
+\end{remark}
+
+\begin{remark}[Tightness and Melnikov's claim]\label{rem:tight}
+The observation that the slack in \eqref{eq:reform} is $0$ at every order from $2$ to $7$ is consistent with Zykov's report \cite{Z}, relayed by \cite{OPG}, that Melnikov showed the suggested lower bound to be best possible, and it is an a~priori indication that a counterexample was plausible: a bound that is tight at every small order has no room to absorb a degenerate perturbation such as the addition of an isolated vertex at odd $w$. The Dirac--Nettleton upper bound $\chi\le n-\fl{w/2}$ \cite{D,N} is quoted only as context and is not used; for $\Gt$ it reads $3\le22$.
+\end{remark}
+
+\begin{remark}[Novelty]\label{rem:novelty}
+The model stated that bibliographic novelty had not been checked. The referee's four literature searches (counterexample, solved, valency-variety, Melnikov) returned nothing after 1995 on this specific problem, the Jensen--Toft problem archive has no update for this entry, and the Open Problem Garden page (last updated 3 March 2013) lists the problem as open with no comment or claimed resolution. This is weak evidence: the problem is rated of low importance and is rarely cited, and a reader of the 1960s with a tight example in hand could have made the same observation about isolated vertices. We cannot rule out that the counterexample is folklore. The minimality statement \cref{thm:min} is, as far as we know, new.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+
+(1)~The construction and the minimality proof were found by the language model \texttt{gpt-6-astra} (reasoning effort \emph{max}) in a single autonomous pass on 2026-09-16, as part of a sweep over the problems of the Open Problem Garden (catalog id \texttt{melnikovs\_valency\_variety\_problem}, leg \texttt{attacks\_opg}; original writeup in \texttt{attacks\_opg/melnikovs\_valency\_variety\_problem/output.md}). The model rated its claim ``disproved'' with high confidence, flagged that the counterexample has an isolated vertex ``which the statement permits'', and stated that bibliographic novelty had not been checked.
+
+(2)~An independent adversarial referee agent (\texttt{claude-opus-5}) reviewed the writeup on 2026-09-17. It fetched the live Open Problem Garden entry and confirmed that the statement, the hypothesis ``at least two vertices'', the discussion and the bibliography match the problem as posed to the model word for word; it rebuilt the graph from the prose alone and verified every claimed invariant (\cref{rem:checks}); it re-derived all $26$ steps of the writeup and labelled each \textsc{valid}, finding no gap or error; it brute-forced the bounds of \cref{lem:col}\ref{it:table} for $k\le300$, checked all $1251$ graphs on at most $7$ vertices, and re-implemented the counting scheme of \cref{sec:minimality} independently, reproducing the writeup's bounds and establishing the limitation recorded in \cref{rem:scope}. Its verdict was \textsc{confirmed}, with the interpretation caveat that the disproof concerns the literal statement and not the minimum-degree-one version, and with the two residual risks of \cref{rem:risks}. Its report is reproduced verbatim in \cref{app:referee}.
+
+(3)~On 2026-09-17 the writeup was rewritten into the present note by \texttt{claude-fable-5-1}. The text was reorganised with full proofs in \cref{app:proofs}. Deviations from the writeup, all declared here. The graph is presented as a complete neighbourhood table (\cref{tab:graph}); the writeup gave the six edge rules \ref{E1}--\ref{E6} and a degree table, and the neighbourhood table was generated by rebuilding the graph from the rules and checked against the referee's data (edge count $263$, degree sequence, independent sets, $\Gt-z$). The edge count $263$, the triangle count $603$ and the connectedness of $\Gt-z$ are the referee's; the writeup did not state them. The writeup's equations (1)--(14) appear as \cref{lem:reform,lem:bip,lem:spread,lem:col,lem:boundary,prop:t6}. Three steps the writeup asserted were spelled out, in each case with an argument the referee had supplied or verified: that $\fl{w^2/4}$ is the least possible sum of distances from an integer to $w$ distinct integers (counting integers by distance); that $\{\delta,\dots,\delta+w-1\}$ minimises the sum of distances among $w$-sets of integers at least $\delta$ under the hypotheses of \cref{lem:spread}\ref{it:odd},\ref{it:even} (the writeup said ``the $2r+1$ closest distinct integers at least $\delta$ are $\delta,\dots,\delta+2r$''; the algebra with $s=b-\delta$ and $u=r-s$ is the referee's); and that $E=0$ pins down $a$, which uses the uniqueness of the balanced minimiser of $Q_k(m)$ (noted by the referee). In the $t=5$ boundary the existence of a colour class of size at least $6$ in $H$ whenever some class has size at most $2$ is made explicit. The edgeless case $k=1$ is separated explicitly from the case $k\ge2$ in \cref{lem:bip,prop:t6}, as the referee noted that \cref{lem:col}\ref{it:table} for $t=6$ uses $k\ge2$; the writeup handled edgeless graphs ``directly'' in one sentence. The statement of \cref{thm:min} is the writeup's ``no counterexample has fewer than 37 vertices''. The content of \cref{rem:scope,rem:risks,rem:checks,rem:tight,rem:novelty} is taken from the referee report and from the writeup's own scope paragraph; the interpretation caveat was moved into the abstract at the rewriter's initiative because the referee judged it the substantive reservation of the review. The bibliography is the one listed on \cite{OPG}; none of the items \cite{JT,D,N,V,Z} was read by the model, the referee or the rewriter. No mathematical content was changed, and nothing was found to be wrong.
+
+\textbf{No human mathematician has checked this argument.} We circulate it for human review, not as a claim to a new resolution of Melnikov's problem: it refutes the statement as transcribed on the Open Problem Garden, and the connected form of the question remains open.
+
+\appendix
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+\emph{Order and edges.} The parts $A,B,C,T,U,\{z\}$ have sizes $5,6,7,6,12,1$, total $37$. The degree column of \cref{tab:graph} sums to $0+(1+\dots+12)+8\cdot13+(14+15+16)+(17+\dots+23)+(24+\dots+29)=0+78+104+45+140+159=526$, so there are $263$ edges.
+
+\emph{Degrees.} We verify \cref{tab:graph} against the rules \ref{E1}--\ref{E6}; the degree of each vertex is the size of its listed neighbourhood. Note $|A|=5$, $|B|=6$, $|C|=7$, $|T|=6$, so $|B\cup C|=13$, $|A\cup C|=12$, $|A\cup B|=11$.
+\begin{itemize}\tightlist
+\item $z$ is in no rule, so $d(z)=0$.
+\item $u_i$, $1\le i\le6$: by \ref{E6}, $u_i\sim b_j$ iff $j\ge7-i$, i.e.\ $j\in\{7-i,\dots,5\}$, which has $i-1$ elements; plus the one edge to $C$ listed in \ref{E6}. So $d(u_i)=i$, with neighbourhood as tabulated.
+\item $u_7,u_8,u_9$: all of $B$ by \ref{E3}, plus $1,2,3$ vertices of $A$ by \ref{E4}; degrees $7,8,9$.
+\item $u_{10},u_{11},u_{12}$: all of $B$ by \ref{E3}, plus $c_j$ for $j\ge3,2,1$ respectively by \ref{E5}, i.e.\ $4,5,6$ vertices of $C$; degrees $10,11,12$.
+\item $a_1,a_2$: $B\cup C$ by \ref{E1}, nothing from $U$ (\ref{E4} names only $a_3,a_4,a_5$); degree $13$.
+\item $t_1,\dots,t_6$: $B\cup C$ by \ref{E2}; degree $13$.
+\item $a_3,a_4,a_5$: $B\cup C$ by \ref{E1}, plus $\{u_9\}$, $\{u_8,u_9\}$, $\{u_7,u_8,u_9\}$ by \ref{E4}; degrees $14,15,16$.
+\item $c_j$: $A\cup B$ by \ref{E1} and $T$ by \ref{E2}, that is $17$ neighbours, plus its neighbours in $U$: from \ref{E5}, $u_i\sim c_j$ for $i\in\{10,11,12\}$ iff $i\ge13-j$, giving $\min(j,3)$ vertices for $j\ge0$ (none for $j=0$, one for $j=1$, two for $j=2$, three for $j\ge3$); from \ref{E6}, $c_4$ gets $u_1$, $c_5$ gets $u_2,u_3$, $c_6$ gets $u_4,u_5,u_6$. Thus $c_j$ has exactly $j$ neighbours in $U$ for every $0\le j\le6$, and $d(c_j)=17+j$.
+\item $b_j$: $A\cup C$ by \ref{E1} and $T$ by \ref{E2}, that is $18$ neighbours, plus $u_7,\dots,u_{12}$ by \ref{E3}, plus from \ref{E6} those $u_i$ with $1\le i\le6$ and $i\ge7-j$, i.e.\ $i\in\{7-j,\dots,6\}$, which has $j$ elements. So $d(b_j)=18+6+j=24+j$.
+\end{itemize}
+Hence the multiset of degrees is $0$ (once), $1,\dots,12$ (once each), $13$ (eight times), $14,15,16$ (once each), $17,\dots,23$ (once each), $24,\dots,29$ (once each): the degree set is $\{0,1,\dots,29\}$, $w(\Gt)=30$ and $t(\Gt)=37-30=7$.
+
+\emph{Chromatic number.} Let $I_1=A\cup T\cup\{u_1,\dots,u_6,u_{10},u_{11},u_{12},z\}$, $I_2=B$, $I_3=C\cup\{u_7,u_8,u_9\}$; these have sizes $21,6,10$ and partition $V(\Gt)$. $I_2=B$ is independent by inspection of \cref{tab:graph} (no $b_j$ lists a $b_{j'}$). $I_3$: no $c_j$ lists a $c_{j'}$ or any of $u_7,u_8,u_9$, and $u_7,u_8,u_9$ list only vertices of $A\cup B$. $I_1$: the vertices of $A$ and $T$ list only vertices of $B\cup C\cup\{u_7,u_8,u_9\}$; $u_1,\dots,u_6$ list only vertices of $B\cup C$; $u_{10},u_{11},u_{12}$ list only vertices of $B\cup C$; $z$ lists nothing. Since adjacency is symmetric, each $I_i$ is independent, and $\chi(\Gt)\le3$. The vertices $a_1,b_0,c_0$ are pairwise adjacent by \ref{E1}, so $\chi(\Gt)\ge3$. Hence $\chi(\Gt)=3$.
+
+\emph{The inequality.} $\fl{w/2}=15$, $n-w=7$, and $\ce{15/7}=3$ since $2<15/7\le3$. Thus $\RHS(\Gt)=3=\chi(\Gt)$, and $\chi(\Gt)>\RHS(\Gt)$ is false.
+\end{proof}
+
+\phantomsection\label{pf:reform}
+\lemreform*
+\begin{proof}
+Put $x=\fl{w/2}/t$, a nonnegative rational. Since $k$ is an integer, $k>\ce{x}$ iff $k-1\ge\ce{x}$, and since $k-1$ is an integer, $\ce{x}\le k-1$ iff $x\le k-1$. As $t>0$, $x\le k-1$ iff $\fl{w/2}\le(k-1)t$. This proves the first equivalence. For the second, for an integer $N\ge0$ we have $\fl{w/2}\le N$ iff $w/2<N+1$ iff $w<2N+2$ iff $w\le2N+1$; with $N=(k-1)t$ and $w=n-t$ this reads $n-t\le2(k-1)t+1$, i.e.\ $n\le(2k-1)t+1$.
+\end{proof}
+
+\phantomsection\label{pf:bip}
+\lembip*
+\begin{proof}
+If $G$ is edgeless then $k=1$, $w=1$, $t=n-1$ and \eqref{eq:reform} reads $n\le(n-1)+1$, which holds with equality. Now let $G$ be bipartite with at least one edge, so $k=2$ and \eqref{eq:reform} reads $n\le3t+1$.
+
+\emph{No isolated vertices.} Fix a bipartition $V(G)=P\cup R$ with $|P|=a\le|R|=b$, $a+b=n$. Since there are edges and no isolated vertices, $a\ge1$. A vertex of $P$ has all its neighbours in $R$, so its degree lies in $\{1,\dots,b\}$; a vertex of $R$ has degree in $\{1,\dots,a\}\subseteq\{1,\dots,b\}$. Thus all $w$ distinct degrees lie in $\{1,\dots,b\}$ and $w\le b$. Moreover the degrees occurring on $R$ take at most $a$ values, and the degrees occurring on $P$ take at most $|P|=a$ values, so $w\le2a$. Hence $2n=2a+2b\ge w+2w=3w=3(n-t)$, i.e.\ $n\le3t$.
+
+\emph{$r\ge1$ isolated vertices.} Let $G_0$ be $G$ with its isolated vertices deleted; $G_0$ is bipartite with at least one edge and no isolated vertex, with $n_0=n-r\ge2$ vertices. The degree $0$ occurs in $G$ and not in $G_0$, and every other degree is unchanged, so $w_0=w-1$ and $t_0=n_0-w_0=t-r+1$. By the first part $n_0\le3t_0$, hence $n=n_0+r\le3(t-r+1)+r=3t-2r+3\le3t+1$ because $r\ge1$.
+\end{proof}
+
+\phantomsection\label{pf:spread}
+\lemspread*
+\begin{proof}
+\ref{it:D} For $i\le m$ we have $d_i\le d_m=b$, and for $i>m$ we have $d_i\ge b$; so $\sum_{i=1}^{2m}|d_i-b|=\sum_{i\le m}(b-d_i)+\sum_{i>m}(d_i-b)=mb-\sum_L d+\sum_H d-mb=D$. Writing $e(H,L)$ for the number of edges between $H$ and $L$, $\sum_{v\in H}d(v)=2e(H)+e(H,L)$ and $\sum_{v\in L}d(v)=2e(L)+e(H,L)$, so $D=2e(H)-2e(L)$, which is even.
+
+\ref{it:D0} Choose, for each of the $w$ distinct degree values, one index $i$ realising it; this gives $w$ indices with distinct values $x_1<\dots<x_w$, and by \ref{it:D}, $D\ge\sum_{j=1}^w|x_j-b|$. Order the $x_j$ by increasing distance from $b$: exactly one integer lies at distance $0$ from $b$, and at most two lie at each positive distance, so the $j$-th smallest of the distances $|x_j-b|$ is at least $\ce{(j-1)/2}$. Hence $\sum_j|x_j-b|\ge\sum_{j=1}^w\ce{(j-1)/2}=0+1+1+2+2+\dots$, which equals $r(r+1)$ if $w=2r+1$ and $r^2$ if $w=2r$; both equal $\fl{w^2/4}$.
+
+\ref{it:odd} and \ref{it:even}. Every degree is at least $\delta=d_1$, and $b$ is itself a degree, so $s:=b-\delta\ge0$. Let $S=\{x_1,\dots,x_w\}$ be the set of distinct degree values as in \ref{it:D0}; all elements of $S$ are integers $\ge\delta$. Let $p=|S\cap(-\infty,b]|$ and $q=w-p=|S\cap(b,\infty)|$. The elements of $S$ at or below $b$ are distinct integers in $[\delta,b]$, so $p\le s+1$, and their distances to $b$ are distinct integers in $\{0,\dots,s\}$, so they sum to at least $0+1+\dots+(p-1)=\binom p2$. The elements above $b$ have distinct positive distances, summing to at least $1+\dots+q=\binom{q+1}2$. Thus
+\[
+D\ \ge\ f(p):=\binom p2+\binom{w-p+1}{2},\qquad f(p+1)-f(p)=p-(w-p)=2p-w .
+\]
+In case \ref{it:odd}, $w=2r+1$ and the hypothesis $b\le\delta+r$ says $s\le r$, so $p\le s+1\le r+1$; for $p\le r$ we have $2p-w\le-1<0$, so $f$ is decreasing on $\{0,\dots,r+1\}$ and $D\ge f(s+1)$. Writing $u=r-s\ge0$,
+\[
+f(s+1)=\frac{s(s+1)}2+\frac{(2r-s)(2r-s+1)}2=\frac{(r-u)(r-u+1)+(r+u)(r+u+1)}2=r^2+r+u^2,
+\]
+which is $r(r+1)+(\delta+r-b)^2$. In case \ref{it:even}, $w=2r$ and the hypothesis $b\le\delta+r-1$ says $s\le r-1$, so $p\le s+1\le r$; for $p\le r-1$ we have $2p-w\le-2<0$, so again $D\ge f(s+1)$. Writing $u=r-1-s\ge0$,
+\[
+f(s+1)=\frac{s(s+1)}2+\frac{(2r-1-s)(2r-s)}2=\frac{(r-1-u)(r-u)+(r+u)(r+u+1)}2=r^2+u^2+u,
+\]
+which is $r^2+(\delta+r-1-b)(\delta+r-b)$.
+\end{proof}
+
+\phantomsection\label{pf:col}
+\lemcol*
+\begin{proof}
+\ref{it:seven} Every edge inside $H$ joins two vertices of different colours, so $e(H)\le\sum_{i<j}h_ih_j=\tfrac12\bigl(m^2-\sum_ih_i^2\bigr)$, using $\sum_ih_i=m$. By \cref{lem:spread}\ref{it:D}, $2e(H)=D+2e(L)=D+2e$, so $D+2e+\sum_ih_i^2\le m^2$. Subtracting $D_0+Q_k(m)$ from both sides gives $X+2e+E\le m^2-D_0-Q_k(m)$.
+
+\ref{it:eight} Let $v$ be a vertex of $L$ with $d(v)=d_m=b$ and let $c$ be its colour. The $h_c\ge a$ vertices of colour $c$ in $H$ are not adjacent to $v$, so $v$ has at most $m-a$ neighbours in $H$. Each neighbour of $v$ in $L$ contributes a distinct edge inside $L$, so $v$ has at most $e$ neighbours in $L$. Hence $b\le m-a+e$.
+
+\ref{it:E} Since $x^2\equiv x\pmod2$ for every integer $x$, $\sum_ih_i^2\equiv\sum_ih_i=m$ and likewise $Q_k(m)=\sum_ix_i^2\equiv m$ for a minimising vector; so $E$ is even. If $E=0$ then $(h_i)$ attains the minimum $Q_k(m)$; by the transfer argument preceding the lemma, a vector attaining the minimum has all entries within one of each other, so its entries are $\fl{m/k}$ and $\ce{m/k}$ and $a=\min_ih_i=\fl{m/k}$.
+
+\ref{it:nine} From $w=2m-t$, $w^2/4=m^2-mt+t^2/4$, and $m^2-mt$ is an integer, so $D_0=\fl{w^2/4}=m^2-tm+\fl{t^2/4}$. By Cauchy--Schwarz, $\sum_ix_i^2\ge(\sum_ix_i)^2/k=m^2/k$ for every admissible vector, so $Q_k(m)\ge m^2/k$. By \cref{lem:spread}\ref{it:D0} and \ref{it:seven}, $D_0\le D\le m^2-\sum_ih_i^2\le m^2-Q_k(m)$, so $Q_k(m)\le m^2-D_0=tm-\fl{t^2/4}$.
+
+\ref{it:table} By \ref{it:nine}, $p(m):=m^2-ktm+k\fl{t^2/4}\le0$. The quadratic $p$ is increasing for $m\ge kt/2$. For each $t\le6$ let $M_t$ be the claimed bound; then $M_t+1\ge kt/2$ (indeed $M_t+1>kt/2$ for $k\ge2$ in each case), and we compute $p(M_t+1)$:
+\begin{align*}
+t=1:\quad &p(k+1)=(k+1)^2-k(k+1)=k+1>0;\\
+t=2:\quad &p(2k)=4k^2-4k^2+k=k>0;\\
+t=3:\quad &p(3k)=9k^2-9k^2+2k=2k>0;\\
+t=4:\quad &p(4k-1)=(4k-1)^2-4k(4k-1)+4k=1>0;\\
+t=5:\quad &p(5k-1)=(5k-1)^2-5k(5k-1)+6k=k+1>0;\\
+t=6:\quad &p(6k-1)=(6k-1)^2-6k(6k-1)+9k=3k+1>0.
+\end{align*}
+Dividing by $k$ gives the residuals $1+\frac1k,\ 1,\ 2,\ \frac1k,\ 1+\frac1k,\ 3+\frac1k$ quoted in the proof idea. Since $p$ is increasing from $M_t+1$ onwards, $p(m)>0$ for all $m\ge M_t+1$, so $p(m)\le0$ forces $m\le M_t$. (For $t=6$ and $m=M_6=6k-2$ one has $p(6k-2)=4-3k\le0$ precisely because $k\ge2$; this is the only place where $k\ge2$ is needed, and it is where the bound is attained.)
+\end{proof}
+
+\phantomsection\label{pf:boundary}
+\lemboundary*
+\begin{proof}
+In each case suppose, for a contradiction, that $m$ equals the bound $M_t$ of \cref{lem:col}\ref{it:table}. We first verify \cref{tab:boundary}. $Q_k(m)$ is the sum of squares of the balanced vector: for $m=k$ it is $k\cdot1^2=k$; for $m=3k-1$ it is $(k-1)\cdot3^2+2^2=9k-5$; for $m=5k-2$ it is $(k-2)\cdot5^2+2\cdot4^2=25k-18$; for $m=6k-2$ it is $(k-2)\cdot6^2+2\cdot5^2=36k-22$ (for $k=2$ the balanced vectors are $(1,1)$, $(3,2)$, $(4,4)$, $(5,5)$, and the formulas still hold). The budget $tm-\fl{t^2/4}-Q_k(m)$ is then $k-0-k=0$; $(9k-3)-2-(9k-5)=0$; $(25k-10)-6-(25k-18)=2$; $(36k-12)-9-(36k-22)=1$. When $E=0$, \cref{lem:col}\ref{it:E} gives $a=\fl{m/k}=1,2,4,5$ respectively. Finally $w=2m-t$ gives $r=m-1$, $m-2$, $m-3$, $m-3$ in the four rows, with $w=2r+1$ in the first three and $w=2r$ in the last.
+
+\ref{it:b135}, $t=1$ and $t=3$. Here $\delta\ge1$ because there is no isolated vertex. The budget is $0$, so \cref{lem:col}\ref{it:seven} gives $X=e=E=0$. Then $a=1$ (resp.\ $2$) and \cref{lem:col}\ref{it:eight} gives $b\le m-a=r$. In particular $b\le r<\delta+r$, so the hypothesis of \cref{lem:spread}\ref{it:odd} holds, and $D\ge r(r+1)+(\delta+r-b)^2\ge r(r+1)+1=D_0+1$, i.e.\ $X\ge1$, contradicting $X=0$.
+
+\ref{it:b135}, $t=5$. Again $\delta\ge1$; $m=5k-2$, $r=m-3$, $w=2r+1$, and the budget is $2$: $X+2e+E\le2$. Since $D$ is even (\cref{lem:spread}\ref{it:D}) and $D_0=r(r+1)$ is even, $X$ is even; so $X\in\{0,2\}$.
+
+We claim $E\le2$ forces $a\ge3$. Suppose some $h_i\le2$. The other $k-1$ entries sum to at least $5k-2-2=5k-4$; if they were all at most $5$ their sum would be at most $5k-5$, so some $h_j\ge6$. Moving one unit from $h_j$ to $h_i$ changes $\sum h^2$ by $-2(h_j-h_i-1)\le-2(6-2-1)=-6$ and yields another admissible vector, so $\sum_ih_i^2\ge Q_k(m)+6$, i.e.\ $E\ge6>2$. Hence $a\ge3$.
+
+If $X=0$, then $2e+E\le2$ with $E$ even: either $E=0$, whence $a=4$ and $e\le1$, so $b\le m-a+e\le m-3$; or $E=2$, whence $e=0$ and $a\ge3$, so $b\le m-3$. In both cases $b\le m-3=r<\delta+r$, and \cref{lem:spread}\ref{it:odd} gives $D\ge r(r+1)+(\delta+r-b)^2\ge D_0+1$, so $X\ge1$: contradiction. If $X=2$, then $e=E=0$, so $a=4$ and $b\le m-4=r-1$; hence $\delta+r-b\ge1+1=2$ and \cref{lem:spread}\ref{it:odd} gives $D\ge r(r+1)+4$, i.e.\ $X\ge4$: contradiction.
+
+\ref{it:b6}, $t=6$. No assumption on $\delta$ is made, only $\delta\ge0$. Here $m=6k-2$, $r=m-3=6k-5$ is odd, $w=2r$, $D_0=r^2$ is odd, and $D$ is even; so $X=D-D_0$ is odd, in particular $X\ge1$. The budget is $1$, so $X=1$ and $e=E=0$. Then $a=5$ and $b\le m-5=r-2\le\delta+r-1$, so \cref{lem:spread}\ref{it:even} applies: $D\ge r^2+(\delta+r-1-b)(\delta+r-b)\ge r^2+1\cdot2=D_0+2$, i.e.\ $X\ge2$: contradiction. Hence $m\le6k-3$.
+\end{proof}
+
+\phantomsection\label{pf:t6}
+\propsix*
+\begin{proof}
+Edgeless graphs satisfy \eqref{eq:reform} by \cref{lem:bip}, so assume $G$ has an edge; then $k\ge2$.
+
+\ref{it:13} Let $n=2m$. By \cref{lem:col}\ref{it:table}, $m\le M_t$ with $M_t=k,2k-1,3k-1,4k-2,5k-2,6k-2$ for $t=1,\dots,6$. For $t=2$ and $t=4$ this gives $n\le4k-2=(2k-1)\cdot2$ and $n\le8k-4=(2k-1)\cdot4$. For $t=6$, \cref{lem:boundary}\ref{it:b6} improves the bound to $m\le6k-3$, so $n\le12k-6=(2k-1)\cdot6$. For $t=1,3,5$ we get $n\le2k=(2k-1)\cdot1+1$, $n\le6k-2=(2k-1)\cdot3+1$, $n\le10k-4=(2k-1)\cdot5+1$; and if equality holds then $m=M_t$, which by \cref{lem:boundary}\ref{it:b135} is impossible without an isolated vertex.
+
+\ref{it:14} Let $G$ have no isolated vertex; then $\delta\ge1$ and $k\ge2$. If $n$ is even, \ref{it:13} gives $n\le(2k-1)t$ directly for even $t$, and for odd $t$ it gives $n\le(2k-1)t+1$ with equality excluded, hence $n\le(2k-1)t$. If $n$ is odd, let $G'=G+z$ be obtained by adding one isolated vertex. Then $n'=n+1$ is even, $\chi(G')=k$, and since $0$ was not a degree of $G$ but is one of $G'$ while all other degrees are unchanged, $w'=w+1$ and $t'=n'-w'=t$. Applying \ref{it:13} to $G'$: if $t$ is even, $n+1\le(2k-1)t$, so $n\le(2k-1)t-1$; if $t$ is odd, $n+1\le(2k-1)t+1$, so $n\le(2k-1)t$. In all cases $n\le(2k-1)t$.
+
+\ref{it:15} Let $G$ have $r\ge1$ isolated vertices and let $G_0$ be $G$ with them deleted. Then $G_0$ has an edge, no isolated vertex, $n_0=n-r\ge2$ vertices, $\chi(G_0)=k$, $w_0=w-1$ and $t_0=n_0-w_0=t-r+1\le t\le6$. By \ref{it:14}, $n-r\le(2k-1)(t-r+1)$, so
+\begin{align*}
+n
+&\le(2k-1)t-(2k-1)r+(2k-1)+r\\
+&=(2k-1)t-(2k-2)r+(2k-1)\\
+&\le(2k-1)t-(2k-2)+(2k-1)=(2k-1)t+1,
+\end{align*}
+using $r\ge1$ and $2k-2\ge0$.
+
+In every case $n\le(2k-1)t+1$, which is \eqref{eq:reform}.
+\end{proof}
+
+\phantomsection\label{pf:min}
+\thmmin*
+\begin{proof}
+Let $G$ be a graph with $2\le n\le36$ and suppose $\chi(G)\le\RHS(G)$. By \cref{lem:reform}, $n\ge(2k-1)t+2$. By \cref{lem:bip}, $G$ is neither edgeless nor bipartite, so $k\ge3$ and $n\ge5t+2$. As $n\le36$, $5t\le34$, so $t\le6$. But then \cref{prop:t6} gives $n\le(2k-1)t+1$, a contradiction. Hence every graph on $2$ to $36$ vertices satisfies $\chi>\RHS$, and by \cref{thm:main} the graph $\Gt$ on $37$ vertices does not.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup. Its step and equation numbers refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification\_astra/scripts/melnikovs\_valency\_variety\_problem/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{OPG} Open Problem Garden, \emph{Melnikov's valency-variety problem}, posted 3 March 2013, attributed to L.~S.~Melnikov, \url{http://www.openproblemgarden.org/op/melnikovs_valency_variety_problem}. Also catalogued at \url{https://graph-theory-ai.github.io/graph-conjectures/op/melnikovs_valency_variety_problem/}.
+\bibitem{JT} T.~R. Jensen and B.~Toft, \emph{Graph Coloring Problems}, Wiley-Interscience Series in Discrete Mathematics and Optimization, John Wiley \& Sons, New York, 1995; p.~90.
+\bibitem{D} G.~A. Dirac, Valency-variety and chromatic number of abstract graphs, \emph{Wiss. Z. Martin-Luther-Univ. Halle-Wittenberg Math.-Natur. Reihe} 13 (1964), 59--64.
+\bibitem{N} R.~E. Nettleton, Some generalized theorems on connectivity, \emph{Canad. J. Math.} 12 (1960), 546--554.
+\bibitem{V} V.~G. Vizing, Some unsolved problems in graph theory (in Russian), \emph{Uspekhi Mat. Nauk} 23 (1968), 117--134; English translation in \emph{Russian Math. Surveys} 23 (1968), 125--141.
+\bibitem{Z} A.~A. Zykov, Problem 11, in: H.~Sachs, H.-J.~Voss and H.~Walther (eds.), \emph{Beiträge zur Graphentheorie vorgetragen auf dem Internationalen Kolloquium in Manebach DDR vom 9.--12. Mai 1967}, B.~G. Teubner, Leipzig, 1968, p.~228.
+\end{thebibliography}
+
+\end{document}

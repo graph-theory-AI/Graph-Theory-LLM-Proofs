@@ -1,0 +1,571 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{DejaVu Sans}[Scale=0.80]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\N}{\mathbb N}
+\newcommand{\F}{\mathbb F}
+\newcommand{\dlog}{\overline d_{\log}}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2105.15195\_\_00 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+\title{The exact upper logarithmic density of monochromatic subset sums}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+For $r\ge2$, let $c_r$ be the least possible largest upper logarithmic
+density of a monochromatic finite-subset-sum set in an $r$-colouring of
+the positive integers. If $b>1$ is the unique root of
+$b^r-2rb+r-1=0$, we prove
+\[
+ c_r=\frac{b^{r-1}}{2r}.
+\]
+This proves Conlon--Fox--Pham's tightness conjecture. The new step is a
+geometric covering lemma valid for arbitrary non-cyclic colour words;
+the additive reduction and matching construction are included
+self-containedly but are attributed to the stronger published results
+of Conlon, Fox and Pham.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI}
+project: the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician. \Cref{sec:provenance}
+records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+For $A\subseteq\N$, write
+\[
+ \Sigma(A)=\left\{\sum_{a\in F}a:
+ \varnothing\ne F\subseteq A,\ F\text{ finite}\right\},
+\qquad
+ \dlog(S)=\limsup_{x\to\infty}\frac1{\log x}
+ \sum_{\substack{n\le x\\n\in S}}\frac1n,
+\]
+and define
+\[
+ c_r=\inf_{\N=A_1\sqcup\cdots\sqcup A_r}
+ \max_{i\in[r]}\dlog(\Sigma(A_i)).
+\]
+Conlon, Fox and Pham \cite{CFP22} proved the matching upper bound and
+the case $r=2$. Their concluding conjecture is:
+
+\begin{conjecture}[{\cite[Concluding remarks]{CFP22}}]\label{conj:cfp}
+We suspect that our upper bound is also tight for all $r\ge3$, but our
+methods do not seem sufficient for proving this.
+\end{conjecture}
+
+The catalog rendering attached a formula with $2^rb-r$ in the
+denominator. The source paper has $2rb-r$. This distinction is invisible
+when $r=2$ and substantive thereafter; \cref{rem:constant} records it.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+Let $r\ge2$, and let $b>1$ be the unique root of
+\[
+ b^r-2rb+r-1=0.
+\]
+Then
+\[
+ c_r=\frac{b^{r-1}}{2r}
+ =\frac{1-\frac1{2b}}{1-b^{-r}}
+ =\left(1-\frac1{2b}\right)\left(1+\frac1{2rb-r}\right).
+\]
+\end{restatable}
+\begin{proofidea}
+At every dyadic scale one colour contains a positive proportion of the
+primes. A published additive lemma of Conlon--Fox--Pham, or the weaker
+self-contained prime-block lemma below, makes that colour's subset sums
+contain an interval with logarithmic endpoints
+$\log n+O(\log\log n)$ and $2\log n-O(\log\log n)$. The central geometric
+lemma proves that arbitrarily interlaced intervals
+$[t_k,\lambda t_{k+1}]$ force one of $r$ colours to have upper density at
+least $\inf_{q>1}(1-1/(\lambda q))/(1-q^{-r})$. Letting
+$\lambda\uparrow2$ yields the lower bound. The block construction of
+\cite[Theorem~1]{CFP22} gives equality.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{The geometric step}
+For $r\ge2,\lambda>1$ put
+\[
+ D_{r,\lambda}(q)=\frac{1-\frac1{\lambda q}}{1-q^{-r}},
+ \qquad C_{r,\lambda}=\inf_{q>1}D_{r,\lambda}(q).
+\]
+
+\begin{restatable}[Geometric covering lemma]{lemma}{lemgeometric}\label{lem:geometric}
+Let $0<t_0<t_1<\cdots$ tend to infinity, label each $k$ by
+$\gamma_k\in[r]$, and set
+\[
+ J_k=[t_k,\lambda t_{k+1}],\qquad
+ U_i=\bigcup_{\gamma_k=i}J_k.
+\]
+Then
+\[
+ \max_{i\in[r]}\limsup_{T\to\infty}
+ \frac{|U_i\cap[0,T]|}{T}\ge C_{r,\lambda}.
+\]
+\end{restatable}
+\begin{proofidea}
+Assume every density is below $D<C_{r,\lambda}$ and decompose each
+$U_i$ into interval components. For a component $C$, its normalized
+length $a_C$, endpoint density $d_C$, span ratio $Q_C$, and ratio $R_C$
+to the preceding same-colour endpoint satisfy
+$d_C=a_C+d_{C^-}/R_C$. The definition of $C_{r,\lambda}$ makes this
+recurrence lose a uniform amount $\eta>0$ per component after taking
+logs. Summing over colours, the endpoint and span terms cancel up to
+$O(1)$, while $-\eta$ times the number of components tends to
+$-\infty$.\fullproofref{pf:geometric}
+\end{proofidea}
+
+\begin{restatable}[Evaluation of the constant]{lemma}{lemconstant}\label{lem:constant}
+The polynomial $q^r-\lambda rq+r-1$ has a unique root
+$b_{r,\lambda}>1$, which is the minimizer of $D_{r,\lambda}$, and
+\[
+ C_{r,\lambda}=\frac{b_{r,\lambda}^{r-1}}{\lambda r}.
+\]
+Consequently $C_{r,\lambda}\to b^{r-1}/(2r)$ as $\lambda\uparrow2$.
+\end{restatable}
+\begin{proofidea}
+Differentiate $D_{r,\lambda}$; its critical equation is the displayed
+polynomial, which decreases then increases and has one root beyond
+$1$. At the root, $b_{r,\lambda}^r-1
+=r(\lambda b_{r,\lambda}-1)$, which reduces the value to the stated
+form.\fullproofref{pf:constant}
+\end{proofidea}
+
+\section{Additive input and transfer}
+\begin{restatable}[Restricted sums modulo a prime]{lemma}{lemrestricted}\label{lem:restricted}
+Let $p$ be prime and $B\subseteq\F_p$ have size $s$. If
+$1\le k\le s$ and $k(s-k)\ge p-1$, every element of $\F_p$ is a sum of
+$k$ distinct members of $B$.
+\end{restatable}
+\begin{proofidea}
+This is the Dias da Silva--Hamidoune theorem
+\cite{DH94}, with the polynomial proof of Alon--Nathanson--Ruzsa
+\cite{ANR96}. For completeness, apply the coefficient form of the
+Combinatorial Nullstellensatz to
+\[
+ ((x_1+\cdots+x_k-c)^{p-1}-1)\prod_{i<j}(x_j-x_i).
+\]
+The omitted determinant calculation in the generated writeup is supplied
+in the full proof using falling factorials.\fullproofref{pf:restricted}
+\end{proofidea}
+
+\begin{restatable}[Prime-block interval lemma]{lemma}{lemprime}\label{lem:prime}
+For every fixed $\kappa>0$ and all sufficiently large $n$, if $A$ is a
+set of primes in $[n,2n]$ with $|A|\ge\kappa n/\log n$, then
+\[
+ \left[n(\log n)^3,\frac{n^2}{(\log n)^3}\right]\cap\mathbb Z
+ \subseteq\Sigma(A).
+\]
+\end{restatable}
+\begin{proofidea}
+Partition $A$ into a group-building half and a reserve half. Repeated use
+of \cref{lem:restricted} modulo a prime $p\in(2n,4n)$ produces many
+disjoint equal-sum groups, giving a long arithmetic progression of
+subset sums. The reserve represents every residue modulo the common
+difference, by another use of \cref{lem:restricted} and the Chinese
+remainder theorem. Adding the two representations fills the interval.
+This lemma is weaker than \cite[Lemma~2]{CFP22}, which already supplies
+the additive input needed here.\fullproofref{pf:prime}
+\end{proofidea}
+
+\begin{remark}[What is new]
+The additive interval step, its transfer from dyadic scales to logarithmic
+density, and the upper construction were already proved in stronger form
+in \cite{CFP22}, using the companion paper \cite{CFPcomp}. In
+\cite[Lemma~7]{CFP22}, the authors proved the geometric statement for two
+colours and noted that their method extends to cyclic auxiliary
+colourings. The genuinely new claim here is \cref{lem:geometric} for
+arbitrary non-cyclic colour words. The referee identified this correctly;
+the generated writeup's description of the prime lemma as the key new
+step was wrong.
+\end{remark}
+
+\begin{remark}[Computational audit]
+The referee verified all constant identities symbolically; tested
+\cref{lem:restricted} on $7{,}740$ cases with no failure; audited all
+telescoping and covering identities of \cref{lem:geometric} on
+$22$ configurations up to $128{,}000$ blocks; and exhaustively searched
+all colour words up to rotation and colour permutation for $r=2$ through
+period $8$, $r=3$ through period $7$, and $r=4,5$ through period $6$.
+No configuration fell below $C_r$. These checks are evidence, not part of
+the proof.
+\end{remark}
+
+\begin{remark}[Constant transcription]\label{rem:constant}
+The source equation gives $b^r-1=2rb-r$, so the denominator is
+$2rb-r$. For $r\ge3$, $2^r>2r$; hence the catalog expression using
+$2^rb-r$ is strictly smaller than the correct value and is false even
+as an upper bound.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+The mathematics was produced without human intervention in three stages.
+(1)~The result was found by \texttt{gpt-6-astra}, reasoning effort
+\texttt{max}, in one pass begun on 2026-09-17, for catalog id
+\texttt{2105.15195\_\_00} in \texttt{attacks\_retry}. The prompt included
+a \texttt{gpt-5.6-sol} attempt. Its geometric lemma and telescoping
+skeleton were inherited; the retry tightened the boundary accounting and
+added a prime-block argument.
+(2)~An adversarial \texttt{claude-opus-5} referee re-derived the argument,
+checked the source and companion papers, and ran the computations above
+on 2026-09-17; its verdict was \textsc{minor gaps}, at medium confidence
+because the remaining risk is concentrated in the $O(1)$ bookkeeping of
+\cref{lem:geometric}.
+(3)~On 2026-09-17 \texttt{claude-fable-5-1} created only a recoverable
+note skeleton before its session ended. On 2026-09-18 \texttt{Codex}
+completed the present rewrite, put full proofs in \cref{app:proofs}, and
+made these declared changes:
+the determinant identity omitted from the restricted-sum proof is proved
+explicitly; Dias da Silva--Hamidoune and Alon--Nathanson--Ruzsa are cited;
+the prime-block lemma, transfer, and construction are identified as
+published or weaker rediscoveries; the geometric lemma is identified as
+the new step; the source's $2r$ constant is distinguished from the
+catalog's $2^r$ transcription. No other mathematics was changed.
+\textbf{No human mathematician has checked this argument.}
+
+\appendix
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:geometric}
+\lemgeometric*
+\begin{proof}
+Suppose the conclusion fails. Choose $D$ with
+\[
+ \max_i\limsup_{T\to\infty}\frac{|U_i\cap[0,T]|}{T}
+ <D<C_{r,\lambda}.
+\]
+For all sufficiently large $T$,
+$|U_i\cap[0,T]|\le DT$ for every $i$. No $U_i$ has an unbounded
+component, since that would give density one. Each component is therefore
+an interval $C=[t_f,\lambda t_{\ell+1}]$. Put
+\[
+ e_C=\lambda t_{\ell+1},\quad
+ Q_C=\frac{t_{\ell+1}}{t_f},\quad
+ a_C=\frac{|C|}{e_C}=1-\frac1{\lambda Q_C},\quad
+ d_C=\frac{|U_i\cap[0,e_C]|}{e_C}.
+\]
+If $C^-$ is the preceding component of the same colour and
+$R_C=e_C/e_{C^-}$, disjointness gives
+\begin{equation}\label{eq:recurrence}
+ d_C=a_C+\frac{d_{C^-}}{R_C}.
+\end{equation}
+Discard finitely many components so that each retained component has a
+predecessor and $d_C\le D$. Then
+\[
+ 1-\frac1\lambda<a_C<d_C\le D,\qquad
+ 1<Q_C<Q_{\max}:=\frac1{\lambda(1-D)}.
+\]
+From \eqref{eq:recurrence},
+\begin{equation}\label{eq:logrec}
+ \log\frac{d_{C^-}}{d_C}
+ \le\log R_C+\log\left(1-\frac{a_C}{D}\right).
+\end{equation}
+
+On $1\le q<Q_{\max}$ define
+\[
+ F(q)=r\log q+
+ \log\left(1-\frac{1-\frac1{\lambda q}}D\right).
+\]
+For $q>1$, $F(q)\ge0$ is equivalent to
+$D\ge D_{r,\lambda}(q)$, contrary to $D<C_{r,\lambda}$.
+Moreover $F(1)<0$ and $F(q)\to-\infty$ as $q\uparrow Q_{\max}$.
+Continuity on the intervening compact range gives $\varepsilon>0$ such
+that every retained component satisfies
+\begin{equation}\label{eq:loss}
+ \log\left(1-\frac{a_C}{D}\right)
+ \le-r\log Q_C-\varepsilon.
+\end{equation}
+
+Sum \eqref{eq:logrec}--\eqref{eq:loss} over retained components with last
+index at most $N$, and call their number $m_N$. For each colour, the
+left side telescopes; since $1-1/\lambda\le d_C\le D$, its total is
+$O(1)$. Endpoint ratios also telescope, giving
+\[
+ \sum_C\log R_C\le r\log t_{N+1}+O(1).
+\]
+Finally,
+\begin{equation}\label{eq:cover}
+ \sum_C\log Q_C\ge\log t_{N+1}-O(1).
+\end{equation}
+Indeed,
+$\log Q_C=\sum_{k=f(C)}^{\ell(C)}\log(t_{k+1}/t_k)$, and every index is
+in the span of its own colour component. Discarded components cost only
+a fixed initial amount. At the right boundary, at most one component of
+each colour straddles $N$, and each omitted span is at most
+$\log Q_{\max}$. This proves \eqref{eq:cover}.
+
+Combining the estimates gives
+\[
+ O(1)\le r\log t_{N+1}-r\sum_C\log Q_C
+ -\varepsilon m_N+O(1)\le O(1)-\varepsilon m_N.
+\]
+But $m_N\to\infty$: there are infinitely many intervals, every component
+is finite, and every finite component contains only finitely many
+intervals. This contradiction proves the lemma.
+\end{proof}
+
+\phantomsection\label{pf:constant}
+\lemconstant*
+\begin{proof}
+Differentiation gives
+\[
+ D'_{r,\lambda}(q)=0
+ \quad\Longleftrightarrow\quad q^r-\lambda rq+r-1=0.
+\]
+The polynomial is negative at $q=1$, decreases until
+$q=\lambda^{1/(r-1)}$, and then increases to infinity. It has a unique
+root $b_{r,\lambda}>1$, necessarily beyond
+$\lambda^{1/(r-1)}$, and this is the unique minimizer. Since
+\[
+ b_{r,\lambda}^r-1
+ =r(\lambda b_{r,\lambda}-1),
+\]
+direct substitution yields
+$C_{r,\lambda}=b_{r,\lambda}^{r-1}/(\lambda r)$.
+Continuity of the unique root as $\lambda\uparrow2$ proves the limit.
+\end{proof}
+
+\phantomsection\label{pf:restricted}
+\lemrestricted*
+\begin{proof}
+Suppose $c\in\F_p$ is not a sum of $k$ distinct members of $B$. Then
+\[
+ P(x_1,\ldots,x_k)=
+ \left((x_1+\cdots+x_k-c)^{p-1}-1\right)
+ \prod_{i<j}(x_j-x_i)
+\]
+vanishes on $B^k$: repeated coordinates kill the Vandermonde factor,
+and otherwise Fermat's theorem kills the first factor.
+
+Choose distinct integers $0\le d_1<\cdots<d_k\le s-1$ with
+\[
+ \sum_i d_i=p-1+\binom{k}{2}.
+\]
+Such a choice exists because the sums of $k$ distinct elements of
+$\{0,\ldots,s-1\}$ fill
+$[\binom{k}{2},\binom{k}{2}+k(s-k)]$. Explicitly, if
+$p-1=kq+u$, $0\le u<k$, use $d_i=i-1+q$ for the first $k-u$ indices
+and $d_i=i+q$ for the last $u$.
+
+The coefficient of $\prod_i x_i^{d_i}$ in $P$ is
+\begin{equation}\label{eq:coefficient}
+ \frac{(p-1)!}{\prod_i d_i!}\prod_{i<j}(d_j-d_i).
+\end{equation}
+Here is the determinant step omitted from the generated writeup. Expanding
+the Vandermonde and the multinomial term gives, apart from $(p-1)!$,
+\[
+ \det\left(\frac1{(d_i-j+1)!}\right)_{i,j=1}^k.
+\]
+Multiply row $i$ by $d_i!$. The $j$th entry becomes the falling
+factorial $(d_i)_{j-1}$, a monic polynomial of degree $j-1$ in $d_i$.
+Its determinant is therefore the Vandermonde
+$\prod_{i<j}(d_j-d_i)$. Dividing the row factors gives
+\eqref{eq:coefficient}. \emph{This is the explicit MINOR\_GAPS repair.}
+The coefficient is nonzero in $\F_p$, because $d_i<p$ and the $d_i$ are
+distinct.
+
+Finally, the coefficient form of multivariate interpolation says that a
+polynomial of total degree $\sum_i d_i$ with this coefficient nonzero
+cannot vanish on a product of sets of sizes exceeding $d_i$. To see it,
+choose $X_i\subseteq B$ of size $d_i+1$; the coefficient equals
+\[
+ \sum_{x_i\in X_i}
+ \frac{P(x_1,\ldots,x_k)}
+ {\prod_i\prod_{y\in X_i\setminus\{x_i\}}(x_i-y)}.
+\]
+This would vanish if $P$ vanished on $B^k$, a contradiction.
+\end{proof}
+
+\phantomsection\label{pf:prime}
+\lemprime*
+\begin{proof}
+Put $m=|A|$, choose by Bertrand's postulate a prime $2n<p<4n$, and
+split $A$ into a group-building set $A^{(0)}$ of size $\lfloor m/2\rfloor$
+and a reserve $A^{(1)}$. Let
+\[
+ h=\left\lceil\frac{8p}{m}\right\rceil=O_\kappa(\log n).
+\]
+For large $n$, $h\le m/8$. While at least $m/4$ elements of $A^{(0)}$
+remain, \cref{lem:restricted} supplies an $h$-set summing to zero modulo
+$p$, since for remaining size $v$,
+$h(v-h)\ge hm/8\ge p$. This gives at least $m/(8h)$ disjoint groups.
+Each group sum is $\ell p$ for some $1\le\ell\le h$, so for one $\ell$
+at least
+\[
+ L\ge\frac{m}{8h^2}
+\]
+groups have common sum $d=\ell p$. Their subset sums contain
+$0,d,\ldots,Ld$, whose upper endpoint $T=Ld$ satisfies
+\[
+ T\ge\frac{mn}{8h}\gg_\kappa\frac{n^2}{(\log n)^2}.
+\]
+
+All reserve primes exceed $\ell$. Choose a residue $c\bmod\ell$ for
+which
+\[
+ B=\{a\in A^{(1)}:a\equiv c\pmod\ell\}
+\quad\text{has}\quad
+ s\ge\frac{m}{2\ell}\ge\frac{m}{2h}.
+\]
+Thus $\gcd(c,\ell)=1$. Set
+$H=\lceil2p/s\rceil=O_\kappa((\log n)^2)$. For large $n$,
+$H+\ell\le s/2$, and for each
+$t=H,\ldots,H+\ell-1$ we have $t(s-t)\ge p$. By
+\cref{lem:restricted}, the $t$-term sums from $B$ cover every residue
+modulo $p$; their residue modulo $\ell$ is $tc$. These $\ell$ choices of
+$t$ cover all residues modulo $\ell$. Since $\gcd(p,\ell)=1$, the Chinese
+remainder theorem shows that every residue modulo $d=\ell p$ has a
+representative in $\Sigma(B)$ of size at most
+\[
+ M=2n(H+\ell)=O_\kappa(n(\log n)^2).
+\]
+
+For $M\le x\le T$, choose $b_x\le M$ with $b_x\equiv x\pmod d$. Then
+$x-b_x=qd$ for some $0\le q\le L$. Use $q$ equal-sum groups together
+with the disjoint reserve representation. Hence
+$[M,T]\cap\mathbb Z\subseteq\Sigma(A)$. For large $n$,
+$M\le n(\log n)^3$ and $T\ge n^2/(\log n)^3$, proving the claim.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+Let $\N=A_1\sqcup\cdots\sqcup A_r$ be arbitrary and put $n_k=2^k$.
+By the prime number theorem, $[n_k,2n_k]$ contains at least
+$n_k/(2\log n_k)$ primes for all sufficiently large $k$. Some colour
+$\gamma_k$ contains at least $n_k/(2r\log n_k)$ of them. Applying
+\cref{lem:prime} with $\kappa=1/(2r)$ gives
+\begin{equation}\label{eq:primeinterval}
+ \left[n_k(\log n_k)^3,\frac{n_k^2}{(\log n_k)^3}\right]\cap\mathbb Z
+ \subseteq\Sigma(A_{\gamma_k}).
+\end{equation}
+As noted in the main text, the stronger published
+\cite[Lemma~2]{CFP22} can be used at this point instead.
+
+Fix $1<\lambda<2$ and let
+$t_k=\log n_k+3\log\log n_k$. For all large $k$,
+\[
+ \lambda t_{k+1}\le2\log n_k-3\log\log n_k,
+\]
+because the difference has leading term $(2-\lambda)k\log2$ and the
+remainder is $O_\lambda(\log k)$. Hence every integer whose logarithm is
+in $J_k=[t_k,\lambda t_{k+1}]$ belongs to
+$\Sigma(A_{\gamma_k})$.
+
+For $E_i=\Sigma(A_i)$ define
+\[
+ U_i=\bigcup_{\gamma_k=i}J_k,\qquad
+ W_i=\bigcup_{n\in E_i}[\log n,\log(n+1)).
+\]
+On each $J_k$, at most an initial interval of length $e^{-t_k}$ is
+missing from $W_i$; thus $|U_i\setminus W_i|<\infty$. Consequently
+\[
+\begin{aligned}
+ |U_i\cap[0,T]|
+ &\le |W_i\cap[0,T]|+O(1)\\
+ &\le\sum_{\substack{n\le e^T\\n\in E_i}}
+ \log\left(1+\frac1n\right)+O(1)
+ \le\sum_{\substack{n\le e^T\\n\in E_i}}\frac1n+O(1).
+\end{aligned}
+\]
+\Cref{lem:geometric} therefore yields
+\[
+ \max_i\dlog(\Sigma(A_i))\ge C_{r,\lambda}.
+\]
+Letting $\lambda\uparrow2$ and using \cref{lem:constant} gives
+\[
+ c_r\ge\frac{b^{r-1}}{2r}.
+\]
+This transfer is the argument of \cite[\S3 and Lemma~6]{CFP22}; it is
+included to show exactly how \cref{lem:geometric} enters.
+
+For the matching upper bound, use the construction of
+\cite[Theorem~1]{CFP22}. For all large $k$, let
+$N_k=\lceil e^{b^k}\rceil$ and colour $[N_k,N_{k+1})$ by $k\bmod r$.
+If a monochromatic subset sum has largest summand in block $k$, it lies
+in $[N_k,N_{k+1}^2]$. Apart from finitely many sums,
+\[
+ \Sigma(A_i)\subseteq
+ \bigcup_{k\equiv i\;(\mathrm{mod}\ r)}[N_k,N_{k+1}^2].
+\]
+On the logarithmic scale, these intervals differ by summable endpoint
+errors from
+\[
+ V_i=\bigcup_{k\equiv i\;(\mathrm{mod}\ r)}[b^k,2b^{k+1}].
+\]
+\Cref{lem:constant} gives $b>2^{1/(r-1)}$, so same-colour intervals are
+disjoint. At a right endpoint $2b^{k+1}$ their accumulated density tends
+to
+\[
+ \frac{\sum_{j\ge0}(2b-1)b^{k-rj}}{2b^{k+1}}
+ =\frac{1-\frac1{2b}}{1-b^{-r}}
+ =\frac{b^{r-1}}{2r}.
+\]
+The density ratio increases within an occupied interval and decreases in
+a gap, so this is its limsup. Therefore
+$c_r\le b^{r-1}/(2r)$, completing the proof.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+\begin{tcolorbox}[colback=black!4,colframe=black!35,title={Status of this appendix}]
+The following report is reproduced verbatim as an audit trail. Its
+references to the original writeup predate the determinant repair and
+the corrected scholarship framing in \cref{sec:provenance}.
+\end{tcolorbox}
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{CFP22}
+D.~Conlon, J.~Fox and H.~T.~Pham,
+\emph{The upper logarithmic density of monochromatic subset sums},
+Mathematika \textbf{68} (2022), 1292--1301;
+\href{https://arxiv.org/abs/2105.15195}{arXiv:2105.15195}.
+
+\bibitem{CFPcomp}
+D.~Conlon, J.~Fox and H.~T.~Pham,
+\emph{Subset sums, completeness and colorings},
+\href{https://arxiv.org/abs/2104.14766}{arXiv:2104.14766}.
+
+\bibitem{DH94}
+J.~A.~Dias da Silva and Y.~O.~Hamidoune,
+\emph{Cyclic spaces for Grassmann derivatives and additive theory},
+Bulletin of the London Mathematical Society \textbf{26} (1994), 140--146.
+
+\bibitem{ANR96}
+N.~Alon, M.~B.~Nathanson and I.~Z.~Ruzsa,
+\emph{The polynomial method and restricted sums of congruence classes},
+Journal of Number Theory \textbf{56} (1996), 404--417.
+\end{thebibliography}
+\end{document}

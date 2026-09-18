@@ -1,0 +1,324 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+% unicode-math defines \triangle as a protected \mathord{...}; a bare subscript _\triangle (as in the referee report) then fails. Make it a braced group.
+\AtBeginDocument{\renewcommand{\triangle}{{\bigtriangleup}}}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\Tstar}{T_{\ast}}
+\newcommand{\TT}{\mathrm{TT}}
+\newcommand{\fin}{\subseteq^{\ast}}
+\newcommand{\symdiff}{\mathbin{\triangle}}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\QQ}{\mathbb Q}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2506.08810\_\_03 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{The five-vertex tournament $C_3[\TT_2,\TT_2,1]$ is a counterexample\\ to Conjecture~24 of Bonamy, Groenland, Johnston, Morrison and Scott}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Bonamy, Groenland, Johnston, Morrison and Scott proved that for every finite graph $H$ other than a clique or an independent set there is a countably infinite $H$-free graph every locally finite perturbation of which contains an induced copy of $H$, and they conjectured the tournament analogue (Conjecture~24 of arXiv:2506.08810): for every finite non-transitive tournament $T$ there is a countably infinite $T$-free tournament $S_T$ every locally finite perturbation of which contains $T$. We show that the five-vertex tournament $\Tstar=C_3[\TT_2,\TT_2,1]$, a directed triangle two of whose vertices are replaced by transitive tournaments on two vertices, is a counterexample. The reason is structural: every countable $\Tstar$-free tournament is obtained from a transitive tournament by reversing a locally finite set of arcs, and transitive tournaments are themselves $\Tstar$-free; hence every countably infinite $\Tstar$-free tournament has a nonempty locally finite perturbation that is still $\Tstar$-free. The single-arc variant, Problem~23 of the same paper, is not addressed.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+
+\paragraph{Tournaments.}
+A \emph{tournament} is an orientation of a complete graph; we write $x\to y$ when the arc between $x$ and $y$ is directed from $x$ to $y$, and $O(x)=N^+(x)$ for the set of out-neighbours of $x$. For sets $X,Y$ of vertices, $X\to Y$ means $x\to y$ for all $x\in X$, $y\in Y$. A tournament is \emph{transitive} if it contains no directed triangle; equivalently its arcs are $x\to y$ for $x<y$ in some linear order of its vertex set. $\TT_n$ denotes the transitive tournament on $n$ vertices and $C_3$ the directed triangle. For tournaments $T_0,T_1,T_2$, the \emph{composition} $C_3[T_0,T_1,T_2]$ is the tournament on the disjoint union $V(T_0)\cup V(T_1)\cup V(T_2)$ that induces $T_i$ on $V(T_i)$ and has $V(T_0)\to V(T_1)\to V(T_2)\to V(T_0)$; a single vertex is written $1$. A tournament $S$ is \emph{$T$-free} if no set of $|V(T)|$ vertices of $S$ induces a tournament isomorphic to $T$. Every subtournament of a tournament is induced, so ``induced copy of $T$'' and ``copy of $T$'' coincide for tournaments. A tournament is \emph{countable} if its vertex set is finite or countably infinite; the conjecture below concerns countably infinite ones.
+
+\paragraph{Perturbations.}
+For tournaments $S,S'$ on the same vertex set, the \emph{change graph} $D(S,S')$ is the undirected graph on $V(S)$ whose edges are the pairs whose orientation differs between $S$ and $S'$. Bonamy, Groenland, Johnston, Morrison and Scott \cite[Section~3]{BGJMS25} define the operative notion for graphs as follows:
+\begin{quote}\small
+For a pair of distinct vertices $u,v\in V(G)$, perturbing the pair $uv$ is the operation which removes $uv$ from $E(G)$ if it is present and adds it if it is not present. A locally finite perturbation of $G$ is a graph obtained from $G$ by perturbing arbitrarily many pairs (at least one, possibly infinitely many) under the constraint that for any vertex $v$, the number of perturbed pairs involving $v$ is finite.
+\end{quote}
+Their Introduction phrases the same notion as ``perturbing a nonempty set of pairs such that every vertex is in a finite number of perturbed pairs; equivalently, we can consider graphs $G'$ such that $E(G)\symdiff E(G')$ is the edge set of a locally finite graph'' \cite[Section~1]{BGJMS25}, which is the change-graph formulation used below. In their concluding section they add that ``for tournaments the natural operation is to reverse the direction of edges'' \cite[Section~8]{BGJMS25}. Accordingly, a \emph{locally finite perturbation} of a tournament $S$ is a tournament $S'$ on $V(S)$ such that $D(S,S')$ is nonempty and locally finite (every vertex lies in finitely many changed pairs). We stress that nonemptiness is part of the paper's definition (``at least one''), not a convention introduced here; the paper itself notes that ``the locally finite perturbations enforce that $S_T$ is infinite''.
+
+\paragraph{The problem.}
+The main result of \cite{BGJMS25} (their Theorem~1) is that for every finite graph $H$ which is not a clique or an independent set there is a countably infinite $H$-free graph $G_H$ such that every locally finite perturbation of $G_H$ has an induced copy of $H$. Section~8 of \cite{BGJMS25} asks for analogues in other structures and poses, for tournaments, first the single-arc problem and then the conjecture we refute. Both are quoted verbatim.
+
+\begin{problem}[{\cite[Problem~23]{BGJMS25}}]\label{prob:23}
+For which finite tournaments $H$, does there exist a countable tournament $G$ that does not contain $H$ as subtournament, yet any tournament obtained from $G$ by changing the direction of a single arc does contain $H$?
+\end{problem}
+
+\begin{conjecture}[{\cite[Conjecture~24]{BGJMS25}}]\label{conj:24}
+Let $T$ be a finite tournament. If $T$ is not transitive, then there exists a countably infinite $T$-free tournament $S_{T}$ such that every locally finite perturbation of $S_{T}$ has an induced copy of $T$.
+\end{conjecture}
+
+The conjecture is introduced with the sentence ``Perhaps the following analogue of Theorem~1 is true for the `locally finite perturbation' variant of this question.'' Its only hypothesis is that $T$ is not transitive, and the paper explains why this hypothesis is necessary: every tournament on $2^n$ vertices contains a transitive subtournament on $n$ vertices, so a transitive $T$ cannot be avoided by an infinite tournament at all. There is no restriction on the order, connectivity or modular structure of $T$. The catalog entry for this problem (id \texttt{2506.08810\_\_03}) and the referee's own searches found no published work addressing \cref{conj:24}; the referee also found that the journal version (Canadian Journal of Mathematics, published online 24 March 2026) contains no retraction of, or note on, the tournament conjecture.
+
+\paragraph{The counterexample.}
+Let $\Tstar=C_3[\TT_2,\TT_2,1]$ be the tournament on the five vertices $a_0,a_1,b_0,b_1,c$ with
+\[
+ a_0\to a_1,\qquad b_0\to b_1,\qquad \{a_0,a_1\}\to\{b_0,b_1\}\to\{c\}\to\{a_0,a_1\},
+\]
+that is, with the ten arcs
+\begin{gather*}
+ a_0\to a_1,\quad a_0\to b_0,\quad a_0\to b_1,\quad a_1\to b_0,\quad a_1\to b_1,\\
+ b_0\to b_1,\quad b_0\to c,\quad b_1\to c,\quad c\to a_0,\quad c\to a_1 .
+\end{gather*}
+The out-degrees of $(a_0,a_1,b_0,b_1,c)$ are $(3,2,2,1,2)$. $\Tstar$ has exactly four directed triangles, namely $c\to a_i\to b_j\to c$ for $i,j\in\{0,1\}$, all through $c$; in particular it is not transitive, and the two triangles $c\to a_0\to b_0\to c$ and $c\to a_1\to b_1\to c$ share no arc. Both $\{a_0,a_1\}$ and $\{b_0,b_1\}$ are nontrivial modules, so $\Tstar$ is not prime; $\Tstar$ is strongly connected but $\Tstar-c$ is not; and the minimum number of arcs whose reversal makes $\Tstar$ transitive is $2$.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+Let $S$ be a countably infinite $\Tstar$-free tournament. Then there is a $\Tstar$-free tournament $S'\ne S$ on $V(S)$ such that the change graph $D(S,S')$ is locally finite. Equivalently: every countably infinite $\Tstar$-free tournament has a locally finite perturbation (in the sense of \cite{BGJMS25}) that is still $\Tstar$-free.
+\end{restatable}
+
+\begin{corollary}\label{cor:main}
+\Cref{conj:24} is false. The tournament $T=\Tstar$ is finite and not transitive, yet no countably infinite $\Tstar$-free tournament $S_{T}$ has the property that every locally finite perturbation of $S_T$ contains an induced copy of $\Tstar$.
+\end{corollary}
+\begin{proof}
+$\Tstar$ is a finite tournament containing a directed triangle, so it satisfies the only hypothesis of \cref{conj:24}. Let $S_T$ be any countably infinite $\Tstar$-free tournament. \Cref{thm:main} supplies $S'\ne S_T$ on the same vertex set with $D(S_T,S')$ locally finite; since $S'\ne S_T$ the set of reversed pairs is nonempty, so $S'$ is a locally finite perturbation of $S_T$ in the paper's sense, and $S'$ is $\Tstar$-free, i.e.\ it has no induced copy of $\Tstar$. Hence $S_T$ does not have the conjectured property.
+\end{proof}
+
+\begin{proofidea}
+Two finite facts about $\Tstar$ drive the argument, and the referee checked both by exhaustive enumeration. First, if an arc $x\to y$ of a $\Tstar$-free tournament admits a vertex $p$ with $x\to p\to y$, then at most two vertices $z$ satisfy $y\to z\to x$ (\cref{lem:Z}): any three such $z$ together with $x,y,p$ contain a copy of $\Tstar$. So an arc lying in infinitely many directed triangles has no such $p$, and arcs with no such $p$ form an undirected graph of maximum degree at most $2$ (\cref{lem:Pempty}). Hence the graph $J(S)$ of arcs in infinitely many directed triangles has maximum degree at most $2$, and a general criterion (\cref{lem:criterion}) shows that a countable tournament with locally finite $J(S)$ differs from some transitive tournament $L$ by a locally finite set of reversals (\cref{thm:structure}). If $S$ is not transitive then $L\ne S$, and $L$ is $\Tstar$-free because $\Tstar$ is not transitive. Second, if $S$ is transitive, reversing a single arc creates only directed triangles through that arc, whereas $\Tstar$ contains two arc-disjoint directed triangles; so the result is still $\Tstar$-free (\cref{lem:onearc}).\fullproofref{pf:main}
+\end{proofidea}
+
+\section{Structure of \texorpdfstring{$\Tstar$}{T*}-free tournaments}\label{sec:structure}
+
+For an arc $x\to y$ of a tournament $S$ put
+\[
+ Z(x,y)=\{z: y\to z\to x\},\qquad P(x,y)=\{p: x\to p\to y\}.
+\]
+$Z(x,y)$ is the set of vertices completing $x\to y$ to a directed triangle, and $P(x,y)$ the set of vertices that would do so if the arc $xy$ were reversed. Note that $O(y)\setminus O(x)=Z(x,y)$: indeed $x\notin O(y)$ because $x\to y$, so a vertex $z\in O(y)\setminus O(x)$ is distinct from $x$ and $y$, satisfies $y\to z$ and, not being an out-neighbour of $x$, satisfies $z\to x$. Let $J(S)$ be the undirected graph on $V(S)$ in which $xy$ is an edge precisely when the arc between $x$ and $y$ lies in infinitely many directed triangles, i.e.\ when $Z(x,y)$ (for $x\to y$) is infinite.
+
+\begin{restatable}[Criterion for locally finite distance from a transitive tournament]{lemma}{lemcriterion}\label{lem:criterion}
+Let $S$ be a countable tournament. There is a transitive tournament $L$ on $V(S)$ with $D(S,L)$ locally finite if and only if $J(S)$ is locally finite.
+\end{restatable}
+\begin{proofidea}
+Necessity: if $xy\notin E(D(S,L))$ then every directed triangle $xyz$ of $S$ must have $xz$ or $yz$ in $D(S,L)$, else it survives into $L$; so $J(S)\subseteq D(S,L)$. Sufficiency: call $x\sim y$ if $O(x)\symdiff O(y)$ is finite. On the classes, ``$O(y)\setminus O(x)$ finite'' defines a partial order; take a linear extension (Szpilrajn \cite{Sz30}; for countably many classes an explicit insertion argument suffices). By $O(y)\setminus O(x)=Z(x,y)$, any arc between different classes that points against this order lies in $J(S)$. Inside a class $C$, fix $r\in C$ and split $C$ into the in-neighbours $C^-$ and out-neighbours $C^+$ of $r$; finiteness of $O(x)\symdiff O(r)$ gives finite out-degrees inside $C^-$, finite in-degrees inside $C^+$, and only locally finitely many arcs from $C^+$ to $C^-$. Ordering $C^-$ in reverse enumeration order, then $r$, then $C^+$ in enumeration order, makes the discrepancies inside $C$ locally finite. Only the sufficiency direction is used below.\fullproofref{pf:criterion}
+\end{proofidea}
+
+\begin{restatable}{lemma}{lemZ}\label{lem:Z}
+Let $S$ be $\Tstar$-free and let $x\to y$ be an arc with $P(x,y)\ne\varnothing$. Then $|Z(x,y)|\le 2$.
+\end{restatable}
+\begin{proofidea}
+Take $p\in P(x,y)$ and suppose $z_1,z_2,z_3\in Z(x,y)$. All five vertices are distinct, and two of the $z_i$, say $z_1,z_2$, are oriented the same way relative to $p$. If $p\to z_1,z_2$ then $\{p,y\}\to\{z_1,z_2\}\to\{x\}\to\{p,y\}$ with $p\to y$; if $z_1,z_2\to p$ then $\{z_1,z_2\}\to\{x,p\}\to\{y\}\to\{z_1,z_2\}$ with $x\to p$. Either way the five vertices induce $C_3[\TT_2,\TT_2,1]=\Tstar$ (a two-vertex block is $\TT_2$ whichever way its arc points).\fullproofref{pf:Z}
+\end{proofidea}
+
+\begin{restatable}{lemma}{lemPempty}\label{lem:Pempty}
+In any tournament, the arcs $x\to y$ with $P(x,y)=\varnothing$ form an undirected graph of maximum degree at most $2$: every vertex has at most one such out-arc and at most one such in-arc.
+\end{restatable}
+\begin{proofidea}
+If $x\to y$ and $x\to z$ both had empty $P$, then $y\to z$ would put $y\in P(x,z)$ and $z\to y$ would put $z\in P(x,y)$. In-arcs are symmetric.\fullproofref{pf:Pempty}
+\end{proofidea}
+
+\begin{restatable}[Structure theorem]{theorem}{thmstructure}\label{thm:structure}
+Let $S$ be a $\Tstar$-free tournament. Then $J(S)$ has maximum degree at most $2$. Consequently, if $S$ is countable, there is a transitive tournament $L$ on $V(S)$ such that $D(S,L)$ is locally finite: every countable $\Tstar$-free tournament is obtained from a transitive tournament by reversing a locally finite set of arcs.
+\end{restatable}
+\begin{proofidea}
+An edge $xy$ of $J(S)$ with $x\to y$ has $Z(x,y)$ infinite, hence of size at least $3$, so $P(x,y)=\varnothing$ by \cref{lem:Z}. Thus $J(S)$ is a subgraph of the graph of \cref{lem:Pempty}, and \cref{lem:criterion} applies.\fullproofref{pf:structure}
+\end{proofidea}
+
+\begin{restatable}{lemma}{lemonearc}\label{lem:onearc}
+Let $L$ be a transitive tournament and let $L'$ be obtained from $L$ by reversing a single arc. Then $L'$ is $\Tstar$-free.
+\end{restatable}
+\begin{proofidea}
+Every directed triangle of $L'$ contains the reversed arc, since otherwise it would be a directed triangle of $L$. But $\Tstar$ contains two arc-disjoint directed triangles, so no copy of $\Tstar$ fits into $L'$.\fullproofref{pf:onearc}
+\end{proofidea}
+
+The structure theorem is one-directional: a locally finite perturbation of a transitive tournament may well contain $\Tstar$. Indeed $\Tstar$ itself is obtained from $\TT_5$ with the order $a_0<a_1<b_0<b_1<c$ by reversing the two arcs $a_0c$ and $a_1c$, and no single reversal suffices (\cref{lem:onearc}), so the inversion number of $\Tstar$ is exactly $2$. What \cref{thm:structure} says is that nothing outside the locally finite perturbations of transitive tournaments is $\Tstar$-free.
+
+\section{Remarks}
+
+\begin{remark}[Interpretation audit]\label{rem:interp}
+Because the object is tiny, the substance of the referee's audit was to check that \cref{conj:24} as posed really admits it. The referee fetched Section~8 of arXiv:2506.08810v3 and found the conjecture's statement to agree character for character with the one attacked (\cref{conj:24} above); it fetched the definition of ``locally finite perturbation'' quoted in the Introduction and found the writeup's reading, a nonempty set of reversed arcs with every vertex in finitely many of them, to be the paper's own. Three consequences were recorded. (i)~The nonemptiness caveat the writeup states is not an assumption it imposed but the paper's convention (``at least one''); had the writeup instead used the empty perturbation, the disproof would be a strawman, and it does not. This is why the case of a transitive $S$ in \cref{thm:main} needs the separate \cref{lem:onearc}: the transitive tournament $L$ produced by \cref{thm:structure} coincides with $S$ there, so a genuine reversal must be exhibited. (ii)~``Induced copy'' means ``subtournament'', so there is no induced-versus-weak ambiguity to exploit. (iii)~The conjecture has no order threshold and no primeness or connectivity hypothesis; its only hypothesis, non-transitivity, is satisfied by $\Tstar$, which has four directed triangles. The referee concluded that a reasonable author of \cref{conj:24} would accept the argument as a refutation of the conjecture as posed.
+\end{remark}
+
+\begin{remark}[Why the conjecture admits a five-vertex counterexample]\label{rem:why}
+The referee was instructed to explain why five authors would have missed a five-vertex counterexample, and gave three answers, which we reproduce as its assessment. (i)~\Cref{conj:24} is a speculation in the open-problems section of a paper about graphs, introduced with ``Perhaps the following analogue of Theorem~1 is true''; nothing in the paper indicates a small-tournament check, and the paper's ancillary code (\texttt{small\_graphs.py}, \texttt{theorem\_10.py}) concerns the graph results. (ii)~The intuition behind Theorem~1 of \cite{BGJMS25} is that once the degenerate targets (cliques and independent sets) are excluded, the space of $H$-free graphs has ``points that are isolated in a very strong sense''; the natural transfer replaces the degenerate targets by transitive tournaments. For $\Tstar$ this fails for a tournament-specific reason: the obstruction is not that $\Tstar$ is hard to hit but that it is so easy to avoid that, by \cref{thm:structure}, the whole space of countable $\Tstar$-free tournaments collapses onto the locally finite perturbations of transitive tournaments; and transitive tournaments are themselves $\Tstar$-free, so this space has no isolated point at all. (iii)~The machinery of \cite{BGJMS25} replaces vertices by infinite cliques or independent sets; the tournament analogue replaces vertices by infinite transitive blocks. But $\Tstar=C_3[\TT_2,\TT_2,1]$ is exactly a directed triangle with two vertices blown up into transitive blocks of size $2$, so any blow-up of a directed triangle with two blocks of size at least $2$ already contains $\Tstar$, and the technique cannot get started for this target. The referee also measured how special $\Tstar$ is: among all tournaments on $4$, $5$ and $6$ vertices up to isomorphism ($4$, $12$ and $56$ of them), $\Tstar$ is the \emph{only} one for which both finite engines of the proof work, namely all $64$ completions of the configuration in \cref{lem:Z} contain $T$, and $T$ has two arc-disjoint directed triangles. The counterexample is thus a narrow object rather than one that should have been obvious.
+\end{remark}
+
+\begin{remark}[Scope: Problem~23 is untouched]\label{rem:p23}
+\Cref{thm:main} says nothing about \cref{prob:23} for $\Tstar$. In the non-transitive case its perturbation $L$ in general reverses infinitely many arcs, and in the transitive case \cref{lem:onearc} shows only that a transitive tournament is not a solution to \cref{prob:23} for $H=\Tstar$. Whether some countable $\Tstar$-free tournament becomes non-$\Tstar$-free under every single arc reversal remains open, as the writeup itself states. Likewise the writeup proposes no repaired conjecture; the question for which non-transitive $T$ the conclusion of \cref{conj:24} holds is open. The earlier attempt discussed in \cref{rem:prior} proves it for several classes.
+\end{remark}
+
+\begin{remark}[Relation to the earlier attempt]\label{rem:prior}
+This target was a second attempt. The first, by \texttt{gpt-5.6-sol} (\texttt{attacks/2506.08810\_\_03/output.md}, verdict ``partial'', unverified), proved the conclusion of \cref{conj:24} for every tournament one arc reversal away from transitive, for the cyclic tournament $C_5$ via a $C_3$-lexicographic construction, and for tournaments that stay strongly connected after deleting any two vertices and have no proper transitive module (including $C_7$), and it named low-connectivity tournaments with nontrivial modular structure as the untreated region. The present argument reuses nothing from it. The referee checked that the two are consistent: $\Tstar$ needs $2$ reversals to become transitive (exhaustive over all $120$ orderings), has the nontrivial modules $\{a_0,a_1\}$ and $\{b_0,b_1\}$, and $\Tstar-c$ is not strongly connected; so none of the earlier positive results covers $\Tstar$, which falls exactly into the region that attempt flagged as open. Had the inversion number of $\Tstar$ been $1$, one of the two documents would be wrong.
+\end{remark}
+
+\begin{remark}[Computational checks by the referee]\label{rem:comp}
+The referee's scripts (pure Python, in the repository folder \nolinkurl{verification_astra/scripts/2506.08810__03/}) established the following; none failed.
+\begin{itemize}\tightlist
+\item \emph{The object.} $\Tstar$ is a tournament with out-degree sequence $(3,2,2,1,2)$ on $(a_0,a_1,b_0,b_1,c)$,\footnote{The referee's report lists this as $(3,2,2,2,1)$ in the same order; $b_1$ has out-degree $1$ (it beats only $c$) and $c$ has out-degree $2$, so the report's two last entries are transposed. The multiset, and everything built on it, is unaffected. We re-derived all invariants in this paragraph.} four directed triangles all through $c$, a pair of arc-disjoint directed triangles, empty intersection of the arc sets of all four triangles, inversion number $2$, nontrivial modules $\{a_0,a_1\}$ and $\{b_0,b_1\}$, strongly connected with $\Tstar-c$ not strongly connected.
+\item \emph{\Cref{lem:Z} is a complete enumeration.} The configuration $x\to y$, $p\in P(x,y)$, $z_1,z_2\in Z(x,y)$ with $z_1,z_2$ alike relative to $p$ has $4$ completions, all isomorphic to $\Tstar$; the six-vertex configuration with $z_1,z_2,z_3\in Z(x,y)$ has $2^3\cdot 2^3=64$ completions and $0$ of them are $\Tstar$-free.
+\item \emph{\Cref{lem:Pempty}.} Three-vertex configurations with two $P$-empty out-arcs at a vertex: $0$; with two $P$-empty in-arcs: $0$.
+\item \emph{Finite shadow of \cref{thm:structure}.} Over all labelled tournaments on $n$ vertices, the arcs lying in at least three directed triangles of a $\Tstar$-free tournament always form a graph of maximum degree at most $2$ with $P=\varnothing$ throughout:
+\begin{center}\small
+\begin{tabular}{@{}rrrrl@{}}\toprule
+$n$ & labelled tournaments & $\Tstar$-free & max.\ degree of the $\ge3$-triangle graph & such an arc with $P\ne\varnothing$\\\midrule
+4 & 64 & 64 & 0 & none\\
+5 & 1\,024 & 904 & 1 & none\\
+6 & 32\,768 & 17\,648 & 1 & none\\
+7 & 2\,097\,152 & 434\,352 & 2 & none\\\bottomrule
+\end{tabular}
+\end{center}
+The bound $2$ is attained at $n=7$, so the constant in \cref{lem:Pempty} is tight. A further $24$ $\Tstar$-free tournaments on $8$, $9$, $10$ and $12$ vertices found by randomised local search satisfy both conclusions.
+\item \emph{\Cref{lem:onearc}.} Reversing each of the $\binom n2$ arcs of $\TT_n$ for $n=5,\dots,9$ ($110$ cases) creates $0$ copies of $\Tstar$.
+\item \emph{Infinite examples.} On finite windows of eight explicit countable tournaments, the four that contain $\Tstar$ (among them $C_3[\TT,\TT,\TT]$, the circular tournament on $\mathbb Z_{17}$, and the earlier attempt's $C_3$-lexicographic power) are as \cref{thm:structure} requires, and the four $\Tstar$-free ones ($\TT_\omega[C_3]$; $\TT_\omega$ with the pairs $(2t,2t+1)$ reversed; $\TT_\omega$ with all pairs $(i,i+1)$ reversed; evens dominating odds minus a matching) have triangle graph of maximum degree at most $1$ on the window. For these four the recipe of \cref{lem:criterion} was worked out by hand and its change graph measured on windows of $20$, $60$, $120$ and $240$ vertices: the maximum degree stays at $1$, $1$, $2$ and $1$ respectively, constant in the window size. The referee notes that ``$O(x)\symdiff O(y)$ finite'' has no faithful finite-window proxy, which is why this check was done by hand rather than automatically.
+\item \emph{Uniqueness on at most six vertices}, as described in \cref{rem:why}.
+\end{itemize}
+\end{remark}
+
+\begin{remark}[Use of choice]\label{rem:choice}
+The sufficiency direction of \cref{lem:criterion} orders the $\sim$-classes by a linear extension of a partial order and enumerates each class. In general the existence of a linear extension is Szpilrajn's theorem \cite{Sz30}; for a countable tournament there are countably many classes and the extension can be built by inserting the classes one at a time (\cref{app:proofs}), so the argument uses no choice beyond fixing enumerations of a countable set. The writeup did not name Szpilrajn; the referee called this cosmetic.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The counterexample and its proof were found by the language model \texttt{gpt-6-astra} (reasoning effort max, flex tier) in a single autonomous pass started on 2026-09-17, in the retry leg of the campaign (catalog id \texttt{2506.08810\_\_03}, leg \texttt{attacks\_retry}; writeup in \texttt{attacks\_retry/2506.08810\_\_03/output.md}). This was a second attempt at the problem: the prompt included the earlier attempt by \texttt{gpt-5.6-sol} (\texttt{attacks/2506.08810\_\_03/output.md}, verdict ``partial'', no referee report), which is summarised in \cref{rem:prior}. The new writeup states that it uses no result of the earlier one, and the referee confirmed that nothing is inherited; the partial results of \cref{rem:prior} are the earlier model's and are not claimed here.
+(2)~An independent adversarial referee agent (\texttt{claude-opus-5}) reviewed the writeup on 2026-09-17. It fetched arXiv:2506.08810v3 and checked the statement of Conjecture~24 and the definition of ``locally finite perturbation'' verbatim against the writeup's reading, re-derived every step (in particular the three ``it follows that'' bullets in the sufficiency direction of \cref{lem:criterion} and the implicit step that a cross-class arc contradicting the linear extension lies in $J(S)$), verified \cref{lem:Z}, \cref{lem:Pempty} and \cref{lem:onearc} by complete enumeration, checked the degree bound over all $2\,097\,152$ labelled tournaments on $7$ vertices, checked consistency with the earlier attempt, and searched for prior or concurrent work, finding none. Its verdict was \textsc{confirmed}, high confidence. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-17 the writeup was rewritten into the present note by \texttt{claude-fable-5-1}; the compilation was repaired and the quotations from the paper re-checked on 2026-09-18. The deviations from the writeup are the following, and no other mathematical content was changed.
+\begin{itemize}\tightlist
+\item The text was reorganised with full proofs in \cref{app:proofs}. The writeup's Corollary~4 is stated as \cref{thm:structure}, and its ``Case~2'' is isolated as \cref{lem:onearc}.
+\item The explicit arc list of $\Tstar$ and its invariants (out-degrees, directed triangles, modules, connectivity, inversion number) were added; they come from the referee's step~1 and were recomputed for this note, correcting the labelling slip noted in \cref{rem:comp}.
+\item In \cref{lem:criterion}: the existence of a linear extension is attributed to Szpilrajn \cite{Sz30} and an explicit construction for countably many classes is supplied (referee caveat~3); the step that an arc between classes pointing against the linear extension, and not merely against the partial order, lies in $J(S)$ is spelled out (referee step~S4); the three bullets on $C^-$ and $C^+$ are derived in full (referee step~S5); the well-definedness and transitivity of the order on classes are written out.
+\item In \cref{lem:Z} the distinctness of the five vertices is made explicit (referee step~S7).
+\item The verbatim quotations of the paper's definition of locally finite perturbation (from its Section~3 and, in the equivalent change-graph form, its Section~1), of Problem~23, of the sentence introducing Conjecture~24 and of the remark that the perturbations force $S_T$ to be infinite were added. The referee fetched Conjecture~24 and the definition from arXiv:2506.08810v3; all five passages were re-fetched from the same source and confirmed character for character on 2026-09-18. The referee report locates the definition in Section~2 of the paper; it is in Section~3 (``Notation and definitions''), and the note cites it there.
+\item The paragraph following \cref{thm:structure}, observing that $\Tstar$ is $\TT_5$ with the two arcs $a_0c$ and $a_1c$ reversed and hence has inversion number exactly $2$, was added; the value $2$ is the referee's exhaustive computation, and the explicit pair of arcs was checked by hand against the arc list in the Introduction.
+\item The bibliographic data of the journal version (DOI 10.4153/S0008414X26102132, published online 24 March 2026) were taken from the publisher's page on 2026-09-18.
+\item \Cref{rem:interp,rem:why,rem:prior,rem:comp,rem:choice} are taken from the referee report; they contain no claim of the writeup's.
+\end{itemize}
+\textbf{No human mathematician has checked this argument.} We circulate it for human review, not as a claim of a settled result.
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+Throughout, for an arc $x\to y$ of the tournament under consideration, $Z(x,y)=\{z: y\to z\to x\}$, $P(x,y)=\{p: x\to p\to y\}$, $O(x)=N^+(x)$, and $X\fin Y$ means that $X\setminus Y$ is finite. We use repeatedly the identity
+\begin{equation}\label{eq:Z}
+ O(y)\setminus O(x)=Z(x,y)\qquad\text{whenever }x\to y,
+\end{equation}
+proved at the start of \cref{sec:structure}: $x\notin O(y)$ since $x\to y$, so $z\in O(y)\setminus O(x)$ means $z\ne x,y$, $y\to z$ and $z\to x$.
+
+\phantomsection\label{pf:criterion}
+\lemcriterion*
+\begin{proof}
+\emph{Necessity.} Let $L$ be transitive on $V(S)$ with $D=D(S,L)$ locally finite. We show $J(S)\subseteq D$, which gives local finiteness of $J(S)$. Let $xy\notin E(D)$, so $xy$ has the same orientation in $S$ and $L$, and let $z$ be such that $x,y,z$ span a directed triangle of $S$. If neither $xz$ nor $yz$ were in $E(D)$, all three arcs of this triangle would have the same orientation in $L$, and $L$ would contain a directed triangle, contradicting transitivity. Hence $z\in N_D(x)\cup N_D(y)$, a finite set. So $xy$ lies in only finitely many directed triangles of $S$, i.e.\ $xy\notin E(J(S))$.
+
+\emph{Sufficiency.} Assume $J(S)$ is locally finite.
+
+\emph{Step 1: classes.} Define $x\sim y$ iff $O(x)\symdiff O(y)$ is finite. This is reflexive and symmetric, and transitive because $O(x)\symdiff O(z)\subseteq (O(x)\symdiff O(y))\cup(O(y)\symdiff O(z))$. Let $\mathcal C$ be the set of $\sim$-classes; it is countable.
+
+\emph{Step 2: a partial order on classes.} For distinct classes $C,D$ declare $C\prec D$ if $O(y)\fin O(x)$ for some (equivalently every) $x\in C$, $y\in D$. This is independent of the representatives: if $x'\sim x$ and $y'\sim y$ then $O(y')\setminus O(x')\subseteq (O(y')\setminus O(y))\cup(O(y)\setminus O(x))\cup(O(x)\setminus O(x'))$, and the first and third sets are finite. It is transitive, since $O(z)\setminus O(x)\subseteq (O(z)\setminus O(y))\cup(O(y)\setminus O(x))$. It is antisymmetric: if $C\prec D$ and $D\prec C$ then both $O(y)\setminus O(x)$ and $O(x)\setminus O(y)$ are finite, so $x\sim y$ and $C=D$. Thus $\prec$ is a strict partial order on $\mathcal C$.
+
+\emph{Step 3: a linear extension.} Let $<$ be a linear order on $\mathcal C$ extending $\prec$. Such an order exists by Szpilrajn's theorem \cite{Sz30}; since $\mathcal C$ is countable we can also construct it directly. Enumerate $\mathcal C=\{C_1,C_2,\dots\}$ and build linear orders $<_n$ on $\{C_1,\dots,C_n\}$ extending $\prec$, each extending the previous one. Given $<_n$, let $\mathcal P=\{C_i: i\le n,\ C_i\prec C_{n+1}\}$ and $\mathcal Q=\{C_j: j\le n,\ C_{n+1}\prec C_j\}$. For $C_i\in\mathcal P$ and $C_j\in\mathcal Q$ transitivity gives $C_i\prec C_j$, hence $C_i<_n C_j$; so every element of $\mathcal P$ is $<_n$-below every element of $\mathcal Q$. Insert $C_{n+1}$ immediately after the $<_n$-largest element of $\mathcal P$ (at the beginning if $\mathcal P=\varnothing$). The result $<_{n+1}$ is a linear order placing $C_{n+1}$ above $\mathcal P$ and below $\mathcal Q$, hence extending $\prec$. The union $<$ of the $<_n$ is a linear order on $\mathcal C$ extending $\prec$.
+
+\emph{Step 4: arcs between classes.} We claim: if $x\in C$, $y\in D$, $C\ne D$, $C<D$ and $y\to x$ in $S$, then $xy\in E(J(S))$. Suppose not: then $Z(y,x)$ is finite, so by \eqref{eq:Z} (applied to the arc $y\to x$) $O(x)\setminus O(y)$ is finite, i.e.\ $O(x)\fin O(y)$, which by definition means $D\prec C$, hence $D<C$, contradicting $C<D$. So every pair between distinct classes whose orientation in $S$ disagrees with $<$ is an edge of $J(S)$.
+
+\emph{Step 5: inside a class.} Fix a class $C$ and $r\in C$, and put $C^-=\{x\in C: x\to r\}$, $C^+=\{x\in C: r\to x\}$, so $C=C^-\cup\{r\}\cup C^+$. For $x\in C$ the set $F(x)=O(x)\symdiff O(r)$ is finite. We verify three facts.
+\begin{enumerate}[label=(\roman*)]\tightlist
+\item If $x,y\in C^-$ and $x\to y$, then $y\in O(x)$ and $y\notin O(r)$ (as $y\to r$), so $y\in O(x)\setminus O(r)\subseteq F(x)$. Hence every $x\in C^-$ has finitely many out-neighbours in $C^-$.
+\item If $x,y\in C^+$ and $y\to x$, then $y\in O(r)$ and $y\notin O(x)$, so $y\in O(r)\setminus O(x)\subseteq F(x)$. Hence every $x\in C^+$ has finitely many in-neighbours in $C^+$.
+\item If $x\in C^-$, $y\in C^+$ and $y\to x$, then $y\in O(r)\setminus O(x)\subseteq F(x)$ and $x\in O(y)\setminus O(r)\subseteq F(y)$ (as $x\to r$, $x\notin O(r)$). Hence the bipartite graph of pairs $x\in C^-$, $y\in C^+$ with $y\to x$ has all degrees finite.
+\end{enumerate}
+Enumerate $C^-=\{u_1,u_2,\dots\}$ and $C^+=\{v_1,v_2,\dots\}$ (finite or infinite enumerations, without repetition) and order $C$ as
+\begin{equation}\label{eq:classorder}
+ \cdots<u_3<u_2<u_1<r<v_1<v_2<v_3<\cdots,
+\end{equation}
+i.e.\ $C^-$ in reverse enumeration order, then $r$, then $C^+$ in enumeration order. Let $L_C$ be the transitive tournament on $C$ given by this order ($a\to b$ iff $a<b$). We count the pairs inside $C$ on which $S$ and $L_C$ disagree at a fixed vertex. At $u_i$: with $r$ none, since $u_i\to r$ in both; with $u_j$ for $j<i$ at most $i-1$ pairs; with $u_j$ for $j>i$, $L_C$ has $u_j\to u_i$, so a disagreement means $u_i\to u_j$ in $S$, and by (i) there are finitely many such $j$; with $v_j$, $L_C$ has $u_i\to v_j$, so a disagreement means $v_j\to u_i$ in $S$, finitely many by (iii). At $v_i$: with $r$ none; with $v_j$ for $j<i$ at most $i-1$; with $v_j$ for $j>i$, $L_C$ has $v_i\to v_j$, so a disagreement means $v_j\to v_i$ in $S$, finitely many by (ii); with $u_j$ finitely many by (iii). At $r$: none. So $D(S|_C,L_C)$ is locally finite.
+
+\emph{Step 6: assembling $L$.} Order $V(S)$ by: $x$ before $y$ if the class of $x$ is $<$ the class of $y$, or if they lie in the same class $C$ and $x$ precedes $y$ in \eqref{eq:classorder}. This is a linear order on $V(S)$; let $L$ be the corresponding transitive tournament. A vertex $x\in C$ lies in finitely many pairs of $D(S,L)$: those inside $C$ are finite in number by Step~5, and those with vertices of other classes are edges of $J(S)$ at $x$ by Step~4, of which there are finitely many because $J(S)$ is locally finite. Hence $D(S,L)$ is locally finite.
+\end{proof}
+
+\phantomsection\label{pf:Z}
+\lemZ*
+\begin{proof}
+Let $p\in P(x,y)$, so $x\to p\to y$, and suppose for a contradiction that $Z(x,y)$ contains three distinct vertices $z_1,z_2,z_3$, so $y\to z_i\to x$. The vertices $x,y,p,z_1,z_2,z_3$ are pairwise distinct: $p\ne x,y$ and $z_i\ne x,y$ by definition, and $p\ne z_i$ because $p\to y$ while $y\to z_i$. By the pigeonhole principle two of the $z_i$, say $z_1$ and $z_2$, are oriented the same way relative to $p$.
+
+\emph{Case $p\to z_1$ and $p\to z_2$.} Put $A=\{p,y\}$, $B=\{z_1,z_2\}$ and $c=x$. Then $p\to y$ inside $A$, so $A$ induces $\TT_2$; $B$ induces $\TT_2$ whichever way the arc between $z_1$ and $z_2$ points; $A\to B$ because $p\to z_1,z_2$ (the case hypothesis) and $y\to z_1,z_2$ (as $z_i\in Z(x,y)$); $B\to\{c\}$ because $z_i\to x$; and $\{c\}\to A$ because $x\to p$ and $x\to y$. So $\{x,y,p,z_1,z_2\}$ induces $C_3[\TT_2,\TT_2,1]=\Tstar$.
+
+\emph{Case $z_1\to p$ and $z_2\to p$.} Put $A=\{z_1,z_2\}$, $B=\{x,p\}$ and $c=y$. Then $A$ induces $\TT_2$; $x\to p$ inside $B$; $A\to B$ because $z_i\to x$ and $z_i\to p$; $B\to\{c\}$ because $x\to y$ and $p\to y$; and $\{c\}\to A$ because $y\to z_i$. Again $\{x,y,p,z_1,z_2\}$ induces $\Tstar$.
+
+Both cases contradict the $\Tstar$-freeness of $S$. Hence $|Z(x,y)|\le 2$.
+\end{proof}
+
+\phantomsection\label{pf:Pempty}
+\lemPempty*
+\begin{proof}
+Let $x$ be a vertex and suppose $x\to y$ and $x\to z$ with $y\ne z$ both satisfy $P(x,y)=P(x,z)=\varnothing$. Either $y\to z$, in which case $x\to y\to z$ gives $y\in P(x,z)$, or $z\to y$, in which case $z\in P(x,y)$; both are impossible. So at most one out-arc of $x$ has empty $P$. Dually, suppose $y\to x$ and $z\to x$ with $y\ne z$ both satisfy $P(y,x)=P(z,x)=\varnothing$. Either $y\to z$, giving $y\to z\to x$ and $z\in P(y,x)$, or $z\to y$, giving $y\in P(z,x)$; both are impossible. So at most one in-arc of $x$ has empty $P$, and $x$ has degree at most $2$ in the undirected graph formed by the arcs with empty $P$.
+\end{proof}
+
+\phantomsection\label{pf:structure}
+\thmstructure*
+\begin{proof}
+Let $xy\in E(J(S))$ with $x\to y$. Then $x\to y$ lies in infinitely many directed triangles, i.e.\ $Z(x,y)$ is infinite and in particular $|Z(x,y)|\ge 3$. By \cref{lem:Z}, $P(x,y)=\varnothing$. Hence every edge of $J(S)$ is an arc with empty $P$, and \cref{lem:Pempty} bounds the degree of every vertex in $J(S)$ by $2$. In particular $J(S)$ is locally finite, and if $S$ is countable the sufficiency direction of \cref{lem:criterion} yields a transitive tournament $L$ on $V(S)$ with $D(S,L)$ locally finite.
+\end{proof}
+
+\phantomsection\label{pf:onearc}
+\lemonearc*
+\begin{proof}
+Let $u\to v$ be the reversed arc, so $L'$ has $v\to u$ and agrees with $L$ on every other pair. If a directed triangle of $L'$ did not use the arc $v\to u$, all three of its arcs would be arcs of $L$, and $L$ would contain a directed triangle, which is impossible. Hence every directed triangle of $L'$ contains the arc $v\to u$, and any two directed triangles of $L'$ share an arc. Now suppose $X\subseteq V(L')$ induces a copy of $\Tstar$. The triangles $c\to a_0\to b_0\to c$ and $c\to a_1\to b_1\to c$ of $\Tstar$ use the arc sets $\{ca_0,a_0b_0,b_0c\}$ and $\{ca_1,a_1b_1,b_1c\}$, which are disjoint; their images are two arc-disjoint directed triangles of $L'$, a contradiction. So $L'$ is $\Tstar$-free.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+Let $S$ be a countably infinite $\Tstar$-free tournament.
+
+\emph{Case 1: $S$ is not transitive.} By \cref{thm:structure} there is a transitive tournament $L$ on $V(S)$ with $D(S,L)$ locally finite. Since $S$ is not transitive and $L$ is, $L\ne S$. Every subtournament of a transitive tournament is transitive, and $\Tstar$ is not, so $L$ is $\Tstar$-free. Take $S'=L$.
+
+\emph{Case 2: $S$ is transitive.} As $S$ has infinitely many vertices it has an arc $u\to v$; let $S'$ be obtained from $S$ by reversing it. Then $S'\ne S$, $D(S,S')$ is the single edge $uv$, which is locally finite, and $S'$ is $\Tstar$-free by \cref{lem:onearc}.
+
+In both cases $S'\ne S$ is a $\Tstar$-free tournament on $V(S)$ with $D(S,S')$ locally finite. Since $S'\ne S$, the set of reversed pairs is nonempty, so $S'$ is a locally finite perturbation of $S$ in the sense of \cite{BGJMS25}, and it is $\Tstar$-free.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup. Its step numbers (S1--S11) and lemma numbers refer to that writeup, not to this note: the writeup's Lemma~1, 2, 3 and Corollary~4 are \cref{lem:criterion,lem:Z,lem:Pempty,thm:structure} here, and its \S4 Cases~1 and~2 are the proof of \cref{thm:main} and \cref{lem:onearc}. The scripts it mentions are in \texttt{verification\_astra/scripts/2506.08810\_\_03/}. The out-degree tuple in its step~S1 has its last two entries transposed (see \cref{rem:comp}). Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+{\setlength{\emergencystretch}{3em}\input{.build/referee.tex}\par}
+
+\begin{thebibliography}{9}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{BGJMS25} M.~Bonamy, C.~Groenland, T.~Johnston, N.~Morrison and A.~Scott, Infinite induced-saturated graphs, \href{https://arxiv.org/abs/2506.08810}{arXiv:2506.08810} (v3, September 2025); Canadian Journal of Mathematics, FirstView (2026), \href{https://doi.org/10.4153/S0008414X26102132}{doi:10.4153/S0008414X26102132}, published online 24 March 2026. Problem~23 and Conjecture~24 are in Section~8.
+\bibitem{Sz30} E.~Szpilrajn, Sur l'extension de l'ordre partiel, Fundamenta Mathematicae 16 (1930), 386--389.
+\end{thebibliography}
+
+\end{document}

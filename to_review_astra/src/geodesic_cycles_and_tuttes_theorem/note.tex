@@ -1,0 +1,293 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Noto Sans Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\F}{\mathbb F_2}
+\newcommand{\cyc}{\mathcal C}
+\newcommand{\dl}{d_\ell}
+\newcommand{\dC}{d_C}
+\newcommand{\symdiff}{\mathbin{\triangle}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result geodesic\_cycles\_and\_tuttes\_theorem --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{A $3$-connected graph in which no positive edge lengths\\ make every geodesic cycle peripheral:\\ the Kleetope of $K_4$ and Problem~3 of Georgakopoulos and Sprüssel}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Georgakopoulos and Sprüssel proved that for every finite graph $G$ and every assignment $\ell$ of positive lengths to its edges the $\ell$-geodesic cycles of $G$ generate its cycle space, and asked (Problem~3 of \cite{GS09}, also listed in the Open Problem Garden) whether every $3$-connected finite graph admits an $\ell$ for which every $\ell$-geodesic cycle is \emph{peripheral}, i.e.\ induced and non-separating; a positive answer would give a new proof of Tutte's theorem that the peripheral cycles of a $3$-connected graph generate its cycle space. We show that the answer is negative. Let $G$ be the planar $3$-connected graph on eight vertices obtained from $K_4$ by adding a new vertex inside each of its four triangles and joining it to the three vertices of that triangle (the Kleetope of the tetrahedron). For every $\ell\colon E(G)\to\R_{>0}$ some $\ell$-geodesic cycle of $G$ is induced but separating. The proof is a counting argument: $G$ has exactly twelve peripheral cycles, all triangles, while its cycle space has dimension eleven; once shortest paths are made unique by a perturbation, each edge of the $K_4$ that does not realise the distance between its ends destroys the geodesicity of one of the two peripheral triangles through it, so at most one such edge exists, and a triangle of the $K_4$ avoiding it is geodesic yet separating.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+
+All graphs are finite and simple. For a graph $H$ and an assignment $\ell\colon E(H)\to\R_{>0}$ of positive \emph{lengths} to its edges, the length of a subgraph $F$ (in particular of a path or a cycle) is $\ell(F)=\sum_{e\in E(F)}\ell(e)$, and $\dl(u,v)$ denotes the least length of a $u$--$v$ path; on a connected graph $\dl$ is a metric on $V(H)$. Two distinct vertices $x,y$ of a cycle $C$ split $C$ into two $x$--$y$ paths, the \emph{arcs} of $C$ between $x$ and $y$. Georgakopoulos and Sprüssel \cite[\S3.1]{GS09} define, for finite graphs:
+
+\begin{quote}
+``A cycle $C$ in $G$ is $\ell$-geodetic, if for any $x,y\in V(C)$ there is no $x$--$y$ path in $G$ of length strictly less than that of each of the two $x$--$y$ paths on $C$.''
+\end{quote}
+
+\noindent Following the Open Problem Garden entry \cite{OPG} we say \emph{$\ell$-geodesic} for $\ell$-geodetic. Two points of this definition matter below: it quantifies over pairs of \emph{vertices} of $C$ (not over all points of $C$ regarded as a topological circle, which is the notion \cite[\S2]{GS09} uses for infinite graphs), and the inequality is \emph{strict}, so a path of length exactly equal to the shorter arc does not destroy geodesicity. Equivalently, $C$ is $\ell$-geodesic if and only if $\dl(x,y)=\dC(x,y)$ for all $x,y\in V(C)$, where $\dC(x,y)$ is the length of the shorter arc.
+
+The \emph{cycle space} $\cyc(H)$ is the $\F$-vector space spanned by the edge sets of the cycles of $H$ inside $\F^{E(H)}$; for connected $H$ it has dimension $|E(H)|-|V(H)|+1$ \cite[\S1.9]{Diestel}. A set of cycles \emph{generates} $\cyc(H)$ if their edge sets span it. The second definition, from \cite[\S5]{GS09}, is:
+
+\begin{quote}
+``Call a cycle in a finite graph peripheral, if it is induced and non-separating.''
+\end{quote}
+
+\noindent Here \emph{induced} means that $C$ has no chord (every edge of $H$ between two vertices of $C$ is an edge of $C$), and \emph{non-separating} means that $H-V(C)$ is connected. This is the notion of Tutte \cite{Tutte63}, whose classical theorem states that the peripheral cycles of a $3$-connected graph generate its cycle space.
+
+Georgakopoulos and Sprüssel \cite[Theorem~3.1]{GS09} proved that for every finite graph $H$ and every $\ell$ the $\ell$-geodesic cycles generate $\cyc(H)$ (\cref{thm:GS} below), and in the concluding section of \cite{GS09} they posed the following problem, whose positive answer would combine with that theorem into a new proof of Tutte's theorem. In the wording of the Open Problem Garden \cite{OPG}, which attributes it to them:
+
+\begin{problem}[{\cite[Problem~3]{GS09}; \cite{OPG}}]\label{prob:GS}
+If $G$ is a $3$-connected finite graph, is there an assignment of lengths $\ell\colon E(G)\to\R^+$ to the edges of $G$, such that every $\ell$-geodesic cycle is peripheral?
+\end{problem}
+
+\noindent The source's own wording is ``If $G$ is a $3$-connected finite graph, is there an assignment of lengths $\ell$ to the edges of $G$, such that every $\ell$-geodetic cycle is peripheral? We were not able to give an answer to this problem'' \cite[\S5]{GS09}; in \cite{GS09} every assignment of positive edge lengths to a finite graph is admissible, so the two formulations agree. Neither the referee report reproduced in \cref{app:referee} nor the literature review on the catalogue page of the problem found a published answer in either direction; the closest work the latter located, Hamann's study of generating sets of the cycle space of $3$-connected planar graphs \cite{Hamann14}, does not concern edge lengths or geodesic cycles.
+
+We answer \cref{prob:GS} negatively with an explicit graph on eight vertices. Only the two definitions above enter; in particular \emph{both} halves of ``peripheral'' are needed (\cref{rem:defs}), and the argument says nothing against Tutte's theorem itself, only against this route to it.
+
+\section{The graph and the main theorem}
+
+\begin{definition}[The Kleetope of $K_4$]\label{def:G}
+Let $B=\{b_1,b_2,b_3,b_4\}$ and $S=\{s_1,s_2,s_3,s_4\}$ be disjoint four-element sets and let $G$ be the graph with
+\[
+V(G)=B\cup S,\qquad
+E(G)=\{\,b_ib_j : 1\le i<j\le 4\,\}\ \cup\ \{\,s_ib_j : i\ne j\,\}.
+\]
+Explicitly, the $18$ edges are the six \emph{core} edges $b_1b_2,\,b_1b_3,\,b_1b_4,\,b_2b_3,\,b_2b_4,\,b_3b_4$ and the twelve \emph{spoke} edges
+\[
+s_1b_2,\ s_1b_3,\ s_1b_4,\quad s_2b_1,\ s_2b_3,\ s_2b_4,\quad s_3b_1,\ s_3b_2,\ s_3b_4,\quad s_4b_1,\ s_4b_2,\ s_4b_3 .
+\]
+Thus $B$ induces a $K_4$, $S$ is independent, and $s_i$ is adjacent to the three vertices of $B\setminus\{b_i\}$. Geometrically, $G$ is a tetrahedron with a new vertex stacked in each face and joined to that face's three corners; this is the Kleetope of $K_4$, the graph of the triakis tetrahedron. For $i\in\{1,2,3,4\}$ write
+\begin{align*}
+T_i&=G[B\setminus\{b_i\}]&&\text{(the four \emph{core triangles})},\\
+P_{i;jk}&=G[\{s_i,b_j,b_k\}]\quad(j<k,\ i\notin\{j,k\})&&\text{(the twelve \emph{spoke triangles})}.
+\end{align*}
+\end{definition}
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+Let $G$ be the graph of \cref{def:G}. Then $G$ is a planar $3$-connected graph on $8$ vertices with $18$ edges, and for every assignment $\ell\colon E(G)\to\R_{>0}$ some $\ell$-geodesic cycle of $G$ is not peripheral.
+\end{restatable}
+
+\begin{corollary}\label{cor:answer}
+The answer to \cref{prob:GS} is negative, already for planar $3$-connected graphs on eight vertices.
+\end{corollary}
+\begin{proof}
+Immediate from \cref{thm:main}: $G$ is $3$-connected and finite, and no $\ell$ makes every $\ell$-geodesic cycle peripheral.
+\end{proof}
+
+The structure of $G$ is recorded in the following lemma.
+
+\begin{restatable}[Structure of $G$]{lemma}{lemstructure}\label{lem:structure}
+Let $G$ be the graph of \cref{def:G}.
+\begin{enumerate}[label=\textup{(\alph*)},nosep]
+\item\label{it:conn} $G$ is planar, $3$-connected, and $\dim_{\F}\cyc(G)=18-8+1=11$.
+\item\label{it:induced} Every induced cycle of $G$ is a triangle. The triangles of $G$ are exactly the four core triangles $T_i$ and the twelve spoke triangles $P_{i;jk}$, sixteen in all.
+\item\label{it:periph} No core triangle is peripheral: $s_i$ is an isolated vertex of $G-V(T_i)$, which has a second, nonempty component. Every spoke triangle is peripheral. Hence $G$ has exactly twelve peripheral cycles, the $P_{i;jk}$.
+\item\label{it:incidence} Each spoke triangle $P_{i;jk}$ contains exactly one core edge, namely $b_jb_k$. Each core edge $b_jb_k$ lies in exactly two peripheral cycles, $P_{p;jk}$ and $P_{q;jk}$ where $\{p,q\}=\{1,2,3,4\}\setminus\{j,k\}$.
+\item\label{it:K4} Each core edge lies in exactly two of the four core triangles; so for every core edge $e$ there is a core triangle $T_i$ with $e\notin E(T_i)$.
+\end{enumerate}
+\end{restatable}
+\begin{proofidea}
+Deleting at most two vertices leaves at least two (adjacent) vertices of the clique $B$, and every surviving $s_i$ keeps one of its three neighbours in $B$. An induced cycle of length at least four cannot contain an $s_i$, since the two cycle-neighbours of $s_i$ lie in the clique $B$ and would be joined by a chord, and cannot lie inside $B$ either. The rest is inspection of the sixteen triangles.\fullproofref{pf:structure}
+\end{proofidea}
+
+\section{Three lemmas on edge lengths}
+
+The first statement is a theorem of Georgakopoulos and Sprüssel; the original writeup (\cref{sec:provenance}) rederived it as its ``Fact~1''. We include a proof in \cref{app:proofs} only to keep the note self-contained and because the referee asked for one step of the standard argument to be spelled out.
+
+\begin{restatable}[{Georgakopoulos--Sprüssel \cite[Theorem~3.1]{GS09}}]{theorem}{thmGS}\label{thm:GS}
+Let $H$ be a finite graph and $\ell\colon E(H)\to\R_{>0}$. Every cycle $C$ of $H$ is a sum, in $\cyc(H)$, of $\ell$-geodesic cycles each of length at most $\ell(C)$. In particular the $\ell$-geodesic cycles generate $\cyc(H)$.
+\end{restatable}
+\begin{proofidea}
+If $C$ is not geodesic, some path $P$ between two of its vertices is shorter than both arcs. Cutting $P$ at its visits to $C$ and using the triangle inequality for the shorter-arc metric on $V(C)$, one of the resulting segments $Q$ is a path with distinct ends $u,v$ on $C$, all interior vertices off $C$, and $\ell(Q)$ smaller than both $u$--$v$ arcs $A,B$. Then $C_1=A\cup Q$ and $C_2=B\cup Q$ are cycles, $E(C)=E(C_1)\symdiff E(C_2)$ and both are strictly shorter than $C$; induct on the finitely many cycle lengths.\fullproofref{pf:GS}
+\end{proofidea}
+
+\begin{restatable}[Perturbation to unique shortest paths]{lemma}{lemperturb}\label{lem:perturb}
+Let $H$ be a finite graph and suppose $\ell_0\colon E(H)\to\R_{>0}$ is such that every $\ell_0$-geodesic cycle of $H$ is peripheral. Then there is $\ell\colon E(H)\to\R_{>0}$ such that every $\ell$-geodesic cycle of $H$ is peripheral and, for every two vertices $u,v$ of $H$, any two $u$--$v$ paths of minimum $\ell$-length coincide.
+\end{restatable}
+\begin{proofidea}
+Each of the finitely many non-peripheral cycles is not $\ell_0$-geodesic, which is witnessed by two strict linear inequalities in $\ell_0$; together with positivity they hold on an open neighbourhood $U$ of $\ell_0$ in $\R^{E(H)}$. Ties $\ell(P)=\ell(Q)$ between distinct paths with the same ends are finitely many proper hyperplanes, whose union misses some point of $U$. The lemma needs only that non-peripheral cycles \emph{stay} non-geodesic; it does not claim that peripheral cycles stay geodesic.\fullproofref{pf:perturb}
+\end{proofidea}
+
+Call an edge $uv$ of $H$ \emph{tight} for $\ell$ if $\ell(uv)=\dl(u,v)$. Since the edge itself is a $u$--$v$ path, always $\dl(u,v)\le\ell(uv)$, so a non-tight edge is strictly longer than the distance between its ends.
+
+\begin{restatable}[Tight edges]{lemma}{lemtight}\label{lem:tight}
+\begin{enumerate}[label=\textup{(\roman*)},nosep]
+\item\label{it:alltight} In any finite graph $H$ with any $\ell\colon E(H)\to\R_{>0}$, a triangle all of whose three edges are tight is $\ell$-geodesic.
+\item\label{it:nontight} Let $G$ be the graph of \cref{def:G} and let $\ell\colon E(G)\to\R_{>0}$ be such that any two shortest paths with the same ends coincide. If a core edge $b_jb_k$ is not tight, then at most one of the two spoke triangles $P_{p;jk}$, $P_{q;jk}$ containing it is $\ell$-geodesic.
+\end{enumerate}
+\end{restatable}
+\begin{proofidea}
+\ref{it:alltight}: for two vertices of the triangle, the edge joining them is one of the two arcs and has length $\dl(x,y)$, so no path is strictly shorter than both arcs. \ref{it:nontight}: if $P_{p;jk}$ is geodesic and $\dl(b_j,b_k)<\ell(b_jb_k)$, then the arc $b_js_pb_k$ must be a shortest $b_j$--$b_k$ path; the same for $P_{q;jk}$ would give two distinct shortest paths.\fullproofref{pf:tight}
+\end{proofidea}
+
+\begin{proofidea}[of \cref{thm:main}]
+Suppose some $\ell_0$ makes every geodesic cycle peripheral; by \cref{lem:perturb} we may assume shortest paths are unique. By \cref{lem:structure}\ref{it:periph} the geodesic cycles are then among the twelve spoke triangles, and by \cref{thm:GS} they span the $11$-dimensional cycle space, so at most one spoke triangle is non-geodesic. By \cref{lem:tight}\ref{it:nontight} and \cref{lem:structure}\ref{it:incidence}, every non-tight core edge lies in a non-geodesic spoke triangle, and distinct core edges give distinct triangles; so at most one core edge is non-tight. A core triangle avoiding it (\cref{lem:structure}\ref{it:K4}) has all edges tight, hence is geodesic by \cref{lem:tight}\ref{it:alltight}, but it is separating by \cref{lem:structure}\ref{it:periph}: a geodesic non-peripheral cycle, contradiction.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{Remarks}
+
+\begin{remark}[The definitions are load-bearing]\label{rem:defs}
+The refutation uses exactly the definitions of \cite{GS09} quoted in the introduction, and it depends on all of their parts. (a)~\emph{Both halves of ``peripheral''.} The core triangles $T_i$ are induced but separating; the argument fails if either half is dropped, and this is not an artefact of the proof: the referee's exact decision procedure (below) finds that the same graph $G$ \emph{does} admit positive lengths making every geodesic cycle non-separating (there are $120$ non-separating cycles), and also positive lengths making every geodesic cycle induced (the $16$ triangles). Any restatement of \cref{thm:main} must therefore keep ``induced and non-separating''. (b)~\emph{Vertices, strict inequality.} Geodesicity is tested on pairs of vertices with a strict inequality, which is the finite-graph definition of \cite[\S3.1]{GS09} and the one quoted by \cite{OPG}. \Cref{lem:tight}\ref{it:alltight} is a vertex-level statement; under the point-level definition that \cite[\S2]{GS09} uses for topological circles in infinite graphs it would need re-examination. The referee judged the vertex reading to be the intended one for \cref{prob:GS}, so this is a scope note rather than a gap.
+\end{remark}
+
+\begin{remark}[The proof does not locate the geodesic non-peripheral cycle]\label{rem:locate}
+[Added in the rewriting stage, \cref{sec:provenance}.] The contradiction in the proof of \cref{thm:main} is reached for a \emph{perturbed} assignment $\ell$ and exhibits a geodesic core triangle for that $\ell$; since \cref{lem:perturb} may change which cycles are geodesic, this does not show that a core triangle is geodesic for the original assignment, and indeed it need not be. For instance, give every core edge length $10$ and every spoke edge length $1$. Then $\dl(b_j,b_k)=2<10$, so no core triangle is $\ell$-geodesic (and every spoke triangle is), while the $4$-cycle $b_1s_3b_2s_4$ is $\ell$-geodesic (each of its vertex pairs is at distance $1$ or $2$, equal to the shorter arc) and has the chord $b_1b_2$, so it is not peripheral. A direct check over all $239$ cycles of $G$ finds ten $\ell$-geodesic non-peripheral cycles for this $\ell$, all of length $4$ or $6$, and no geodesic core triangle. \Cref{thm:main} is therefore stated, as in the original writeup, purely existentially.
+\end{remark}
+
+\begin{remark}[Referee's computational checks]\label{rem:checks}
+The adversarial referee (\cref{app:referee}; scripts in \path{verification_astra/scripts/geodesic_cycles_and_tuttes_theorem/}) verified \cref{lem:structure} by brute force with \texttt{networkx}: $8$ vertices, $18$ edges, degrees $6$ on $B$ and $3$ on $S$, vertex connectivity exactly $3$, planar, $\dim\cyc(G)=11$; $239$ simple cycles ($16$ triangles, $33$ of length $4$, $60$ of length $5$, $76$ of length $6$, $48$ of length $7$, $6$ of length $8$), of which exactly $16$ are induced, all triangles, and exactly $12$ are peripheral, namely the $P_{i;jk}$; each spoke triangle contains one core edge, each core edge and each spoke edge lies in exactly two peripheral triangles, and the fewest edges of $K_4$ meeting all four of its triangles is $2$. Over $\F$ the twelve peripheral cycles have rank $11$, and every choice of ten of them has rank exactly $10$, so two non-geodesic spoke triangles already break generation (the proof needs only the weaker fact that ten vectors span at most ten dimensions).
+
+Independently of the argument, the referee encoded the statement ``there exists $\ell\colon E(G)\to\R_{>0}$ such that every $\ell$-geodesic cycle is peripheral'' exactly in linear real arithmetic (\textsf{QF\_LRA}) for the SMT solver \texttt{z3}: length variables $\ell_e>0$, distance variables constrained by the Bellman characterisation of shortest-path distances, and for each of the $227$ non-peripheral cycles a disjunction over vertex pairs $x,y$ of the cycle of ``$d(x,y)$ is strictly less than both arcs''. The solver returned \textsf{unsat}, which, since linear real arithmetic is decided exactly, is a machine proof of \cref{thm:main} not relying on the human-readable argument. To rule out a vacuous encoding, the same code returned \textsf{sat} on $K_4$, $K_5$, the cube $Q_3$, the triangular prism, the octahedron and the wheel $W_4$, and in each case the rational model was re-checked with Dijkstra's algorithm and found to have no non-peripheral geodesic cycle (for $K_4$ on vertices $0,1,2,3$: $\ell(01)=\ell(12)=\ell(13)=1/8$, $\ell(02)=\ell(03)=\ell(23)=3/8$). On $G$ itself the encoding returned \textsf{sat} under each of the two weakened readings of ``peripheral'' mentioned in \cref{rem:defs}. Finally, $40\,000$ random assignments from four distributions never produced fewer than $2$ non-peripheral geodesic cycles, and simulated annealing on log-lengths got stuck at $4$.
+\end{remark}
+
+\begin{remark}[Minimality, novelty, scope]\label{rem:scope}
+Minimality of the example is not claimed: eight vertices is small, but no smaller counterexample has been excluded. The referee's controls show that $K_4$, $K_5$, $Q_3$, the prism, the octahedron and $W_4$ are not counterexamples, which is consistent with, but far from a proof of, minimality. Neither the model nor the referee found this example or any answer to \cref{prob:GS} in the literature, and the catalogue page's review found none either; but the topic is niche and ``not found'' is weaker than ``not there''. The authors of \cite{GS09} should be asked whether the example was known to them; if it was folklore, the contribution of this note reduces to a written proof. \Cref{thm:main} blocks the proposed route to a new proof of Tutte's theorem via geodesic cycles; it says nothing against Tutte's theorem. It leaves open the natural weakening (which $3$-connected graphs \emph{do} admit an $\ell$ making every $\ell$-geodesic cycle peripheral? the six control graphs above do) and the infinite version of the problem discussed in \cite{GS09}.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-6-astra} (reasoning effort \emph{max}) in a single autonomous pass on 2026-09-16, as part of a sweep over the problems of the Open Problem Garden (catalog id \texttt{geodesic\_cycles\_and\_tuttes\_theorem}, leg \texttt{attacks\_opg}; original writeup in \texttt{attacks\_opg/geodesic\_cycles\_and\_tuttes\_theorem/output.md}). The model rated its claim ``disproved'' with high confidence and flagged that it had not checked novelty.
+(2)~An independent adversarial referee agent (\texttt{claude-opus-5}) reviewed the writeup on 2026-09-17: it retrieved the published source \cite{GS09} and checked the definitions of $\ell$-geodetic and peripheral cycles, Theorem~3.1 and Problem~3 verbatim; re-derived all seventeen steps of the writeup and labelled each \textsc{valid}; verified \cref{lem:structure} by exhaustive computation; and proved \cref{thm:main} independently with an exact \texttt{z3} decision procedure, with positive controls (\cref{rem:checks}). Its verdict was \textsc{confirmed}, with the reservations recorded in \cref{rem:defs,rem:scope}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-17 the writeup was rewritten into the present note by \texttt{claude-fable-5-1}. The text was reorganised with full proofs in \cref{app:proofs}. Deviations from the writeup, all declared here: the writeup's ``Fact~1'' is attributed to Georgakopoulos and Sprüssel and stated as their \cref{thm:GS} (the writeup proved it without citation); its ``Fact~2'' is \cref{lem:perturb}; the two cosmetic gaps named by the referee were filled in \cref{app:proofs}, namely the existence of a shortcut path internally disjoint from the cycle in the proof of \cref{thm:GS} (the writeup's ``otherwise every excursion of $P$ outside $C$ could be replaced by a no-longer arc of $C$'', made precise via the triangle inequality for the shorter-arc metric on $V(C)$), and the properness of the hyperplanes $\ell(P)=\ell(Q)$ in the proof of \cref{lem:perturb} (distinct paths have distinct edge sets, and a finite union of hyperplanes has empty interior); the writeup's ``choose a core triangle avoiding [the exceptional edge]'' is justified by the explicit count in \cref{lem:structure}\ref{it:K4}; the verbatim definitions and the wording of Problem~3 from \cite{GS09}, the name ``Kleetope of $K_4$'', the explicit edge list, the reference \cite{Diestel} for the dimension of the cycle space, and the content of \cref{rem:defs,rem:checks,rem:scope} were taken from the referee report; the reference \cite{Hamann14} was taken from the literature review on the catalogue page of the problem. One item is the rewriter's own: \cref{rem:locate}, which records that the argument does not identify the geodesic non-peripheral cycle for a given $\ell$ and gives an explicit assignment (core edges $10$, spoke edges $1$) for which no core triangle is geodesic, checked by enumerating all $239$ cycles; it is a scope note and is not used in any proof. An earlier draft of this note had strengthened \cref{thm:main} to assert that a core triangle is always geodesic; that strengthening is not in the writeup and is false by the same example, and it was removed. No other mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it for human review, not as a claim to a new resolution.
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:structure}
+\lemstructure*
+\begin{proof}
+\ref{it:conn} $G$ has $6$ core and $4\cdot3=12$ spoke edges, $18$ in all. For planarity, draw $K_4=G[B]$ on the sphere as a tetrahedron; its four faces are bounded by the triangles $T_1,\dots,T_4$, and $N(s_i)=B\setminus\{b_i\}=V(T_i)$, so placing $s_i$ inside the face bounded by $T_i$ and joining it to the three corners gives a plane drawing (a check: $8-18+12=2$). For $3$-connectivity let $X\subseteq V(G)$ with $|X|\le2$. Then $B\setminus X$ has at least two vertices and is a clique, hence connected in $G-X$. Every $s_i\notin X$ has three neighbours in $B$, of which at most two lie in $X$, so $s_i$ has a neighbour in $B\setminus X$. Thus $G-X$ is connected, and since $|V(G)|=8>3$, $G$ is $3$-connected (and not $4$-connected, as $\deg s_i=3$). Since $G$ is connected, $\dim_{\F}\cyc(G)=|E(G)|-|V(G)|+1=11$ \cite[\S1.9]{Diestel}.
+
+\ref{it:induced} Let $C$ be an induced cycle of length at least $4$. If some $s_i\in V(C)$, its two neighbours on $C$ lie in $N(s_i)\subseteq B$, are distinct, and are therefore adjacent in $G$ because $B$ is a clique; as $C$ has length at least $4$ they are not consecutive on $C$, so the edge between them is a chord, contradicting that $C$ is induced. Hence $V(C)\subseteq B$, so $C$ is a $4$-cycle through all of $B$, and its two diagonals are chords, again a contradiction. So every induced cycle is a triangle. Conversely every triangle is induced. Since $S$ is independent, a triangle contains at most one vertex of $S$: the triangles inside $B$ are the four $T_i$, and a triangle through $s_i$ consists of $s_i$ and two of its three neighbours $b_j,b_k\in B\setminus\{b_i\}$, giving $\binom32=3$ triangles $P_{i;jk}$ for each $i$, twelve in all.
+
+\ref{it:periph} $G-V(T_i)$ has vertex set $\{b_i\}\cup S$. All three neighbours of $s_i$ lie in $V(T_i)$, so $s_i$ is isolated there, while $b_i$ is adjacent to $s_j$ for each $j\ne i$, so $\{b_i\}\cup(S\setminus\{s_i\})$ is a second component. Thus $T_i$ is separating and not peripheral (it is induced, being a triangle). Now let $P=P_{i;jk}$ and $\{p,q\}=\{1,2,3,4\}\setminus\{j,k\}$ (so $i\in\{p,q\}$). Then $G-V(P)$ has vertex set $\{b_p,b_q\}\cup(S\setminus\{s_i\})$; $b_pb_q$ is an edge, and each $s_m$ with $m\ne i$ is non-adjacent to exactly one vertex of $B$, namely $b_m$, hence adjacent to at least one of $b_p,b_q$. So $G-V(P)$ is connected, and $P$ is induced and non-separating, i.e.\ peripheral. By \ref{it:induced} the peripheral cycles, being induced, are triangles, so they are exactly the twelve $P_{i;jk}$.
+
+\ref{it:incidence} $E(P_{i;jk})=\{s_ib_j,\,s_ib_k,\,b_jb_k\}$ contains exactly one core edge. The spoke triangles containing the core edge $b_jb_k$ are the $P_{i;jk}$ with $i\notin\{j,k\}$, i.e.\ $i\in\{p,q\}$: exactly two.
+
+\ref{it:K4} The core triangles containing $b_jb_k$ are $G[B\setminus\{b_i\}]$ for $i\notin\{j,k\}$, exactly two of the four; the other two avoid $b_jb_k$.
+\end{proof}
+
+\phantomsection\label{pf:GS}
+\thmGS*
+\begin{proof}
+Fix $\ell$. For a cycle $C$ and $x,y\in V(C)$ let $\dC(x,y)$ be $0$ if $x=y$ and otherwise the length of the shorter of the two $x$--$y$ arcs of $C$; $\dC$ is the shortest-path metric of the weighted graph $(C,\ell|_{E(C)})$, so it satisfies the triangle inequality on $V(C)$. In these terms $C$ is $\ell$-geodesic if and only if $\ell(P)\ge\dC(x,y)$ for all $x,y\in V(C)$ and all $x$--$y$ paths $P$ of $H$.
+
+\emph{Claim.} If $C$ is not $\ell$-geodesic, there are distinct $u,v\in V(C)$ and a $u$--$v$ path $Q$ of $H$ all of whose interior vertices lie outside $V(C)$, with $\ell(Q)<\dC(u,v)$. [This is the step the referee asked to have spelled out; it is the ``every excursion of $P$ outside $C$ could be replaced by a no-longer arc of $C$'' of the original writeup and of \cite{GS09}.] Indeed, let $x,y\in V(C)$ and an $x$--$y$ path $P$ satisfy $\ell(P)<\dC(x,y)$; necessarily $x\ne y$. Let $x=w_0,w_1,\dots,w_m=y$ be the vertices of $P$ that lie on $C$, in their order along $P$ ($m\ge1$, all distinct because $P$ is a path). The segments $P_t=P[w_t,w_{t+1}]$, $0\le t<m$, are paths with both ends on $C$ and all interior vertices off $C$, and $\ell(P)=\sum_t\ell(P_t)$. If $\ell(P_t)\ge\dC(w_t,w_{t+1})$ for every $t$, then by the triangle inequality
+\[
+\ell(P)=\sum_{t<m}\ell(P_t)\ \ge\ \sum_{t<m}\dC(w_t,w_{t+1})\ \ge\ \dC(x,y),
+\]
+contradicting the choice of $P$. So some segment $Q=P_t$ has $\ell(Q)<\dC(w_t,w_{t+1})$; put $u=w_t$, $v=w_{t+1}$. This proves the claim. Note that $Q$ is not an edge of $C$, since for an edge $uv\in E(C)$ one has $\dC(u,v)\le\ell(uv)$.
+
+Now let $A$ and $B$ be the two $u$--$v$ arcs of $C$, so $\ell(A),\ell(B)\ge\dC(u,v)>\ell(Q)$, and set $C_1=A\cup Q$, $C_2=B\cup Q$. Because the interior vertices of $Q$ avoid $V(C)$ and $Q$ is not an edge of $C$, $Q$ is internally disjoint from $A$ and from $B$ and shares no edge with $C$ (if $Q$ has one edge it is a chord; if more, each of its edges has an end off $C$); hence $C_1$ and $C_2$ are cycles, and
+\[
+E(C_1)\symdiff E(C_2)=(E(A)\cup E(Q))\symdiff(E(B)\cup E(Q))=E(A)\cup E(B)=E(C),
+\]
+so $C=C_1+C_2$ in $\cyc(H)$, while $\ell(C_1)=\ell(A)+\ell(Q)<\ell(A)+\ell(B)=\ell(C)$ and likewise $\ell(C_2)<\ell(C)$.
+
+Finally, let $\lambda_1<\lambda_2<\dots<\lambda_N$ be the distinct values of $\ell$ on the finitely many cycles of $H$. We show by induction on $k$ that every cycle $C$ with $\ell(C)=\lambda_k$ is a sum of $\ell$-geodesic cycles of length at most $\lambda_k$. If $C$ is $\ell$-geodesic there is nothing to prove; otherwise $C=C_1+C_2$ with $\ell(C_1),\ell(C_2)<\lambda_k$, so $\ell(C_i)\in\{\lambda_1,\dots,\lambda_{k-1}\}$ (in particular $k\ge2$, so a cycle of length $\lambda_1$ is always geodesic) and the induction hypothesis applies to $C_1$ and $C_2$. Since $\cyc(H)$ is spanned by the edge sets of cycles, the $\ell$-geodesic cycles generate it.
+\end{proof}
+
+\phantomsection\label{pf:perturb}
+\lemperturb*
+\begin{proof}
+Identify assignments $\ell\colon E(H)\to\R$ with points of $\R^{E(H)}$; for a subgraph $F$, $\ell\mapsto\ell(F)$ is a linear form. Let $\mathcal N$ be the (finite) set of non-peripheral cycles of $H$. By hypothesis each $C\in\mathcal N$ is not $\ell_0$-geodesic, so we may fix $x_C,y_C\in V(C)$, an $x_C$--$y_C$ path $P_C$, and the two arcs $A_C,B_C$ of $C$ between $x_C$ and $y_C$, with $\ell_0(P_C)<\ell_0(A_C)$ and $\ell_0(P_C)<\ell_0(B_C)$. Let
+\[
+U=\bigl\{\ell\in\R^{E(H)} : \ell(e)>0\ \forall e\in E(H);\ \ \ell(P_C)<\ell(A_C),\ \ell(P_C)<\ell(B_C)\ \forall C\in\mathcal N\bigr\}.
+\]
+$U$ is defined by finitely many strict linear inequalities, so it is open, and $\ell_0\in U$. For every $\ell\in U$, every $C\in\mathcal N$ is not $\ell$-geodesic (witnessed by $P_C$), i.e.\ every $\ell$-geodesic cycle is peripheral.
+
+For each pair $\{P,Q\}$ of distinct paths of $H$ with the same two ends let $M_{P,Q}=\{\ell\in\R^{E(H)}:\ell(P)=\ell(Q)\}$. The defining equation $\sum_{e\in E(P)}\ell(e)-\sum_{e\in E(Q)}\ell(e)=0$ has coefficient vector $\mathbf 1_{E(P)}-\mathbf 1_{E(Q)}$, which is nonzero because a path is determined by its edge set, so distinct paths have distinct edge sets. [Properness of these hyperplanes is the second point the referee asked to have made explicit.] Hence each $M_{P,Q}$ is a hyperplane, a closed set with empty interior, and there are finitely many of them. A finite union of closed sets with empty interior has empty interior (if $U'$ is a nonempty open set and $M_1,\dots,M_r$ are closed with empty interior, then $U'\setminus M_1$ is nonempty and open, and inductively so is $U'\setminus(M_1\cup\dots\cup M_r)$). Therefore $U\setminus\bigcup_{P,Q}M_{P,Q}$ is nonempty; pick $\ell$ in it.
+
+Then $\ell$ is positive and every $\ell$-geodesic cycle is peripheral. If $R,R'$ are two $u$--$v$ paths of minimum $\ell$-length, then $\ell(R)=\ell(R')$, so $\ell\in M_{R,R'}$ unless $R=R'$; hence $R=R'$.
+\end{proof}
+
+\phantomsection\label{pf:tight}
+\lemtight*
+\begin{proof}
+\ref{it:alltight} Let $T$ be a triangle with all edges tight and let $x\ne y$ be vertices of $T$. The edge $xy$ is one of the two $x$--$y$ arcs of $T$, and every $x$--$y$ path $R$ of $H$ satisfies $\ell(R)\ge\dl(x,y)=\ell(xy)$, so no $x$--$y$ path is strictly shorter than both arcs. As this holds for all pairs, $T$ is $\ell$-geodesic.
+
+\ref{it:nontight} Let $e=b_jb_k$ be non-tight, so $d:=\dl(b_j,b_k)<\ell(e)$, and let $R$ be a shortest $b_j$--$b_k$ path, $\ell(R)=d$. Suppose $P_{p;jk}$ is $\ell$-geodesic. Its two arcs between $b_j$ and $b_k$ are the edge $e$ and the path $b_js_pb_k$. Geodesicity forbids $\ell(R)<\ell(e)$ and $\ell(R)<\ell(b_js_pb_k)$ simultaneously; the first inequality holds, so $\ell(b_js_pb_k)\le\ell(R)=d$. Since $b_js_pb_k$ is itself a $b_j$--$b_k$ path, also $\ell(b_js_pb_k)\ge d$; hence $b_js_pb_k$ is a shortest $b_j$--$b_k$ path. If $P_{q;jk}$ were also $\ell$-geodesic, then likewise $b_js_qb_k$ would be a shortest $b_j$--$b_k$ path, and $b_js_pb_k\ne b_js_qb_k$ would contradict the uniqueness of shortest paths.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+The structural assertions are \cref{lem:structure}\ref{it:conn} and \ref{it:periph}. Suppose, for a contradiction, that some $\ell_0\colon E(G)\to\R_{>0}$ makes every $\ell_0$-geodesic cycle of $G$ peripheral. By \cref{lem:perturb} there is $\ell\colon E(G)\to\R_{>0}$ such that every $\ell$-geodesic cycle is peripheral and any two shortest paths with the same ends coincide. Fix this $\ell$.
+
+\emph{Step 1: at most one spoke triangle is not $\ell$-geodesic.} By \cref{lem:structure}\ref{it:periph} every $\ell$-geodesic cycle is one of the twelve spoke triangles $P_{i;jk}$. By \cref{thm:GS} the $\ell$-geodesic cycles generate $\cyc(G)$, which has dimension $11$ by \cref{lem:structure}\ref{it:conn}. A set of at most ten vectors spans a space of dimension at most ten, so at least eleven of the twelve spoke triangles are $\ell$-geodesic.
+
+\emph{Step 2: at most one core edge is not tight.} Let $e=b_jb_k$ be a non-tight core edge. By \cref{lem:tight}\ref{it:nontight} at least one of the two spoke triangles containing $e$ is not $\ell$-geodesic; call it $F(e)$. By \cref{lem:structure}\ref{it:incidence} each spoke triangle contains exactly one core edge, so $F(e)\ne F(e')$ for distinct non-tight core edges $e\ne e'$. By Step~1 there is at most one non-geodesic spoke triangle, hence at most one non-tight core edge.
+
+\emph{Step 3: a geodesic separating triangle.} By \cref{lem:structure}\ref{it:K4}, some core triangle $T_i$ avoids the non-tight core edge if there is one (and any $T_i$ will do if there is none). All three edges of $T_i$ are tight, so $T_i$ is $\ell$-geodesic by \cref{lem:tight}\ref{it:alltight}. But $T_i$ is not peripheral by \cref{lem:structure}\ref{it:periph}. This contradicts the choice of $\ell$, under which every $\ell$-geodesic cycle is peripheral.
+
+Hence no $\ell_0$ exists: for every $\ell\colon E(G)\to\R_{>0}$ some $\ell$-geodesic cycle of $G$ is not peripheral. (The argument is indirect and does not say \emph{which} non-peripheral cycle is $\ell$-geodesic for a given $\ell$; see \cref{rem:locate}.)
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup. Its step numbers refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification\_astra/scripts/geodesic\_cycles\_and\_tuttes\_theorem/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{GS09} A.~Georgakopoulos and P.~Sprüssel, Geodetic topological cycles in locally finite graphs, Electron.\ J.\ Combin.\ 16 (2009), Research Paper R144, \href{https://doi.org/10.37236/234}{doi:10.37236/234}; \href{https://arxiv.org/abs/0911.3999}{arXiv:0911.3999}. Section~3.1 (definition of $\ell$-geodetic cycles), Theorem~3.1, Section~5 (definition of peripheral cycles, Problem~3).
+\bibitem{OPG} A.~Georgakopoulos and P.~Sprüssel, Geodesic cycles and Tutte's Theorem, Open Problem Garden, posted 2007-08-04, \url{http://www.openproblemgarden.org/op/geodesic_cycles_and_tuttes_theorem}.
+\bibitem{Tutte63} W.~T.~Tutte, How to draw a graph, Proc.\ London Math.\ Soc.\ (3) 13 (1963), 743--768.
+\bibitem{Diestel} R.~Diestel, Graph Theory, 5th edition, Graduate Texts in Mathematics 173, Springer, 2017, Section~1.9.
+\bibitem{Hamann14} M.~Hamann, Generating the cycle space of planar graphs, \href{https://arxiv.org/abs/1411.6392}{arXiv:1411.6392} (2014).
+\end{thebibliography}
+
+\end{document}
