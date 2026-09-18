@@ -7,8 +7,8 @@ counterexample to an open problem from the
 [graph-conjectures catalogue](https://graph-theory-ai.github.io/graph-conjectures).
 Each was produced by a language model and then checked by a second, adversarial
 language model that could not break it.
-**None has yet been read by a human mathematician.** That is what we are asking
-for.
+**Two have now also been checked by human mathematicians; the remaining 34 are
+awaiting that review.**
 
 Every result below is a short self-contained note: the problem as it was posed,
 the theorem, proof ideas in the text, full proofs in an appendix, and the
@@ -24,6 +24,15 @@ failed to find an error; it is not a theorem. And novelty was checked only
 against what could be found online: several results in this repository turned
 out to have been published days or weeks before they were generated, and those
 are excluded below, but the same could happen to any of these.
+
+## Reviewed results
+
+The proofs in this section have been read and checked by human mathematicians.
+
+| Result | Problem | Notes |
+|:--|:--|:--|
+| [Fair representation by matchings in bipartite graphs holds with $c(m)=32(m+1)^3$](to_review/1611.03196__03__fair-representation-matchings-bipartite-c-of-m-bound__note.pdf) | [Conjecture 1.15 of Aharoni, Alon, Berger, Chudnovsky, Kotlar, Loebl and Ziv](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.03196__03/) | — |
+| [An infinite family of 3-critical tournaments: no bounded-size witness for tournament clique number](to_review/2310.04265__09__3-critical-tournaments-clique-number-question-5.9__note.pdf) | [Question 5.9 of Aboulker, Aubian, Charbit and Lopes](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2310.04265__09/) | Construction previously known; [Rocq proof](https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/digraph-theory/theories/applications/question_5_9_resolution.v) |
 
 ## Results awaiting human review
 
@@ -46,7 +55,6 @@ are excluded below, but the same could happen to any of these.
 
 | Result | Problem | Notes |
 |:--|:--|:--|
-| [An infinite family of 3-critical tournaments: no bounded-size witness for tournament clique number](to_review/2310.04265__09__3-critical-tournaments-clique-number-question-5.9__note.pdf) | [Question 5.9 of Aboulker, Aubian, Charbit and Lopes](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2310.04265__09/) | [Rocq proof](https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/digraph-theory/theories/applications/question_5_9_resolution.v) |
 | [A 6-edge-coloured 9-vertex tournament whose longest colour-avoiding path is shorter than any transitive one allows](to_review/2512.10438__00__color-avoiding-paths-tournaments-q6-N9-example__note.pdf) | [Problem 5.1 of arXiv:2512.10438](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2512.10438__00/) | [Rocq proof](https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/digraph-theory/theories/applications/color_avoiding_tournament.v) |
 | [The five-vertex tournament $C_3[TT_2,TT_2,1]$ is a counterexample to Conjecture 24](to_review_astra/2506.08810__03__five-vertex-tournament-counterexample-conjecture-24__note.pdf) | [Bonamy, Groenland, Johnston, Morrison and Scott](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2506.08810__03/) | — |
 | [Deciding whether the fractional dichromatic number is at most 2 is NP-complete](to_review/1812.02420__02__fractional-dichromatic-number-2-NP-complete__note.pdf) | [Problem 3.21 of arXiv:1812.02420](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1812.02420__02/) | — |
@@ -56,7 +64,6 @@ are excluded below, but the same could happen to any of these.
 
 | Result | Problem | Notes |
 |:--|:--|:--|
-| [Fair representation by matchings in bipartite graphs holds with $c(m)=32(m+1)^3$](to_review/1611.03196__03__fair-representation-matchings-bipartite-c-of-m-bound__note.pdf) | [Conjecture 1.15 of Aharoni, Alon, Berger, Chudnovsky, Kotlar, Loebl and Ziv](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1611.03196__03/) | — |
 | [The biconstrained function $\psi$ is not symmetric: $\psi(2/7,5/7)\le 23/28<6/7=\psi(5/7,2/7)$](to_review/1902.10878__01__concatenating-bipartite-graphs-psi-not-symmetric__note.pdf) | [Question of Chudnovsky, Hompe, Scott, Seymour and Spirkl](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1902.10878__01/) | — |
 | [Linear-size deletion-saturated graphs for even cycles, from line graphs of cubic hypohamiltonian graphs](to_review/2505.24100__01__induced-saturation-even-cycles-line-graphs-hypohamiltonian__note.pdf) | [Question 1.8 of Fan, Hajebi, Hajebi and Spirkl](https://graph-theory-ai.github.io/graph-conjectures/arxiv/2505.24100__01/) | — |
 | [The Szeged–Wiener difference of a 2-connected graph is at least $\min\{2n,3n-10\}$ outside three exceptional families](to_review_astra/1602.05184__00__szeged-wiener-strengthening-eta-at-least-2n-for-2-connected__note.pdf) | [Conjecture 5 of Bonamy, Knor, Lužar, Pinlou and Škrekovski](https://graph-theory-ai.github.io/graph-conjectures/arxiv/1602.05184__00/) | — |
@@ -98,8 +105,8 @@ Where a "Rocq proof" is linked, the result has also been formalised in the
 companion repository
 [LLM4Rocq/graph-theory-rocq](https://github.com/LLM4Rocq/graph-theory-rocq),
 checked against a source-verified formal statement with no added axioms; that
-certifies the formal proposition, not its faithfulness to the paper's question,
-so those notes still want a human reader.
+certifies the formal proposition, not its faithfulness to the paper's question.
+For notes still awaiting review, formalization does not replace a human reader.
 
 Four further confirmed results that resolve part of the problem posed, rather
 than all of it, will be added in a separate section. The full index of each

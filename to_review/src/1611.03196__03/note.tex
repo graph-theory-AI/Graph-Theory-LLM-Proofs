@@ -36,7 +36,7 @@
 \DeclareMathOperator{\conv}{conv}
 
 \pagestyle{fancy}\fancyhf{}
-\fancyhead[L]{\small\itshape Candidate result 1611.03196\_\_03 --- machine-generated proof, awaiting human review}
+\fancyhead[L]{\small\itshape Result 1611.03196\_\_03 --- machine-generated proof, human-reviewed}
 \fancyhead[R]{\small\thepage}
 \renewcommand{\headrulewidth}{0.2pt}
 
@@ -54,7 +54,7 @@ Aharoni, Alon, Berger, Chudnovsky, Kotlar, Loebl and Ziv conjectured (Conjecture
 \medskip\noindent\small
 This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
 the argument was found by a language model and audited by an adversarial LLM
-referee, and it has not been checked by a human mathematician.
+referee, and was subsequently checked by human mathematicians.
 \Cref{sec:provenance} records the full provenance.
 
 \end{abstract}
@@ -187,16 +187,16 @@ The referee (\cref{app:referee}) implemented the dummy extension, the cell decom
 \end{remark}
 
 \begin{remark}[Novelty]\label{rem:novelty}
-The referee's searches found no resolution of \cref{conj:115} in the literature. The closest work it located is Othman and Berger \cite{OB24}, which treats perfect matchings of $K_{n,n}$ under partitions with a two-sided fairness measure and reports an unpublished 2014 result for $K_{n,n}$ with partitions; this is strictly narrower than \cref{conj:115} (complete bipartite graphs only, partitions only). The interpolation-between-matchings idea is folklore-adjacent, so an unindexed prior proof cannot be excluded. This has not been checked by a human.
+The referee's searches found no resolution of \cref{conj:115} in the literature. The closest work it located is Othman and Berger \cite{OB24}, which treats perfect matchings of $K_{n,n}$ under partitions with a two-sided fairness measure and reports an unpublished 2014 result for $K_{n,n}$ with partitions; this is strictly narrower than \cref{conj:115} (complete bipartite graphs only, partitions only). The interpolation-between-matchings idea is folklore-adjacent, so an unindexed prior proof cannot be excluded. A subsequent human review checked the mathematical proof and reported no error; it did not establish literature priority.
 \end{remark}
 
 \section{Provenance}\label{sec:provenance}
 
-The mathematics in this note was produced without human intervention, in three stages.
+The proof was generated, machine-refereed and rewritten without human intervention, in three stages.
 (1)~The proof was found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{1611.03196\_\_03}; original writeup in \texttt{attacks/1611.03196\_\_03/output.md}).
 (2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the conjecture verbatim against the arXiv source and the Stromquist--Woodall reference, and machine-tested the combinatorial core of the interpolation lemma on $4000$ random instances, the statement itself by brute force on $587$ small instances, and the whole pipeline end to end on bipartite circulant graphs; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
 (3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, the interval-splitting theorem is now cited precisely, and steps that the writeup stated in one line (the rounding error, the transition count, the induction) are spelled out exactly as the referee re-derived them. Two observations of the referee are recorded as remarks and marked as such (\cref{rem:slack,rem:edgecases}). No mathematical content was changed.
-\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+(4)~On 2026-09-18, the proof was checked by human mathematicians, who reported no mathematical error. This review changed only the review-status disclosures in the note; the proof was left unchanged.
 
 
 \appendix

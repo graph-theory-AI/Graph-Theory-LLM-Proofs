@@ -37,7 +37,7 @@
 \newcommand{\Cay}{\operatorname{Cay}}
 
 \pagestyle{fancy}\fancyhf{}
-\fancyhead[L]{\small\itshape Candidate result 2310.04265\_\_09 --- machine-generated proof, awaiting human review}
+\fancyhead[L]{\small\itshape Result 2310.04265\_\_09 --- machine-generated proof, human-reviewed}
 \fancyhead[R]{\small\thepage}
 \renewcommand{\headrulewidth}{0.2pt}
 
@@ -56,7 +56,7 @@ The same family and criticality result appear in Aubian and Coulomb \cite[6.1]{A
 \medskip\noindent\small
 This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
 the argument was found by a language model and audited by an adversarial LLM
-referee, and it has not been checked by a human mathematician.
+referee, and was subsequently checked by human mathematicians.
 A machine-checked Rocq/MathComp formalization of this result is available as
 \href{https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/digraph-theory/theories/applications/question_5_9_resolution.v}{\texttt{question\_5\_9\_disproved}}.
 \Cref{sec:provenance} records the full provenance.
@@ -132,19 +132,18 @@ We thank Samuel Coulomb for drawing our attention to recent work relevant to thi
 
 Accordingly, this note should be read as a self-contained account of a machine-generated proof of a result also established in the literature, rather than as a claim to a new resolution. The earlier novelty discussion and the statement that the cases $k\ge4$ remain open are superseded by these references. The original referee report in \cref{app:referee} is retained unchanged as a historical record.
 
-The provenance recorded in this note dates the original generation to 1 September 2026, before the 7 September submission of Aubian and Coulomb's preprint. These dates document our workflow. They do not establish priority or independent discovery. The mathematical argument presented here still awaits human review.
+The provenance recorded in this note dates the original generation to 1 September 2026, before the 7 September submission of Aubian and Coulomb's preprint. These dates document our workflow. They do not establish priority or independent discovery. Subsequent human review confirmed the proof and reported that the construction had also circulated privately before the machine run. We therefore make no claim of novelty or priority.
 \end{remark}
 
 \section{Provenance}\label{sec:provenance}
 
-The mathematics in this note was produced without human intervention, in three stages.
+The proof was generated, machine-refereed and rewritten without human intervention, in three stages.
 (1)~The construction and proof were found by the language model \texttt{gpt-5.6-sol} in a single autonomous pass on 2026-09-01, as part of a large sweep over open problems catalogued from arXiv (catalog id \texttt{2310.04265\_\_09}; original writeup in \texttt{attacks/2310.04265\_\_09/output.md}).
 (2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the source paper, and verified the claims by exhaustive search for $7$--$15$ vertices, by SAT solving up to $61$ vertices and structurally up to $121$ vertices; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
 (3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, the exact value $\cl(T_n-v)=2$ (needed for the word ``critical'' in the source paper's sense, and noted as missing by the referee) was added, and context on related work was added. No other mathematical content was changed.
-On 2026-09-10, the related-work discussion was updated following a report from Samuel Coulomb. The mathematical proof and the original referee report were left unchanged.
-\textbf{No human mathematician has checked this argument.} We circulate this proof for human review, not as a claim to a new resolution. Its overlap with published work is described below.
-
- (4)~Independently of this note, the result has been formalized in Rocq/MathComp in the companion repository \href{https://github.com/LLM4Rocq/graph-theory-rocq}{LLM4Rocq/graph-theory-rocq} as \href{https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/digraph-theory/theories/applications/question_5_9_resolution.v}{\texttt{question\_5\_9\_disproved}}, checked against a source-verified formal statement with no added axioms. That check certifies the formal proposition, not its faithfulness to the source paper.
+(4)~On 2026-09-10, the related-work discussion was updated following a report from Samuel Coulomb. The mathematical proof and the original referee report were left unchanged.
+(5)~Independently of this note, the result was formalized in Rocq/MathComp in the companion repository \href{https://github.com/LLM4Rocq/graph-theory-rocq}{LLM4Rocq/graph-theory-rocq} as \href{https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/digraph-theory/theories/applications/question_5_9_resolution.v}{\texttt{question\_5\_9\_disproved}}, checked against a source-verified formal statement with no added axioms. That check certifies the formal proposition, not its faithfulness to the source paper.
+(6)~On 2026-09-18, the proof was checked by human mathematicians, who reported no mathematical error and noted that the construction was already known from earlier private discussions. The proof itself was left unchanged; only the review-status and prior-knowledge disclosures were updated.
 
 \appendix
 

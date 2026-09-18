@@ -28,8 +28,10 @@ formal statement and reports no added axioms. A formalization certifies the form
 proposition; whether that proposition faithfully renders the source paper's question is
 still a matter of source reading.
 
-**Caveat.** Nothing here has been checked by a human mathematician. "CONFIRMED" is the
-verdict of an LLM referee, and novelty was checked only against the indexed literature.
+**Human review.** 2 notes have subsequently been checked by human mathematicians;
+the table marks them as `human-reviewed note`. The remaining 14
+have not received human mathematical review. "CONFIRMED" is the verdict of an LLM
+referee, and novelty was checked only against the indexed literature.
 
 ## Literature updates
 
@@ -45,18 +47,23 @@ independent discovery. The note's related-work discussion has been updated, whil
 the original proof and referee report are preserved. This update does not assess
 the novelty of the other notes.
 
+**2026-09-18: human review of `1611.03196__03` and `2310.04265__09`.** Both proofs
+were checked by human mathematicians, who reported no mathematical error. For
+`2310.04265__09`, the review also reported that the construction had circulated
+privately before the machine run; the note therefore makes no novelty or priority claim.
+
 ## Notes
 
 | id | problem | source paper | claim | referee | Rocq formalization | format | pdf |
 |:--|:--|:--|:--|:--|:--|:--|:--|
-| [`1611.03196__03`](https://mlelarge.github.io/graph-conjectures/arxiv/1611.03196__03/) | Conjecture 1.15 | *Fair representation by independent sets* ([arXiv:1611.03196](https://arxiv.org/abs/1611.03196)) | proved | CONFIRMED | — | rewritten note | [1611.03196__03__fair-representation-matchings-bipartite-c-of-m-bound__note.pdf](1611.03196__03__fair-representation-matchings-bipartite-c-of-m-bound__note.pdf) |
+| [`1611.03196__03`](https://mlelarge.github.io/graph-conjectures/arxiv/1611.03196__03/) | Conjecture 1.15 | *Fair representation by independent sets* ([arXiv:1611.03196](https://arxiv.org/abs/1611.03196)) | proved | CONFIRMED | — | human-reviewed note | [1611.03196__03__fair-representation-matchings-bipartite-c-of-m-bound__note.pdf](1611.03196__03__fair-representation-matchings-bipartite-c-of-m-bound__note.pdf) |
 | [`1702.01094__01`](https://mlelarge.github.io/graph-conjectures/arxiv/1702.01094__01/) | Question (uniquely-covered vertices in an induced path) | *Induced subgraphs of graphs with large chromatic number. IX. Rainbow pa…* ([arXiv:1702.01094](https://arxiv.org/abs/1702.01094)) | disproved | CONFIRMED | — | rewritten note | [1702.01094__01__stable-set-covers-no-privately-covered-induced-path__note.pdf](1702.01094__01__stable-set-covers-no-privately-covered-induced-path__note.pdf) |
 | [`1812.02420__02`](https://mlelarge.github.io/graph-conjectures/arxiv/1812.02420__02/) | Problem 3.21 | *On the Complexity of Digraph Colourings and Vertex Arboricity* ([arXiv:1812.02420](https://arxiv.org/abs/1812.02420)) | proved | CONFIRMED | — | rewritten note | [1812.02420__02__fractional-dichromatic-number-2-NP-complete__note.pdf](1812.02420__02__fractional-dichromatic-number-2-NP-complete__note.pdf) |
 | [`1812.02420__03`](https://mlelarge.github.io/graph-conjectures/arxiv/1812.02420__03/) | Problem 5.40 | *On the Complexity of Digraph Colourings and Vertex Arboricity* ([arXiv:1812.02420](https://arxiv.org/abs/1812.02420)) | disproved | CONFIRMED | [`directed_kneser_existence_disproved`](https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/digraph-theory/theories/applications/directed_kneser_nonexistence.v) | rewritten note | [1812.02420__03__directed-Kneser-graphs-acyclic-iff-intersecting__note.pdf](1812.02420__03__directed-Kneser-graphs-acyclic-iff-intersecting__note.pdf) |
 | [`1902.10878__01`](https://mlelarge.github.io/graph-conjectures/arxiv/1902.10878__01/) | Open Question — symmetry of $\psi$ (biconstrained case) | *Concatenating bipartite graphs* ([arXiv:1902.10878](https://arxiv.org/abs/1902.10878)) | disproved | CONFIRMED | — | rewritten note | [1902.10878__01__concatenating-bipartite-graphs-psi-not-symmetric__note.pdf](1902.10878__01__concatenating-bipartite-graphs-psi-not-symmetric__note.pdf) |
 | [`2103.15175__00`](https://mlelarge.github.io/graph-conjectures/arxiv/2103.15175__00/) | Conjecture on $R_\ell(\mathcal{H}_s, k)$ | *Multicolor list Ramsey numbers grow exponentially* ([arXiv:2103.15175](https://arxiv.org/abs/2103.15175)) | proved | CONFIRMED | [`list_ramsey_chromatic_resolution`](https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/extremal-graph-theory/theories/applications/list_ramsey_graph.v) | rewritten note | [2103.15175__00__multicolor-list-Ramsey-number-equals-s-to-the-k-plus-1__note.pdf](2103.15175__00__multicolor-list-Ramsey-number-equals-s-to-the-k-plus-1__note.pdf) |
 | [`2208.06858__01`](https://mlelarge.github.io/graph-conjectures/arxiv/2208.06858__01/) | Conjecture 2.2 | *The success probability in Levine's hat problem, and independent sets i…* ([arXiv:2208.06858](https://arxiv.org/abs/2208.06858)) | disproved | CONFIRMED | — | rewritten note | [2208.06858__01__Levine-hat-problem-monotone-strategies-reach-one-half__note.pdf](2208.06858__01__Levine-hat-problem-monotone-strategies-reach-one-half__note.pdf) |
-| [`2310.04265__09`](https://mlelarge.github.io/graph-conjectures/arxiv/2310.04265__09/) | Question 5.9 | *Clique number of tournaments* ([arXiv:2310.04265](https://arxiv.org/abs/2310.04265)) | disproved | CONFIRMED | [`question_5_9_disproved`](https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/digraph-theory/theories/applications/question_5_9_resolution.v) | rewritten note | [2310.04265__09__3-critical-tournaments-clique-number-question-5.9__note.pdf](2310.04265__09__3-critical-tournaments-clique-number-question-5.9__note.pdf) |
+| [`2310.04265__09`](https://mlelarge.github.io/graph-conjectures/arxiv/2310.04265__09/) | Question 5.9 | *Clique number of tournaments* ([arXiv:2310.04265](https://arxiv.org/abs/2310.04265)) | disproved | CONFIRMED | [`question_5_9_disproved`](https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/digraph-theory/theories/applications/question_5_9_resolution.v) | human-reviewed note | [2310.04265__09__3-critical-tournaments-clique-number-question-5.9__note.pdf](2310.04265__09__3-critical-tournaments-clique-number-question-5.9__note.pdf) |
 | [`2401.00299__02`](https://mlelarge.github.io/graph-conjectures/arxiv/2401.00299__02/) | Problem 1.9 | *Partitioning the hypercube into smaller hypercubes* ([arXiv:2401.00299](https://arxiv.org/abs/2401.00299)) | proved | CONFIRMED | — | rewritten note | [2401.00299__02__hypercube-partitions-into-squares-asymptotics__note.pdf](2401.00299__02__hypercube-partitions-into-squares-asymptotics__note.pdf) |
 | [`2405.03455__00`](https://mlelarge.github.io/graph-conjectures/arxiv/2405.03455__00/) | Open Problem (Introduction) | *Big line or big convex polygon* ([arXiv:2405.03455](https://arxiv.org/abs/2405.03455)) | proved | CONFIRMED | — | rewritten note | [2405.03455__00__Erdos-Szekeres-big-line-or-big-convex-polygon-linear-in-l__note.pdf](2405.03455__00__Erdos-Szekeres-big-line-or-big-convex-polygon-linear-in-l__note.pdf) |
 | [`2408.02400__00`](https://mlelarge.github.io/graph-conjectures/arxiv/2408.02400__00/) | Problem 1.5 | *On the difference between the chromatic and cochromatic number* ([arXiv:2408.02400](https://arxiv.org/abs/2408.02400)) | proved | CONFIRMED | [`cochromatic_gap_three_proved`](https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/chromatic-theory/theories/applications/cochromatic_gap/cochromatic_gap.v) | rewritten note | [2408.02400__00__chromatic-minus-cochromatic-number-Mycielski-construction__note.pdf](2408.02400__00__chromatic-minus-cochromatic-number-Mycielski-construction__note.pdf) |

@@ -30,6 +30,7 @@ ATTACKS = ROOT / "attacks"
 VERIF = ROOT / "verification"
 
 KEEP = {"CONFIRMED", "MINOR_GAPS"}
+HUMAN_REVIEWED = {"1611.03196__03", "2310.04265__09"}
 
 SRC = HERE / "src"
 
@@ -349,7 +350,10 @@ def write_index(entries, built):
         dm, rec = meta.get("dossier_meta", {}), meta.get("record", {})
         arxiv = dm.get("arxiv_id", cid.split("__")[0])
         ctitle = unlink(dm.get("catalog_title") or rec.get("title_md", ""))
-        kind = "rewritten note" if (SRC / cid / "note.tex").exists() else "verbatim writeup"
+        if cid in HUMAN_REVIEWED:
+            kind = "human-reviewed note"
+        else:
+            kind = "rewritten note" if (SRC / cid / "note.tex").exists() else "verbatim writeup"
         name = pdf_name(cid)
         pdf = f"[{name}]({name})" if built.get(cid) else "(build failed)"
         rows.append(f"| [`{cid}`]({dm.get('url', '')}) | {esc(ctitle)} | "
@@ -359,6 +363,7 @@ def write_index(entries, built):
     n_m = sum(e["review_verdict"] == "MINOR_GAPS" for e in entries)
     n_notes = sum((SRC / e["id"] / "note.tex").exists() for e in entries)
     n_rocq = sum(e["id"] in FORMALIZATIONS for e in entries)
+    n_human = sum(e["id"] in HUMAN_REVIEWED for e in entries)
     text = f"""# Results to review
 
 Claimed resolutions of open problems from the catalog that (a) the attacking model
@@ -389,8 +394,10 @@ formal statement and reports no added axioms. A formalization certifies the form
 proposition; whether that proposition faithfully renders the source paper's question is
 still a matter of source reading.
 
-**Caveat.** Nothing here has been checked by a human mathematician. "CONFIRMED" is the
-verdict of an LLM referee, and novelty was checked only against the indexed literature.
+**Human review.** {n_human} notes have subsequently been checked by human mathematicians;
+the table marks them as `human-reviewed note`. The remaining {len(entries) - n_human}
+have not received human mathematical review. "CONFIRMED" is the verdict of an LLM
+referee, and novelty was checked only against the indexed literature.
 
 ## Literature updates
 
@@ -405,6 +412,11 @@ preprint was submitted on 2026-09-07. These dates do not establish priority or
 independent discovery. The note's related-work discussion has been updated, while
 the original proof and referee report are preserved. This update does not assess
 the novelty of the other notes.
+
+**2026-09-18: human review of `1611.03196__03` and `2310.04265__09`.** Both proofs
+were checked by human mathematicians, who reported no mathematical error. For
+`2310.04265__09`, the review also reported that the construction had circulated
+privately before the machine run; the note therefore makes no novelty or priority claim.
 
 ## Notes
 
