@@ -1,0 +1,637 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+\setlength{\emergencystretch}{3em}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\per}{\operatorname{per}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\repair}[1]{\begin{tcolorbox}[colback=yellow!7,colframe=gray!60,boxrule=0.3pt,arc=1pt,left=5pt,right=5pt,top=3pt,bottom=3pt]\small\textbf{Repair.} #1\end{tcolorbox}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result chromatic\_number\_of\_random\_lifts\_of\_complete\_graphs --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{Random lifts of $K_5$ are asymptotically almost surely $3$-chromatic}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{18 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove that a uniform random $n$-lift of $K_5$ has chromatic number $3$ with
+probability tending to one.  A Bregman permanent bound keeps the matching constraints
+in the second moment of fibre-balanced $3$-colourings, making the uniform overlap the
+unique global maximum; the resulting variance is then exhausted by short cycles, so
+small-subgraph conditioning yields a colouring asymptotically almost surely.
+
+\medskip\noindent\small This note was produced by AI within
+the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI}
+project: the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician. \Cref{sec:provenance}
+records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+
+An $n$-lift of a graph $G$ replaces every base vertex by a fibre of $n$ vertices and
+every base edge by a perfect matching between the corresponding fibres.  In a uniform
+random lift these matchings are chosen independently and uniformly.  The
+OpenProblemGarden entry \cite{OPG}, following Amit, Linial and Matoušek \cite{ALM02},
+asks verbatim:
+\begin{question}\label{q:opg}
+Is the chromatic number of a random lift of $K_5$ concentrated on a single value?
+\end{question}
+The possible asymptotic values are $3$ and $4$.  Farzad and Theis proved the analogous
+$3$-colourability result for $K_5\setminus e$ \cite{FT12}.
+
+Nir and Pérez-Giménez \cite{NPG21} locate the chromatic number of random lifts of
+$K_{d+1}$ in a two-value window.  For three colours their upper theorem requires
+$d<\ell_3=16\log2/3\approx3.69678$, while their lower theorem starts at
+$u_3=2\log3/(\log3-\log2)\approx5.41902$.  Thus $d=4$, corresponding to $K_5$, lies
+in the gap.  Their second-moment optimization relaxes away matching marginals.  The
+argument here instead uses Bregman's permanent inequality \cite{Bregman73}, in its
+entropy form due to Radhakrishnan \cite{Radhakrishnan97}, and remains sharp at the
+uniform overlap when $d=4$.
+
+\begin{restatable}[Chromatic number of a random lift of $K_5$]{theorem}{thmmain}\label{thm:main}
+Let $H_n$ be a uniform random $n$-lift of $K_5$.  Then
+\[
+ \Pr\bigl(\chi(H_n)=3\bigr)\longrightarrow1.
+\]
+\end{restatable}
+\begin{proofidea}
+Count colourings that use nearly $n/3$ vertices of each colour in every fibre.  An
+entropy inequality and a permanent bound show that only nearly independent pairs of
+colourings contribute to the second moment.  A local lattice calculation evaluates
+that contribution exactly.  Its excess over the squared first moment equals precisely
+the contribution of short cycles, by the Ihara--Bass determinant identity.  The small-
+subgraph conditioning theorem then shows that a balanced $3$-colouring exists with
+probability tending to one.  A first-moment estimate excludes bipartite lifts.
+\fullproofref{pf:main}
+\end{proofidea}
+
+\section{Balanced colourings and the two analytic inputs}
+
+Choose integers $t_1,t_2,t_3$ summing to $n$, each differing from $n/3$ by at most
+$1$, and set $p_a=t_a/n$.  Let $Z_n$ count proper $3$-colourings in which every fibre
+has exactly $t_a$ vertices of colour $a$.  Write
+\[
+ M_n=\frac{n!}{t_1!t_2!t_3!},
+\]
+and let $a_n$ be the probability that a uniform perfect matching between two fibres
+with these colour counts has no monochromatic edge.  Then
+\[
+ \E Z_n=M_n^5a_n^{10}.                                         \tag{1}
+\]
+
+For two balanced colourings, the overlap in fibre $i$ is the matrix
+\[
+ \rho_i(a,b)=\frac1n\bigl|\{x:\text{the two colours of $x$ are $a,b$}\}\bigr|.
+\]
+Its row and column sums are $p$.  Independently in the five fibres,
+\[
+ \Pr(\rho_i=\rho)=
+ \frac{\prod_{a=1}^3(t_a!)^2}{n!\prod_{a,b=1}^3(n\rho(a,b))!}.  \tag{2}
+\]
+If $q_n(\rho,\sigma)$ is the probability that a matching between fibres of overlap
+types $\rho,\sigma$ respects both colourings, then
+\[
+ \frac{\E Z_n^2}{(\E Z_n)^2}
+ =\E_{\rho_1,\ldots,\rho_5}
+ \prod_{ij\in E(K_5)}\frac{q_n(\rho_i,\rho_j)}{a_n^2}.           \tag{3}
+\]
+
+Let $U$ be the $3\times3$ matrix with all entries $1/9$, and define
+\[
+ H(\rho)=-\sum_{a,b}\rho(a,b)\log\rho(a,b),\qquad
+ L(\rho)=\sum_{a,b}\rho(a,b)\log\bigl(\tfrac13+\rho(a,b)\bigr),
+\]
+and $F=H+2L$.
+
+\begin{restatable}[Entropy inequality]{lemma}{lementropy}\label{lem:entropy}
+There is $c>0$ such that every nonnegative $3\times3$ matrix with row sums $1/3$
+satisfies
+\[
+ F(\rho)\le F(U)-c\|\rho-U\|_F^2,
+ \qquad F(U)=2\log(4/3).
+\]
+\end{restatable}
+\begin{proofidea}
+After rescaling a row by $3$, the problem is to maximize
+$\sum_{j=1}^3g(x_j)$ on the simplex for
+$g(x)=2x\log(1+x)-x\log x$.  The function has a single inflection point.  Concavity
+handles three small coordinates, while reducing the one-large-coordinate case to a
+strictly concave one-variable function.  The Hessian at the uniform point is negative
+definite, giving the quadratic gap.\fullproofref{pf:entropy}
+\end{proofidea}
+
+\begin{restatable}[Finite-type matching asymptotic]{lemma}{lemmatching}\label{lem:matching}
+Let $A$ be a symmetric zero-one matrix of order $s$ with constant row sum $r$, put
+$P=A/r$ and $u=(1/s,\ldots,1/s)$.  Assume that $I-P^2$ is positive definite on
+$\one^\perp$ and that the vectors $e_j-e_k$ for columns occurring together in a row
+support generate the zero-sum integer lattice.  If $Q_A(n;\alpha,\beta)$ is the
+probability that a uniform matching with integer type counts $n\alpha,n\beta$ uses only
+allowed type pairs, then, uniformly for
+$\|\alpha-u\|+\|\beta-u\|=O(n^{-2/5})$,
+\begin{align*}
+Q_A(n;\alpha,\beta)
+={}&\left(\frac rs\right)^n
+ \det_{\one^\perp}(I-P^2)^{-1/2}\\
+&\times\exp\left\{\frac{ns}{2}
+ \left[\|\beta-u\|^2-
+ \langle w,(I-P^2)^{-1}w\rangle\right]\right\}(1+o(1)),\\
+&\hspace{35mm}w=\beta-u-P(\alpha-u).
+\end{align*}
+\end{restatable}
+\begin{proofidea}
+Choose permitted right types independently and express the matching probability as a
+ratio of two lattice point probabilities.  Exponential tilting gives the quadratic rate
+function; uniform Fourier inversion supplies the Gaussian prefactor.  The lattice
+hypothesis rules out nontrivial maximum-modulus characters.\fullproofref{pf:matching}
+\end{proofidea}
+
+\section{Moment and cycle calculations}
+
+\begin{restatable}[Second moment]{proposition}{propsecond}\label{prop:second}
+For the variable $Z_n$ above,
+\[
+ \frac{\E Z_n^2}{(\E Z_n)^2}\longrightarrow
+ R:=25\left(\frac{16}{15}\right)^{20}\left(\frac{15}{23}\right)^8.
+\]
+Moreover $\E Z_n=\Theta(n^{-5})(4/3)^{5n}$.
+\end{restatable}
+\begin{proofidea}
+Bregman's inequality and \cref{lem:entropy} suppress every overlap farther than
+$n^{-2/5}$ from independence.  On the central window, \cref{lem:matching} and Stirling
+turn the sum into a $20$-dimensional Gaussian integral.  Its five-fibre matrix is
+$(19I-4A(K_5))/15$, with eigenvalues $1/5,23/15,\ldots,23/15$.
+\fullproofref{pf:second}
+\end{proofidea}
+
+Let $B$ be the nonbacktracking matrix of $K_5$, indexed by its $20$ directed edges,
+and let $X_{\ell,n}$ count unoriented simple $\ell$-cycles in $H_n$.  Put
+\[
+ \mu_\ell=\frac{\tr(B^\ell)}{2\ell},\qquad
+ \delta_\ell=2(-1/2)^\ell.                                    \tag{4}
+\]
+
+\begin{restatable}[Short-cycle moments and variance identity]{proposition}{propcycles}\label{prop:cycles}
+For every fixed $L$, $(X_{3,n},\ldots,X_{L,n})$ converges jointly to independent
+Poisson variables of means $(\mu_3,\ldots,\mu_L)$.  For every finitely supported
+sequence of nonnegative integers $b_\ell$,
+\[
+ \frac{\E\left[Z_n\prod_{\ell\ge3}(X_{\ell,n})_{b_\ell}\right]}{\E Z_n}
+ \longrightarrow
+ \prod_{\ell\ge3}\bigl(\mu_\ell(1+\delta_\ell)\bigr)^{b_\ell}.
+\]
+Finally,
+\[
+ \sum_{\ell\ge3}\mu_\ell\delta_\ell^2<\infty,
+ \qquad
+ R=\exp\left(\sum_{\ell\ge3}\mu_\ell\delta_\ell^2\right).
+\]
+\end{restatable}
+\begin{proofidea}
+Factorial moments count vertex-disjoint lifted cycles; intersecting configurations lose
+a factor $n^{-1}$.  Under the colouring-size-biased measure, a cycle gains the factor
+$1+\delta_\ell$.  The Ihara--Bass determinant identity at $u=1/4$ turns the sum of
+$\mu_\ell\delta_\ell^2$ into the same determinant as the Gaussian second moment.
+\fullproofref{pf:cycles}
+\end{proofidea}
+
+\section{Remarks}
+
+\begin{remark}[What is new relative to the 2021 bound]
+The relaxation used in \cite{NPG21} has a nonuniform maximizer when $d=4$.  The
+permanent bound here retains the perfect-matching constraint and has the uniform
+overlap as its unique maximizer.  The referee numerically optimized the exact
+maximum-entropy coupling as an independent check and found the same maximizer.
+\end{remark}
+
+\begin{remark}[Scope]
+The argument also gives asymptotic $3$-colourability for lifts of any fixed simple
+$4$-regular base; it does not assert chromatic number exactly $3$ for bipartite bases.
+The general OpenProblemGarden question for $K_m$ remains untouched.  The entropy lemma
+is specific to degree $4$: its analogue already fails at degree $5$, so this method
+does not resolve random lifts of $K_6$.
+\end{remark}
+
+\begin{remark}[Computational audit]
+The referee verified every displayed constant.  In particular,
+$R=2.9745540512$ and
+\[
+ \sum_{\ell=3}^{60}\mu_\ell\delta_\ell^2=1.090094126,
+ \qquad \log R=1.090094129,
+\]
+the residual being truncation.  In simulations, the $3$-colourable fraction was
+$211/400$ at lift size $3$, $293/300$ at size $12$, and $200/200$ at size $20$;
+no bipartite lift occurred in more than $1{,}400$ trials.  These computations support
+the proof but do not replace it.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The proof was found by \texttt{gpt-6-astra}, reasoning effort \texttt{max}, in a
+single pass started on 2026-09-16, for OpenProblemGarden catalog id
+\texttt{chromatic\_number\_of\_random\_lifts\_of\_complete\_graphs}, campaign leg
+\texttt{attacks\_opg}.
+(2)~An independent adversarial referee agent (\texttt{claude-opus-5}) re-derived the
+entropy, permanent, Gaussian, cycle and determinant calculations, checked the literature,
+and ran the computations summarized above on 2026-09-17; its verdict was
+\textsc{minor gaps}.  Its report is reproduced verbatim in \cref{app:referee}.
+(3)~No rewrite of this target was started by \texttt{claude-fable-5-1} before its
+session ended; only the original writeup and referee report were present.
+(4)~On 2026-09-18 \texttt{Codex} wrote the present note and moved the full proofs to
+\cref{app:proofs}.  It repaired and marked four referee gaps: a finite-dimensional
+entropy-continuity proof for rounded fibre sizes; a uniform Fourier argument for the
+local lattice estimate, with \cite{GJR10}; a full factorial-moment enumeration explaining
+periodic projected walks; and an explicit invocation of the small-subgraph conditioning
+theorem from \cite{Wormald99}, with every hypothesis matched to a preceding formula.
+Citations for Bregman's theorem and Radhakrishnan's entropy proof were also added.  No
+other mathematical content was changed.  \textbf{No human mathematician has checked
+the argument.}
+
+\appendix
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:entropy}
+\lementropy*
+\begin{proof}
+Put $g(x)=2x\log(1+x)-x\log x$ for $0\le x\le1$, with $0\log0=0$.
+We first prove
+\[
+ g(x_1)+g(x_2)+g(x_3)\le3g(1/3)\qquad(x_1+x_2+x_3=1),           \tag{5}
+\]
+with equality only at the uniform point.  Direct differentiation gives
+\[
+ g''(x)=\frac{x^2+2x-1}{x(1+x)^2}.
+\]
+Thus $g$ is strictly concave below $r=\sqrt2-1$ and strictly convex above it.  A
+maximizer is interior because $g'(0+)=+\infty$.  At an interior maximizer, two
+coordinates cannot both exceed $r$, since varying those two with fixed sum has positive
+second derivative.
+
+If every coordinate is at most $r$, Jensen's inequality proves (5).  Otherwise, write
+the exceptional coordinate as $x>r$.  Concavity on the other two gives
+\[
+ g(x_1)+g(x_2)+g(x_3)\le \phi(x):=g(x)+2g((1-x)/2).
+\]
+For $1/3\le x<1$,
+\[
+ \phi''(x)=
+ \frac{x^4-10x^3-32x^2+34x-9}{x(1+x)^2(1-x)(3-x)^2}<0.
+\]
+Indeed, the numerator is at most $-(103/3)x^2+34x-9$, whose discriminant is $-80$.
+Since $\phi'(1/3)=0$, strict concavity gives $\phi(x)<\phi(1/3)$ for $x>1/3$.
+
+Apply (5) to each row of $x_{ab}=3\rho(a,b)$.  Since
+\[
+ F(\rho)=-\log3+\frac13\sum_{a,b}g(3\rho(a,b)),
+\]
+$U$ is the unique maximizer.  The Hessian of $F$ at $U$ is $-(9/8)I$ in the nine
+entry coordinates.  Taylor's theorem gives a strict quadratic decrease near $U$;
+on the compact complement of a small neighbourhood, uniqueness gives a fixed gap,
+which may be weakened to the required quadratic bound.
+\end{proof}
+
+\phantomsection\label{pf:matching}
+\lemmatching*
+\begin{proof}
+For every left vertex, independently choose one of its $r$ permitted right types
+uniformly, and let $S$ be the resulting vector of right-type counts.  Counting matchings
+with a fixed type table in two ways gives the exact identity
+\[
+ Q_A(n;\alpha,\beta)=
+ \left(\frac rs\right)^n
+ \frac{\Pr(S=n\beta)}{\Pr(\operatorname{Mult}(n,u)=n\beta)}.    \tag{6}
+\]
+The mean of $S/n$ is $P\alpha$.  At $\alpha=u$, its covariance divided by $n$, on
+$\one^\perp$, is
+\[
+ \Sigma_0=\frac1s(I-P^2).
+\]
+The normalized logarithmic moment generating function is
+\[
+ K_\alpha(t)=\sum_i\alpha_i\log\left(\sum_jP_{ij}e^{t_j}\right).
+\]
+Uniformly near $(u,0)$ on $\one^\perp$,
+\[
+ K_\alpha(t)=\langle P\alpha,t\rangle+	frac12\langle
+ t,\Sigma_0t\rangle+cO(\|\alpha-u\|\|t\|^2+\|t\|^3).
+\]
+Writing $w=\beta-u-P(\alpha-u)$, the tilt with mean $\beta$ is
+$t=\Sigma_0^{-1}w+cO((\|\alpha-u\|+\|\beta-u\|)^2)$, and its rate function is
+\[
+ I_\alpha(\beta)=\tfrac12\langle w,\Sigma_0^{-1}w\rangle
+ +\cO((\|\alpha-u\|+\|\beta-u\|)^3).                           \tag{7}
+\]
+
+\repair{The original writeup asserted uniform Fourier inversion.  Here are the
+uniformity checks.  After tilting, the type proportions remain in a fixed compact
+neighbourhood of $u$ and the covariance on $\one^\perp$ remains uniformly positive
+definite.  The characteristic function is a product of finitely many categorical
+characteristic functions.  The lattice-generation hypothesis says that equality in
+the triangle inequality on the dual torus occurs only at the trivial character;
+compactness therefore gives modulus at most $e^{-cn}$ outside a fixed neighbourhood
+of zero, uniformly in $\alpha,\beta$.  Inside that neighbourhood, the logarithm has
+the uniform expansion $-n\langle t,\Sigma t\rangle/2+cO(n\|t\|^3)$.  Splitting at
+$\|t\|=n^{-2/5}$ makes the cubic error $o(1)$ on the Gaussian scale, the intermediate
+annulus is bounded by $e^{-cn^{1/5}}$, and rescaling $t$ by $n^{-1/2}$ gives the
+Gaussian integral uniformly.  This is the fixed-dimensional lattice Laplace argument
+of Greenhill--Janson--Ruciński \cite{GJR10}; all its nondegeneracy and lattice
+hypotheses are exactly the two assumptions of this lemma.}
+
+Consequently, the local probability in the numerator of (6) has the Gaussian
+prefactor on the full zero-sum lattice.  The denominator has the same lattice
+covolume, so it cancels.  The determinant ratio is
+$\det_{\one^\perp}(I-P^2)^{-1/2}$.  Finally,
+\[
+ D(\beta\|u)=\frac s2\|\beta-u\|^2+cO(\|\beta-u\|^3).
+\]
+The deviations are $O(n^{-2/5})$, so multiplying the cubic errors by $n$ gives
+$O(n^{-1/5})=o(1)$.  Substitution in (6), using
+$\Sigma_0^{-1}=s(I-P^2)^{-1}$, proves the displayed formula uniformly.
+\end{proof}
+
+\phantomsection\label{pf:second}
+\propsecond*
+\begin{proof}
+We first obtain a global bound.  Bregman's theorem states that a zero-one matrix with
+positive row sums $r_v$ satisfies
+\[
+ \per(A)\le\prod_v(r_v!)^{1/r_v}.                               \tag{8}
+\]
+For the matching counted by $q_n(\rho,\sigma)$, a left vertex of type $(a,b)$ has
+\[
+ n(1-p_a-p_b+\sigma(a,b))
+\]
+permitted partners, uniformly at least $n/4$ for large $n$.  Applying (8), Stirling's
+formula, and then interchanging $\rho,\sigma$ gives
+\begin{align*}
+ \log q_n(\rho,\sigma)
+ &\le n\sum_{a,b}\rho(a,b)\log(\tfrac13+\sigma(a,b))+cO(\log n),\\
+ \log q_n(\rho,\sigma)
+ &\le \frac n2\bigl(L(\rho)+L(\sigma)\bigr)+\cO(\log n).       \tag{9}
+\end{align*}
+For the second line, use monotonicity of the logarithm to obtain
+\[
+ \sum_{a,b}(\rho(a,b)-\sigma(a,b))
+ [\log(\tfrac13+\rho(a,b))-\log(\tfrac13+\sigma(a,b))]\ge0.
+\]
+
+\repair{For the rounded margins, rescale row $a$ of $\rho$ by $1/(3p_a)$, obtaining
+$\widehat\rho$ with row sums $1/3$ and
+$\|\rho-\widehat\rho\|_1=O(1/n)$.  In fixed dimension, the elementary entropy
+continuity bound
+$|H(x)-H(y)|\le h_2(\delta)+\delta\log(8)=O(\delta\log(1/\delta))$ for
+$\delta=\|x-y\|_1/2$ gives an $O((\log n)/n)$ change in $H$.  The derivative of
+$x\mapsto x\log(1/3+x)$ is bounded on $[0,1]$, so $L$ changes by $O(1/n)$.  Since
+$\|\widehat\rho-U\|_F^2\ge\tfrac12\|\rho-U\|_F^2-O(n^{-2})$,
+\cref{lem:entropy} yields, uniformly,
+\[
+ F(\rho)\le F(U)-c'\|\rho-U\|_F^2+O((\log n)/n).                \tag{10}
+\]}
+
+Stirling's formula in (2) gives
+\[
+ \log\Pr(\rho_i=\rho)=n(H(\rho)-2H(p))+O(\log n).
+\]
+Also $H(p)=\log3+O(n^{-2})$.  Combining this with (9), the first-moment asymptotic
+derived below, and the fact that every fibre of $K_5$ has degree $4$, the contribution
+of a fixed five-overlap profile to (3) is at most
+\[
+ \exp\left\{n\sum_{i=1}^5(F(\rho_i)-F(U))+O(\log n)\right\}.    \tag{11}
+\]
+Put $C_n=pp^{T}$.  Since $C_n-U=O(1/n)$, (10)--(11) show that profiles with some
+$\|\rho_i-C_n\|_F>n^{-2/5}$ contribute at most a polynomial times
+$e^{-cn^{1/5}}$.  There are only polynomially many profiles, so their total is $o(1)$.
+
+It remains to evaluate the central window.  Apply \cref{lem:matching} first to
+$A_0=J_3-I_3$.  The eigenvalues of $P_0=A_0/2$ are $1,-1/2,-1/2$, and the lattice
+hypothesis holds, whence
+\[
+ a_n=\frac43(2/3)^n(1+o(1)).                                  \tag{12}
+\]
+Together with Stirling's formula for $M_n$, (1) gives
+$\E Z_n=\Theta(n^{-5})(4/3)^{5n}$.
+
+Let
+\[
+ \cT=\{X\in\R^{3\times3}:X\one=X^T\one=0\},\qquad
+ z_i=3\sqrt n(\rho_i-C_n).
+\]
+This is four-dimensional.  Uniformly in the central window, (2) and Stirling give
+\[
+ \Pr(\rho_i=\rho)=\frac{729}{(2\pi n)^2}e^{-\|z_i\|_F^2/2}(1+o(1)). \tag{13}
+\]
+The row-and-column-zero integer lattice has covolume $9$: the basis
+$(e_a-e_3)(e_b-e_3)^T$, $a,b\in\{1,2\}$, has Gram determinant $81$.  Hence the
+$z_i$-lattice has covolume $729/n^2$, matching (13).
+
+For $A_1=A_0\otimes A_0$, $P_1=A_1/4=P_0\otimes P_0$ has eigenvalues
+$1$, $-1/2$ with multiplicity $4$, and $1/4$ with multiplicity $4$; on $\cT$ it acts
+as multiplication by $1/4$.  The lattice hypothesis again holds.  Applying
+\cref{lem:matching} and dividing by (12) squared yields
+\[
+ \frac{q_n(\rho_i,\rho_j)}{a_n^2}
+ =\left(\frac{16}{15}\right)^2
+ \exp\left\{\frac4{15}\langle z_i,z_j\rangle
+ -\frac1{30}(\|z_i\|^2+\|z_j\|^2)\right\}(1+o(1)).             \tag{14}
+\]
+
+Let $A$ now be the adjacency matrix of $K_5$ and set
+\[
+ M=\frac{19I_5-4A}{15}.
+\]
+Equations (13)--(14) give this quadratic form independently in each of the four
+coordinates of $\cT$.  Its eigenvalues are $1/5$ once and $23/15$ four times, so it is
+positive definite.  The central lattice sum therefore converges to its Gaussian
+integral, and
+\[
+ \frac{\E Z_n^2}{(\E Z_n)^2}\longrightarrow
+ \left(\frac{16}{15}\right)^{20}\det(M)^{-2}
+ =25\left(\frac{16}{15}\right)^{20}\left(\frac{15}{23}\right)^8.
+\]
+\end{proof}
+
+\phantomsection\label{pf:cycles}
+\propcycles*
+\begin{proof}
+A simple cycle in the lift projects to a cyclically nonbacktracking closed walk in the
+base.  For a fixed rooted oriented projected walk of length $\ell$, choosing distinct
+lift vertices gives $n^\ell(1+O(1/n))$ possibilities, and the required matching edges
+occur with probability $n^{-\ell}(1+O(1/n))$.  The factorial-moment expansion for a
+fixed finite collection of lengths is dominated by vertex-disjoint cycles.  Such
+choices factor.  If two distinct cycles overlap, their union has strictly more edges
+than vertices and contributes $O(n^{v-e})=O(1/n)$.  Dividing by the $2\ell$ roots and
+orientations of each lifted cycle gives the independent Poisson means
+$\mu_\ell=\tr(B^\ell)/(2\ell)$.
+
+\repair{This rooted count also handles a projected walk that is a proper power.  If a
+primitive base walk is traversed $d$ times, closure in the lift asks for a $d$-cycle of
+its monodromy permutation, whose expected number is $1/d$.  Equivalently, its periodic
+word has only $2\ell/d$ distinct base root-orientations, and the factor $1/d$ restores
+the same normalization by $2\ell$.  Thus periodic projections, such as doubled
+triangles at $\ell=6$, are already included in $\tr(B^\ell)/(2\ell)$; configurations
+with repeated lift vertices belong to the $O(1/n)$ degenerate terms.}
+
+Now bias the lift law by $Z_n/\E Z_n$.  Equivalently, choose a uniform balanced
+colouring in each fibre and then independent uniform colour-respecting matchings.  For
+$r$ prescribed disjoint compatible edges in one matching, the probability that they
+all occur is
+\[
+ (3/(2n))^r(1+o(1)),                                           \tag{15}
+\]
+uniformly for fixed $r$.  This follows by deleting the endpoints and applying
+\cref{lem:matching} to the remaining counts, which differ from uniform by $O(1/n)$.
+The planted colours on a fixed vertex set are asymptotically independent and uniform.
+An $\ell$-cycle has $2^\ell+2(-1)^\ell$ proper $3$-colourings, so its relative weight
+under the biased law is
+\[
+ 3^{-\ell}(2^\ell+2(-1)^\ell)(3/2)^\ell=1+\delta_\ell.          \tag{16}
+\]
+
+For the mixed factorial moment in the proposition, expand each falling factorial as an
+ordered selection of distinct cycles.  Vertex-disjoint selections contribute the
+product of their rooted-walk counts and the factors (16), giving
+$\prod_\ell(\mu_\ell(1+\delta_\ell))^{b_\ell}$.  Every selection with an intersection
+has a union with $e>v$ and is $O(n^{v-e})=O(1/n)$ after the same colour-compatible
+matching calculation.  Since the total number and lengths are fixed, summing these
+errors is $o(1)$.  This proves the asserted joint factorial moments.
+
+It remains to identify the variance.  Since the spectral radius of $B$ is $3<4$ and
+$\tr B=\tr B^2=0$,
+\[
+ \sum_{\ell\ge3}\mu_\ell\delta_\ell^2
+ =2\sum_{\ell\ge1}\frac{\tr(B^\ell)}{\ell4^\ell}
+ =-2\log\det(I-B/4).                                           \tag{17}
+\]
+For completeness, the Ihara--Bass identity here is
+\[
+ \det(I-uB)=(1-u^2)^5\det(I-uA+3u^2I).                         \tag{18}
+\]
+It follows by writing $B=XY-J$, where $J$ reverses directed edges and $X,Y$ are the
+head and tail incidence matrices, then using $J^2=I$, $YX=A$, $YJX=4I$ and the
+determinant lemma.  At $u=1/4$,
+\[
+ I-A/4+3I/16=(15/16)M,
+\]
+so $\det(I-B/4)=(15/16)^{10}\det M$.  Equations (17) and
+\cref{prop:second} now give
+\[
+ \exp\left(\sum_{\ell\ge3}\mu_\ell\delta_\ell^2\right)
+ =(16/15)^{20}\det(M)^{-2}=R.
+\]
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+We apply the small-subgraph conditioning theorem in the form stated in
+\cite[Section~4]{Wormald99} to $Y_n=Z_n/\E Z_n$ and the cycle counts $X_{\ell,n}$.
+
+\repair{The theorem's hypotheses are all explicit above: (i) finite collections of
+$X_{\ell,n}$ converge to independent Poisson variables with means $\mu_\ell$ by
+\cref{prop:cycles}; (ii) their mixed factorial moments under the $Z_n$-size-biased law
+converge with factors $1+\delta_\ell$, again by \cref{prop:cycles};
+(iii) $\delta_\ell>-1$ and
+$\sum\mu_\ell\delta_\ell^2<\infty$; and (iv) the normalized second moment tends to
+$\exp(\sum\mu_\ell\delta_\ell^2)$ by \cref{prop:second,prop:cycles}.  Therefore the
+small-subgraph conditioning theorem applies directly, including the required exchange
+of the limits in the number of conditioned cycle lengths and in $n$.}
+
+It yields
+\[
+ Y_n\xrightarrow{d}W:=\prod_{\ell\ge3}
+ (1+\delta_\ell)^{P_\ell}e^{-\mu_\ell\delta_\ell},              \tag{19}
+\]
+where the $P_\ell$ are independent Poisson variables of means $\mu_\ell$, and it gives
+$\Pr(Z_n>0)\to1$.  To see positivity directly, the logarithm of the partial products is
+\[
+ \sum_{\ell=3}^L(P_\ell-\mu_\ell)\log(1+\delta_\ell)
+ +\sum_{\ell=3}^L\mu_\ell(\log(1+\delta_\ell)-\delta_\ell).
+\]
+The first series converges almost surely because its variances are summable, and the
+second converges absolutely; hence $W>0$ almost surely.  Thus $H_n$ is asymptotically
+almost surely $3$-colourable.  Notice that the rounded $t_a=n/3+O(1)$ were used
+throughout, so this holds for every integer sequence $n$, not only multiples of $3$.
+
+We finally exclude chromatic number $2$.  In a proper $2$-colouring let $s_i$ be the
+number of colour-$1$ vertices in fibre $i$.  Every base-edge matching forces
+$s_i+s_j=n$.  Since $K_5$ contains triangles, $s_i=n/2$ for all $i$; hence no such
+colouring exists for odd $n$.  For even $n$, the expected number of proper
+$2$-colourings is exactly
+\[
+ \binom{n}{n/2}^{5}
+ \left(\frac{((n/2)!)^2}{n!}\right)^{10}
+ =\binom{n}{n/2}^{-5}=o(1).
+\]
+Markov's inequality shows that $H_n$ is asymptotically almost surely nonbipartite.
+Together with $3$-colourability, this proves $\Pr(\chi(H_n)=3)\to1$.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent
+(\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup. Its step numbers
+refer to that writeup, not to this note. The scripts it mentions are in
+\texttt{verification\_astra/scripts/chromatic\_number\_of\_random\_lifts\_of\_complete\_graphs/}.
+Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{99}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{OPG} A.~Amit, N.~Linial and J.~Matoušek, \emph{Chromatic number of random lifts of complete graphs}, OpenProblemGarden, posted 3 September 2012, \url{http://www.openproblemgarden.org/op/chromatic_number_of_random_lifts_of_complete_graphs}.
+\bibitem{ALM02} A.~Amit, N.~Linial and J.~Matoušek, Random lifts of graphs: independence and chromatic number, \emph{Random Structures \& Algorithms} \textbf{20} (2002), 1--22.
+\bibitem{FT12} B.~Farzad and D.~O. Theis, Random lifts of $K_5\setminus e$ are 3-colourable, \emph{SIAM Journal on Discrete Mathematics} \textbf{26} (2012), 169--176.
+\bibitem{NPG21} J.~D. Nir and X.~Pérez-Giménez, The chromatic number of random lifts of complete graphs, arXiv:2109.13347 (2021).
+\bibitem{Bregman73} L.~M. Bregman, Some properties of nonnegative matrices and their permanents, \emph{Soviet Mathematics Doklady} \textbf{14} (1973), 945--949.
+\bibitem{Radhakrishnan97} J.~Radhakrishnan, An entropy proof of Bregman's theorem, \emph{Journal of Combinatorial Theory, Series A} \textbf{77} (1997), 161--164.
+\bibitem{GJR10} C.~Greenhill, S.~Janson and A.~Ruciński, On the number of perfect matchings in random lifts, \emph{Combinatorics, Probability and Computing} \textbf{19} (2010), 791--817.
+\bibitem{Wormald99} N.~C. Wormald, Models of random regular graphs, in \emph{Surveys in Combinatorics, 1999}, London Mathematical Society Lecture Note Series 267, Cambridge University Press, 1999, 239--298.
+\end{thebibliography}
+
+\end{document}

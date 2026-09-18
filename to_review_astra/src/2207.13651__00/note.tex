@@ -1,0 +1,486 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Noto Sans Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newtcolorbox{repairbox}{colback=orange!6,colframe=orange!70!black,boxrule=0.4pt,arc=2pt,left=5pt,right=5pt,top=3pt,bottom=3pt,fontupper=\small}
+
+\newcommand{\EE}{\mathbb E}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\Unif}{\operatorname{Unif}}
+\newcommand{\Bin}{\operatorname{Bin}}
+\newcommand{\Beta}{\operatorname{Beta}}
+\newcommand{\Ber}{\operatorname{Bernoulli}}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\degH}{\deg_H}
+\newcommand{\Qbar}{\overline Q}
+\newcommand{\qbar}{\overline q}
+\newcommand{\Var}{\operatorname{Var}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2207.13651\_\_00 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{The random irregular subgraph has Property $(\ast)$\\ for all $d=o(n/\log n)$:\\ a proof of the Fox--Luo--Pham conjecture}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $G$ be a $d$-regular graph on $n$ vertices. Assign independent uniform labels $x(v)\in[0,1]$ to the vertices and keep an edge $uv$ of $G$ exactly when $x(u)+x(v)\ge1$; call the resulting spanning subgraph $H=H(G)$. Fox, Luo and Pham proved that if $d=o(n/(\log n)^{12})$ then with high probability every degree $0\le k\le d$ is attained by $(1+o(1))\,n/(d+1)$ vertices of $H$ (Property~$(\ast)$), and conjectured that the same holds for all $d=o(n/\log n)$. We prove this conjecture. Quantitatively, for $n\ge3$ and $d\ge64\log n$, with probability at least $1-5n^{-3}$ every degree count is within $6401\bigl(\sqrt{(n/d)\log n}+\log n\bigr)$ of $n/(d+1)$, uniformly over $G$; a separate read-$(d+1)$ Chernoff bound covers $d<64\log n$. The proof exposes, for each vertex, the bit $\ind\{x(v)\ge\tfrac12\}$: after this exposure every edge inside the lower half is absent, every edge inside the upper half is present, and only the cut edges remain random. The random part of the model is therefore bipartite for \emph{every} $G$, and a read-$d$ H\"older inequality of Finner together with the $\Beta(1,r)$ law of uniform spacings gives the concentration at the correct scale $\sqrt{n/d}$. The statement concerns the unmodified random subgraph $H(G)$ itself; it is not implied by the recent resolution of the Alon--Wei conjecture, which modifies $H(G)$.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+
+Throughout, $G$ is a finite simple undirected $d$-regular graph on $n$ vertices, $N_G(v)$ is the neighbourhood of $v$ and $N_G[v]=N_G(v)\cup\{v\}$. The \emph{irregular random subgraph} $H=H(G)$, introduced by Frieze, Gould, Karo\'nski and Pfender \cite{FGKP02} and studied by Alon and Wei \cite{AW23} and by Fox, Luo and Pham \cite{FLP24}, is defined as follows: assign to every vertex an independent label $X_v\sim\Unif[0,1]$ and let
+\[
+ uv\in E(H)\quad\Longleftrightarrow\quad uv\in E(G)\ \text{ and }\ X_u+X_v\ge1 .
+\]
+For $0\le k\le d$ write $m_k=m(H,k)=|\{v:\degH(v)=k\}|$, and put
+\[
+ \mu=\frac n{d+1}.
+\]
+A spanning subgraph $H$ of $G$ has \emph{Property~$(\ast)$} if $m(H,k)=(1+o(1))\,n/(d+1)$ for all $0\le k\le d$, i.e.\ if $\max_{0\le k\le d}|m_k-\mu|=o(\mu)$. Since $\PP(\degH(v)=k)=1/(d+1)$ exactly for every $v$ and $k$ (\cref{lem:decomp}\ref{it:mean}), $\EE m_k=\mu$, and Property~$(\ast)$ asks that all $d+1$ degree counts be simultaneously concentrated at their common mean.
+
+Alon and Wei \cite{AW23} conjectured that every $d$-regular graph on $n$ vertices contains a spanning subgraph with $(1+o(1))n/(d+1)$ vertices of each degree $0\le k\le d$ (Conjecture~1.2 of \cite{FLP24}; their Conjecture~1.1 asks for $n/(d+1)\pm2$). Fox, Luo and Pham \cite[Theorem~1.3]{FLP24} proved that the random subgraph $H(G)$ itself has Property~$(\ast)$ with high probability whenever $d=o(n/(\log n)^{12})$, by a vertex-exposure martingale with a Bernstein-type inequality; one logarithm is lost in the bound on the martingale increments and eleven in the bound on the predictable quadratic variation. They then stated the following, in prose, at the end of their Section~1 (the wording below is that of the problem catalogue this note answers).
+
+\begin{conjecture}[{Fox, Luo and Pham \cite[Section~1]{FLP24}}]\label{conj:flp}
+The irregular random subgraph $H = H(G)$ satisfies Property $(\ast)$ --- that is, $m(H,k) = (1+o(1))n/(d+1)$ for all $0 \le k \le d$ --- with high probability for all $d = o(n/\log n)$.
+\end{conjecture}
+
+The authors of \cite{FLP24} also remark that for $d=\omega(n/\log n)$ the random subgraph $H(G)$ is likely to fail Property~$(\ast)$, so the conjectured range is the natural one. We prove \cref{conj:flp} (\cref{cor:flp}), with a quantitative bound in which the deviation is $O(\sqrt{(n/d)\log n}+\log n)$, which is $o(\mu)$ exactly when $d\log n=o(n)$ (\cref{thm:main}).
+
+\paragraph{Concurrent work, and what this note does and does not claim.}
+While the machine-generated argument presented here was being produced and refereed, the motivating Alon--Wei conjecture was settled by other means. Montgomery, Pokrovskiy and Sudakov \cite{MPS26} proved that for $d=o(n)$ every $d$-regular graph on $n$ vertices contains a spanning subgraph with $(1+o(1))n/(d+1)$ vertices of each degree, proving Conjecture~1.2 of \cite{FLP24} in full; and Cao, Tang and Wu \cite{CTW26} proved the exact Conjecture~1.1 (within $\pm2$) for every fixed $d$ and all sufficiently large $n$. The proof in \cite{MPS26} starts from a typical random subgraph $H(G)$ and then \emph{modifies} it by a correction that redistributes degrees; the properties of $H(G)$ used there are aggregated over blocks of degrees, not per-degree counts. (The referee did not examine the method of \cite{CTW26}, and this note makes no claim about it.) Both papers cite $d=o(n/(\log n)^{12})$ from \cite{FLP24} as the state of the art for the \emph{unmodified} random subgraph, and \cite{MPS26} repeats the remark of \cite{FLP24} that $H(G)$ itself is not expected to satisfy $(\ast)$ in the whole range $d=o(n)$. The present note concerns the unmodified random subgraph $H(G)$ only: it proves that $H(G)$ itself has Property~$(\ast)$ for all $d=o(n/\log n)$, which is the range \cite{FLP24} conjectured and, by their remark, the range in which this is plausible. This statement is neither implied by nor implies the results of \cite{MPS26,CTW26}; what is new here is the range $o(n/\log n)$ for the random model, and the method (\cref{sec:decomp}). The adversarial referee (\cref{app:referee}) searched the citing literature of \cite{FLP24} and found no paper improving the range for the random model beyond $o(n/(\log n)^{12})$. \emph{[The two references \cite{MPS26,CTW26} and this paragraph were added at the rewriting stage, following the referee report; the original writeup states that literature priority had not been checked.]}
+
+\paragraph{The idea.} Write each label as $X_v=(C_v+U_v)/2$ with $C_v\sim\Ber(1/2)$ and $U_v\sim\Unif[0,1]$ independent. Once the bits $C=(C_v)$ are exposed, an edge $uv$ of $G$ with $C_u=C_v=0$ has $X_u+X_v\le1$ and is (almost surely) absent from $H$, an edge with $C_u=C_v=1$ has $X_u+X_v\ge1$ and is present, and an edge with $C_u\ne C_v$ is present exactly when $U_u+U_v\ge1$. Thus the randomness that survives the exposure lives on the cut between $V_0=\{C_v=0\}$ and $V_1=\{C_v=1\}$, a \emph{bipartite} graph, regardless of the structure or chromatic number of $G$. Each side of the cut is an independent set of that bipartite graph, so conditioning on the labels of one side makes the degree indicators of the other side independent Bernoulli variables whose success probabilities are uniform spacings; a read-$d$ H\"older inequality (Finner \cite{Finner92}) then gives concentration of $m_k$ around its conditional mean $Q_k(C)=\EE[m_k\mid C]$ with variance proxy $n/d$, and $Q_k(C)$ is in turn a sum of $4/d$-bounded read-$(d+1)$ functions of independent bits, hence concentrated with the same proxy. Three deviations of order $\sqrt{n/d}$ against a mean $n/(d+1)$ give relative error $o(1)$ precisely when $d\log n=o(n)$, after a union bound over the $d+1$ degrees.
+
+\section{Main result}\label{sec:main}
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+Let $G$ be a $d$-regular graph on $n\ge3$ vertices and $H=H(G)$ its irregular random subgraph; $\mu=n/(d+1)$.
+\begin{enumerate}[label=\textup{(\roman*)},itemsep=2pt]
+\item\label{it:large} If $d\ge64\log n$, then
+\[
+ \PP\Bigl(\max_{0\le k\le d}|m_k-\mu|>6401\Bigl(\sqrt{\tfrac nd\log n}+\log n\Bigr)\Bigr)\le 5n^{-3}.
+\]
+\item\label{it:small} For every $d\ge0$ and every $0<\varepsilon\le1$,
+\[
+ \PP\Bigl(\max_{0\le k\le d}|m_k-\mu|\ge\varepsilon\mu\Bigr)\le 2(d+1)\exp\Bigl(-\frac{\varepsilon^2n}{3(d+1)^2}\Bigr).
+\]
+\end{enumerate}
+Both bounds are uniform over the choice of $G$.
+\end{restatable}
+
+\begin{corollary}\label{cor:flp}
+\Cref{conj:flp} holds: for every sequence of $d$-regular graphs $G_n$ on $n$ vertices with $d=d(n)=o(n/\log n)$, the random subgraph $H(G_n)$ satisfies $\max_{0\le k\le d}|m_k-\mu|=o(\mu)$ with probability $1-o(1)$.
+\end{corollary}
+\begin{proof}
+Let $d\log n=o(n)$. For those $n$ with $d\ge64\log n$, \cref{thm:main}\ref{it:large} applies, and
+\begin{align*}
+ \frac{6401\bigl(\sqrt{(n/d)\log n}+\log n\bigr)}{\mu}
+ &=6401\,\frac{(d+1)\sqrt{(n/d)\log n}+(d+1)\log n}{n}\\
+ &\le 6401\Bigl(2\sqrt{\tfrac{d\log n}{n}}+\tfrac{2d\log n}{n}\Bigr)=o(1),
+\end{align*}
+using $(d+1)/\sqrt d\le2\sqrt d$ and $d+1\le 2d$ for $d\ge1$; the failure probability is at most $5n^{-3}$. For those $n$ with $d<64\log n$, apply \cref{thm:main}\ref{it:small} with $\varepsilon_n=4(d+1)\sqrt{(\log n)/n}$. Since $d+1\le65\log n$ for $n\ge3$, $\varepsilon_n\le260(\log n)^{3/2}n^{-1/2}=o(1)$, so $\varepsilon_n\le1$ for all large $n$, and then the failure probability is at most $2(d+1)\exp(-\tfrac{16}3\log n)\le 2n^{-13/3}$. Along the whole sequence the failure probability therefore tends to $0$ and the relative deviation tends to $0$. (The case $d=0$ is deterministic, $m_0=n=\mu$, and is also covered by \ref{it:small}.)
+\end{proof}
+
+\begin{proofidea}[of \cref{thm:main}]
+Part~\ref{it:small} is a read-$(d+1)$ Chernoff bound: the indicator $\ind\{\degH(v)=k\}$ depends on the labels in $N_G[v]$ only, and each label lies in exactly $d+1$ closed neighbourhoods, so Finner's inequality (\cref{lem:finner}) bounds the moment generating function of $m_k$ by that of $(d+1)\Bin(n/(d+1),1/(d+1))$, whose mean is $\mu$; the standard Poisson-type Chernoff bound follows. Part~\ref{it:large} is the half-interval argument. After exposing the bits $C$, \cref{lem:decomp} identifies $\EE[m_k\mid C]=Q_k(C)$ explicitly. On the event $\cE$ that every vertex has at least $d/4$ neighbours across the cut (which fails with probability at most $ne^{-d/16}$), \cref{prop:givenbits} gives $\PP(|m_k-Q_k|\ge t\mid C)\le2\exp(-\tfrac1{800}\min\{dt^2/n,t\})$; \cref{prop:condmean} shows that a truncated version $\Qbar_k$ of $Q_k$, equal to $Q_k$ on $\cE$, is sub-Gaussian with $\PP(|\Qbar_k-\EE\Qbar_k|\ge t)\le2\exp(-dt^2/(16n))$ and has $|\EE\Qbar_k-\mu|\le ne^{-d/16}$. A union bound over the $d+1$ degrees and the choice $t=3200(\sqrt{(n/d)\log n}+\log n)$ give~\ref{it:large}.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{Two classical tools}\label{sec:tools}
+
+\subsection{Finner's inequality}
+
+The following inequality is due to Finner \cite{Finner92}; it is also known as the read-$R$ (or ``read-$k$'') H\"older inequality, see e.g.\ Pelekis and Ramon \cite{PR17}. We state it in the form used here, for a product probability space.
+
+\begin{restatable}[Finner \cite{Finner92}]{lemma}{lemfinner}\label{lem:finner}
+Let $Z_1,\dots,Z_N$ be independent random variables, let $A_1,\dots,A_m\subseteq\{1,\dots,N\}$, and for each $i$ let $f_i\ge0$ be a measurable function of $(Z_j)_{j\in A_i}$. Let $c_1,\dots,c_m\ge0$ satisfy
+\[
+ \sum_{i:\ j\in A_i}c_i\le1\qquad\text{for every }j\in\{1,\dots,N\}.
+\]
+Then
+\[
+ \EE\prod_{i=1}^m f_i^{\,c_i}\ \le\ \prod_{i=1}^m\bigl(\EE f_i\bigr)^{c_i},
+\]
+with the convention that the right-hand side is $+\infty$ if some $\EE f_i=\infty$ with $c_i>0$. In particular, if every coordinate $j$ belongs to at most $R$ of the sets $A_i$ \textup{(}the family is \emph{read-$R$}\textup{)}, then
+\begin{equation}\label{eq:readR}
+ \EE\prod_i f_i\le\prod_i\bigl(\EE f_i^{R}\bigr)^{1/R},
+\end{equation}
+and for random variables $Y_i$, each a function of $(Z_j)_{j\in A_i}$ with $\EE e^{\lambda R|Y_i|}<\infty$, and every real $\lambda$,
+\begin{equation}\label{eq:readRmgf}
+ \log\EE\, e^{\lambda\sum_i(Y_i-\EE Y_i)}\le\frac1R\sum_i\log\EE\, e^{\lambda R(Y_i-\EE Y_i)}.
+\end{equation}
+\end{restatable}
+
+\begin{repairbox}
+\textbf{Repair (attribution).} The original writeup stated \eqref{eq:readR} without attribution and justified it by ``apply H\"older with exponent $R$ to those $q$ factors, adding a constant factor when $q<R$''. No constant factor is needed or permitted: over a probability space the missing exponent mass is carried by the constant function~$1$, whose expectation is~$1$, and a factor larger than $1$ would invalidate the later uses of \eqref{eq:readR}. The inequality itself is correct and is Finner's \cite{Finner92}. The wrong sketch has been dropped; the standard proof, by integrating one coordinate at a time with the generalized H\"older inequality, is reproduced in \cref{app:proofs} for completeness. The referee also checked \eqref{eq:readR} numerically on $4000$ random instances on small product spaces (no violations, worst ratio $\mathrm{LHS}/\mathrm{RHS}=1.000000$).
+\end{repairbox}
+
+\begin{proofidea}
+Integrate out $Z_1$ first. The factors that involve $Z_1$ have exponents summing to at most $1$, so the generalized H\"older inequality (padded with the constant function $1$) bounds their $Z_1$-expectation by $\prod(\EE_{Z_1}f_i)^{c_i}$, a product of functions of the remaining coordinates which again satisfies the hypothesis. Induct on $N$. For \eqref{eq:readR} take $c_i=1/R$ and apply the result to $f_i^R$; for \eqref{eq:readRmgf} take $f_i=e^{\lambda(Y_i-\EE Y_i)}$.\fullproofref{pf:finner}
+\end{proofidea}
+
+\subsection{Uniform spacings}
+
+\begin{restatable}{lemma}{lemspacing}\label{lem:spacing}
+Let $r\ge1$, let $T_1,\dots,T_r$ be independent $\Unif[0,1]$ variables with order statistics $T_{(1)}\le\dots\le T_{(r)}$, and put $T_{(0)}=0$, $T_{(r+1)}=1$. The $r+1$ spacings $S_j=T_{(j+1)}-T_{(j)}$, $0\le j\le r$ \textup{(}including the two end spacings\textup{)} are exchangeable, each has the $\Beta(1,r)$ law with density $r(1-x)^{r-1}$ on $[0,1]$, and for every integer $m\ge1$
+\begin{equation}\label{eq:moments}
+ \EE S_j^{m}=\frac{m!}{(r+1)(r+2)\cdots(r+m)},\qquad\text{in particular }\ \EE S_j=\frac1{r+1}.
+\end{equation}
+Consequently, if $d\ge1$ and $r\ge d/4$, then for every real $\theta$ with $|\theta|\le1/8$,
+\begin{equation}\label{eq:spacingmgf}
+ \log\EE\, e^{\theta dS_j}\le\theta\,\frac d{r+1}+32\theta^2 .
+\end{equation}
+The bound \eqref{eq:spacingmgf} also holds, with $0$ in place of $d/(r+1)$, for the variable identically equal to $0$.
+\end{restatable}
+
+\begin{proofidea}
+The spacing vector is uniform on the simplex, so $\PP(S_j>x)=(1-x)^r$; the moments follow from the Beta integral. For \eqref{eq:spacingmgf}, $r\ge d/4$ gives $\EE(dS_j)^m\le4^m m!$, so the terms of order $m\ge2$ in $\EE e^{\theta dS_j}-1$ are bounded by $\sum_{m\ge2}(4|\theta|)^m\le32\theta^2$, and $\log(1+x)\le x$.\fullproofref{pf:spacing}
+\end{proofidea}
+
+The referee verified \eqref{eq:moments} numerically for $r\le29$, $m\le5$ (maximum error $1.5\cdot10^{-11}$) and \eqref{eq:spacingmgf} by the exact series $\EE e^{sS_r}=\sum_{m\ge0}s^m/\prod_{i\le m}(r+i)$ in 60-digit arithmetic for $d\in\{4,\dots,10^5\}$, all admissible $r$ and $81$ values of $\theta\in[-1/8,1/8]$: no violations, with equality only at $\theta=0$.
+
+\section{The half-interval decomposition}\label{sec:decomp}
+
+Generate the labels as
+\[
+ X_v=\frac{C_v+U_v}2,\qquad C_v\sim\Ber(1/2),\quad U_v\sim\Unif[0,1],
+\]
+all $2n$ variables independent; then $X_v\sim\Unif[0,1]$ and $C_v=\ind\{X_v\ge1/2\}$ almost surely. Put $V_a=\{v:C_v=a\}$ for $a\in\{0,1\}$, and for each vertex define its \emph{cut degree} and \emph{deterministic offset}
+\[
+ r_v=|\{u\in N_G(v):C_u\ne C_v\}|,\qquad
+ b_v=\begin{cases}0,&C_v=0,\\ d-r_v,&C_v=1.\end{cases}
+\]
+For a bit configuration $C$ and $0\le k\le d$ let
+\begin{equation}\label{eq:q}
+ q_{v,k}(C)=\frac{\ind\{b_v\le k\le b_v+r_v\}}{r_v+1},\qquad Q_k(C)=\sum_v q_{v,k}(C),
+\end{equation}
+and let $\cE=\{r_v\ge d/4\text{ for every }v\}$.
+
+\begin{restatable}{lemma}{lemdecomp}\label{lem:decomp}
+With the notation above:
+\begin{enumerate}[label=\textup{(\alph*)},itemsep=1pt]
+\item\label{it:identity} Almost surely, for every vertex $v$,
+\begin{equation}\label{eq:identity}
+ \degH(v)=b_v+\sum_{\substack{u\in N_G(v)\\ C_u\ne C_v}}\ind\{U_u+U_v\ge1\}.
+\end{equation}
+In particular, given $C$, the degree of $v\in V_a$ is a function of $U_v$ and of $(U_u)_{u\in V_{1-a}}$ only.
+\item\label{it:condmean} $\PP(\degH(v)=k\mid C)=q_{v,k}(C)$ for every $v$ and $k$; hence $\EE[m_k\mid C]=Q_k(C)$.
+\item\label{it:mean} $\PP(\degH(v)=k)=1/(d+1)$ for every $v$ and $0\le k\le d$; hence $\EE m_k=\EE Q_k=\mu$.
+\item\label{it:cut} Conditional on $C_v$, $r_v\sim\Bin(d,1/2)$; hence $\PP(r_v<d/4)\le e^{-d/16}$ and $\PP(\cE^c)\le ne^{-d/16}$.
+\end{enumerate}
+\end{restatable}
+
+\begin{proofidea}
+If $C_u=C_v=0$ then $X_u+X_v=(U_u+U_v)/2\le1$ with equality only on a null set; if $C_u=C_v=1$ then $X_u+X_v\ge1$; if $C_u\ne C_v$ then $X_u+X_v\ge1$ iff $U_u+U_v\ge1$. This is \ref{it:identity}. Given $C$ and $U_v=u$, the sum in \eqref{eq:identity} is $\Bin(r_v,u)$, and $\int_0^1\binom rj u^j(1-u)^{r-j}\,du=1/(r+1)$ gives \ref{it:condmean}; the same integral with $r=d$ (conditioning on $X_v$ instead) gives \ref{it:mean}. For \ref{it:cut}, the neighbours' bits are independent of $C_v$ and each differs from it with probability $1/2$; apply the multiplicative Chernoff bound.\fullproofref{pf:decomp}
+\end{proofidea}
+
+\begin{proposition}[Concentration given the bits]\label{prop:givenbits}
+Let $d\ge1$, let $\lambda_0=\log(9/8)$ and $\lambda_1=\lambda_0/2$. For every bit configuration $C\in\cE$ and every $0\le k\le d$:
+\begin{enumerate}[label=\textup{(\alph*)},itemsep=1pt]
+\item\label{it:onesided} for $a\in\{0,1\}$, with $M_{a,k}=\sum_{v\in V_a}\ind\{\degH(v)=k\}$ and $Q_{a,k}=\sum_{v\in V_a}q_{v,k}$,
+\[
+ \log\EE\bigl[e^{\lambda(M_{a,k}-Q_{a,k})}\bigm|C\bigr]\le100\,\frac{|V_a|}d\,\lambda^2\qquad(|\lambda|\le\lambda_0);
+\]
+\item\label{it:twosided} $\log\EE\bigl[e^{\lambda(m_k-Q_k)}\bigm|C\bigr]\le200\,\dfrac nd\,\lambda^2$ for $|\lambda|\le\lambda_1$;
+\item\label{it:tail} for every $t\ge0$,
+\[
+ \PP\bigl(|m_k-Q_k|\ge t\bigm|C\bigr)\le2\exp\Bigl(-\frac1{800}\min\Bigl\{\frac{dt^2}n,\,t\Bigr\}\Bigr).
+\]
+\end{enumerate}
+\end{proposition}
+
+\begin{repairbox}
+\textbf{Repair (constants).} The original writeup states \ref{it:onesided}--\ref{it:tail} with unspecified absolute constants $C_0,\lambda_0,C_1,\lambda_1,c$, justified by ``$e^\lambda-1-\lambda=O(\lambda^2)$''. The values above are one admissible choice, obtained as follows. The bound \eqref{eq:spacingmgf} requires $|\eta|\le1/8$ for $\eta=e^\lambda-1$, which holds iff $\log(7/8)\le\lambda\le\log(9/8)$, so $\lambda_0=\log(9/8)\approx0.1178$ suffices. On $|\lambda|\le1$ one has $0\le e^\lambda-1-\lambda\le\lambda^2$ and $\eta^2\le3\lambda^2$, and on $\cE$ one has $Q_{a,k}\le4|V_a|/d$, whence $C_0=4+32\cdot3=100$. The Cauchy--Schwarz step doubles $\lambda$, so $\lambda_1=\lambda_0/2\approx0.0589$ and $C_1=200$. The Chernoff step gives exponent $\min\{dt^2/(800n),\,\lambda_1t/2\}$, and $\lambda_1/2\approx0.029\ge1/800$. These agree with the values found by the referee ($\lambda_0\approx0.117$, $\lambda_1\approx0.058$, $C_0\approx100$).
+\end{repairbox}
+
+\begin{proofidea}
+Fix $C\in\cE$ and condition further on $(U_u)_{u\in V_{1-a}}$. By \cref{lem:decomp}\ref{it:identity} the indicators $\ind\{\degH(v)=k\}$, $v\in V_a$, are then independent, and the success probability of $v$ is the $(k-b_v)$-th spacing $p_{v,k}$ of the $r_v$ points $(1-U_u)_{u\in N_G(v)\cap V_{1-a}}$ (or $0$ if $k-b_v\notin[0,r_v]$). With $\eta=e^\lambda-1$, $\EE[e^{\lambda M_{a,k}}\mid C]=\EE[\prod_v(1+\eta p_{v,k})\mid C]\le\EE[\exp(\eta\sum_v p_{v,k})\mid C]$. Each $U_u$ with $u\in V_{1-a}$ enters at most $d$ of the $p_{v,k}$, so \eqref{eq:readR} with $R=d$ and then \eqref{eq:spacingmgf} with $r=r_v\ge d/4$ give $\log\EE[e^{\lambda M_{a,k}}\mid C]\le\eta Q_{a,k}+32|V_a|\eta^2/d$; subtracting $\lambda Q_{a,k}$ and using the elementary bounds in the box gives \ref{it:onesided}. Cauchy--Schwarz across the two sides (which are not independent) gives \ref{it:twosided}, and optimizing the Chernoff bound gives \ref{it:tail}.\fullproofref{pf:givenbits}
+\end{proofidea}
+
+\begin{proposition}[Concentration of the conditional mean]\label{prop:condmean}
+Let $d\ge1$ and define the truncations $\qbar_{v,k}=q_{v,k}\ind\{r_v\ge d/4\}$ and $\Qbar_k=\sum_v\qbar_{v,k}$. Then for every $0\le k\le d$:
+\begin{enumerate}[label=\textup{(\alph*)},itemsep=1pt]
+\item\label{it:bounded} $0\le\qbar_{v,k}\le4/d$, and $\qbar_{v,k}$ is a function of $(C_u)_{u\in N_G[v]}$; each bit $C_u$ enters exactly $d+1$ of these functions;
+\item\label{it:subg} $\PP\bigl(|\Qbar_k-\EE\Qbar_k|\ge t\bigr)\le2\exp\bigl(-dt^2/(16n)\bigr)$ for every $t\ge0$;
+\item\label{it:bias} $0\le\mu-\EE\Qbar_k\le ne^{-d/16}$;
+\item\label{it:onE} $\Qbar_k=Q_k$ on the event $\cE$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proofidea}
+On $\{r_v\ge d/4\}$, $q_{v,k}\le1/(r_v+1)<4/d$; the truncation kills the other branch. The bits are independent, so \eqref{eq:readRmgf} with $R=d+1$ and Hoeffding's lemma \cite{Hoeffding63} for a variable in an interval of length $4/d$ give $\log\EE e^{\lambda(\Qbar_k-\EE\Qbar_k)}\le2n(d+1)\lambda^2/d^2\le4n\lambda^2/d$, hence \ref{it:subg}. For \ref{it:bias}, $\mu-\EE\Qbar_k=\sum_v\EE[q_{v,k}\ind\{r_v<d/4\}]$ by \cref{lem:decomp}\ref{it:mean}, and $0\le q_{v,k}\le1$ with \cref{lem:decomp}\ref{it:cut}.\fullproofref{pf:condmean}
+\end{proofidea}
+
+It is important that the bits are \emph{not} conditioned on $\cE$ in \cref{prop:condmean}: conditioning would destroy their independence. The truncation achieves the same effect, and \ref{it:onE} transfers the conclusion back to $\cE$.
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[Scope and interpretation]
+The theorem is exactly the statement conjectured in \cite{FLP24}: it concerns the unmodified random subgraph $H(G)$, all $d+1$ degree values simultaneously, with high probability, uniformly over all $d$-regular graphs $G$ on $n$ vertices. Nothing beyond $d$-regularity is used: $G$ may be disconnected, and no assumption on its (fractional) chromatic number, girth or symmetry is made. Graphs are finite, simple and undirected. The null event $X_u+X_v=1$ is ignored. The endpoint degrees $k=0$ and $k=d$ are covered because \cref{lem:spacing} includes the two end spacings, and the case $k-b_v\notin[0,r_v]$ (success probability identically $0$) is covered by the last sentence of \cref{lem:spacing}. The quantitative form \cref{thm:main}\ref{it:large} is stronger than the conjecture: its deviation $O(\sqrt{(n/d)\log n}+\log n)$ is $o(\mu)$ exactly when $d\log n=o(n)$, so the argument saturates at the conjectured threshold and says nothing about $d=\Omega(n/\log n)$, where \cite{FLP24} expect $(\ast)$ to fail.
+\end{remark}
+
+\begin{remark}[Two roles of $ne^{-d/16}$]\label{rem:pun}
+In the proof of \cref{thm:main}\ref{it:large} the quantity $ne^{-d/16}$ bounds two different things: the bias $\beta=\max_k|\EE\Qbar_k-\mu|$, which is a number of vertices and enters the deviation, and the probability $\pi=\PP(\cE^c)$ of the bad event, which enters the failure probability. The original writeup used one symbol $B$ for both. We keep them apart as $\beta$ and $\pi$ in \cref{app:proofs}, inequality \eqref{eq:master}; both happen to be at most $ne^{-d/16}\le n^{-3}$ when $d\ge64\log n$.
+\end{remark}
+
+\begin{remark}[Why the argument is short]
+Fox, Luo and Pham \cite{FLP24} use a vertex-exposure martingale; their interval-indicator conditioning appears only locally, in the bound on the martingale increments (their Lemma~3.2), and the eleven extra logarithms come from their bound on the predictable quadratic variation (their Lemma~3.3). The heuristic scale of the fluctuations is $n/d$ in variance, and each of the three pieces $m_k-Q_k$, $\Qbar_k-\EE\Qbar_k$, $\EE\Qbar_k-\mu$ above is controlled at exactly that scale. The single move that makes this possible is global rather than local: exposing $\ind\{X_v\ge1/2\}$ for all $v$ at once makes the surviving randomness bipartite. The referee records (\cref{app:referee}, Caveat~8) that it set out to break the argument and could not, and that it regards the conditional-independence step of \cref{prop:givenbits} as ``structurally verified by brute force and, on reflection, simply true''. No human mathematician has checked this.
+\end{remark}
+
+\begin{remark}[Relation to the earlier machine attempt]\label{rem:retry}
+This problem was attacked twice (\cref{sec:provenance}). The first attempt, by \texttt{gpt-5.6-sol}, proved \cref{conj:flp} under the additional hypothesis $\chi_f(G)\,d\log n=o(n)$, in particular for bipartite regular graphs, by decomposing $V(G)$ into independent sets via a fractional colouring; it also proved $\Var(m_k)=O(n/d)$ for every $G$ and identified the missing ingredient as an exponential tail for the residual $R_k=\sum_v(\ind\{\degH(v)=k\}-p_{v,k})$, which it could not obtain for graphs such as disjoint unions of cliques. The present argument circumvents $R_k$ entirely: after exposing the bits, the random part of $H$ is bipartite for every $G$, and the loss of the factor $\chi_f(G)$ disappears. The two tools of \cref{sec:tools} appear in both attempts; they are classical and are attributed here to Finner \cite{Finner92} and to the theory of uniform spacings.
+\end{remark}
+
+\begin{remark}[Computational checks by the referee]
+The referee re-derived every step and ran the scripts in \texttt{verification\_astra/scripts/2207.13651\_\_00/} (\cref{app:referee}). Beyond the checks of \cref{lem:finner,lem:spacing} quoted above: the identity \eqref{eq:identity} was brute-forced on $3148$ vertices over $300$ random regular graphs ($d\le6$, $n\le16$) with $0$ violations; $q_{v,k}=\PP(\degH(v)=k\mid C)$ was checked by quadrature for $d\in\{3,6,9\}$, both bits, all $r$ and $k$, with maximum error $1.9\cdot10^{-11}$; $\EE_C q_{v,k}=1/(d+1)$ was checked exactly for $d\in\{1,2,3,5,8,13,20,33\}$ (error $1.4\cdot10^{-17}$); the conditional independence in \cref{prop:givenbits} was checked structurally (re-randomizing one $U_w$, $w\in V_a$, never changed $\degH(v)$ for another $v\in V_a$; $0$ violations over $300$ graphs); the tail \cref{lem:decomp}\ref{it:cut} was checked against the exact binomial distribution for $d\le3000$ with $0$ violations. On the adversarial family $30\times K_{10}$ ($n=300$, $d=9$; $3000$ samples, $k=4$) the simulated $\Var(m_k-Q_k\mid C)=32.64$ against the predicted scale $n/d=33.3$ (a match to $2\%$), $\EE[m_k-Q_k]=-0.05$, and $\Var(Q_k)\in[12.7,16.5]$ against the proxy $8n/d=267$ from \cref{prop:condmean}; on $21\times K_{20}$, $\Var(Q_k)\in[4.8,7.6]$ against $177$; on $K_{100,100}$, $\Var(Q_k)\le0.195$ against $16$. These are consistency checks of the scales, not proofs.
+\end{remark}
+
+\begin{remark}[Novelty]
+To the best of the referee's search (\cref{app:referee}, ``Priority check''), no paper improves the range of \cite[Theorem~1.3]{FLP24} for the random model $H(G)$ itself; the 2026 papers \cite{MPS26,CTW26} that settle the Alon--Wei conjectures by modifying $H(G)$ both cite $o(n/(\log n)^{12})$ as the state of the art for $H(G)$. The novelty check is only as good as what could be found online, and the campaign that produced this note lost priority on other results by margins of days to weeks. The importance of the result is also narrower than when \cite{FLP24} posed the conjecture, since its original motivation, Conjecture~1.2 of \cite{FLP24}, is now a theorem \cite{MPS26}.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+
+(1)~The argument was found by the language model \texttt{gpt-6-astra} (reasoning effort \emph{max}, single autonomous pass, flex service tier) on 2026-09-17, as part of a sweep over open problems catalogued from arXiv (catalog id \texttt{2207.13651\_\_00}, leg \texttt{attacks\_retry}; original writeup in \nolinkurl{attacks_retry/2207.13651__00/output.md}). This was a \emph{second} attempt at the problem: the first, by \texttt{gpt-5.6-sol} (\texttt{attacks/2207.13651\_\_00}, self-reported verdict \emph{partial}), was supplied verbatim in the prompt as an unverified lead, with the instruction to treat it as a lead and not an authority. Its content is summarised in \cref{rem:retry}. The second writeup reuses the shape of the first (read-$R$ H\"older bounds and uniform spacings) and re-states both tools from scratch; the half-interval decomposition of \cref{sec:decomp} is the new step. Nothing inherited from the first attempt is presented here as new.
+
+(2)~An independent adversarial referee agent (\texttt{claude-opus-5}) reviewed the writeup on 2026-09-17. It read the source paper \cite{FLP24} and confirmed the statement of the conjecture, its Theorem~1.3 and the source of the twelve logarithms; re-derived every numbered step of the writeup; verified every identity and inequality numerically (\cref{sec:remarks}); searched the literature for prior or concurrent resolutions and found \cite{MPS26,CTW26}, neither of which implies the result; and returned the verdict \textsc{minor\_gaps}: every step \textsc{valid} except the justification of the read-$R$ H\"older lemma, which is Finner's inequality asserted with a non-proof and no attribution. It also noted the unspecified constants and the double use of $B=ne^{-d/16}$. Its report is reproduced verbatim in \cref{app:referee}.
+
+(3)~On 2026-09-17 the writeup was rewritten into the present note by \texttt{claude-fable-5-1} (final pass 2026-09-18). The text was reorganised, with statements and proof ideas in the main text and full proofs in \cref{app:proofs}. Every deviation from the original writeup is listed here.
+\begin{itemize}[itemsep=1pt]
+\item The read-$R$ product H\"older inequality (the writeup's Section~2.1) is now stated as Finner's inequality \cite{Finner92} in its general exponent form, cited, and its incorrect proof sketch (``adding a constant factor when $q<R$'') removed; a standard proof is included in \cref{app:proofs}, and \cite{PR17} is cited as a secondary reference. (Repair named by the referee.)
+\item The constants in the writeup's inequalities (13)--(15), left as absolute $C_0,\lambda_0,C_1,\lambda_1,c$, are instantiated: $\lambda_0=\log(9/8)$, $C_0=100$, $\lambda_1=\lambda_0/2$, $C_1=200$, $c=1/800$; consequently the writeup's bound (1), stated with an unspecified $C$ ``for all sufficiently large $n$'', becomes \cref{thm:main}\ref{it:large} with $A=3200$, deviation constant $6401$ and failure probability $5n^{-3}$, for all $n\ge3$. The elementary bounds used ($e^\lambda-1-\lambda\le\lambda^2$ and $(e^\lambda-1)^2\le3\lambda^2$ on $|\lambda|\le1$) were checked numerically at the rewriting stage. (Repair named by the referee.)
+\item The quantity $ne^{-d/16}$, used in the writeup's inequality (21) both as a deviation and as a probability under the single name $B$, is split into a bias bound $\beta$ and a probability bound $\pi$ (\cref{rem:pun}, inequality \eqref{eq:master}). (Repair named by the referee.)
+\item The introduction cites the concurrent work \cite{MPS26,CTW26} found by the referee, states precisely that this note concerns the unmodified random subgraph, and says what remains new; the references \cite{FGKP02,AW23} for the origin of the model and of the conjecture were added from the source paper's own introduction. (Repair named by the referee.)
+\item The small-degree bound (the writeup's Section~7, inequality (24)) is stated for all $d\ge0$ as \cref{thm:main}\ref{it:small}, and its ``usual elementary Chernoff calculation'' is spelled out in \cref{app:proofs} via comparison with a Poisson moment generating function; the writeup applied it only for $d<64\log n$, which is how \cref{cor:flp} uses it.
+\item The general inequality \eqref{eq:master} is stated for all $d\ge1$, as in the writeup, before specialising to $d\ge64\log n$.
+\end{itemize}
+No other mathematical content was changed. \textbf{No human mathematician has checked this argument.} We circulate it for human review, not as a claim to a resolution.
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:finner}
+\lemfinner*
+\begin{proof}
+We use the generalized H\"older inequality: if $h_1,\dots,h_m\ge0$ are random variables and $\theta_1,\dots,\theta_m\ge0$ with $\sum_i\theta_i=1$, then $\EE\prod_i h_i^{\theta_i}\le\prod_i(\EE h_i)^{\theta_i}$ (with the stated convention for infinite expectations). We prove the lemma by induction on $N$. If $N=0$ every $f_i$ is a constant and there is nothing to prove.
+
+Let $N\ge1$ and write $\EE=\EE'\EE_1$, where $\EE_1$ integrates over $Z_1$ and $\EE'$ over $(Z_2,\dots,Z_N)$; by independence and Tonelli's theorem this is legitimate for nonnegative integrands. Let $J=\{i:1\in A_i\}$. For fixed values of $Z_2,\dots,Z_N$, the variables $f_i$ with $i\in J$ are nonnegative functions of $Z_1$, and $\sum_{i\in J}c_i\le1$ by hypothesis. Apply the generalized H\"older inequality to the family $(f_i)_{i\in J}$ with exponents $(c_i)_{i\in J}$, augmented by the constant function $1$ with exponent $1-\sum_{i\in J}c_i\ge0$ (its expectation is $1$, because the law of $Z_1$ is a probability measure):
+\[
+ \EE_1\prod_{i\in J}f_i^{\,c_i}\le\prod_{i\in J}\bigl(\EE_1 f_i\bigr)^{c_i}.
+\]
+Define $g_i=\EE_1 f_i$ for $i\in J$ and $g_i=f_i$ for $i\notin J$. Each $g_i$ is a nonnegative measurable function of $(Z_j)_{j\in A_i\setminus\{1\}}$, and the exponent condition $\sum_{i:\,j\in A_i\setminus\{1\}}c_i\le1$ holds for every $j\ge2$. Since the factors with $i\notin J$ do not depend on $Z_1$,
+\[
+ \EE\prod_i f_i^{\,c_i}=\EE'\Bigl[\prod_{i\notin J}f_i^{\,c_i}\cdot\EE_1\prod_{i\in J}f_i^{\,c_i}\Bigr]\le\EE'\prod_i g_i^{\,c_i}\le\prod_i\bigl(\EE' g_i\bigr)^{c_i}=\prod_i\bigl(\EE f_i\bigr)^{c_i},
+\]
+where the second inequality is the induction hypothesis applied to the $N-1$ coordinates $Z_2,\dots,Z_N$, and the last equality is $\EE'\EE_1 f_i=\EE f_i$ for $i\in J$ and $\EE' f_i=\EE f_i$ for $i\notin J$.
+
+For \eqref{eq:readR}, apply the lemma to the functions $f_i^R$ with all $c_i=1/R$; the hypothesis $\sum_{i:\,j\in A_i}1/R\le1$ is the read-$R$ property. For \eqref{eq:readRmgf}, apply \eqref{eq:readR} to $f_i=e^{\lambda(Y_i-\EE Y_i)}>0$ and take logarithms.
+\end{proof}
+
+\phantomsection\label{pf:spacing}
+\lemspacing*
+\begin{proof}
+The vector $(S_0,\dots,S_r)$ has the uniform distribution (density $r!$) on the simplex $\{s\in[0,1]^{r+1}:\sum_j s_j=1\}$, which is invariant under permutations of the coordinates; hence the spacings are exchangeable and it suffices to treat $S_0=T_{(1)}$. Now $\PP(S_0>x)=\PP(T_i>x\ \forall i)=(1-x)^r$, so $S_0$ has density $r(1-x)^{r-1}$ on $[0,1]$, which is $\Beta(1,r)$, and
+\[
+ \EE S_0^m=\int_0^1x^m\,r(1-x)^{r-1}\,dx=r\,\mathrm B(m+1,r)=\frac{r\,m!\,(r-1)!}{(r+m)!}=\frac{m!}{(r+1)\cdots(r+m)}.
+\]
+For \eqref{eq:spacingmgf}, let $r\ge d/4$, so $r+1>d/4$ and $d/(r+1)<4$. By \eqref{eq:moments}, $\EE(dS_j)^m=d^m\,m!/((r+1)\cdots(r+m))\le m!\,(d/(r+1))^m\le4^m m!$. Since $S_j$ is bounded, $\EE e^{\theta dS_j}=\sum_{m\ge0}\theta^m\EE(dS_j)^m/m!$ with absolutely convergent series for $|\theta|<1/4$, and therefore, using $\log(1+x)\le x$,
+\begin{align*}
+ \log\EE e^{\theta dS_j}\le\EE e^{\theta dS_j}-1
+ &=\theta\,\frac d{r+1}+\sum_{m\ge2}\frac{\theta^m\,\EE(dS_j)^m}{m!}
+ \le\theta\,\frac d{r+1}+\sum_{m\ge2}(4|\theta|)^m\\
+ &=\theta\,\frac d{r+1}+\frac{16\theta^2}{1-4|\theta|}\le\theta\,\frac d{r+1}+32\theta^2
+\end{align*}
+for $|\theta|\le1/8$. For the variable identically $0$ the left side is $0\le32\theta^2$.
+\end{proof}
+
+\phantomsection\label{pf:decomp}
+\lemdecomp*
+\begin{proof}
+Since $C_v$ is a fair bit and $U_v$ is uniform on $[0,1]$, $(C_v+U_v)/2$ is uniform on $[0,1]$ and $\ind\{X_v\ge1/2\}=C_v$ unless $U_v=1$, a null event. Let $uv\in E(G)$. If $C_u=C_v=0$ then $X_u+X_v=(U_u+U_v)/2\le1$, with equality only if $U_u=U_v=1$, so $uv\notin E(H)$ almost surely. If $C_u=C_v=1$ then $X_u+X_v=1+(U_u+U_v)/2\ge1$ and $uv\in E(H)$. If $C_u\ne C_v$ then $X_u+X_v=(1+U_u+U_v)/2\ge1$ iff $U_u+U_v\ge1$. Hence, almost surely, a vertex $v$ with $C_v=0$ receives no edges from its $d-r_v$ neighbours in $V_0$, a vertex with $C_v=1$ receives all $d-r_v$ edges from its neighbours in $V_1$, and every vertex receives from each cross neighbour $u$ the edge $uv$ exactly when $U_u+U_v\ge1$. This is \eqref{eq:identity}, and the final sentence of \ref{it:identity} is read off from it.
+
+\ref{it:condmean}: Fix $C$ and condition further on $U_v=u$. The $r_v$ indicators $\ind\{U_w+u\ge1\}$, $w\in N_G(v)$ with $C_w\ne C_v$, are independent $\Ber(u)$ variables, so $\degH(v)-b_v\sim\Bin(r_v,u)$. Integrating over $u\in[0,1]$, for $0\le j\le r_v$,
+\[
+ \PP(\degH(v)-b_v=j\mid C)=\int_0^1\binom{r_v}ju^j(1-u)^{r_v-j}\,du=\binom{r_v}j\mathrm B(j+1,r_v-j+1)=\frac1{r_v+1},
+\]
+and the probability is $0$ for $j\notin[0,r_v]$. Thus $\PP(\degH(v)=k\mid C)=q_{v,k}(C)$; summing over $v$ gives $\EE[m_k\mid C]=Q_k(C)$.
+
+\ref{it:mean}: Condition on $X_v=x$. Each of the $d$ edges $uv$ is retained iff $X_u\ge1-x$, independently with probability $x$, so $\degH(v)\sim\Bin(d,x)$ and $\PP(\degH(v)=k)=\int_0^1\binom dkx^k(1-x)^{d-k}\,dx=1/(d+1)$ for $0\le k\le d$. Summing over $v$, $\EE m_k=\mu$, and $\EE Q_k=\EE\,\EE[m_k\mid C]=\mu$.
+
+\ref{it:cut}: Conditional on $C_v$, the $d$ bits $C_u$, $u\in N_G(v)$, are independent fair bits, each different from $C_v$ with probability $1/2$; so $r_v\sim\Bin(d,1/2)$, with mean $d/2$. The multiplicative Chernoff bound $\PP(X\le(1-\delta)\EE X)\le\exp(-\delta^2\EE X/2)$ with $\delta=1/2$ gives $\PP(r_v<d/4)\le\PP(r_v\le d/4)\le e^{-d/16}$. A union bound over the $n$ vertices gives $\PP(\cE^c)\le ne^{-d/16}$.
+\end{proof}
+
+\phantomsection\label{pf:givenbits}
+\begin{proof}[Proof of \cref{prop:givenbits}]
+Fix $C\in\cE$, $k$ and $a\in\{0,1\}$. All probabilities and expectations below are conditional on $C$; the randomness is in $(U_v)_{v\in V}$, which are independent $\Unif[0,1]$ variables also conditionally on $C$.
+
+\emph{Conditional independence.} Condition additionally on $(U_u)_{u\in V_{1-a}}$. By \cref{lem:decomp}\ref{it:identity}, for $v\in V_a$,
+\[
+ \degH(v)=b_v+\bigl|\{u\in N_G(v)\cap V_{1-a}:\ 1-U_u\le U_v\}\bigr|,
+\]
+a function of $U_v$ and of the fixed values $(U_u)_{u\in V_{1-a}}$. As the $U_v$, $v\in V_a$, are independent, the indicators $\ind\{\degH(v)=k\}$, $v\in V_a$, are conditionally independent Bernoulli variables. Let $p_{v,k}$ be the conditional success probability of $v$. Writing $T_u=1-U_u$ for the $r_v$ points $u\in N_G(v)\cap V_{1-a}$, the set of $x\in[0,1]$ with exactly $j$ of the $T_u$ at most $x$ is the interval $[T_{(j)},T_{(j+1)})$, of length the $j$-th spacing $S_j$ in the notation of \cref{lem:spacing}. Hence
+\[
+ p_{v,k}=\begin{cases}S_{k-b_v}\bigl((T_u)_{u\in N_G(v)\cap V_{1-a}}\bigr),&0\le k-b_v\le r_v,\\ 0,&\text{otherwise.}\end{cases}
+\]
+Conditionally on $C$, the $T_u$ are independent uniforms, so in the first case $p_{v,k}\sim\Beta(1,r_v)$ and $\EE[p_{v,k}\mid C]=1/(r_v+1)=q_{v,k}$, by \cref{lem:spacing}; in the second case $p_{v,k}=0=q_{v,k}$. Note that $r_v\ge d/4\ge1/4$, so $r_v\ge1$ and \cref{lem:spacing} applies.
+
+\emph{One side.} Let $\eta=e^\lambda-1>-1$. By conditional independence and $1+x\le e^x$,
+\[
+ \EE\bigl[e^{\lambda M_{a,k}}\bigm|C\bigr]=\EE\Bigl[\prod_{v\in V_a}(1+\eta p_{v,k})\Bigm|C\Bigr]\le\EE\Bigl[\exp\Bigl(\eta\sum_{v\in V_a}p_{v,k}\Bigr)\Bigm|C\Bigr],
+\]
+valid for either sign of $\lambda$ since every factor $1+\eta p_{v,k}$ is positive. The function $f_v=e^{\eta p_{v,k}}>0$ depends only on $(U_u)_{u\in N_G(v)\cap V_{1-a}}$, and a given $U_u$, $u\in V_{1-a}$, enters $f_v$ only for $v\in N_G(u)\cap V_a$, i.e.\ for at most $d$ values of $v$. Finner's inequality \eqref{eq:readR} with $R=d$, followed by \cref{lem:spacing}, \eqref{eq:spacingmgf}, with $\theta=\eta$ and $r=r_v\ge d/4$ (or its trivial version when $p_{v,k}\equiv0$), gives for $|\eta|\le1/8$
+\[
+ \log\EE\bigl[e^{\lambda M_{a,k}}\bigm|C\bigr]\le\frac1d\sum_{v\in V_a}\log\EE\bigl[e^{\eta d\,p_{v,k}}\bigm|C\bigr]\le\frac1d\sum_{v\in V_a}\bigl(\eta d\,q_{v,k}+32\eta^2\bigr)=\eta Q_{a,k}+32\,\frac{|V_a|}d\,\eta^2 .
+\]
+Subtracting $\lambda Q_{a,k}$,
+\[
+ \log\EE\bigl[e^{\lambda(M_{a,k}-Q_{a,k})}\bigm|C\bigr]\le(e^\lambda-1-\lambda)\,Q_{a,k}+32\,\frac{|V_a|}d\,\eta^2 .
+\]
+Now let $|\lambda|\le\lambda_0=\log(9/8)$. Then $\eta=e^\lambda-1\in[8/9-1,\,9/8-1]=[-1/9,1/8]$, so $|\eta|\le1/8$ as required. Moreover, for $|\lambda|\le1$: $0\le e^\lambda-1-\lambda\le\lambda^2$ (the ratio $(e^\lambda-1-\lambda)/\lambda^2$ is increasing in $\lambda$ and equals $e-2<1$ at $\lambda=1$), and $\eta^2\le3\lambda^2$ (for $0\le\lambda\le1$, $\eta\le(e-1)\lambda$ and $(e-1)^2<3$; for $\lambda<0$, $|\eta|\le|\lambda|$). Finally, on $\cE$, $q_{v,k}\le1/(r_v+1)<4/d$, so $Q_{a,k}\le4|V_a|/d$. Therefore
+\[
+ \log\EE\bigl[e^{\lambda(M_{a,k}-Q_{a,k})}\bigm|C\bigr]\le\lambda^2\,\frac{4|V_a|}d+32\cdot3\lambda^2\,\frac{|V_a|}d=100\,\frac{|V_a|}d\,\lambda^2,
+\]
+which is \ref{it:onesided}.
+
+\emph{Both sides.} The variables $M_{0,k}-Q_{0,k}$ and $M_{1,k}-Q_{1,k}$ are not independent given $C$. By the Cauchy--Schwarz inequality and \ref{it:onesided} at $2\lambda$, for $|\lambda|\le\lambda_1=\lambda_0/2$,
+\[
+ \EE\bigl[e^{\lambda(m_k-Q_k)}\bigm|C\bigr]\le\prod_{a\in\{0,1\}}\EE\bigl[e^{2\lambda(M_{a,k}-Q_{a,k})}\bigm|C\bigr]^{1/2}\le\exp\Bigl(\tfrac12\cdot100\,\frac{|V_0|+|V_1|}d\,(2\lambda)^2\Bigr)=\exp\Bigl(200\,\frac nd\,\lambda^2\Bigr),
+\]
+which is \ref{it:twosided}.
+
+\emph{Chernoff bound.} Put $Z=m_k-Q_k$ and $V=200n/d$, so that $\log\EE[e^{\lambda Z}\mid C]\le V\lambda^2$ for $|\lambda|\le\lambda_1$. For $t\ge0$ and $0<\lambda\le\lambda_1$, Markov's inequality gives $\PP(Z\ge t\mid C)\le\exp(-\lambda t+V\lambda^2)$. If $t\le2V\lambda_1$, choose $\lambda=t/(2V)\le\lambda_1$ to get $\exp(-t^2/(4V))=\exp(-dt^2/(800n))$. If $t>2V\lambda_1$, choose $\lambda=\lambda_1$ to get $\exp(-\lambda_1t+V\lambda_1^2)\le\exp(-\lambda_1t+\lambda_1t/2)=\exp(-\lambda_1t/2)$. In both cases
+\[
+ \PP(Z\ge t\mid C)\le\exp\Bigl(-\min\Bigl\{\frac{dt^2}{800n},\,\frac{\lambda_1}2\,t\Bigr\}\Bigr)\le\exp\Bigl(-\frac1{800}\min\Bigl\{\frac{dt^2}n,\,t\Bigr\}\Bigr),
+\]
+because $\lambda_1/2=\tfrac14\log(9/8)\approx0.0294\ge1/800$. The same bound holds for $-Z$, and \ref{it:tail} follows.
+\end{proof}
+
+\phantomsection\label{pf:condmean}
+\begin{proof}[Proof of \cref{prop:condmean}]
+\ref{it:bounded}: On $\{r_v\ge d/4\}$ we have $r_v+1>d/4$, so $0\le q_{v,k}\le1/(r_v+1)<4/d$; on the complement $\qbar_{v,k}=0$. The quantities $r_v$, $b_v$ and $\ind\{r_v\ge d/4\}$ are functions of $C_v$ and $(C_u)_{u\in N_G(v)}$, hence so is $\qbar_{v,k}$. A bit $C_u$ enters $\qbar_{v,k}$ only if $u\in N_G[v]$, i.e.\ $v\in N_G[u]$, which happens for exactly $|N_G[u]|=d+1$ vertices $v$.
+
+\ref{it:subg}: The bits $(C_u)_{u\in V}$ are independent and, by \ref{it:bounded}, the family $(\qbar_{v,k})_v$ is read-$(d+1)$. Hoeffding's lemma \cite{Hoeffding63} states that a random variable $Y$ with values in an interval of length $\ell$ satisfies $\log\EE e^{s(Y-\EE Y)}\le s^2\ell^2/8$ for all real $s$. By \eqref{eq:readRmgf} with $R=d+1$ and Hoeffding's lemma with $\ell=4/d$, $s=\lambda(d+1)$, for every real $\lambda$,
+\[
+ \log\EE\, e^{\lambda(\Qbar_k-\EE\Qbar_k)}\le\frac1{d+1}\sum_v\frac{\lambda^2(d+1)^2}{8}\Bigl(\frac4d\Bigr)^2=\frac{2n(d+1)}{d^2}\,\lambda^2\le\frac{4n}d\,\lambda^2 ,
+\]
+using $d+1\le2d$. Markov's inequality with $\lambda=dt/(8n)$ gives $\PP(\Qbar_k-\EE\Qbar_k\ge t)\le\exp(-\lambda t+4n\lambda^2/d)=\exp(-dt^2/(16n))$, and likewise for the lower tail.
+
+\ref{it:bias}: By \cref{lem:decomp}\ref{it:mean}, $\mu=\EE Q_k=\sum_v\EE q_{v,k}$, so $\mu-\EE\Qbar_k=\sum_v\EE[q_{v,k}\ind\{r_v<d/4\}]$. Each term is between $0$ and $\PP(r_v<d/4)\le e^{-d/16}$, since $0\le q_{v,k}\le1$ and by \cref{lem:decomp}\ref{it:cut}.
+
+\ref{it:onE}: On $\cE$ every truncation indicator equals $1$.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+\emph{Part~\ref{it:large}: the master inequality.} Let $d\ge1$ and put
+\[
+ \beta=\max_{0\le k\le d}\bigl|\EE\Qbar_k-\mu\bigr|\le ne^{-d/16},\qquad \pi=\PP(\cE^c)\le ne^{-d/16},
+\]
+by \cref{prop:condmean}\ref{it:bias} and \cref{lem:decomp}\ref{it:cut} (cf.\ \cref{rem:pun}). On $\cE$, by \cref{prop:condmean}\ref{it:onE}, for every $k$
+\[
+ |m_k-\mu|\le|m_k-Q_k|+|\Qbar_k-\EE\Qbar_k|+|\EE\Qbar_k-\mu|\le|m_k-Q_k|+|\Qbar_k-\EE\Qbar_k|+\beta .
+\]
+Hence, for every $t\ge0$, using \cref{prop:givenbits}\ref{it:tail} (averaged over $C\in\cE$) and \cref{prop:condmean}\ref{it:subg} and a union bound over the $d+1$ values of $k$,
+\begin{align}
+ \PP\Bigl(\max_k|m_k-\mu|\ge2t+\beta\Bigr)
+ &\le\pi+\sum_{k=0}^d\PP\bigl(\cE\cap\{|m_k-Q_k|\ge t\}\bigr)+\sum_{k=0}^d\PP\bigl(|\Qbar_k-\EE\Qbar_k|\ge t\bigr)\notag\\
+ &\le\pi+(d+1)\Bigl[2\exp\Bigl(-\frac1{800}\min\Bigl\{\frac{dt^2}n,t\Bigr\}\Bigr)+2\exp\Bigl(-\frac{dt^2}{16n}\Bigr)\Bigr]\notag\\
+ &\le\pi+4(d+1)\exp\Bigl(-\frac1{800}\min\Bigl\{\frac{dt^2}n,\,t\Bigr\}\Bigr),\label{eq:master}
+\end{align}
+since $\exp(-dt^2/(16n))\le\exp(-dt^2/(800n))\le\exp(-\tfrac1{800}\min\{dt^2/n,t\})$. The bad event $\cE^c$, common to all $k$, is counted once. Inequality \eqref{eq:master} holds for every $d\ge1$ and every $d$-regular $G$.
+
+\emph{Part~\ref{it:large}: specialisation.} Let $n\ge3$ and $d\ge64\log n$. Then $ne^{-d/16}\le n\cdot n^{-4}=n^{-3}$, so $\beta\le n^{-3}$ and $\pi\le n^{-3}$. Take $A=3200$ and $t=A\bigl(\sqrt{(n/d)\log n}+\log n\bigr)$. Then $dt^2/n\ge A^2\log n\ge A\log n$ and $t\ge A\log n$, so $\exp(-\tfrac1{800}\min\{dt^2/n,t\})\le n^{-A/800}=n^{-4}$, and, as $d+1\le n$, \eqref{eq:master} gives
+\[
+ \PP\Bigl(\max_k|m_k-\mu|\ge2t+\beta\Bigr)\le n^{-3}+4n\cdot n^{-4}=5n^{-3}.
+\]
+Finally $2t+\beta\le2t+n^{-3}\le(2A+1)\bigl(\sqrt{(n/d)\log n}+\log n\bigr)=6401\bigl(\sqrt{(n/d)\log n}+\log n\bigr)$, because $\log n\ge1>n^{-3}$ for $n\ge3$. This proves \ref{it:large}.
+
+\emph{Part~\ref{it:small}.} Fix $k$ and let $I_v=\ind\{\degH(v)=k\}$, so $m_k=\sum_vI_v$. The indicator $I_v$ is a function of the labels $(X_u)_{u\in N_G[v]}$, and each label $X_u$ enters $I_v$ for exactly the $d+1$ vertices $v\in N_G[u]$; so the family $(I_v)_v$ is read-$R$ with $R=d+1$, with respect to the independent labels. By \cref{lem:decomp}\ref{it:mean}, $\EE I_v=p:=1/(d+1)$. Finner's inequality \eqref{eq:readR} gives, for every real $\lambda$,
+\[
+ \EE\, e^{\lambda m_k}=\EE\prod_ve^{\lambda I_v}\le\prod_v\bigl(\EE\, e^{\lambda RI_v}\bigr)^{1/R}=\bigl(1-p+pe^{\lambda R}\bigr)^{n/R}\le\exp\Bigl(\frac{np}R\bigl(e^{\lambda R}-1\bigr)\Bigr)=\exp\bigl(\nu(e^{s}-1)\bigr),
+\]
+where $s=\lambda R$ and $\nu=np/R=n/(d+1)^2$, using $1+x\le e^x$. Thus $W=m_k/R$ satisfies $\EE e^{sW}\le\exp(\nu(e^s-1))$ for all real $s$, the moment generating function of a Poisson variable with mean $\nu$; note $\EE W=\mu/R=\nu$. The standard Chernoff computation for this bound gives, for $0<\varepsilon\le1$: with $s=\log(1+\varepsilon)>0$,
+\[
+ \PP\bigl(W\ge(1+\varepsilon)\nu\bigr)\le\exp\bigl(\nu(e^s-1)-s(1+\varepsilon)\nu\bigr)=\exp\bigl(-\nu\,[(1+\varepsilon)\log(1+\varepsilon)-\varepsilon]\bigr)\le e^{-\nu\varepsilon^2/3},
+\]
+and with $s=\log(1-\varepsilon)<0$ (for $\varepsilon<1$; the case $\varepsilon=1$ follows by letting $s\to-\infty$),
+\[
+ \PP\bigl(W\le(1-\varepsilon)\nu\bigr)\le\exp\bigl(\nu(e^s-1)-s(1-\varepsilon)\nu\bigr)=\exp\bigl(-\nu\,[\varepsilon+(1-\varepsilon)\log(1-\varepsilon)]\bigr)\le e^{-\nu\varepsilon^2/2},
+\]
+by the elementary inequalities $(1+\varepsilon)\log(1+\varepsilon)-\varepsilon\ge\varepsilon^2/3$ and $\varepsilon+(1-\varepsilon)\log(1-\varepsilon)\ge\varepsilon^2/2$ on $(0,1]$ (for $\varepsilon=1$ the second reads $1\ge1/2$). Since $\{|m_k-\mu|\ge\varepsilon\mu\}=\{W\ge(1+\varepsilon)\nu\}\cup\{W\le(1-\varepsilon)\nu\}$,
+\[
+ \PP\bigl(|m_k-\mu|\ge\varepsilon\mu\bigr)\le2\exp\Bigl(-\frac{\varepsilon^2n}{3(d+1)^2}\Bigr),
+\]
+and a union bound over the $d+1$ values of $k$ gives \ref{it:small}. (For $d=0$ the bound is trivially true, as $m_0=n=\mu$.)
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup. Its step and equation numbers refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification\_astra/scripts/2207.13651\_\_00/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\begingroup\sloppy\emergencystretch=3em
+\input{.build/referee.tex}
+\endgroup
+
+\begin{thebibliography}{9}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{FLP24} J.~Fox, S.~Luo and H.~T.~Pham, On random irregular subgraphs, \emph{Random Structures \& Algorithms} 64 (2024); \href{https://arxiv.org/abs/2207.13651}{arXiv:2207.13651} (2022).
+\bibitem{FGKP02} A.~Frieze, R.~J.~Gould, M.~Karo\'nski and F.~Pfender, On graph irregularity strength, \emph{J.\ Graph Theory} 41 (2002), 120--137.
+\bibitem{AW23} N.~Alon and F.~Wei, Irregular subgraphs, \emph{Combin.\ Probab.\ Comput.} 32 (2023), 269--283; \href{https://arxiv.org/abs/2108.02685}{arXiv:2108.02685}.
+\bibitem{MPS26} R.~Montgomery, A.~Pokrovskiy and B.~Sudakov, Nearly-uniform degree distributions in spanning subgraphs, \href{https://arxiv.org/abs/2606.30612}{arXiv:2606.30612} (29 June 2026).
+\bibitem{CTW26} T.~Cao, Q.~Tang and H.~Wu, Irregular subgraph in a regular graph, \href{https://arxiv.org/abs/2607.06465}{arXiv:2607.06465} (7 July 2026).
+\bibitem{Finner92} H.~Finner, A generalization of H\"older's inequality and some probability inequalities, \emph{Ann.\ Probab.} 20 (1992), 1893--1901.
+\bibitem{PR17} C.~Pelekis and J.~Ramon, Hoeffding's inequality for sums of dependent random variables, \emph{Mediterr.\ J.\ Math.} 14 (2017), Art.~243.
+\bibitem{Hoeffding63} W.~Hoeffding, Probability inequalities for sums of bounded random variables, \emph{J.\ Amer.\ Statist.\ Assoc.} 58 (1963), 13--30.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,292 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\fvs}{\operatorname{fvs}}
+\newcommand{\cp}{\operatorname{cp}}
+\newcommand{\fp}{\operatorname{fp}}
+\newcommand{\Gtt}{G_t}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 1912.01570\_\_00 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{A $12$-vertex planar graph with $\fvs=5$ and $\fp=2$:\\ a counterexample to the face-packing conjecture of\\ Bonamy, Dross, Masařík, Nadara, Pilipczuk and Pilipczuk}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A \emph{face-packing} of a planar graph $G$ is a set of vertex-disjoint cycles that, for some planar embedding of $G$, all bound faces; $\fp(G)$ is the largest size of one. Bonamy, Dross, Masařík, Nadara, Pilipczuk and Pilipczuk conjectured (Conjecture~2 of arXiv:1912.01570, Conjecture~14 of the published version) that every planar graph satisfies $\fvs(G)\le 2\,\fp(G)$, a strengthening of Jones' Conjecture $\fvs(G)\le 2\,\cp(G)$. We show that this is false: the $12$-vertex planar graph obtained from a $4$-cycle $abcd$ by attaching a $K_4$ at $a$ and $c$ and another $K_4$ at $b$ and $d$ has $\fvs=5$ and $\fp=2$. More generally, a family $(\Gtt)_{t\ge1}$ of planar graphs with $\fvs(\Gtt)=3t+2$ and $\fp(\Gtt)=t+1$ shows that no inequality $\fvs\le c\,\fp$ holds for planar graphs with a constant $c<3$. The family has $\cp(\Gtt)=2t+1$ and so does not touch Jones' Conjecture itself.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+
+All graphs are finite and simple. A \emph{cycle packing} of a graph $G$ is a set of pairwise vertex-disjoint cycles of $G$, and $\cp(G)$ denotes the largest size of a cycle packing. A \emph{feedback vertex set} is a set $S\subseteq V(G)$ such that $G-S$ is a forest, and $\fvs(G)$ is the least size of one. Trivially $\fvs(G)\ge\cp(G)$. Jones' Conjecture, first recorded by Kloks, Lee and Liu \cite{KLL02}, asserts that $\fvs(G)\le 2\,\cp(G)$ for every planar graph $G$; the factor $2$ would be best possible because of $K_4$ (or of any wheel). The best general bound is $\fvs(G)\le 3\,\cp(G)$, and Bonamy, Dross, Masařík, Nadara, Pilipczuk and Pilipczuk \cite{BDMNPP19,BDMNPP21} proved Jones' Conjecture for subcubic planar graphs.
+
+In the concluding paragraph of that paper the authors pose a stronger conjecture, in which the packed cycles are required to be faces. Following them, a \emph{face-packing} of a planar graph $G$ is a cycle packing such that, for some planar embedding of $G$, every cycle in the packing bounds a face of that embedding; $\fp(G)$ is the largest size of a face-packing. Since every face-packing is a cycle packing, $\fp(G)\le\cp(G)$. The statement, quoted verbatim from \cite{BDMNPP19}, is:
+
+\begin{conjecture}[{\cite[Conjecture~2]{BDMNPP19}; \cite[Conjecture~14]{BDMNPP21}}]\label{conj:fp}
+For every planar graph $G$, we have $\fvs(G) \leq 2 \cdot \fp(G)$, where $\fp(G)$ is the maximum size of a face-packing of $G$, i.e., a cycle-packing where, for some embedding of $G$, every cycle bounds a face.
+\end{conjecture}
+
+The authors motivate the conjecture as a way ``to highlight how little we understand around Jones' Conjecture''. They note that the example of many nested disjoint cycles shows that the embedding cannot be fixed in advance (so the quantifier ``for some embedding'' is essential), and that the discharging argument giving $\fvs(G)\le3\,\cp(G)$ does not yield \cref{conj:fp} even with the factor $3$ in place of $2$. The conjecture is stated word for word identically, and with the same quantifier ``for every planar graph $G$'', in the arXiv version \cite{BDMNPP19} and in the published version \cite{BDMNPP21}; neither imposes any connectivity, degree or further hypothesis on $G$.
+
+The only subsequent work on this circle of questions that we are aware of is by Bärnkopf and Győri \cite{BG24}, who prove Jones' Conjecture for Halin graphs and for the class of \emph{based planar graphs} (plane graphs having a face adjacent to every other face). Their Remark~2.5 observes that every based planar graph even satisfies $\fvs(G)\le2\,\fp(G)$. Neither that paper nor either of the other two works citing \cite{BDMNPP19} that the referee located (\cref{rem:novelty}) refutes \cref{conj:fp}.
+
+We show that \cref{conj:fp} is false, already on $12$ vertices, and that the factor $2$ cannot be replaced by any constant below~$3$.
+
+\subsection*{The counterexample}
+
+Let $G_1$ be the graph with $12$ vertices $a,b,c,d,\ p,q,r,s,\ p',q',r',s'$ and the following $20$ edges: the $4$-cycle $abcd$ (edges $ab,bc,cd,da$); all six edges among $\{p,q,r,s\}$ and all six among $\{p',q',r',s'\}$ (two copies of $K_4$); and the four attachment edges $ap$, $cq$, $bp'$, $dq'$. In words: a $4$-cycle with a $K_4$ hung on the pair of opposite vertices $a,c$ and another $K_4$ hung on the other pair $b,d$, using two distinct vertices of each $K_4$. Every vertex has degree $3$ except $p,q,p',q'$, which have degree $4$.
+
+\begin{theorem}\label{thm:G1}
+$G_1$ is a planar graph with $\fvs(G_1)=5$ and $\fp(G_1)=2$. In particular $\fvs(G_1)=5>4=2\,\fp(G_1)$, so \cref{conj:fp} is false.
+\end{theorem}
+
+$G_1$ is the case $t=1$ of the following family.
+
+\begin{definition}[the graphs $\Gtt$]\label{def:Gt}
+Let $t\ge1$. Take pairwise vertex-disjoint $4$-cycles $C_i=a_ib_ic_id_ia_i$ ($1\le i\le t$) and pairwise vertex-disjoint copies $Q_j$ of $K_4$ on vertex sets $\{p_j,q_j,r_j,s_j\}$ ($0\le j\le t$), all these vertex sets being mutually disjoint, and add exactly the following edges:
+\begin{itemize}\tightlist
+\item $a_ip_i$ and $c_iq_i$ for $1\le i\le t$ (the \emph{gadget} $Q_i$ is attached to $C_i$ at its opposite vertices $a_i,c_i$);
+\item $d_ib_{i+1}$ for $1\le i<t$ (the cycles form a chain);
+\item $b_1p_0$ and $d_tq_0$ (the gadget $Q_0$ closes the chain).
+\end{itemize}
+The edges $a_ip_i$, $c_iq_i$, $b_1p_0$, $d_tq_0$ are called \emph{attachment edges}; each gadget $Q_j$ is incident with exactly two of them, one at $p_j$ and one at $q_j$.
+\end{definition}
+
+For $t=1$ the vertices $a_1,b_1,c_1,d_1$, $Q_1$, $Q_0$ are $a,b,c,d$, $\{p,q,r,s\}$, $\{p',q',r',s'\}$ above. In general $\Gtt$ has $4t+4(t+1)=8t+4$ vertices and $4t+6(t+1)+2t+(t-1)+2=13t+7$ edges; every vertex has degree $3$ except the $2t+2$ vertices $p_j,q_j$, which have degree $4$.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+For every integer $t\ge1$ the graph $\Gtt$ is a simple planar graph of order $8t+4$ and maximum degree $4$ with
+\[
+\fvs(\Gtt)=3t+2,\qquad \fp(\Gtt)=t+1,\qquad \cp(\Gtt)=2t+1 .
+\]
+\end{restatable}
+
+\begin{corollary}\label{cor:main}
+\Cref{conj:fp} is false: $\fvs(G_1)=5>4=2\,\fp(G_1)$. Moreover, for every constant $c<3$ there is a planar graph $G$ with $\fvs(G)>c\,\fp(G)$, since $\fvs(\Gtt)/\fp(\Gtt)=3-\frac1{t+1}\to3$. On the other hand $\fvs(\Gtt)=3t+2\le 4t+2=2\,\cp(\Gtt)$, so the family is consistent with Jones' Conjecture.
+\end{corollary}
+\begin{proof}
+Immediate from \cref{thm:main}: $(3t+2)/(t+1)=3-1/(t+1)$, which exceeds any $c<3$ for $t$ large enough.
+\end{proof}
+
+\begin{proofidea}
+Four elementary facts about $\Gtt$ do all the work; the last one is the only place where planarity enters.
+(i)~\emph{Feedback vertex number.} Each $C_i$ needs one deleted vertex and each $Q_j\cong K_4$ needs two, and these $2t+1$ subgraphs are vertex-disjoint, so $\fvs(\Gtt)\ge3t+2$; deleting $\{a_i\}_{i}\cup\{p_j,q_j\}_{j}$ leaves the path $b_1c_1d_1b_2c_2d_2\cdots b_tc_td_t$ plus $t+1$ isolated edges $r_js_j$.
+(ii)~\emph{One packed cycle per gadget.} A cycle meeting $Q_j$ either lies inside $Q_j$ and uses at least three of its four vertices, or leaves $Q_j$ and must then use both attachment edges, hence both $p_j$ and $q_j$; any two such cycles intersect.
+(iii)~\emph{Gadget-free cycles.} After deleting all gadgets, the chain edges $d_ib_{i+1}$ are bridges, so the only remaining cycles are the $C_i$.
+(iv)~\emph{No $C_i$ is ever a face.} The path $a_ip_iq_ic_i$ through $Q_i$ and a $b_i$--$d_i$ path through the rest of the chain and $Q_0$ are internally disjoint from each other and from $C_i$, and their endpoints alternate on $C_i$. In any planar embedding the two paths lie on opposite sides of the Jordan curve $C_i$, so neither side is a face.
+From (ii)--(iv), in every planar embedding every facial cycle meets a gadget and distinct disjoint facial cycles meet distinct gadgets, so $\fp(\Gtt)\le t+1$; a suitable drawing exhibits $t+1$ disjoint facial triangles $p_jq_js_j$. From (ii) and (iii), $\cp(\Gtt)\le(t+1)+t$, attained by the $C_i$ together with one triangle from each $Q_j$.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{Lemmas}
+
+We write $V_j=\{p_j,q_j,r_j,s_j\}$ for the vertex set of the gadget $Q_j$.
+
+\begin{restatable}[Planarity and a face-packing of size $t+1$]{lemma}{lemplanar}\label{lem:planar}
+$\Gtt$ is planar, and it has a planar embedding in which the $t+1$ pairwise vertex-disjoint triangles $p_jq_js_j$ ($0\le j\le t$) all bound faces. Hence $\fp(\Gtt)\ge t+1$.
+\end{restatable}
+\begin{proofidea}
+Draw the $C_i$ as diamonds in a row, with $b_i$ and $d_i$ as the left and right corners, add the chain edges between consecutive diamonds, a vertical chord $a_ic_i$ inside each diamond and a closing edge $d_tb_1$ around the outside. Then replace each chord $a_ic_i$ by the gadget $Q_i$ and the closing edge by $Q_0$: since $p_j$ and $q_j$ are adjacent in $K_4$ they lie on a common face of the plane $K_4$, so the gadget can be inserted in a small disc around a point of the edge it replaces. The three inner triangular faces of each plane $K_4$, among them $p_jq_js_j$, survive.\fullproofref{pf:planar}
+\end{proofidea}
+
+\begin{restatable}[Feedback vertex number]{lemma}{lemfvs}\label{lem:fvs}
+$\fvs(\Gtt)=3t+2$.
+\end{restatable}
+\begin{proofidea}
+Lower bound from the $2t+1$ vertex-disjoint subgraphs $C_i$ ($\fvs=1$) and $Q_j\cong K_4$ ($\fvs=2$, as any three vertices of $K_4$ span a triangle). Upper bound from the explicit set $S=\{a_i:1\le i\le t\}\cup\{p_j,q_j:0\le j\le t\}$.\fullproofref{pf:fvs}
+\end{proofidea}
+
+\begin{restatable}[One cycle per gadget]{lemma}{lemgadget}\label{lem:gadget}
+Fix $0\le j\le t$. Any two cycles of $\Gtt$ that both contain a vertex of $V_j$ have a common vertex. Consequently, in any cycle packing of $\Gtt$ at most one cycle meets $V_j$.
+\end{restatable}
+\begin{proofidea}
+A cycle inside $Q_j$ has length $3$ or $4$ and so contains at least three of the four vertices of $V_j$. A cycle not inside $Q_j$ that meets $V_j$ crosses the edge cut between $V_j$ and the rest an even, positive number of times; that cut consists of the two attachment edges of $Q_j$, so the cycle contains both $p_j$ and $q_j$. Any two $3$-subsets of $V_j$, any two supersets of $\{p_j,q_j\}$, and any $3$-subset and any superset of $\{p_j,q_j\}$ intersect.\fullproofref{pf:gadget}
+\end{proofidea}
+
+\begin{restatable}[Gadget-free cycles]{lemma}{lemchain}\label{lem:chain}
+The cycles of $\Gtt$ that contain no vertex of $V_0\cup\dots\cup V_t$ are exactly $C_1,\dots,C_t$.
+\end{restatable}
+\begin{proofidea}
+$\Gtt-\bigcup_jV_j$ consists of the cycles $C_i$ joined into a chain by the edges $d_ib_{i+1}$, which are bridges of that graph. A cycle uses no bridge, so it lies within a single $C_i$.\fullproofref{pf:chain}
+\end{proofidea}
+
+The next lemma isolates the topological input. Recall that a face of a plane graph is a connected component of the complement of the drawing, and that a cycle $C$ \emph{bounds} a face $F$ if the frontier of $F$ is exactly (the drawing of) $C$.
+
+\begin{restatable}[Alternating paths block a face]{lemma}{lemjordan}\label{lem:jordan}
+Let $H$ be a plane graph containing a cycle $C$ and two paths $P$ (from $x$ to $y$) and $R$ (from $u$ to $v$), each with at least one edge, such that $P$ and $R$ are internally disjoint from each other and from $C$, and $x,u,y,v$ are four distinct vertices appearing in this cyclic order on $C$. Then no face of $H$ is bounded by $C$.
+\end{restatable}
+\begin{proofidea}
+By the Jordan curve theorem $\mathbb R^2\setminus C$ has two components (the two \emph{sides} of $C$). The interior of $P$ is connected and disjoint from $C$, so it lies in one side, $S$ say. $C\cup P$ is a plane theta graph with three faces, bounded by $C$, by $xCu\,y\,P\,x$ and by $yCv\,x\,P\,y$ (the two cycles through $P$); the two latter faces partition $S\setminus P$, and $u$ lies on the frontier of only one of them while $v$ lies on the frontier of only the other. The interior of $R$ is connected and disjoint from $C\cup P$, hence inside a single face of $C\cup P$ whose frontier contains both $u$ and $v$: this is the face bounded by $C$, i.e.\ the side of $C$ other than $S$. Thus both sides of $C$ contain edges of $H$. A face bounded by $C$ would be an open connected subset of one side with no frontier points inside that side, hence the whole side, which is impossible.\fullproofref{pf:jordan}
+\end{proofidea}
+
+\begin{restatable}[No $C_i$ is facial]{lemma}{lemnotfacial}\label{lem:notfacial}
+For every $1\le i\le t$ and every planar embedding of $\Gtt$, the cycle $C_i$ does not bound a face.
+\end{restatable}
+\begin{proofidea}
+Apply \cref{lem:jordan} with $C=C_i$, $P=P_i=a_ip_iq_ic_i$ and $R=R_i$ the $b_i$--$d_i$ path that runs from $b_i$ down the chain to $b_1$ (through $d_{k}c_{k}b_{k}$ for $k=i-1,\dots,1$), crosses $b_1p_0q_0d_t$, and returns from $d_t$ up the chain to $d_i$ (through $b_kc_kd_k$ for $k=t,\dots,i+1$). The endpoints $a_i,b_i,c_i,d_i$ alternate on $C_i$, and $P_i$ and $R_i$ are internally disjoint from each other and from $C_i$. (Equivalently: $C_i\cup P_i\cup R_i$ is a subdivision of $K_4$ in which $C_i$ corresponds to a $4$-cycle, and $4$-cycles of $K_4$ are not facial.)\fullproofref{pf:notfacial}
+\end{proofidea}
+
+\section{Remarks}
+
+\begin{remark}[Scope of the statement]\label{rem:scope}
+\Cref{conj:fp} is quantified over all planar graphs, in both \cite{BDMNPP19} and \cite{BDMNPP21}, and the referee (\cref{app:referee}) checked both texts for silently assumed hypotheses and found none. $G_1$ is simple, connected and $2$-connected, with maximum degree~$4$, so it is squarely within scope. The definition of $\fp$ used here is the one of \cite{BDMNPP19}: vertex-disjoint cycles, all bounding faces of one common embedding, maximised over embeddings. This is the reading most favourable to the conjecture; under the fixed-embedding reading of \cite[Definition~1.5]{BG24} $\fp$ can only decrease, so the refutation holds a fortiori. It even survives the reading in which each packed cycle may bound a face in an embedding of its own: the referee computed that exactly $20$ cycles of $G_1$ bound a face in \emph{some} planar embedding (none of them is $C_1$), and the largest pairwise vertex-disjoint subfamily of these $20$ cycles still has size $2$. Only an edge-disjoint reading of ``packing'' would rescue the statement, and that reading is excluded by the source paper's definition of a cycle packing as a set of vertex-disjoint cycles.
+\end{remark}
+
+\begin{remark}[Independent computational verification]\label{rem:computation}
+The referee recomputed both invariants of $G_1$ without using any of the arguments above (scripts in \texttt{verification\_astra/scripts/1912.01570\_\_00/}). $\fvs(G_1)=5$ was obtained by exhaustive search over all vertex subsets, with witness $\{a,p,q,p',q'\}$; $\fvs(G_2)=8$ likewise. $\fp(G_1)=2$ was obtained by enumerating all $6^4\cdot2^8=331\,776$ rotation systems of $G_1$, keeping the $32$ with $V-E+F=2$ (the sphere embeddings), tracing their faces and maximising the number of pairwise vertex-disjoint facial cycles over each; the witnessing packing is $\{p,r,s\},\{p',q',r'\}$, and $C_1$ is facial in none of the $32$ embeddings. The rotation-system enumerator was validated on $K_4$, the cube and the octahedron ($2$ sphere embeddings each, a mirror pair, as Whitney's theorem \cite{Whitney32} predicts for $3$-connected planar graphs), on $C_5$ ($1$) and on $K_5$ and $K_{3,3}$ ($0$). A second, structurally independent upper bound was obtained from the \emph{apex criterion}: if a cycle $C$ bounds a face in some embedding of $G$ then $G$ plus a new vertex adjacent to all of $V(C)$ is planar, so $\fp(G)$ is at most the largest disjoint family among the cycles passing this planarity test. On $G_1$ the apex test selects exactly the same $20$ cycles that the exhaustive enumeration found to be facial-realisable, and it gives $\fp(\Gtt)\le t+1$ for $t=1,2,3$ ($20$, $36$ and $58$ candidate cycles respectively; no $C_i$ passes). Together with the explicit embeddings of \cref{lem:planar}, whose face lists the referee traced (Euler's formula checked) for $t\le6$, this confirms $\fp(\Gtt)=t+1$ exactly for $t=1,2,3$. The referee also rebuilt $G_1$ a second time from the one-sentence prose description alone (``a square with two disjoint $K_4$'s, one attached at $a,c$, the other at $b,d$'') and found it isomorphic to the graph of \cref{def:Gt}, with the same values $\fvs=5$, $\fp=2$. Finally, the brute-force values $\cp(G_1)=3$ and $\cp(G_2)=5$ match $2t+1$, the $85$ simple cycles of $G_1$ were checked against \cref{lem:gadget} ($29$ cycles meet each gadget, no two of them disjoint) and \cref{lem:chain} (the only gadget-free cycle is $C_1$), and the node connectivity of $G_1$ and $G_2$ was found to be $2$.
+\end{remark}
+
+\begin{remark}[Consistency with the literature]\label{rem:consistency}
+Since $\cp(\Gtt)=2t+1$ and $\fvs(\Gtt)=3t+2\le2\,\cp(\Gtt)$, the family does not contradict Jones' Conjecture, and it is not a candidate for doing so. Bärnkopf and Győri \cite[Remark~2.5]{BG24} prove $\fvs(G)\le2\,\fp(G)$ for every based planar graph; the referee checked that in none of the $32$ planar embeddings of $G_1$ is some face adjacent to every other face, so $G_1$ is not a based planar graph and there is no conflict.
+\end{remark}
+
+\begin{remark}[What is not shown]\label{rem:limits}
+The construction lives entirely on the $2$-cuts $\{p_j,q_j\}$: the force of \cref{lem:gadget} is that a gadget reachable through only two edges can host at most one packed cycle, and \cref{lem:notfacial} exploits the freedom of embedding across these cuts. $\Gtt$ is $2$-connected but never $3$-connected. For $3$-connected planar graphs Whitney's theorem \cite{Whitney32} makes the embedding unique up to reflection, so $\fp$ is simply the largest set of pairwise vertex-disjoint face boundaries of that embedding, and \cref{conj:fp} is untouched there. The natural repaired question --- \emph{does $\fvs(G)\le2\,\fp(G)$ hold for every $3$-connected planar graph $G$?} --- remains open as far as this note goes. Nor does this note prove any upper bound: \cref{cor:main} shows that no constant $c<3$ works, not that $c=3$ does; whether $\fvs(G)\le3\,\fp(G)$ holds for all planar graphs is open (the known bound $\fvs\le3\,\cp$ does not imply it, since $\fp\le\cp$). The ratio $3$ is a supremum, not attained: $\fvs(\Gtt)/\fp(\Gtt)=3-1/(t+1)<3$ for every $t$. The case ``$t=0$'' would be a single $K_4$, with $\fvs=2=2\,\fp$, so the hypothesis $t\ge1$ in \cref{thm:main} is needed.
+\end{remark}
+
+\begin{remark}[Minimality and novelty]\label{rem:novelty}
+No claim of minimality is made. The referee searched, using the rigorous apex upper bound on $\fp$ (so that any hit would be a genuine counterexample), all $1012$ planar graphs on at most $7$ vertices and all $5\,974$ connected planar graphs on $8$ vertices: no counterexample exists on at most $8$ vertices, and on at most $7$ vertices the largest ratio $\fvs/\fp$ is exactly $2$, attained by $K_4$. (Both $\fvs$ and $\fp$ are additive over connected components, so disconnected graphs need not be searched separately.) A sweep of the $261\,080$ connected graphs on $9$ vertices did not finish within the referee's compute budget, so a smallest counterexample has between $9$ and $12$ vertices. As to novelty, the referee found only three papers citing \cite{BDMNPP19} (among them \cite{BG24}) and none of them refutes \cref{conj:fp}; targeted web searches found no published counterexample. A short observation of this kind could nevertheless be folklore or unindexed, and no priority is claimed.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-6-astra} (reasoning effort max) in a single autonomous pass started on 2026-09-16, as part of a sweep over open problems catalogued from arXiv (catalog id \texttt{1912.01570\_\_00}, leg \texttt{attacks\_arxiv\_astra}; original writeup in \texttt{attacks\_arxiv\_astra/\allowbreak 1912.01570\_\_00/\allowbreak output.md}). The model itself claimed the verdict ``disproved'' with high confidence and disclaimed minimality and literature priority.
+(2)~An independent adversarial referee agent (\texttt{claude-opus-5}) reviewed the writeup on 2026-09-17. It re-derived each of the twelve steps it extracted from the writeup and found all of them valid; checked the conjecture's wording against both the arXiv and the published EJC text; read \cite{BG24} and checked consistency with its Remark~2.5; recomputed $\fvs(G_1)=5$ by exhaustive search and $\fp(G_1)=2$ by enumerating all $331\,776$ rotation systems of $G_1$ (\cref{rem:computation}); confirmed $\fp(\Gtt)=t+1$ for $t\le3$ by an independent apex-planarity criterion; rebuilt the graph from prose and checked isomorphism; searched exhaustively for counterexamples on at most $8$ vertices; and searched the literature for prior publication. Its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-17 the writeup was rewritten into the present note by \texttt{claude-fable-5-1}. The deviations from the writeup are the following; no mathematical content was changed.
+\begin{itemize}\tightlist
+\item The text was reorganised: the family $\Gtt$ is now a definition, the five facts used in the writeup's Sections~1--5 are separate lemmas, and full proofs are collected in \cref{app:proofs}. The value $\cp(\Gtt)=2t+1$, stated with proof in the writeup's Section~6, was made part of \cref{thm:main}.
+\item The writeup's Jordan-curve argument (its Section~4) was spelled out as the standalone \cref{lem:jordan}, with the three-face structure of a plane theta graph made explicit and a reference to Diestel \cite{Diestel17} for the planar-topology facts used. The writeup's phrase ``when traversing another $C_j$, use its path $b_jc_jd_j$'' was corrected to give the actual traversal direction on the descending leg ($d_kc_kb_k$), as the referee noted; this is cosmetic.
+\item In the proof of \cref{lem:gadget} the sentence ``otherwise it must use both attachment edges'' was expanded by the parity argument on the edge cut around $V_j$.
+\item The explicit $12$-vertex edge list for $G_1$, the edge count $13t+7$ and the statement that $\Gtt$ is $2$-connected but not $3$-connected were added (the last from the referee report).
+\item Citations were added: the published version \cite{BDMNPP21} of the source paper, in which the conjecture is renumbered Conjecture~14 (identified by the referee); Bärnkopf and Győri \cite{BG24} (named in the problem catalog and read by the referee); Kloks, Lee and Liu \cite{KLL02} for Jones' Conjecture; Whitney \cite{Whitney32}; Diestel \cite{Diestel17}. The writeup cited nothing.
+\item \Cref{rem:scope,rem:computation,rem:consistency,rem:limits,rem:novelty} were written from the referee report; in particular the scope caveat about $3$-connected planar graphs and the interpretation analysis are the referee's, not the writeup's.
+\end{itemize}
+\textbf{No human mathematician has checked this argument.} We circulate it for human review.
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+Throughout, $t\ge1$ is fixed and $V_j=\{p_j,q_j,r_j,s_j\}$ for $0\le j\le t$.
+
+\phantomsection\label{pf:planar}
+\lemplanar*
+\begin{proof}
+Consider first the auxiliary graph $A_t$ on the vertices $a_i,b_i,c_i,d_i$ ($1\le i\le t$) with the edges of the cycles $C_i$, the chain edges $d_ib_{i+1}$ ($1\le i<t$), the chords $a_ic_i$ ($1\le i\le t$) and one closing edge $d_tb_1$. It has a plane drawing: place $b_i=(3i,0)$, $a_i=(3i+1,1)$, $c_i=(3i+1,-1)$, $d_i=(3i+2,0)$, draw the edges of $C_i$ as the sides of the diamond $b_ia_id_ic_i$, the chord $a_ic_i$ as the vertical segment inside it, each chain edge $d_ib_{i+1}$ as the horizontal segment from $(3i+2,0)$ to $(3i+3,0)$, and the closing edge $d_tb_1$ as an arc from $(3t+2,0)$ to $(3,0)$ passing above all diamonds (say through $(3t/2+5/2,\,3)$). These curves meet only at common endpoints, so $A_t$ is planar.
+
+Now let $e_1,\dots,e_t,e_0$ be the chords $a_1c_1,\dots,a_tc_t$ and the closing edge $d_tb_1$, and let $x_jy_j$ denote $e_j$, with $(x_j,y_j)=(a_j,c_j)$ for $j\ge1$ and $(x_0,y_0)=(b_1,d_t)$. Note that $\Gtt$ is obtained from $A_t$ by deleting each $e_j$ and adding the gadget $Q_j$ together with the edges $x_jp_j$ and $y_jq_j$. Fix $j$. Choose a point $m_j$ in the interior of the drawn edge $e_j$ and a closed disc $D_j$ centred at $m_j$ so small that $D_j$ meets the drawing of $A_t$ only in a sub-arc of $e_j$, and so that the discs $D_0,\dots,D_t$ are pairwise disjoint. Inside $D_j$ draw $Q_j\cong K_4$ as a triangle $p_jq_jr_j$ with $s_j$ in its interior joined to the three corners (the standard plane drawing of $K_4$), placed so that $p_j$ and $q_j$ lie in the interior of $D_j$ and the whole drawing of $Q_j$ is disjoint from $e_j$. Delete the sub-arc $e_j\cap D_j$ and, within the interior of $D_j$ and outside the triangle $p_jq_jr_j$, join the point where $e_j$ enters $D_j$ from the side of $x_j$ to $p_j$, and the point where it enters from the side of $y_j$ to $q_j$, by two disjoint arcs avoiding the drawing of $Q_j$ (possible because $p_j$ and $q_j$ both lie on the outer boundary of the plane $K_4$ inside $D_j$ and the region of $D_j$ outside that triangle is an open annulus-like set containing the two boundary points). The two new arcs, together with the remaining parts of $e_j$, are the edges $x_jp_j$ and $y_jq_j$. Doing this for every $j$ produces a plane drawing of $\Gtt$.
+
+In this drawing the three regions of $D_j$ bounded by the triangles $p_jq_js_j$, $q_jr_js_j$, $p_jr_js_j$ contain no point of the drawing, since everything added or retained inside $D_j$ lies outside the triangle $p_jq_jr_j$ or on the drawing of $Q_j$ itself. Hence each of them is a face, and in particular $p_jq_js_j$ bounds a face for every $0\le j\le t$. These $t+1$ triangles are pairwise vertex-disjoint, so $\fp(\Gtt)\ge t+1$.
+\end{proof}
+
+\phantomsection\label{pf:fvs}
+\lemfvs*
+\begin{proof}
+\emph{Lower bound.} Let $S$ be a feedback vertex set. For each $i$, $S$ contains a vertex of $C_i$, since otherwise $C_i\subseteq\Gtt-S$. For each $j$, $S$ contains at least two vertices of $V_j$: any three vertices of $K_4$ induce a triangle, so if $|S\cap V_j|\le1$ then $\Gtt-S$ contains a triangle. The $2t+1$ sets $V(C_1),\dots,V(C_t),V_0,\dots,V_t$ are pairwise disjoint, so $|S|\ge t+2(t+1)=3t+2$.
+
+\emph{Upper bound.} Let $S=\{a_i:1\le i\le t\}\cup\{p_j,q_j:0\le j\le t\}$, of size $3t+2$. Every attachment edge has an end in $S$ ($p_j$ or $q_j$), and so does every edge of $C_i$ incident with $a_i$. The remaining edges of $\Gtt-S$ are: the edges $b_ic_i$, $c_id_i$ ($1\le i\le t$), the chain edges $d_ib_{i+1}$ ($1\le i<t$), and the edges $r_js_j$ ($0\le j\le t$). Together these form the path $b_1c_1d_1b_2c_2d_2\cdots b_tc_td_t$ and $t+1$ disjoint edges $r_js_j$, a forest. Hence $\fvs(\Gtt)\le3t+2$.
+\end{proof}
+
+\phantomsection\label{pf:gadget}
+\lemgadget*
+\begin{proof}
+Let $Z$ be a cycle of $\Gtt$ containing a vertex of $V_j$. If $V(Z)\subseteq V_j$ then $Z$ is a cycle of $K_4$, of length $3$ or $4$, so $|V(Z)\cap V_j|\ge3$. Otherwise $Z$ has a vertex outside $V_j$. Traversing $Z$ once, the edges of $Z$ with exactly one end in $V_j$ are passed each time $Z$ enters or leaves $V_j$, so their number is even, and it is positive since $Z$ has vertices both in and outside $V_j$. By \cref{def:Gt} the only edges of $\Gtt$ with exactly one end in $V_j$ are the two attachment edges of $Q_j$, one incident with $p_j$ and the other with $q_j$. Hence $Z$ contains both attachment edges and therefore both $p_j$ and $q_j$.
+
+Now let $Z,Z'$ be two cycles meeting $V_j$. If both are inside $Q_j$ they each contain at least three of the four vertices of $V_j$, so they share a vertex. If neither is inside $Q_j$ both contain $p_j$ (and $q_j$). If exactly one, say $Z$, is inside $Q_j$, then $V(Z)$ is a subset of $V_j$ of size at least $3$ and $\{p_j,q_j\}\subseteq V(Z')$, and a $3$-subset of a $4$-set meets every $2$-subset. In all cases $V(Z)\cap V(Z')\ne\emptyset$, which is the first statement, and the second follows at once.
+\end{proof}
+
+\phantomsection\label{pf:chain}
+\lemchain*
+\begin{proof}
+Let $H=\Gtt-\bigcup_{j}V_j$. Deleting the gadgets deletes all attachment edges, so $H$ has vertex set $\bigcup_iV(C_i)$ and edge set consisting of the edges of the $C_i$ and the chain edges $d_ib_{i+1}$ ($1\le i<t$). The cycles of $\Gtt$ avoiding every $V_j$ are exactly the cycles of $H$. Each chain edge $d_ib_{i+1}$ is a bridge of $H$: $H-d_ib_{i+1}$ has no edge between $V(C_1)\cup\dots\cup V(C_i)$ and $V(C_{i+1})\cup\dots\cup V(C_t)$. No cycle contains a bridge, so a cycle of $H$ is a cycle of $H$ minus all chain edges, which is the disjoint union of the $C_i$; the only cycles there are the $C_i$ themselves. Conversely each $C_i$ is a cycle of $\Gtt$ avoiding every $V_j$.
+\end{proof}
+
+\phantomsection\label{pf:jordan}
+\lemjordan*
+\begin{proof}
+We use the standard facts about plane graphs collected in \cite[Section~4.1]{Diestel17}: the Jordan curve theorem, that a connected set disjoint from a plane graph lies in a single face of it, that the faces of a plane graph consisting of a cycle $C$ are exactly the two components of $\mathbb R^2\setminus C$, and that if $P$ is an arc (here: the drawing of a path) joining two points of $C$ and otherwise disjoint from $C$, then $P$ lies in one component $S$ of $\mathbb R^2\setminus C$, and $S\setminus P$ has exactly two components, whose frontiers are the two cycles of $C\cup P$ through $P$ \cite[Lemma~4.1.2]{Diestel17}. In particular the plane graph $C\cup P$ has exactly three faces: the side of $C$ not containing $P$, bounded by $C$, and the two components of $S\setminus P$, bounded by the cycles $C_1=xCu\,yPx$ and $C_2=yCv\,xPy$ (writing $xCu$ for the $x$--$y$ arc of $C$ through $u$ and $yCv$ for the other one). The vertex $u$ lies on $C_1$ but not on $C_2$, and $v$ on $C_2$ but not on $C_1$, since $x,u,y,v$ are distinct and occur in this cyclic order.
+
+Let $\mathring R$ denote the drawing of $R$ minus its endpoints $u,v$. It is connected and disjoint from $C\cup P$, so it lies in one face $F$ of $C\cup P$. Since the drawn edges of $R$ incident with $u$ and $v$ approach these points from within $F$, both $u$ and $v$ lie on the frontier of $F$. $F$ is not the face bounded by $C_1$ (its frontier misses $v$) nor the one bounded by $C_2$ (its frontier misses $u$), so $F$ is the side of $C$ not containing $P$. Consequently each of the two sides of $C$ contains a drawn edge of $H$ (of $P$ on one side, of $R$ on the other).
+
+Suppose that some face $\Phi$ of $H$ were bounded by $C$. $\Phi$ is connected and disjoint from $C$, so $\Phi\subseteq S'$ for one side $S'$ of $C$. $\Phi$ is open, and it is also relatively closed in $S'$: a point of $S'$ in the closure of $\Phi$ lies on the frontier of $\Phi$ or in $\Phi$, and the frontier of $\Phi$ is $C$, which is disjoint from $S'$. As $S'$ is connected and $\Phi\ne\emptyset$, we get $\Phi=S'$. But $S'$ contains a drawn edge of $H$, whereas a face contains no point of the drawing, a contradiction.
+\end{proof}
+
+\phantomsection\label{pf:notfacial}
+\lemnotfacial*
+\begin{proof}
+Fix $i$ and a planar embedding of $\Gtt$. Let $P_i=a_i\,p_i\,q_i\,c_i$; its internal vertices lie in $V_i$, so it is internally disjoint from $C_i$. Let $R_i$ be the following $b_i$--$d_i$ walk: starting at $b_i$, if $i>1$ follow the chain edge $b_id_{i-1}$ and then $d_{i-1}c_{i-1}b_{i-1}$, then $b_{i-1}d_{i-2}$, and so on, until $b_1$ is reached; then take $b_1\,p_0\,q_0\,d_t$; then, if $i<t$, follow $d_tc_tb_t$, the chain edge $b_td_{t-1}$, $d_{t-1}c_{t-1}b_{t-1}$, and so on, until reaching $d_i$ via the chain edge $b_{i+1}d_i$. (For $t=1$, $R_1$ is simply $b_1\,p_0\,q_0\,d_1$.) The vertices of $R_i$ are $b_i,d_i$, all vertices of $C_k$ other than $a_k$ for $k\ne i$, and $p_0,q_0$; they are pairwise distinct, so $R_i$ is a path, and its internal vertices avoid $V(C_i)\cup V(P_i)$, since $V(P_i)\setminus V(C_i)\subseteq V_i$ and $V_i\cap V_0=\emptyset$. Thus $P_i$ and $R_i$ are internally disjoint from each other and from $C_i$, and their endpoints $a_i,b_i,c_i,d_i$ are distinct and occur in this cyclic order on $C_i=a_ib_ic_id_ia_i$. \Cref{lem:jordan} (with $x=a_i$, $u=b_i$, $y=c_i$, $v=d_i$) shows that $C_i$ bounds no face of the embedding.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+$\Gtt$ is simple by construction, of order $8t+4$ and maximum degree $4$ (the degree count follows from \cref{def:Gt}: $a_i,c_i$ have degree $3$, $b_i,d_i$ have degree $3$ because each is incident with exactly one chain or attachment edge, $r_j,s_j$ have degree $3$ and $p_j,q_j$ degree $4$). Planarity and $\fp(\Gtt)\ge t+1$ are \cref{lem:planar}; $\fvs(\Gtt)=3t+2$ is \cref{lem:fvs}.
+
+\emph{$\fp(\Gtt)\le t+1$.} Fix a planar embedding and a family $\mathcal F$ of pairwise vertex-disjoint cycles each bounding a face of it. By \cref{lem:notfacial} no $C_i$ belongs to $\mathcal F$, so by \cref{lem:chain} every member of $\mathcal F$ contains a vertex of some $V_j$. Assign to each member one such $j$. By \cref{lem:gadget} two disjoint cycles cannot both meet the same $V_j$, so the assignment is injective and $|\mathcal F|\le t+1$. Since the embedding was arbitrary, $\fp(\Gtt)\le t+1$.
+
+\emph{$\cp(\Gtt)=2t+1$.} The cycles $C_1,\dots,C_t$ together with one triangle chosen in each $Q_j$ are $2t+1$ pairwise vertex-disjoint cycles, so $\cp(\Gtt)\ge2t+1$. Conversely, in a cycle packing at most one cycle meets each $V_j$ (\cref{lem:gadget}), giving at most $t+1$ cycles meeting some gadget, and the cycles meeting no gadget are among $C_1,\dots,C_t$ (\cref{lem:chain}), giving at most $t$ more. Hence $\cp(\Gtt)\le2t+1$.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup. Its step numbers refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification\_astra/scripts/1912.01570\_\_00/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{BDMNPP19} M.~Bonamy, F.~Dross, T.~Masařík, W.~Nadara, Ma.~Pilipczuk and Mi.~Pilipczuk, Jones' Conjecture in subcubic graphs, \href{https://arxiv.org/abs/1912.01570}{arXiv:1912.01570} (2019), Conjecture~2.
+\bibitem{BDMNPP21} M.~Bonamy, F.~Dross, T.~Masařík, W.~Nadara, Ma.~Pilipczuk and Mi.~Pilipczuk, Jones' Conjecture in subcubic graphs, Electron.\ J.\ Combin.\ 28(4) (2021), Paper~P4.5, \href{https://doi.org/10.37236/9192}{doi:10.37236/9192}, Conjecture~14.
+\bibitem{BG24} P.~Bärnkopf and E.~Győri, Jones' conjecture for Halin graphs and a bit more, \href{https://arxiv.org/abs/2401.07376}{arXiv:2401.07376} (2024), Definition~1.5 and Remark~2.5.
+\bibitem{KLL02} T.~Kloks, C.~M.~Lee and J.~Liu, New algorithms for $k$-face cover, $k$-feedback vertex set, and $k$-disjoint cycles on plane and planar graphs, in: Graph-Theoretic Concepts in Computer Science (WG 2002), Lecture Notes in Comput.\ Sci.\ 2573, Springer, 2002, pp.~282--295.
+\bibitem{Whitney32} H.~Whitney, Congruent graphs and the connectivity of graphs, Amer.\ J.\ Math.\ 54 (1932), 150--168.
+\bibitem{Diestel17} R.~Diestel, Graph Theory, 5th edition, Graduate Texts in Mathematics 173, Springer, 2017, Section~4.1.
+\end{thebibliography}
+
+\end{document}

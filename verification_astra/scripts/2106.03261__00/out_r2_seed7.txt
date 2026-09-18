@@ -1,0 +1,19 @@
+========================================================================
+r=2  q=121  twisted=True  seed=7
+  n=14400 (claim (q-1)^2=14400)  m=1440 (claim k(q-1)=1440)  |E|=257043
+  deg range [33,36]; claim [3k-6,3k]=[30,36]; (3/10)sqrt(n)=36.00; (3/20)n^1.5=259200.0
+  #(vertex,required-pair) with class-degree outside [k-2,k]: 0
+  max #common nbrs of a vertex pair = 1 -> #pairs with >=2 (C4 witnesses) = 0;  #triangles = 0
+  p=n^-1/2=0.008333;  mean required-pair density=0.008264
+  CANONICAL PETERSEN COPIES = 0   [26.5s]
+========================================================================
+r=2  q=121  twisted=False  seed=7
+  n=14400 (claim (q-1)^2=14400)  m=1440 (claim k(q-1)=1440)  |E|=257040
+  deg range [34,36]; claim [3k-6,3k]=[30,36]; (3/10)sqrt(n)=36.00; (3/20)n^1.5=259200.0
+  #(vertex,required-pair) with class-degree outside [k-2,k]: 0
+  max #common nbrs of a vertex pair = 1 -> #pairs with >=2 (C4 witnesses) = 0;  #triangles = 0
+  p=n^-1/2=0.008333;  mean required-pair density=0.008264
+  CANONICAL PETERSEN COPIES = 304   [25.1s]
+    sample copy: {'a0': (68, 1), 'a1': (44, 91), 'a2': (3, 52), 'a3': (57, 9), 'a4': (77, 39), 'b0': (64, 99), 'b1': (40, 109), 'b2': (73, 35), 'b3': (71, 50), 'b4': (75, 56)} re-verified: True
+    sample copy: {'a0': (68, 1), 'a1': (41, 117), 'a2': (82, 75), 'a3': (66, 31), 'a4': (117, 78), 'b0': (102, 36), 'b1': (103, 90), 'b2': (16, 19), 'b3': (65, 40), 'b4': (69, 118)} re-verified: True
+    sample copy: {'a0': (68, 9), 'a1': (78, 99), 'a2': (36, 45), 'a3': (11, 115), 'a4': (100, 24), 'b0': (64, 102), 'b1': (19, 44), 'b2': (94, 65), 'b3': (31, 120), 'b4': (13, 73)} re-verified: True

@@ -1,0 +1,1 @@
+n=9 {'graphs': 6388, 'lowc_pairs': 322, 'typeI': 272, 'typeII': 50, 'both': 0, 'L4.2_applies': 0, 'L4.1_applies': 249, 'P4.3_applies': 0, 'dominated_pairs': 21543, 'nonsimplicial_dominated': 16628, 'eta_lt_2n': 0}

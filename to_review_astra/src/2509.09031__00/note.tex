@@ -1,0 +1,483 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newtcolorbox{repairbox}{colback=orange!6,colframe=orange!70!black,boxrule=0.4pt,arc=2pt,left=5pt,right=5pt,top=3pt,bottom=3pt,fontupper=\small}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\Gg}{G_g}
+\newcommand{\Hp}{H_g^{+}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2509.09031\_\_00 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{A contraction- and subdivision-closed class of graphs\\ without additive improvement of quasi-isometries:\\ a counterexample to Conjecture~1.2 of Nguyen, Scott and Seymour}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{18 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We construct a fixed class of finite connected graphs, closed under edge contraction and edge subdivision, and a sequence of onto $(2,1)$-quasi-isometries to members of that class for which every additive $(1,A)$ approximation has $A\to\infty$. This disproves Conjecture~1.2 of Nguyen, Scott and Seymour as stated. The proof combines a rigid system of long complete-graph corridors with a red--blue turn-cost obstruction on high-girth $4$-regular graphs.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project: the argument was found by a language model and audited by an adversarial LLM referee, and it has not been checked by a human mathematician. \Cref{sec:provenance} records the full provenance.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+All graphs in this note are finite, connected and simple. When an edge is contracted, loops and parallel edges are suppressed. The geometric realization of a graph gives every edge length one.
+
+We use the convention of Nguyen, Scott and Seymour \cite{NSS25}: an $(L,C)$-quasi-isometry $f\colon G\to H$ satisfies
+\[
+ L^{-1}d_G(x,x')-C\le d_H(f(x),f(x'))\le Ld_G(x,x')+C
+\]
+for all vertices $x,x'$, and every vertex of $H$ is at distance at most $C$ from $f(V(G))$. The last, coarse-surjectivity clause is essential here.
+
+\begin{conjecture}[{\cite[Conjecture~1.2]{NSS25}}]\label{conj:nss}
+Let $\mathcal{C}$ be a class of connected graphs, closed under contracting edges and subdividing edges. For all $L,C$ there exists $C^{\prime}$ such that if there is an $(L,C)$-quasi-isometry from a graph $G$ to a member of $\mathcal{C}$, then there is a $(1,C^{\prime})$-quasi-isometry from $G$ to a member of $\mathcal{C}$.
+\end{conjecture}
+
+Nguyen, Scott and Seymour prove the assertion when $\cC$ is the class of graphs of bounded path-width \cite[Theorem~1.3]{NSS25}. The same statement had appeared earlier as Conjecture~8 of Davies, Hatzel and Hickingbotham \cite{DHH25}. Their Theorem~4 disproves the stronger fixed-target version by a turn-cost construction. The obstruction below uses a related red--blue mechanism, but the long-corridor rigidity lemma is what permits both the map and the target to change.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+There is a class $\cC$ of finite connected graphs, closed under edge contraction and edge subdivision, with the following property. For every integer $g\ge10000$ there are finite connected graphs $\Gg$ and $\Hp\in\cC$ and an onto $(2,1)$-quasi-isometry
+\[
+ p_g\colon \Gg\longrightarrow\Hp
+\]
+such that every $(1,A)$-quasi-isometry from $\Gg$ to any member of $\cC$ satisfies
+\[
+ A+1>\frac{g}{10000}.
+\]
+\end{restatable}
+\begin{proofidea}
+The class $\cC$ consists of graphs in which every two branch vertices are joined by an internally degree-two path. The target $\Hp$ is a subdivision of a complete graph: edges of a high-girth red--blue graph have length $g$, and all other edges have length $100g^2$. Splitting every original vertex into red and blue states produces $\Gg$ and the evident $(2,1)$ map.
+
+If an additive quasi-isometry from $\Gg$ to another member of $\cC$ had small error, long-corridor rigidity would identify exactly one target branch vertex for each original vertex and exactly one target thread for each pair. The target would therefore induce edge lengths on the same complete-graph skeleton. Monochromatic paths force these lengths to be cheap on average, while an alternating path must pay one switch per turn in $\Gg$. For a long enough path the two estimates contradict each other.\fullproofref{pf:main}
+\end{proofidea}
+
+\begin{corollary}\label{cor:disproof}
+\Cref{conj:nss} is false, already for finite graphs and for $(L,C)=(2,1)$.
+\end{corollary}
+\begin{proof}
+If \cref{conj:nss} supplied a constant $C'$ for the class in \cref{thm:main}, choose $g>10000(C'+1)$. The map $p_g$ satisfies its premise, whereas its conclusion contradicts the lower bound on $A$ in \cref{thm:main}.
+\end{proof}
+
+\section{The class \texorpdfstring{$\cC$}{C}}\label{sec:class}
+
+For a graph $J$, put
+\[
+ B(J)=\{v\in V(J):\deg_J(v)\ge3\}.
+\]
+A \emph{thread} between distinct $u,v\in B(J)$ is a $u$--$v$ path all of whose internal vertices have degree two in $J$. Define
+\[
+ \cC=\left\{J:
+ \begin{array}{l}
+ J\text{ is finite, connected and simple, and every two distinct}\\
+ \text{vertices of }B(J)\text{ are joined by a thread}
+ \end{array}\right\}.
+\tag{2.1}\label{eq:class-definition}
+\]
+Every subdivision of a complete graph belongs to $\cC$.
+
+\begin{restatable}{lemma}{lemclosure}\label{lem:closure}
+The class $\cC$ is closed under edge subdivision and edge contraction.
+\end{restatable}
+\begin{proofidea}
+Subdivision preserves branch vertices and merely lengthens a thread. Under contraction no old degree can increase, and merging two vertices of degree at most two again gives degree at most two. The image of a thread between preimages of two new branch vertices contains the required thread; the only delicate case is when the contracted edge meets the interior of the old thread.\fullproofref{pf:closure}
+\end{proofidea}
+
+\begin{repairbox}
+\textbf{Referee repair (contraction).} The full proof separates the cases in which neither, one, or both ends of the contracted edge lie on the old thread. In particular, an edge from an internal thread vertex to a vertex outside the thread would give that internal vertex degree at least three, so the missing chord case cannot occur.
+\end{repairbox}
+
+\section{Metric preliminaries}\label{sec:metric}
+
+\begin{restatable}[Continuous coarse inverses]{lemma}{lemcoarse}\label{lem:coarse}
+If there is a $(1,A)$-quasi-isometry between graphs $G$ and $K$, then their geometric realizations $X,Y$ admit continuous maps
+\[
+ F\colon X\to Y,\qquad Q\colon Y\to X
+\]
+such that, with $D=10(A+1)$,
+\[
+\begin{aligned}
+ |d_Y(Fx,Fx')-d_X(x,x')|&\le D,\\
+ |d_X(Qy,Qy')-d_Y(y,y')|&\le D,\\
+ d_Y(FQy,y)&\le D.
+\end{aligned}
+\tag{3.1}\label{eq:coarse-inverse-bounds}
+\]
+\end{restatable}
+\begin{proofidea}
+Extend the vertex map and a coarse inverse along geodesics. Comparing arbitrary points with endpoints of their unit edges yields distortion bounds $3A+4$ and $9A+4$ and a closeness bound $7A+6$, all at most $D$.\fullproofref{pf:coarse}
+\end{proofidea}
+
+\begin{repairbox}
+\textbf{Referee repair (constants).} The appendix derives $3A+4$, $9A+4$, and $7A+6$ explicitly rather than asserting them.
+\end{repairbox}
+
+\begin{restatable}[Detecting a branch vertex]{lemma}{lembranch}\label{lem:branch}
+Let $Z$ be a metric graph. Suppose $z_1,z_2,z_3$ lie within distance $r$ of $z$ and
+\[
+ d_Z(z_i,z_j)>r\qquad(i\ne j).
+\]
+Then the closed radius-$r$ ball about $z$ meets $B(Z)$.
+\end{restatable}
+\begin{proofidea}
+If the ball has maximum degree at most two, the union of three shortest paths from $z$ lies in a path or in a cycle component. A path puts two points on one side of $z$; a cycle component created inside the ball has length at most $2r$. Either way two of the three points are at distance at most $r$.\fullproofref{pf:branch}
+\end{proofidea}
+
+\begin{repairbox}
+\textbf{Referee repair (cycle case).} If the union closes into a cycle while every vertex in the ball has degree at most two, that cycle is an entire connected component of $Z$. This justifies the diameter bound used in the argument.
+\end{repairbox}
+
+\section{Rigidity of long complete-graph corridors}\label{sec:rigidity}
+
+\begin{restatable}[Long-corridor rigidity]{lemma}{lemrigidity}\label{lem:rigidity}
+Let $n\ge4$, $D\ge1$, and $S\ge1000D$. Construct a metric graph $X$ by replacing each vertex $v$ of $K_n$ by a tree $T_v$ of diameter at most one, choosing $r_v\in T_v$, and joining $T_u$ to $T_v$ by one corridor $I_{uv}$ of length $L_{uv}\ge S$ for each pair $u,v$. Assume that corridor interiors are disjoint and there are no other edges.
+
+Let $Y$ be the geometric realization of a graph in $\cC$, and suppose $F\colon X\to Y$ and $Q\colon Y\to X$ satisfy \eqref{eq:coarse-inverse-bounds}. Then:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item $Y$ has exactly $n$ branch vertices, labelled $h_v$;
+\item exactly one thread joins $h_u$ to $h_v$ for each pair $u,v$;
+\item if $\lambda_{uv}$ is its length and $d_\lambda$ is the weighted complete-graph metric, then
+\[
+ |d_\lambda(u,v)-d_X(r_u,r_v)|\le30D;
+\tag{4.1}\label{eq:rigidity-metric}
+\]
+\item every thread satisfies
+\[
+ \lambda_{uv}\ge\frac{L_{uv}}2-D.
+\tag{4.2}\label{eq:rigidity-thread-lower}
+\]
+\end{enumerate}
+\end{restatable}
+\begin{proofidea}
+Three well-separated points near each $r_v$ detect a target branch vertex $h_v$. Conversely, three long target threads from any branch vertex detect a unique source cluster $T_v$. After trimming $50D$ from both ends, a target thread cannot approach any source cluster and its image under $Q$ must remain in one corridor; continuity forces it to cover that corridor's central part. Two threads for the same cluster pair would then give points far apart in $Y$ but $D$-close under $Q$. Hence clusters and threads are unique, and the distortion estimates give \eqref{eq:rigidity-metric}--\eqref{eq:rigidity-thread-lower}.\fullproofref{pf:rigidity}
+\end{proofidea}
+
+\begin{repairbox}
+\textbf{Referee repair (induced metric).} After uniqueness is established, every component outside the complete system of threads meets it in at most one branch vertex; such a pendant path or cycle cannot shorten a path between branch vertices. Thus their metric is exactly the weighted $K_n$ metric $d_\lambda$.
+\end{repairbox}
+
+\section{High-girth red--blue graphs}\label{sec:highgirth}
+
+\begin{restatable}{lemma}{lemhighgirth}\label{lem:highgirth}
+For every integer $g\ge5$ there is a finite connected simple $4$-regular graph $H_g$ of girth at least $g$ whose edge set is the disjoint union $E_R\sqcup E_B$, with two incident red edges and two incident blue edges at every vertex. Every monochromatic component is a cycle of length at least $g$.
+\end{restatable}
+\begin{proofidea}
+Use a finite quotient of the free group on $a,b$ in which no nonempty reduced word of length less than $g$ vanishes. Its Cayley graph for $a^{\pm1},b^{\pm1}$ has the required girth, and the two generators give the colors. A finite quotient is obtained explicitly by completing the partial permutations traced by every short reduced word.\fullproofref{pf:highgirth}
+\end{proofidea}
+
+\section{Construction and quantitative obstruction}\label{sec:construction}
+
+Fix $g\ge10000$, let $H=H_g$ be supplied by \cref{lem:highgirth}, put
+\[
+ n=|V(H)|,\qquad S=g,\qquad M=100g^2.
+\tag{6.1}
+\]
+Construct $\Hp$ from $K_n$ on vertex set $V(H)$ by replacing every edge of $H$ by a path of length $S$, and every nonedge of $H$ by a path of length $M$. Thus $\Hp\in\cC$.
+
+Construct $\Gg$ by splitting each original vertex $v$ into $v_R,v_B$, joined by a unit switch edge. Attach red $H$-corridors to the $R$ vertices, blue $H$-corridors to the $B$ vertices, and all length-$M$ corridors to the $R$ vertices.
+
+\begin{restatable}{lemma}{lempositive}\label{lem:positive}
+Collapsing every switch edge and mapping each corridor identically defines an onto $(2,1)$-quasi-isometry
+\[
+ p_g\colon\Gg\longrightarrow\Hp.
+\]
+\end{restatable}
+\begin{proofidea}
+Projection never increases length. A shortest target path of length $k$ lifts by traversing the same corridor edges and using at most $k+1$ switch edges, so the lifted distance is at most $2k+1$.\fullproofref{pf:positive}
+\end{proofidea}
+
+\begin{restatable}[Turn-cost obstruction]{lemma}{lemturn}\label{lem:turn}
+Every $(1,A)$-quasi-isometry from $\Gg$ to a member of $\cC$ satisfies
+\[
+ A+1>\frac{g}{10000}.
+\]
+\end{restatable}
+\begin{proofidea}
+Assume the reverse inequality and put $D=10(A+1)$, $E=30D$, and $s=\lfloor g/10\rfloor$. By \cref{lem:rigidity}, the target induces lengths $\lambda_e$ on $K_n$ approximating distances between the $R$ states. Every monochromatic $s$-path has $\lambda$-length at most $Ss+2+E$. Averaging cyclic windows over all monochromatic cycles therefore produces an alternating $s$-path with the same upper bound. Its unique lift in $\Gg$ needs $s-1$ switches and has length at least $Ss+s-1$, giving $s-3\le2E$, contrary to the chosen constants.\fullproofref{pf:turn}
+\end{proofidea}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[Coarse surjectivity]
+The coarse-surjectivity clause in the definition is load-bearing. Without it one could attach to $\Gg$ a thread between every pair of its branch vertices that does not already have one; the resulting graph lies in $\cC$ and contains $\Gg$ isometrically. Thus the result does not concern quasi-isometric embeddings. The definition in \cite{NSS25} does include coarse surjectivity.
+\end{remark}
+
+\begin{remark}[Scope]
+The class $\cC$ is intentionally economical: it is not closed under edge deletion, disjoint union, or taking minors, and it does not contain every tree. The result refutes the universally quantified conjecture with exactly its stated closure assumptions. It leaves open variants for deletion-closed or minor-closed classes and the planar case highlighted in \cite{DHH25}.
+\end{remark}
+
+\begin{remark}[Computational audit]
+The referee checked closure on all $995$ connected graphs with at most seven vertices; $381$ belonged to $\cC$, and every edge contraction and subdivision stayed in $\cC$. A further $20\,000$ random larger members gave no failure. The quasi-isometry inequalities were checked exhaustively on three finite stand-ins with $(S,M)=(3,5),(4,9),(6,11)$, having respectively $1248$, $2392$, and $3042$ vertices in $\Gg$. The branch-detection lemma passed $16\,300$ tested instances. The turn-cost linear program attained exactly $(s-3)/2$ for $s=2,\ldots,6$ whenever the finite test graph contained the required paths. These computations do not test \cref{lem:rigidity} in its general continuous form, which the referee checked only line by line.
+\end{remark}
+
+\begin{remark}[Constants]
+The threshold and the factor $10000$ are deliberately loose. The referee verified that the numerical block of inequalities in the proof already holds from $g=80$. No optimization is claimed.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The counterexample was found by \texttt{gpt-6-astra}, reasoning effort \texttt{max}, in a single pass begun on 2026-09-17, catalog id \texttt{2509.09031\_\_00}, leg \texttt{attacks\_retry}. This was a second attempt; the earlier \texttt{gpt-5.6-sol} writeup and its partial verdict were supplied as context. The earlier writeup gave an infinite-graph entropy counterexample and a finite fixed-map obstruction, neither of which settled the finite arbitrary-map statement. Its red--blue turn-cost idea was reused, while the long-corridor rigidity argument is new to the retry.
+
+(2)~An adversarial referee agent (\texttt{claude-opus-5}) audited the writeup on 2026-09-17 and returned \textsc{minor gaps} with medium confidence. It checked the source definition and quantifiers, re-derived every inequality, compared the turn-cost mechanism with Davies--Hatzel--Hickingbotham \cite{DHH25}, searched for priority, and ran the closure, construction, metric, high-girth, and linear-program computations summarized above.
+
+(3)~A rewrite was started by \texttt{claude-fable-5-1} on 2026-09-18 but stopped at a compilable skeleton when that session hit its rate limit. The interrupted transcript and skeleton were recovered, and \texttt{Codex} completed the present note on 2026-09-18, with short proof ideas in the main text and full proofs in \cref{app:proofs}. Relative to the original writeup it makes the following declared changes: it restricts $\cC$ explicitly to connected graphs; cites the prior fixed-target obstruction \cite{DHH25}; explains why coarse surjectivity is essential; checks $n\ge4$ and $D\ge1$ at the point of use; expands the contraction case analysis in \cref{lem:closure}; derives all constants in \cref{lem:coarse}; repairs the cycle-component sentence in \cref{lem:branch}; and explains why components outside the unique thread system cannot shorten its metric. No other mathematical content was changed. \textbf{No human mathematician has checked this argument.}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:closure}
+\lemclosure*
+\begin{proof}
+Subdividing an edge leaves all old degrees unchanged and gives the new vertex degree two. Hence the branch set is unchanged, and replacing an edge of any old thread by the corresponding two-edge path leaves a thread.
+
+Now let $J'\!$ be obtained from $J\in\cC$ by contracting $xy$ to $z$. Degrees of vertices outside $\{x,y\}$ do not increase after loops and parallel edges are suppressed. If both $x$ and $y$ have degree at most two, then
+\[
+ \deg_{J'}(z)\le(\deg_J(x)-1)+(\deg_J(y)-1)\le2.
+\]
+Thus every branch vertex of $J'$ is the image of at least one branch vertex of $J$.
+
+Take distinct $u',v'\in B(J')$ and branch vertices $u,v\in B(J)$ mapping to them. Let $P$ be a thread from $u$ to $v$. If neither $x$ nor $y$ lies on $P$, its image is unchanged. If exactly one, say $x$, lies internally on $P$, then the edge $xy$ would be a third edge at $x$ unless $y$ is one of the two neighbours of $x$ on $P$; hence $y$ also lies on $P$, a contradiction. Thus an edge with only one endpoint on $P$ can meet $P$ only at an endpoint, and contraction merely shortens its first or last edge.
+
+If both $x,y$ lie on $P$, then either they are consecutive on $P$, in which case their merger shortens $P$, or $xy$ is a chord. A chord between nonconsecutive vertices cannot be incident with an internal vertex of $P$, because that vertex already has its two path neighbours and would have degree at least three. Since $u'$ and $v'$ are distinct, the only remaining endpoint cases again leave a $u'$--$v'$ walk containing a simple path. Every internal vertex of that simple path is the image of a degree-two internal vertex or the merger of two degree-two vertices and therefore has degree at most two. It has degree at least two because it is internal on the simple path, hence degree exactly two. The path is a thread in $J'$.
+\end{proof}
+
+\phantomsection\label{pf:coarse}
+\lemcoarse*
+\begin{proof}
+Let $f\colon V(G)\to V(K)$ be a $(1,A)$-quasi-isometry. Extend $f$ continuously over each unit edge of $G$ along a shortest path in $K$; call the extension $F$. Since adjacent vertices have images at distance at most $A+1$, each point $x$ of an edge with endpoint $v$ satisfies $d_Y(Fx,f(v))\le A+1$. Given $x,x'$ and chosen incident endpoints $v,v'$,
+\[
+\begin{aligned}
+d_Y(Fx,Fx')&\le(A+1)+d_K(fv,fv')+(A+1)\\
+&\le d_G(v,v')+3A+2\\
+&\le d_X(x,x')+3A+4.
+\end{aligned}
+\]
+The same endpoint comparison and the lower quasi-isometry inequality give the reverse estimate with the same error.
+
+For every vertex $w$ of $K$, coarse surjectivity supplies $q(w)\in V(G)$ with $d_K(fq(w),w)\le A$. For vertices $w,w'$,
+\[
+\begin{aligned}
+d_G(qw,qw')&\le d_K(fq(w),fq(w'))+A\le d_K(w,w')+3A,\\
+d_G(qw,qw')&\ge d_K(fq(w),fq(w'))-A\ge d_K(w,w')-3A.
+\end{aligned}
+\]
+Extend $q$ over each edge of $K$ along a geodesic. The image of such an edge has length at most $3A+1$. Comparing arbitrary points to endpoints adds at most $2(3A+1)+2$, giving distortion at most $9A+4$.
+
+Finally choose an endpoint $w$ of the edge containing $y$. Then
+\[
+\begin{aligned}
+d_Y(FQy,y)
+&\le d_Y(FQy,Fq(w))+d_Y(fq(w),w)+d_Y(w,y)\\
+&\le (d_X(Qy,q(w))+3A+4)+A+1\\
+&\le (3A+1)+3A+4+A+1=7A+6.
+\end{aligned}
+\]
+For $A\ge0$, all three bounds are at most $10(A+1)=D$.
+\end{proof}
+
+\phantomsection\label{pf:branch}
+\lembranch*
+\begin{proof}
+Suppose the closed $r$-ball about $z$ contains no branch vertex. Choose shortest paths $P_i$ from $z$ to $z_i$. Their union has maximum degree at most two. If it is contained in a path, deleting $z$ leaves at most two directions, so two $z_i$ lie in the same direction and their distance is at most the larger of their distances from $z$, hence at most $r$.
+
+Otherwise the union contains a cycle. Since every vertex of the cycle lies in the ball and has degree at most two in the whole graph, no edge leaves the cycle; it is an entire connected component of $Z$. The cycle is formed from two paths of length at most $r$, so its length is at most $2r$ and its diameter at most $r$. Again two of the $z_i$ are at distance at most $r$, a contradiction.
+\end{proof}
+
+\phantomsection\label{pf:rigidity}
+\lemrigidity*
+\begin{proof}
+\emph{Step 1: branch vertices near the source clusters.}
+For each $v$, choose three distinct corridors incident with $T_v$. On each choose a point at corridor-distance $10D$ from $T_v$. Each is within $10D+1\le12D$ of $r_v$, while every pair is at distance at least $20D$. Their $F$-images lie within $12D$ of $F(r_v)$ and are pairwise at distance at least $19D$. \Cref{lem:branch} with radius $12D$ gives
+\[
+ h_v\in B(Y),\qquad d_Y(h_v,F(r_v))\le12D.
+\tag{A.1}\label{eq:branch-near}
+\]
+For $u\ne v$,
+\[
+ d_Y(h_u,h_v)\ge S-D-24D=S-25D.
+\tag{A.2}\label{eq:branch-separated}
+\]
+
+\emph{Step 2: every target branch vertex has a unique cluster.}
+Let $h\in B(Y)$. By \eqref{eq:branch-separated}, at most one $h_v$ lies within $S/3$ of $h$; since $n\ge4$, choose three others. The defining property of $\cC$ supplies threads from $h$ to them. Their interiors are disjoint, so points at thread-distance $10D$ from $h$ are pairwise $20D$ apart. Their $Q$-images lie within $11D$ of $Q(h)$ and are pairwise at least $19D$ apart. \Cref{lem:branch} in $X$ gives a branch vertex within $11D$ of $Q(h)$. Every branch vertex of $X$ belongs to some $T_v$, so
+\[
+ d_X(Qh,r_v)\le12D.
+\tag{A.3}\label{eq:target-cluster}
+\]
+Using \eqref{eq:coarse-inverse-bounds} and \eqref{eq:branch-near},
+\[
+ d_Y(h,F(r_v))\le14D.
+\tag{A.4}\label{eq:target-near}
+\]
+The cluster $v$ is unique because distinct $F(r_v)$ are at distance at least $S-D>28D$.
+
+\emph{Step 3: a thread follows the corresponding corridor.}
+Let $P$ be a thread of length $\lambda$ between branch vertices in clusters $v,w$. It has $\lambda\ge S-29D>100D$. Trim the first and last $50D$, leaving $P^0$. Every $y\in P^0$ is at distance at least $50D$ from $B(Y)$. If $d_X(Qy,r_z)\le20D$, then
+\[
+ d_Y(y,h_z)\le D+21D+12D=34D,
+\]
+a contradiction. Hence $Q(P^0)$ avoids the closed $20D$-balls about the $r_z$ and, by continuity, lies in one trimmed corridor component.
+
+If $y_0,y_1$ are the ends of $P^0$, then
+\[
+ d_X(Qy_0,r_v),\ d_X(Qy_1,r_w)\le50D+D+12D=63D.
+\]
+As $63D<S$, the component is $I_{vw}$. Continuity shows that $Q(P^0)$ covers
+\[
+ [63D,L_{vw}-63D].
+\tag{A.5}\label{eq:corridor-cover}
+\]
+
+\emph{Step 4: uniqueness.}
+Two distinct threads joining the same clusters would, by \eqref{eq:corridor-cover}, contain points mapping to the midpoint of $I_{vw}$. Their $Y$-distance would be at most $D$, although leaving either trimmed thread costs at least $50D$. Thus there is at most one such thread. If a cluster contained two branch vertices, their threads to another cluster would contradict this. Hence each cluster contains exactly one branch vertex and $\cC$ supplies exactly one thread for each pair.
+
+\emph{Step 5: metric estimates.}
+Every maximal degree-two chain joining distinct branch vertices is one of these threads. Any remaining component meets the thread system in at most one branch vertex, so entering it cannot shorten a branch-to-branch path. Their metric is therefore $d_\lambda$. From \eqref{eq:branch-near} and the distortion of $F$,
+\[
+ |d_\lambda(u,v)-d_X(r_u,r_v)|\le25D,
+\]
+which implies \eqref{eq:rigidity-metric}.
+
+Finally \eqref{eq:corridor-cover} contains the quarter and three-quarter points of $I_{uv}$. Their $X$-distance is $L_{uv}/2$. Choose preimages on the thread; the distortion of $Q$ gives their $Y$-distance at least $L_{uv}/2-D$, which is at most $\lambda_{uv}$. This proves \eqref{eq:rigidity-thread-lower}.
+\end{proof}
+
+\phantomsection\label{pf:highgirth}
+\lemhighgirth*
+\begin{proof}
+Let $W_g$ be the set of all nonempty freely reduced words of length less than $g$ in $a,a^{-1},b,b^{-1}$. For a word $w$ of length $k$, use $\{0,\ldots,k\}$ and prescribe partial permutations $a_w,b_w$ so that reading $w$ follows $0\to1\to\cdots\to k$; an inverse letter prescribes the reverse arrow. These partial maps are injective and well-defined, since a conflict at an intermediate point would require adjacent inverse letters. Complete them to permutations.
+
+In the product of the resulting finite symmetric groups, let $a,b$ denote the tuples and let $Q_g=\langle a,b\rangle$. No nonempty reduced word of length less than $g$ is trivial in $Q_g$, because its own coordinate sends $0$ to its length. The undirected Cayley graph of $Q_g$ for $a^{\pm1},b^{\pm1}$ is finite, connected, simple, $4$-regular and has girth at least $g$. Color $a$-edges red and $b$-edges blue. Each color has degree two at every vertex, hence is a union of cycles; a monochromatic cycle shorter than $g$ would give a forbidden reduced relation.
+\end{proof}
+
+\phantomsection\label{pf:positive}
+\lempositive*
+\begin{proof}
+The map is onto. Projection collapses switch edges and is isometric on corridors, so
+\[
+ d_{\Hp}(p_gx,p_gy)\le d_{\Gg}(x,y).
+\]
+Conversely, lift a shortest target path edge by edge. Each corridor edge costs one in $\Gg$; at most one switch is needed between consecutive corridor edges and at either endpoint. A target path of length $k$ therefore lifts with at most $k+1$ switches:
+\[
+ d_{\Gg}(x,y)\le2d_{\Hp}(p_gx,p_gy)+1.
+\]
+\end{proof}
+
+\phantomsection\label{pf:turn}
+\lemturn*
+\begin{proof}
+Suppose $A+1\le g/10000$. Set
+\[
+ D=10(A+1),\qquad E=30D,\qquad s=\left\lfloor\frac g{10}\right\rfloor.
+\tag{A.6}
+\]
+Then $D\ge1$, $S=g\ge1000D$, and $n\ge4$. Apply \cref{lem:coarse,lem:rigidity} to $\Gg$, with switch edges as $T_v$ and $r_v=v_R$. We obtain lengths $\lambda_{uv}$ on $K_n$ such that
+\[
+ |d_\lambda(u,v)-d_{\Gg}(u_R,v_R)|\le E
+\tag{A.7}\label{eq:turn-distortion}
+\]
+and, for $uv\notin E(H)$,
+\[
+ \lambda_{uv}\ge M/2-D.
+\tag{A.8}\label{eq:long-corridor}
+\]
+For $g\ge10000$ and $D\le g/1000$,
+\[
+\begin{gathered}
+s-3>2E,\qquad Ss>2+2E,\qquad S>s+1,\\
+M/2-D>Ss+2+E,\qquad 2s<g/2,\qquad g-s\ge2s.
+\tag{A.9}\label{eq:turn-parameters}
+\end{gathered}
+\]
+
+If $P$ is an $H$-path of length $t<g/2$, it is geodesic. A $\Gg$-path between the corresponding $R$ states either uses a long corridor, costing at least $M>St$, or at least $t$ short corridors. Hence
+\[
+ \lambda(P)\ge d_\lambda(u,v)\ge St-E.
+\tag{A.10}\label{eq:path-lower}
+\]
+
+Let $P$ be a monochromatic $H$-path of length $s$. A red path lifts between $R$ states with length $Ss$, and a blue path with length $Ss+2$. Thus $d_\lambda(u,v)\le Ss+2+E$. A $\lambda$-shortest path $Q$ cannot use a nonedge by \eqref{eq:long-corridor}--\eqref{eq:turn-parameters}. If $Q\ne P$, then $P\cup Q$ contains a cycle, so $Q$ contains a $2s$-edge subpath. Equation \eqref{eq:path-lower} gives $\lambda(Q)\ge2Ss-E>Ss+2+E$, a contradiction. Therefore
+\[
+ \lambda(P)\le Ss+2+E.
+\tag{A.11}\label{eq:mono-window}
+\]
+
+Apply \eqref{eq:mono-window} to every cyclic window of $s$ edges on every monochromatic cycle. Every edge occurs in exactly $s$ windows, so
+\[
+ \sum_{e\in E(H)}\lambda_e\le |E(H)|\left(S+\frac{2+E}{s}\right).
+\tag{A.12}
+\]
+Choose a uniformly random directed edge and continue for $s$ edges by alternating colors, choosing uniformly one of the two outward edges of the required color. At every position the directed edge remains uniform. Thus some alternating walk $P=v_0\cdots v_s$ satisfies
+\[
+ \lambda(P)\le Ss+2+E.
+\tag{A.13}\label{eq:alternating-upper}
+\]
+It is nonbacktracking; since $s<g$ it is a path, and since $2s<g$ it is the unique $H$-geodesic between its endpoints.
+
+A shortest $\Gg$-path between $(v_0)_R$ and $(v_s)_R$ cannot use a long corridor because $M>Ss+s+1$, nor $s+1$ short corridors because $S(s+1)>Ss+s+1$. It uses exactly $s$ short corridors, projects to $P$, and needs at least $s-1$ switches:
+\[
+ d_{\Gg}((v_0)_R,(v_s)_R)\ge Ss+s-1.
+\tag{A.14}\label{eq:alternating-lower}
+\]
+Equations \eqref{eq:turn-distortion}, \eqref{eq:alternating-upper}, and \eqref{eq:alternating-lower} yield $s-3\le2E$, contrary to \eqref{eq:turn-parameters}.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+Take $\cC$ from \eqref{eq:class-definition}. It is closed under the two operations by \cref{lem:closure}. For each $g\ge10000$, the construction gives $\Hp\in\cC$ and $\Gg$. \Cref{lem:positive} supplies the onto $(2,1)$-quasi-isometry and \cref{lem:turn} the asserted lower bound.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup. Its section, lemma and equation numbers refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification\_astra/scripts/2509.09031\_\_00/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{NSS25} T.~Nguyen, A.~Scott and P.~Seymour, Asymptotic structure. II. Path-width and additive quasi-isometry, \href{https://arxiv.org/abs/2509.09031}{arXiv:2509.09031} (2025).
+\bibitem{DHH25} J.~Davies, M.~Hatzel and R.~Hickingbotham, Quasi-isometries between graphs with variable edge lengths, \href{https://arxiv.org/abs/2503.07448}{arXiv:2503.07448} (2025).
+\end{thebibliography}
+
+\end{document}

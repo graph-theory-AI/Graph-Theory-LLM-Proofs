@@ -1,0 +1,613 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newtcolorbox{repairbox}{colback=orange!6,colframe=orange!70!black,boxrule=0.4pt,arc=2pt,left=5pt,right=5pt,top=3pt,bottom=3pt,fontupper=\small}
+\newcommand{\T}{\mathbb T}
+\newcommand{\E}{\mathbb E}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cQ}{\mathcal Q}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert_{\T}}
+\newcommand{\CRT}{\operatorname{CRT}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2603.02786\_\_00 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{Packing arithmetic progressions with all differences in $[n]$:\\ the leading constant is $4/3$\\[4pt] \large Conjecture~1 of Alon, D\k{e}bski, Grytczuk and Przyby\l{}o}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{18 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $A_d(n)=\{d,2d,\ldots,\lfloor n/d\rfloor d\}$, and let $m(n)$ be the least cardinality of an integer interval containing pairwise disjoint translates of all $A_d(n)$, $1\le d\le n$. We prove
+\[
+ m(n)\sim\frac43\,\frac{n^{3/2}}{\log n},
+\]
+settling Conjecture~1 of Alon, D\k{e}bski, Grytczuk and Przyby\l{}o. The prime-difference phase-selection mechanism overlaps with independent prior work of Hou, Liu and Zhao; the additional bundle coloring and Bohr-set clustering incorporate all composite differences.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project: the argument was found by a language model and audited by an adversarial LLM referee, and it has not been checked by a human mathematician. \Cref{sec:provenance} records the full provenance.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+Translations are by integers, and packing length means interval cardinality. Replacing cardinality by diameter changes the parameter by at most one. Put
+\[
+ A_d(n)=\{d,2d,\ldots,\lfloor n/d\rfloor d\},\qquad
+ x=\sqrt n,\qquad T_n=\frac{n^{3/2}}{\log n}.
+\tag{1.1}
+\]
+For $D\subseteq[n]$, write $m_D(n)$ for the least length of an interval containing disjoint translates of the $A_d(n)$ for $d\in D$; thus $m(n)=m_{[n]}(n)$.
+
+Alon, D\k{e}bski, Grytczuk and Przyby\l{}o proved lower and upper leading constants $4/3$ and $5/3$ and proposed the following exact asymptotic \cite[Conjecture~1]{ADGP26}.
+
+\begin{conjecture}[{\cite[Conjecture~1]{ADGP26}}]\label{conj:source}
+\[
+ m(n)\sim\frac{4}{3}\cdot\frac{n^{3/2}}{\ln n}.
+\]
+\end{conjecture}
+
+Shortly before the machine run recorded here, Hou, Liu and Zhao proved the corresponding $4/3$ asymptotic for the subfamily of prime differences $p\le\sqrt n$ \cite[Theorem~1.1]{HLZ26}. Their regular-prime-block argument and the generic phase control below address the same obstacle by related methods. They explicitly leave the full difference set open because differences $p,2p,\ldots$ are not pairwise coprime. The new part of this note is the mechanism that compresses every bundle $\{A_{ap}(n)\}_a$ into $o(p)$ residue classes, keeps those classes close to one selected CRT phase, and covers the remaining indices at lower-order cost.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+As $n\to\infty$,
+\[
+ m(n)=\left(\frac43+o(1)\right)\frac{n^{3/2}}{\log n}.
+\]
+\end{restatable}
+\begin{proofidea}
+The prime-indexed progressions give the $4/3$ lower bound by a pairwise separation inequality. For the upper bound, color all progressions whose differences are multiples of one prime into $o(p)$ classes, each class already disjoint without shifts. Fixed-size generic blocks of primes admit simultaneous control of every pairwise CRT intersection phase. A centered Bohr set supplies enough nearby residue perturbations to place all color classes while retaining that phase control. Summing these blocks yields the optimal integral $2\int_0^1(1-u^2)\,du=4/3$ for the main range. A divisor cover, a folding lemma, and a greedy estimate put every remaining difference into $o(T_n)$ plus $O(T_n/C)$ additional space.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{The prime lower bound}\label{sec:lower}
+
+\begin{restatable}[Pairwise separation]{lemma}{lemseparation}\label{lem:separation}
+Let $p,q\le\sqrt n$ be distinct primes. If $t+A_p(n)$ and $u+A_q(n)$ are disjoint and $u\ge t$, then
+\[
+ u-t>\left\lfloor\frac np\right\rfloor p-pq.
+\tag{2.1}
+\]
+\end{restatable}
+\begin{proofidea}
+If the difference were smaller, choose $j\in\{1,\ldots,p\}$ so that $u-t+jq$ is divisible by $p$. The resulting common value lies within both finite progressions because $pq\le n$.\fullproofref{pf:separation}
+\end{proofidea}
+
+\begin{restatable}{proposition}{proplower}\label{prop:lower}
+\[
+ m(n)\ge\left(\frac43-o(1)\right)T_n.
+\tag{2.2}\label{eq:prime-lower}
+\]
+\end{restatable}
+\begin{proofidea}
+Order the translation bases of all prime-indexed progressions and sum \cref{lem:separation} over consecutive bases. The saving is bounded by $\sum_{p\le x}p^2$. The prime number theorem and partial summation give $n\pi(x)\sim2T_n$ and $\sum_{p\le x}p^2\sim\frac23T_n$.\fullproofref{pf:lower}
+\end{proofidea}
+
+\section{Packing all multiples of one modulus}\label{sec:bundles}
+
+For $q\ge1$, define the bundle
+\[
+ \cB_q(n)=\{A_{qa}(n):1\le a\le\lfloor n/q\rfloor\}.
+\]
+
+\begin{restatable}[Bundle coloring]{lemma}{lembundlecolor}\label{lem:bundlecolor}
+There is an absolute constant $K_0$ such that, for every $N\ge1$, the family
+\[
+ \{A_a(N):1\le a\le N\}
+\]
+can be partitioned into at most
+\[
+ R(N)\le K_0N^{3/5}
+\tag{3.1}
+\]
+classes, each consisting of pairwise disjoint unshifted progressions.
+\end{restatable}
+\begin{proofidea}
+Give every $a\le\sqrt N$ its own color. For $a>\sqrt N$, two unshifted progressions intersect only if the other index divides some $ka\le N$. The intersection graph therefore has degree at most $\sqrt N\max_{t\le N}\tau(t)=O(N^{3/5})$, using the elementary fixed-exponent divisor bound; greedy coloring finishes.\fullproofref{pf:bundlecolor}
+\end{proofidea}
+
+\begin{repairbox}
+\textbf{Referee repair (divisor bound).} The full proof records a finite, explicit product bounding the contribution of primes below $2^{10}$. This makes $\tau(t)\le Kt^{1/10}$ rigorous, although the constant is enormous and only the asymptotic $R(N)=o(\sqrt N)$ is used.
+\end{repairbox}
+
+\begin{restatable}{corollary}{corbundle}\label{cor:bundle}
+The bundle $\cB_q(n)$ can be packed in an interval of cardinality at most
+\[
+ (n+q)\left\lceil\frac{R(\lfloor n/q\rfloor)}q\right\rceil.
+\tag{3.2}\label{eq:bundle-packing}
+\]
+In particular, if $p\asymp\sqrt n$ is prime, then
+\[
+ R(\lfloor n/p\rfloor)=O(n^{3/10})=o(p).
+\tag{3.3}\label{eq:bundle-colors-small}
+\]
+\end{restatable}
+\begin{proofidea}
+Since $A_{qa}(n)=qA_a(\lfloor n/q\rfloor)$, put at most $q$ color classes in one batch and assign them distinct residues modulo $q$. Concatenate the batches.\fullproofref{pf:bundle}
+\end{proofidea}
+
+\section{Generic prime blocks}\label{sec:blocks}
+
+Let $\T=\mathbb R/\mathbb Z$. For distinct primes $p_i,p_j$ and residues $r_i\bmod p_i$, $r_j\bmod p_j$, define
+\[
+ Z_{ij}(r_i,r_j)=
+ \frac{\CRT_{p_i,p_j}(r_i,r_j)}{p_ip_j}\pmod1,
+\tag{4.1}
+\]
+where the representative lies in $\{0,\ldots,p_ip_j-1\}$.
+
+\begin{restatable}[Generic prime blocks]{lemma}{lemgeneric}\label{lem:generic}
+Fix $k\ge2$, $0<a<b$, and $0<\eta<1$. There is $L=L(k,a,b,\eta)$ such that, for all sufficiently large $X$, every set of primes in $[aX,bX]$ can be partitioned into $k$-element blocks and at most $L$ exceptional primes, and every block $p_1,\ldots,p_k$ has the following property: for arbitrary open arcs $J_{ij}\subseteq\T$, $i<j$, each of length $\eta$, there are residues $r_i\bmod p_i$ with
+\[
+ Z_{ij}(r_i,r_j)\in J_{ij}\qquad(i<j).
+\tag{4.2}
+\]
+\end{restatable}
+\begin{proofidea}
+For uniform independent $r_i$, the Fourier coefficient indexed by $h=(h_{ij})$ vanishes unless one congruence holds at every $p_i$. A smooth bump supported strictly inside each prescribed arc reduces positivity to finitely many frequencies $\|h\|_\infty\le H$. For each nonzero such $h$, fixing $k-1$ primes leaves only $O(1)$ possibilities for the last prime, so only $O(M^{k-1})$ of the $M^k$ ordered blocks are bad. Repeatedly remove good blocks.\fullproofref{pf:generic}
+\end{proofidea}
+
+\begin{repairbox}
+\textbf{Referee repair (open arcs).} The Fourier bump is chosen with support in an arc of length strictly less than $\eta$ (for example $\eta/2$), then translated inside each given open $\eta$-arc. Positivity therefore yields membership in the prescribed arcs, including the endpoint issue omitted from the original writeup.
+\end{repairbox}
+
+\section{A large centred Bohr set}\label{sec:bohr}
+
+\begin{restatable}{lemma}{lembohr}\label{lem:bohr}
+Fix $d\ge1$ and $\rho>0$. There is $c=c(d,\rho)>0$ such that, for every $q\ge2$ and every $c_1,\ldots,c_d\in\mathbb Z$, at least $cq$ residues $s\bmod q$ satisfy
+\[
+ \norm{\frac{c_js}{q}}<\rho\qquad(1\le j\le d).
+\tag{5.1}\label{eq:bohr-condition}
+\]
+\end{restatable}
+\begin{proofidea}
+Partition the $d$-torus into $M^d$ boxes of side less than $\rho$. One box contains $q/M^d$ of the points $(c_1s/q,\ldots,c_ds/q)$; subtract one representative from the others.\fullproofref{pf:bohr}
+\end{proofidea}
+
+\section{Packing the main prime range}\label{sec:mainrange}
+
+Fix $0<\epsilon<1<C$, and let $\cG_{\epsilon,C}(n)$ contain all $A_d(n)$ for which $d$ has a prime divisor in $[\epsilon x,Cx]$.
+
+\begin{restatable}[Main-range packing]{proposition}{propmainrange}\label{prop:mainrange}
+\[
+ \limsup_{n\to\infty}
+ \frac{m(\cG_{\epsilon,C}(n))}{T_n}
+ \le2\int_\epsilon^C(1-u^2)_+\,du.
+\tag{6.1}
+\]
+Consequently, for $C>1$,
+\[
+ m(\cG_{\epsilon,C}(n))
+ \le\left(\frac43-2\epsilon+\frac23\epsilon^3+o(1)\right)T_n.
+\tag{6.2}\label{eq:main-range-explicit}
+\]
+\end{restatable}
+\begin{proofidea}
+Pack labeled copies of all bundles $\cB_p(n)$, deleting duplicates afterward. In a small prime bin, group primes into generic $k$-blocks. Give consecutive bundles host intervals separated by approximately $n(1-u^2)$; this makes the projected overlap a proper forbidden arc modulo every $p_ip_j$. \Cref{lem:generic} chooses central CRT phases outside all forbidden arcs, while \cref{lem:bohr} supplies one nearby perturbation for every color from \cref{lem:bundlecolor}. Thus all composite-indexed progressions in a block are disjoint. Summing blocks, refining the bins, then sending the fixed parameters $\nu\downarrow0$ and $k\to\infty$ yields the integral.\fullproofref{pf:mainrange}
+\end{proofidea}
+
+\section{Two tools for the large-prime tail}\label{sec:tail}
+
+\begin{restatable}[Folding a scaled packing]{lemma}{lemfold}\label{lem:fold}
+Suppose a family of finite integer sets, each of diameter at most $N$, has a packing in an interval of cardinality $M$. For an integer $a\ge1$, the family obtained by multiplying every set by $a$ has a packing of cardinality at most
+\[
+ M+aN+a.
+\tag{7.1}
+\]
+\end{restatable}
+\begin{proofidea}
+Divide the original interval into $a$ strips of width $\lceil M/a\rceil$. Translate each strip to the origin, dilate by $a$, and label it by a distinct residue modulo $a$.\fullproofref{pf:fold}
+\end{proofidea}
+
+\begin{restatable}[Large prime indices]{lemma}{lemlargeprime}\label{lem:largeprime}
+There is an absolute constant $B$ such that, whenever $P\ge2\sqrt N$,
+\[
+ m_{\{p\ {\rm prime}:P<p\le N\}}(N)
+ \le B\left(\frac{N^2}{P\log P}+N\log(2N)\right).
+\tag{7.2}\label{eq:large-prime-bound}
+\]
+\end{restatable}
+\begin{proofidea}
+In a dyadic bin $(Q,2Q]$, greedily pack $K=\lfloor Q^2/(2N)\rfloor$ progressions into $[1,2N]$. The already occupied points forbid fewer than $Q/2<p$ residues for the next prime $p$. Grouping and summing the dyadic bins gives \eqref{eq:large-prime-bound}.\fullproofref{pf:largeprime}
+\end{proofidea}
+
+\section{Covering every difference}\label{sec:cover}
+
+\begin{restatable}{proposition}{propcover}\label{prop:cover}
+For every fixed $0<\epsilon<1$ and $C>2$,
+\[
+ \limsup_{n\to\infty}\frac{m(n)}{T_n}
+ \le\frac43+\frac23\epsilon^3+\frac{B_0}{C}
+\tag{8.1}\label{eq:cover-bound}
+\]
+for an absolute constant $B_0$.
+\end{restatable}
+\begin{proofidea}
+Put $Y=\lceil n^{1/5}\rceil$. Besides the main family, use bundles with divisors $q\in[Y,Y^2]$ or primes $q\in[Y,\epsilon x)$, pack the $d<Y$ progressions separately, and treat each remaining $d=ap$ with $a<Y$ and prime $p>Cx$ by \cref{lem:largeprime,lem:fold}. Every $d\le n$ has one of these forms. The small bundles cost $(2\epsilon+o(1))T_n$, canceling the missing $2\epsilon$ in \eqref{eq:main-range-explicit}; the large-prime tails cost at most $(B_0/C+o(1))T_n$.\fullproofref{pf:cover}
+\end{proofidea}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[Relation to prior work]
+The prime-range half of the proof, including the mechanism producing the constant $4/3$, overlaps with Hou--Liu--Zhao \cite{HLZ26}, posted on 7 September 2026, nine days before the machine attack began. Their regular-block proof uses transference, while \cref{lem:generic} uses Fourier truncation and counting. The full theorem here is not contained in that preprint: its concluding discussion leaves arbitrary differences open because of their common divisors. The bundle coloring, Bohr clustering, folding, and complete cover in \cref{sec:bundles,sec:bohr,sec:tail,sec:cover} supply precisely that extension.
+\end{remark}
+
+\begin{remark}[Fragility of genericity]
+Genericity in \cref{lem:generic} is not automatic for every prime block. For every triple $p_0<p_1<p_2$, the vector
+\[
+ (h_{01},h_{02},h_{12})
+ =(p_1-p_0,-(p_2-p_0),p_2-p_1)
+\]
+satisfies all three Fourier congruences. The lemma works because its cutoff $H(k,\eta)$ is fixed while $X\to\infty$; only $O(M^{k-1})$ tuples have a relation below that fixed cutoff.
+\end{remark}
+
+\begin{remark}[Qualitative nature]
+The constants in the divisor estimate, Fourier cutoff, exceptional-block count, and Bohr density are not effective at a useful scale. The referee found the normalized prime lower-bound expression equal to $1.639,1.605,1.572,1.545,1.522$ for $n=10^6,\ldots,10^{10}$, still far from $4/3$. The theorem asserts no convergence rate.
+\end{remark}
+
+\begin{remark}[Computational audit]
+At $n=10^8$, a literal three-bundle instance with primes $15013,\allowbreak 15511,\allowbreak 15991$ placed all $172\,850$ points without collision in a span $119\,973\,288$, below the predicted $120\,020\,001$; all three host windows overlapped and composite differences were included. The referee also checked the bundle packings, $200$ random folding instances, two large-prime greedy instances, and the complete index cover for $n=10^4,\allowbreak 10^5,\allowbreak 10^6$, with no uncovered index. The limiting order of parameters was verified only analytically.
+\end{remark}
+
+\begin{remark}[Other recent progress]
+Mao, Wang, Wei and Yang \cite{MWWY26} settled another conjecture from the source paper, the fixed-cardinality asymptotic $M_k(n)=(1+o(1))nk$ for fixed $n$. It is independent of the result proved here.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The proof was found by \texttt{gpt-6-astra}, reasoning effort \texttt{max}, in a single pass begun on 2026-09-16, catalog id \texttt{2603.02786\_\_00}, leg \texttt{attacks\_retry}. This was a second attempt, with the earlier \texttt{gpt-5.6-sol} attempt and its partial verdict supplied as context. That attempt proved only prime-subfamily results and explicitly failed to incorporate composite differences; the retry replaced its path restriction with simultaneous CRT control and bundle coloring.
+
+(2)~An adversarial referee agent (\texttt{claude-opus-5}) audited the writeup on 2026-09-17 and returned \textsc{minor gaps} with medium confidence. It re-derived all 24 proof steps, found the prior prime-only result \cite{HLZ26}, and ran the symbolic, number-theoretic, block-packing, folding, greedy, and index-cover checks summarized above.
+
+(3)~A rewrite was started by \texttt{claude-fable-5-1} on 2026-09-18 but stopped at a compilable skeleton when that session hit its rate limit. The interrupted transcript and skeleton were recovered, and \texttt{Codex} completed the present note on 2026-09-18, with proof ideas in the main text and full proofs in \cref{app:proofs}. Relative to the original writeup it makes the following declared changes: it cites and distinguishes Hou--Liu--Zhao's prior prime-only theorem; adds the related fixed-cardinality result \cite{MWWY26}; expands the fixed-exponent divisor bound to include its finite small-prime constant; chooses the smooth Fourier bump with support strictly shorter than the prescribed open arcs; highlights the universal large-frequency relation for prime triples; spells out deletion of duplicate labelled copies; and records the scope and computational limitations. No other mathematical content was changed. \textbf{No human mathematician has checked this argument.}
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:separation}
+\lemseparation*
+\begin{proof}
+Put $\delta=u-t$ and $r_p=\lfloor n/p\rfloor$. If $0\le\delta\le r_pp-pq$, choose $j\in\{1,\ldots,p\}$ such that $\delta+jq\equiv0\pmod p$, possible because $q$ is invertible modulo $p$. Let $i=(\delta+jq)/p$. Then $i\ge1$ and
+\[
+ ip=\delta+jq\le r_pp-pq+pq=r_pp,
+\]
+so $i\le r_p$. Also $j\le p\le\lfloor n/q\rfloor$ because $pq\le n$. Thus $t+ip=u+jq$ lies in both translates, a contradiction.
+\end{proof}
+
+\phantomsection\label{pf:lower}
+\proplower*
+\begin{proof}
+Pack all $A_p(n)$ with $p\le x$, and order their bases as $t_{p_1}\le\cdots\le t_{p_s}$. Summing \cref{lem:separation} gives
+\[
+ t_{p_s}-t_{p_1}
+ \ge(s-1)n-\sum_{i=1}^{s-1}p_ip_{i+1}-O(n),
+\]
+where the accumulated rounding error is $O(\pi(x)x)=O(n)$. Moreover,
+\[
+ \sum_{i=1}^{s-1}p_ip_{i+1}
+ \le\frac12\sum_{i=1}^{s-1}(p_i^2+p_{i+1}^2)
+ \le\sum_{p\le x}p^2.
+\]
+Bases of progressions in one interval of cardinality $M$ differ by at most $M+x$, so
+\[
+ M\ge n\pi(x)-\sum_{p\le x}p^2-O(n).
+\]
+The prime number theorem and partial summation \cite[Chs.~XXII--XXIII]{HW08} give
+\[
+ \pi(x)\sim\frac{x}{\log x},\qquad
+ \sum_{p\le x}p^2\sim\frac{x^3}{3\log x}.
+\]
+Since $\log n=2\log x$, these terms are $2T_n$ and $\frac23T_n$, proving \eqref{eq:prime-lower}.
+\end{proof}
+
+\phantomsection\label{pf:bundlecolor}
+\lembundlecolor*
+\begin{proof}
+Give every $a\le\sqrt N$ its own color. For $a>\sqrt N$, form the intersection graph of the unshifted sets $A_a(N)$. If $A_a(N)$ meets $A_b(N)$, then $\operatorname{lcm}(a,b)=ka\le N$ for some $k\le N/a<\sqrt N$, and $b\mid ka$. Hence the degree of $a$ is at most
+\[
+ \sum_{k\le N/a}\tau(ka)
+ \le\sqrt N\max_{t\le N}\tau(t).
+\tag{A.1}\label{eq:bundle-degree}
+\]
+
+We record the fixed-exponent divisor bound. Write $t=\prod_pp^{e_p}$. For $p\ge2^{10}$,
+\[
+ e_p+1\le2^{e_p}\le p^{e_p/10}.
+\]
+For each of the finitely many primes $p<2^{10}$, the constant
+\[
+ C_p=\sup_{e\ge0}\frac{e+1}{p^{e/10}}
+\]
+is finite because the denominator grows exponentially. Thus
+\[
+ \tau(t)=\prod_p(e_p+1)
+ \le\left(\prod_{p<2^{10}}C_p\right)t^{1/10}
+ =K t^{1/10}.
+\]
+Equation \eqref{eq:bundle-degree} gives maximum degree at most $KN^{3/5}$. Greedy coloring, together with the at most $\sqrt N$ private colors, proves the result after increasing the absolute constant $K_0$.
+\end{proof}
+
+\phantomsection\label{pf:bundle}
+\corbundle*
+\begin{proof}
+The identity
+\[
+ A_{qa}(n)=qA_a(\lfloor n/q\rfloor)
+\]
+follows from $\lfloor\lfloor n/q\rfloor/a\rfloor=\lfloor n/(qa)\rfloor$. Color the right-hand progressions using \cref{lem:bundlecolor} and divide the colors into batches of at most $q$. Within one batch assign a distinct residue $r\in\{0,\ldots,q-1\}$ to every color and translate all progressions of that color by $r$. Same-color sets remain disjoint, while different colors are separated modulo $q$. Each batch lies in an interval of length at most $n+q$; concatenating proves \eqref{eq:bundle-packing}. If $p\asymp\sqrt n$, then $R(\lfloor n/p\rfloor)=O((n/p)^{3/5})=O(n^{3/10})=o(p)$.
+\end{proof}
+
+\phantomsection\label{pf:generic}
+\lemgeneric*
+\begin{proof}
+Put $E=\binom{k}{2}$. For $i\ne j$, let $\overline{p_j}^{(p_i)}$ be the inverse of $p_j$ modulo $p_i$. The CRT formula gives
+\[
+ Z_{ij}(r_i,r_j)
+ =\frac{\overline{p_j}^{(p_i)}r_i}{p_i}
+  \frac{\overline{p_i}^{(p_j)}r_j}{p_j}\pmod1.
+\tag{A.2}
+\]
+Choose the $r_i$ independently and uniformly. For $h=(h_{ij})_{i<j}\in\mathbb Z^E$, write $h_{ji}=h_{ij}$. Independence gives
+\[
+ \E\exp\left(2\pi i\sum_{i<j}h_{ij}Z_{ij}\right)
+ =\prod_{i=1}^k
+ \mathbf1\left[
+ \sum_{j\ne i}h_{ij}\overline{p_j}^{(p_i)}
+ \equiv0\pmod{p_i}\right].
+\tag{A.3}\label{eq:fourier-vanishing}
+\]
+
+Choose a nonnegative smooth periodic function $f$ with positive integral $\mu$, supported in an arc of length $\eta/2$. For each prescribed open $\eta$-arc $J_{ij}$, translate this support into $J_{ij}$ and call its center $c_{ij}$. The product
+\[
+ F(z)=\prod_{i<j}f(z_{ij}-c_{ij})
+\]
+has constant Fourier coefficient $\mu^E$. Its Fourier series is absolutely convergent, and the absolute coefficient sum outside $\|h\|_\infty\le H$ tends to zero uniformly in the translations. Fix $H=H(k,\eta)$ so the tail is below $\mu^E/2$. If every nonzero coefficient in that box vanishes under \eqref{eq:fourier-vanishing}, then $\E F(Z)\ge\mu^E/2>0$, so some residue vector has all phases inside the required arcs.
+
+Call an ordered prime tuple bad if a nonzero $h$ with $\|h\|_\infty\le H$ makes every congruence in \eqref{eq:fourier-vanishing} hold. Fix $h$ and choose $i,j$ with $h_{ij}\ne0$. After all primes but $p_j$ are fixed, the congruence at $p_i$ is
+\[
+ h_{ij}\overline{p_j}^{(p_i)}\equiv-c\pmod{p_i}.
+\tag{A.4}\label{eq:prime-residue-relation}
+\]
+For $p_i>H$, if $c=0$ there is no solution; otherwise \eqref{eq:prime-residue-relation} pins $p_j$ to one residue class modulo $p_i$. Since $p_i\ge aX$ and $p_j\in[aX,bX]$, only $O_{a,b}(1)$ integers qualify. Summing over the finitely many $h$ shows that a set of $M$ primes has $O_{k,a,b,\eta}(M^{k-1})$ bad ordered tuples. For $M$ above a fixed threshold this is less than $(M)_k$, so a good block exists. Repeatedly remove one until only boundedly many primes remain.
+\end{proof}
+
+\phantomsection\label{pf:bohr}
+\lembohr*
+\begin{proof}
+Choose an integer $M>1/\rho$. Partition $[0,1)^d$ into $M^d$ congruent boxes and consider
+\[
+ \left(\frac{c_1s}{q},\ldots,\frac{c_ds}{q}\right)\pmod1,
+ \qquad s\bmod q.
+\]
+Some box contains at least $q/M^d$ residues. Fix one, $s_0$, and subtract it from all the others. The differences remain distinct modulo $q$ and satisfy \eqref{eq:bohr-condition}. Take $c=M^{-d}$.
+\end{proof}
+
+\phantomsection\label{pf:mainrange}
+\propmainrange*
+\begin{proof}
+It suffices to pack labeled copies of every bundle $\cB_p(n)$ for primes $p\in[\epsilon x,Cx]$: if an index has two such prime factors, delete all but one packed copy afterward.
+
+Fix $k\ge2$, $0<\nu<\epsilon^2/4$, and put
+\[
+ h(u)=(1-u^2)_+,\qquad \rho=\frac{\nu}{100C^2}.
+\]
+Consider a generic block $p_1,\ldots,p_k\in[ux,vx]$. Set
+\[
+ g=\lceil n(h(u)+\nu)\rceil,\quad
+ W=n+\lceil Cx\rceil+1,\quad S_i=(i-1)g,
+\]
+and use host intervals $I_i=[S_i,S_i+W-1]$. If $I_i,I_j$ overlap, then for large $n$,
+\[
+ W-g\le(\min(u^2,1)-\nu/2)n
+ \le p_ip_j-\nu n/2.
+\tag{A.5}
+\]
+After projection modulo $p_ip_j$, the overlap is a forbidden arc whose complement has length at least $\nu/(2C^2)=50\rho$. Choose an open $\rho$-arc $J_{ij}$ in the complement, at circular distance at least $4\rho$ from the forbidden arc. If the hosts are disjoint, choose any arc. \Cref{lem:generic} provides residues $r_i\bmod p_i$ with $Z_{ij}(r_i,r_j)\in J_{ij}$.
+
+Put $N_i=\lfloor n/p_i\rfloor$ and color the $A_a(N_i)$ by \cref{lem:bundlecolor}. By \eqref{eq:bundle-colors-small}, the number of colors is $o(p_i)$. Apply \cref{lem:bohr} with coefficients $\overline{p_j}^{(p_i)}$, $j\ne i$. It gives a positive proportion of residues $s\bmod p_i$ satisfying
+\[
+ \norm{\frac{\overline{p_j}^{(p_i)}s}{p_i}}<\rho
+ \qquad(j\ne i).
+\tag{A.6}
+\]
+For large $n$ there are enough distinct such residues $s_{i,c}$ for all colors $c$. Choose $t_{i,c}\in\{0,\ldots,p_i-1\}$ so that
+\[
+ S_i+t_{i,c}\equiv r_i+s_{i,c}\pmod{p_i},
+\]
+and translate every $A_{ap_i}(n)$ of color $c$ by $S_i+t_{i,c}$. These sets lie in $I_i$. Same-color progressions are disjoint by the coloring, and different colors occupy different residues modulo $p_i$.
+
+For two bundles, the intersection phase is
+\[
+\begin{aligned}
+Z_{ij}(r_i+s_{i,c},r_j+s_{j,c'})
+={}&Z_{ij}(r_i,r_j)\\
+&+\frac{\overline{p_j}^{(p_i)}s_{i,c}}{p_i}
++\frac{\overline{p_i}^{(p_j)}s_{j,c'}}{p_j}\pmod1.
+\end{aligned}
+\tag{A.7}
+\]
+It moves by less than $2\rho$ from $J_{ij}$ and remains outside the forbidden projection. Hence no point lies in progressions from two bundles. The block occupies at most
+\[
+ (k-1)g+W.
+\tag{A.8}\label{eq:block-span}
+\]
+
+Partition $[\epsilon,C]$ into fixed bins $\epsilon=u_0<\cdots<u_J=C$. Apply \cref{lem:generic} in each bin. An exceptional prime's entire bundle fits in length $W$ because eventually $R(N_i)\le p_i$, so all exceptions cost $O(n)=o(T_n)$. With
+\[
+ M_j=\#\{p:u_{j-1}x\le p<u_jx\},\qquad
+ g_j=\lceil n(h(u_{j-1})+\nu)\rceil,
+\]
+concatenating \eqref{eq:block-span} gives
+\[
+ m(\cG_{\epsilon,C}(n))
+ \le\sum_{j=1}^JM_j\left(g_j+\frac Wk\right)+O(n).
+\]
+The prime number theorem yields
+\[
+ M_j=(u_j-u_{j-1}+o(1))\frac{x}{\log x}.
+\]
+Divide by $T_n$, let $n\to\infty$ first, then refine the partition, let $\nu\downarrow0$, and finally $k\to\infty$. All auxiliary parameters were fixed before the $n$ limit, and the upper Riemann sums converge to
+\[
+ 2\int_\epsilon^C(1-u^2)_+\,du.
+\]
+For $C>1$ this integral is $\frac43-2\epsilon+\frac23\epsilon^3$.
+\end{proof}
+
+\phantomsection\label{pf:fold}
+\lemfold*
+\begin{proof}
+Translate the original packing into $[0,M-1]$ and put $H=\lceil M/a\rceil$. Assign a set $B$ to the strip $jH\le\min B<(j+1)H$, $0\le j<a$, and replace it by
+\[
+ a(B-jH)+j.
+\]
+Sets from one strip remain disjoint under the affine injection; sets from different strips have distinct residues modulo $a$. Because each diameter is at most $N$, all images lie in an interval of length at most
+\[
+ aH+aN\le M+aN+a.
+\]
+\end{proof}
+
+\phantomsection\label{pf:largeprime}
+\lemlargeprime*
+\begin{proof}
+Use dyadic bins $(Q,2Q]$, starting at $Q=P$, and put
+\[
+ K=\left\lfloor\frac{Q^2}{2N}\right\rfloor
+ \ge\frac{Q^2}{4N},
+\]
+where the inequality uses $Q\ge2\sqrt N$. Any group of at most $K$ prime-indexed progressions from the bin fits in $[1,2N]$. Indeed, insert them successively. For a new prime $p$, every occupied point forbids at most one shift residue modulo $p$, while previous progressions contain fewer than
+\[
+ K\frac NQ\le\frac Q2<p
+\]
+points. Some residue remains.
+
+The total length for this bin is at most
+\[
+ 2N\left(\frac{4N\pi(2Q)}{Q^2}+1\right).
+\]
+Using $\pi(t)=O(t/\log t)$ and
+\[
+ \sum_{Q=P,2P,\ldots}\frac1{Q\log Q}\le\frac2{P\log P},
+\]
+while there are $O(\log(2N))$ bins, gives \eqref{eq:large-prime-bound} after enlarging an absolute constant $B$.
+\end{proof}
+
+\phantomsection\label{pf:cover}
+\propcover*
+\begin{proof}
+Set $Y=\lceil n^{1/5}\rceil$, so $Y^2<\epsilon x$ for large $n$. Cover all $d\le n$ by:
+\begin{enumerate}[label=\textup{(\arabic*)}]
+\item the main family $\cG_{\epsilon,C}(n)$;
+\item bundles $\cB_q(n)$ for
+\[
+ q\in\cQ_n=\{q:Y\le q\le Y^2\}
+ \cup\{p\text{ prime}:Y\le p<\epsilon x\};
+\]
+\item the individual $A_d(n)$ with $d<Y$;
+\item for each $1\le a<Y$, the tail $\{A_{ap}(n):p>Cx\text{ prime},\ ap\le n\}$.
+\end{enumerate}
+To verify the cover, suppose $d$ has no prime factor in $[Y,Cx]$. At most one prime factor, including multiplicity, exceeds $Cx$, since $C>1$ and $d\le n$. Thus $d=s$ or $d=sp$, where all prime factors of $s$ are below $Y$ and $p>Cx$ is prime. If $s\ge Y$, multiply its prime factors until the product first reaches $Y$; the resulting divisor lies in $[Y,Y^2)$. If $s<Y$, type (3) or (4) applies.
+
+By \cref{cor:bundle},
+\[
+\begin{aligned}
+M_{\cQ}
+&\le(n+\epsilon x+1)
+\sum_{q\in\cQ_n}\left(1+K_0n^{3/5}q^{-8/5}\right)\\
+&\le(n+\epsilon x+1)
+\left(\pi(\epsilon x)+Y^2+O(n^{3/5}Y^{-3/5})\right).
+\end{aligned}
+\]
+Here $Y^2=O(n^{2/5})$ and $n^{3/5}Y^{-3/5}=O(n^{12/25})$, so after multiplication their contributions are $o(T_n)$. The prime number theorem gives
+\[
+ M_{\cQ}\le(2\epsilon+o(1))T_n.
+\tag{A.9}\label{eq:small-bundle-cost}
+\]
+Type (3) costs at most $nY=o(T_n)$.
+
+For type (4), put $P=Cx$ and $N_a=\lfloor n/a\rfloor$. Since $C>2$, $P\ge2\sqrt{N_a}$. Apply \cref{lem:largeprime} to the $A_p(N_a)$ and then \cref{lem:fold}, using $A_{ap}(n)=aA_p(\lfloor n/a\rfloor)$. The $a$-th tail costs at most
+\[
+ B\left(\frac{N_a^2}{P\log P}+N_a\log(2N_a)\right)+n+a.
+\]
+Summing $a<Y$, using $\sum a^{-2}<2$ and $\sum_{a<Y}a^{-1}=O(\log Y)$, gives
+\[
+ M_{\rm tail}
+ =O\left(\frac{n^2}{P\log P}\right)
+  +O(n\log^2n+nY+Y^2)
+ \le\left(\frac{B_0}{C}+o(1)\right)T_n.
+\tag{A.10}\label{eq:tail-cost}
+\]
+
+Concatenate all packings and delete duplicate labeled copies. Combining \cref{prop:mainrange}, \eqref{eq:small-bundle-cost}, and \eqref{eq:tail-cost},
+\[
+\limsup_{n\to\infty}\frac{m(n)}{T_n}
+\le\left(\frac43-2\epsilon+\frac23\epsilon^3\right)
++2\epsilon+\frac{B_0}{C},
+\]
+which is \eqref{eq:cover-bound}.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+\Cref{prop:lower} gives the lower bound. For the upper bound, \cref{prop:cover} holds for every fixed $0<\epsilon<1$ and $C>2$. Let $\epsilon\downarrow0$ and then $C\to\infty$ to obtain
+\[
+ \limsup_{n\to\infty}\frac{m(n)}{T_n}\le\frac43.
+\]
+Together with the lower bound this proves the theorem.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup. Its step, section and equation numbers refer to that writeup, not to this note. The scripts it mentions are in \texttt{verification\_astra/scripts/2603.02786\_\_00/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{ADGP26} N.~Alon, M.~D\k{e}bski, J.~Grytczuk and J.~Przyby\l{}o, Packing arithmetic progressions, \href{https://arxiv.org/abs/2603.02786}{arXiv:2603.02786} (3 March 2026).
+\bibitem{HLZ26} J.~Hou, S.~Liu and H.~Zhao, Asymptotically optimal packings of arithmetic progressions with prime differences, \href{https://arxiv.org/abs/2609.07487}{arXiv:2609.07487} (7 September 2026).
+\bibitem{MWWY26} Y.~Mao, Z.~Wang, M.~Wei and G.~Yang, Solution to a conjecture of Alon, D\k{e}bski, Grytczuk and Przyby\l{}o on fixed-cardinality arithmetic progressions, \href{https://arxiv.org/abs/2607.06113}{arXiv:2607.06113} (7 July 2026).
+\bibitem{HW08} G.~H.~Hardy and E.~M.~Wright, \emph{An Introduction to the Theory of Numbers}, 6th ed., Oxford University Press, 2008.
+\end{thebibliography}
+
+\end{document}

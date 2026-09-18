@@ -1,0 +1,466 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\Fhit}{F_n^{\mathrm{hit}}}
+\newcommand{\Favoid}{F_n^{\mathrm{avoid}}}
+\newcommand{\Ind}{\mathbf 1}
+\newcommand{\repair}[1]{\ [\textit{Repair:} #1]}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2211.01032\_\_03 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{The expected number of faces of a non-orientable random embedding of $K_n$ is at most $\ln n+O(1)$\\[4pt] \large A proof of Conjecture~9.5 of Campion Loth, Halasz, Masařík, Mohar and Šámal}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A non-orientable random embedding of a graph, in the sense of Campion Loth, Halasz, Masařík, Mohar and Šámal (arXiv:2211.01032), chooses a uniformly random rotation system together with independent fair signs on the edges; $F_n$ denotes the resulting number of faces of $K_n$. They conjectured (Conjecture~9.5) that $\E F_n\le\ln n+O(1)$. We prove this, in the explicit form $\E F_n\le\ln n+\tfrac14+\tfrac\gamma2+O((\ln n)^2/n)$ with $\gamma$ Euler's constant, together with a finite-$n$ inequality valid for all $n\ge21$. The proof splits the faces according to whether they pass through a fixed vertex $o$: the faces through $o$ are counted by exposing the single local matching at $o$ pair by pair, and the faces avoiding $o$ are controlled by a trace process in which the untouched edge towards $o$ supplies an escape probability at every step, which yields an exponential survival bound and a geometric bound on repeated visits to any vertex. Conditioning on the surface being non-orientable does not change the conclusion.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+\paragraph{Random embeddings.}
+A \emph{rotation system} of a finite graph $G$ assigns to each vertex a cyclic order of its incident edge-ends; it determines a cellular embedding of $G$ in an orientable surface, and the \emph{random embedding} of $G$ chooses the cyclic orders independently and uniformly. The companion note on Conjecture~9.3 of the same paper \cite{Note02} sets out these conventions in detail, and we refer to it for the orientable model. For non-orientable surfaces one uses an \emph{embedding scheme} \cite{MT01,GT87}: a rotation system together with a \emph{signature} $\varepsilon\colon E(G)\to\{+1,-1\}$, where $\varepsilon(e)=-1$ means that the band attached along $e$ is twisted. Every embedding scheme determines a cellular embedding in a closed surface, whose faces are found by the usual face-tracing procedure, and the surface is orientable if and only if the signature is switching-equivalent to the all-positive one.
+
+Campion Loth, Halasz, Masařík, Mohar and Šámal \cite{CHMMS} proved, for the orientable random embedding of the complete graph, that $\tfrac12\ln n-2<\E F(K_n)\le3.65\ln n+o(1)$, and in their closing section (``Open Problems'') they turned to non-orientable surfaces. The referee checked the following two quotations against the arXiv~v3 \TeX{} source (\cref{app:referee}). The model is introduced as follows:
+\begin{quote}
+One natural way to define a random embedding of a graph on a non-orientable surface is to randomly choose a rotation system, and randomly choose a signature for all the edges in the graph, with probability $1/2$ of being either sign. From data, we expect a similar result to hold for non-orientable random embeddings of $K_n$ under this definition.
+\end{quote}
+The conjecture then reads:
+\begin{conjecture}[{\cite[Conjecture~9.5]{CHMMS}}]\label{conj:95}
+The expected number of faces in a non-orientable random embedding of the complete graph $K_{n}$ is at most $\ln(n) + O(1)$.
+\end{conjecture}
+The catalog page from which the problem was posed records that the conjecture first appeared in the April 2025 version of the paper, that it is supported by the authors' simulations, and that no subsequent work on it was found; the referee's own literature search (\cref{app:referee}) confirmed this in September 2026.
+
+\paragraph{Conventions.}
+Throughout, $n\ge3$, $d=n-1$ is the degree of $K_n$, and all logarithms are natural; $H_m=\sum_{i\le m}1/i$ is the harmonic number and $\gamma$ is Euler's constant. The \emph{non-orientable random embedding} of $K_n$ is the embedding scheme $(\pi,\varepsilon)$ in which the cyclic orders $\pi_u$ are independent and uniform among the $(d-1)!$ cyclic orders at each vertex $u$, and the signs $\varepsilon(e)$ are independent, fair, and independent of $\pi$; nothing is conditioned. This is exactly the model of the quotation above. $F_n$ denotes the number of faces of the resulting embedding. Since the model also produces orientable embeddings with a very small probability, \cref{prop:cond} shows that conditioning on non-orientability changes nothing. We use that $K_n$ is a \emph{simple} graph: there is exactly one edge between any two vertices. This hypothesis is load-bearing (\cref{rem:simple}).
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+Let $R=\lceil4\log_2n\rceil$, $D=n-2-R$ and $q=1-\frac1{n-2}$. For every $n\ge21$ (so that $D\ge1$),
+\begin{equation}\label{eq:finite}
+\E F_n\ \le\ 1+\tfrac12H_{n-2}\ +\ \frac{(n-1)(n-2)}{2D^2}\;q^{-2}\Bigl(\ln(n-2)-q-\frac{q^2}2\Bigr)\ +\ \frac1n .
+\end{equation}
+Consequently, as $n\to\infty$,
+\begin{equation}\label{eq:asymp}
+\E F_n\ \le\ \ln n+\frac14+\frac\gamma2+O\!\Bigl(\frac{(\ln n)^2}{n}\Bigr).
+\end{equation}
+\end{restatable}
+
+\begin{corollary}\label{cor:95}
+\Cref{conj:95} holds: $\E F_n\le\ln n+O(1)$. The same bound holds for the expectation conditioned on the embedding being non-orientable (\cref{prop:cond}).
+\end{corollary}
+\begin{proof}
+\eqref{eq:asymp} gives the bound for $n\ge n_1$ for some $n_1$, and $F_n\le n(n-1)/3$ deterministically for $n\ge3$ (every face has length at least $3$ by \cref{lem:short}, and the face lengths sum to $n(n-1)$), so the finitely many remaining values are absorbed into the $O(1)$. The conditional statement is \cref{prop:cond}.
+\end{proof}
+
+\begin{proofidea}
+The embedding is encoded by a flag model (\cref{sec:model}): every incidence carries two flags, an edge matching $A$ joins corresponding flags at the two ends of every edge, and at each vertex $u$ a local matching $V_u$ describes the arcs of the vertex disc between consecutive attachments; faces are the components of $A\cup V$. Absorbing the signs into per-incidence relabellings makes $A$ canonical and the $V_u$ independent and uniform on the set $\cH_d$ of matchings that close up with the incidence pairs into a single $2d$-cycle. The key tool is an exposure lemma: after $r\le d-2$ pairs of $V_u$ have been revealed, the mate of any unmatched flag is uniform over exactly $2(d-r-1)$ candidates.
+
+Fix a vertex $o$ and split $F_n=\Fhit+\Favoid$ into faces meeting and avoiding $o$. Revealing all $V_u$ with $u\ne o$ leaves the avoiding faces as closed cycles and pairs up the $2d$ flags at $o$ by paths; exposing $V_o$ pair by pair, each step closes a face with probability at most $1/(2(d-r-1))$, whence $\E\Fhit\le1+\tfrac12H_{n-2}$ (\cref{lem:hit}). For the avoiding faces we follow one face from a starting flag and stop on reaching $o$. Because the two flags of the edge towards $o$ are untouched while the trace avoids $o$, each step moves to $o$ with probability exactly $1/(n-2-r_u)$, which is at least the probability of moving to any other prescribed vertex (\cref{lem:escape}). This gives an exponential survival bound $\Pr(T>t)\le q^t$ and, via a supermartingale, $\Pr(\text{$\ge L$ visits to $w$})\le2^{1-L}$ for every vertex $w$ (\cref{lem:congestion}). Faces loading some vertex more than $R=\lceil4\log_2 n\rceil$ times therefore contribute at most $1/n$ in expectation (\cref{lem:bad}), and for the remaining \emph{good} faces the last two steps of the trace have probability at most $1/D$ and $1/(2D)$ respectively, giving $\Pr(\text{good avoiding face of length }k)\le q^{k-2}/(2D^2)$ uniformly in $k$ (\cref{lem:good}). Summing over lengths with the rooting identity $F=\sum_a1/(2L(a))$ yields $\E\Favoid\le\tfrac12\ln n-\tfrac34+o(1)$ (\cref{prop:avoid}).\fullproofref{pf:main}
+\end{proofidea}
+
+\section{The flag model}\label{sec:model}
+
+Let $n\ge3$ and $d=n-1$. For every ordered pair of distinct vertices $(u,v)$ and every $s\in\{0,1\}$ there is a \emph{flag} $(u,v,s)$, \emph{at} $u$, \emph{on} the edge $uv$; there are $2d$ flags at each vertex and $2n(n-1)$ in total. Three perfect matchings on the flags are used:
+\begin{itemize}\tightlist
+\item $J_u$ pairs $(u,v,0)$ with $(u,v,1)$ for every $v\ne u$ (the two flags of one incidence); $J=\bigcup_uJ_u$.
+\item $A$ pairs $(u,v,s)$ with $(v,u,s)$ (the two sides of the band of the edge $uv$).
+\item $V_u$ is a perfect matching on the flags at $u$ such that $J_u\cup V_u$ is a single $2d$-cycle; $V=\bigcup_uV_u$. Let $\cH_d$ be the set of such matchings.
+\end{itemize}
+Every flag has degree one in $A$ and one in $V$, so $A\cup V$ is a disjoint union of cycles alternating between $A$- and $V$-edges. A cycle with $k$ edges of each kind has $2k$ flags and is said to have \emph{length} $k$; the lengths of all cycles sum to $|A|=n(n-1)$.
+
+\begin{restatable}[Flag model]{lemma}{lemmodel}\label{lem:model}
+Let $(\pi,\varepsilon)$ be the non-orientable random embedding of $K_n$. There is a coupling with matchings $(V_u)_{u\in V(K_n)}$, independent and uniform on $\cH_d$, such that the faces of $(\pi,\varepsilon)$ correspond bijectively, and length-preservingly, to the cycles of $A\cup V$. Moreover $|\cH_d|=2^{d-1}(d-1)!$.
+\end{restatable}
+\begin{proofidea}
+In the ribbon graph of an embedding scheme the two flags of an incidence are the two corners at which the band meets the vertex disc, the arcs of the disc boundary between consecutive attachments give a local matching in $\cH_d$, and the band of $e=uv$ joins $(u,v,s)$ to $(v,u,s\oplus\tau_e)$ where the twist bit $\tau_e$ is $\varepsilon(e)$ up to a fixed convention. Write the fair twist bits as $\tau_e=b_{u,e}\oplus b_{v,e}$ with independent fair bits $b_{u,e}$, one per \emph{incidence}, and relabel the two flags of each incidence $(u,e)$ according to $b_{u,e}$. The band matching becomes the canonical $A$, and the local matching at $u$ becomes the image of $(\pi_u,(b_{u,e})_e)$ under a two-to-one map onto $\cH_d$ (the two directions around the cycle), so it is uniform on $\cH_d$ and $|\cH_d|=2^d(d-1)!/2$.\fullproofref{pf:model}
+\end{proofidea}
+
+\begin{restatable}[Exposure lemma]{lemma}{lemexposure}\label{lem:exposure}
+Let $V_u$ be uniform on $\cH_d$ and let $Q\subseteq V_u$ consist of $r$ pairs. Then $J_u\cup Q$ is a disjoint union of $d-r$ paths whose endpoints are exactly the flags at $u$ not matched by $Q$. Conditionally on $\{Q\subseteq V_u\}$, for any unmatched flag $x$:
+\begin{enumerate}[label=(\roman*)]\tightlist
+\item if $r\le d-2$, the $V_u$-mate of $x$ is uniform over the $2(d-r-1)$ unmatched flags other than $x$ and the other endpoint of the path of $J_u\cup Q$ containing $x$;
+\item if $r=d-1$, the mate of $x$ is that other endpoint.
+\end{enumerate}
+The same holds when $Q$ is built adaptively, each pair being revealed by querying the mate of a flag chosen as a function of the pairs revealed so far and of randomness independent of $V_u$.
+\end{restatable}
+\begin{proofidea}
+Contracting each path of $J_u\cup Q$ to a single $J$-edge is a bijection between $\{W\in\cH_d:Q\subseteq W\}$ and $\cH_{d-r}$. Pairing $x$ with the other endpoint of its own path closes a proper cycle and is forbidden; pairing it with any other unmatched flag merges two paths and leaves exactly $|\cH_{d-r-1}|$ completions, the same number for every choice.\fullproofref{pf:exposure}
+\end{proofidea}
+
+\begin{lemma}[No short faces]\label{lem:short}
+For $n\ge3$ no face has length $1$ or $2$.
+\end{lemma}
+\begin{proof}
+A length-one cycle $x\,A\,y\,V\,x$ would have the pair $\{x,y\}$ in both $A$ and $V$; but an $A$-pair joins flags at two different vertices and a $V$-pair joins flags at the same vertex. (Equivalently, $K_n$ has no loops.) A length-two cycle $x_1\,A\,x_2\,V\,x_3\,A\,x_4\,V\,x_1$ uses two $A$-edges; since $x_2$ and $x_3$ are at the same vertex, the two $A$-edges join the same pair of vertices, hence (as $K_n$ is simple) are the two sides of one edge $uv$, so $\{x_2,x_3\}=\{(v,u,0),(v,u,1)\}$ and the $V$-pair $x_2x_3$ is a $J_v$-edge. Then $J_v\cup V_v$ contains the $2$-cycle formed by this edge, contradicting $V_v\in\cH_d$ for $d\ge2$.
+\end{proof}
+
+\section{Faces through a fixed vertex}\label{sec:hit}
+
+Fix a vertex $o$ and write $F_n=\Fhit+\Favoid$, where $\Fhit$ counts the faces containing a flag at $o$ and $\Favoid$ the others. Note that a face avoiding $o$ contains no flag on any edge incident with $o$ (such a flag is $A$-matched to a flag at $o$). Let $S$ be the set of flags on edges not incident with $o$; then
+\begin{equation}\label{eq:S}
+|S|=4\binom{n-1}2=2(n-1)(n-2).
+\end{equation}
+
+\begin{restatable}[Faces through $o$]{lemma}{lemhit}\label{lem:hit}
+$\displaystyle\E\Fhit\le1+\tfrac12H_{d-1}=1+\tfrac12H_{n-2}$.
+\end{restatable}
+\begin{proofidea}
+Reveal every $V_u$ with $u\ne o$. In the graph $A\cup\bigcup_{u\ne o}V_u$ the flags at $o$ have degree one and all others degree two, so its components are cycles (exactly the faces avoiding $o$) and paths joining two distinct flags at $o$; the latter define a perfect matching $P$ on the $2d$ flags at $o$, and the faces through $o$ are the cycles of $P\cup V_o$. By independence $V_o$ is still uniform on $\cH_d$. Reveal $V_o$ pair by pair, always querying an unmatched flag $x$. In $P\cup Q_o$ (with $Q_o$ the pairs revealed so far) the flag $x$ is an endpoint of a path, and exactly one candidate mate, the other endpoint $x''$ of that path, closes a cycle; every other candidate merges two paths. \repair{the forbidden flag of \cref{lem:exposure} is the far endpoint of $x$'s path in $J_o\cup Q_o$, which in general differs from $x''$; if the two coincide the closing probability is $0$, otherwise $x''$ is one of the $2(d-r-1)$ equally likely candidates. In both cases the probability of closing a cycle at this step is at most $1/(2(d-r-1))$. The original writeup relied on the words ``at most'' without pointing this out.} The forced last pair closes exactly one cycle. Summing over $r=0,\dots,d-2$ gives $\E\Fhit\le\sum_{r=0}^{d-2}\frac1{2(d-r-1)}+1$.\fullproofref{pf:hit}
+\end{proofidea}
+
+\section{Faces avoiding the fixed vertex}\label{sec:avoid}
+
+\paragraph{The trace.}
+Choose a flag $a_0\in S$, at a vertex $u_0\ne o$, and let $b_0=A(a_0)$, at the vertex $w_0\ne o$. We reveal the face of $a_0$ one $V$-pair at a time. The \emph{active flag} is $a_0$ initially and $b_0$ is the \emph{terminal}. At each step: reveal the $V$-mate $z$ of the active flag $a_t$ (a query at the vertex of $a_t$); if $z=b_0$ the face \emph{closes}; otherwise the new active flag is $a_{t+1}=A(z)$, which is at a different vertex, and the trace \emph{stops} if that vertex is $o$. Let $T$ be the number of queries until closure or stopping, so $T\le n(n-1)$. Until closure, the revealed pairs form a single path with endpoints $a_t$ and $b_0$, so every query asks for a mate not revealed before and \cref{lem:exposure} applies at every step; if the trace closes after $k$ queries, the face of $a_0$ has length $k$, and if the face of $a_0$ avoids $o$ the trace does close (\cref{pf:trace}). Write $r_u(t)$ for the number of pairs revealed at $u$ after $t$ queries (the \emph{load} at $u$) and $\cF_t$ for the information revealed by the first $t$ queries. Let $p_o$, $p_{\mathrm{cl}}$ and $p_w$ be the conditional probabilities, given $\cF_t$ and $t<T$, that the next query moves the trace to $o$, closes the face, or moves it to the vertex $w\ne o$.
+
+\begin{restatable}[Escape probabilities]{lemma}{lemescape}\label{lem:escape}
+Suppose $t<T$ and the active flag $a_t$ is at $u\ne o$. Then $r_u(t)\le d-2$ and
+\begin{equation}\label{eq:po}
+p_o=\frac{1}{n-2-r_u(t)}\ \ge\ \frac1{n-2},\qquad p_w\le p_o\ \text{ for every } w\ne o .
+\end{equation}
+Consequently, with $q=1-\frac1{n-2}$,
+\begin{equation}\label{eq:survival}
+\Pr(T>t)\le q^t\qquad(t\ge0).
+\end{equation}
+\end{restatable}
+\begin{proofidea}
+Neither flag of the incidence $(u,uo)$ has been touched, since either would have put the trace at $o$; so they form an isolated path of $J_u\cup Q_u$ distinct from the path of $a_t$, and both are admissible mates, each with probability $1/(2(d-r_u-1))$; two paths also force $r_u\le d-2$. For $w\ne o$ there are at most two flags at $u$ on the edge $uw$ (simplicity of $K_n$), each admissible with probability at most $1/(2(d-r_u-1))$. The survival bound follows because the trace terminates with probability at least $p_o\ge1/(n-2)$ at every step.\fullproofref{pf:escape}
+\end{proofidea}
+
+\begin{restatable}[Geometric bound on repeated visits]{lemma}{lemcongestion}\label{lem:congestion}
+Fix $w\ne o$ and let $N_w(t)=|\{i\le t:a_i\text{ is at }w\}|$ for $t<T$. For every integer $L\ge1$,
+\begin{equation}\label{eq:congestion}
+\Pr\bigl(N_w(t)\ge L\text{ for some }t<T\bigr)\le2^{1-L}.
+\end{equation}
+\end{restatable}
+\begin{proofidea}
+$M_t=2^{N_w(t)}\Ind_{\{t<T\}}$ satisfies $\E[M_{t+1}\mid\cF_t]=M_t(1+p_w-p_o-p_{\mathrm{cl}})\le M_t$ by \eqref{eq:po}, the three events being disjoint because $b_0$ is not at $o$; so $M$ is a non-negative supermartingale with $M_0\le2$, and optional stopping at the bounded time $\min\{t:N_w(t)\ge L\}\wedge T$ gives the claim.\fullproofref{pf:congestion}
+\end{proofidea}
+
+\paragraph{Good and bad faces.} Let
+\begin{equation}\label{eq:RD}
+R=\lceil4\log_2n\rceil,\qquad D=n-2-R .
+\end{equation}
+\repair{the writeup wrote ``for sufficiently large $n$, $D>0$''. Exactly: $D\ge1$ if and only if $n\ge21$ ($n=20$ gives $D=0$, $n=21$ gives $D=1$, and $D$ is non-decreasing from there on); we therefore assume $n\ge21$ from now on. The referee estimated the threshold as $n\approx32$; the exact value was computed during the rewrite. Because $R$ is a ceiling, $2^{-R}\le n^{-4}$ exactly, which is used in \eqref{eq:bad}.}
+A face avoiding $o$ is \emph{good} if it uses at most $R$ pairs of $V_u$ at every vertex $u$, and \emph{bad} otherwise. Let $B$ be the number of bad avoiding faces and $G_k$ the number of good avoiding faces of length $k$.
+
+\begin{restatable}[Bad faces]{lemma}{lembad}\label{lem:bad}
+For every $a_0\in S$, $\Pr(a_0\text{ lies in a bad avoiding face})\le(n-1)2^{-R}$, and
+\begin{equation}\label{eq:bad}
+\E B\le(n-1)^2(n-2)\,2^{-R}\le n^3\,2^{-R}\le\frac1n .
+\end{equation}
+\end{restatable}
+\begin{proofidea}
+A bad avoiding face of $a_0$ closes at $T=k$ and has at least $R+1$ pairs at some $w$, i.e.\ $N_w(k-1)\ge R+1$ with $k-1<T$; apply \eqref{eq:congestion} with $L=R+1$ and a union bound over the $n-1$ vertices $w\ne o$. Every face of length $k$ has $2k\ge2$ flags, all in $S$ if it avoids $o$, so $B=\sum_{a\in S}\Ind\{a\text{ in a bad avoiding face}\}/(2L(a))\le\frac12\sum_{a\in S}\Ind\{\cdots\}$, and \eqref{eq:S} gives the middle term; the last inequality is $2^{-R}\le n^{-4}$.\fullproofref{pf:bad}
+\end{proofidea}
+
+\begin{restatable}[Good faces of a given length]{lemma}{lemgood}\label{lem:good}
+Assume $n\ge21$. For every $a_0\in S$ and every $k\ge2$,
+\begin{equation}\label{eq:good}
+\Pr(a_0\text{ lies in a good avoiding face of length }k)\le\frac{q^{k-2}}{2D^2}.
+\end{equation}
+\end{restatable}
+\begin{proofidea}
+\repair{this is the inequality whose justification the referee found compressed to one sentence in the writeup (its equation~(11)); the nested-conditioning argument below is the one the referee supplied, and is written out in full in \cref{pf:good}.} Let $\mathcal A\in\cF_{k-2}$ be the event that $T>k-2$ and all loads after $k-2$ queries are at most $R$; let $\mathcal B\in\cF_{k-1}$ be the event that query $k-1$ moves the trace to $w_0$; let $\mathcal C$ be the event that query $k$ reveals $b_0$. The event in \eqref{eq:good} is contained in $\mathcal A\cap\mathcal B\cap\mathcal C$, since loads only grow and the final loads of a good face are at most $R$. On $\mathcal A$ the active vertex $u$ after $k-2$ queries has load at most $R\le d-2$, so by \cref{lem:exposure} the next mate is uniform over at least $2D$ flags, at most two of which are on the edge $uw_0$: $\Pr(\mathcal B\mid\cF_{k-2})\le1/D$ on $\mathcal A$. On $\mathcal A\cap\mathcal B$ the active flag $a_{k-1}$ is at $w_0$, and the load at $w_0$ after $k-1$ queries is still at most $R$, because query $k-1$ was made at $u\ne w_0$ (the active vertex changes at every step); hence $\Pr(\mathcal C\mid\cF_{k-1})\le1/(2D)$ there. Finally $\Pr(\mathcal A)\le\Pr(T>k-2)\le q^{k-2}$ by \eqref{eq:survival}. Chaining the three conditional bounds gives \eqref{eq:good}.\fullproofref{pf:good}
+\end{proofidea}
+
+\begin{restatable}[Faces avoiding $o$]{proposition}{propavoid}\label{prop:avoid}
+Assume $n\ge21$. Then
+\begin{equation}\label{eq:avoid}
+\E\Favoid\ \le\ \frac{(n-1)(n-2)}{2D^2}\sum_{k=3}^\infty\frac{q^{k-2}}k+\frac1n
+\ =\ \frac{(n-1)(n-2)}{2D^2}\,q^{-2}\Bigl(\ln(n-2)-q-\frac{q^2}2\Bigr)+\frac1n ,
+\end{equation}
+and as $n\to\infty$,
+\begin{equation}\label{eq:avoid-asymp}
+\E\Favoid\le\frac12\ln n-\frac34+O\!\Bigl(\frac{(\ln n)^2}n\Bigr).
+\end{equation}
+\end{restatable}
+\begin{proofidea}
+Rooting at flags, $\E G_k=\frac1{2k}\sum_{a\in S}\Pr(a\text{ lies in a good avoiding face of length }k)\le\frac{(n-1)(n-2)}{2D^2}\frac{q^{k-2}}k$ by \eqref{eq:S} and \eqref{eq:good}; there are no faces of length $\le2$ (\cref{lem:short}); add $\E B\le1/n$. The series is $q^{-2}(-\ln(1-q)-q-q^2/2)$ with $1-q=1/(n-2)$. Since $R=O(\ln n)$, the prefactor is $\frac12+O(\ln n/n)$ and the series is $\ln n-\frac32+O(\ln n/n)$.\fullproofref{pf:avoid}
+\end{proofidea}
+
+\section{Conditioning on non-orientability}\label{sec:cond}
+
+\begin{restatable}{proposition}{propcond}\label{prop:cond}
+The embedding $(\pi,\varepsilon)$ is orientable with probability $p_n=2^{-(n-1)(n-2)/2}$, independently of $\pi$, and
+\[
+\E[F_n\mid\text{the embedding is non-orientable}]\le\frac{\E F_n}{1-p_n}.
+\]
+In particular \eqref{eq:asymp} holds for the conditional expectation as well.
+\end{restatable}
+\begin{proofidea}
+An embedding scheme of a connected graph is orientable if and only if its signature is switching-equivalent to the all-positive one \cite{MT01}; for a connected graph on $n$ vertices there are exactly $2^{n-1}$ such signatures among the $2^{|E|}$, and $|E(K_n)|=\binom n2$. Since $F_n\ge0$, $\E[F_n\Ind_{\text{non-or.}}]\le\E F_n$.\fullproofref{pf:cond}
+\end{proofidea}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[Finite $n$ versus the limit]\label{rem:finite}
+The displayed constant $\frac14+\frac\gamma2\approx0.5386$ in \eqref{eq:asymp} is a limit; the inequality actually proved for a given $n$ is \eqref{eq:finite}. Evaluating \eqref{eq:finite}: $\E F_{21}\le330.6$ (useless: the trivial bound is $n(n-1)/3=140$), $\E F_{32}\le12.82$, $\E F_{50}\le7.98$, $\E F_{100}\le6.64$, $\E F_{200}\le6.65$, $\E F_{400}\le7.01$, $\E F_{800}\le7.51$, $\E F_{1600}\le8.09$, against $\ln n+0.5386=4.45,5.14,5.84,6.53,7.22,7.92$ at $n=50,100,200,400,800,1600$. The referee noted that the writeup's one-line summary could be misread as a finite-$n$ statement; \cref{thm:main} separates the two.
+\end{remark}
+
+\begin{remark}[Simplicity of $K_n$]\label{rem:simple}
+Two steps use that $K_n$ has exactly one edge between any two vertices: the inequality $p_w\le p_o$ in \cref{lem:escape}, and the bound $\Pr(\mathcal B\mid\cF_{k-2})\le1/D$ in \cref{lem:good} (``at most two flags at $u$ lead to $w_0$''). The argument does not transfer verbatim to multigraphs, where the neighbouring conjecture of \cite[Section~9]{CHMMS} that non-orientable random embeddings have no more faces in expectation than orientable ones also lives. The referee asked that this be stated as a hypothesis, which we do in \cref{sec:intro}.
+\end{remark}
+
+\begin{remark}[What the referee checked]\label{rem:checks}
+The referee (\cref{app:referee}; scripts in \texttt{verification\_astra/\allowbreak scripts/\allowbreak 2211.01032\_\_03/}) implemented the model independently and verified: the flag model against the classical orientable permutation model on all $16$ ($n=4$) and $7776$ ($n=5$) rotation systems with an orientable signature (no mismatch; $\E[F(K_5)\mid\text{orientable}]=1631/648$, matching \cite{Note02}); the coupling of \cref{lem:model} end-to-end, by sampling $V_u$ from a brute-force enumeration of $\cH_{n-1}$ and comparing the law of $F$ with the direct rotation-plus-signature model (total variation $0.0026,0.0024,0.0024$ at $n=4,5,6$ with $2\cdot10^5$ samples, at the Monte Carlo floor); $|\cH_d|=2,8,48,384$ for $d=2,\dots,5$; \cref{lem:exposure} exhaustively over all $384$ elements of $\cH_5$ and five exposure patterns (support size exactly $2(d-r-1)$, exactly uniform); the exact values $\E F_3=3/2$, $\E F_4=109/64$, $\E\Fhit(K_3)=3/2$ (\cref{lem:hit} is tight there) and $\E\Fhit(K_4)=101/64\le7/4$; and \cref{prop:cond} at $n=4$ ($8$ of $64$ signatures orientable, $\E[F\mid\text{non-or.}]=13/8$, $\E[F\mid\text{or.}]=9/4$). The expansions in \cref{prop:avoid} were checked symbolically and numerically (at $n=10^9$ the series is $19.22326$ against $\ln n-1.5=19.22327$).
+\end{remark}
+
+\begin{remark}[The suspected violation of \eqref{eq:good}]\label{rem:eq11}
+A pilot Monte Carlo run with $2000$ replicates at $n=50$ appeared to violate the writeup's equation (11), i.e.\ \eqref{eq:good}, with a worst per-length ratio of $24.7$ of empirical to bound. The referee traced this to a \emph{single} observed good avoiding face of length $k=278$ (bound $2.03\times10^{-5}$ against an empirical frequency of $1/2000$), and settled the matter by scaling up two hundredfold. Testing the equivalent form $\E G_k\le C(n)q^{k-2}/k$ with $C(n)=(n-1)(n-2)/(2D^2)$:
+\begin{center}\small
+\begin{tabular}{@{}rrrrrrrr@{}}\toprule
+$n$ & replicates & $R$ & $D$ & good faces & worst bin & slack $(D/(n-2))^2$ & violated\\\midrule
+50 & $400\,000$ & 23 & 25 & $488\,277$ & $0.2698$ & $0.2713$ & none\\
+100 & $40\,000$ & 27 & 71 & $62\,144$ & $0.5704$ & $0.5249$ & none\\
+200 & $12\,000$ & 31 & 167 & $22\,760$ & $0.7251$ & $0.7114$ & none\\\bottomrule
+\end{tabular}
+\end{center}
+Here the lengths $3\le k\le1349$ were binned and a bin counts as violated only if the lower $99.9\%$ Poisson confidence limit of its count exceeds the bound. In every bin, at all three values of $n$, the observed value equals the bound times the slack $(D/(n-2))^2$ that the two last-step factors $1/D$ and $1/(2D)$ predict (their true values being about $1/(n-2)$ and $1/(2(n-2))$), to three significant figures, drifting down at the largest $k$. The bin $[250,300)$ at $n=50$, which contains the alarm, has $99$ observations and ratio $0.21$. The remaining ``worst single-$k$ ratios'' ($2.8$, $16$, $146$) are each a single count in the far tail with a $99.9\%$ lower limit near $10^{-3}$. The referee's conclusion: \eqref{eq:good} is asymptotically sharp but never violated, and the alarm was Monte Carlo noise. Independently of the simulation, the nested-conditioning proof in \cref{pf:good} establishes \eqref{eq:good} rigorously.
+\end{remark}
+
+\begin{remark}[Sharpness]\label{rem:sharp}
+In the same runs the referee measured $\E\Favoid=1.2207$ ($n=50$), $1.5536$ ($n=100$) and $1.8967$ ($n=200$), against the limit form $\frac12\ln n-\frac34=1.206,1.553,1.899$: the measured value matches the limit form to three significant digits at $n=100$ and to within $0.015$ at $n=50$ (the excess being the positive $O(\ln n/n)$ correction the theorem allows), and to within Monte Carlo error at $n=200$. The chain of inequalities for the avoiding faces is thus an asymptotic \emph{equality}, while the measured values lie far below the finite-$n$ values $4.75$, $3.06$, $2.72$ of \eqref{eq:avoid}. By contrast $\E\Fhit=2.9276,3.2832,3.6318$ sits a constant $\approx0.30$ below the bound $1+\frac12H_{n-2}=3.2294,3.5836,3.9340$, the slack coming from the ``$+1$'' for the forced last pair. Zero bad avoiding faces were observed in any run. Globally, $\E F_n-\ln n$ was measured as $0.2446,0.2495,0.2605,0.2233,0.4060,0.2304,0.2389$ at $n=20,50,100,200,400,800,1600$ (with $20\,000$ down to $60$ replicates; the standard error at $n=1600$ is $0.33$): flat at $\approx0.24$ over two decades, below the proved $0.5386$ by almost exactly the $0.30$ slack in \cref{lem:hit}. An independent $400\,000$-replicate run gives $\E F_{50}=4.1483$; the orientable random embedding of $K_{50}$ has $\E F\approx6.98$ \cite{Note02}, consistent with the neighbouring conjecture of \cite[Section~9]{CHMMS}.
+\end{remark}
+
+\begin{remark}[The earlier attempt]\label{rem:earlier}
+This is a second attack on the problem. The first (\texttt{gpt-5.6-sol}, verdict ``partial'') introduced the flag model and the exposure lemma, and bounded the expected number of faces of length at most $\alpha n$ by $\frac12\ln n+O_\alpha(1)$ through a relaxed enumeration that becomes exponentially lossy for long faces; it also claimed a lower bound $\E F_n\ge\frac14\ln n-O(1)$ from vertex-simple faces. The present argument keeps only the flag model and the exposure lemma, both re-proved here (\cref{sec:model}) and verified by the referee; the long-face obstruction is removed by the fixed-vertex split. The earlier attempt's lower bound and short-face enumeration are not part of this note and were not refereed.
+\end{remark}
+
+\begin{remark}[Novelty and a caveat]\label{rem:novelty}
+The referee enumerated the (small) literature on random 2-cell embeddings by arXiv full-text search and web search in September 2026 and found nothing addressing the non-orientable conjecture, so the result appears to be new; the exposure lemma is a folklore deferred-decision statement already used in the orientable analysis of \cite{CHMMS} and is not claimed as new. The referee also observed that a short argument resolving an eighteen-month-old conjecture of a long SODA paper, with an avoiding-face half that is asymptotically tight, is precisely the kind of claim that should receive a human expert's attention, in particular on \cref{lem:good}, before being treated as settled. We repeat that recommendation. Nothing here has been checked by a human.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The argument was found by the language model \texttt{gpt-6-astra} (reasoning effort max) in a single autonomous pass started on 2026-09-16, in the \texttt{attacks\_retry} leg of a sweep over open problems catalogued from arXiv (catalog id \texttt{2211.01032\_\_03}; original writeup in \texttt{attacks\_retry/2211.01032\_\_03/output.md}). This was a second attempt: the prompt contained the earlier \texttt{gpt-5.6-sol} writeup (verdict ``partial'') as context, and no referee report on it. The flag model and the exposure lemma are inherited from that attempt and are not presented as new; the fixed-vertex decomposition, the escape and congestion bounds and the resolution of the conjecture are new to the second attempt (\cref{rem:earlier}).
+(2)~An independent adversarial referee agent (\texttt{claude-opus-5}) reviewed the writeup on 2026-09-17: it confirmed the two quotations against the arXiv~v3 \TeX{} source, re-derived every step, implemented the model independently and verified the model reduction, $|\cH_d|$, the exposure lemma and the small exact values by enumeration, ran the Monte Carlo experiments of \cref{rem:eq11,rem:sharp}, and searched the literature for prior or concurrent work. Its verdict was \textsc{minor\_gaps}: no mathematical error, but a compressed justification of the writeup's equation~(11), an unnamed large-$n$ threshold, and the expository points listed below. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-17 the writeup was rewritten into the present note by \texttt{claude-fable-5-1}. The text was reorganised with full proofs in \cref{app:proofs}. Every deviation from the writeup is one of the following. (a)~The one-sentence conditioning argument for equation~(11) is replaced by the nested-conditioning proof supplied by the referee, including the observation that query $k-1$ loads a vertex other than $w_0$ (\cref{lem:good}, \cref{pf:good}). (b)~The threshold ``for sufficiently large $n$'' is made explicit: $D\ge1$ iff $n\ge21$, computed during the rewrite; \cref{thm:main} is stated as a finite-$n$ inequality for $n\ge21$ plus an asymptotic statement, and the finitely many small $n$ are absorbed in \cref{cor:95} via $F_n\le n(n-1)/3$. (c)~The role of the ceiling in $R$, namely $2^{-R}\le n^{-4}$, is stated where \eqref{eq:bad} uses it. (d)~Simplicity of $K_n$ is stated as a hypothesis and the two places where it is used are named (\cref{rem:simple}). (e)~In \cref{lem:hit} the distinction between the closing flag (read off $P\cup Q_o$) and the forbidden flag of the exposure lemma (read off $J_o\cup Q_o$) is made explicit. (f)~The coupling of \cref{lem:model} is written with an explicit twist bit and relabelling map in place of the writeup's ``immaterial fixed adjustment''. (g)~\cref{lem:short} and the trace invariants are spelled out as separate statements. (h)~Citations were added for the source paper, the companion note \cite{Note02} on the orientable model, and two textbooks \cite{MT01,GT87} for embedding schemes and the orientability criterion; the writeup cited nothing. Repairs (a)--(e) are marked where they occur. No other mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it to obtain exactly that: is the proof correct, and is the result new?
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:model}
+\lemmodel*
+\begin{proof}
+\emph{The ribbon graph.} Represent each vertex $u$ by a closed disc and each edge $e=uv$ by a band. The band of $e$ is attached to the disc of $u$ along a short arc of its boundary and likewise at $v$; the two corners where the band's two sides meet the boundary of the disc of $u$ are the two flags $(u,v,0)$ and $(u,v,1)$, paired by $J_u$. Fix once and for all, for every incidence, which corner is labelled $0$ and which $1$, by the orientation of the disc of $u$ (say, $0$ is the corner met first when the boundary circle is traversed counter-clockwise). The cyclic order $\pi_u$ prescribes the order of the $d$ attachment arcs along the boundary circle of the disc of $u$; between two consecutive attachments there is an arc of free boundary, which joins the corner $1$ of one incidence to the corner $0$ of the next. These $d$ free arcs define a perfect matching $V^{\pi}_u$ on the flags at $u$, and $J_u\cup V^{\pi}_u$ is the boundary circle, a single $2d$-cycle: $V^\pi_u\in\cH_d$. The band of $e=uv$ has two sides; each side joins a corner at $u$ to a corner at $v$. Whether side $s$ at $u$ is side $s$ or side $1-s$ at $v$ depends on whether the band is twisted relative to the two disc orientations, so the band matching is
+\[
+(u,v,s)\longleftrightarrow(v,u,s\oplus\tau_e),\qquad\tau_e\in\{0,1\},
+\]
+where $\tau_e=\tau_e(\varepsilon(e))$ is a bijective function of the sign $\varepsilon(e)$; the correspondence between $\varepsilon(e)=-1$ and $\tau_e=1$ may depend on the convention chosen for the disc orientations, but for each edge it is a fixed bijection $\{\pm1\}\to\{0,1\}$. The boundary of the ribbon graph, i.e.\ the union of the face boundaries of the embedding, is the union of the free arcs (the $V$-edges) and the band sides (the $A_\tau$-edges), so the faces are exactly the cycles of $A_\tau\cup V^\pi$, a face of length $k$ (in edge-sides) being a cycle with $k$ band sides and $k$ free arcs.
+
+\emph{Randomising.} Since $\varepsilon(e)$ is fair and independent across edges and of $\pi$, so is $\tau_e$. Let $(b_{u,e})$ be independent fair bits indexed by the \emph{incidences} $(u,e)$, independent of $\pi$, and set $\tau'_e=b_{u,e}\oplus b_{v,e}$ for $e=uv$. Then $(\tau'_e)_e$ are independent fair bits independent of $\pi$, so $(\pi,\tau')$ has the law of $(\pi,\tau)$ and it suffices to prove the lemma for $(\pi,\tau')$. Define the relabelling $\varphi(u,v,s)=(u,v,s\oplus b_{u,uv})$, a bijection on flags that preserves each $J_u$ and each vertex. It maps the $A_{\tau'}$-edge $\{(u,v,s),(v,u,s\oplus\tau'_e)\}$ to $\{(u,v,s\oplus b_{u,e}),(v,u,s\oplus\tau'_e\oplus b_{v,e})\}=\{(u,v,s'),(v,u,s')\}$ with $s'=s\oplus b_{u,e}$, an edge of the canonical $A$; and it maps $V^\pi_u$ to $V_u:=\varphi(V^\pi_u)$, which lies in $\cH_d$ because $\varphi$ preserves $J_u$. Hence $\varphi$ is a bijection from the cycles of $A_{\tau'}\cup V^\pi$ onto the cycles of $A\cup V$, preserving lengths.
+
+\emph{Uniformity.} $V_u$ is a function of $(\pi_u,(b_{u,e})_{e\ni u})$, which are independent across $u$; so the $V_u$ are independent. The pair $(\pi_u,(b_{u,e})_e)$ is uniform over $(d-1)!\,2^d$ values. Given $W\in\cH_d$, the $2d$-cycle $J_u\cup W$ can be traversed in two directions; a direction determines the cyclic order in which the incidences are met and, for each incidence, which of its two flags is met first, i.e.\ it determines a pair $(\pi_u,(b_{u,e})_e)$, and the two directions give two different pairs (the flag met first at each incidence becomes the flag met second, so all $d$ bits are complemented; for $d\ge3$ the cyclic order is reversed as well). Conversely a pair $(\pi_u,b_u)$ determines the traversal and hence $W$. So the map $(\pi_u,b_u)\mapsto V_u$ is exactly two-to-one onto $\cH_d$: $V_u$ is uniform on $\cH_d$ and $|\cH_d|=(d-1)!\,2^d/2=2^{d-1}(d-1)!$.
+\end{proof}
+
+\phantomsection\label{pf:exposure}
+\lemexposure*
+\begin{proof}
+$J_u\cup Q\subseteq J_u\cup V_u$ is a subgraph of a cycle, hence a disjoint union of paths (no cycles, since $Q\ne V_u$ when $r\le d-1$, and a proper subgraph of a cycle contains no cycle). It has $2d$ vertices and $d+r$ edges, so it has $2d-(d+r)=d-r$ components. Every flag has degree one in $J_u$, so the endpoints of the paths are exactly the flags of degree one, i.e.\ those not matched by $Q$; there are $2(d-r)$ of them.
+
+Conditionally on $\{Q\subseteq V_u\}$, $V_u$ is uniform on $\cH_d(Q)=\{W\in\cH_d:Q\subseteq W\}$. Contract each path of $J_u\cup Q$ to a single edge between its two endpoints; this produces a set of $2(d-r)$ flags with a perfect matching $J'$ (the contracted paths), and $W\mapsto W\setminus Q$ is a bijection from $\cH_d(Q)$ onto $\{W'\text{ perfect matching on the endpoints}:J'\cup W'\text{ is one }2(d-r)\text{-cycle}\}\cong\cH_{d-r}$, because $J_u\cup W$ is a single cycle iff $J'\cup(W\setminus Q)$ is. Hence $|\cH_d(Q)|=|\cH_{d-r}|$.
+
+Let $x$ be unmatched, with path $P_x$ and other endpoint $x'$. If $r=d-1$ there is one path and $W\setminus Q=\{xx'\}$ is forced: (ii). If $r\le d-2$, the mate $y$ of $x$ in $W\in\cH_d(Q)$ is an unmatched flag other than $x$; $y=x'$ is impossible since $P_x+xx'$ would be a cycle in $J_u\cup W$ shorter than $2d$. For any of the other $2(d-r)-2=2(d-r-1)$ unmatched flags $y$, adding $xy$ merges $P_x$ with the path $P_y\ne P_x$ into one path, giving $r+1$ exposed pairs and no cycle, so the number of $W\in\cH_d(Q)$ with $xy\in W$ is $|\cH_d(Q\cup\{xy\})|=|\cH_{d-r-1}|$, independent of $y$. Hence $y$ is uniform over these $2(d-r-1)$ flags: (i).
+
+For adaptive exposure: let the $j$-th query flag $x_j$ be a function of $(x_1,y_1,\dots,x_{j-1},y_{j-1})$ and of a random variable $Z$ independent of $V_u$, where $y_i$ is the revealed mate of $x_i$. Conditionally on $Z$ and on the revealed pairs $Q=\{x_1y_1,\dots,x_{j-1}y_{j-1}\}$, the law of $V_u$ is its law given $\{Q\subseteq V_u\}$ (the query sequence is a deterministic function of $Q$ and $Z$, and $Z$ is independent of $V_u$), to which the first part applies.
+\end{proof}
+
+\phantomsection\label{pf:hit}
+\lemhit*
+\begin{proof}
+Reveal $V_u$ for every $u\ne o$ and consider the graph $\Gamma=A\cup\bigcup_{u\ne o}V_u$ on all flags. A flag not at $o$ has degree two in $\Gamma$ (one $A$-edge, one $V$-edge) and a flag at $o$ has degree one (its $A$-edge). Hence every component of $\Gamma$ is a cycle, containing no flag at $o$, or a path whose two endpoints are flags at $o$; these endpoints are distinct, being the two ends of a path. Adding $V_o$ leaves the cycles untouched, and they are exactly the faces avoiding $o$. Let $P$ be the matching on the $2d$ flags at $o$ pairing the two endpoints of each path; since every flag at $o$ is the endpoint of exactly one path, $P$ is a perfect matching. Contracting each path of $\Gamma$ to its $P$-edge is a bijection between the cycles of $A\cup V$ through $o$ and the cycles of $P\cup V_o$, so $\Fhit$ is the number of cycles of $P\cup V_o$. By independence of the $V_u$, $V_o$ is uniform on $\cH_d$ conditionally on $P$.
+
+Reveal $V_o$ pair by pair: at step $r=0,1,\dots,d-1$, with $Q_o$ the $r$ pairs revealed so far, pick any flag $x$ at $o$ unmatched by $Q_o$ and reveal its mate $y$. In the graph $P\cup Q_o$ every flag has degree one or two, so its components are cycles (whose flags are all matched by $Q_o$) and paths whose endpoints are the unmatched flags; $x$ is an endpoint of a path $\tilde P_x$ with other endpoint $x''\ne x$. Adding the edge $xy$ creates a cycle iff $y=x''$; otherwise it merges $\tilde P_x$ with the path $\tilde P_y$. Every cycle of $P\cup V_o$ is created at exactly one step (the step at which its last $V_o$-pair is revealed), so $\Fhit=\sum_{r=0}^{d-1}\Ind\{\text{step $r$ creates a cycle}\}$.
+
+At step $r\le d-2$, by \cref{lem:exposure}(i) (applied adaptively, with $P$ as the independent randomness $Z$), $y$ is uniform over $2(d-r-1)$ flags, namely the unmatched flags other than $x$ and the far endpoint $x'$ of the path of $x$ in $J_o\cup Q_o$. The flags $x'$ and $x''$ are defined by different path structures and need not coincide. If $x''=x'$, the event $y=x''$ has probability $0$; if $x''\ne x'$, then $x''$ is an unmatched flag other than $x$ and $x'$, so it is one of the $2(d-r-1)$ equally likely candidates and the event $y=x''$ has probability exactly $1/(2(d-r-1))$. In both cases $\Pr(\text{step $r$ creates a cycle}\mid\text{past})\le1/(2(d-r-1))$. At step $r=d-1$ there is one unmatched pair $\{x,x''\}$ left and the forced mate is $x''$, creating exactly one cycle. Therefore
+\[
+\E\Fhit\le\sum_{r=0}^{d-2}\frac1{2(d-r-1)}+1=1+\frac12\sum_{j=1}^{d-1}\frac1j=1+\tfrac12H_{d-1}=1+\tfrac12H_{n-2}.\qedhere
+\]
+\end{proof}
+
+\phantomsection\label{pf:trace}
+\begin{lemma}[Trace invariants]\label{lem:trace}
+In the trace of \cref{sec:avoid}, as long as the face has not closed: (a) the revealed $V$-pairs together with the $A$-edges $a_0b_0$ and $z_ia_i$ form a single path from $b_0$ to the active flag $a_t$, all of whose flags are distinct; (b) the mate of $a_t$ has not been revealed, so \cref{lem:exposure} applies to the query at $a_t$, the revealed pairs at that vertex being those on the path; (c) if the query returns $z\ne b_0$ then $z$ is not on the path. Moreover, if the trace closes after $k$ queries the face of $a_0$ has length $k$, and if the face of $a_0$ avoids $o$ the trace closes.
+\end{lemma}
+\begin{proof}
+By induction on $t$. Initially the path is $b_0\,A\,a_0$. Suppose (a) holds after $t$ queries. The flag $a_t$ is an endpoint of the path and its only path-edge is an $A$-edge, so its $V$-mate has not been revealed: (b). The revealed pairs at the vertex of $a_t$ are $V$-edges of the path (the trace reveals nothing else), and every revealed pair is on the path, so \cref{lem:exposure} applies with $Q$ equal to the path's $V$-pairs at that vertex; adaptivity is legitimate because the query flag is a function of the pairs revealed so far and of the other, independent, local matchings. Let $z$ be the revealed mate. If $z$ were an interior flag of the path it would already have $V$-degree one on the path, which is impossible as $V$ is a matching; $z\ne a_t$; so $z$ is on the path only if $z=b_0$: (c). If $z\ne b_0$, then $a_{t+1}=A(z)$ is not on the path either (its $A$-partner $z$ is not), and the path extends by $a_t\,V\,z\,A\,a_{t+1}$: (a) for $t+1$. If $z=b_0$ after $k$ queries, the path closes into a cycle of $A\cup V$ with $k$ $V$-edges and $k$ $A$-edges, which is the face of $a_0$, of length $k$. Finally, the face of $a_0$ is the component of $a_0$ in $A\cup V$; the trace follows it flag by flag, so if that face contains no flag at $o$ the trace never stops at $o$ and, the face being finite, closes.
+\end{proof}
+
+\phantomsection\label{pf:escape}
+\lemescape*
+\begin{proof}
+Let $t<T$ with $a_t$ at $u\ne o$, and let $Q_u$ be the pairs revealed at $u$, $r_u=r_u(t)=|Q_u|$. Consider the two flags $(u,o,0),(u,o,1)$ at $u$ on the edge $uo$. Neither is on the trace path: if $(u,o,s)=a_i$ for some $i\ge1$, then $z_i=A(a_i)=(o,u,s)$ would be at $o$, but $z_i$ is at the vertex of $a_{i-1}$, so $a_{i-1}$ would be at $o$, contradicting $t<T$; $(u,o,s)=a_0$ or $b_0$ is impossible since $a_0\in S$; and if $(u,o,s)=z_i$ for some $i$, then $a_i=A(z_i)=(o,u,s)$ is at $o$ and the trace stopped after $i\le t$ queries, again contradicting $t<T$. Hence the pair $\{(u,o,0),(u,o,1)\}$ is a $J_u$-edge none of whose flags is matched by $Q_u$: an isolated path of $J_u\cup Q_u$, distinct from the path containing $a_t$. Two distinct paths give $d-r_u\ge2$, so $r_u\le d-2$ and \cref{lem:exposure}(i) applies: the mate $z$ of $a_t$ is uniform over $2(d-r_u-1)$ flags, which include $(u,o,0)$ and $(u,o,1)$ (unmatched, different from $a_t$, and not the far endpoint of $a_t$'s path). The trace moves to $o$ iff $z\in\{(u,o,0),(u,o,1)\}$ (then $a_{t+1}=(o,u,s)$; note $z\ne b_0$ as $b_0\notin\{(u,o,s)\}$), so
+\[
+p_o=\frac{2}{2(d-r_u-1)}=\frac1{d-1-r_u}=\frac1{n-2-r_u}\ \ge\ \frac1{n-2}.
+\]
+For $w\ne o$, the trace moves to $w$ iff $z\in\{(u,w,0),(u,w,1)\}$ and $z\ne b_0$; these are at most two flags, because $K_n$ has exactly one edge between $u$ and $w$, and each has probability at most $1/(2(d-r_u-1))$ of being $z$ (exactly that if admissible, $0$ otherwise). Hence $p_w\le2/(2(d-r_u-1))=p_o$.
+
+For \eqref{eq:survival}: on $\{T>t\}$ the active flag is at some $u\ne o$, and the next query terminates the trace (moves to $o$ or closes) with conditional probability at least $p_o\ge1/(n-2)$, so $\Pr(T>t+1\mid\cF_t)\le q\,\Ind_{\{T>t\}}$. Taking expectations and inducting, $\Pr(T>t)\le q^t$.
+\end{proof}
+
+\phantomsection\label{pf:congestion}
+\lemcongestion*
+\begin{proof}
+Set $M_t=2^{N_w(t)}$ if $t<T$ and $M_t=0$ if $t\ge T$. On $\{t\ge T\}$, $M_{t+1}=M_t=0$. On $\{t<T\}$, the query $t+1$ has three mutually exclusive terminal outcomes and one continuing outcome: it moves the trace to $o$ (probability $p_o$; then $T=t+1$ and $M_{t+1}=0$), it closes the face (probability $p_{\mathrm{cl}}$; then $M_{t+1}=0$), it moves the trace to $w$ (probability $p_w$; then $N_w(t+1)=N_w(t)+1$ and $M_{t+1}=2M_t$), or it moves the trace to some vertex other than $o$ and $w$ (then $M_{t+1}=M_t$). Moving to $o$ and closing are disjoint because closing means $z=b_0$, which is not at $o$, while moving to $o$ means $z$ is on the edge $uo$. Hence
+\[
+\E[M_{t+1}\mid\cF_t]=M_t\bigl(2p_w+(1-p_o-p_{\mathrm{cl}}-p_w)\bigr)=M_t(1+p_w-p_o-p_{\mathrm{cl}})\le M_t
+\]
+by \eqref{eq:po}. So $(M_t)$ is a non-negative supermartingale, with $M_0=2^{N_w(0)}\le2$ ($N_w(0)=1$ if $a_0$ is at $w$, else $0$). Let $\tau=\min\{t:N_w(t)\ge L\text{ or }t\ge T\}$; this is a stopping time bounded by $n(n-1)+1$, since each query reveals a new $V$-pair and there are $n(n-1)$ of them. By optional stopping $\E M_\tau\le\E M_0\le2$. On the event $\{N_w(t)\ge L$ for some $t<T\}$, at the first such $t$ we have $t<T$ and $\tau=t$, so $M_\tau=2^{N_w(t)}\ge2^L$. By Markov's inequality the event has probability at most $2\cdot2^{-L}=2^{1-L}$.
+\end{proof}
+
+\phantomsection\label{pf:bad}
+\lembad*
+\begin{proof}
+Suppose the face of $a_0$ avoids $o$ and is bad. By \cref{lem:trace} the trace closes at some $T=k$, and the $V$-pairs of the face are $\{a_iz_{i+1}\}$, $0\le i\le k-1$, the pair $a_iz_{i+1}$ lying at the vertex of $a_i$. Badness means that for some vertex $w$ at least $R+1$ of these pairs are at $w$, i.e.\ $N_w(k-1)=|\{i\le k-1:a_i\text{ at }w\}|\ge R+1$, and $k-1<T$. Since the face avoids $o$, $w\ne o$. By \cref{lem:congestion} with $L=R+1$ and a union bound over the $n-1$ vertices $w\ne o$,
+\[
+\Pr(a_0\text{ lies in a bad avoiding face})\le(n-1)2^{-R}.
+\]
+A face of length $k$ has $2k$ flags, all in $S$ if it avoids $o$, so counting each bad avoiding face once through its flags,
+\[
+B=\sum_{a\in S}\frac{\Ind\{a\text{ lies in a bad avoiding face}\}}{2L(a)}\le\frac12\sum_{a\in S}\Ind\{a\text{ lies in a bad avoiding face}\},
+\]
+where $L(a)\ge1$ is the length of the face of $a$. Taking expectations and using \eqref{eq:S},
+\[
+\E B\le\tfrac12\cdot2(n-1)(n-2)\cdot(n-1)2^{-R}=(n-1)^2(n-2)2^{-R}\le n^32^{-R}\le n^3n^{-4}=\frac1n,
+\]
+where $2^{-R}\le n^{-4}$ because $R=\lceil4\log_2n\rceil\ge4\log_2n$.
+\end{proof}
+
+\phantomsection\label{pf:good}
+\lemgood*
+\begin{proof}
+Fix $a_0\in S$ and $k\ge2$. Define the events
+\begin{align*}
+\mathcal A&=\{T>k-2\}\cap\{r_u(k-2)\le R\text{ for every vertex }u\}\in\cF_{k-2},\\
+\mathcal B&=\{T>k-1\}\cap\{a_{k-1}\text{ is at }w_0\}\in\cF_{k-1},\\
+\mathcal C&=\{\text{query $k$ reveals }z=b_0\}.
+\end{align*}
+Let $\mathcal G_k$ be the event that $a_0$ lies in a good avoiding face of length $k$. On $\mathcal G_k$ the trace closes at $T=k$ (\cref{lem:trace}), so $T>k-2$ and $T>k-1$; the loads are non-decreasing in $t$ and the final loads $r_u(k)$ are the numbers of $V$-pairs of the face at $u$, at most $R$ by goodness, so $r_u(k-2)\le R$ for all $u$; query $k$ reveals $b_0$, so $\mathcal C$ holds; and $a_{k-1}$ is the flag whose mate is $b_0$, hence is at the vertex $w_0$ of $b_0$. Thus $\mathcal G_k\subseteq\mathcal A\cap\mathcal B\cap\mathcal C$, and it suffices to bound $\Pr(\mathcal A\cap\mathcal B\cap\mathcal C)$.
+
+\emph{Step 1: $\Pr(\mathcal C\mid\cF_{k-1})\le\frac1{2D}$ on $\mathcal A\cap\mathcal B$.} On $\mathcal A\cap\mathcal B$ the active flag $a_{k-1}$ is at $w_0$. Query $k-1$ was made at the vertex $u$ of $a_{k-2}$, and $a_{k-1}=A(z_{k-1})$ is at the other end of the edge on which $z_{k-1}$ lies, so $u\ne w_0$: the active vertex changes at every step. Hence query $k-1$ did not change the load at $w_0$, and $r_{w_0}(k-1)=r_{w_0}(k-2)\le R$ by $\mathcal A$. As $R\le d-2$ (this is $D\ge1$), \cref{lem:exposure}(i) applies at $a_{k-1}$ (\cref{lem:trace}(b)): the revealed mate is uniform over $2(d-r_{w_0}(k-1)-1)\ge2(d-R-1)=2D$ flags, of which $b_0$ is at most one. So $\Pr(\mathcal C\mid\cF_{k-1})\le1/(2D)$ on $\mathcal A\cap\mathcal B$.
+
+\emph{Step 2: $\Pr(\mathcal B\mid\cF_{k-2})\le\frac1D$ on $\mathcal A$.} On $\mathcal A$ the trace is alive after $k-2$ queries, with active flag $a_{k-2}$ at some $u\ne o$ and $r_u(k-2)\le R\le d-2$. By \cref{lem:exposure}(i) the mate $z_{k-1}$ is uniform over at least $2D$ flags. The event $\mathcal B$ requires $z_{k-1}\in\{(u,w_0,0),(u,w_0,1)\}$ (so that $a_{k-1}=A(z_{k-1})$ is at $w_0$), at most two flags since $K_n$ is simple (and no flags at all if $u=w_0$). So $\Pr(\mathcal B\mid\cF_{k-2})\le2/(2D)=1/D$ on $\mathcal A$.
+
+\emph{Step 3: $\Pr(\mathcal A)\le q^{k-2}$.} $\mathcal A\subseteq\{T>k-2\}$ and \eqref{eq:survival}.
+
+\emph{Chaining.} Since $\mathcal A\in\cF_{k-2}$ and $\mathcal B\in\cF_{k-1}$,
+\begin{align*}
+\Pr(\mathcal A\cap\mathcal B\cap\mathcal C)
+&=\E\bigl[\Ind_{\mathcal A}\Ind_{\mathcal B}\Pr(\mathcal C\mid\cF_{k-1})\bigr]
+\le\frac1{2D}\,\E\bigl[\Ind_{\mathcal A}\Pr(\mathcal B\mid\cF_{k-2})\bigr]
+\le\frac1{2D}\cdot\frac1D\,\Pr(\mathcal A)\le\frac{q^{k-2}}{2D^2}.
+\end{align*}
+Note that Steps 1 and 2 bound conditional probabilities given the revealed history on events measurable with respect to that history; nothing is conditioned on the eventual goodness of the face, which is not $\cF_{k-1}$-measurable. This is the argument the original writeup summarised as ``discard continuations whose histories cease to satisfy the load restriction''.
+\end{proof}
+
+\phantomsection\label{pf:avoid}
+\propavoid*
+\begin{proof}
+Every good avoiding face of length $k$ has $2k$ flags, all in $S$, so
+\[
+G_k=\frac1{2k}\sum_{a\in S}\Ind\{a\text{ lies in a good avoiding face of length }k\}
+\]
+and, by \eqref{eq:S} and \cref{lem:good},
+\[
+\E G_k\le\frac{2(n-1)(n-2)}{2k}\cdot\frac{q^{k-2}}{2D^2}=\frac{(n-1)(n-2)}{2D^2}\,\frac{q^{k-2}}k\qquad(k\ge2).
+\]
+By \cref{lem:short}, $G_k=0$ for $k\le2$. Every avoiding face is good or bad, so $\Favoid=\sum_{k\ge3}G_k+B$ and \cref{lem:bad} gives the first inequality in \eqref{eq:avoid}. For the series, with $0<q<1$,
+\[
+\sum_{k=3}^\infty\frac{q^{k-2}}k=q^{-2}\sum_{k=3}^\infty\frac{q^k}k=q^{-2}\Bigl(-\ln(1-q)-q-\frac{q^2}2\Bigr)=q^{-2}\Bigl(\ln(n-2)-q-\frac{q^2}2\Bigr),
+\]
+since $1-q=1/(n-2)$.
+
+For \eqref{eq:avoid-asymp}: $q^{-2}=(1-\frac1{n-2})^{-2}=1+O(1/n)$ and $\ln(n-2)=\ln n+O(1/n)$, so the series equals $\ln n-1-\frac12+O(\ln n/n)=\ln n-\frac32+O(\ln n/n)$. Since $R=O(\ln n)$, $\frac{(n-1)(n-2)}{2(n-2-R)^2}=\frac12\cdot\frac{n-1}{n-2}\cdot\bigl(1-\frac R{n-2}\bigr)^{-2}=\frac12+O(\ln n/n)$. Multiplying, $\E\Favoid\le\bigl(\frac12+O(\frac{\ln n}n)\bigr)\bigl(\ln n-\frac32+O(\frac{\ln n}n)\bigr)+\frac1n=\frac12\ln n-\frac34+O\bigl(\frac{(\ln n)^2}n\bigr)$.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+Let $n\ge21$, so $D\ge1$ (\cref{eq:RD} and the remark after it). By \cref{lem:model} we may compute $\E F_n$ in the flag model; fix a vertex $o$ and write $F_n=\Fhit+\Favoid$. \Cref{lem:hit} gives $\E\Fhit\le1+\frac12H_{n-2}$ and \cref{prop:avoid} gives \eqref{eq:avoid}; adding them is \eqref{eq:finite}. For \eqref{eq:asymp}, $H_{n-2}=\ln(n-2)+\gamma+O(1/n)=\ln n+\gamma+O(1/n)$, so $\E\Fhit\le\frac12\ln n+1+\frac\gamma2+O(1/n)$; adding \eqref{eq:avoid-asymp},
+\[
+\E F_n\le\ln n+1-\frac34+\frac\gamma2+O\!\Bigl(\frac{(\ln n)^2}n\Bigr)=\ln n+\frac14+\frac\gamma2+O\!\Bigl(\frac{(\ln n)^2}n\Bigr).\qedhere
+\]
+\end{proof}
+
+\phantomsection\label{pf:cond}
+\propcond*
+\begin{proof}
+An embedding scheme $(\pi,\varepsilon)$ of a connected graph $G$ is orientable if and only if the signature $\varepsilon$ can be made all-positive by \emph{switchings} (replacing $\varepsilon$ by $\varepsilon\cdot\sigma(u)\sigma(v)$ on each edge $uv$, for some $\sigma\colon V(G)\to\{\pm1\}$, which corresponds to reversing the rotations at the vertices with $\sigma=-1$), equivalently iff every cycle of $G$ carries an even number of negative edges \cite{MT01,GT87}. The orientable signatures are therefore $\{e=uv\mapsto\sigma(u)\sigma(v)\}$ for $\sigma\in\{\pm1\}^{V(G)}$; for connected $G$ the map $\sigma\mapsto\varepsilon_\sigma$ is exactly two-to-one ($\sigma$ and $-\sigma$ give the same $\varepsilon$, and $\varepsilon_\sigma=\varepsilon_{\sigma'}$ forces $\sigma\sigma'$ constant on the connected graph), so there are $2^{n-1}$ of them among the $2^{|E(G)|}$ signatures. For $K_n$, $|E|=\binom n2$ and the signature is uniform and independent of $\pi$, so
+\[
+p_n=\Pr(\text{orientable})=2^{\,n-1-\binom n2}=2^{-(n-1)(n-2)/2},
+\]
+independently of $\pi$. Since $F_n\ge0$, $\E[F_n\mid\text{non-or.}]=\E[F_n\Ind_{\text{non-or.}}]/(1-p_n)\le\E F_n/(1-p_n)$, and $1/(1-p_n)=1+O(2^{-n^2/3})$ does not affect \eqref{eq:asymp}.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup. Its section and equation numbers refer to that writeup, not to this note: the writeup's (1) is \cref{lem:exposure}(i), its (2) is \cref{lem:hit}, (3)--(4) are \eqref{eq:po}, (5) is \eqref{eq:survival}, (6) is \eqref{eq:congestion}, (7) is \eqref{eq:RD}, (8) is \eqref{eq:S}, (9)--(10) are \cref{lem:bad} and \eqref{eq:bad}, (11) is \eqref{eq:good}, (12)--(15) are \cref{prop:avoid}, and its §2, §3, §4 are our \cref{sec:hit,sec:avoid}. The items it lists under ``Caveats'' are the ones repaired here (see \cref{sec:provenance}). The scripts it mentions are in \texttt{verification\_astra/\allowbreak scripts/\allowbreak 2211.01032\_\_03/}. The text is unchanged; only line-breaking hints were inserted for typesetting. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+% wrapref.lua (this folder) copies .build/referee.tex, generated by build.py from
+% verification_astra/2211.01032__03.md, to .build/referee-wrapped.tex, inserting
+% line-break opportunities (\url, \allowbreak) and nothing else.
+\directlua{dofile("wrapref.lua")}
+\IfFileExists{.build/referee-wrapped.tex}{\input{.build/referee-wrapped.tex}}{\input{.build/referee.tex}}
+
+\begin{thebibliography}{9}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{CHMMS} J.~Campion Loth, K.~Halasz, T.~Masařík, B.~Mohar and R.~Šámal, Random embeddings of graphs: the expected number of faces in most graphs is logarithmic, \href{https://arxiv.org/abs/2211.01032}{arXiv:2211.01032} (v3, April 2025); extended abstract in \emph{Proc. SODA 2024}, 1177--1195. Conjecture~9.5 and the definition of the non-orientable random embedding are in Section~9.
+\bibitem{Note02} Graph Theory AI project, The expected number of faces of a random embedding of a dense simple graph is $\Theta(\log n)$, machine-generated note on Conjecture~9.3 of \cite{CHMMS}, catalog id \texttt{2211.01032\_\_02}, \texttt{to\_review/2211.01032\_\_02\_\_random-embeddings-expected-faces-Theta-log-n\_\_note.pdf} in \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{this repository} (September 2026); referee report in \texttt{verification/2211.01032\_\_02.md}.
+\bibitem{MT01} B.~Mohar and C.~Thomassen, \emph{Graphs on Surfaces}, Johns Hopkins University Press, 2001, Chapter~3 (embedding schemes, face tracing, orientability).
+\bibitem{GT87} J.~L.~Gross and T.~W.~Tucker, \emph{Topological Graph Theory}, Wiley, 1987 (reprinted Dover, 2001), Chapter~3 (rotation systems and their non-orientable generalisation).
+\end{thebibliography}
+
+\end{document}

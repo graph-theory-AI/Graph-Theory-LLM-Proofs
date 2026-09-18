@@ -1,0 +1,2 @@
+checked 223 graphs on n=10
+ALL CHECKS PASSED

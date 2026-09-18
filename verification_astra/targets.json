@@ -1,0 +1,285 @@
+{
+ "generated": "2026-09-17",
+ "n": 31,
+ "targets": [
+  {
+   "id": "1912.01570__00",
+   "leg": "attacks_arxiv_astra",
+   "verdict": "disproved",
+   "confidence": "high",
+   "one_line": "A 12-vertex planar graph has fvs = 5 and fp = 2; a related family has fvs/fp tending to 3.",
+   "caveats": "Uses the stated vertex-disjoint, planar-embedding definition; no claim of minimality or literature priority.",
+   "dir": "attacks_arxiv_astra/1912.01570__00"
+  },
+  {
+   "id": "a_generalization_of_vizings_theorem",
+   "leg": "attacks_opg",
+   "verdict": "disproved",
+   "confidence": "high",
+   "one_line": "A probabilistic construction gives a simple 100-uniform hypergraph with maximum 99-codegree at most 200 that requires at least 451 colors, contradicting the proposed bound of 299.",
+   "caveats": "Nonconstructive counterexamples of very large order; no claim of literature priority or resolution of the small-uniformity cases.",
+   "dir": "attacks_opg/a_generalization_of_vizings_theorem"
+  },
+  {
+   "id": "chromatic_number_of_random_lifts_of_complete_graphs",
+   "leg": "attacks_opg",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "A random h-lift of K_5 has chromatic number 3 asymptotically almost surely.",
+   "caveats": "Novelty relative to the full cited literature has not been independently checked.",
+   "dir": "attacks_opg/chromatic_number_of_random_lifts_of_complete_graphs"
+  },
+  {
+   "id": "covering_powers_of_cycles_with_equivalence_subgraphs",
+   "leg": "attacks_opg",
+   "verdict": "disproved",
+   "confidence": "high",
+   "one_line": "Noncomplete powers of cycles have equivalence covering number \u0398(log(k+1)), contradicting the proposed \u03a9(k) lower bound.",
+   "caveats": "Bibliographic novelty is unverified; an exact formula is obtained when k+1 divides n, but not for every n.",
+   "dir": "attacks_opg/covering_powers_of_cycles_with_equivalence_subgraphs"
+  },
+  {
+   "id": "finding_k_edge_outerplanar_graph_embeddings",
+   "leg": "attacks_opg",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "A polynomial-time SPQR dynamic program, using a two-bin scheduling recurrence at parallel nodes, computes a minimum edge-outerplanar embedding.",
+   "caveats": "Uses the standard SPQR decomposition theorem; novelty and current literature status have not been independently checked.",
+   "dir": "attacks_opg/finding_k_edge_outerplanar_graph_embeddings"
+  },
+  {
+   "id": "geodesic_cycles_and_tuttes_theorem",
+   "leg": "attacks_opg",
+   "verdict": "disproved",
+   "confidence": "high",
+   "one_line": "The eight-vertex graph obtained by inserting a degree-three vertex into every face of a tetrahedron is a counterexample.",
+   "caveats": "Peripheral has its standard induced, vertex-nonseparating meaning; bibliographical novelty has not been checked.",
+   "dir": "attacks_opg/geodesic_cycles_and_tuttes_theorem"
+  },
+  {
+   "id": "imbalance_conjecture",
+   "leg": "attacks_opg",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "A truncated-tail inequality for edge imbalances implies every Erd\u0151s\u2013Gallai inequality and proves the conjecture.",
+   "caveats": "The argument is self-contained apart from the standard Erd\u0151s\u2013Gallai criterion; publication novelty has not been checked.",
+   "dir": "attacks_opg/imbalance_conjecture"
+  },
+  {
+   "id": "melnikovs_valency_variety_problem",
+   "leg": "attacks_opg",
+   "verdict": "disproved",
+   "confidence": "high",
+   "one_line": "A 37-vertex graph has chromatic number 3 and degree set {0,1,...,29}, making the proposed right-hand side equal to 3; moreover, 37 vertices is minimum.",
+   "caveats": "The counterexample has one isolated vertex, which the statement permits; bibliographic novelty has not been independently checked.",
+   "dir": "attacks_opg/melnikovs_valency_variety_problem"
+  },
+  {
+   "id": "mixing_circular_colourings_0",
+   "leg": "attacks_opg",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "For an n-vertex graph with an edge, the circular mixing threshold is rational, with reduced numerator at most n+1.",
+   "caveats": "Finite loopless graphs; edgeless graphs require the usual lower-end normalization. Integrality and attainment are not established.",
+   "dir": "attacks_opg/mixing_circular_colourings_0"
+  },
+  {
+   "id": "random_stable_roommates",
+   "leg": "attacks_opg",
+   "verdict": "partial",
+   "confidence": "medium",
+   "one_line": "A planted-matching and short-cycle argument gives the partial upper bound P_n = O(n^{-1/6} sqrt(log n)), but does not establish the conjectured exponent 1/4.",
+   "caveats": "The argument below is independent of the cited literature; novelty and the recent bibliographic claims in the supplied catalog have not been independently verified.",
+   "dir": "attacks_opg/random_stable_roommates"
+  },
+  {
+   "id": "three_chromatic_0_2_graphs",
+   "leg": "attacks_opg",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "Every finite 3-colourable (0,2)-graph is bipartite, so none has chromatic number exactly three.",
+   "caveats": "For finite simple undirected graphs; literature priority has not been independently checked.",
+   "dir": "attacks_opg/three_chromatic_0_2_graphs"
+  },
+  {
+   "id": "1602.05184__00",
+   "leg": "attacks_retry",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "Every 2-connected graph outside the three exceptional families satisfies \u03b7(G) \u2265 min{2n, 3n\u221210}, proving the conjecture for n \u2265 10.",
+   "caveats": "The proof is self-contained; novelty and current literature status have not been independently checked.",
+   "dir": "attacks_retry/1602.05184__00"
+  },
+  {
+   "id": "1812.09215__00",
+   "leg": "attacks_retry",
+   "verdict": "disproved",
+   "confidence": "high",
+   "one_line": "No: every such bijection satisfies n <= 1+(k-1)+...+(k-1)^(D-1), where D is its inverse Lipschitz constant, and linear 2-Lipschitz tree maps attain the resulting bound.",
+   "caveats": "Uses full-cube bijections and global k-junta locality; literature priority has not been independently checked.",
+   "dir": "attacks_retry/1812.09215__00"
+  },
+  {
+   "id": "1904.02595__00",
+   "leg": "attacks_retry",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "A tensor-rank bound retaining the lonely vertices, combined with rank-nonincreasing coordinate compression, proves the conjecture for all complete multipartite factors.",
+   "caveats": "Literature priority is unchecked; the proof below is self-contained.",
+   "dir": "attacks_retry/1904.02595__00"
+  },
+  {
+   "id": "2008.03587__00",
+   "leg": "attacks_retry",
+   "verdict": "disproved",
+   "confidence": "high",
+   "one_line": "A 59-vertex cactus requires at least three zombies, but adding one leaf produces a graph requiring exactly two.",
+   "caveats": "Uses the standard compulsory-move rules, with zombies moving before the survivor; no computational or literature-status claim is made.",
+   "dir": "attacks_retry/2008.03587__00"
+  },
+  {
+   "id": "2105.15195__00",
+   "leg": "attacks_retry",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "A prime-based reduction closes the interlacing gap and proves c_r = b_0^(r-1)/(2r) for every r >= 2.",
+   "caveats": "The intended denominator is 2r b_0-r; the literal 2^r b_0-r transcription is false for r >= 3.",
+   "dir": "attacks_retry/2105.15195__00"
+  },
+  {
+   "id": "2106.03261__00",
+   "leg": "attacks_retry",
+   "verdict": "partial",
+   "confidence": "high",
+   "one_line": "The Petersen graph is not countable: a twisted affine-polarity construction gives C4-free graphs with a positive Petersen prediction but no Petersen homomorphism.",
+   "caveats": "The full characterization and the dodecahedral case remain unresolved here; novelty has not been independently checked.",
+   "dir": "attacks_retry/2106.03261__00"
+  },
+  {
+   "id": "2106.03261__01",
+   "leg": "attacks_retry",
+   "verdict": "partial",
+   "confidence": "high",
+   "one_line": "An explicit asymptotically regular C4-free construction disproves Petersen countability; the dodecahedral case remains unresolved here.",
+   "caveats": "The dodecahedral case is not settled, and literature priority for the Petersen construction has not been checked.",
+   "dir": "attacks_retry/2106.03261__01"
+  },
+  {
+   "id": "2207.13651__00",
+   "leg": "attacks_retry",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "A half-interval decomposition of the vertex labels, followed by read-d H\u00f6lder bounds for uniform spacings, proves Property (*) throughout d = o(n/log n).",
+   "caveats": "Literature priority has not been independently checked; graphs are finite, simple, and undirected.",
+   "dir": "attacks_retry/2207.13651__00"
+  },
+  {
+   "id": "2211.01032__03",
+   "leg": "attacks_retry",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "A fixed-vertex decomposition proves E[F_n] <= ln n + O(1), with the stronger upper bound ln n + 1/4 + gamma/2 + o(1).",
+   "caveats": "The proof uses exactly the stated uniform-rotation, independent-fair-signature model; literature priority has not been checked.",
+   "dir": "attacks_retry/2211.01032__03"
+  },
+  {
+   "id": "2304.03567__03",
+   "leg": "attacks_retry",
+   "verdict": "partial",
+   "confidence": "high",
+   "one_line": "An explicit gap reduction shows that RFCPP has no polynomial-time o(log |V|)-approximation unless P=NP, and hence rules out constant-factor approximation under that assumption.",
+   "caveats": "This is a complexity-theoretic negative answer, not a proof of P\u2260NP; it uses standard NP-completeness of directed two-linkage, and novelty has not been independently checked.",
+   "dir": "attacks_retry/2304.03567__03"
+  },
+  {
+   "id": "2402.10782__01",
+   "leg": "attacks_retry",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "The path-FAS problem is NP-complete, whereas the maximum-degree-1 FAS problem is polynomial-time solvable.",
+   "caveats": "The proof uses the standard deletion definition of a feedback arc set; novelty against later source versions and follow-up literature has not been independently checked.",
+   "dir": "attacks_retry/2402.10782__01"
+  },
+  {
+   "id": "2506.08810__03",
+   "leg": "attacks_retry",
+   "verdict": "disproved",
+   "confidence": "high",
+   "one_line": "The five-vertex tournament C3[TT2,TT2,1] is a counterexample: every countable tournament avoiding it has a distinct locally finite perturbation that still avoids it.",
+   "caveats": "Perturbations are understood to be nonempty; the argument does not settle the weaker single-arc saturation question.",
+   "dir": "attacks_retry/2506.08810__03"
+  },
+  {
+   "id": "2507.10840__01",
+   "leg": "attacks_retry",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "An odd regular polygon with a central cluster yields point sets requiring at least 3n/4 - O(sqrt(n)) crossing-free paths.",
+   "caveats": "The optimal leading constant is not determined; paths have their standard graph-theoretic meaning.",
+   "dir": "attacks_retry/2507.10840__01"
+  },
+  {
+   "id": "2509.09031__00",
+   "leg": "attacks_retry",
+   "verdict": "disproved",
+   "confidence": "high",
+   "one_line": "A finite counterexample is obtained from a contraction- and subdivision-closed class whose branch vertices are pairwise joined by internally degree-two paths.",
+   "caveats": "Uses the standard coarsely onto definition of quasi-isometry; the class is not required to be closed under edge deletion.",
+   "dir": "attacks_retry/2509.09031__00"
+  },
+  {
+   "id": "2510.11311__04",
+   "leg": "attacks_retry",
+   "verdict": "disproved",
+   "confidence": "high",
+   "one_line": "The anti-directed C4 is not Eulerian-avoidable: Eulerian oriented graphs can have arbitrarily large minimum out-degree while having no anti-directed-C4-free subdigraph of minimum out-degree 2.",
+   "caveats": "The counterexamples have very large degree spread; this does not classify the other orientations of C4.",
+   "dir": "attacks_retry/2510.11311__04"
+  },
+  {
+   "id": "2603.02786__00",
+   "leg": "attacks_retry",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "Fixed-size CRT-generic prime blocks, together with clustered residue classes for their multiples and a tail decomposition, give m(n) ~ (4/3)n^(3/2)/log n.",
+   "caveats": "The argument is qualitative and does not extract a useful rate of convergence.",
+   "dir": "attacks_retry/2603.02786__00"
+  },
+  {
+   "id": "2603.02786__01",
+   "leg": "attacks_retry",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "The conjectured asymptotic follows from an exact packing lemma for arithmetic-progression blocks of differences and the dense-subset Green\u2013Tao theorem.",
+   "caveats": "Uses the established relative-density Green\u2013Tao theorem; novelty has not been checked against the full source paper.",
+   "dir": "attacks_retry/2603.02786__01"
+  },
+  {
+   "id": "2603.02786__04",
+   "leg": "attacks_retry",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "A random-composition fractional tiling, rounded by edge-colouring and a reservoir, proves M_k(n)=nk+o(k) for every fixed n.",
+   "caveats": "Uses the classical Pippenger\u2013Spencer edge-colouring theorem; no explicit convergence rate is obtained.",
+   "dir": "attacks_retry/2603.02786__04"
+  },
+  {
+   "id": "2604.09449__03",
+   "leg": "attacks_retry",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "The requested O(k^2) bound improves to O(k log(k+1)) for Hamilton cycles in both complete and complete bipartite graphs, including for bounded vector labels in an arbitrary norm.",
+   "caveats": "Optimality and priority relative to later revisions of the source paper are not established.",
+   "dir": "attacks_retry/2604.09449__03"
+  },
+  {
+   "id": "circular_colouring_the_orthogonality_graph",
+   "leg": "attacks_retry",
+   "verdict": "proved",
+   "confidence": "high",
+   "one_line": "A geometric odd-walk lemma excludes every homomorphism from O to a finite locally bipartite graph, and consequently proves \u03c7_c(O)=4.",
+   "caveats": "Literature priority has not been checked; the argument below is self-contained.",
+   "dir": "attacks_retry/circular_colouring_the_orthogonality_graph"
+  }
+ ]
+}

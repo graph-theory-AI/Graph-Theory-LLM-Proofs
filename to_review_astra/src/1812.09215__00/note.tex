@@ -1,0 +1,344 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\dH}{d_H}
+\newcommand{\Lip}{\operatorname{Lip}}
+\newcommand{\Dict}{\mathrm{Dictator}}
+\newcommand{\XOR}{\mathrm{XOR}}
+\newcommand{\sub}{\operatorname{sub}}
+\newcommand{\depth}{\operatorname{depth}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 1812.09215\_\_00 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{A Moore-type bound for local Dictator-to-XOR bijections\\ and a negative answer to a question of Johnston and Scott}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Johnston and Scott asked whether there is a bijection $\phi$ of $\{0,1\}^n$ mapping $\Dict$ to $\XOR$ which is $C$-Lipschitz, has every output bit depending on at most $k$ input bits, and whose inverse is $o(\log n/\log k)$-Lipschitz as $n,k\to\infty$. We show that there is not: every $k$-local bijection from $\Dict$ to $\XOR$ satisfies $n\le 1+(k-1)+\dots+(k-1)^{D-1}$, where $D$ is the Lipschitz constant of $\phi^{-1}$, with no hypothesis at all on the forward Lipschitz constant; in particular $D\ge 1+\log n/\log k$. The bound is exact: the linear $(k-1)$-ary tree maps of Rao and Shinkar attain it for every $n$ and every $k\ge2$, so the least possible inverse Lipschitz constant is $\lceil\log((k-2)n+1)/\log(k-1)\rceil$ for $k\ge3$ and $n$ for $k=2$, and nonlinear maps offer no improvement over linear ones. This sharpens Theorem~1 of Johnston and Scott from $\Omega(1/(k+\log C))$ to $\Omega(1/\log k)$ for general maps.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+
+Let $Q_n=\{0,1\}^n$ with the Hamming distance $\dH$, let $e_1,\dots,e_n$ be the unit vectors and $\oplus$ the coordinatewise sum modulo~$2$; for $x\in Q_n$ and $T\subseteq[n]$ write $x^T=x\oplus\bigoplus_{i\in T}e_i$ for $x$ with the coordinates in $T$ flipped. The two Boolean functions of interest are $\Dict(x)=x_1$ and $\XOR(x)=\bigoplus_{i=1}^n x_i$. Following Rao and Shinkar \cite{RS18} and Johnston and Scott \cite{JS21}, a bijection $\phi\colon Q_n\to Q_n$ is a \emph{mapping from $f$ to $g$} if $f(x)=g(\phi(x))$ for every $x$. Thus $\phi$ is a mapping from $\Dict$ to $\XOR$ precisely when
+\begin{equation}\label{eq:dx}
+\bigoplus_{a=1}^n\phi_a(x)=x_1\qquad\text{for every }x\in Q_n .
+\end{equation}
+The $j$-th output bit $\phi_j$ \emph{depends on} the $i$-th input bit if $\phi_j(x)\ne\phi_j(x\oplus e_i)$ for some $x$, and $\phi$ is \emph{$k$-local} if every output bit depends on at most $k$ input bits \cite{JS21}. Writing $P_a\subseteq[n]$ for the set of input bits on which $\phi_a$ depends, $k$-locality says $|P_a|\le k$ for all $a$, and $\phi_a(x)=\phi_a(x')$ whenever $x$ and $x'$ agree on $P_a$ (flip the coordinates outside $P_a$ one at a time). A map is \emph{$C$-Lipschitz} if $\dH(\phi(x),\phi(x'))\le C\,\dH(x,x')$; its Lipschitz constant $\Lip(\phi)$ is the least such $C$. Since any two points of $Q_n$ are joined by a geodesic of cube edges, $\Lip(\phi)=\max_{x,i}\dH(\phi(x),\phi(x\oplus e_i))$ is the maximum stretch of an edge, hence a nonnegative integer. Throughout, for a bijection $\phi$ we write
+\[
+D=\Lip(\phi^{-1}),
+\]
+and for integers $k\ge1$ and $d\ge1$ we put
+\begin{equation}\label{eq:N}
+N_k(d)=\sum_{r=0}^{d-1}(k-1)^r ,\qquad\text{so that }N_1(d)=1,\quad N_2(d)=d,\quad N_k(d)=\frac{(k-1)^d-1}{k-2}\ (k\ge3),
+\end{equation}
+with the convention $0^0=1$. Note that $N_k(d)$ is the number of vertices of the complete rooted $(k-1)$-ary tree of height $d-1$, so bounds of the form $n\le N_k(D)$ are Moore-type bounds.
+
+Rao and Shinkar \cite{RS18} observed that $\phi(x)=(\XOR(x),x_2,\dots,x_n)$ is a $2$-bi-Lipschitz mapping from $\Dict$ to $\XOR$ but not $k$-local for any $k<n$, that the $2$-local map $(x_1\oplus x_2,\dots,x_{n-1}\oplus x_n,x_n)$ has an inverse which is not even $(n-1)$-Lipschitz, and they constructed a linear $3$-local $2$-Lipschitz mapping from $\Dict$ to $\XOR$ with $O(\log n)$-Lipschitz inverse; their Question~6.1 asked whether a mapping could be both $O(1)$-local and $O(1)$-bi-Lipschitz. Johnston and Scott answered this in the negative:
+
+\begin{theorem}[{\cite[Theorem~1]{JS21}}]\label{thm:JS}
+Let $\phi\colon\{0,1\}^n\to\{0,1\}^n$ be a mapping from $\Dict$ to $\XOR$ which is $C$-Lipschitz and where each output bit depends on at most $k$ input bits. Then there is a constant $\delta=\Omega(1/(k+\log(C)))$ such that the inverse map $\phi^{-1}$ is not $\delta\log(n)$-Lipschitz. Furthermore, if $\phi$ is a linear mapping, then we may take $\delta=\Omega(1/\log(C+k))$.
+\end{theorem}
+
+Writing, as in \cite{JS21}, $\delta(C,k)$ for the best constant in \cref{thm:JS}, Rao and Shinkar's construction (a complete $(k-1)$-ary tree, \cite[Theorem~2 and Appendix~A]{RS18}) shows $\delta(2,k)=O(1/\log k)$, which \cref{thm:JS} matches for linear maps; for general maps it only gives $\delta(2,k)=\Omega(1/k)$. At the end of \cite[\S2]{JS21} the authors ask, in running prose:
+
+\begin{question}[{\cite[\S2]{JS21}}]\label{q:main}
+Does there exist a map $\phi$ from Dictator to XOR which is $C$-Lipschitz, where each output bit depends on at most $k$ input bits and such that $\phi^{-1}$ is $o(\log n / \log k)$-Lipschitz as $n, k \to \infty$?
+\end{question}
+
+The question is restated, still open, in Johnston's thesis \cite{Joh21}; the only citing paper we know of, Boczkowski and Shinkar \cite{BS23}, concerns average stretch and does not touch it. We answer \cref{q:main} in the negative, by a lower bound that uses neither the forward Lipschitz constant $C$ nor any linearity:
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+Let $n\ge1$, $k\ge1$, and let $\phi\colon Q_n\to Q_n$ be a $k$-local bijection from $\Dict$ to $\XOR$ with $D=\Lip(\phi^{-1})$. Then for every $y\in Q_n$ and every integer $d\ge1$,
+\begin{equation}\label{eq:pointwise}
+\#\bigl\{a\in[n]:\ \dH\bigl(\phi^{-1}(y),\phi^{-1}(y\oplus e_a)\bigr)\le d\bigr\}\ \le\ N_k(d).
+\end{equation}
+In particular, taking $d=D$,
+\begin{equation}\label{eq:moore}
+n\ \le\ N_k(D)=1+(k-1)+\dots+(k-1)^{D-1}.
+\end{equation}
+\end{restatable}
+
+The bound is attained, by a construction that is due to Rao and Shinkar \cite[Theorem~2 and Appendix~A]{RS18} and is reproduced in \cref{sec:sharp} for completeness.
+
+\begin{restatable}[Rao--Shinkar tree maps]{theorem}{thmsharp}\label{thm:sharp}
+Let $k\ge2$, $d\ge1$ and $1\le n\le N_k(d)$. There is a linear $k$-local bijection $\phi\colon Q_n\to Q_n$ from $\Dict$ to $\XOR$ with $\Lip(\phi)\le2$ and $\Lip(\phi^{-1})\le d$.
+\end{restatable}
+
+\begin{corollary}[Exact optimum]\label{cor:exact}
+Let $k\ge2$ and $n\ge1$. The least value of $\Lip(\phi^{-1})$ over all $k$-local bijections $\phi\colon Q_n\to Q_n$ from $\Dict$ to $\XOR$ is
+\begin{equation}\label{eq:Dmin}
+D_{\min}(n,k)=\min\{d\ge1:\ n\le N_k(d)\}=
+\begin{cases}
+n, & k=2,\\[2pt]
+\bigl\lceil \log((k-2)n+1)/\log(k-1)\bigr\rceil, & k\ge3,
+\end{cases}
+\end{equation}
+and it is attained by a linear map with $\Lip(\phi)\le2$. The same value is optimal if a forward Lipschitz bound $C\ge2$ is imposed, while no such bijection is $1$-Lipschitz when $n\ge2$. For $k=1$ no such bijection exists when $n\ge2$.
+\end{corollary}
+\begin{proof}
+If $\phi$ is as in the statement, \cref{thm:main} gives $n\le N_k(D)$, so $D\ge D_{\min}(n,k)$; \cref{thm:sharp} with $d=D_{\min}(n,k)$ provides a linear $\phi$ with $\Lip(\phi)\le2$ and $\Lip(\phi^{-1})\le D_{\min}(n,k)$, hence equality. By \cref{lem:C2} below, imposing $C\ge2$ excludes nothing and $C=1$ is impossible for $n\ge2$. For $k=2$, $N_2(d)=d$ gives $D_{\min}=n$. For $k\ge3$, $n\le N_k(d)$ is equivalent to $(k-2)n+1\le(k-1)^d$, i.e.\ to $d\ge\log((k-2)n+1)/\log(k-1)$, and this ratio is at least $1$ since $(k-2)n+1\ge k-1$. Finally $N_1(D)=1$ gives $n\le1$ when $k=1$.
+\end{proof}
+
+\begin{corollary}[Answer to \cref{q:main}]\label{cor:question}
+Let $k\ge2$. Every $k$-local bijection $\phi\colon Q_n\to Q_n$ from $\Dict$ to $\XOR$ satisfies
+\begin{equation}\label{eq:log}
+\Lip(\phi^{-1})\ \ge\ 1+\frac{\log n}{\log k}.
+\end{equation}
+Consequently the answer to \cref{q:main} is \emph{no}, for every choice of $C$: along any sequence of such maps with $n,k\to\infty$ one has $\Lip(\phi^{-1})>\log n/\log k$, which is not $o(\log n/\log k)$. In the notation of \cite{JS21}, $\phi^{-1}$ is not $(\log n/\log k)$-Lipschitz, so $\delta(C,k)\ge1/\log k$ for all $C$ and all $k\ge2$; together with Rao and Shinkar's construction, $\delta(2,k)=\Theta(1/\log k)$ for general maps, exactly as for linear maps.
+\end{corollary}
+\begin{proof}
+Since $\binom{D-1}{r}\ge1$ for $0\le r\le D-1$,
+\[
+N_k(D)=\sum_{r=0}^{D-1}(k-1)^r\le\sum_{r=0}^{D-1}\binom{D-1}{r}(k-1)^r=k^{D-1}.
+\]
+So \eqref{eq:moore} gives $n\le k^{D-1}$, i.e.\ $(D-1)\log k\ge\log n$, which is \eqref{eq:log} as $\log k>0$. The remaining assertions are restatements: $1+\log n/\log k>\log n/\log k$ for all $n,k$, so the ratio $\Lip(\phi^{-1})/(\log n/\log k)$ stays above $1$ along every sequence.
+\end{proof}
+
+\begin{proofidea}[of \cref{thm:main}]
+Fix $y$, let $x=\phi^{-1}(y)$, and for each output index $a$ let $R_a\subseteq[n]$ be the set of input coordinates on which $\phi^{-1}(y)$ and $\phi^{-1}(y\oplus e_a)$ differ, so that $\phi(x^{R_a})=y\oplus e_a$. The sets $R_a$ are nonempty, pairwise distinct, all contain the coordinate~$1$ (by \eqref{eq:dx}, flipping any output bit flips $x_1$), and have size at most $D$ (\cref{lem:edges}). The bound is a branching count over the sets $R_a$. For a nonempty $T\subseteq[n]$ let $A_d(T)$ be the set of $a$ with $T\subseteq R_a$ and $|R_a|\le d$. Since $x^T\ne x$, some output bit $b$ has $\phi_b(x^T)\ne\phi_b(x)$; then $P_b$ meets $T$, so $|P_b\setminus T|\le k-1$. For every $a\in A_d(T)$ other than $b$, the output $\phi_b$ takes the same value at $x^{R_a}$ as at $x$ (only bit $a\neq b$ changed), hence a different value than at $x^T$; as $x^{R_a}$ and $x^T$ differ exactly on $R_a\setminus T$, the set $P_b$ must meet $R_a\setminus T$, i.e.\ $a\in A_d(T\cup\{i\})$ for some $i\in P_b\setminus T$. Thus $A_d(T)$ is covered by $\{b\}$ and at most $k-1$ sets $A_d(T\cup\{i\})$, and induction on $d-|T|$ gives $|A_d(T)|\le N_k(d-|T|+1)$ (\cref{lem:branch}). Taking $T=\{1\}$ gives \eqref{eq:pointwise}, and $d=D$ gives \eqref{eq:moore}. The single choice of $b$ for each $T$, made once and not per $a$, is what yields the branching factor $k-1$ independent of $d$; the recursion is a union bound over a covering, so overlaps among the sets $A_d(T\cup\{i\})$ can only help.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{The counting argument}\label{sec:count}
+
+Throughout this section $\phi\colon Q_n\to Q_n$ is a $k$-local bijection from $\Dict$ to $\XOR$, $D=\Lip(\phi^{-1})$, and we fix $x\in Q_n$ and put $y=\phi(x)$. For $a\in[n]$ define
+\begin{equation}\label{eq:Ra}
+x^{(a)}=\phi^{-1}(y\oplus e_a),\qquad R_a=\{\,i\in[n]:\ x_i\ne x^{(a)}_i\,\}.
+\end{equation}
+
+\begin{restatable}[Inverse edges at a point]{lemma}{lemedges}\label{lem:edges}
+\begin{enumerate}[label=(\roman*),nosep]
+\item $x^{(a)}=x^{R_a}$ and $R_a\ne\varnothing$ for every $a$;
+\item the sets $R_1,\dots,R_n$ are pairwise distinct;
+\item $1\in R_a$ for every $a$;
+\item $|R_a|=\dH\bigl(\phi^{-1}(y),\phi^{-1}(y\oplus e_a)\bigr)\le D$ for every $a$.
+\end{enumerate}
+\end{restatable}
+\begin{proofidea}
+(i) and (iv) are the definitions together with injectivity of $\phi^{-1}$. (ii): $R_a=R_b$ forces $x^{(a)}=x^{(b)}$, and applying $\phi$ gives $a=b$. (iii): by \eqref{eq:dx} at $x^{(a)}$ and at $x$, $x^{(a)}_1=\bigoplus_b(y\oplus e_a)_b=x_1\oplus1$.\fullproofref{pf:edges}
+\end{proofidea}
+
+For an integer $d\ge1$ and a nonempty $T\subseteq[n]$ with $|T|\le d$ let
+\begin{equation}\label{eq:A}
+A_d(T)=\{\,a\in[n]:\ T\subseteq R_a\ \text{and}\ |R_a|\le d\,\}.
+\end{equation}
+
+\begin{restatable}[Branching bound]{lemma}{lembranch}\label{lem:branch}
+For every $d\ge1$ and every nonempty $T\subseteq[n]$ with $|T|\le d$,
+\begin{equation}\label{eq:branch}
+|A_d(T)|\ \le\ N_k(d-|T|+1).
+\end{equation}
+\end{restatable}
+\begin{proofidea}
+Induction on $d-|T|$. If $|T|=d$ then $R_a=T$ for all $a\in A_d(T)$, so $|A_d(T)|\le1$ by \cref{lem:edges}(ii). If $|T|<d$, pick $b$ with $\phi_b(x^T)\ne\phi_b(x)$; the covering $A_d(T)\subseteq\{b\}\cup\bigcup_{i\in P_b\setminus T}A_d(T\cup\{i\})$ with $|P_b\setminus T|\le k-1$ and the induction hypothesis give $1+(k-1)N_k(d-|T|)=N_k(d-|T|+1)$.\fullproofref{pf:branch}
+\end{proofidea}
+
+\section{Sharpness: the Rao--Shinkar tree maps}\label{sec:sharp}
+
+The construction in this section is that of Rao and Shinkar \cite[Theorem~2 and Appendix~A]{RS18}: there the tree is a complete binary tree, giving a $3$-local map, and they note that a complete $(L-1)$-ary tree on $n$ vertices gives an $L$-local $2$-Lipschitz map with $C$-Lipschitz inverse whenever $(L-1)^C\ge n$. The only thing added here is bookkeeping: truncating the complete $(k-1)$-ary tree in breadth-first order shows that the map exists exactly when $n\le N_k(d)$, which is what makes the optimum in \cref{cor:exact} exact rather than asymptotic.
+
+\begin{proofidea}[of \cref{thm:sharp}]
+The complete rooted $(k-1)$-ary tree of height $d-1$ has $N_k(d)$ vertices; its first $n$ vertices in breadth-first order form a rooted tree $\mathcal T$ on $[n]$ with root~$1$, at most $k-1$ children per vertex and height at most $d-1$. Put $\phi_v(x)=x_v\oplus\bigoplus_{w\text{ child of }v}x_w$. Each $\phi_v$ reads at most $k$ inputs; in $\bigoplus_v\phi_v$ every non-root input appears twice (in its own and in its parent's output) and the root once, giving \eqref{eq:dx}; the inverse is $x_v=\bigoplus_{w\in\sub(v)}y_w$, the sum over the subtree of $v$; flipping $x_v$ changes at most the outputs $v$ and its parent, so $\Lip(\phi)\le2$; flipping $y_w$ changes exactly the inputs at $w$ and its ancestors, so $\Lip(\phi^{-1})=1+\text{height}(\mathcal T)\le d$.\fullproofref{pf:sharp}
+\end{proofidea}
+
+\begin{restatable}{lemma}{lemCtwo}\label{lem:C2}
+If $n\ge2$, every bijection $\phi\colon Q_n\to Q_n$ from $\Dict$ to $\XOR$ has $\Lip(\phi)\ge2$. In particular the maps of \cref{thm:sharp} have $\Lip(\phi)=2$ for $n\ge2$.
+\end{restatable}
+\begin{proofidea}
+For $i\ne1$, $x$ and $x\oplus e_i$ have the same first coordinate, so by \eqref{eq:dx} their images have the same parity and lie at even distance; injectivity makes the distance positive.\fullproofref{pf:C2}
+\end{proofidea}
+
+\section{Remarks}
+
+\begin{remark}[Interpretation and scope]
+The definitions used here are those of \cite{JS21} verbatim: the mapping goes from $\Dict$ to $\XOR$ in the sense $\Dict(x)=\XOR(\phi(x))$, locality is the paper's global junta condition (each output bit depends on at most $k$ input bits over the whole cube), and Lipschitz constants are with respect to Hamming distance, i.e.\ maximum edge stretch. The referee (\cref{app:referee}) checked these against arXiv:1812.09215v3 and judged the reading fair and intended; the original writeup's self-declared caveat ``full-cube bijections and global $k$-junta locality'' is simply the paper's setting. \Cref{thm:main} is stronger than what \cref{q:main} asks for in two ways: no hypothesis on $C$ is used, and the bound is pointwise \eqref{eq:pointwise}, not only global. It concerns maximum stretch only; it says nothing about average stretch \cite{BS23}, about embeddings into larger cubes, or about maps from $\XOR$ to $\Dict$, none of which is asked.
+\end{remark}
+
+\begin{remark}[Why the argument beats \cref{thm:JS}]
+Johnston and Scott build one global bipartite dependency graph between input and output bits, bound the degree of an input vertex by $C2^{k-1}$ (a uniformly random witness pays a factor $2^{1-k}$ for each dependent output), and lose a further factor of two to bipartiteness; this is where $\Omega(1/(k+\log C))$ comes from. The argument of \cref{sec:count} instead branches locally: at a partial change $T$ of the input it fixes a single output bit $b$ that has already moved, and every other target must move $b$ back, which forces its $R_a$ to meet $P_b$ outside $T$, a set of size at most $k-1$. Neither the forward constant nor the random witness is needed. The recursion \eqref{eq:branch} is a union bound over a covering, not a count of disjoint levels of a ball; the failure mode of Moore-type counts that silently assume disjointness therefore does not arise, since overlap only decreases $|A_d(T)|$. The referee re-derived every step, including this point, and could not break it.
+\end{remark}
+
+\begin{remark}[Boundary cases]
+$k=0$ is vacuous: a $0$-local map is constant, hence not injective. For $k=1$, \cref{thm:main} gives $n\le N_1(D)=1$; equivalently, a $1$-local bijection is a signed coordinate permutation, whose output XOR is $\bigoplus_i x_i\oplus\text{const}\ne x_1$ for $n\ge2$. For $k=2$, \eqref{eq:moore} reads $n\le D$, and it is tight for the path map $(x_1\oplus x_2,\dots,x_{n-1}\oplus x_n,x_n)$ of \cite{RS18}, which is \cref{thm:sharp} for the path and whose inverse has stretch exactly $n$ (Johnston and Scott note that it ``is not even $(n-1)$-Lipschitz''). For $n=1$, $\phi=\mathrm{id}$ has $D=1=N_k(1)$. For $D\le2$, \eqref{eq:moore} gives $n\le N_k(2)=k$: a $k$-local $\Dict$-to-$\XOR$ bijection with $2$-Lipschitz inverse needs some output bit reading all $n$ inputs. This last statement, together with the affineness of $\phi^{-1}$ in that case, was proved directly in the earlier attempt on this problem by \texttt{gpt-5.6-sol} (its Proposition~4; see \cref{sec:provenance}), and is the only part of the present result that attempt reached.
+\end{remark}
+
+\begin{remark}[The referee's computational checks]
+The scripts are in \nolinkurl{verification_astra/scripts/1812.09215__00/} and encode the definitions from scratch. (a)~The tree map of \cref{thm:sharp} was built for all $1\le n\le14$, $2\le k\le7$ ($78$ maps) and checked over the whole cube to be a bijection satisfying \eqref{eq:dx}, $k$-local, with $\Lip(\phi)=2$ for $n\ge2$ and $\Lip(\phi^{-1})=D_{\min}(n,k)$ \emph{exactly} in every case, e.g.\ $(n,k)=(7,3)\mapsto3$, $(8,3)\mapsto4$, $(13,4)\mapsto3$, $(14,4)\mapsto4$, $(n,2)\mapsto n$. (b)~Among all $8!=40320$ permutations of $Q_3$ there are $576$ bijections from $\Dict$ to $\XOR$; those that are $2$-local all have $D=3$ and the $3$-local ones have $D\in\{2,3\}$, with no violation of \eqref{eq:moore} or of the pointwise bound \eqref{eq:pointwise}. (c)~All bijections from $\Dict$ to $\XOR$ with $2$-Lipschitz inverse were enumerated for $n=2,\dots,6$ (after a harmless normalisation there are $n!$ of them), and the minimum over them of the largest junta size was $2,3,4,5,6$ respectively, i.e.\ exactly $n=N_k(2)$ with no slack; in particular no $3$-local such bijection of $Q_4$ has a $2$-Lipschitz inverse. (d)~An exhaustive search over all $k$-local bijections from $\Dict$ to $\XOR$ (nonlinear included) found minimum $D$ equal to $D_{\min}(n,k)$ in every completed case: $(n,k)=(3,2)$: $48$ maps, $D_{\min}=3$; $(3,3)$: $576$, $2$; $(4,2)$: $1152$, $4$; $(4,3)$: $124416$, $3$; $(5,2)$: $46080$, $5$. (e)~For the $576$ maps at $(3,3)$ and the $1152$ maps at $(4,2)$, \cref{lem:edges}(ii),(iii) and the full inequality \eqref{eq:branch} were checked at every base point $x$ and every admissible $T$: $0$ violations, with $5376$ resp.\ $73728$ instances of equality in \eqref{eq:pointwise}. (f)~The identities in \eqref{eq:N}, formula \eqref{eq:Dmin} and $N_k(d)\le k^{d-1}$ were checked numerically for $2\le k\le59$, $d\le39$ and $n\le3999$. No check failed. The referee notes that the smallest case where the theorem forbids $D=3$ at depth, $(n,k)=(8,3)$, is beyond brute force, so the computations probe the branching factor harder than the depth of the recursion.
+\end{remark}
+
+\begin{remark}[Novelty]
+The referee found no earlier appearance of the lower bound \eqref{eq:moore}, so \cref{thm:main} and \cref{cor:question} appear to be new; the question was open in \cite{JS21} and in \cite{Joh21}. The construction of \cref{thm:sharp} is not new: it is Rao and Shinkar's \cite[Theorem~2 and Appendix~A]{RS18}, which Johnston and Scott already cite as the source of $\delta(2,k)=O(1/\log k)$, and the original writeup presented it without attribution (corrected here). The novelty of this note is thus the lower bound, and, as a consequence, the exact value \eqref{eq:Dmin}. \Cref{cor:question} strictly implies \cref{thm:JS} for general maps, since $1/\log k\ge1/k\ge1/(k+\log C)$ for $k\ge2$, $C\ge1$. As with every result of this project, and all the more so for a two-page elementary resolution of a published open question, the argument awaits a human referee.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The lower bound and its proof were found by the language model \texttt{gpt-6-astra} (reasoning effort maximal) in a single autonomous pass on 2026-09-17, as part of a sweep over open problems catalogued from arXiv (catalog id \texttt{1812.09215\_\_00}, leg \texttt{attacks\_retry}; original writeup in \texttt{attacks\_retry/1812.09215\_\_00/output.md}). This was a \emph{second} attempt on the problem: the prompt included, as unverified context, an earlier attempt by \texttt{gpt-5.6-sol} (leg \texttt{attacks}, verdict ``partial''), which had obtained $D=\Omega(\min\{k,\sqrt{\log n/\log(2Ck)}\})$ by a dependency-graph packing argument with a $C$-dependent degree bound, together with a complete description of the case $D\le2$ (its Proposition~4: $\phi^{-1}$ affine and $k\ge n$). The second writeup states that it retains that attempt's inverse-edge set-up, namely the points $x^{(a)}=\phi^{-1}(y\oplus e_a)$, the sets $R_a$ and the observation $1\in R_a$ (\cref{lem:edges}(iii); \S3.3 of the first attempt), and replaces the packing argument by the branching count of \cref{lem:branch}; the covering relation, \cref{lem:branch}, the exact optimum and the answer to \cref{q:main} are new to the second attempt. Nothing inherited from the first attempt is presented here as new.
+(2)~An independent adversarial referee agent (\texttt{claude-opus-5}) reviewed the writeup on 2026-09-17: it checked the definitions and the wording of \cref{q:main} and \cref{thm:JS} against arXiv:1812.09215v3 and against Johnston's thesis, re-derived all $22$ steps of the writeup (labelling every one \textsc{valid}), looked specifically for the failure modes of Moore-type counts (overlapping balls, off-by-one in $N_k$, the cases $k=1,2$ and small $n$, hidden use of linearity), identified the construction of \cref{sec:sharp} as Rao and Shinkar's, searched for follow-up literature, and ran the exhaustive computations summarised above. Its verdict was \textsc{confirmed} with high confidence. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-17 the writeup was rewritten into the present note by \texttt{claude-fable-5-1}: the text was reorganised, with full proofs in \cref{app:proofs}, and the following changes were made, all of them taken from the referee report or from the cited sources.
+\begin{enumerate}[label=(\alph*),nosep]
+\item The writeup asserted without proof that the sets $R_a$ are nonempty and pairwise distinct (the referee's Caveat~2); the two-line proof was added as \cref{lem:edges}(i),(ii).
+\item The construction of \cref{sec:sharp} is attributed to Rao and Shinkar \cite[Theorem~2 and Appendix~A]{RS18} and is no longer presented as new (the referee's Caveat~1); the sentence describing what differs (the exact threshold $n\le N_k(d)$) was added.
+\item The case $k=1$, treated separately in \S4 of the writeup by the same argument, is folded into \cref{thm:main} through the convention $N_1(d)=1$; the equivalence between ``depends on at most $k$ input bits'' and the existence of the sets $P_a$ used in the proof is spelled out in the introduction.
+\item The statement of \cref{thm:JS}, the discussion of $\delta(C,k)$, and the comparison with the proof of \cite{JS21} were added from the source paper and the referee report; the writeup cited nothing. The bibliography (\cite{JS21,RS18,Joh21,BS23}) was added.
+\item The remarks on boundary cases ($k=0$, $k=2$ and the path map, $n=1$, $D\le2$ and its relation to the first attempt) and the union-bound remark were taken from the referee report; the observation that the tree maps have $\Lip(\phi)=2$ exactly for $n\ge2$ combines two statements of the writeup.
+\end{enumerate}
+No other mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate it for human review, not as a claim to a resolution.
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:edges}
+\lemedges*
+\begin{proof}
+(i)~By definition, $x^{(a)}$ and $x$ differ exactly in the coordinates of $R_a$, so $x^{(a)}=x^{R_a}$. Since $y\oplus e_a\ne y$ and $\phi^{-1}$ is injective, $x^{(a)}\ne x$, so $R_a\ne\varnothing$.
+
+(ii)~If $R_a=R_b$ then $x^{(a)}=x^{R_a}=x^{R_b}=x^{(b)}$, and applying $\phi$ gives $y\oplus e_a=y\oplus e_b$, hence $a=b$.
+
+(iii)~Apply \eqref{eq:dx} at the point $x^{(a)}$, whose image is $y\oplus e_a$, and then at $x$, whose image is $y$:
+\[
+x^{(a)}_1=\bigoplus_{b=1}^n\phi_b(x^{(a)})=\bigoplus_{b=1}^n(y\oplus e_a)_b=\Bigl(\bigoplus_{b=1}^n y_b\Bigr)\oplus1=x_1\oplus1 .
+\]
+Hence $x^{(a)}_1\ne x_1$, i.e.\ $1\in R_a$.
+
+(iv)~$|R_a|=\dH(x,x^{(a)})=\dH(\phi^{-1}(y),\phi^{-1}(y\oplus e_a))\le\Lip(\phi^{-1})\,\dH(y,y\oplus e_a)=D$.
+\end{proof}
+
+\phantomsection\label{pf:branch}
+\lembranch*
+\begin{proof}
+We induct on $d-|T|\in\{0,1,\dots,d-1\}$.
+
+\emph{Base case $|T|=d$.} If $a\in A_d(T)$ then $T\subseteq R_a$ and $|R_a|\le d=|T|$, so $R_a=T$. By \cref{lem:edges}(ii) at most one index $a$ has $R_a=T$, so $|A_d(T)|\le1=N_k(1)$.
+
+\emph{Inductive step $|T|<d$.} Since $T\ne\varnothing$ we have $x^T\ne x$, and since $\phi$ is injective, $\phi(x^T)\ne\phi(x)$. Fix, once and for all for this $T$, an output coordinate $b$ with
+\begin{equation}\label{eq:b}
+\phi_b(x^T)\ne\phi_b(x).
+\end{equation}
+The points $x^T$ and $x$ agree outside $T$; if $P_b\cap T=\varnothing$ they would agree on $P_b$ and $\phi_b$ would take the same value at both, contradicting \eqref{eq:b}. Hence $P_b\cap T\ne\varnothing$ and
+\begin{equation}\label{eq:Pb}
+|P_b\setminus T|\le|P_b|-1\le k-1 .
+\end{equation}
+Now let $a\in A_d(T)$ with $a\ne b$. By \cref{lem:edges}(i), $\phi(x^{R_a})=\phi(x^{(a)})=y\oplus e_a$, which agrees with $y=\phi(x)$ in every coordinate other than $a$; in particular, as $a\ne b$,
+\begin{equation}\label{eq:same}
+\phi_b(x^{R_a})=\phi_b(x)\ne\phi_b(x^T).
+\end{equation}
+Because $T\subseteq R_a$, the points $x^{R_a}$ and $x^T$ differ exactly in the coordinates of $R_a\setminus T$. If $P_b\cap(R_a\setminus T)=\varnothing$, the two points would agree on $P_b$ and $\phi_b$ would take the same value at both, contradicting \eqref{eq:same}. So there is $i\in P_b\cap(R_a\setminus T)$; then $i\in P_b\setminus T$, $T\cup\{i\}\subseteq R_a$, $|T\cup\{i\}|=|T|+1\le d$ and $|R_a|\le d$, i.e.\ $a\in A_d(T\cup\{i\})$. We have shown the covering relation
+\begin{equation}\label{eq:cover}
+A_d(T)\ \subseteq\ \{b\}\ \cup\ \bigcup_{i\in P_b\setminus T}A_d(T\cup\{i\}),
+\end{equation}
+where it is irrelevant whether $b$ itself lies in $A_d(T)$. Each $T\cup\{i\}$ is nonempty with $|T\cup\{i\}|\le d$ and $d-|T\cup\{i\}|=d-|T|-1$, so the induction hypothesis gives $|A_d(T\cup\{i\})|\le N_k(d-|T|)$. Using \eqref{eq:cover} and \eqref{eq:Pb},
+\begin{align*}
+|A_d(T)|
+&\le 1+\sum_{i\in P_b\setminus T}|A_d(T\cup\{i\})|\\
+&\le 1+(k-1)N_k(d-|T|)\\
+&=1+\sum_{r=0}^{d-|T|-1}(k-1)^{r+1}
+ =\sum_{r=0}^{d-|T|}(k-1)^r
+ =N_k(d-|T|+1).
+\end{align*}
+(For $k=1$ the union in \eqref{eq:cover} is empty and the bound is $1=N_1(d-|T|+1)$.) This completes the induction. Note that \eqref{eq:cover} is a covering, not a partition: the sets $A_d(T\cup\{i\})$ may overlap, and the inequality is a union bound.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+Fix $y\in Q_n$, let $x=\phi^{-1}(y)$ and define $R_a$ by \eqref{eq:Ra}, so that $|R_a|=\dH(\phi^{-1}(y),\phi^{-1}(y\oplus e_a))$ by \cref{lem:edges}(iv). By \cref{lem:edges}(iii), $1\in R_a$ for every $a$, hence for every $d\ge1$
+\[
+A_d(\{1\})=\{a:\ |R_a|\le d\}=\bigl\{a:\ \dH(\phi^{-1}(y),\phi^{-1}(y\oplus e_a))\le d\bigr\}.
+\]
+\Cref{lem:branch} with $T=\{1\}$ gives $|A_d(\{1\})|\le N_k(d)$, which is \eqref{eq:pointwise}. Taking $d=D$, every $a\in[n]$ satisfies $|R_a|\le D$ by \cref{lem:edges}(iv), so $A_D(\{1\})=[n]$ and $n\le N_k(D)$, which is \eqref{eq:moore}. (Here $D\ge1$ since $R_a\ne\varnothing$.)
+\end{proof}
+
+\phantomsection\label{pf:sharp}
+\thmsharp*
+\begin{proof}
+\emph{The tree.} The complete rooted $(k-1)$-ary tree of height $d-1$ has $(k-1)^r$ vertices at level $r$ for $0\le r\le d-1$, hence $N_k(d)$ vertices in all. List its vertices in breadth-first order (level by level) and keep the first $n\le N_k(d)$ of them. A vertex's parent lies on a lower level and so precedes it in the list; hence the kept set is closed under taking parents and forms a rooted tree $\mathcal T$ on $n$ vertices with root the level-$0$ vertex, at most $k-1$ children per vertex, and height at most $d-1$. Identify $V(\mathcal T)$ with $[n]$ so that the root is~$1$; for $v\in[n]$ let $\mathrm{ch}(v)$ be its set of children and $\sub(v)$ the vertex set of the subtree rooted at $v$ (including $v$).
+
+\emph{The map.} Define $\phi\colon Q_n\to Q_n$ by
+\begin{equation}\label{eq:tree}
+\phi_v(x)=x_v\oplus\bigoplus_{w\in\mathrm{ch}(v)}x_w\qquad(v\in[n]).
+\end{equation}
+This is linear over $\mathbb F_2$, and $\phi_v$ depends only on the $1+|\mathrm{ch}(v)|\le1+(k-1)=k$ coordinates $\{v\}\cup\mathrm{ch}(v)$, so $\phi$ is $k$-local.
+
+\emph{$\Dict$ to $\XOR$.} Every non-root vertex $w$ has exactly one parent, so in $\bigoplus_v\phi_v(x)=\bigoplus_v x_v\oplus\bigoplus_v\bigoplus_{w\in\mathrm{ch}(v)}x_w$ each $x_w$ with $w\ne1$ appears exactly twice and $x_1$ exactly once; thus $\bigoplus_v\phi_v(x)=x_1$, which is \eqref{eq:dx}.
+
+\emph{Bijectivity and the inverse.} Let $y=\phi(x)$ and fix $v$. Summing \eqref{eq:tree} over $w\in\sub(v)$, the children of vertices of $\sub(v)$ are exactly the vertices of $\sub(v)\setminus\{v\}$, each occurring once, so
+\begin{equation}\label{eq:inv}
+\bigoplus_{w\in\sub(v)}y_w=\bigoplus_{w\in\sub(v)}x_w\oplus\bigoplus_{u\in\sub(v)\setminus\{v\}}x_u=x_v .
+\end{equation}
+Thus $\psi(y)_v:=\bigoplus_{w\in\sub(v)}y_w$ satisfies $\psi\circ\phi=\mathrm{id}$; so $\phi$ is an injective self-map of the finite set $Q_n$, hence a bijection, with $\phi^{-1}=\psi$.
+
+\emph{Forward stretch.} By \eqref{eq:tree}, flipping $x_v$ changes $\phi_v$ and, if $v\ne1$, $\phi_{p}$ for the parent $p$ of $v$, and no other output; so every edge is stretched by at most $2$ and $\Lip(\phi)\le2$.
+
+\emph{Inverse stretch.} By \eqref{eq:inv}, flipping $y_w$ changes $x_v$ exactly for those $v$ with $w\in\sub(v)$, i.e.\ for $v=w$ and the ancestors of $w$: these are $\depth(w)+1$ coordinates. Hence $\Lip(\phi^{-1})=\max_w(\depth(w)+1)=1+\text{height}(\mathcal T)\le d$.
+\end{proof}
+
+\phantomsection\label{pf:C2}
+\lemCtwo*
+\begin{proof}
+Let $n\ge2$, pick $i\in\{2,\dots,n\}$ and any $x\in Q_n$. The points $x$ and $x\oplus e_i$ have the same first coordinate, so by \eqref{eq:dx} the images $\phi(x)$ and $\phi(x\oplus e_i)$ have the same parity $\bigoplus_a\phi_a$; two points of $Q_n$ of the same parity are at even Hamming distance. As $\phi$ is injective the distance is positive, hence at least $2$, and $\Lip(\phi)\ge2$. For the maps of \cref{thm:sharp} this combines with $\Lip(\phi)\le2$.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup. Its step numbers and equation numbers refer to that writeup, not to this note. The scripts it mentions are in \nolinkurl{verification_astra/scripts/1812.09215__00/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{JS21} T.~Johnston and A.~Scott, Lipschitz bijections between boolean functions, \emph{Combin.\ Probab.\ Comput.} 30 (2021), 513--525; \href{https://arxiv.org/abs/1812.09215}{arXiv:1812.09215}.
+\bibitem{RS18} S.~Rao and I.~Shinkar, On Lipschitz bijections between boolean functions, \emph{Combin.\ Probab.\ Comput.} 27 (2018), 411--426; \href{https://arxiv.org/abs/1501.03016}{arXiv:1501.03016}.
+\bibitem{Joh21} T.~Johnston, \emph{Problems in Extremal and Probabilistic Combinatorics: Cubes, Squares and Permutations}, DPhil thesis, University of Oxford, 2021; \href{https://ora.ox.ac.uk/objects/uuid:970b5eb2-ad8c-45ba-b0d2-39cac2fffda6}{ORA uuid:970b5eb2}.
+\bibitem{BS23} L.~Boczkowski and I.~Shinkar, On mappings on the hypercube with small average stretch, \emph{Combin.\ Probab.\ Comput.} (2023); \href{https://arxiv.org/abs/1905.11350}{arXiv:1905.11350}.
+\end{thebibliography}
+
+\end{document}

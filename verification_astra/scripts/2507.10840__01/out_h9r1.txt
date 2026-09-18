@@ -1,0 +1,15 @@
+======================================================================
+h=9 (m=4), r=1, n=10
+======================================================================
+[general position] collinear triples: 0 -> OK
+[Property 1] every vertex-disjoint pair in D crosses: OK
+[Property 2a] every cluster point strictly inside every T_i: OK
+[Property 2b] xz crosses v_i a or v_i b for all x,i,z: OK
+[paths] crossing-free simple paths enumerated (each twice, incl. trivial): 145684
+[paths] max |E(P) cap (D u S)| over crossing-free paths = 3   (writeup claims <= 3 for r=1)
+        witness vertex sequence: [0, 1, 2, 3, 7, 9, 8]
+[paths] max weight (2r-2)d(P)+s(P) = 2   (writeup claims <= 4r-2 = 2)
+        witness vertex sequence: [0, 1, 2, 3, 4, 5, 6, 7, 9, 8]
+[profile] max s(P) for each value of d(P): {0: 2, 1: 2, 2: 1}  (writeup: d<=2 always; s<=2r=2; and d=2 => s<=2)
+[bound] total weight = (2r-2)h + hr = 9 ; lower bound ceil(W/maxw) = 5 ; n/2 = 5.0
+[bound] writeup formula ceil((3r-2)h/(4r-2)) = 5

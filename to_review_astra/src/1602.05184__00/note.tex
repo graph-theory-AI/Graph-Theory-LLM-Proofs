@@ -1,0 +1,511 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\Sz}{\operatorname{Sz}}
+\newcommand{\Wi}{W}
+\newcommand{\dist}{d}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 1602.05184\_\_00 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+\title{The Szeged--Wiener difference of a $2$-connected graph is at least $\min\{2n,3n-10\}$}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+For every $2$-connected graph $G$ of order $n\ge4$ other than
+$K_n,K_n^2,K_n^{n-2}$, we prove
+\[
+ \Sz(G)-\Wi(G)\ge\min\{2n,3n-10\}.
+\]
+This proves Conjecture~5 of Bonamy, Knor, Lu\v{z}ar, Pinlou and
+\v{S}krekovski for $n\ge10$, and both branches of the stronger bound are
+sharp. The proof uses an exact deletion identity for dominated vertices,
+a structural description of vertices with small good-edge contribution,
+and induction.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI}
+project: the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician. \Cref{sec:provenance}
+records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+For a connected graph $G$, let
+\[
+ \Wi(G)=\sum_{\{a,b\}\subseteq V(G)}\dist(a,b),\qquad
+ \Sz(G)=\sum_{uv\in E(G)}n_{uv}(u)n_{uv}(v),
+\]
+where $n_{uv}(u)$ counts the vertices closer to $u$ than to $v$, and put
+$\eta(G)=\Sz(G)-\Wi(G)$. Following \cite{BKLPS17}, $K_n^t$ is obtained
+from $K_{n-1}$ by adding a vertex adjacent to exactly $t$ old vertices.
+The source paper proves $\eta(G)\ge2n-6$ for every $2$-connected
+noncomplete $G$, with equality exactly for $K_n^2,K_n^{n-2}$, and asks:
+
+\begin{conjecture}[{\cite[Conjecture~5]{BKLPS17}}]\label{conj:source}
+Let $G$ be a $2$-connected graph of order $n\geq 10$ not isomorphic to
+$K_n$, $K^2_n$, or $K^{n-2}_n$. Then $\eta(G)\geq 2n$.
+\end{conjecture}
+
+An edge $uv$ is \emph{good} for $\{a,b\}$ if, after possibly exchanging
+$u,v$, $d(a,u)<d(a,v)$ and $d(b,v)<d(b,u)$. This terminology is due to
+Simi\'c, Gutman and Balti\'c \cite{SGB00}. Write $g_G(a,b)$ for the number
+of good edges and
+\[
+ D_G(a,b)=g_G(a,b)-d_G(a,b),\qquad c_G(a)=\sum_{b\ne a}D_G(a,b).
+\]
+Every shortest-path edge is good, so $D_G(a,b)\ge0$. Proposition~6 of
+\cite{BKLPS17} gives
+\begin{equation}\label{eq:good}
+ \eta(G)=\sum_{\{a,b\}}D_G(a,b)=\frac12\sum_a c_G(a).
+\end{equation}
+Our exact dominated-vertex formula strengthens \cite[Lemma~7]{BKLPS17}.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+Let $G$ be a $2$-connected graph of order $n\ge4$, with
+$G\not\cong K_n,K_n^2,K_n^{n-2}$. Then
+\[
+ \eta(G)\ge \min\{2n,3n-10\}.
+\]
+Both branches are sharp for every applicable $n\ge5$.
+\end{restatable}
+\begin{proofidea}
+If $\eta(G)<2n$, \eqref{eq:good} gives a vertex of contribution at most
+three. A breadth-first-layer analysis produces, apart from $C_5$, a
+dominated vertex $u$ whose deletion remains $2$-connected. An exact
+deletion identity shows that removing $u$ loses at least four units of
+$\eta$. Induction applies unless $G-u$ is excluded; those predecessors
+are handled directly. Graphs with a universal vertex satisfy $3n-10$ by
+counting induced $P_3,P_4,C_4$. The extremal families appear in
+\cref{sec:sharp}.\fullproofref{pf:main}
+\end{proofidea}
+\begin{corollary}\label{cor:conjecture}
+\Cref{conj:source} holds.
+\end{corollary}
+\begin{proof}
+For $n\ge10$, $3n-10\ge2n$, so \cref{thm:main} gives $\eta(G)\ge2n$.
+\end{proof}
+
+\section{The deletion mechanism}
+\begin{restatable}[Dominated-vertex deletion]{lemma}{lemdominated}\label{lem:dominated}
+Suppose $G$ is $2$-connected, $|V(G)|\ge4$, and
+$N_G[u]\subseteq N_G[v]$ for distinct $u,v$. Put $H=G-u$. Then:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item $H$ is isometric in $G$;
+\item the only possible cut vertex of $H$ is $v$;
+\item if $q_G(u)$ counts incidences $(\{a,b\},e)$ in which
+      $a,b\in V(H)$ and $e$ is incident with $u$ and good for $\{a,b\}$,
+      then $\eta(G)-\eta(H)=c_G(u)+q_G(u)$;
+\item $q_G(u)=0$ when $u$ is simplicial, while $q_G(u)\ge2$ otherwise.
+\end{enumerate}
+\end{restatable}
+\begin{proofidea}
+Any detour $xuy$ can be replaced by a walk through $v$, so old distances
+do not change. The difference in $\eta$ splits into pairs containing $u$
+and old pairs whose new good edge meets $u$. A non-simplicial $u$ has
+two nonadjacent neighbours, and both incident edges are good for their
+pair.\fullproofref{pf:dominated}
+\end{proofidea}
+
+\begin{restatable}[Low-contribution structure]{lemma}{lemlow}\label{lem:low}
+Let $G$ be $2$-connected and let $a$ be non-universal with $c_G(a)\le3$.
+Every vertex lies at distance at most two from $a$, and one of the
+following holds, where $A=N(a)$.
+\begin{enumerate}[label=\textup{\Roman*.}]
+\item There are adjacent $p,q\in A$, a vertex $z\notin N[a]$ with
+      $N(z)\cap A=\{p,q\}$, and a set $X$ such that
+      $V(G)\setminus N[a]=\{z\}\mathbin{\dot\cup}X$. Either $X$ is empty,
+      or $G[X]$ is connected, every $x\in X$ has $N(x)\cap A=\{p\}$,
+      and exactly one edge joins $z$ to $X$.
+\item There are distinct $p,q\in A$ and nonempty $X,Y$ partitioning
+      $V(G)\setminus N[a]$ such that $G[X],G[Y]$ are connected,
+      $N(x)\cap A=\{p\}$ for $x\in X$, $N(y)\cap A=\{q\}$ for $y\in Y$,
+      and exactly one edge $xy$ joins $X$ to $Y$.
+\end{enumerate}
+Moreover every non-universal vertex of a $2$-connected graph satisfies
+$c_G(a)\ge2$.
+\end{restatable}
+\begin{proofidea}
+Use distance layers from $a$. A vertex with two shortest paths contributes
+at least two, and two such vertices exceed the budget three. If shortest
+paths are unique, a same-layer edge joining different predecessor classes
+forces two contributions, leaving exactly one and hence Type~II. If one
+vertex has two shortest paths, it has exactly two adjacent predecessors
+and at most one same-layer neighbour, giving Type~I. Deeper layers or
+extra components create a cut vertex.\fullproofref{pf:low}
+\end{proofidea}
+
+\begin{restatable}[Four-unit reduction]{proposition}{propreduction}\label{prop:reduction}
+Let $G$ be $2$-connected, have no universal vertex, and satisfy
+$\eta(G)<2|V(G)|$. Then either $G\cong C_5$, or there is a vertex $u$
+dominated by another vertex such that $G-u$ is $2$-connected and
+$\eta(G)-\eta(G-u)\ge4$.
+\end{restatable}
+\begin{proofidea}
+Choose $a$ with $c_G(a)\le3$, apply \cref{lem:low}, and delete a suitable
+non-cut vertex in a connected Type~I/II piece. For non-simplicial $u$,
+\cref{lem:dominated} gives $c_G(u)+q_G(u)\ge2+2$. If $u$ is simplicial
+and $c_G(u)\le3$, Type~II contains an isometric $C_4$ and every remaining
+vertex contributes two more units, forcing $\eta(G)\ge2|V(G)|$, a
+contradiction.\fullproofref{pf:reduction}
+\end{proofidea}
+
+\section{Universal vertices}
+Let $p_3(Q),p_4(Q),c_4(Q)$ count induced $P_3,P_4,C_4$.
+\begin{restatable}[Universal-vertex estimate]{proposition}{propuniversal}\label{prop:universal}
+If $G$ is $2$-connected of order $n$, has a universal vertex, and is not
+$K_n,K_n^2,K_n^{n-2}$, then $\eta(G)\ge3n-10$.
+\end{restatable}
+\begin{proofidea}
+For every diameter-two graph,
+\[
+ \eta(G)=2\bigl(p_3(G)-\overline m(G)\bigr)+p_4(G)+4c_4(G).
+\]
+For the cone $G=K_1\vee Q$, this becomes
+$\eta(G)=2p_3(Q)+p_4(Q)+4c_4(Q)$. Layering connected $Q$ from a maximum
+clique gives $3|Q|-7$, except for $K_{|Q|}-e$ and a clique with a pendant
+vertex, which give the two excluded noncomplete cones.\fullproofref{pf:universal}
+\end{proofidea}
+
+\section{Sharpness, checks, and status}\label{sec:sharp}
+\begin{remark}[Sharpness]
+For $G=K_1\vee P_{n-1}$, the cone identity gives
+$\eta(G)=2(n-3)+(n-4)=3n-10$. For the second family, take a clique of
+order $n-2$, an additional edge $xy$, and two cross edges forming a
+matching. Beginning with its induced $C_4$, every added clique vertex is
+simplicial and contributes two, so $\eta(G)=8+2(n-4)=2n$. We do not claim
+these are the only equality graphs.
+\end{remark}
+\begin{remark}[Referee computations]
+The referee exhaustively checked every $2$-connected graph through order
+$11$. For $n=5,\ldots,11$, the admissible minima were
+$5,8,11,14,17,20,22$, exactly the theorem's bound; the $n=11$ run
+comprised $900{,}969{,}091$ graphs. Every lemma passed on all $194{,}066$
+graphs of order $9$ and a sample of $820{,}139$ graphs of order $10$.
+Further searches used annealing through order $24$, exhaustive
+large-clique families through $14$, structured families through $30$,
+and all one-, two-, and three-edge perturbations of the extremal examples
+at orders $12,13$; none violated the claim. These computations support
+but are not used by the proof.
+\end{remark}
+\begin{remark}[Priority risk]
+Zhijie He's manuscript \emph{The Strengthened Szeged--Wiener Conjecture}
+was posted on 8 September 2026 \cite{He26}, nine days before this argument
+was generated. It claims the same theorem by a related dominated-vertex
+strategy, but has no arXiv identifier, DOI, or venue, and the associated
+MathDB problem labels it incomplete and unverified. A human must compare
+the arguments before making any novelty or priority claim. The referee
+found no published or arXiv resolution as of 17 September 2026.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+The mathematics was produced without human intervention in three stages.
+(1)~The result was found by \texttt{gpt-6-astra}, reasoning effort
+\texttt{max}, in a single pass begun on 2026-09-17, for catalog id
+\texttt{1602.05184\_\_00} in \texttt{attacks\_retry}. It was a second
+attempt: the prompt supplied a \texttt{gpt-5.6-sol} attempt proving only
+the universal-vertex and a co-bipartite special case. The new
+dominated-vertex reduction closes the remaining case; inherited material
+is not presented as new.
+(2)~An adversarial \texttt{claude-opus-5} referee audited every step and
+ran the recorded computations on 2026-09-17; its verdict was
+\textsc{minor gaps}.
+(3)~On 2026-09-17 \texttt{claude-fable-5-1} created only a recoverable
+note skeleton before its session ended. On 2026-09-18 \texttt{Codex}
+completed the present rewrite, reorganised the argument, and moved full
+proofs to \cref{app:proofs}. This version explicitly repairs
+every named gap: it explains why two distinct shortest paths contribute
+two extra edges; treats the predecessor class containing $z$ when $z$
+has no same-layer neighbour; obtains a leaf outside $\{p,q\}$ using the
+prescribed tree edge $pq$; attributes \eqref{eq:good} and the good-edge
+terminology; cites the earlier deletion lemma; and records the He
+manuscript. No other mathematics was changed.
+\textbf{No human mathematician has checked this argument.}
+
+\appendix
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:dominated}
+\lemdominated*
+\begin{proof}
+Any portion $x-u-y$ of a path between vertices of $H$ can be replaced by
+a walk through $v$ of length at most two (if $x=v$, then $xy\in E(G)$).
+Thus deleting $u$ preserves all distances in $H$. If $w\ne v$ were a cut
+vertex of $H$, every vertex of $N_G(u)\setminus\{w\}$ would lie in the
+component of $H-w$ containing $v$. Restoring $u$ could not join the other
+components, contradicting connectivity of $G-w$.
+
+Since $H$ is isometric, an edge of $H$ is good for an old pair in $G$
+exactly when it is good in $H$. The additional contributions are pairs
+containing $u$, totalling $c_G(u)$, and old-pair incidences counted by
+$q_G(u)$. If $u$ is simplicial, take the last neighbour $y$ of $u$ on a
+shortest $a$--$u$ path. Every $x\in N(u)$ is adjacent to $y$, so
+$d(a,x)\le d(a,u)$; no edge $ux$ is good for a pair avoiding $u$. If $u$
+is not simplicial, nonadjacent $x,y\in N(u)$ make both $xu,uy$ good for
+$\{x,y\}$.
+\end{proof}
+
+\phantomsection\label{pf:low}
+\lemlow*
+\begin{proof}
+Use distance layers $L_i$ from $a$; a neighbour in $L_{i-1}$ is a
+predecessor. Let $M$ be the vertices having more than one shortest path
+from $a$. If $b\in M$, the union of two distinct shortest $a$--$b$ paths
+has at least $d(a,b)+2$ edges, all good for $\{a,b\}$. A union of only
+$d(a,b)+1$ edges would make one path replace an edge of the other by a
+parallel edge, impossible in a simple graph. Thus $D_G(a,b)\ge2$ and
+$|M|\le1$. \emph{This supplies a justification requested by the referee.}
+
+If $x,y\in L_i$ have unique shortest paths, distinct predecessors, and
+$xy\in E(G)$, then $d(x,p(y))=2$ and $p(y)y$ is extra good for
+$\{a,x\}$; symmetrically $p(x)x$ is extra for $\{a,y\}$. Different
+neighbours yield different extra edges.
+
+\emph{Case $M=\varnothing$.}
+Edges between consecutive layers form a rooted tree. Let $F$ be
+same-layer edges whose endpoints have different predecessors. Then
+$c_G(a)\ge2|F|$, so $|F|\le1$. If $F=\varnothing$, proper descendants of
+any non-root vertex have no exit except through it, contradicting
+$2$-connectivity unless the tree has depth one; then $a$ is universal.
+Thus $F=\{xy\}$, with predecessors $p,q$.
+
+The vertices $p,q$ have a common predecessor. Otherwise $pq\notin E(G)$
+and they have no common neighbour: one in $L_{i-2}$ contradicts distinct
+predecessors, one in $L_{i-1}$ creates another edge of $F$, and one in
+$L_i$ creates two shortest paths. Hence $d(p,q)=3$ via $p-x-y-q$, while
+$d(p,y)=d(q,x)=2$; edges $qy,px$ add two further contributions and force
+$c_G(a)\ge4$. Let $w$ be the common predecessor. The exceptional edge
+$xy$ lies among descendants of $w$, so $2$-connectivity forces $w=a$,
+and $i=2$. The same separation argument forbids later layers. Any third
+predecessor class, or a component of the $p$-class avoiding $x$ (and
+symmetrically for $q,y$), is separated by its predecessor. This is
+Type~II.
+
+\emph{Case $M=\{z\}$.}
+The vertex $z$ has at least two predecessors and no successor. With
+$r\ge3$ predecessors, the last two layers of its shortest paths contain
+$2r$ good edges, only two on one fixed path, so
+$D_G(a,z)\ge2r-2\ge4$. Thus $z$ has exactly two predecessors $p,q$.
+They are adjacent: otherwise $qz$ is extra for $\{a,p\}$ and $pz$ for
+$\{a,q\}$, on top of $D_G(a,z)\ge2$.
+
+There is no same-layer edge between uniquely reached vertices of distinct
+predecessor classes. In particular $p,q$ have a common predecessor $w$.
+A same-layer neighbour $t$ of $z$ must have predecessor $p$ or $q$, or
+both $pz,qz$ are extra for $\{a,t\}$; even then it contributes one, so
+$z$ has at most one such neighbour.
+
+Choose a breadth-first tree using $p$ as predecessor of $z$. All
+exceptional edges lie among descendants of $w$, so $w=a$, $z\in L_2$,
+and no later layer exists. If $z$ has no same-layer neighbour, any other
+predecessor class is separated by its predecessor. In its own class
+$C_p$, $z$ is isolated; any other vertex lies in a component of
+$G[C_p]$ avoiding $z$ and is separated by $p$. Thus $L_2=\{z\}$.
+\emph{This repairs the first gap named by the referee.}
+If $z$ has the sole neighbour $t$, take $p$ as predecessor of $t$.
+Every remaining $L_2$ vertex has predecessor $p$, and their induced
+graph is connected and contains $t$; otherwise $p$ separates a component.
+This is Type~I.
+
+Finally, $c_G(a)\le1$ forces $M=F=\varnothing$, which makes $a$
+universal. Hence every non-universal $a$ has $c_G(a)\ge2$.
+\end{proof}
+
+\phantomsection\label{pf:reduction}
+\propreduction*
+\begin{proof}
+Equation \eqref{eq:good} gives $a$ with $c_G(a)\le3$. Apply
+\cref{lem:low}. We first find a dominated vertex with $2$-connected
+deletion.
+
+In Type~I, if $X=\varnothing$, $z$ is simplicial with adjacent neighbours
+$p,q$; if $X=\{t\}$, $t$ is simplicial with adjacent neighbours $p,z$.
+Deleting a simplicial vertex from a $2$-connected graph of order at least
+four preserves $2$-connectivity. If $|X|\ge2$, choose
+$u\in X\setminus\{t\}$ with $G[X]-u$ connected. Then $u$ is dominated by
+$p$, and $G-\{u,p\}$ is connected through the sole edge $tz$; by
+\cref{lem:dominated}(ii), $G-u$ is $2$-connected.
+
+In Type~II the same works if $|X|\ge2$ or $|Y|\ge2$, choosing a non-cut
+vertex away from the cross-edge endpoint. Thus let $X=\{x\},Y=\{y\}$.
+If $A=\{p,q\}$, then $pq\notin E(G)$ gives $C_5$, while $pq\in E(G)$
+makes $a$ simplicial. If $|A|\ge3$, $R=G[A]+pq$ is connected. Choose a
+spanning tree $T$ containing $pq$. Removing $pq$ splits $T$ into
+$T_p,T_q$; one has at least two vertices and thus a leaf $u$ distinct
+from $p,q$. Hence $R-u$ is connected. The vertex $u$ is dominated by
+$a$, and replacing $pq$ by $p-x-y-q$ shows $G-\{a,u\}$ is connected.
+Thus $G-u$ is $2$-connected. \emph{This use of $T-pq$ repairs the second
+gap named by the referee.}
+
+If the resulting $u$ is non-simplicial, \cref{lem:low} gives
+$c_G(u)\ge2$ and \cref{lem:dominated} gives $q_G(u)\ge2$. Suppose $u$ is
+simplicial and $c_G(u)\le3$. Apply \cref{lem:low} to $u$. Type~I would
+make $p$ universal. In Type~II, $p-x-y-q-p$ is an isometric $C_4$ and
+contributes $8$. Every
+$b\in(\{u\}\cup N(u))\setminus\{p,q\}$ has
+$D_G(b,x),D_G(b,y)\ge1$. For $b\in X\setminus\{x\}$, if $bx$ is an edge,
+$xy$ is extra for $\{b,q\}$ and $pq$ for $\{b,y\}$; otherwise the two
+shortest paths $b-p-q-y,b-p-x-y$ span five good edges and
+$D_G(b,y)\ge2$. The $Y$ side is symmetric. These pairs are distinct, so
+$\eta(G)\ge8+2(|V(G)|-4)=2|V(G)|$, a contradiction. Therefore a
+simplicial $u$ has $c_G(u)\ge4$. In either case
+\cref{lem:dominated}(iii) gives a loss at least four.
+\end{proof}
+
+\phantomsection\label{pf:universal}
+\propuniversal*
+\begin{proof}
+If $\operatorname{diam}(G)\le2$, then for a nonedge $ab$, every common
+neighbour supplies the two good edges of a length-two path and every
+further good edge is the middle edge of an induced $P_4$ with endpoints
+$a,b$. For an edge $ab$, each good edge other than $ab$ is opposite it
+in an induced $C_4$. Thus
+\begin{equation}\label{eq:diam2}
+ \eta(G)=2\bigl(p_3(G)-\overline m(G)\bigr)+p_4(G)+4c_4(G).
+\end{equation}
+For $G=K_1\vee Q$, the apex creates one $P_3$ for each nonedge of $Q$ and
+lies in no induced $P_4,C_4$, so
+\begin{equation}\label{eq:cone}
+ \eta(G)=2p_3(Q)+p_4(Q)+4c_4(Q).
+\end{equation}
+
+Choose a maximum clique $C$ of connected noncomplete $Q$, of order
+$c\ge2$, and distance layers $L_i$ from $C$. Put
+$\ell=|L_1|$, $r=\sum_{i\ge2}|L_i|$. If $x\in L_1$ has $a_x$ neighbours
+in $C$, then $a_x(c-a_x)\ge c-1$ induced $P_3$'s contain $x$. Every
+later-layer vertex gives another $P_3$ and a $P_4$ from a shortest path
+(for $L_2$, append a nonneighbour in $C$ of its predecessor). The unique
+maximum-layer vertex distinguishes the copies. Hence
+\[
+ p_3(Q)\ge(c-1)\ell+r,\qquad p_4(Q)\ge r.
+\]
+For $c\ge3,\ell\ge2$, $2(c-1)\ell+3r$ exceeds $3|Q|-7$ by
+$(2c-5)\ell-3c+7\ge c-3$.
+
+If $c\ge3,\ell=1$, write $L_1=\{x\}$ and
+$A=|N(x)\cap C|(c-|N(x)\cap C|)\ge c-1$. If $r=0$, the value is $2A$;
+only $K_{|Q|}-e$ and a clique with a pendant vertex fail $3|Q|-7$.
+If $r>0$, put $s=|L_2|$, $t=\sum_{i\ge3}|L_i|$. Each $L_2$ vertex gives
+$A$ induced $P_4$'s, and
+\[
+ 2p_3+p_4+4c_4\ge2A+(A+2)s+3t\ge3|Q|-7.
+\]
+
+If $c=2$, say $C=\{v,w\}$, split $L_1$ into
+$A_0=N(v)\cap L_1,B_0=N(w)\cap L_1$ of sizes $\alpha,\beta$, and let
+$e$ count edges between them. Pairs inside $A_0,B_0$ give extra $P_3$'s;
+nonedges between them give $P_4$'s and edges give $C_4$'s. Therefore
+\[
+\begin{aligned}
+2p_3+p_4+4c_4
+&\ge2\ell+3r+\alpha(\alpha-1)+\beta(\beta-1)+\alpha\beta+3e\\
+&\ge3\ell+3r-1=3|Q|-7.
+\end{aligned}
+\]
+The two exceptions have value $2|Q|-4$. Since $|Q|=n-1$,
+\eqref{eq:cone} gives $3n-10$ unless the cone is
+$K_n,K_n^{n-2}$, or $K_n^2$.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+Equation \eqref{eq:diam2} gives
+\begin{equation}\label{eq:kt}
+ \eta(K_m^t)=2(m-1-t)(t-1),
+\end{equation}
+so $\eta(K_m^2)=\eta(K_m^{m-2})=2m-6$. Put
+$f(n)=\min\{2n,3n-10\}$ and induct on $n$.
+
+At $n=4$, the only admissible graph is $C_4$, and
+$\eta(C_4)=8\ge f(4)$. Let $n\ge5$. A universal vertex is handled by
+\cref{prop:universal}. Without one, if $\eta(G)\ge2n$ we are done, and
+$\eta(C_5)=5=f(5)$. Otherwise \cref{prop:reduction} gives dominated $u$
+such that $H=G-u$ is $2$-connected and $\eta(G)\ge\eta(H)+4$. Set
+$m=n-1$. If $H$ is not exceptional, induction gives
+\[
+ \eta(G)\ge f(n-1)+4=\min\{2n+2,3n-9\}\ge f(n).
+\]
+
+If $H=K_m$, every neighbour of $u$ is universal in $G$, impossible. If
+$H=K_m-e$ with missing edge $xy$, all other vertices are universal in
+$H$ and hence nonadjacent to $u$. Since $G$ is $2$-connected,
+$N_G(u)=\{x,y\}$, but neither dominates $u$, a contradiction.
+
+Suppose $H=K_m^2$; $m=4$ is the preceding case. Write $H$ as a clique
+$B$ of order $m-1$ plus $z$ with $N_H(z)=\{p,q\}$, and put
+$R=B\setminus\{p,q\}$. Since $p,q$ are universal in $H$, $u$ is adjacent
+to neither. Nor is $u$ adjacent to $z$: it would need a second neighbour
+in $R$, and no neighbour of $u$ could dominate both $z$ and that vertex.
+Hence $N_G(u)\subseteq R$. Put $t=|N_G(u)|\ge2$. Then $u$ is simplicial.
+The $t$ common neighbours give
+$D_G(u,p),D_G(u,q)\ge2(t-1)$. Also $d_G(u,z)=3$, and the paths
+$u-r-p-z,u-r-q-z$ over $r\in N(u)$ have $3t+2$ distinct good edges, so
+$D_G(u,z)\ge3t-1$. Thus $c_G(u)\ge7t-5\ge9$, whence
+\[
+ \eta(G)\ge(2m-6)+9=2n+1,
+\]
+contrary to the branch assumption. This completes the induction.
+
+For sharpness, \eqref{eq:cone} gives
+$\eta(K_1\vee P_{n-1})=3n-10$. In the clique-plus-matched-edge family of
+\cref{sec:sharp}, start with $C_4$ and add $n-4$ simplicial clique
+vertices, each contributing two; \cref{lem:dominated} gives
+$\eta=8+2(n-4)=2n$.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+\begin{tcolorbox}[colback=black!4,colframe=black!35,title={Status of this appendix}]
+The following report is reproduced verbatim as an audit trail. Its
+references to the original writeup predate the explicit repairs and
+citations listed in \cref{sec:provenance}.
+\end{tcolorbox}
+\input{.build/referee.tex}
+
+\begin{thebibliography}{9}
+\bibitem{BKLPS17}
+M.~Bonamy, M.~Knor, B.~Lu\v{z}ar, A.~Pinlou and R.~\v{S}krekovski,
+\emph{On the difference between the Szeged and Wiener index},
+Applied Mathematics and Computation \textbf{312} (2017), 202--213;
+\href{https://arxiv.org/abs/1602.05184}{arXiv:1602.05184}.
+\bibitem{SGB00}
+S.~Simi\'c, I.~Gutman and V.~Balti\'c,
+Math. Slovaca \textbf{50} (2000), 1--15.
+\bibitem{He26}
+Z.~He, \emph{The Strengthened Szeged--Wiener Conjecture},
+unrefereed manuscript posted 8 September 2026,
+\url{https://github.com/FDmd233/strengthened-szeged-wiener-conjecture}.
+\end{thebibliography}
+\end{document}

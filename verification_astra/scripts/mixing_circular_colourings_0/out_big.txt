@@ -1,0 +1,21 @@
+=== C5: n=5, |E|=5;  E_(n+1) = ['2', '5/2', '3', '4', '5', '6']
+    bad ratios (some rep not mixing): ['2', '13/6', '11/5', '9/4', '7/3', '12/5', '5/2', '13/5', '8/3', '11/4', '3', '13/4', '10/3', '7/2', '11/3']
+    sup(bad) = 11/3   in E_(n+1)? False
+    no representation-dependent ratio found in range
+    Prop.4 violations (same open interval, different mixing): []  count=0
+    Sec.5 counterexamples (k/q>=n+1 but not mixing): []
+
+=== K23: n=5, |E|=6;  E_(n+1) = ['2', '5/2', '3', '4', '5', '6']
+    bad ratios (some rep not mixing): ['2']
+    sup(bad) = 2   in E_(n+1)? True
+    no representation-dependent ratio found in range
+    Prop.4 violations (same open interval, different mixing): []  count=0
+    Sec.5 counterexamples (k/q>=n+1 but not mixing): []
+
+=== bull: n=5, |E|=5;  E_(n+1) = ['2', '5/2', '3', '4', '5', '6']
+    bad ratios (some rep not mixing): ['2', '13/6', '11/5', '9/4', '7/3', '12/5', '5/2', '13/5', '8/3', '11/4', '3', '13/4', '10/3', '7/2', '11/3']
+    sup(bad) = 11/3   in E_(n+1)? False
+    no representation-dependent ratio found in range
+    Prop.4 violations (same open interval, different mixing): []  count=0
+    Sec.5 counterexamples (k/q>=n+1 but not mixing): []
+

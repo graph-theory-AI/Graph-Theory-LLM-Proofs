@@ -1,0 +1,1 @@
+n=11 graphs=12609097 non-exceptional-min-eta=25 (attained by J?`CSTobv~_) below-bound=0

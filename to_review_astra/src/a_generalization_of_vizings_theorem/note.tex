@@ -1,0 +1,512 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\chif}{\chi_{\mathrm{f}}}
+\newcommand{\Hrand}{H_{\mathrm{rand}}}
+\newcommand{\ind}{\mathbf 1}
+\DeclareMathOperator{\Bin}{Bin}
+\newcommand{\repair}[1]{\begin{tcolorbox}[colback=blue!4,colframe=blue!40!black,boxrule=0.4pt,arc=2pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\small\textbf{Repair.} #1\end{tcolorbox}}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result a\_generalization\_of\_vizings\_theorem --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{A counterexample to Rosenfeld's hypergraph generalization\\ of Vizing's theorem}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Rosenfeld conjectured (Open Problem Garden, 2007) that every simple $d$-uniform hypergraph in which each $(d-1)$-set lies in at most $r$ edges has an $(r+d-1)$-edge-colouring in which any two edges sharing $d-1$ vertices receive distinct colours; for $d=2$ this is Vizing's theorem. We show that the conjecture fails for $d=100$, $r=200$: a probabilistic construction, whose main ingredient is an entropy bound on the number of large matchings in a regular linear hypergraph, yields a simple $100$-uniform hypergraph with maximum $99$-codegree at most $200$ that needs at least $451$ colours, against the conjectured $299$. The same method gives, for every $d\ge15$, hypergraphs with maximum codegree $2d$ needing $(1-o(1))\,d^2/(5\log d)$ colours, so the conjectured bound $r+d-1$ is off by an unbounded factor.
+The counterexample is non-constructive and astronomically large: the proof produces it only for $n\ge10^{456}$ vertices per class, i.e.\ about $10^{458}$ vertices and $10^{45\,000}$ edges. It cannot be instantiated or spot-checked, and the disproof rests entirely on the correctness of the counting lemma, every ingredient of which was verified separately by the referee on small instances.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+
+A hypergraph $H$ is \emph{$d$-uniform} if every edge has exactly $d$ vertices, and \emph{simple} if it has no repeated edges (so $E(H)\subseteq\binom{V(H)}{d}$). A \emph{facet} of an edge $e$ is one of its $d$ subsets of size $d-1$; the \emph{codegree} of a $(d-1)$-set is the number of edges containing it. A \emph{facet colouring} of $H$ is a map $E(H)\to C$ such that two distinct edges sharing a facet, i.e.\ sharing $d-1$ vertices, receive different colours, and $\chif(H)$ denotes the least number of colours in a facet colouring. All logarithms are natural.
+
+The problem posed by Rosenfeld on the Open Problem Garden \cite{OPG} reads, verbatim:
+
+\begin{conjecture}[{Rosenfeld \cite{OPG}}]\label{conj:rosenfeld}
+Let $H$ be a simple $d$-uniform hypergraph, and assume that every set of $d-1$ points is contained in at most $r$ edges. Then there exists an $r+d-1$-edge-coloring so that any two edges which share $d-1$ vertices have distinct colors.
+\end{conjecture}
+
+In the notation above the conjecture states $\chif(H)\le r+d-1$ whenever every $(d-1)$-set has codegree at most $r$. For $d=2$ the hypothesis says $\Delta(H)\le r$ and the conclusion is $\chi'(H)\le r+1$, which is Vizing's theorem \cite{Vizing64}. The OPG entry remarks that Kempe-chain arguments, the main tool for Vizing's theorem, do not seem to work for $d\ge3$; apart from a 2009 comment asking for a reference, the entry carries no further information, and the referee's literature search (\cref{app:referee}) found no paper attacking the conjecture.
+
+\paragraph{The facet hypergraph.} It is convenient to translate the problem. Given $H$, let $F=F(H)$ be the hypergraph whose vertices are the $(d-1)$-subsets of $V(H)$ that are facets of some edge, with one edge $\{$the $d$ facets of $e\}$ for each $e\in E(H)$. Then $F$ is $d$-uniform, its maximum degree is the maximum codegree of $H$, and $F$ is \emph{linear} (two distinct edges share at most one vertex), because two distinct $d$-sets cannot have two common $(d-1)$-subsets. A facet colouring of $H$ is exactly a proper edge colouring of $F$, so \cref{conj:rosenfeld} asserts $\chi'(F)\le\Delta(F)+d-1$ for every linear $d$-uniform $F$ that is \emph{realisable} as a facet hypergraph. Realisability is essential: for general linear hypergraphs the bound is false by a wide margin (a projective plane of order $q$ is a linear $(q+1)$-uniform hypergraph with $\Delta=q+1$ and $\chi'=q^2+q+1$), but a projective plane is not a facet hypergraph, since $d$-sets pairwise meeting in $d-1$ points form a star or lie inside a $(d+1)$-set. The construction below respects this constraint by building an actual $H$.
+
+\paragraph{Related work.} The conjecture is sharp: the referee computed exact facet chromatic numbers of complete $d$-uniform hypergraphs $\binom{[d+k]}{d}$ (here $r=k+1$ and $r+d-1=d+k$) and found the bound attained with equality at $(d,d+k)=(2,3),(2,5),(3,4),(3,5),(3,6),(4,5),(5,6),(5,7),(6,7),(7,8)$, and never exceeded; $2357$ random instances with $d\in\{3,4,5\}$ on at most $d+4$ vertices gave no violation either. Any counterexample therefore has to be large and sparse, which is what the probabilistic construction produces.
+
+Several neighbouring lines of work concern edge colourings of linear hypergraphs in other regimes and are not in conflict with our result. Pippenger and Spencer \cite{PS89} and Kahn \cite{Kahn96} proved $\chi'(F)=(1+o(1))\Delta(F)$ for linear $k$-uniform $F$ with $k$ fixed and $\Delta\to\infty$; our hypergraphs have $k=d$ and $\Delta\le2d$, so $k$ is of the order of $\Delta$ and these theorems do not apply (and projective planes show they cannot be extended to that regime). Alon and Kim \cite{AK97} study $t$-simple uniform hypergraphs, again for fixed uniformity and large degree. The Berge--F\"uredi conjecture \cite{Furedi86,Berge89}, $\chi'(F)\le\Delta([F]_2)+1$ for linear $F$, bounds the chromatic index by the maximum degree of the \emph{shadow graph} rather than of $F$, and has seen recent progress \cite{BFH24a,BFH24b,MA25}; Kang, Kelly, K\"uhn, Methuku and Osthus \cite{KKKMO21} solved a problem of Erd\H{o}s on the (ordinary) chromatic index of hypergraphs with bounded codegree. None of these addresses colourings in which only edges sharing $d-1$ vertices must differ. To the best of the referee's search, the counterexample below is new; see \cref{rem:novelty}.
+
+\paragraph{The result.} Fix $d=100$ and let $n$ be a multiple of $5$. Take disjoint classes $V_1,\dots,V_{100}$ of size $n$, let $H_0$ be the complete $100$-partite $100$-uniform hypergraph (all transversal $100$-sets), retain each edge independently with probability $100/n$, and delete every retained edge containing a facet of codegree above $200$. The resulting hypergraph $H$ is simple, $100$-uniform, and has maximum $99$-codegree at most $200$. A first-moment count of large matchings in the facet hypergraph shows that, with overwhelming probability, no colour class can contain $n^{99}/5$ edges, while $H$ keeps more than $90\,n^{99}$ edges; hence $\chif(H)\ge451$.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+Let $n\ge10^{456}$ be a multiple of $5$. There exists a simple, $100$-partite, $100$-uniform hypergraph $H$ with $100n$ vertices such that
+\begin{enumerate}[nosep]
+\item every $99$-set of vertices is contained in at most $200$ edges, and
+\item every facet colouring of $H$ uses at least $451$ colours.
+\end{enumerate}
+\end{restatable}
+
+\begin{corollary}\label{cor:main}
+\Cref{conj:rosenfeld} is false for $d=100$ and $r=200$: the conjectured bound is $r+d-1=299<451\le\chif(H)$.
+\end{corollary}
+\begin{proof}
+Immediate from \cref{thm:main}.
+\end{proof}
+
+\begin{proofidea}
+Let $T=n^{99}$. The facet hypergraph $F$ of $H_0$ has $N=100T$ vertices, is $100$-uniform, $n$-regular and linear, and a set of edges of $H_0$ is a legal colour class iff the corresponding edges of $F$ form a matching. \Cref{lem:count} bounds the number $a_m(F)$ of $m$-matchings of a regular linear hypergraph from above; for $m=T/5$ and sampling probability $p=100/n$ it gives $\E[\#\text{$m$-matchings in the sampled $F$}]\le e^{-T/5}$ (\cref{prop:firstmoment}), so with probability at least $1-e^{-T/5}$ every colour class of the sampled hypergraph $\Hrand$, and of every subhypergraph, has fewer than $T/5$ edges. Pruning the edges through overloaded facets removes only an expected $100(e/4)^{100}$ fraction of the edges (Markov's inequality applied to $2^{X}$, $X\sim\Bin(n-1,100/n)$), so some outcome has both properties and more than $90T$ edges; $450$ colours would cover fewer than $450\cdot T/5=90T$ edges (\cref{prop:prune}).\fullproofref{pf:main}
+\end{proofidea}
+
+The exponent in the first-moment count improves as $d$ grows, and the same argument shows that the conjectured bound is wrong by an unbounded factor.
+
+\begin{restatable}[Large uniformity]{theorem}{thmlarge}\label{thm:large}
+For every integer $d\ge15$ there exists a simple $d$-uniform hypergraph $H_d$ in which every $(d-1)$-set lies in at most $2d$ edges and
+\[
+\chif(H_d)\ \ge\ \bigl(1-2d\,(e/4)^{d}\bigr)\frac{d^2}{\lceil5\log d\rceil}.
+\]
+Consequently $\chif(H_d)/(r+d-1)\ge(1-o(1))\,d/(15\log d)\to\infty$ as $d\to\infty$, where $r=2d$.
+\end{restatable}
+
+\begin{proofidea}
+Repeat the construction with $d$ classes of size $n$, sampling probability $d/n$, pruning threshold $2d$ and matching size $xT$ with $x=\lceil5\log d\rceil/d$, $T=n^{d-1}$. For fixed $d\ge15$ the first-moment exponent is negative, so letting $n\to\infty$ (through multiples of $d$) gives an outcome with at least $dT(1-2d(e/4)^d)$ edges and no colour class of size $xT$. The limits are taken in the order ``fix $d$, then $n\to\infty$''; no uniformity in $d$ is claimed or needed.\fullproofref{pf:large}
+\end{proofidea}
+
+\section{Counting matchings in regular linear hypergraphs}\label{sec:count}
+
+The counting lemma is proved by the entropy method, in the manner of Radhakrishnan's proof of Br\'egman's theorem \cite{Bregman73,Radhakrishnan97} and of the Kahn--Lov\'asz theorem \cite{AF08,CR11}: a uniformly random perfect matching is revealed vertex by vertex in a random order, and the entropy of each reveal is bounded by the logarithm of the total weight of the still-available edges. The hypergraph version needs two modifications: edge weights, and a small allowance $\varepsilon$ for edges that meet a matching edge in two or more vertices.
+
+\begin{restatable}[Weighted perfect matchings]{lemma}{lemPM}\label{lem:pm}
+Let $s\ge2$ and let $K$ be an $s$-uniform hypergraph on $L$ vertices with positive edge weights $w$, such that every vertex has weighted degree $\sum_{e\ni v}w(e)\le\Delta$. Put $Z=\sum_{M}\prod_{e\in M}w(e)$, the sum over perfect matchings $M$ of $K$. Call an edge $e$ \emph{bad relative to $M$} if $|e\cap f|\ge2$ for some $f\in M$; note that every edge of $M$ is bad relative to $M$. Suppose that for every perfect matching $M$ and every vertex $v$,
+\begin{equation}\label{eq:badhyp}
+\sum_{e\ni v,\ e\text{ bad relative to }M}w(e)\ \le\ \varepsilon\Delta .
+\end{equation}
+Then
+\begin{equation}\label{eq:pm}
+\log Z\ \le\ \frac Ls\Bigl[\log\Delta+\int_0^1\log\bigl(u^{s-1}+\varepsilon\bigr)\,du\Bigr].
+\end{equation}
+\end{restatable}
+
+\begin{proofidea}
+Let $M$ be a perfect matching drawn with probability $\prod_{e\in M}w(e)/Z$, so that $\log Z=H(M)+\E\sum_{e\in M}\log w(e)$. Give the vertices independent uniform labels in $[0,1]$ and reveal $M(v)$, the matching edge at $v$, in decreasing order of labels. By the chain rule and Gibbs' inequality, $\log Z\le\sum_v\E[\ind\{v\text{ has the largest label in }M(v)\}\log S_v]$, where $S_v$ is the total weight of the edges at $v$ disjoint from all previously revealed matching edges. Given the label $t$ of $v$, the event has probability $t^{s-1}$, and a non-bad edge at $v$ is still available with probability $t^{s(s-1)}$ because its other $s-1$ vertices lie in $s-1$ distinct matching edges other than $M(v)$. Jensen's inequality and the substitution $u=t^s$ give \eqref{eq:pm}.\fullproofref{pf:pm}
+\end{proofidea}
+
+As $\varepsilon\to0$ the integral in \eqref{eq:pm} tends to $\int_0^1(s-1)\log u\,du=-(s-1)$, which is the form in which the original writeup used the lemma. The rate matters, and we make it explicit.
+
+\begin{restatable}[Quantitative form of the integral]{lemma}{lemInt}\label{lem:int}
+For every integer $s\ge3$ and every $\varepsilon\in(0,1)$,
+\[
+\int_0^1\log\bigl(u^{s-1}+\varepsilon\bigr)\,du\ \le\ -(s-1)+(s+1)\,\varepsilon^{1/(s-1)} .
+\]
+\end{restatable}
+
+\repair{The referee's only substantive objection was that the writeup asserts $\int_0^1\log(u^{s-1}+\varepsilon)\,du=-(s-1)+o(1)$ without a rate, whereas the true correction is $\approx(s-1)\varepsilon^{1/(s-1)}$, a $99$th root for $s=100$, and it is multiplied by $L/s\approx80\,n^{99}$ against a margin of only $0.2\,n^{99}$ in \cref{prop:firstmoment}. \Cref{lem:int} is the missing quantification; its proof splits the integral at $u_0=\varepsilon^{1/(s-1)}$ and uses $\log(1+y)\le y$ above $u_0$. The constant $s+1$ is not optimal ($s-1$ is the asymptotically correct one) but suffices.}
+
+\begin{proofidea}
+Below $u_0=\varepsilon^{1/(s-1)}$ the integrand is at most $\log(2\varepsilon)$; above $u_0$ it is at most $(s-1)\log u+\varepsilon u^{-(s-1)}$, and $\int_{u_0}^1\varepsilon u^{-(s-1)}du\le u_0/(s-2)$. The $\log\varepsilon$ terms cancel exactly.\fullproofref{pf:int}
+\end{proofidea}
+
+\begin{restatable}[Matchings in a regular linear hypergraph]{lemma}{lemCount}\label{lem:count}
+Let $s\ge3$ and $x\in(0,1)$. Let $F$ be an $s$-uniform, $D$-regular, linear hypergraph on $N$ vertices such that $m=xN/s$ is an integer, and put $u=N-sm=(1-x)N$ and $b=(s-1)u$. Assume $b\ge4$ and
+\[
+\varepsilon:=\frac xD+\frac{s^3}{b}<1 .
+\]
+Then the number $a_m(F)$ of matchings of size $m$ in $F$ satisfies
+\begin{equation}\label{eq:count}
+\log a_m(F)\ \le\ m\bigl(\log(D/x)-(s-1)\bigr)-N(1-x)\log(1-x)+(m+u)(s+1)\,\varepsilon^{1/(s-1)} .
+\end{equation}
+\end{restatable}
+
+\repair{The writeup states \eqref{eq:count} with an unquantified $o(N)$ in place of the last term, arising from three sources: the $o(1)$ of the integral, an $O(N^{-1})$ in $\varepsilon$ from bad auxiliary edges, and Stirling's formula. Here all three are explicit: the integral by \cref{lem:int}, the bad-edge fraction by a direct count giving $s^3/b$, and Stirling is replaced by the one-sided bounds $\log b!\ge b\log b-b$ and $\binom{b}{s-1}\le b^{s-1}/(s-1)!$, which are all that the argument needs and carry no error term. The referee verified the auxiliary construction, the weighted regularity and the identity \eqref{eq:Z} exactly on five small instances (\cref{app:referee}).}
+
+\begin{proofidea}
+Adjoin a set $B$ of $b$ new vertices and, for every old vertex $a$ and every $C\in\binom{B}{s-1}$, an auxiliary edge $\{a\}\cup C$ of weight $w=\frac{(1-x)D/x}{\binom{b}{s-1}}$; the original edges keep weight $1$. The resulting $K$ is weighted-regular of degree $\Delta=D/x$, and its perfect matchings correspond to pairs ($m$-matching of $F$, partition of $B$ into $(s-1)$-blocks assigned to the $u$ uncovered old vertices), so
+\begin{equation}\label{eq:Z}
+Z=a_m(F)\cdot\frac{b!}{((s-1)!)^u}\cdot w^u .
+\end{equation}
+Linearity of $F$ and the shape of the auxiliary edges make hypothesis \eqref{eq:badhyp} hold with the stated $\varepsilon$. \Cref{lem:pm,lem:int} bound $\log Z$ from above, the one-sided Stirling bounds bound the completion factor in \eqref{eq:Z} from below, and subtraction gives \eqref{eq:count}.\fullproofref{pf:count}
+\end{proofidea}
+
+\section{The random hypergraph}\label{sec:random}
+
+Throughout this section $d=s=100$, $n$ is a multiple of $5$, $T=n^{99}$, $V_1,\dots,V_{100}$ are disjoint classes of size $n$, and $H_0$ is the hypergraph of all transversal $100$-sets, so $|E(H_0)|=n^{100}$. Its facet hypergraph $F$ has as vertices the $100\,n^{99}=100T$ transversal $99$-sets; each lies in exactly $n$ edges of $H_0$, so $F$ is $100$-uniform, $n$-regular and linear on $N=100T$ vertices. Retain each edge of $H_0$ independently with probability $p=100/n$; call the result $\Hrand$. A set of edges of $\Hrand$ is a legal colour class iff the corresponding edges of $F$ form a matching.
+
+\begin{restatable}[No large colour class]{proposition}{propFM}\label{prop:firstmoment}
+Let $m=T/5$ and let $A$ be the event that $\Hrand$ contains no $m$ edges that are pairwise facet-disjoint. If $n\ge10^{456}$ then $\Pr(A^{c})\le e^{-T/5}$.
+\end{restatable}
+
+\repair{The writeup proves $\log\E[\#\text{$m$-matchings}]\le-\tfrac25T+o(N)$ and concludes $\le-\tfrac15T$ ``for all sufficiently large $n$''. With \cref{lem:count} the error term is $(m+u)(s+1)\varepsilon^{1/99}=80.2\,T\cdot101\cdot\varepsilon^{1/99}$ with $\varepsilon\le1/(4n)$, and it is at most the available margin $0.2\,T$ exactly when $n\ge10^{455.6}$. The threshold $10^{456}$ in \cref{thm:main} is where this happens; the referee's independent estimate was $n\gtrsim10^{454.6}$ (with the slightly smaller constant $s-1$). Using the exact value $-0.7056$ of the exponent instead of $-0.4$ would lower the threshold to about $10^{416}$, still far beyond anything that can be written down.}
+
+\begin{proofidea}
+The expected number of $m$-matchings in the sampled facet hypergraph is $p^m a_m(F)$. Apply \cref{lem:count} with $x=1/5$, $D=n$: the main term is $T\bigl[x\log(100/x)+x-100f(x)\bigr]$ with $f(x)=x+(1-x)\log(1-x)\ge x^2/2$, hence at most $T[(\log500+1)/5-2]<-\tfrac25T$; the error term is at most $8100.2\,T\,(4n)^{-1/99}\le0.198\,T$ for $n\ge10^{456}$. Markov's inequality finishes.\fullproofref{pf:firstmoment}
+\end{proofidea}
+
+\begin{restatable}[Pruning]{proposition}{propPrune}\label{prop:prune}
+Delete from $\Hrand$ every edge containing a $99$-set of codegree greater than $200$, and let $H$ be the result and $Z=|E(H)|$. Then every $99$-set of vertices lies in at most $200$ edges of $H$, $Z\le200T$ always, and $\E Z\ge100T\bigl(1-100(e/4)^{100}\bigr)>99T$. Consequently, if $n\ge10^{456}$ is a multiple of $5$, some outcome satisfies both $A$ and $Z>90T$.
+\end{restatable}
+
+\begin{proofidea}
+Conditional on an edge being present, the number of other sampled edges through one of its facets is $\Bin(n-1,100/n)$, and Markov's inequality on $2^X$ gives $\Pr(X\ge200)\le2^{-200}(1+100/n)^{n-1}\le(e/4)^{100}=:q\approx1.7\cdot10^{-17}$; a union bound over the $100$ facets gives $\E Z\ge100T(1-100q)$. The deterministic bound $Z\le200T$ follows by summing facet degrees. Then $\E[Z\ind_A]\ge99T-200T\,e^{-T/5}>90T$.\fullproofref{pf:prune}
+\end{proofidea}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[The counterexample cannot be exhibited]\label{rem:size}
+\Cref{thm:main} is an existence statement about an object with $100n\ge10^{458}$ vertices and about $90\,n^{99}\approx10^{45\,150}$ edges. Nothing of this size can be constructed, stored or spot-checked, and the disproof therefore rests entirely on the correctness of \cref{lem:pm,lem:int,lem:count}. The referee, unable to test the counterexample itself, tested every ingredient instead: inequality \eqref{eq:pm} by exhaustive enumeration on $95$ weighted hypergraphs with $s\in\{2,3,4,5\}$ and at most $12$ vertices (no violation; typical near-tight cases $K_{6,6}$ with $\log Z=6.579$ against the bound $7.621$, and $\mathrm{AG}(2,3)$ with $1.386$ against $2.150$); the auxiliary construction of \cref{lem:count} exactly on $C_4,C_6,K_4,K_{3,3}$ and $\mathrm{AG}(2,3)$; and the constant $-(s-1)$ in \eqref{eq:count} independently, as the first moment of the number of $m$-matchings in a random $D$-regular $s$-uniform hypergraph, which agrees with the right-hand side of \eqref{eq:count} to within $10^{-4}$ relative for $s\in\{2,3,5,100\}$. The error term in \eqref{eq:count} is genuinely needed: on $K_N$ with $x=1$ the bound without it fails by an additive $0.847$ at every $N$ tested up to $10^8$. This is why the referee's confidence is medium rather than high, and why a second expert reading of \cref{lem:pm} is warranted before any claim of priority.
+\end{remark}
+
+\begin{remark}[Sharpness of the conjecture and size of any counterexample]\label{rem:sharp}
+The bound $r+d-1$ is attained with equality on complete $d$-uniform hypergraphs for the ten pairs $(d,|V|)$ listed in the introduction, and the referee's $2357$ random instances with $d\in\{3,4,5\}$ and $|V|\le d+4$ produced no violation, with minimum slack $0$. So the conjecture is sharp and non-trivial, no small counterexample exists in that range, and a counterexample had to be a large sparse object of the kind produced here. Nothing in this note concerns $d=3$ or other small uniformities, or small $r$; \cref{conj:rosenfeld} remains open there.
+\end{remark}
+
+\begin{remark}[Consistency with known theorems; the numbers]\label{rem:consistency}
+The mechanism is a first-moment count showing that a random sparse $d$-partite hypergraph has no matching covering a fifth of the facets, so that $\chif\ge|E(H)|/(T/5)\approx5d$. It does not conflict with the Pippenger--Spencer and Kahn theorems \cite{PS89,Kahn96}, which require the uniformity $k$ to be fixed while $\Delta\to\infty$; here $k=d=100$ and $\Delta\le200$. The referee recomputed every constant: the first-moment exponent at $x=1/5$ is exactly $-0.7056$ (the writeup's weakened bound is $-0.557<-0.4$); $q=(e/4)^{100}=1.67\cdot10^{-17}$; and $450(m-1)=90T-450<90T$. The method is not pushed to its limit: the first-moment exponent vanishes at $x^{\ast}=0.1435$, so the same argument with $|E(H)|>99T$ gives $\chif\ge690$, and a random-greedy heuristic (which covers a fraction $0.0887$ of the facets) suggests the true value is nearer $1100$.
+\end{remark}
+
+\begin{remark}[Two points a reader may stumble on]\label{rem:bad}
+(i)~In \cref{lem:pm} an edge of $M$ is bad relative to $M$, since $|e\cap e|=s\ge2$; this is deliberate and necessary, because $S_v\ge w(M(v))$ forces $\varepsilon\ge w(M(v))/\Delta$, and a reader who excludes $e=f$ obtains a false inequality (a single edge has $Z=1$ against a ``bound'' of $e^{-(s-1)}$). (ii)~The error term in \cref{lem:count} depends on $F$ only through $(N,D,s,x)$; the writeup's claim that it is uniform over $F$ is thereby justified, although the application does not need it, as $F$ is fixed for each $n$.
+\end{remark}
+
+\begin{remark}[Novelty]\label{rem:novelty}
+The referee found no counterexample to \cref{conj:rosenfeld} and no paper attacking it, in the OPG entry (fetched live; the only post-2007 content is a 2009 request for a reference) or in the neighbouring literature cited in the introduction. Novelty was checked only against what could be found online, and the counting lemma is a routine variant of a known entropy argument; what is new, if anything, is its application to Rosenfeld's problem.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+(1)~The construction and proof were found by the language model \texttt{gpt-6-astra} (reasoning effort max, single autonomous pass) on 2026-09-16, as part of a sweep over the open problems of the Open Problem Garden (catalog id \texttt{a\_generalization\_of\_vizings\_theorem}, leg \texttt{attacks\_opg}; original writeup in \texttt{attacks\_opg/a\_generalization\_of\_vizings\_theorem/output.md}). The model claimed the verdict ``disproved'' with high confidence.
+(2)~An independent adversarial referee agent (\texttt{claude-opus-5}) reviewed the writeup on 2026-09-17. It re-derived every step, brute-forced inequality \eqref{eq:pm} on $95$ instances and the auxiliary construction on five, confirmed the constant $-(s-1)$ independently, recomputed all arithmetic, tested the conjecture itself on complete and on $2357$ random small hypergraphs, fetched the OPG entry and searched for prior art. Its verdict was \textsc{minor\_gaps} with confidence \emph{medium}: no step was wrong, but the $o(N)$ term of the counting lemma was never quantified, and its quantification (which the referee carried out) shows that the counterexample exists only for $n\gtrsim10^{455}$. Its report is reproduced verbatim in \cref{app:referee}.
+(3)~On 2026-09-17 the writeup was rewritten into the present note by \texttt{claude-fable-5-1}. The text was reorganised, with full proofs in \cref{app:proofs}, and the following changes were made, each marked where it occurs:
+\begin{itemize}[nosep]
+\item \Cref{lem:int} (explicit rate $(s+1)\varepsilon^{1/(s-1)}$ for the integral) was added; it replaces the writeup's unquantified limit (4). The constant $s+1$, the bad-edge bound $s^3/b$ and the threshold $10^{456}$ are the rewriter's own explicit choices, made along the lines of the referee's computation; the referee did not see this exact form.
+\item \Cref{lem:count} is stated with an explicit error term: $\varepsilon=x/D+s^3/b$ (the writeup has $\Delta^{-1}+O_{s,x}(N^{-1})$, with a sketched union bound that is here carried out), and the Stirling step (9) of the writeup is replaced by the one-sided bounds $\log b!\ge b\log b-b$, $\binom b{s-1}\le b^{s-1}/(s-1)!$, which remove its $o(N)$.
+\item \Cref{prop:firstmoment} and \cref{thm:main} state the explicit threshold $n\ge10^{456}$ where the writeup says ``sufficiently large $n$''; the abstract and \cref{rem:size} state the size of the resulting object.
+\item The two-sentence entropy step (6) of the writeup is written out in the proof of \cref{lem:pm}, following the referee's expansion (chain rule conditional on the labels, ``$v$ uncovered'' $=$ ``$v$ has the largest label in $M(v)$'', each edge charged once, Gibbs' inequality).
+\item The writeup's \S4 is stated as \cref{thm:large} with the order of limits made explicit (fix $d\ge15$, then $n\to\infty$) and the constant $1-2d(e/4)^d$ in place of $1-o_d(1)$; the writeup mixed $o_d(1)$ and $o_n(1)$.
+\item The observation that every edge of $M$ is bad relative to $M$ is stated in \cref{lem:pm} and explained in \cref{rem:bad}, as the referee recommended.
+\item The introduction, the citations \cite{Vizing64,PS89,Kahn96,AK97,Furedi86,Berge89,BFH24a,BFH24b,MA25,KKKMO21,Bregman73,Radhakrishnan97,AF08,CR11}, the facet-hypergraph reformulation with the projective-plane example, and the contents of \cref{sec:remarks} are taken from the referee report; the writeup cites nothing and calls its counting lemma new. The entropy method is attributed to Radhakrishnan and to the proofs of the Kahn--Lov\'asz theorem.
+\end{itemize}
+No other mathematical content was changed.
+\textbf{No human mathematician has checked this argument.} We circulate this proof for human review, not as a claim to a new resolution.
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+\phantomsection\label{pf:pm}
+\lemPM*
+\begin{proof}
+If $Z=0$ there is nothing to prove, so assume $K$ has a perfect matching. Let $M$ be a random perfect matching with $\Pr(M)=\prod_{e\in M}w(e)/Z$. Taking expectations in $-\log\Pr(M)=\log Z-\sum_{e\in M}\log w(e)$ gives
+\begin{equation}\label{eq:HZ}
+H(M)+\E\sum_{e\in M}\log w(e)=\log Z .
+\end{equation}
+
+\emph{The reveal process.} Independently of $M$, give each vertex $y$ a label $\ell_y$, the $\ell_y$ being i.i.d.\ uniform on $[0,1]$; almost surely they are distinct. For a vertex $v$ write $M(v)$ for the edge of $M$ containing $v$, and say that $v$ is \emph{first in $M(v)$} if $\ell_v=\max_{y\in M(v)}\ell_y$. Given $M$ and the labels, let $R_v=\{M(y):\ell_y>\ell_v\}$ be the set of matching edges containing a vertex of larger label than $v$, and let
+\[
+S_v=\sum\{\,w(e):\ e\ni v,\ e\cap f=\emptyset\text{ for all }f\in R_v\,\}
+\]
+be the total weight of the edges at $v$ that avoid all edges of $R_v$. If $v$ is first in $M(v)$ then $M(v)\notin R_v$ and $M(v)$ is disjoint from every edge of $R_v$, so $S_v\ge w(M(v))>0$.
+
+\emph{Chain rule.} Since the labels $\ell$ are independent of $M$, $H(M)=H(M\mid\ell)$. Given $\ell$, list the vertices $v_1,v_2,\dots,v_L$ in decreasing order of label. The matching $M$ is determined by the sequence $(M(v_1),\dots,M(v_L))$, so by the chain rule
+\[
+H(M\mid\ell)=\sum_{i=1}^L H\bigl(M(v_i)\ \big|\ \ell,\ M(v_1),\dots,M(v_{i-1})\bigr).
+\]
+Fix $i$ and a value of the conditioning, i.e.\ the labels and the edges $M(v_1),\dots,M(v_{i-1})$; these edges are exactly the elements of $R_{v_i}$. If $v_i$ lies in one of them, then $v_i$ is not first in $M(v_i)$ and $M(v_i)$ is determined, so the $i$th term vanishes. Otherwise $v_i$ is first in $M(v_i)$, and since $M$ is a matching, the conditional distribution $P$ of $M(v_i)$ is supported on the set $\mathcal A$ of edges $e\ni v_i$ disjoint from all edges of $R_{v_i}$, whose total weight is $S_{v_i}$. Gibbs' inequality, in the form
+\[
+H(P)+\sum_{e\in\mathcal A}P(e)\log w(e)\ \le\ \log\sum_{e\in\mathcal A}w(e)
+\]
+(the difference of the two sides is $-D(P\,\|\,Q)\le0$ for $Q(e)=w(e)/\sum_{\mathcal A}w$), gives
+\[
+H\bigl(M(v_i)\mid\text{conditioning}\bigr)+\E\bigl[\log w(M(v_i))\mid\text{conditioning}\bigr]\ \le\ \log S_{v_i}
+\]
+whenever $v_i$ is first in $M(v_i)$. Averaging over the conditioning and summing over $i$,
+\[
+H(M)+\E\sum_{v}\ind\{v\text{ first in }M(v)\}\log w(M(v))\ \le\ \sum_v\E\bigl[\ind\{v\text{ first in }M(v)\}\log S_v\bigr].
+\]
+Every edge $f\in M$ has exactly one vertex that is first in $f$, so the sum on the left equals $\sum_{f\in M}\log w(f)$, and by \eqref{eq:HZ}
+\begin{equation}\label{eq:six}
+\log Z\ \le\ \sum_v\E\bigl[\ind\{v\text{ first in }M(v)\}\log S_v\bigr].
+\end{equation}
+
+\emph{Bounding one term.} Fix a vertex $v$ and a perfect matching $M$, and condition on $M$ and on $\ell_v=t$. The other $s-1$ vertices of $M(v)$ have independent labels, so $\Pr(v\text{ first in }M(v)\mid M,t)=t^{s-1}$. Condition further on this event, which involves only the labels of the vertices of $M(v)$. Let $e\ni v$ be an edge that is not bad relative to $M$. Then $|e\cap f|\le1$ for all $f\in M$; in particular $e\cap M(v)=\{v\}$, and the other $s-1$ vertices $y$ of $e$ lie in $s-1$ pairwise distinct matching edges $M(y)$, all different from $M(v)$. The edge $e$ contributes to $S_v$ iff none of these $M(y)$ belongs to $R_v$, i.e.\ iff all $s(s-1)$ vertices of $\bigcup_{y\in e\setminus\{v\}}M(y)$ have labels below $t$. These vertices are disjoint from $M(v)$, so their labels are independent of the conditioning, and the probability is $t^{s(s-1)}$. The bad edges at $v$ have total weight at most $\varepsilon\Delta$ by \eqref{eq:badhyp}. Hence
+\[
+\E\bigl[S_v\ \big|\ M,\ \ell_v=t,\ v\text{ first in }M(v)\bigr]\ \le\ \Delta t^{s(s-1)}+\varepsilon\Delta .
+\]
+Since $S_v>0$ on the event, Jensen's inequality for the concave function $\log$ gives
+\[
+\E\bigl[\ind\{v\text{ first in }M(v)\}\log S_v\ \big|\ M\bigr]
+=\int_0^1 t^{s-1}\,\E\bigl[\log S_v\mid M,t,\text{first}\bigr]\,dt
+\ \le\ \int_0^1 t^{s-1}\log\bigl(\Delta(t^{s(s-1)}+\varepsilon)\bigr)\,dt .
+\]
+This bound does not depend on $M$ or $v$. Summing over the $L$ vertices in \eqref{eq:six} and substituting $u=t^s$ (so $du=s\,t^{s-1}dt$ and $t^{s(s-1)}=u^{s-1}$),
+\[
+\log Z\ \le\ L\int_0^1 t^{s-1}\log\bigl(\Delta(t^{s(s-1)}+\varepsilon)\bigr)\,dt
+=\frac Ls\int_0^1\log\bigl(\Delta(u^{s-1}+\varepsilon)\bigr)\,du
+=\frac Ls\Bigl[\log\Delta+\int_0^1\log(u^{s-1}+\varepsilon)\,du\Bigr]. \qedhere
+\]
+\end{proof}
+
+\phantomsection\label{pf:int}
+\lemInt*
+\begin{proof}
+Put $u_0=\varepsilon^{1/(s-1)}\in(0,1)$, so that $u_0^{s-1}=\varepsilon$ and $(s-1)\log u_0=\log\varepsilon$.
+
+For $0\le u\le u_0$ we have $u^{s-1}+\varepsilon\le2\varepsilon$, hence
+\[
+\int_0^{u_0}\log(u^{s-1}+\varepsilon)\,du\ \le\ u_0\log(2\varepsilon)=u_0\log2+u_0\log\varepsilon .
+\]
+For $u_0\le u\le1$, write $\log(u^{s-1}+\varepsilon)=(s-1)\log u+\log(1+\varepsilon u^{-(s-1)})\le(s-1)\log u+\varepsilon u^{-(s-1)}$. Now
+\begin{align*}
+\int_{u_0}^1(s-1)\log u\,du
+&=(s-1)\bigl[u\log u-u\bigr]_{u_0}^1\\
+&=-(s-1)+(s-1)u_0-(s-1)u_0\log u_0\\
+&=-(s-1)+(s-1)u_0-u_0\log\varepsilon,
+\end{align*}
+and, as $s\ge3$,
+\begin{align*}
+\int_{u_0}^1\varepsilon u^{-(s-1)}\,du
+&=\frac{\varepsilon\bigl(u_0^{-(s-2)}-1\bigr)}{s-2}
+ \le \frac{\varepsilon u_0^{-(s-2)}}{s-2}\\
+&=\frac{u_0^{\,s-1-(s-2)}}{s-2}=\frac{u_0}{s-2}.
+\end{align*}
+Adding the three estimates, the terms $\pm u_0\log\varepsilon$ cancel and
+\begin{align*}
+\int_0^1\log(u^{s-1}+\varepsilon)\,du
+&\le -(s-1)+u_0\left[(s-1)+\log2+\frac1{s-2}\right]\\
+&\le -(s-1)+(s+1)u_0,
+\end{align*}
+since $\log2+1/(s-2)\le\log2+1<2$ for $s\ge3$.
+\end{proof}
+
+\phantomsection\label{pf:count}
+\lemCount*
+\begin{proof}
+Recall $u=N-sm=(1-x)N$ and $b=(s-1)u$.
+
+\emph{The auxiliary hypergraph.} Adjoin to $V(F)$ a set $B$ of $b$ new vertices, and let $K$ be the weighted $s$-uniform hypergraph on $V(F)\cup B$ ($L=N+b=s(m+u)$ vertices) with the edges of $F$, each of weight $1$, and for every old vertex $a\in V(F)$ and every $C\in\binom{B}{s-1}$ the auxiliary edge $\{a\}\cup C$ of weight
+\[
+w=\frac{(1-x)D/x}{\binom{b}{s-1}} .
+\]
+An old vertex has weighted degree $D+\binom b{s-1}w=D+(1-x)D/x=D/x$. A new vertex lies in $N\binom{b-1}{s-2}$ auxiliary edges, and $\binom{b-1}{s-2}/\binom{b}{s-1}=(s-1)/b$, so its weighted degree is $N\frac{s-1}{b}\cdot\frac{(1-x)D}{x}=\frac{(s-1)(1-x)N D}{(s-1)(1-x)N\,x}=D/x$. Thus $K$ is weighted-regular with $\Delta=D/x$.
+
+\emph{Perfect matchings of $K$.} Let $M$ be a perfect matching of $K$. Each auxiliary edge contains exactly $s-1$ new vertices and each original edge none, so the auxiliary edges of $M$ partition $B$ and there are exactly $b/(s-1)=u$ of them; the remaining $(N-u)/s=m$ edges of $M$ are original and form an $m$-matching of $F$, whose $u$ uncovered old vertices are exactly the old vertices of the auxiliary edges. Conversely, every $m$-matching of $F$ extends to a perfect matching of $K$ by choosing an ordered partition of $B$ into $u$ blocks of size $s-1$, one for each uncovered old vertex, in $b!/((s-1)!)^u$ ways. Hence
+\[
+Z=a_m(F)\cdot\frac{b!}{((s-1)!)^u}\cdot w^u ,
+\]
+which is \eqref{eq:Z}.
+
+\emph{Hypothesis \eqref{eq:badhyp}.} Fix a perfect matching $M$ and a vertex $v$. An edge $e$ is bad relative to $M$ iff two distinct vertices of $e$ lie in a common edge of $M$.
+
+Original edges at $v$ (so $v$ is old): an auxiliary edge of $M$ contains only one old vertex and so meets an original edge in at most one vertex; an original edge of $M$ meets a different original edge in at most one vertex by linearity of $F$. So the only original edge at $v$ that can be bad is $M(v)$ itself, of weight $1$. The bad original weight at $v$ is at most $1$.
+
+Auxiliary edges at $v$: they all have the same weight $w$, so their total bad weight is (weighted auxiliary degree of $v$)$\times$(fraction of them that are bad) $\le\Delta\cdot\beta$, where $\beta$ is the probability that a uniformly random auxiliary edge at $v$ is bad. We bound $\beta$ by a union bound over the $\binom s2$ pairs of positions in the edge. Note that an edge of $M$ containing a new vertex is auxiliary and so contains exactly $s-1$ new vertices and one old vertex.
+
+\emph{Case $v$ old.} The random edge is $\{v\}\cup C$ with $C$ uniform in $\binom B{s-1}$; list $C$ in uniformly random order as $c_1,\dots,c_{s-1}$, so that each $c_j$ is uniform on $B$ and each pair $(c_i,c_j)$, $i\ne j$, is a uniformly random ordered pair of distinct elements of $B$. For a pair $(v,c_j)$: $\Pr(c_j\in M(v))=|M(v)\cap B|/b\le(s-1)/b$. For a pair $(c_i,c_j)$: $\Pr(c_j\in M(c_i))=|M(c_i)\cap B\setminus\{c_i\}|/(b-1)=(s-2)/(b-1)$. Hence
+\[
+\beta\ \le\ \frac{(s-1)^2}{b}+\binom{s-1}{2}\frac{s-2}{b-1}.
+\]
+\emph{Case $v$ new.} The random edge is $\{a\}\cup C$ with $a$ uniform on $V(F)$, $v\in C$, and $C\setminus\{v\}$ uniform in $\binom{B\setminus\{v\}}{s-2}$, independently of $a$. For a pair $(a,c)$ with $c\in C$: given $C$, $a$ is uniform on $V(F)$ and $M(c)$ has exactly one old vertex, so $\Pr(a\in M(c))=1/N$; there are $s-1$ such pairs. For a pair $(v,c)$ with $c\in C\setminus\{v\}$: $c$ is uniform on $B\setminus\{v\}$, so $\Pr(c\in M(v))=(s-2)/(b-1)$; there are $s-2$ such pairs. For a pair $(c,c')$ of distinct elements of $C\setminus\{v\}$: it is a uniformly random ordered pair of distinct elements of $B\setminus\{v\}$, so $\Pr(c'\in M(c))\le(s-2)/(b-2)$; there are $\binom{s-2}2$ such pairs. Since $N=b/((s-1)(1-x))\ge b/(s-1)$, we get $(s-1)/N\le(s-1)^2/b$, and
+\[
+\beta\ \le\ \frac{(s-1)^2}{b}+\frac{(s-2)^2}{b-1}+\binom{s-2}{2}\frac{s-2}{b-2}\ \le\ \frac{(s-1)^2}{b}+\binom{s-1}{2}\frac{s-2}{b-2},
+\]
+because $(s-2)^2+\binom{s-2}2(s-2)=(s-2)^2\bigl(1+\tfrac{s-3}{2}\bigr)=\tfrac{(s-2)^2(s-1)}2=\binom{s-1}2(s-2)$.
+
+In both cases, using $b\ge4$ (so $b\le2(b-2)$),
+\[
+\beta\ \le\ \frac{(s-1)^2+\tfrac12(s-1)(s-2)^2}{b-2}\ \le\ \frac{\tfrac12(s-1)s^2}{b-2}\ \le\ \frac{s^3}{2(b-2)}\ \le\ \frac{s^3}{b},
+\]
+where the second inequality is $(s-1)+\tfrac12(s-2)^2\le\tfrac12s^2$, i.e.\ $2s-2+s^2-4s+4\le s^2$, i.e.\ $2\le2s$. Altogether the bad weight at $v$ is at most $1+\Delta s^3/b=\Delta\bigl(x/D+s^3/b\bigr)=\varepsilon\Delta$, which is \eqref{eq:badhyp}.
+
+\emph{Upper bound on $\log Z$.} By \cref{lem:pm} and then \cref{lem:int} (applicable since $s\ge3$ and $0<\varepsilon<1$), with $L/s=m+u$ and $\Delta=D/x$,
+\begin{equation}\label{eq:Zup}
+\log Z\ \le\ (m+u)\Bigl[\log\frac Dx-(s-1)+(s+1)\varepsilon^{1/(s-1)}\Bigr].
+\end{equation}
+
+\emph{Lower bound on the completion factor.} Since $\log b!=\sum_{k=1}^b\log k\ge\int_0^b\log t\,dt=b\log b-b$ and $\binom b{s-1}\le b^{s-1}/(s-1)!$,
+\begin{align*}
+\log\Bigl(\frac{b!}{((s-1)!)^u}w^u\Bigr)
+&=\log b!-u\log(s-1)!+u\log\frac{(1-x)D}{x}-u\log\binom b{s-1}\\
+&\ge\bigl(b\log b-b\bigr)-u\log(s-1)!+u\log\frac{(1-x)D}{x}-u\bigl((s-1)\log b-\log(s-1)!\bigr)\\
+&=-b+u\log\frac{(1-x)D}{x}
+= u\Bigl[\log\frac{(1-x)D}{x}-(s-1)\Bigr],
+\end{align*}
+using $u(s-1)\log b=b\log b$ and $b=(s-1)u$.
+
+\emph{Conclusion.} Subtracting the last bound from \eqref{eq:Zup} in \eqref{eq:Z},
+\begin{align*}
+\log a_m(F)&\le(m+u)\Bigl[\log\frac Dx-(s-1)\Bigr]-u\Bigl[\log\frac{(1-x)D}{x}-(s-1)\Bigr]+(m+u)(s+1)\varepsilon^{1/(s-1)}\\
+&=m\Bigl[\log\frac Dx-(s-1)\Bigr]+u\log\frac1{1-x}+(m+u)(s+1)\varepsilon^{1/(s-1)},
+\end{align*}
+and $u\log\frac1{1-x}=-N(1-x)\log(1-x)$, which is \eqref{eq:count}.
+\end{proof}
+
+\phantomsection\label{pf:firstmoment}
+\propFM*
+\begin{proof}
+Colour classes of $\Hrand$ correspond to matchings of the random edge-subhypergraph $F'$ of $F$ obtained by retaining each edge independently with probability $p=100/n$. A fixed $m$-matching of $F$ survives in $F'$ with probability $p^m$, so the expected number of $m$-matchings of $F'$ is $p^m a_m(F)$, and by Markov's inequality $\Pr(A^c)\le p^m a_m(F)$.
+
+Apply \cref{lem:count} with $s=100$, $x=1/5$, $D=n$, $N=100T$, $m=xN/s=T/5$ (an integer as $5\mid n$), $u=(1-x)N=80T$, $b=99u=7920T$, $m+u=80.2T$. Here $\varepsilon=x/D+s^3/b=\frac1{5n}+\frac{10^6}{7920\,n^{99}}$. For $n\ge2$ the second term is at most $\frac1{20n}$ (as $n^{98}\ge2^{98}>2600$), so $\varepsilon\le\frac1{4n}<1$; also $b\ge4$. Then
+\begin{align*}
+\log\bigl(p^m a_m(F)\bigr)
+&\le m\log p+m\bigl(\log(n/x)-99\bigr)
+       -N(1-x)\log(1-x)\\
+&\qquad +(m+u)\cdot101\cdot\varepsilon^{1/99}\\
+&=\frac N{100}\left[x\log\frac{100}{x}+x-100f(x)\right]
+       +80.2\,T\cdot101\cdot\varepsilon^{1/99},
+\end{align*}
+where $f(x)=x+(1-x)\log(1-x)$. We used $m\log(pn/x)=m\log(100/x)$ and
+\[
+m(-99)-N(1-x)\log(1-x)
+=\frac N{100}\bigl[x-100x-100(1-x)\log(1-x)\bigr]
+=\frac N{100}\bigl[x-100f(x)\bigr].
+\]
+
+\emph{Main term.} $f(0)=f'(0)=0$ and $f''(x)=1/(1-x)\ge1$, so $f(x)\ge x^2/2$ and $100f(1/5)\ge2$. With $\log500<7$,
+\[
+x\log\frac{100}x+x-100f(x)\ \le\ \frac{\log500+1}{5}-2\ <\ \frac85-2=-\frac25,
+\]
+so the main term is at most $-\frac25\cdot\frac N{100}=-\frac25T$. (The exact value of the bracket is $-0.7056$.)
+
+\emph{Error term.} For $n\ge10^{456}$, $\varepsilon^{1/99}\le(4n)^{-1/99}\le\bigl(4\cdot10^{456}\bigr)^{-1/99}=10^{-(456+\log_{10}4)/99}<10^{-4.612}<2.45\cdot10^{-5}$, so the error term is at most $80.2\cdot101\cdot2.45\cdot10^{-5}\,T<0.199\,T\le\frac15T$.
+
+Hence $\log\E[\#\text{$m$-matchings of }F']\le-\frac25T+\frac15T=-\frac T5$, and $\Pr(A^c)\le e^{-T/5}$.
+\end{proof}
+
+\phantomsection\label{pf:prune}
+\propPrune*
+\begin{proof}
+Every $99$-set of $V(H)$ that is not a transversal of $99$ classes lies in no edge of $H_0$; every transversal $99$-set has codegree at most $200$ in $H$ by construction. So the codegree condition holds for all $99$-sets.
+
+\emph{Expected size.} Fix an edge $e$ of $H_0$ and one of its facets $f$. The facet $f$ lies in exactly $n$ edges of $H_0$, namely $e$ and $n-1$ others, each retained independently with probability $100/n$. Conditional on $e$ being retained, the number $X$ of other retained edges through $f$ is $\Bin(n-1,100/n)$, and $f$ has codegree greater than $200$ iff $X\ge200$. By Markov's inequality applied to $2^X$,
+\[
+\Pr(X\ge200)\le2^{-200}\,\E 2^X=2^{-200}\Bigl(1+\frac{100}n\Bigr)^{n-1}\le\frac{e^{100}}{2^{200}}=\Bigl(\frac e4\Bigr)^{100}=:q ,
+\]
+and $q<10^{-16}$. A union bound over the $100$ facets of $e$ shows that $e$ survives in $H$ with probability at least $p(1-100q)$, so
+\[
+\E Z\ \ge\ n^{100}\cdot\frac{100}n\,(1-100q)=100T(1-100q)>99T .
+\]
+
+\emph{Deterministic bound.} Summing codegrees over the $100T$ transversal $99$-sets counts every edge of $H$ exactly $100$ times, so $100Z\le200\cdot100T$ and $Z\le200T$.
+
+\emph{A good outcome.} Let $n\ge10^{456}$ be a multiple of $5$. By \cref{prop:firstmoment} and the two bounds just proved,
+\[
+\E[Z\ind_A]\ \ge\ \E Z-200T\Pr(A^c)\ >\ 99T-200T\,e^{-T/5}\ >\ 90T,
+\]
+the last step because $T=n^{99}\ge16>5\log(200/9)\approx15.5$. If every outcome in $A$ had $Z\le90T$ then $\E[Z\ind_A]\le90T$; so some outcome satisfies $A$ and $Z>90T$.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+Let $n\ge10^{456}$ be a multiple of $5$ and fix an outcome satisfying $A$ and $|E(H)|>90T$, which exists by \cref{prop:prune}. The hypergraph $H$ is a set of distinct transversal $100$-subsets of $V_1\cup\dots\cup V_{100}$, so it is simple, $100$-partite and $100$-uniform on $100n$ vertices, and by \cref{prop:prune} every $99$-set lies in at most $200$ of its edges; this is (1).
+
+For (2), let $c$ be a facet colouring of $H$. Each colour class is a family of pairwise facet-disjoint edges of $H\subseteq\Hrand$. Since $A$ holds, $\Hrand$ has no $m=T/5$ pairwise facet-disjoint edges, and deleting edges cannot create such a family, so every colour class has at most $m-1$ edges. If $c$ used at most $450$ colours, then
+\[
+|E(H)|\ \le\ 450(m-1)\ <\ 450\cdot\frac T5=90T,
+\]
+contradicting $|E(H)|>90T$. Hence $c$ uses at least $451$ colours.
+\end{proof}
+
+\phantomsection\label{pf:large}
+\thmlarge*
+\begin{proof}
+Fix $d\ge15$ and put $a=\lceil5\log d\rceil$ and $x=a/d$. Since $g(t)=t-5\log t$ is increasing for $t\ge5$ and $g(15)>1.4$, we have $a\le5\log d+1<d$, so $x\in(0,1)$. Let $n$ be a multiple of $d$, $T=n^{d-1}$, and repeat the construction of \cref{sec:random} with $d$ classes of size $n$: $H_0$ is the complete $d$-partite $d$-uniform hypergraph, its facet hypergraph $F$ is $d$-uniform, $n$-regular and linear on $N=dT$ vertices, each edge is retained with probability $p=d/n$, and edges containing a $(d-1)$-set of codegree greater than $2d$ are deleted. Set $m=xN/d=xT=aT/d$, an integer since $d\mid n$ and $d-1\ge1$; $s=d\ge3$.
+
+\emph{First moment.} By \cref{lem:count} (for $n$ large enough that $b=(d-1)(1-x)N\ge4$ and $\varepsilon_n=x/n+d^3/b<1$), exactly as in the proof of \cref{prop:firstmoment} with $c=pn=d$,
+\[
+\log\E[\#\text{$m$-matchings}]\ \le\ T\Bigl[x\log\frac dx+x-d\,f(x)\Bigr]+(m+u)(d+1)\varepsilon_n^{1/(d-1)} .
+\]
+Using $f(x)\ge x^2/2$ and $\log(d/x)=2\log d-\log a$, the bracket is at most
+\[
+x\Bigl[\log\frac dx+1-\frac{dx}2\Bigr]=x\Bigl[2\log d-\log a+1-\frac a2\Bigr]\ \le\ x\Bigl[1-\tfrac12\log d-\log a\Bigr]=:-\gamma_d ,
+\]
+where we used $a\ge5\log d$; and $\gamma_d>0$ because $\tfrac12\log d+\log a\ge\tfrac12\log15+\log14>1$. Since $\varepsilon_n\to0$ as $n\to\infty$ with $d$ fixed, there is $n_0(d)$ such that for $n\ge n_0(d)$ the error term is at most $\gamma_dT/2$, whence $\Pr(A^c)\le e^{-\gamma_dT/2}$, where $A$ is the event that $\Hrand$ has no $m$ pairwise facet-disjoint edges.
+
+\emph{Pruning.} As in \cref{prop:prune}, with $X\sim\Bin(n-1,d/n)$, $\Pr(X\ge2d)\le2^{-2d}(1+d/n)^{n-1}\le(e/4)^d=:q_d$, so $\E Z\ge dT(1-dq_d)$, and $Z\le2dT$ deterministically. For $n\ge n_1(d)$ we have $2e^{-\gamma_dT/2}\le dq_d$ (as $T=n^{d-1}\to\infty$), and then
+\[
+\E[Z\ind_A]\ \ge\ dT(1-dq_d)-2dT\,e^{-\gamma_dT/2}\ \ge\ dT(1-2dq_d).
+\]
+So for $n\ge\max(n_0(d),n_1(d))$ some outcome satisfies $A$ and $|E(H)|\ge dT(1-2dq_d)$; let $H_d$ be such an $H$. It is simple, $d$-uniform, and every $(d-1)$-set lies in at most $2d$ of its edges.
+
+\emph{Colouring.} As in the proof of \cref{thm:main}, every colour class of a facet colouring of $H_d$ has at most $m-1<xT$ edges, so
+\[
+\chif(H_d)\ \ge\ \frac{|E(H_d)|}{m-1}\ >\ \frac{dT(1-2dq_d)}{xT}=\bigl(1-2d(e/4)^d\bigr)\frac{d^2}{a} .
+\]
+Finally, with $r=2d$, $r+d-1=3d-1<3d$ and $a\le5\log d+1$, so $\chif(H_d)/(r+d-1)\ge(1-2d(e/4)^d)\,d/(3(5\log d+1))=(1-o(1))\,d/(15\log d)$, which tends to infinity. The limits were taken in the order ``fix $d$, then $n\to\infty$''; the thresholds $n_0(d),n_1(d)$ are not quantified here.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup. Its step and equation numbers refer to that writeup, not to this note (the writeup's (1), (3), (4), (6), (7), (9) are our \eqref{eq:count}, \eqref{eq:pm}, \cref{lem:int}, \eqref{eq:six}, \eqref{eq:Z} and the Stirling step of \cref{lem:count}). The scripts it mentions are in \texttt{verification\_astra/scripts/a\_generalization\_of\_vizings\_theorem/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\begingroup
+\let\*\ast
+\input{.build/referee.tex}
+\endgroup
+
+\begin{thebibliography}{99}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{OPG} M.~Rosenfeld, A generalization of Vizing's Theorem?, Open Problem Garden, posted 11 April 2007, \url{http://www.openproblemgarden.org/op/a_generalization_of_vizings_theorem}.
+\bibitem{Vizing64} V.~G. Vizing, On an estimate of the chromatic class of a $p$-graph, Diskret.\ Analiz 3 (1964) 25--30.
+\bibitem{PS89} N.~Pippenger and J.~Spencer, Asymptotic behavior of the chromatic index for hypergraphs, J.~Combin.\ Theory Ser.~A 51 (1989) 24--42.
+\bibitem{Kahn96} J.~Kahn, Asymptotically good list-colorings, J.~Combin.\ Theory Ser.~A 73 (1996) 1--59.
+\bibitem{AK97} N.~Alon and J.~H. Kim, On the degree, size, and chromatic index of a uniform hypergraph, J.~Combin.\ Theory Ser.~A 77 (1997) 165--170.
+\bibitem{Furedi86} Z.~F\"uredi, The chromatic index of simple hypergraphs, Graphs Combin.\ 2 (1986) 89--92.
+\bibitem{Berge89} C.~Berge, On the chromatic index of a linear hypergraph and the Chv\'atal conjecture, Ann.\ New York Acad.\ Sci.\ 555 (1989) 40--44.
+\bibitem{BFH24a} A.~Bretto, A.~Faisant and F.~Hennecart, The Berge--F\"uredi conjecture on the chromatic index of hypergraphs with large hyperedges, \href{https://arxiv.org/abs/2403.06850}{arXiv:2403.06850} (2024).
+\bibitem{BFH24b} A.~Bretto, A.~Faisant and F.~Hennecart, About Berge--F\"uredi's conjecture on the chromatic index of hypergraphs, \href{https://arxiv.org/abs/2403.09518}{arXiv:2403.09518} (2024); C.~R.\ Math.\ Acad.\ Sci.\ Paris.
+\bibitem{MA25} T.~Murff and X.~D. Arsiwalla, Upper bounds on the chromatic index of linear hypergraphs, \href{https://arxiv.org/abs/2510.07494}{arXiv:2510.07494} (2025).
+\bibitem{KKKMO21} D.~Y. Kang, T.~Kelly, D.~K\"uhn, A.~Methuku and D.~Osthus, Solution to a problem of Erd\H{o}s on the chromatic index of hypergraphs with bounded codegree, \href{https://arxiv.org/abs/2110.06181}{arXiv:2110.06181} (2021).
+\bibitem{Bregman73} L.~M. Br\'egman, Some properties of nonnegative matrices and their permanents, Soviet Math.\ Dokl.\ 14 (1973) 945--949.
+\bibitem{Radhakrishnan97} J.~Radhakrishnan, An entropy proof of Bregman's theorem, J.~Combin.\ Theory Ser.~A 77 (1997) 161--164.
+\bibitem{AF08} N.~Alon and S.~Friedland, The maximum number of perfect matchings in graphs with a given degree sequence, Electron.\ J.\ Combin.\ 15 (2008) N13.
+\bibitem{CR11} J.~Cutler and A.~J. Radcliffe, An entropy proof of the Kahn--Lov\'asz theorem, Electron.\ J.\ Combin.\ 18 (2011) P10.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,420 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amsthm,thmtools,thm-restate}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\directlua{luaotfload.add_fallback("cfb", {"NotoSansMath:mode=harf;", "DejaVuSans:mode=harf;"})}
+\setmainfont{Libertinus Serif}[RawFeature={fallback=cfb}]
+\setmathfont{Latin Modern Math}
+\setmonofont{Latin Modern Mono}[Scale=0.85,RawFeature={fallback=cfb}]
+\AtBeginDocument{\let\setminus\smallsetminus}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{proofidea}{Idea of proof}
+\newcommand{\fullproofref}[1]{\,\hyperref[#1]{\textit{[full proof]}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\vone}{\mathbf 1}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape Candidate result 2604.09449\_\_03 --- machine-generated proof, awaiting human review}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\title{Nearly representative Hamilton cycles with error $O(k\log k)$:\\ an answer to Problem~6.4 of Hogan, Scott and Tsarev}
+\author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For a graph $G$, a subgraph $G'$ and an edge labelling $h\colon E(G)\to\R^k$ with $\|h(e)\|_1\le1$, Hogan, Scott and Tsarev measure how far $G'$ is from representative of $G$ by $f_h(G')=\|h(G')-\frac{e(G')}{e(G)}h(G)\|_1$, where $h(F)=\sum_{e\in E(F)}h(e)$. Their bounded-degree theorem gives $f_h(H)=O(k^2)$ for some Hamilton cycle $H$ of $K_N$ (and, by their methods, of $K_{n,n}$), and their Problem~6.4 asks for an improvement. We prove that $K_{n,n}$ ($n\ge2$) and $K_N$ ($N\ge3$) always contain a Hamilton cycle $H$ with $f_h(H)\le 6k(\lceil\log_2k\rceil+2)$, respectively $f_h(H)\le 6k(\lceil\log_2k\rceil+2)+8k+2$, i.e.\ $f_h(H)=O(k\log(k+1))$; the statement holds for labels in any $k$-dimensional normed space. The key step is a bound of $3k(\lceil\log_2 k\rceil+2)$ for perfect matchings of $K_{n,n}$, which improves the paper's cornerstone Theorem~1.9 from $O(k^2)$ to $O(k\log k)$: two perfect matchings can be spliced into a third whose label sum is within $O(k)$ of their midpoint, and a dyadic averaging tree turns approximate midpoint closure into approximate convexity at the cost of only a logarithmic factor.
+
+\medskip\noindent\small
+This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
+the argument was found by a language model and audited by an adversarial LLM
+referee, and it has not been checked by a human mathematician.
+\Cref{sec:provenance} records the full provenance.
+\end{abstract}
+
+\section{Introduction}
+
+\paragraph{Representative subgraphs.}
+Let $G$ be a graph and $h\colon E(G)\to\R^k$ an assignment of vectors to its edges. For a subgraph $F\subseteq G$ write $h(F)=\sum_{e\in E(F)}h(e)$. Hogan, Scott and Tsarev \cite{HST26} call $G'\subseteq G$ \emph{representative} of $G$ if $h(G')/e(G')=h(G)/e(G)$, and quantify the failure of this property by
+\begin{equation}\label{eq:fh}
+ f_h(G')=\left\|h(G')-\frac{e(G')}{e(G)}\,h(G)\right\|_1 ,
+\end{equation}
+under the standing hypothesis $\|h(e)\|_1\le1$ for all $e\in E(G)$ \cite[\S1]{HST26}. (The paper's TeX source writes $h$ through a macro named \texttt{\textbackslash vecf}; the referee report in \cref{app:referee} accordingly writes $f_{\vec f}$ for the same quantity.) A $k$-edge-colouring $c$ is the special case $h(e)=e_{c(e)}$ (a standard basis vector); then $h(G')$ is the vector of colour counts of $G'$, the paper writes $f_c$ for $f_h$, and if $G$ is colour-balanced (all colour classes of equal size) a representative subgraph is exactly a colour-balanced one.
+
+\paragraph{Prior bounds.}
+Pardey and Rautenbach \cite{PR22} conjectured that every colour-balanced $k$-edge-coloured $K_{2kt}$ has a perfect matching $M$ with $f_c(M)=O(k^2)$, and proved $f_c(M)\le3k\sqrt{kt\log 2k}$; Hollom \cite{Hol25} removed the dependence on $t$ with the bound $4^{k^2}$; Hogan, Scott and Tsarev \cite[Theorem~1.2]{HST26} proved the conjecture, and more generally showed \cite[Theorem~1.4]{HST26} that for every $n$-vertex graph $H$ of maximum degree $\Delta$ and every $h\colon E(K_n)\to\R^k$ with $\|h(e)\|_1\le 1$ there is a copy $H'$ of $H$ in $K_n$ with $f_h(H')=O(\Delta^2k^2\sqrt{\log2\Delta})$, answering a question of Banerjee and Hollom \cite{BH26}. All of these results rest on one statement about complete bipartite graphs, which the authors call ``a central tool, which we use throughout the paper'' and ``the cornerstone of our remaining results'':
+
+\begin{theorem}[{\cite[Theorem~1.9]{HST26}}]\label{thm:hst19}
+Let $h\colon E(K_{n,n})\to\R^k$ be such that $\|h(e)\|_1\le1$ for all $e\in E(K_{n,n})$. Then there is a perfect matching $M$ of $K_{n,n}$ satisfying $f_h(M)=O(k^2)$.
+\end{theorem}
+
+It is proved in \cite{HST26} via a linear relaxation and a necklace-splitting argument. In their concluding section the authors write: ``Our use of [Theorem~1.9] to prove each of our other results for representative subgraphs implies that any improvement to the general $k^2$ bound in [Theorem~1.9] immediately gives an equal improvement to the $k^2$ factor in the bounds of each of our other results.'' \cite[\S6]{HST26} They then turn to Hamilton cycles: ``since the maximum degree of a Hamilton cycle is $2$, our general upper bound in [Theorem~1.4] implies that the error for embedding a representative Hamilton cycle in a complete graph is $O(k^2)$. Our methods imply that this bound also holds for Hamilton cycles in complete bipartite graphs.'' They also observe that, by Alon's necklace theorem \cite{Alon87}, an almost representative Hamilton cycle with error $\varepsilon$ yields an almost representative perfect matching with error $\varepsilon+O(k)$, ``so any improvement to the $k^2$ upper bound for Hamilton cycles yields an improvement to the corresponding upper bound for perfect matchings'', and pose:
+
+\begin{problem}[{\cite[Problem~6.4]{HST26}}]\label{prob:64}
+Improve the bounds on $f_h(H)$ for a Hamilton cycle $H$ in complete or complete bipartite graphs.
+\end{problem}
+
+\paragraph{This note.}
+We answer \cref{prob:64} by lowering the bound from $O(k^2)$ to $O(k\log(k+1))$ in both hosts (\cref{thm:main,cor:answer}). For a Hamilton cycle $H$ one has $e(H)/e(K_{n,n})=2n/n^2=2/n$ and $e(H)/e(K_N)=N/\binom N2=2/(N-1)$, so the centring vectors $\frac2n h(K_{n,n})$ and $\frac2{N-1}h(K_N)$ appearing in \cref{thm:main} are \emph{exactly} the paper's $\frac{e(H)}{e(G)}h(G)$: the theorem, specialised to $X=(\R^k,\|\cdot\|_1)$, is literally a bound on the quantity \eqref{eq:fh}, with no reinterpretation. The argument runs in the direction opposite to the paper's remark quoted above: we first improve the perfect-matching bound of \cref{thm:hst19} to $3k(\lceil\log_2k\rceil+2)$ (\cref{prop:match}) and then reduce Hamilton cycles to perfect matchings of an auxiliary complete bipartite graph. By the authors' own statement, the improvement of \cref{thm:hst19} propagates to the $k^2$ factor in each of their other results; we do not restate those consequences here.
+
+The matching bound has two ingredients. A \emph{splicing lemma} (\cref{lem:splice}): given two perfect matchings $P,Q$ of a labelled $K_{r,r}$ there is a third, $R$, with $h(R)$ within $3Ld$ of $\frac12(h(P)+h(Q))$, uniformly in $r$; this uses the Hobby--Rice theorem \cite{HobbyRice65,AlonWest86} to halve a vector-valued step function with at most $d$ cuts. And a \emph{dyadic convexification lemma} (\cref{lem:dyadic}): a finite set that is approximately closed under midpoints, with error $D$, lies within $D(\lceil\log_2 d\rceil+2)$ of its convex hull in dimension $d$. Averaging along a balanced binary tree pays the error $D$ at each level with geometrically decreasing weight, and only $O(\log d)$ levels contain nodes that are not constant; a sequential (Carathéodory-by-Carathéodory) rounding would instead pay $O(d)$ a total of $O(d)$ times and recover only $O(k^2)$. The referee could not locate \cref{lem:dyadic} in the discrepancy literature, but could not exclude that it is folklore there (\cref{rem:novelty}).
+
+The result was found in a second attempt on this problem; a first attempt by a different model, supplied as context, had reached the same strategy with weaker constants and without matching the paper's own definition of $f_h$. \Cref{sec:provenance} records what was inherited and what is new.
+
+\section{Main results}\label{sec:main}
+
+Throughout, $X$ is a real normed space of finite dimension $d\ge1$ with norm $\|\cdot\|$, $L>0$, and $h\colon E(G)\to X$ satisfies $\|h(e)\|\le L$ for all edges. We write $h(F)=\sum_{e\in E(F)}h(e)$ and put
+\begin{equation}\label{eq:Bd}
+ B_d=\lceil\log_2d\rceil+2 ,
+\end{equation}
+so that $B_1=2$ and $B_d=O(\log(d+1))$.
+
+\begin{restatable}[Main theorem]{theorem}{thmmain}\label{thm:main}
+Let $X$ be a real normed space of dimension $d\ge1$ and $h\colon E(G)\to X$ with $\|h(e)\|\le L$ for every edge $e$.
+\begin{enumerate}[label=\textup{(\roman*)},nosep]
+\item If $G=K_{n,n}$ with $n\ge2$, then $G$ has a Hamilton cycle $H$ with
+ $\displaystyle\norm{h(H)-\tfrac2n\,h(G)}\le 6LdB_d$.
+\item If $G=K_N$ with $N\ge3$, then $G$ has a Hamilton cycle $H$ with
+ $\displaystyle\norm{h(H)-\tfrac2{N-1}\,h(G)}\le 6LdB_d+8Ld+2L$.
+\end{enumerate}
+In both cases the centring vector is the expected label sum of a uniformly random Hamilton cycle of $G$, and equals $\frac{e(H)}{e(G)}h(G)$.
+\end{restatable}
+
+\begin{corollary}[Answer to \cref{prob:64}]\label{cor:answer}
+Let $h\colon E(G)\to\R^k$ with $\|h(e)\|_1\le1$ for all $e\in E(G)$, in the setting of \cite{HST26}.
+If $G=K_{n,n}$ with $n\ge2$, some Hamilton cycle $H$ satisfies $f_h(H)\le 6k(\lceil\log_2k\rceil+2)$.
+If $G=K_N$ with $N\ge3$, some Hamilton cycle $H$ satisfies $f_h(H)\le 6k(\lceil\log_2k\rceil+2)+8k+2$.
+In particular $f_h(H)=O(k\log(k+1))$ in both cases, improving the $O(k^2)$ bound of \cite[Theorem~1.4 and \S6]{HST26}.
+\end{corollary}
+\begin{proof}
+Take $X=(\R^k,\|\cdot\|_1)$, $d=k$, $L=1$ in \cref{thm:main}. Since $e(H)=2n$, $e(K_{n,n})=n^2$, $e(K_N)=\binom N2$ and a Hamilton cycle of $K_N$ has $N$ edges, $\frac{e(H)}{e(G)}h(G)$ equals $\frac2nh(K_{n,n})$, respectively $\frac{N}{\binom N2}h(K_N)=\frac2{N-1}h(K_N)$, so the left-hand sides in \cref{thm:main} are exactly $f_h(H)$ as defined in \eqref{eq:fh}.
+\end{proof}
+
+\begin{restatable}[Recolouring form]{corollary}{correcol}\label{cor:recol}
+Let $k\ge2$ and let $c$ be a colour-balanced $k$-edge-colouring of the host graph.
+If the host is $K_{n,n}$ with $n\ge2$ and $k\mid 2n$, some Hamilton cycle can be made colour-balanced by recolouring at most $3k(\lceil\log_2k\rceil+2)$ of its edges.
+If the host is $K_N$ with $N\ge3$ and $k\mid N$, some Hamilton cycle can be made colour-balanced by recolouring at most $3k(\lceil\log_2k\rceil+2)+4k+1$ of its edges.
+\end{restatable}
+\begin{proofidea}
+With $h(e)=e_{c(e)}\in(\R^k,\|\cdot\|_1)$ the centring vectors become $\frac{2n}k\vone$ and $\frac Nk\vone$, and a subgraph $F$ with $kq$ edges and colour counts $m_1,\dots,m_k$ needs exactly $\sum_j(m_j-q)_+=\frac12\sum_j|m_j-q|$ recolourings to become colour-balanced. Halve the bounds of \cref{thm:main}.\fullproofref{pf:recol}
+\end{proofidea}
+
+The substantive ingredient is the following bound for perfect matchings, which with $X=(\R^k,\|\cdot\|_1)$, $L=1$ reads $f_h(M)\le 3k(\lceil\log_2k\rceil+2)$ and thus improves \cref{thm:hst19} from $O(k^2)$ to $O(k\log k)$.
+
+\begin{restatable}[Vector matching bound]{proposition}{propmatch}\label{prop:match}
+Let $r\ge1$ and $h\colon E(K_{r,r})\to X$ with $\|h(e)\|\le L$. Every point of the convex hull of $\{h(M):M\text{ a perfect matching of }K_{r,r}\}$ lies within $3LdB_d$ of some $h(M)$. In particular there is a perfect matching $M$ with
+\[
+ \norm{h(M)-\tfrac1r\,h(K_{r,r})}\le 3LdB_d .
+\]
+\end{restatable}
+\begin{proofidea}
+Let $S$ be the set of perfect-matching label sums. \Cref{lem:splice} says $S$ is approximately midpoint-closed with error $D=3Ld$; \cref{lem:dyadic} then puts every point of $\conv S$ within $DB_d$ of $S$. A uniformly random perfect matching contains each edge with probability $1/r$, so $\frac1rh(K_{r,r})=\E\,h(M)\in\conv S$.\fullproofref{pf:match}
+\end{proofidea}
+
+\begin{proofidea}[of \cref{thm:main}]
+\emph{(i)} Order one side $A=\{a_1,\dots,a_n\}$ of $K_{n,n}$ cyclically and form an auxiliary $K_{n,n}$ between the $n$ ``gaps'' $g_i=(a_i,a_{i+1})$ and the other side $B$, labelling $g_ib$ by $\lambda(g_ib)=h(a_ib)+h(a_{i+1}b)$, of norm at most $2L$. A perfect matching $g_i\mapsto b_i$ of the auxiliary graph is the Hamilton cycle $a_1b_1a_2b_2\cdots a_nb_na_1$, whose $h$-sum is the auxiliary $\lambda$-sum. Every edge $a_ib$ lies in exactly two labels, so the auxiliary centring $\frac1n\lambda(K_{n,n})$ is $\frac2nh(K_{n,n})$, and \cref{prop:match} with $2L$ in place of $L$ gives (i).
+\emph{(ii)} For $N\ge4$ first choose, by \cref{lem:cut}, a near-bisection $V(K_N)=A\cup B$ with $|A|=\lceil N/2\rceil=a$ whose crossing label sum $T=h(E(A,B))$ is within $2LdN$ of $p\,h(K_N)$, $p=2ab/(N(N-1))$ being the crossing probability of a uniform edge. Run the gap construction between the cyclic gaps of $A$ and $B$, adjoining a dummy vertex $\ast$ to $B$ when $N$ is odd with $\lambda(g_i\ast)=h(a_ia_{i+1})$ (the gap is then closed by the direct edge). Every auxiliary perfect matching is a Hamilton cycle of $K_N$. The auxiliary centring differs from $\frac2{N-1}h(K_N)$ by $\frac2a(T-p\,h(K_N))$ plus, for odd $N$, two vectors of norm at most $L$, since $2p/a$ equals $\frac2{N-1}$ ($N$ even) or $\frac2N$ ($N$ odd) and $\frac2N-\frac2{N-1}=-1/\binom N2$; this contributes at most $8Ld+2L$. \Cref{prop:match} with $2L$ contributes $6LdB_d$. For $N=3$ the unique Hamilton cycle is $K_3$ itself and the deviation is $0$.\fullproofref{pf:main}
+\end{proofidea}
+
+\section{The four lemmas}\label{sec:lemmas}
+
+\begin{restatable}[Hobby--Rice halving with $d$ cuts]{lemma}{lemhr}\label{lem:hr}
+Let $f\colon[0,r]\to\R^d$ be integrable. There is a set $A\subseteq[0,r]$, a union of intervals whose indicator is constant between at most $d$ cut points, such that $\int_Af=\frac12\int_0^rf$.
+\end{restatable}
+\begin{proofidea}
+This is the theorem of Hobby and Rice \cite{HobbyRice65}; the proof below is the Borsuk--Ulam proof of Alon and West \cite{AlonWest86}. For $x\in S^d\subset\R^{d+1}$ cut $[0,r]$ into consecutive intervals $J_0,\dots,J_d$ of lengths $rx_i^2$ and set $F(x)=\sum_i\sgn(x_i)\int_{J_i}f$. Then $F\colon S^d\to\R^d$ is continuous and odd, so it vanishes somewhere; take $A$ to be the union of the positively signed intervals.\fullproofref{pf:hr}
+\end{proofidea}
+
+\begin{restatable}[Splicing lemma]{lemma}{lemsplice}\label{lem:splice}
+Let $h\colon E(K_{r,r})\to X$ with $\|h(e)\|\le L$. For any two perfect matchings $P,Q$ of $K_{r,r}$ there is a perfect matching $R$ with
+\[
+ \norm{h(R)-\frac{h(P)+h(Q)}2}\le 3Ld .
+\]
+\end{restatable}
+\begin{proofidea}
+Let the parts be $U,V$, view $P,Q$ as bijections $V\to U$ and let $\sigma$ be the permutation of $V$ with $Q(v)=P(\sigma(v))$. List $V$ as $v_1,\dots,v_r$ by concatenating the cycles of $\sigma$, and let $P_i,Q_i$ be the $P$- and $Q$-edges at $v_i$. Apply \cref{lem:hr} to the step function equal to $h(P_i)-h(Q_i)$ on $[i-1,i]$, and let $\alpha_i\in[0,1]$ be the measure of $A\cap[i-1,i]$; then $\sum_i\alpha_i(h(P_i)-h(Q_i))=\frac12\sum_i(h(P_i)-h(Q_i))$. Round $\alpha_i$ to the nearest $s_i\in\{0,1\}$ and select $P_i$ if $s_i=1$, $Q_i$ if $s_i=0$. At most $d$ of the $\alpha_i$ are fractional, so the selected edge set has label sum within $2L\cdot\frac d2=Ld$ of the midpoint. Each $s_i$ is the value of $\vone_A$ at a non-cut interior point of $[i-1,i]$, so the word $s_1\cdots s_r$ changes value at most $d$ times, hence at most $2d$ times when each cycle block is read cyclically. In a block with $\sigma(v_i)=v_{i+1}$ the vertex $P(v_i)\in U$ has degree $1+s_i-s_{i-1}$ in the selection, so there are exactly $b/2\le d$ vertices of $U$ of degree $2$ and as many of degree $0$; delete one edge at each of the former and re-match the freed $V$-vertices to the latter, at cost at most $2Ld$.\fullproofref{pf:splice}
+\end{proofidea}
+
+\begin{restatable}[Dyadic convexification]{lemma}{lemdyadic}\label{lem:dyadic}
+Let $S$ be a finite subset of a $d$-dimensional normed space $X$ such that for all $u,v\in S$ there is $w\in S$ with $\|w-\frac{u+v}2\|\le D$. Then $\dist(x,S)\le DB_d$ for every $x\in\conv(S)$. More precisely, if $x$ is a convex combination of $m\ge2$ points of $S$ then $\dist(x,S)\le D(\lceil\log_2(m-1)\rceil+2)$.
+\end{restatable}
+\begin{proofidea}
+For dyadic coefficients with denominator $2^q$, place the $2^q$ weighted copies of the $m$ points in consecutive blocks at the leaves of a complete binary tree and assign to each node a representative in $S$: the common point if all leaves below are equal, otherwise an approximate midpoint of the children's representatives. The error at the root is at most $D\sum_j2^{-j}H_j$, where $H_j\le\min(2^j,m-1)$ counts the non-constant nodes at depth $j$ (each contains one of the $m-1$ block boundaries), and $\sum_j\min(1,(m-1)2^{-j})\le\lceil\log_2(m-1)\rceil+2$. Arbitrary coefficients are dyadic limits, and $S$ is finite. Carathéodory gives $m\le d+1$.\fullproofref{pf:dyadic}
+\end{proofidea}
+
+\begin{restatable}[Nearly representative bisection]{lemma}{lemcut}\label{lem:cut}
+Let $N\ge4$, $h\colon E(K_N)\to X$ with $\|h(e)\|\le L$, $a=\lceil N/2\rceil$, $b=\lfloor N/2\rfloor$ and $p=\frac{2ab}{N(N-1)}$. There is a partition $V(K_N)=A\cup B$ with $|A|=a$, $|B|=b$ such that
+\[
+ \norm{h(E(A,B))-p\,h(K_N)}\le 2LdN .
+\]
+\end{restatable}
+\begin{proofidea}
+Choose $A$ uniformly among $a$-sets and let $I_e$ indicate that $e$ crosses; $\E I_e=p$. For a scalar weight function $|w_e|\le L$ the sum $Z=\sum_ew_e(I_e-p)$ has variance at most $\frac{17}8L^2N^2<4L^2N^2$: adjacent edges have $|\Cov(I_e,I_f)|=p|\frac12-p|\le\frac1N$, disjoint edges have $\Cov(I_e,I_f)\le\frac4{N^2}$, and there are $\binom N2$ edges, $3\binom N3$ adjacent and $3\binom N4$ disjoint pairs. Pass from scalars to $X$ through an Auerbach basis $u_1,\dots,u_d$ with coordinate functionals $\varphi_j$ of dual norm one \cite[Prop.~1.c.3]{LT77}, so that $\|x\|\le\sum_j|\varphi_j(x)|$; then $\E\|\sum_e(I_e-p)h(e)\|\le\sum_j\sqrt{\Var\varphi_j(\cdot)}\le 2LdN$.\fullproofref{pf:cut}
+\end{proofidea}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[Interpretation]\label{rem:interp}
+The referee downloaded the TeX source of arXiv:2604.09449v2 (posted 11 July 2026, the current version) and checked that \eqref{eq:fh} and \cref{prob:64} are quoted exactly, that the paper's baseline for Hamilton cycles is $O(k^2)$ (Theorem~1.4 with $\Delta=2$, extended to $K_{n,n}$ ``by our methods''), and that the centring vectors of \cref{thm:main} coincide with $\frac{e(H)}{e(G)}h(G)$ as computed in the proof of \cref{cor:answer}. The hypothesis $\|h(e)\|\le L$ specialises to the paper's $\|h(e)\|_1\le1$. No sub-class of instances is excluded: the divisibility conditions $k\mid2n$, $k\mid N$ appear only in \cref{cor:recol}, where they are necessary for a colour-balanced Hamilton cycle to exist at all. \Cref{prob:64} asks for an improvement, not for the optimal order, and the note does not determine the order (\cref{rem:order}).
+\end{remark}
+
+\begin{remark}[The matching bound and its consequences]\label{rem:propagate}
+\Cref{prop:match} with $X=(\R^k,\|\cdot\|_1)$ and $L=1$ gives a perfect matching $M$ of $K_{n,n}$ with $f_h(M)\le3k(\lceil\log_2k\rceil+2)$, improving \cref{thm:hst19} from $O(k^2)$ to $O(k\log k)$. The authors of \cite{HST26} state that any improvement of the $k^2$ bound in that theorem ``immediately gives an equal improvement to the $k^2$ factor in the bounds of each of our other results'' (\S6; quoted in the Introduction). Taken at their word, the $k^2$ factors in the paper's Theorems~1.2--1.4 and its further results become $k\log k$. We have not re-derived those propagated statements and do not claim them here; a reader acting on this note should check each reduction in \cite{HST26} for uses of the theorem beyond its statement.
+\end{remark}
+
+\begin{remark}[Order of magnitude and lower bounds]\label{rem:order}
+Nothing here rules out an $O(k)$ bound for Hamilton cycles. For colourings, \cite{HST26} constructs colour-balanced $k$-edge-colourings of $K_{kt,kt}$ in which every perfect matching has $f_c(M)\ge\sqrt{k/2}$ and conjectures (Conjecture~6.1) that $O(\sqrt k)$ is attainable for colour-balanced perfect matchings; that conjecture is untouched by this note. In the general vector setting the situation is different: the sibling target \texttt{2604.09449\_\_00} of this project exhibits labellings $h\colon E(K_{n,n})\to\R^k$ with $\|h(e)\|_1\le1$ for which \emph{every} perfect matching has $f_h(M)=k$. The referee re-ran that construction and found $f_h(M)=k$ exactly for $k=2,4,6,8$, against the bounds $3kB_k=18,48,90,120$ of \cref{prop:match}; so in the vector setting the matching bound is tight up to the factor $B_k$. The constants have not been optimised.
+\end{remark}
+
+\begin{remark}[Which Hamilton cycles]\label{rem:family}
+The proof of \cref{thm:main}(ii) only ever produces Hamilton cycles that alternate between the two sides of a near-bisection $A\cup B$ (with one edge inside $A$ when $N$ is odd), and (i) only produces cycles in which the vertices of one side appear in a prescribed cyclic order. This is legitimate for an upper bound, but the argument says nothing about Hamilton cycles outside these families.
+\end{remark}
+
+\begin{remark}[Computational checks by the referee]\label{rem:comp}
+The scripts are in \nolinkurl{verification_astra/scripts/2604.09449__03/}. (a)~\emph{\Cref{lem:cut}, exact.} Enumerating all $\binom Na$ partitions with rational arithmetic for $N=3,\dots,10$: $\Prob(I_e=1)=p$, $\Prob(I_e=I_f=1)=p/2$ for adjacent $e,f$, and the two closed forms for $\Cov(I_e,I_f)$ on disjoint pairs hold as exact identities, with $(p,\Cov_{\text{disj}})=(\frac23,\frac29),\allowbreak (\frac35,\frac1{25}),\allowbreak (\frac35,\frac1{25}),\allowbreak (\frac47,\frac4{245}),\allowbreak (\frac47,\frac4{245}),\allowbreak (\frac59,\frac5{567}),\allowbreak (\frac59,\frac5{567})$ for $N=4,\dots,10$; the inequality $\Cov_{\text{disj}}\le4/N^2$ is tightest at $N=4$ ($0.222\le0.25$). The exact value of $\sum_{e,f}|\Cov(I_e,I_f)|$ is $5.33,7.20,14.40,17.14,27.43,31.11$ for $N=4,\dots,9$, against the bounding expression $9.00,19.29,33.75,52.39,75.25,102.33$ used in the proof. (b)~\emph{Exhaustive checks} of the ratio (best attainable value)/(claimed bound), which must be at most $1$: \cref{lem:splice} over random $\ell_1$-normalised labellings, $60$ instances each, ratios $0.048$--$0.140$ for $(r,d)\in\{(5,2),\allowbreak (5,3),\allowbreak (6,2),\allowbreak (6,3),\allowbreak (6,4),\allowbreak (7,3)\}$; \cref{prop:match} ratios $0.007$--$0.019$ on the same instances; \cref{thm:main}(i) over \emph{all} Hamilton cycles of $K_{n,n}$: $0.034,0.015,0.012,0.006$ for $(n,d)=(4,2),\allowbreak (5,2),\allowbreak (5,3),\allowbreak (6,3)$; \cref{thm:main}(ii) over all Hamilton cycles of $K_N$: $0.019,0.014,0.007,0.004$ for $(N,d)=(5,2),\allowbreak (6,2),\allowbreak (6,3),\allowbreak (7,3)$. (c)~\emph{Structure.} For $N=3,\dots,10$ every one of the $a!$ auxiliary perfect matchings in the proof of (ii), dummy vertex included for odd $N$, yields a genuine Hamilton cycle of $K_N$; likewise for $K_{n,n}$. (d)~\emph{Adversarial search.} Hill-climbing over labellings to maximise the same ratios never exceeded $0.333$ (\cref{lem:splice} at $(r,d)=(4,1)$); \cref{lem:hr} was confirmed numerically for $d=2$, $r=6$ on random step functions. No computational claim failed.
+\end{remark}
+
+\begin{remark}[Novelty]\label{rem:novelty}
+The referee found no prior occurrence of the result: Semantic Scholar lists no citations of arXiv:2604.09449; an arXiv search for ``colour-balanced''/``color-balanced'' returns, for 2026, only the source paper and an unrelated paper on colour-biased tight Hamilton cycles; the known chain of matching bounds is $3k\sqrt{kt\log2k}$ \cite{PR22} $\to4^{k^2}$ \cite{Hol25} $\to O(k^2)$ \cite{HST26}; and v2 of the source paper still poses \cref{prob:64} with the $O(k^2)$ baseline. The only web page connecting an $O(k\log k)$ bound to the paper is this project's own repository, which is self-contamination and not prior art. What the referee could \emph{not} certify is the novelty of \cref{lem:dyadic}: the statement that an approximately midpoint-closed finite set lies within $D(\lceil\log_2d\rceil+2)$ of its convex hull is general enough that it may exist, in other language, in the discrepancy literature on rounding and vector balancing (Beck--Fiala \cite{BeckFiala81}, Steinitz-type results of Bárány and Grinberg \cite{BaranyGrinberg81}, Banaszczyk \cite{Banaszczyk98}). The referee checked that the two obvious routes do not yield \cref{prop:match} directly, since the constraints involve every edge and $\{0,1\}$-rounding of a fractional matching does not respect the matching structure, and records this as a novelty caveat, not a correctness one. A human expert should search that literature before any submission.
+\end{remark}
+
+\begin{remark}[The sibling target]\label{rem:sibling}
+The catalog entry \texttt{2604.09449\_\_00} (same paper, first campaign) was rated \textsc{already\_known} by the referee of that campaign: its counterexample refuted the vector-label form of Conjecture~6.1 as stated in arXiv:2604.09449v1, which the authors had already replaced in v2 (11 July 2026) by the colour-balanced form quoted in \cref{rem:order}, acknowledging V.~Rozhoň for pointing out the error. That target is relevant here only as the source of the $\Omega(k)$ labelling in \cref{rem:order}; the present problem is Problem~6.4, which is open in v2.
+\end{remark}
+
+\section{Provenance}\label{sec:provenance}
+
+The mathematics in this note was produced without human intervention, in three stages.
+
+(1)~The argument was found by the language model \texttt{gpt-6-astra} (reasoning effort \emph{max}, single autonomous pass, started 2026-09-17) as part of the \emph{retry} leg of a sweep over open problems catalogued from arXiv (catalog id \texttt{2604.09449\_\_03}, leg \texttt{attacks\_retry}; writeup in \nolinkurl{attacks_retry/2604.09449__03/output.md}). This was a \emph{second} attempt on the problem. The first, by \texttt{gpt-5.6-sol} (\texttt{attacks/2604.09449\_\_03}, self-assessed \emph{partial}), was supplied to the second model as context, without a referee report. The overall strategy is inherited from that first attempt: the reduction of Hamilton cycles to perfect matchings of an auxiliary ``gap'' graph, the necklace-halving splicing of two matchings, the dyadic averaging tree, and the random near-bisection of $K_N$ all appear there, with the bounds $8Ld$ for the splicing lemma and $8k(\lceil\log_2k\rceil+2)(+4k+1)$ for the recolouring form, and only in the $\ell_1$ colouring setting with $f_h$ guessed rather than taken from the paper. The second writeup re-verified those steps and improved them in three ways. It realises each rounded bit $s_i$ in the splicing lemma as the value of $\vone_A$ at a non-cut interior point, which makes the bound of $d$ on the number of changes of $s_1\cdots s_r$ immediate and sharpens the splicing constant from $8Ld$ to $3Ld$ (the first attempt chose $s_i$ arbitrarily on the intervals containing a cut and then argued, less transparently, that each such choice creates at most two further changes, reaching $6d$ cyclic changes instead of $2d$). It generalises the bisection lemma from $\ell_1$ colour counts to an arbitrary norm through an Auerbach basis. And it states the theorem in the paper's own vector-label formulation with the paper's centring vectors, so that the result is a bound on $f_h$ rather than on a recolouring statistic.
+
+(2)~An independent adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) audited the writeup against the TeX source of arXiv:2604.09449v2. It confirmed the interpretation (\cref{rem:interp}), re-derived every step it isolated (twenty-one, all rated valid, none a gap), identified \cref{lem:hr} as the Hobby--Rice theorem, checked \cref{lem:cut} exactly for $N\le10$ and \cref{thm:main} exhaustively for $K_{n,n}$ up to $n=6$ and $K_N$ up to $N=7$ (\cref{rem:comp}), searched for prior art (\cref{rem:novelty}), and noted that the writeup understates its result by treating \cref{prop:match} as an aside (\cref{rem:propagate}). Its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
+
+(3)~On 2026-09-17 the writeup was rewritten into the present note by \texttt{claude-fable-5-1}. The text was reorganised, with proof ideas in the main text and full proofs in \cref{app:proofs}. Every deviation from the writeup is listed here. \emph{No mathematical statement or proof was changed.} (a)~Notation: the paper's $f_h$ is used throughout (the writeup wrote $f_h$ in its conclusion and the referee wrote $f_{\vec f}$; both denote \eqref{eq:fh}). (b)~\Cref{cor:answer} was added: it is the writeup's Theorem~1 specialised to $X=(\R^k,\|\cdot\|_1)$, $d=k$, $L=1$, an instantiation the writeup states in words (``in particular, for unit-bounded \dots labels'') but not with explicit constants. (c)~Citations were added: Hobby--Rice \cite{HobbyRice65} and Alon--West \cite{AlonWest86} for \cref{lem:hr}, which the writeup proved without attribution; Lindenstrauss--Tzafriri \cite{LT77} for the Auerbach basis; Alon \cite{Alon87} where the source paper invokes it; Pardey--Rautenbach \cite{PR22}, Hollom \cite{Hol25} and Banerjee--Hollom \cite{BH26} for the history; Beck--Fiala \cite{BeckFiala81}, Bárány--Grinberg \cite{BaranyGrinberg81} and Banaszczyk \cite{Banaszczyk98} for the novelty caveat. (d)~Theorem and problem numbers of \cite{HST26} (1.2, 1.4, 1.9, Conjecture~6.1, Problem~6.4) were read off the v2 TeX source; the catalog page cited ``Theorem~1.2'' for the bounded-degree bound, which is its v1 number. (e)~Routine steps that the writeup left terse were spelled out in \cref{app:proofs}, following the referee's re-derivations: the continuity of the map in \cref{lem:hr}; the one-line computations of $\Prob(I_e=I_f=1)=p/2$, of the two closed-form covariances and of the inequality $\Cov\le4/N^2$ in \cref{lem:cut}; the recursion behind the error bound and the explicit dyadic approximation in \cref{lem:dyadic}; the construction of the Auerbach basis; and the verification that the auxiliary matchings are Hamilton cycles. (f)~\Cref{sec:remarks} is drawn from the referee report and from the source paper's Section~6.
+
+\textbf{No human mathematician has checked this argument.} We circulate it for human review, not as a claim to a new result.
+
+\appendix
+
+\section{Full proofs}\label{app:proofs}
+
+Throughout, $X$, $d$, $L$, $h$ and $B_d$ are as in \cref{sec:main}.
+
+\phantomsection\label{pf:hr}
+\lemhr*
+\begin{proof}
+Let $S^d=\{x\in\R^{d+1}:\sum_ix_i^2=1\}$. For $x=(x_0,\dots,x_d)\in S^d$ let $J_0(x),\dots,J_d(x)$ be the consecutive closed intervals partitioning $[0,r]$ with $|J_i(x)|=rx_i^2$, i.e.\ $J_i(x)=[t_{i}(x),t_{i+1}(x)]$ with $t_i(x)=r\sum_{l<i}x_l^2$, and define
+\[
+ F(x)=\sum_{i=0}^d\sgn(x_i)\int_{J_i(x)}f(t)\,dt\in\R^d .
+\]
+\emph{$F$ is odd:} $J_i(-x)=J_i(x)$ while every sign flips. \emph{$F$ is continuous:} the endpoints $t_i(x)$ depend continuously on $x$, and $x\mapsto\int_{t_i(x)}^{t_{i+1}(x)}f$ is continuous because $f$ is integrable (absolute continuity of the integral). The only discontinuities of $\sgn(x_i)$ occur where $x_i=0$; there $|J_i(x)|=rx_i^2\to0$, so the $i$-th summand tends to $0$ regardless of the sign, and $F$ is continuous there as well. By the Borsuk--Ulam theorem an odd continuous map $S^d\to\R^d$ has a zero $x^*$. Let $A$ be the union of the $J_i(x^*)$ with $x^*_i>0$. Intervals with $x_i^*=0$ are degenerate, so $F(x^*)=0$ reads $\int_Af-\int_{[0,r]\setminus A}f=0$, i.e.\ $\int_Af=\frac12\int_0^rf$. Since $A$ is a union of some of the $d+1$ consecutive intervals, $\vone_A$ is constant between the at most $d$ internal endpoints $t_1(x^*),\dots,t_d(x^*)$.
+\end{proof}
+
+\phantomsection\label{pf:splice}
+\lemsplice*
+\begin{proof}
+Let the parts of $K_{r,r}$ be $U$ and $V$. Regard $P$ and $Q$ as bijections $V\to U$ and define the permutation $\sigma$ of $V$ by $Q(v)=P(\sigma(v))$. Write $V=\{v_1,\dots,v_r\}$ by listing the cycles of $\sigma$ one after another, each in its cyclic order; so within each block (cycle) $\sigma(v_i)=v_{i+1}$, indices taken cyclically inside the block. Let $P_i=v_iP(v_i)$ and $Q_i=v_iQ(v_i)=v_iP(v_{i+1})$ be the $P$- and $Q$-edges at $v_i$.
+
+\emph{Halving.} Identify $X$ linearly with $\R^d$ and let $f\colon[0,r]\to\R^d$ be the step function equal to $h(P_i)-h(Q_i)$ on $I_i=[i-1,i]$. \Cref{lem:hr} gives $A\subseteq[0,r]$ with at most $d$ cut points and $\int_Af=\frac12\int_0^rf$. With $\alpha_i=|A\cap I_i|\in[0,1]$ this reads
+\begin{equation}\label{eq:half}
+ \sum_{i=1}^r\alpha_i\bigl(h(P_i)-h(Q_i)\bigr)=\frac12\sum_{i=1}^r\bigl(h(P_i)-h(Q_i)\bigr)=\frac{h(P)-h(Q)}2 .
+\end{equation}
+Let $s_i\in\{0,1\}$ be the value nearest to $\alpha_i$ (ties broken arbitrarily). If $0<\alpha_i<1$ then $\vone_A$ is not constant on $I_i$, so the open interval $(i-1,i)$ contains a cut point; these open intervals are disjoint, so at most $d$ indices have $\alpha_i\notin\{0,1\}$, and each contributes at most $\frac12$ to
+\begin{equation}\label{eq:round}
+ \sum_i|s_i-\alpha_i|\le\frac d2 .
+\end{equation}
+Select the edge $P_i$ if $s_i=1$ and $Q_i$ if $s_i=0$, and let $z$ be the label sum of the selected edges. Then $z=\sum_i\bigl(s_ih(P_i)+(1-s_i)h(Q_i)\bigr)$, so by \eqref{eq:half}
+\[
+ z-\frac{h(P)+h(Q)}2=\sum_i\Bigl(s_i-\frac12\Bigr)\bigl(h(P_i)-h(Q_i)\bigr)=\sum_i(s_i-\alpha_i)\bigl(h(P_i)-h(Q_i)\bigr),
+\]
+and by \eqref{eq:round} and $\|h(P_i)-h(Q_i)\|\le2L$,
+\begin{equation}\label{eq:zmid}
+ \norm{z-\frac{h(P)+h(Q)}2}\le 2L\cdot\frac d2=Ld .
+\end{equation}
+
+\emph{Counting changes.} For each $i$ choose a point $t_i$ in the interior of $I_i$ that is not a cut point and satisfies $\vone_A(t_i)=s_i$: if $\alpha_i\in\{0,1\}$ then $\vone_A=s_i$ on $I_i$ except possibly at cut points; if $0<\alpha_i<1$ both values are taken on sets of positive measure in $I_i$. Then $t_1<t_2<\dots<t_r$, and whenever $s_i\ne s_{i+1}$ the interval $(t_i,t_{i+1})$ contains a cut point. These intervals are disjoint, so the linear word $s_1s_2\cdots s_r$ has at most $d$ changes. Now read each block cyclically. If a block has $c$ internal (linear) changes, closing it adds one change exactly when its first and last letters differ, which forces $c\ge1$; so the block has at most $2c$ cyclic changes. The internal changes of the blocks are among the at most $d$ linear changes (a change across a block boundary is internal to no block), hence the total number $b$ of cyclic changes over all blocks satisfies
+\begin{equation}\label{eq:b}
+ b\le 2d .
+\end{equation}
+
+\emph{Degrees.} Every $v_i\in V$ has exactly one selected edge. A vertex $u\in U$ equals $P(v_i)$ for exactly one $i$; inside the block of $v_i$ the selected edges at $u$ are $P_i$ (present iff $s_i=1$) and $Q_{i-1}=v_{i-1}P(v_i)$ (present iff $s_{i-1}=0$), indices cyclic in the block. Hence
+\[
+ \deg(P(v_i))=s_i+(1-s_{i-1})=1+s_i-s_{i-1}\in\{0,1,2\},
+\]
+and $P(v_i)$ has degree $2$ exactly at the cyclic changes $s_{i-1}s_i=01$ and degree $0$ exactly at the changes $10$. In a cyclic binary word the two kinds of changes are equinumerous, so there are exactly $b/2$ vertices of $U$ of degree $2$ and $b/2$ of degree $0$.
+
+\emph{Repair.} At each degree-$2$ vertex of $U$ delete one of its two selected edges. The deleted edges have distinct endpoints in $V$ (each $V$-vertex carried one selected edge), so exactly $b/2$ vertices of $V$ lose their edge; match them arbitrarily to the $b/2$ degree-$0$ vertices of $U$, which is possible because the host is complete bipartite. The result is a perfect matching $R$ obtained from the selection by exchanging $b/2\le d$ edges, so
+\begin{equation}\label{eq:repair}
+ \|h(R)-z\|\le 2L\cdot\frac b2\le 2Ld .
+\end{equation}
+Combining \eqref{eq:zmid} and \eqref{eq:repair} gives the lemma. The bound does not depend on $r$.
+\end{proof}
+
+\phantomsection\label{pf:dyadic}
+\lemdyadic*
+\begin{proof}
+Let $x=\sum_{i=1}^m\beta_ix_i$ with distinct $x_i\in S$, $\beta_i>0$, $\sum_i\beta_i=1$. If $m=1$ then $x\in S$. Assume $m\ge2$.
+
+\emph{Dyadic coefficients.} Suppose first that every $\beta_i$ is a multiple of $2^{-q}$. Take a complete binary tree of depth $q$ with $2^q$ leaves, and label the leaves, from left to right, with $\beta_12^q$ copies of $x_1$, then $\beta_22^q$ copies of $x_2$, and so on (the $m$ \emph{blocks}). For a node $v$ at depth $j$ let $\Lambda(v)$ be its $2^{q-j}$ leaves and $x_v=2^{-(q-j)}\sum_{\ell\in\Lambda(v)}y_\ell$ the average of their labels; then $x_{\text{root}}=x$ and $x_v=\frac12(x_{v_1}+x_{v_2})$ for the children $v_1,v_2$ of $v$. Call $v$ \emph{constant} if all labels in $\Lambda(v)$ coincide. Assign representatives $z_v\in S$ bottom-up: for a leaf, $z_v=y_v$; for a constant internal node, $z_v$ is the common label (so $z_v=x_v$); otherwise choose $z_v\in S$ with $\|z_v-\frac12(z_{v_1}+z_{v_2})\|\le D$, using the hypothesis. For a non-constant node,
+\[
+ \|z_v-x_v\|\le\norm{z_v-\frac{z_{v_1}+z_{v_2}}2}+\frac12\bigl(\|z_{v_1}-x_{v_1}\|+\|z_{v_2}-x_{v_2}\|\bigr)\le D+\frac12\bigl(\|z_{v_1}-x_{v_1}\|+\|z_{v_2}-x_{v_2}\|\bigr),
+\]
+while for a constant node $\|z_v-x_v\|=0$. Unrolling from the root, and letting $H_j$ be the number of non-constant nodes at depth $j$,
+\[
+ \|z_{\text{root}}-x\|\le D\sum_{j=0}^{q-1}2^{-j}H_j .
+\]
+Trivially $H_j\le2^j$. Moreover, a non-constant node's leaves form an interval of leaves containing two different labels, hence containing one of the $m-1$ boundaries between consecutive blocks; leaf intervals of distinct nodes at the same depth are disjoint, so $H_j\le m-1$. With $t=\lceil\log_2(m-1)\rceil$, so that $2^t\ge m-1$,
+\[
+ \sum_{j\ge0}\min\bigl(1,(m-1)2^{-j}\bigr)\le\sum_{j<t}1+\sum_{j\ge t}(m-1)2^{-j}\le t+(m-1)2^{-t}\cdot2\le t+2 .
+\]
+Hence $\dist(x,S)\le\|z_{\text{root}}-x\|\le D(\lceil\log_2(m-1)\rceil+2)$.
+
+\emph{Arbitrary coefficients.} For $q\ge1$ let $\beta^{(q)}_i$ be dyadic rationals with denominator $2^q$, $\sum_i\beta_i^{(q)}=1$, $\beta^{(q)}_i\ge0$ and $\beta^{(q)}_i\to\beta_i$ as $q\to\infty$ (round each $\beta_i$ down to a multiple of $2^{-q}$ and add the total deficit, which is less than $m2^{-q}$, to $\beta^{(q)}_1$). Put $x^{(q)}=\sum_i\beta^{(q)}_ix_i\to x$. Dropping the indices with $\beta_i^{(q)}=0$ leaves $m'\le m$ points, and the dyadic case yields $z_q\in S$ with $\|z_q-x^{(q)}\|\le D(\lceil\log_2(m-1)\rceil+2)$ (for $m'=1$, $z_q=x^{(q)}$). As $S$ is finite, some $z\in S$ equals $z_q$ for infinitely many $q$; letting $q\to\infty$ along these, $\|z-x\|\le D(\lceil\log_2(m-1)\rceil+2)$.
+
+\emph{Conclusion.} By Carathéodory's theorem every $x\in\conv(S)$ is a convex combination of at most $m\le d+1$ points of $S$, and $\lceil\log_2(m-1)\rceil+2\le\lceil\log_2d\rceil+2=B_d$.
+\end{proof}
+
+\phantomsection\label{pf:match}
+\propmatch*
+\begin{proof}
+Let $S=\{h(M):M\text{ a perfect matching of }K_{r,r}\}$, a finite subset of $X$. By \cref{lem:splice}, for all $u=h(P)$, $v=h(Q)$ in $S$ there is $w=h(R)\in S$ with $\|w-\frac{u+v}2\|\le3Ld$. \Cref{lem:dyadic} with $D=3Ld$ gives $\dist(x,S)\le3LdB_d$ for every $x\in\conv(S)$, which is the first assertion. For the second, let $M$ be a uniformly random perfect matching of $K_{r,r}$; each edge lies in $(r-1)!$ of the $r!$ perfect matchings, so $\Prob(e\in M)=1/r$ and
+\[
+ \frac1r\,h(K_{r,r})=\sum_e\Prob(e\in M)\,h(e)=\E\,h(M)=\sum_{M}\frac1{r!}\,h(M)\in\conv(S). \qedhere
+\]
+\end{proof}
+
+\phantomsection\label{pf:cut}
+\lemcut*
+\begin{proof}
+Let $A$ be a uniformly random $a$-subset of $V=V(K_N)$, $B=V\setminus A$, and for an edge $e$ let $I_e=\vone[e\text{ has one end in }A\text{ and one in }B]$. There are $ab$ crossing edges out of $\binom N2$, so by symmetry $\E I_e=ab/\binom N2=p$.
+
+\emph{Scalar variance bound.} Let $w_e$ be real weights with $|w_e|\le L$ and $Z=\sum_ew_e(I_e-p)$. Then $\Var Z=\sum_{e,f}w_ew_f\Cov(I_e,I_f)\le L^2\bigl(\sum_e\Var I_e+\sum_{e\ne f}|\Cov(I_e,I_f)|\bigr)$, and $\Var I_e=p(1-p)\le\frac14$.
+
+For adjacent edges $e=xy$, $f=xz$: both cross iff $x\in A$, $y,z\in B$ or $x\in B$, $y,z\in A$. Revealing the sides of $x,y,z$ in turn,
+\[
+ \Prob(I_e=I_f=1)=\frac{a\,b\,(b-1)+b\,a\,(a-1)}{N(N-1)(N-2)}=\frac{ab\,(a+b-2)}{N(N-1)(N-2)}=\frac{ab}{N(N-1)}=\frac p2 ,
+\]
+so $\Cov(I_e,I_f)=\frac p2-p^2=p(\frac12-p)$. If $N$ is even, $p=\frac{N}{2(N-1)}$ and $\frac12-p=-\frac1{2(N-1)}$; if $N$ is odd, $p=\frac{N+1}{2N}$ and $\frac12-p=-\frac1{2N}$. As $p\le1$, in both cases $|\Cov(I_e,I_f)|\le\frac1{2(N-1)}\le\frac1N$.
+
+For disjoint edges $e=xy$, $f=zw$: both cross iff exactly one of $x,y$ and exactly one of $z,w$ lies in $A$, which happens in $4$ patterns, each of probability $\frac{a(a-1)b(b-1)}{N(N-1)(N-2)(N-3)}$. Hence $\Prob(I_e=I_f=1)=\frac{4a(a-1)b(b-1)}{N(N-1)(N-2)(N-3)}$, and subtracting $p^2$,
+\[
+ \Cov(I_e,I_f)=\begin{cases}\dfrac{N}{2(N-1)^2(N-3)}&N\text{ even},\\[8pt]\dfrac{N+1}{2N^2(N-2)}&N\text{ odd}.\end{cases}
+\]
+(For $N$ even, $a=b=\frac N2$ gives $\Prob=\frac{N(N-2)}{4(N-1)(N-3)}$ and $p^2=\frac{N^2}{4(N-1)^2}$; for $N$ odd, $a=\frac{N+1}2$, $b=\frac{N-1}2$ give $\Prob=\frac{(N+1)(N-1)}{4N(N-2)}$ and $p^2=\frac{(N+1)^2}{4N^2}$; the differences simplify as displayed.) Both are at most $\frac4{N^2}$ for $N\ge4$: for even $N$ this is $N^3\le8(N-1)^2(N-3)$, true at $N=4$ ($64\le72$) and for larger even $N$ since the right side grows faster; for odd $N$ it is $N+1\le8(N-2)$, true for $N\ge3$.
+
+There are $\binom N2$ edges, $3\binom N3$ unordered adjacent pairs and $3\binom N4$ unordered disjoint pairs, so
+\begin{align*}
+\Var Z
+&\le L^2\left(\frac14\binom N2+\frac6N\binom N3
+       +\frac{24}{N^2}\binom N4\right)\\
+&\le L^2\left(\frac{N^2}8+(N-1)(N-2)
+       +\frac{(N-1)(N-2)(N-3)}N\right)\\
+&\le\frac{17}8L^2N^2<4L^2N^2 .
+\end{align*}
+
+\emph{From scalars to $X$.} Fix any linear identification $X\cong\R^d$ and choose $u_1,\dots,u_d$ in the unit ball of $X$ maximising $|\det(u_1,\dots,u_d)|$; the maximum exists by compactness and is positive. Let $\varphi_j$ be the coordinate functionals, $\varphi_j(x)=\det(u_1,\dots,u_{j-1},x,u_{j+1},\dots,u_d)/\det(u_1,\dots,u_d)$ by Cramer's rule. For $\|x\|\le1$ maximality gives $|\varphi_j(x)|\le1$, so $\varphi_j$ has dual norm at most $1$ (in fact $1$, as $\varphi_j(u_j)=1$, which also forces $\|u_j\|=1$). This is an Auerbach basis \cite[Prop.~1.c.3]{LT77}, and $x=\sum_j\varphi_j(x)u_j$ gives
+\[
+ \|x\|\le\sum_{j=1}^d|\varphi_j(x)|\qquad(x\in X).
+\]
+Let $T=\sum_e(I_e-p)h(e)=h(E(A,B))-p\,h(K_N)$. For each $j$, $\varphi_j(T)=\sum_e(I_e-p)\varphi_j(h(e))$ is a scalar sum $Z$ with weights $|\varphi_j(h(e))|\le\|h(e)\|\le L$ and mean $0$, so by Cauchy--Schwarz $\E|\varphi_j(T)|\le\sqrt{\Var\varphi_j(T)}\le2LN$. Therefore $\E\|T\|\le\sum_j\E|\varphi_j(T)|\le2LdN$, and some partition $(A,B)$ satisfies $\|T\|\le2LdN$.
+\end{proof}
+
+\phantomsection\label{pf:main}
+\thmmain*
+\begin{proof}
+\emph{(i) $G=K_{n,n}$, $n\ge2$.} Let the parts be $A=\{a_1,\dots,a_n\}$, cyclically ordered with $a_{n+1}=a_1$, and $B$. Form the auxiliary complete bipartite graph $K^{\mathrm{aux}}$ between the $n$ gaps $g_i=(a_i,a_{i+1})$ and $B$, with labels
+\[
+ \lambda(g_ib)=h(a_ib)+h(a_{i+1}b),\qquad\|\lambda(g_ib)\|\le2L .
+\]
+A perfect matching $g_i\mapsto b_i$ of $K^{\mathrm{aux}}$ assigns distinct $b_i\in B$ to the gaps, and $H=a_1b_1a_2b_2\cdots a_nb_na_1$ is a Hamilton cycle of $K_{n,n}$ (it visits all $2n$ vertices once; for $n=2$ it is the unique $4$-cycle) with $h(H)=\sum_i\bigl(h(a_ib_i)+h(a_{i+1}b_i)\bigr)=\lambda(\text{matching})$. Each edge $a_ib$ occurs in exactly two labels, $\lambda(g_{i-1}b)$ and $\lambda(g_ib)$, so $\lambda(K^{\mathrm{aux}})=2h(K_{n,n})$ and $\frac1n\lambda(K^{\mathrm{aux}})=\frac2nh(K_{n,n})$. \Cref{prop:match} applied to $K^{\mathrm{aux}}$ with label bound $2L$ gives a perfect matching, hence a Hamilton cycle $H$, with $\|h(H)-\frac2nh(K_{n,n})\|\le3(2L)dB_d=6LdB_d$.
+
+\emph{(ii) $G=K_N$.} For $N=3$ the only Hamilton cycle is $K_3$ itself and $\frac2{N-1}h(K_3)=h(K_3)$, so the deviation is $0$. Let $N\ge4$, and let $A\cup B$ be the partition of \cref{lem:cut}, $|A|=a=\lceil N/2\rceil$, $|B|=b$. Write $S=h(K_N)$ and $T=h(E(A,B))$, so $\|T-pS\|\le2LdN$. Order $A=\{a_1,\dots,a_a\}$ cyclically. If $N$ is even, $b=a$; if $N$ is odd, $b=a-1$ and we adjoin a dummy symbol $\ast$ to $B$. In both cases let $B^\ast$ denote the resulting set of size $a$. Form the auxiliary $K_{a,a}$ between the gaps $g_i=(a_i,a_{i+1})$ and $B^\ast$ with labels
+\[
+ \lambda(g_iv)=h(a_iv)+h(a_{i+1}v)\quad(v\in B),\qquad \lambda(g_i\ast)=h(a_ia_{i+1})\quad(N\text{ odd}),
+\]
+all of norm at most $2L$. A perfect matching of the auxiliary graph inserts each $v\in B$ into its gap, i.e.\ replaces the pair $(a_i,a_{i+1})$ by the path $a_iva_{i+1}$, and, when $N$ is odd, closes the dummy's gap by the direct edge $a_ia_{i+1}$. The result traverses $a_1,\dots,a_a$ in order with each vertex of $B$ inserted exactly once, so it is a Hamilton cycle $H$ of $K_N$, and $h(H)$ equals the auxiliary label sum. Let $\mu$ be the mean auxiliary label sum over perfect matchings, i.e.\ $\frac1a\lambda(K_{a,a})$. Each edge of $E(A,B)$ occurs in two labels and, for odd $N$, each edge $a_ia_{i+1}$ in one, so with $Y=\sum_{i=1}^ah(a_ia_{i+1})$,
+\[
+ \mu=\frac2aT\ \ (N\text{ even}),\qquad \mu=\frac2aT+\frac1aY\ \ (N\text{ odd}).
+\]
+If $N$ is even, $a=\frac N2$ and $p=\frac{N}{2(N-1)}$, so $\frac{2p}a=\frac2{N-1}$ and $\mu-\frac2{N-1}S=\frac2a(T-pS)$. If $N$ is odd, $a=\frac{N+1}2$ and $p=\frac{N+1}{2N}$, so $\frac{2p}a=\frac2N$ and, using $\frac2N-\frac2{N-1}=-\frac2{N(N-1)}=-1/\binom N2$,
+\[
+ \mu-\frac2{N-1}S=\frac2a(T-pS)+\frac Ya-\frac{S}{\binom N2} .
+\]
+Since $Y$ is a sum of $a$ labels and $S$ a sum of $\binom N2$ labels, $\|Y/a\|\le L$ and $\|S/\binom N2\|\le L$; and $\|\frac2a(T-pS)\|\le\frac2a\cdot2LdN\le8Ld$ because $a\ge\frac N2$. Hence in both cases
+\[
+ \norm{\mu-\frac2{N-1}S}\le8Ld+2L .
+\]
+\Cref{prop:match} applied to the auxiliary $K_{a,a}$ with label bound $2L$ gives a perfect matching whose label sum is within $6LdB_d$ of $\mu$; the corresponding Hamilton cycle $H$ satisfies $\|h(H)-\frac2{N-1}h(K_N)\|\le6LdB_d+8Ld+2L$.
+
+\emph{The centring vectors.} A uniformly random Hamilton cycle of $K_{n,n}$ or $K_N$ contains each edge with probability $e(H)/e(G)$ by edge-transitivity, so its expected label sum is $\frac{e(H)}{e(G)}h(G)$, which equals $\frac2nh(K_{n,n})$, respectively $\frac{N}{\binom N2}h(K_N)=\frac2{N-1}h(K_N)$.
+\end{proof}
+
+\phantomsection\label{pf:recol}
+\correcol*
+\begin{proof}
+Give every edge of colour $j$ the label $h(e)=e_j\in(\R^k,\|\cdot\|_1)$, so $\|h(e)\|_1=1$ and $h(F)=(m_1(F),\dots,m_k(F))$ is the vector of colour counts of $F$. If the host $K_{n,n}$ is colour-balanced, each colour class has $n^2/k$ edges and $\frac2nh(K_{n,n})=\frac{2n}k\vone$; if $K_N$ is colour-balanced, $\frac2{N-1}h(K_N)=\frac2{N-1}\cdot\frac1k\binom N2\vone=\frac Nk\vone$. A Hamilton cycle has $2n$, respectively $N$, edges, and $q=2n/k$, respectively $q=N/k$, is an integer by hypothesis. If a subgraph $F$ has $kq$ edges and colour counts $m_1,\dots,m_k$, the least number of its edges that must be recoloured to make it colour-balanced is
+\[
+ \rho(F)=\sum_{j=1}^k(m_j-q)_+=\frac12\sum_{j=1}^k|m_j-q|=\frac12\|h(F)-q\vone\|_1 :
+\]
+every surplus edge of an over-represented colour must be recoloured, and recolouring exactly the surplus edges into deficient colours (possible since $\sum_j(m_j-q)_+=\sum_j(q-m_j)_+$ as $\sum_jm_j=kq$) achieves this. \Cref{thm:main} with $d=k$, $L=1$ gives a Hamilton cycle $H$ with $\|h(H)-q\vone\|_1\le6kB_k$, respectively $\le6kB_k+8k+2$; halving yields $\rho(H)\le3kB_k$, respectively $3kB_k+4k+1$.
+\end{proof}
+
+\section{Report of the LLM referee (verbatim)}\label{app:referee}
+
+\begin{tcolorbox}[colback=gray!8,colframe=gray!50,boxrule=0.4pt,arc=2pt]
+\small The following is the unedited report of the adversarial referee agent (\texttt{claude-opus-5}, 2026-09-17) on the \emph{original} writeup. Its step numbers and lemma numbers refer to that writeup, not to this note (writeup Lemma~3, 4, 5, Proposition~6, Lemma~7 are \cref{lem:hr,lem:splice,lem:dyadic,prop:match,lem:cut} here; its $f_{\vec f}$ is the paper's $f_h$). The scripts it mentions are in \nolinkurl{verification_astra/scripts/2604.09449__03/}. Treat it as machine output, not as an authority.
+\end{tcolorbox}
+
+\input{.build/referee.tex}
+
+\begin{thebibliography}{99}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{HST26} E.~Hogan, A.~Scott and D.~Tsarev, Colour-balanced subgraphs, \href{https://arxiv.org/abs/2604.09449}{arXiv:2604.09449} (2026; v2 11 July 2026).
+\bibitem{PR22} J.~Pardey and D.~Rautenbach, Almost color-balanced perfect matchings in color-balanced complete graphs, Discrete Math.\ 345 (2022), no.~2, 112701; \href{https://arxiv.org/abs/2105.05661}{arXiv:2105.05661}.
+\bibitem{Hol25} L.~Hollom, A uniform bound on almost colour-balanced perfect matchings in colour-balanced complete graphs, Electron.\ J.\ Combin.\ (2025), P4.50; \href{https://arxiv.org/abs/2410.07993}{arXiv:2410.07993}.
+\bibitem{BH26} A.~Banerjee and L.~Hollom, Uniformly balanced $H$-factors in multicoloured complete graphs, \href{https://arxiv.org/abs/2601.18789}{arXiv:2601.18789} (2026).
+\bibitem{Alon87} N.~Alon, Splitting necklaces, Adv.\ Math.\ 63 (1987), 247--253.
+\bibitem{HobbyRice65} C.~R.~Hobby and J.~R.~Rice, A moment problem in $L_1$ approximation, Proc.\ Amer.\ Math.\ Soc.\ 16 (1965), 665--670.
+\bibitem{AlonWest86} N.~Alon and D.~B.~West, The Borsuk--Ulam theorem and bisection of necklaces, Proc.\ Amer.\ Math.\ Soc.\ 98 (1986), 623--628.
+\bibitem{LT77} J.~Lindenstrauss and L.~Tzafriri, Classical Banach Spaces I: Sequence Spaces, Springer, Berlin, 1977, Proposition~1.c.3 (Auerbach bases).
+\bibitem{BeckFiala81} J.~Beck and T.~Fiala, ``Integer-making'' theorems, Discrete Appl.\ Math.\ 3 (1981), 1--8.
+\bibitem{BaranyGrinberg81} I.~Bárány and V.~S.~Grinberg, On some combinatorial questions in finite-dimensional spaces, Linear Algebra Appl.\ 41 (1981), 1--9.
+\bibitem{Banaszczyk98} W.~Banaszczyk, Balancing vectors and Gaussian measures of $n$-dimensional convex bodies, Random Structures Algorithms 12 (1998), 351--360.
+\end{thebibliography}
+
+\end{document}
