@@ -2,28 +2,13 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22706596.svg)](https://doi.org/10.5281/zenodo.22706596)
 
-Thirty-six results in graph theory, each a complete proof or an explicit
-counterexample to an open problem from the
+Proofs or counterexamples produced by a language model for open problem from the
 [graph-conjectures catalogue](https://graph-theory-ai.github.io/graph-conjectures).
-Each was produced by a language model and then checked by a second, adversarial
-language model that could not break it.
-**Two have now also been checked by human mathematicians; the remaining 34 are
-awaiting that review.**
 
-Every result below is a short self-contained note: the problem as it was posed,
-the theorem, proof ideas in the text, full proofs in an appendix, and the
-referee's report in a second appendix. Pick one in your area and read it as you
-would a submission. Whether you find an error, a gap, a known result, or nothing
-wrong at all, we would like to hear:
+Each result below is a short self-contained note. 
+We welcome reviewers: please 
 [open an issue](https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs/issues/new)
 or write to `emanuele.natale🐌inria.fr`.
-
-Two caveats before you start. "Confirmed" means one machine referee re-derived
-every step, checked every citation, and brute-forced every finite object, then
-failed to find an error; it is not a theorem. And novelty was checked only
-against what could be found online: several results in this repository turned
-out to have been published days or weeks before they were generated, and those
-are excluded below, but the same could happen to any of these.
 
 ## Reviewed results
 
