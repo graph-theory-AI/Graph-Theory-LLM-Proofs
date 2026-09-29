@@ -63,9 +63,11 @@ SLUGS = {
 
 
 # Machine-checked Rocq/MathComp proofs in the companion repository
-# https://github.com/LLM4Rocq/graph-theory-rocq (theorem name -> source file).
-ROCQ_BASE = "https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/"
+# https://github.com/graph-theory-AI/graph-theory-rocq (theorem name -> source file).
+ROCQ_BASE = "https://github.com/graph-theory-AI/graph-theory-rocq/blob/main/"
 FORMALIZATIONS = {
+    "1611.03196__03": ("x15_llm3_proof",
+                       "packing-theory/theories/foundations/fair_matching.v"),
     "2103.15175__00": ("list_ramsey_chromatic_resolution",
                        "extremal-graph-theory/theories/applications/list_ramsey_graph.v"),
     "2310.04265__09": ("question_5_9_disproved",
@@ -395,11 +397,13 @@ Sources are in `src/<id>/` (`note.tex` where a note exists). Regenerate everythi
 `python3 to_review/build.py`.
 
 {n_rocq} of these results have machine-checked Rocq/MathComp proofs in the companion
-repository [LLM4Rocq/graph-theory-rocq](https://github.com/LLM4Rocq/graph-theory-rocq),
-linked in the table and in the note itself. Each is checked against a source-verified
-formal statement and reports no added axioms. A formalization certifies the formal
-proposition; whether that proposition faithfully renders the source paper's question is
-still a matter of source reading.
+repository [graph-theory-AI/graph-theory-rocq](https://github.com/graph-theory-AI/graph-theory-rocq),
+linked in the table and in the note itself. They report no added axioms. All but the
+fair-matching entry are checked against independently source-verified formal statements;
+the companion repository still marks the independent source-correspondence review of
+`1611.03196__03` as pending. A formalization certifies the formal proposition; whether
+that proposition faithfully renders the source paper's question is still a matter of
+source reading.
 
 **Human review.** {n_human} notes have subsequently been checked by human mathematicians;
 the table marks them as `human-reviewed note`. The remaining {len(entries) - n_human}
@@ -407,6 +411,15 @@ have not received human mathematical review. "CONFIRMED" is the verdict of an LL
 referee, and novelty was checked only against the indexed literature.
 
 ## Literature updates
+
+**2026-09-23: linear Rocq strengthening of `1611.03196__03`.**
+[graph-theory-rocq PR #10](https://github.com/graph-theory-AI/graph-theory-rocq/pull/10)
+replaced the first formal proof by a simpler synchronized-rounds argument. The theorem
+[`x15_llm3_proof`](https://github.com/graph-theory-AI/graph-theory-rocq/blob/main/packing-theory/theories/foundations/fair_matching.v)
+proves the stronger bound `c(m) = 12m + 14`, improving the original note's
+`32(m+1)^3`. The human-reviewed proof printed in the note is preserved, and the note now
+records the machine-checked strengthening separately. Independent source-correspondence
+review of the formalization remains pending in the companion repository.
 
 **2026-09-10: `2310.04265__09` overlaps with published work.** Samuel Coulomb
 drew our attention to recent results. The same circulant family and its

@@ -40,21 +40,23 @@
 \fancyhead[R]{\small\thepage}
 \renewcommand{\headrulewidth}{0.2pt}
 
-\title{Fair representation by matchings in bipartite graphs:\\ Conjecture~1.15 of Aharoni, Alon, Berger, Chudnovsky, Kotlar, Loebl and Ziv\\ holds with $c(m)=32(m+1)^3$}
+\title{Fair representation by matchings in bipartite graphs:\\ Conjecture~1.15 of Aharoni, Alon, Berger, Chudnovsky, Kotlar, Loebl and Ziv\\ a proof with $c(m)=32(m+1)^3$ and a machine-checked strengthening to $12m+14$}
 \author{\href{https://github.com/graph-theory-AI}{github.com/graph-theory-AI}\\[2pt] \normalsize Machine-generated note}
-\date{9 September 2026}
+\date{9 September 2026; updated 23 September 2026}
 
 \begin{document}
 \maketitle
 
 
 \begin{abstract}
-Aharoni, Alon, Berger, Chudnovsky, Kotlar, Loebl and Ziv conjectured (Conjecture~1.15 of arXiv:1611.03196) that for every $m$ there is a constant $c(m)$ such that, for every bipartite graph $G$ with maximum degree $\Delta$ and arbitrary edge sets $E_1,\dots,E_m\subseteq E(G)$, there is a matching $S$ with $|S|\ge|E(G)|/\Delta-c(m)$ and $|S\cap E_i|\le\lceil|E_i|/\Delta\rceil$ for all $i$. We prove the conjecture with the explicit, unoptimised constant $c(m)=32(m+1)^3$. The proof writes the target vector $(|E(G)|/\Delta,|E_1|/\Delta,\dots,|E_m|/\Delta)$ as a convex combination of the statistics of at most $m+2$ matchings (Kőnig plus Carathéodory) and then shows, using the Stromquist--Woodall interval-splitting theorem on the alternating cycles of two matchings, that a convex combination of two matchings' statistics can be realised by a single matching up to an additive error $32(m+1)$. The authors' suggested sharp value $c(m)=m/2$ remains open.
+Aharoni, Alon, Berger, Chudnovsky, Kotlar, Loebl and Ziv conjectured (Conjecture~1.15 of arXiv:1611.03196) that for every $m$ there is a constant $c(m)$ such that, for every bipartite graph $G$ with maximum degree $\Delta$ and arbitrary edge sets $E_1,\dots,E_m\subseteq E(G)$, there is a matching $S$ with $|S|\ge|E(G)|/\Delta-c(m)$ and $|S\cap E_i|\le\lceil|E_i|/\Delta\rceil$ for all $i$. The human-reviewed proof in this note establishes the explicit, unoptimised constant $c(m)=32(m+1)^3$. It writes the target vector $(|E(G)|/\Delta,|E_1|/\Delta,\dots,|E_m|/\Delta)$ as a convex combination of the statistics of at most $m+2$ matchings (Kőnig plus Carathéodory) and then interpolates between two matchings using the Stromquist--Woodall interval-splitting theorem. A subsequent machine-checked Rocq/MathComp proof replaces Carathéodory, pairwise mixing and final trimming by synchronized halving rounds and strengthens the constant to $c(m)=12m+14$. The authors' suggested sharp value $c(m)=m/2$ remains open.
 
 \medskip\noindent\small
 This note was produced by AI within the \href{https://github.com/graph-theory-AI/Graph-Theory-LLM-Proofs}{Graph Theory AI} project:
 the argument was found by a language model and audited by an adversarial LLM
 referee, and was subsequently checked by human mathematicians.
+A machine-checked Rocq/MathComp strengthening is available as
+\href{https://github.com/graph-theory-AI/graph-theory-rocq/blob/main/packing-theory/theories/foundations/fair_matching.v}{\texttt{x15\_llm3\_proof}}; it proves $c(m)\le12m+14$ with no added axioms.
 \Cref{sec:provenance} records the full provenance.
 
 \end{abstract}
@@ -174,6 +176,10 @@ Process $i=1,\dots,m$ in turn: while the current matching contains more than $q_
 The value $32(m+1)^3$ is very crude and no attempt was made to optimise it. The proof gives $16d$ rather than $32d$ for the upper bounds in \cref{lem:interp}, and \cref{lem:SW} holds with $r$ intervals instead of $2r$; neither improvement was used. The authors' suggested value $c(m)=m/2$ \cite{AABCKLZ} is not approached by this argument and remains open. The referee's brute-force search over $587$ small instances (\cref{app:referee}) found a maximum deficit $|E(G)|/D-\max|S|$ of $\frac12$, consistent with $c(m)=m/2$.
 \end{remark}
 
+\begin{remark}[Machine-checked linear strengthening]\label{rem:rocq}
+After the proof above was written and human-reviewed, Conjecture~1.15 was formalized in Rocq/MathComp in the companion repository \href{https://github.com/graph-theory-AI/graph-theory-rocq}{graph-theory-AI/graph-theory-rocq}. The theorem \href{https://github.com/graph-theory-AI/graph-theory-rocq/blob/main/packing-theory/theories/foundations/fair_matching.v}{\texttt{x15\_llm3\_proof}} proves the stronger bound $c(m)\le12m+14$ and reports no added axioms. The formal proof starts from Kőnig line colouring and a two-way splitting-necklace interpolation, but replaces the Carathéodory reduction and one-interpolation-per-pair scheme used here by synchronized rounds: all pairs in one level of the mixing tree share a single necklace splitting. Retyping one bead of each odd class type makes each class count round down exactly, so the final trimming phase also disappears. These changes, suggested by Laurent Viennot, reduce the bound from cubic to linear in $m$. The companion repository documents the correspondence with Conjecture~1.15 but, at the time of this update, marks its independent source-correspondence review as pending.
+\end{remark}
+
 \begin{remark}[Slack recorded by the referee]\label{rem:slack}
 The referee notes two places where the writeup states a weaker bound than it proves: \cref{lem:interp} asserts $+32d$ for the coordinates $j\ge1$ where the proof yields $+16d$, and \cref{lem:SW} is stated with $2r$ intervals where Stromquist--Woodall give $r$. Both are deliberate weakenings, not errors; we keep the writeup's statements.
 \end{remark}
@@ -197,6 +203,8 @@ The proof was generated, machine-refereed and rewritten without human interventi
 (2)~An independent adversarial referee agent (\texttt{claude-fable-5}) re-derived every step, checked the conjecture verbatim against the arXiv source and the Stromquist--Woodall reference, and machine-tested the combinatorial core of the interpolation lemma on $4000$ random instances, the statement itself by brute force on $587$ small instances, and the whole pipeline end to end on bipartite circulant graphs; its verdict was \textsc{confirmed}. Its report is reproduced verbatim in \cref{app:referee}.
 (3)~On 2026-09-09 the writeup was rewritten into the present note by \texttt{claude-fable-5.1}: the text was reorganised with full proofs in \cref{app:proofs}, the interval-splitting theorem is now cited precisely, and steps that the writeup stated in one line (the rounding error, the transition count, the induction) are spelled out exactly as the referee re-derived them. Two observations of the referee are recorded as remarks and marked as such (\cref{rem:slack,rem:edgecases}). No mathematical content was changed.
 (4)~On 2026-09-18, the proof was checked by human mathematicians, who reported no mathematical error. This review changed only the review-status disclosures in the note; the proof was left unchanged.
+
+(5)~On 2026-09-23, the note was updated to record the independently developed Rocq/MathComp formalization \href{https://github.com/graph-theory-AI/graph-theory-rocq/blob/main/packing-theory/theories/foundations/fair_matching.v}{\texttt{x15\_llm3\_proof}}, merged in \href{https://github.com/graph-theory-AI/graph-theory-rocq/pull/10}{graph-theory-rocq PR~\#10}. That development proves the stronger constant $c(m)=12m+14$ using synchronized rounds and no trimming; the proof in this note and its referee report remain unchanged.
 
 
 \appendix
