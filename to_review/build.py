@@ -30,7 +30,14 @@ ATTACKS = ROOT / "attacks"
 VERIF = ROOT / "verification"
 
 KEEP = {"CONFIRMED", "MINOR_GAPS"}
-HUMAN_REVIEWED = {"1611.03196__03", "2310.04265__09"}
+HUMAN_REVIEWED = {
+    "1611.03196__03",
+    "1702.01094__01",
+    "1812.02420__03",
+    "2310.04265__09",
+    "2408.02400__00",
+    "2512.10438__00",
+}
 
 SRC = HERE / "src"
 
