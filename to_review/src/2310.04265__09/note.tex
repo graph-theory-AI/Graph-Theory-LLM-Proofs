@@ -50,7 +50,7 @@
 
 
 \begin{abstract}
-The clique number $\cl(T)$ of a tournament $T$, introduced by Aboulker, Aubian, Charbit and Lopes, is the minimum over all linear orderings of $V(T)$ of the clique number of the backedge graph. They asked (Question~5.9) whether there is a function $\ell$ such that every tournament $T$ with $\cl(T)\ge k$ contains a subtournament on at most $\ell(k)$ vertices with clique number at least $k$. We answer this negatively, already for $k=3$: for every $n\ge3$ the circulant tournament $T_n=\Cay(\Z_{2n+1},\{1,\dots,n-1,n+1\})$ satisfies $\cl(T_n)=3$ while every proper subtournament has clique number at most~$2$. The family $(T_n)_{n\ge3}$ also establishes the case $k=3$ of their Conjecture~5.10 on the existence of infinitely many $k$-$\cl$-critical tournaments.
+The clique number $\cl(T)$ of a tournament $T$, introduced by Kim and later reintroduced by Aboulker, Aubian, Charbit and Lopes, is the minimum over all linear orderings of $V(T)$ of the clique number of the backedge graph. They asked (Question~5.9) whether there is a function $\ell$ such that every tournament $T$ with $\cl(T)\ge k$ contains a subtournament on at most $\ell(k)$ vertices with clique number at least $k$. We answer this negatively, already for $k=3$: for every $n\ge3$ the circulant tournament $T_n=\Cay(\Z_{2n+1},\{1,\dots,n-1,n+1\})$ satisfies $\cl(T_n)=3$ while every proper subtournament has clique number at most~$2$. The family $(T_n)_{n\ge3}$ also establishes the case $k=3$ of their Conjecture~5.10 on the existence of infinitely many $k$-$\cl$-critical tournaments.
 The same family and criticality result appear in Aubian and Coulomb \cite[6.1]{AC26}. We retain this note as a self-contained account of a machine-generated proof of that result.
 
 \medskip\noindent\small
@@ -65,11 +65,11 @@ A machine-checked Rocq/MathComp formalization of this result is available as
 
 \section{Introduction}
 
-Let $D$ be a digraph and $\prec$ a linear ordering of $V(D)$. The \emph{backedge graph} $D^\prec$ is the undirected graph on $V(D)$ in which $uv$ is an edge whenever $u\prec v$ and $vu$ is an arc of $D$ (the arc goes ``backwards'' with respect to $\prec$). Aboulker, Aubian, Charbit and Lopes \cite{AACL23} define the \emph{clique number} of $D$ as
+Let $D$ be a digraph and $\prec$ a linear ordering of $V(D)$. The \emph{backedge graph} $D^\prec$ is the undirected graph on $V(D)$ in which $uv$ is an edge whenever $u\prec v$ and $vu$ is an arc of $D$ (the arc goes ``backwards'' with respect to $\prec$). Kim \cite[p.~71]{Kim13} defines the \emph{clique number} of $D$ as
 \[
  \cl(D)=\min_{\prec}\ \omega(D^\prec),
 \]
-the minimum over all orderings of the clique number of the backedge graph, and study the classes of tournaments whose dichromatic number is bounded by a function of $\cl$. In the concluding section of \cite{AACL23} they ask whether a large clique number is always certified by a bounded-size subtournament:
+the minimum over all orderings of the clique number of the backedge graph. The parameter was later reintroduced by Aboulker, Aubian, Charbit and Lopes \cite{AACL23}, who acknowledge Kim's priority and study the classes of tournaments whose dichromatic number is bounded by a function of $\cl$. In the concluding section of \cite{AACL23} they ask whether a large clique number is always certified by a bounded-size subtournament:
 
 \begin{question}[{\cite[Question~5.9]{AACL23}}]\label{q:59}
 Is there a function $\ell$ such that, for every tournament $T$ and every $k$, if $\cl(T)\ge k$ then $T$ has a subtournament $A$ with $|A|\le\ell(k)$ and $\cl(A)\ge k$?
@@ -144,6 +144,7 @@ The proof was generated, machine-refereed and rewritten without human interventi
 (4)~On 2026-09-10, the related-work discussion was updated following a report from Samuel Coulomb. The mathematical proof and the original referee report were left unchanged.
 (5)~Independently of this note, the result was formalized in Rocq/MathComp in the companion repository \href{https://github.com/LLM4Rocq/graph-theory-rocq}{LLM4Rocq/graph-theory-rocq} as \href{https://github.com/LLM4Rocq/graph-theory-rocq/blob/main/digraph-theory/theories/applications/question_5_9_resolution.v}{\texttt{question\_5\_9\_disproved}}, checked against a source-verified formal statement with no added axioms. That check certifies the formal proposition, not its faithfulness to the source paper.
 (6)~On 2026-09-18, the proof was checked by human mathematicians, who reported no mathematical error and noted that the construction was already known from earlier private discussions. The proof itself was left unchanged; only the review-status and prior-knowledge disclosures were updated.
+(7)~In September 2026 a second, independent human review was received. It reported no mathematical error. Acting on it, the attribution of the clique number was corrected to Kim \cite{Kim13}, and the middle of the proof of \cref{thm:main} was simplified by reusing the set $-S_n$ already computed at the start of that proof instead of reintroducing the modulus. No mathematical content was changed.
 
 \appendix
 
@@ -172,9 +173,9 @@ Fix $n\ge3$, $q=2n+1$, and work in $\Z_q$. Recall $S_n=\{1,\dots,n-1\}\cup\{n+1\
 
 \emph{Lower bound $\cl(T_n)\ge3$.} Let $x\in\Z_q$. The differences $1,2,n+1$ lie in $S_n$ (here $n\ge3$ ensures $2\le n-1$), so $x\to x+1$, $x\to x+2$, $x\to x+n+1$. Moreover $(x+2)-(x+1)=1\in S_n$, $(x+n+1)-(x+2)=n-1\in S_n$, and $(x+1)-(x+n+1)=-n\equiv n+1\in S_n$; so $x+1\to x+2\to x+n+1\to x+1$ is a directed triangle in $N^+(x)$. \Cref{lem:last} gives $\cl(T_n)\ge3$.
 
-\emph{Upper bound $\cl(T_n)\le3$.} Consider the natural ordering $0\prec1\prec\dots\prec2n$ and let $0\le i<j\le2n$, $d=j-i\in\{1,\dots,2n\}$. The pair $ij$ is an edge of the backedge graph iff $j\to i$, i.e.\ iff $i-j\equiv q-d\in S_n$, i.e.\ iff $q-d\in\{1,\dots,n-1\}\cup\{n+1\}$, i.e.\ iff
+\emph{Upper bound $\cl(T_n)\le3$.} Consider the natural ordering $0\prec1\prec\dots\prec2n$ and let $0\le i<j\le2n$, $d=j-i\in\{1,\dots,2n\}$. The pair $ij$ is an edge of the backedge graph iff $j\to i$, i.e.\ iff $i-j\in S_n$, equivalently iff $d=j-i\in-S_n$. The first paragraph computed $-S_n=\{n+2,\dots,2n\}\cup\{n\}$, so this says exactly that
 \[
- d\in D_n:=\{n+2,\dots,2n\}\cup\{n\}.
+ d\in D_n:=-S_n=\{n+2,\dots,2n\}\cup\{n\}.
 \]
 Suppose $i<j<k$ form a triangle of the backedge graph and put $a=j-i$, $b=k-j$. Then $a,b\in D_n$, so $a,b\ge n$, while $a+b=k-i\le2n$. Hence $a=b=n$, $k=i+2n\le2n$ forces $i=0$, and $(i,j,k)=(0,n,2n)$. Conversely the differences among $0,n,2n$ are $n,n,2n\in D_n$, so $\{0,n,2n\}$ is a triangle. Therefore the backedge graph of the natural ordering has exactly one triangle and in particular no $K_4$, so $\omega(T_n^\prec)=3$ and $\cl(T_n)\le3$. Together with the lower bound, $\cl(T_n)=3$.
 
@@ -194,6 +195,7 @@ Suppose $i<j<k$ form a triangle of the backedge graph and put $a=j-i$, $b=k-j$. 
 \begin{thebibliography}{9}
 \small
 \setlength{\itemsep}{2pt}
+\bibitem{Kim13} I.~Kim, On containment relations in directed graphs, Ph.D.\ thesis, Princeton University, 2013. The clique number of a digraph is defined on p.~71.
 \bibitem{AACL23} P.~Aboulker, G.~Aubian, P.~Charbit and R.~Lopes, Clique number of tournaments, arXiv:2310.04265 (2023; v2 June 2026).
 \bibitem{Aubian24} G.~Aubian, Computing the clique number of tournaments, arXiv:2401.07776 (2024).
 \bibitem{CFKMS26} L.~Crew, Y.~Fan, H.~Koerts, B.~Moore and S.~Spirkl, arXiv:2602.09863 (2026), Corollary~7.
